@@ -1,0 +1,55 @@
+{
+  "provider_code": "MANUAL_EVENT_UPLOAD",
+  "dataset_code": "ECONOMIC_EVENT_BUNDLE",
+  "schema_version": "1.0",
+  "is_synthetic": true,
+  "source_published_at": "2026-06-10T12:30:02Z",
+  "events": [
+    {
+      "event_code": "US_CPI",
+      "name": "Synthetic US Consumer Price Index example",
+      "event_type": "CPI",
+      "scheduled_at": "2026-06-10T12:30:00Z",
+      "released_at": "2026-06-10T12:30:00Z",
+      "importance": 5,
+      "is_scheduled": true,
+      "status": "RELEASED",
+      "source_event_key": "synthetic-us-cpi-2026-06",
+      "available_at": "2026-06-01T12:00:00Z",
+      "forecasts": [
+        {
+          "component_code": "CPI_CORE_MOM",
+          "forecast_value": 0.3,
+          "unit": "PERCENT",
+          "forecast_as_of": "2026-06-10T12:00:00Z",
+          "available_at": "2026-06-10T12:00:01Z",
+          "provider_code": "MANUAL_CONSENSUS",
+          "vintage": "synthetic-pre-release-v1",
+          "metadata": {
+            "warning": "Synthetic demonstration value; never use as a real market fact."
+          }
+        }
+      ],
+      "releases": [
+        {
+          "component_code": "CPI_CORE_MOM",
+          "observation_period": "2026-05-01",
+          "actual_value": 0.2,
+          "previous_value": 0.3,
+          "revised_previous_value": null,
+          "unit": "PERCENT",
+          "released_at": "2026-06-10T12:30:00Z",
+          "available_at": "2026-06-10T12:30:02Z",
+          "is_revision": false,
+          "vintage": "synthetic-original-v1",
+          "metadata": {
+            "warning": "Synthetic demonstration value; never use as a real market fact."
+          }
+        }
+      ],
+      "metadata": {
+        "warning": "Entire bundle is synthetic and isolated from real-data research."
+      }
+    }
+  ]
+}

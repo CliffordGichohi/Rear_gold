@@ -1,0 +1,137 @@
+name: gold-market-intelligence
+
+services:
+  postgres:
+    image: timescale/timescaledb:2.17.2-pg16
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-gold_intel}
+      POSTGRES_USER: ${POSTGRES_USER:-gold_intel}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-gold_intel_dev}
+    ports:
+      - "${POSTGRES_PORT:-5435}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  redis:
+    image: redis:7.4-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "${REDIS_PORT:-6380}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  migrate:
+    build:
+      context: ./backend
+      target: runtime
+    env_file:
+      - .env
+    command: ["alembic", "upgrade", "head"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - raw_data:/app/data/raw
+    restart: "no"
+
+  api:
+    build:
+      context: ./backend
+      target: runtime
+    env_file:
+      - .env
+    # Uvicorn access logs include query strings. OAuth callbacks carry a
+    # one-minute authorization code, so rely on the structured path-only
+    # request logger instead.
+    command: ["uvicorn", "gold_intel.main:app", "--host", "0.0.0.0", "--port", "8000", "--no-access-log"]
+    ports:
+      - "8000:8000"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    volumes:
+      - raw_data:/app/data/raw
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/live', timeout=2)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: ./backend
+      target: runtime
+    env_file:
+      - .env
+    command: ["celery", "-A", "gold_intel.tasks.celery_app:celery_app", "worker", "--loglevel=INFO"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    volumes:
+      - raw_data:/app/data/raw
+    restart: unless-stopped
+
+  scheduler:
+    build:
+      context: ./backend
+      target: runtime
+    env_file:
+      - .env
+    command: ["celery", "-A", "gold_intel.tasks.celery_app:celery_app", "beat", "--loglevel=INFO"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000/api/v1}
+    environment:
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000/api/v1}
+      API_INTERNAL_URL: http://api:8000/api/v1
+    ports:
+      - "3000:3000"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+  backend-test:
+    profiles: ["test"]
+    build:
+      context: ./backend
+      target: test
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://gold_intel:gold_intel_dev@postgres:5432/gold_intel
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - ./backend:/app
+    command: ["pytest", "-q"]
+
+volumes:
+  postgres_data:
+  redis_data:
+  raw_data:

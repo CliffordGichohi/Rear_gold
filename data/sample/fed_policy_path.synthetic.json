@@ -1,0 +1,57 @@
+{
+  "provider_code": "MANUAL_POLICY_PATH",
+  "dataset_code": "FED_POLICY_PATH",
+  "schema_version": "1.0",
+  "is_synthetic": true,
+  "snapshots": [
+    {
+      "snapshot_as_of": "2026-07-22T18:00:00Z",
+      "available_at": "2026-07-22T18:00:01Z",
+      "outcomes": [
+        {
+          "meeting_date": "2026-09-16",
+          "outcome_basis_points": 400,
+          "probability": 0.35,
+          "expected_rate": null,
+          "source_record_key": "synthetic-2026-07-22:2026-09-16:400",
+          "metadata": {
+            "warning": "Synthetic demonstration probability."
+          }
+        },
+        {
+          "meeting_date": "2026-09-16",
+          "outcome_basis_points": 425,
+          "probability": 0.65,
+          "expected_rate": null,
+          "source_record_key": "synthetic-2026-07-22:2026-09-16:425",
+          "metadata": {
+            "warning": "Synthetic demonstration probability."
+          }
+        },
+        {
+          "meeting_date": "2026-12-09",
+          "outcome_basis_points": 375,
+          "probability": 0.6,
+          "expected_rate": null,
+          "source_record_key": "synthetic-2026-07-22:2026-12-09:375",
+          "metadata": {
+            "warning": "Synthetic demonstration probability."
+          }
+        },
+        {
+          "meeting_date": "2026-12-09",
+          "outcome_basis_points": 400,
+          "probability": 0.4,
+          "expected_rate": null,
+          "source_record_key": "synthetic-2026-07-22:2026-12-09:400",
+          "metadata": {
+            "warning": "Synthetic demonstration probability."
+          }
+        }
+      ],
+      "metadata": {
+        "warning": "Synthetic example; never interpret as observed Fed pricing."
+      }
+    }
+  ]
+}
