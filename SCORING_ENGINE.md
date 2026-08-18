@@ -432,15 +432,15 @@ sentences fail validation and the deterministic narrative is served instead.
 - Every non-unknown signal and every insight has complete lineage.
 - Recalculation with the same fact/config/code hashes is byte-for-byte deterministic.
 
-## 12. Implemented fundamental core (ruleset `fundamental-core-5`)
+## 12. Implemented seven-layer decision (ruleset `gold-reference-book-7-layer-v1`)
 
 The executable directional budget is intentionally fixed at 100 points and is not
 renormalized around missing inputs:
 
 | Driver | Budget |
 |---|---:|
-| 10Y real yield | 18 |
-| point-in-time Fed path | 15 |
+| point-in-time Fed path | 18 |
+| 10Y real yield | 15 |
 | broad USD | 12 |
 | 2Y yield | 10 |
 | inflation regime | 10 |
@@ -477,10 +477,13 @@ The catalyst component activates only when an original release has an eligible
 pre-release forecast. A major known event inside four hours lowers execution
 confidence without adding pre-release direction. ALFRED inflation, growth, and
 labour vintages are active under a conservative next-day availability rule.
-Historical consensus and Fed-path direction remain `UNKNOWN` until a licensed or
-user-authorized source satisfying their temporal contracts is loaded. The factor
-coverage endpoint exposes all 88 registered factors so partial coverage cannot be
-mistaken for the finished engine.
+Historical MT5 consensus whose first-observed time is unknown is eligible at the
+release boundary only: it supports surprise and reaction research but cannot become
+a pre-release backtest feature. Real Atlanta Fed quarterly SOFR probability
+distributions can contribute a conservatively delayed Fed-path component; they are
+never relabelled as exact meeting-level FedWatch. The factor-coverage endpoint
+exposes all 97 registered factors, including unavailable licensed contracts, so
+partial coverage cannot be mistaken for the finished engine.
 
 When ALFRED vintages are present, the engine activates three additional transparent
 components:
@@ -500,3 +503,26 @@ emit financial crisis without a connected stress composite.
 probability. Its direction combines destination versus the current effective rate
 with repricing across meetings common to the latest and prior snapshots. Missing
 prior history lowers confidence rather than fabricating a repricing comparison.
+
+The active reaction function selects one of four transparent 100-point profiles:
+`BASE`, `INFLATION_FOCUS`, `GROWTH_LABOUR_FOCUS`, or
+`FINANCIAL_STRESS_FOCUS`. The selected profile and every effective weight are stored
+in the reasoning payload.
+
+The canonical persisted artifact is
+`gold-reference-book-7-layer-v1-decision-v1`. It combines the directional
+components with all seven layer assessments:
+
+```text
+Layers 1-4 and 6 -> signed directional evidence
+Layer 5          -> session, liquidity, and price-confirmation gate
+Layer 7          -> trigger, invalidation, portfolio-risk, and action gate
+```
+
+Layer 5 or 7 can reduce execution confidence or force a `WAIT` state, but neither
+can manufacture bullish or bearish points. The decision stores directional score,
+bullish and bearish pressure, connected-evidence conflict, directional confidence,
+execution confidence, stable book coverage, live usable coverage, dominant driver,
+contradiction, catalyst, execution plan, reasoning chain, and all evidence hashes.
+It is created and read through `/api/v1/decisions/snapshots`; the older
+`/api/v1/intelligence/*` endpoints are deprecated compatibility surfaces.

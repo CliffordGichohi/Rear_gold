@@ -1,0 +1,214 @@
+{
+  "artifact_policy": {
+    "case_artifact": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/cases.jsonl.gz",
+    "deterministic_gzip_mtime": 0,
+    "json_encoding": "UTF-8",
+    "json_key_order": "SORTED",
+    "manifest_artifact": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/manifest.json",
+    "record_order": [
+      "session_date",
+      "session_code"
+    ],
+    "semantic_validation_artifact": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/semantic_validation.json"
+  },
+  "authorization": {
+    "authorized_on": "2026-07-30",
+    "scope": "Complete only V3 Milestone 2 development case-matrix materialization and validation.",
+    "verbatim": "if everything looks great, proceed to milestone 2"
+  },
+  "case_identity": {
+    "case_id_rule": "V3-{source SESSION_CASE record_id}",
+    "case_revision": 1,
+    "created_at": "2026-07-30T07:57:23.645058+00:00",
+    "grain": "One row per session_code and session_date",
+    "schema_version": "gold-session-behaviour-v3-case-matrix-0.1.0",
+    "sealed_at": "2026-07-30T07:57:23.645058+00:00"
+  },
+  "decision_state_materialization": {
+    "catalyst_policy": {
+      "event_impact": "Preserve the existing point-in-time CATALYST_SURPRISE engine component when present; do not derive a new directional event relation.",
+      "recent_event_lookback_days": 7,
+      "recent_event_rule": "Include released EVENT_CASE records with released_at < decision_at, event_available_at <= decision_at, and released_at >= decision_at minus seven calendar days. Include only fixed reaction horizons whose own available_at <= decision_at.",
+      "schedule_policy": "Because historical schedule availability before release is unverified, upcoming_events is empty and catalyst proximity remains UNKNOWN.",
+      "unscheduled_event_policy": "UNKNOWN_NO_LICENSED_HISTORY"
+    },
+    "cross_market_policy": {
+      "component_sources": "Decision-time CROSS_MARKET_SNAPSHOT plus point-in-time FUNDAMENTAL_SNAPSHOT daily rates/USD/risk series.",
+      "new_relationship_states_calculated": false,
+      "rates_driver_state": "Preserve the existing NOMINAL_DECOMPOSITION engine component when present; otherwise UNKNOWN.",
+      "roll_crossing": "UNKNOWN",
+      "stale_us500": "UNKNOWN"
+    },
+    "fact_envelope": {
+      "required": [
+        "value",
+        "unit",
+        "epistemic_status",
+        "as_of",
+        "available_at",
+        "quality",
+        "method",
+        "explanation",
+        "evidence",
+        "source_refs",
+        "invalidation"
+      ],
+      "unknown_value": null
+    },
+    "fundamental_series_mapping": {
+      "cpi_core": "US_CPI_CORE",
+      "cpi_headline": "US_CPI_HEADLINE",
+      "equities": "US_EQUITY_PROXY",
+      "fed_policy_rate": "US_FED_FUNDS_EFFECTIVE",
+      "financial_stress": "US_FINANCIAL_STRESS",
+      "gdp": "US_REAL_GDP",
+      "high_yield_spread": "US_HIGH_YIELD_OAS",
+      "initial_claims": "US_INITIAL_JOBLESS_CLAIMS",
+      "payrolls": "US_NONFARM_PAYROLLS",
+      "pce_core": "US_PCE_CORE",
+      "pce_headline": "US_PCE_HEADLINE",
+      "real_yield_10y": "US_REAL_YIELD_10Y",
+      "retail_sales": "US_RETAIL_SALES",
+      "treasury_10y": "US_TREASURY_10Y",
+      "treasury_2y": "US_TREASURY_2Y",
+      "unemployment": "US_UNEMPLOYMENT_RATE",
+      "usd": "USD_BROAD_NOMINAL",
+      "volatility": "US_VOLATILITY_INDEX",
+      "wages": "US_AVERAGE_HOURLY_EARNINGS"
+    },
+    "institutional_motive_policy": "COT categories and open interest are observed/calculated; crowding, probable participation, liquidation, covering, and motive remain INFERRED.",
+    "market_mechanics_policy": {
+      "comex_intraday_volume": "UNKNOWN",
+      "depth": "UNKNOWN",
+      "instrument_identity": "IC_MARKETS_MT5 XAUUSD broker CFD/feed, not the complete OTC or COMEX market",
+      "price_impact": "UNKNOWN",
+      "resilience": "UNKNOWN",
+      "spread_and_tick_volume": "Observed from the decision-time XAUUSD cross-market snapshot"
+    },
+    "point_in_time_cutoff": "Every nested decision fact must have available_at <= decision_at; violations block the artifact.",
+    "policy_expectations": {
+      "exact_meeting_probabilities": "UNKNOWN",
+      "latest_window_rule": "Select all POLICY_EXPECTATION_WINDOW records sharing the latest observation_date whose available_at <= decision_at.",
+      "representation": "Store the eligible quarterly SOFR windows under policy_path.repricing with explicit non-FedWatch semantics.",
+      "source_semantics": "Atlanta Fed quarterly SOFR reference-window distribution; not exact FOMC meeting probabilities"
+    },
+    "positioning_rule": "Use only the POSITIONING_REPORT explicitly referenced by the source session/fundamental snapshot and require publication_at and available_at <= decision_at.",
+    "structure_policy": {
+      "detection_policy": "Preserve every detection in the decision-time STRUCTURE_SNAPSHOT; detected_at controls availability, never the earlier pivot timestamp.",
+      "source_hash_semantics": "timeframes[].source_bar_ids_hash stores the immutable STRUCTURE_SNAPSHOT record_hash because the source bundle compacted raw lookback lineage at snapshot level; source_bar_count remains the declared timeframe count.",
+      "timeframes": [
+        "1m",
+        "5m",
+        "15m",
+        "1h",
+        "4h",
+        "1d"
+      ]
+    },
+    "synthesis_policy": "Preserve existing transparent engine components as decision-time evidence. Existing score/bias is not promoted as a candidate and no component is joined to an outcome.",
+    "unknown_policy": "Missing, stale, roll-crossing, unlicensed, or unverified fields remain explicit UNKNOWN; never zero or neutral confirmation."
+  },
+  "development_partition": {
+    "end_exclusive": "2025-01-01T00:00:00+00:00",
+    "session_date_end_inclusive": "2024-12-31",
+    "session_date_start_inclusive": "2021-08-01",
+    "start_inclusive": "2021-08-01T00:00:00+00:00"
+  },
+  "expected_source_counts": {
+    "london_cases": 833,
+    "new_york_cases": 826,
+    "session_cases": 1659
+  },
+  "frozen_inputs": {
+    "case_matrix_schema": {
+      "path": "research_schemas/gold_session_behaviour_v3_case_matrix.schema.json",
+      "sha256": "33d47e452695e624f5ae10dc29ebbd99d05bd0c6f8096540cce69f9b521e92a7"
+    },
+    "casebook_bundle": {
+      "artifact_hashes": {
+        "cross_market_snapshots.jsonl.gz": "470a2e1c020cd2f97f2ad5b0d7f9c5220aff4f644689c4d680c24373964eb285",
+        "events.jsonl.gz": "c7875e09d9ed831ece0f223b8be5efb75550af5bf1996a2dfea9d6119b24e35f",
+        "fundamentals.jsonl.gz": "d2b776f60c4535978bbfb28706b4700e6d054a10f8d57cfee171c83b212b7235",
+        "positioning.jsonl.gz": "e6d1aabf0d4401f3af4e54dc8ef4c0e4074772ec3f2199cfe9009b5a0b267228",
+        "price_bars.jsonl.gz": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+        "sessions.jsonl.gz": "2695a2c0b9e8f41fcbf64c9f388e8883ebf7e1f0b3b09b90fb3a60ba7e64966a",
+        "structure_snapshots.jsonl.gz": "31eea2decc8ed3f8d3e498a9339e7f59ee101e7c787da47a831e63bfb97c1064"
+      },
+      "manifest_hash": "d1241633b073cd7307f1da00a13a2d76c132f3dccefc52a076be2c641f06b85f",
+      "manifest_path": "research_artifacts/gold_casebook_v01/manifest.json"
+    },
+    "contract_manifest_hash": "79a74f81bce0b80ca6c5da6b420400479013484a4bb759684402546672fa140b",
+    "predecessor_state_hash": "058757c85ccbb657b6a5525d1f9e21521a75b29152f9bd88bc8a37fcc8339d3b",
+    "predecessor_state_path": "research_artifacts/gold_session_behaviour_v3_state_v01.json",
+    "traceability_catalog_hash": "8707c39eb75bf3c74ce33908b0a3f4b0a1f679ee68848f1d10dce25e4bdf6bb4"
+  },
+  "manifest_hash": "2838beaf2af0b3a74dca7ac1280591505cadd1eb0fb8b6dd1e5f06ff45b1d8d9",
+  "manifest_version": "GOLD_SESSION_BEHAVIOUR_V3_M2_CASE_MATRIX_V0_1",
+  "milestone": "V3_M2_DEVELOPMENT_CASE_MATRIX",
+  "neutral_subsequent_behaviour": {
+    "arithmetic": "Use Decimal constructed from source decimal strings; quantize published USD/oz displacements to 0.00000001.",
+    "close_location": {
+      "formula": "(session_close - session_low) / (session_high - session_low)",
+      "states": {
+        "DEGENERATE": "session_high equals session_low",
+        "LOWER_THIRD": "fraction < 1/3",
+        "MIDDLE_THIRD": "1/3 <= fraction <= 2/3",
+        "UPPER_THIRD": "fraction > 2/3"
+      }
+    },
+    "extreme_tie_policy": "Earliest source one-minute open_time wins; if high and low first occur in the same bar, extreme_order is SAME_BAR.",
+    "fixed_horizons": {
+      "15m": "Close of the complete one-minute bar whose close_time is neutral_reference_at plus 15 minutes",
+      "30m": "Close of the complete one-minute bar whose close_time is neutral_reference_at plus 30 minutes",
+      "5m": "Close of the complete one-minute bar whose close_time is neutral_reference_at plus 5 minutes",
+      "60m": "Close of the complete one-minute bar whose close_time is neutral_reference_at plus 60 minutes",
+      "SESSION_CLOSE": "Close of the complete one-minute bar whose close_time is observation_end"
+    },
+    "full_five_minute_path": "Preserve the source SESSION_CASE 08:00-12:00 local five-minute path and hashes; it remains decision_eligible=false.",
+    "maximum_downward_displacement": "minimum one-minute low minus neutral reference; non-positive signed USD/oz",
+    "maximum_upward_displacement": "maximum one-minute high minus neutral reference; non-negative signed USD/oz",
+    "neutral_measurement_bars": "Complete XAUUSD one-minute bars with open_time >= 08:01 local and close_time <= 12:00 local; exactly 239 bars required.",
+    "neutral_reference": "Open of the complete observed XAUUSD one-minute bar whose open_time is 08:01 local.",
+    "path_classification": {
+      "close_location_state": "Use the frozen thirds rule above.",
+      "extreme_order": "HIGH_FIRST, LOW_FIRST, or SAME_BAR",
+      "net_state": {
+        "DOWN": "session-close displacement < -0.01 USD/oz",
+        "FLAT": "absolute session-close displacement <= 0.01 USD/oz",
+        "UP": "session-close displacement > 0.01 USD/oz"
+      },
+      "path_efficiency": "absolute session-close displacement divided by session range; null when range is zero"
+    },
+    "reference_is_trade_entry": false,
+    "session_range": "maximum one-minute high minus minimum one-minute low",
+    "side_conditioned_mfe_or_mae": false
+  },
+  "prohibited": {
+    "calendar_2025_or_2026_source_open": true,
+    "candidate_creation_or_ranking": true,
+    "descriptive_distribution_or_atlas": true,
+    "execution_optimization": true,
+    "feature_outcome_join": true,
+    "relationship_calculation": true,
+    "side_conditioned_mfe_or_mae": true,
+    "trade_direction_entry_stop_target_pnl_or_r_multiple": true
+  },
+  "record_hash_policy": "SHA-256 of canonical sorted compact JSON before record_hash is added.",
+  "validation_gates": [
+    "All seven frozen input artifact SHA-256 hashes match before deserialization.",
+    "Every source SESSION_CASE has holdout_loaded=false and a session date inside development.",
+    "Exactly 1,659 rows are written: 833 London and 826 New York.",
+    "Every case_id and session_code-session_date key is unique.",
+    "Every case record_hash recomputes exactly.",
+    "Every decision-state nested fact with non-null available_at satisfies available_at <= decision_at.",
+    "Every case contains exactly six unique required structure timeframes.",
+    "Every case has 239 complete neutral-measurement one-minute bars and 48 source five-minute path points.",
+    "Every case contains all five frozen fixed horizons.",
+    "COT reports are never used before publication_at or available_at.",
+    "UNKNOWN facts have null value.",
+    "All output rows are DEVELOPMENT_2021_2024 and contain no 2025 or 2026 timestamps as case or outcome periods.",
+    "Outcome decision_eligible is false and research-policy execution flags are false.",
+    "Zero feature-outcome joins, relationship statistics, candidate labels, trade directions, PnL, R multiples, MFE, or MAE are produced.",
+    "Semantic validation passes independently before the bundle is accepted."
+  ]
+}

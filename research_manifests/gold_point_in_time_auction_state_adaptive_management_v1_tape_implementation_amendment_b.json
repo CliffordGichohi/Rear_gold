@@ -1,0 +1,26 @@
+{
+  "version": "GOLD_PIT_AUCTION_STATE_V1_TAPE_IMPLEMENTATION_AMENDMENT_B_1_0",
+  "status": "FROZEN_BEFORE_AMENDED_IMPLEMENTATION_OR_RERUN",
+  "frozen_at_utc": "2026-08-11T07:05:33Z",
+  "predecessor_failure": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_tape/attempt_2_failure.json",
+  "preserved_amendment_a_implementation_freeze": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_tape_implementation_freeze_a1.json",
+  "permitted_change": "Obtain setup_close from the exact completed parent-timeframe bar closing at known_at. Do not require the first actionable signal-frame checkpoint to equal known_at. Calculate running signal-frame extrema from the first available signal bar closing at or after known_at through each actionable checkpoint.",
+  "forbidden_changes": [
+    "CASE_IDENTITIES",
+    "CHECKPOINT_IDENTITIES_OR_TIMESTAMPS",
+    "FEATURE_FORMULAS",
+    "FEATURE_REGISTRY",
+    "OUTCOME_MODEL_OR_POLICY_RULES",
+    "OUTCOME_ACCESS",
+    "2025_OR_2026_ACCESS"
+  ],
+  "required_proofs": [
+    "ALL_CASE_CHECKPOINT_COUNTS_AND_HASHES_EQUAL_THE_SEALED_REGISTRY",
+    "EVERY_AVAILABLE_CASE_HAS_AN_EXACT_PARENT_TIMEFRAME_CLOSE_AT_KNOWN_AT",
+    "PRIMARY_AND_REFERENCE_SETUP_BASELINE_IDENTITIES_MATCH"
+  ],
+  "market_outcomes_accessed": false,
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "paid_acquisition_usd": 0.0
+}

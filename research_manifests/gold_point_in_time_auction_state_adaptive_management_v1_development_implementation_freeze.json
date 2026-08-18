@@ -1,0 +1,65 @@
+{
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "controls": {
+    "contract": {
+      "bytes": 12858,
+      "path": "GOLD_POINT_IN_TIME_AUCTION_STATE_AND_ADAPTIVE_TRADE_MANAGEMENT_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "98ee15c6cb11cf717e4aa1990d44759e8a4242b3f9d91463e731809a397ab2ad"
+    },
+    "execution_freeze": {
+      "bytes": 7494,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_outcome_model_policy_execution_freeze.json",
+      "sha256": "df325b7e62f4d81b161fcfadecec55c597136f4c1f1b8543a3a33df699d92d7c"
+    },
+    "outcome_freeze": {
+      "bytes": 2331,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_outcome_freeze.json",
+      "sha256": "02d2c42693a6de24b4a2fea95e508651cdc9c4c0f544ffa02b95fbc0133c1daa"
+    },
+    "protocol": {
+      "bytes": 7230,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_protocol.json",
+      "sha256": "12dad79b3ff76875c27826066a6c34640808dc50ff1bed47ea02e45b0c0d083e"
+    },
+    "tape_freeze": {
+      "bytes": 4415,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_tape_freeze.json",
+      "sha256": "d7b5f207d6df361ea06b8d143f0a6d39b524127f42cef7f060856f883c18cd5f"
+    }
+  },
+  "implementation": {
+    "bytes": 80357,
+    "path": "tools/run_gold_point_in_time_auction_state_v1_development.py",
+    "sha256": "4341d21ceee6fab2630fdaa3a189e57ee078fd5c31d662b3c5c0eea5e07bc1f3"
+  },
+  "interpretations_frozen_without_performance_selection": {
+    "adaptive_add_sizing": "WHOLE_OUNCES_CAPPED_BY_37P50_INCREMENT_AND_50_USD_TOTAL_STOP_PLUS_COST_RISK_AT_THE_TIGHTENED_STOP",
+    "bootstrap": "SAMPLE_TRADING_DATE_CLUSTERS_WITH_REPLACEMENT;UNWEIGHTED_TRADES_WITHIN_SAMPLED_CLUSTER",
+    "brier_weighting": "EQUAL_CASE_WEIGHT_WITHIN_EACH_OUTER_VALIDATION_FOLD",
+    "candidate_limit_ranking": "EXPECTANCY_DESC_THEN_PROFIT_FACTOR_DESC_THEN_SUPPORT_DESC_THEN_CANDIDATE_ID",
+    "candidate_overlap": "ONE_POSITION_WITHIN_EACH_TIMEFRAME_CANDIDATE;COMBINED_PORTFOLIO_USES_H4_H1_M15_THEN_PULLBACK_ID",
+    "classification_selection": "SHARED_C_AND_TEMPERATURE_MINIMIZING_EQUAL_WEIGHT_MEAN_OF_MULTICLASS_AND_TWO_R_CALIBRATION_CROSS_ENTROPY",
+    "constant_track_add_signal": "VIRTUAL_ADD_SIGNAL_MAY_TIGHTEN_STOP_BUT_ADDS_NO_OUNCES",
+    "hard_event_priority": "STOP_THEN_TARGET_BEFORE_ANY_MODEL_ACTION_AT_THE_SAME_OR_LATER_CHECKPOINT",
+    "policy_expected_net": "MODEL_PREDICTED_TERMINAL_NET_R_AT_ONE_X_COST",
+    "policy_neighbours": "AGGREGATE_IDENTICAL_DIMENSION_AND_ORDINAL_DIRECTION_NEIGHBOURS_ACROSS_FOLDS_THEN_COUNT_POSITIVE_EXPECTANCY",
+    "policy_selection_track": "CONSTANT_50_ONLY;THE_SAME_SELECTED_GRID_IS_APPLIED_TO_BOTH_TRACKS",
+    "preprocessing_quantiles": "UNWEIGHTED_FIT_ROWS;WEIGHTED_MEAN_AND_STD_AFTER_CLIP_AND_IMPUTATION",
+    "r_normalization": "NET_DOLLARS_DIVIDED_BY_50_USD_ACCOUNT_SETUP_RISK_CAP",
+    "regression_selection": "SHARED_ALPHA_MINIMIZING_EQUAL_WEIGHT_MEAN_OF_FOUR_TRANSFORMED_TARGET_NMSE_VALUES",
+    "scratch_condition": "TWO_CONSECUTIVE_POST_ENTRY_CHECKPOINTS_EACH_SATISFYING_P_CONT_LT_THRESHOLD_OR_EXPECTED_NET_R_LE_ZERO"
+  },
+  "paid_acquisition_usd": 0.0,
+  "sealed_at_utc": "2026-08-11T08:54:10.590850Z",
+  "status": "SEALED_BEFORE_MODEL_FITTING_OR_POLICY_PERFORMANCE_CALCULATION",
+  "synthetic_proof": {
+    "case_weight_groups": 3,
+    "chronological_split_dates": 5,
+    "policy_first_passage_trades": 1,
+    "policy_grid_size": 96,
+    "softmax_rows": 2,
+    "status": "PASS_SYNTHETIC_MODEL_POLICY_PRIMITIVES"
+  },
+  "version": "GOLD_PIT_AUCTION_STATE_V1_DEVELOPMENT_IMPLEMENTATION_1_0"
+}

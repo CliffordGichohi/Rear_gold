@@ -1,0 +1,852 @@
+{
+  "XAUUSD": "EXCLUDED_HELD_POLICY_UNCHANGED",
+  "bindings": {
+    "contract": {
+      "bytes": 6164,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "f1f8d2591e4ca51d433ca9dfd8592d5e12306a694e3478ed09a571dbd9eda457"
+    },
+    "coverage_r2_result": {
+      "bytes": 5498,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r2/recertification.json",
+      "sha256": "d1723ff87cb03e7a923fa944fd534ea7b75906536eab90e90422c941e67dec66"
+    },
+    "coverage_r2_seal": {
+      "bytes": 2596,
+      "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_m1_r2_seal.json",
+      "sha256": "fe8baa8b9d91d968ff8e67efe94fe471303fea2317bf1e8ef090a9ab34a59df6"
+    },
+    "engine": {
+      "bytes": 37627,
+      "path": "tools/msbam_v1_m2_m3_engine.py",
+      "sha256": "348c5ab4f6a6867dec54071c31e8024ee768b2acde1671fd33f99e902ada0859"
+    },
+    "m1_protocol": {
+      "bytes": 7543,
+      "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_protocol.json",
+      "sha256": "182967631ef05f2060e9d49b74b0028be85c9d8b62cee5f8cba3341cae7c71a7"
+    },
+    "m2_protocol": {
+      "bytes": 3390,
+      "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_m2_protocol.json",
+      "sha256": "b041fef61177a338d90ef7652385a017140b2c98d49614702c4ce3167368e73a"
+    },
+    "m3_protocol": {
+      "bytes": 3019,
+      "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_m3_feasibility_protocol.json",
+      "sha256": "df3e7b3b8981c14275f97cd1f53cdc5baab4d0919ca707ba7aa418c86248cefc"
+    },
+    "runner": {
+      "bytes": 22974,
+      "path": "tools/run_multi_asset_session_behaviour_archetype_monetization_v1_m2_m3.py",
+      "sha256": "2e575336c3601fa32c7064f21fd4af4e1fb2fc15deeba92db2ba8dc1dc79bb6c"
+    },
+    "sealed_legacy_utility": {
+      "bytes": 117793,
+      "path": "tools/run_multi_asset_macro_session_portfolio_v1_m3.py",
+      "sha256": "91ce21662b89b8ef888648f243bc77ff8921d6dc23a66c9b932e6cf93e4bdea2"
+    },
+    "synthetic_tests": {
+      "bytes": 3607,
+      "path": "tests/test_msbam_v1_m2_m3_engine.py",
+      "sha256": "636339596a599483728dbef12acc2070d189676ff7a4aa83705f08108f2427f6"
+    },
+    "traceability": {
+      "bytes": 44665,
+      "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_traceability.json",
+      "sha256": "bf8e99aac359972cef38df5c54d2288757e12a7d7ba0fd07bad848aa0c5524b6"
+    }
+  },
+  "controls": {
+    "calendar_2025_values_accessed": false,
+    "calendar_2026_values_accessed": false,
+    "charge_usd": 0.0,
+    "paid_acquisition_authorized": false
+  },
+  "sealed_at_utc": "2026-08-12T12:57:56.824410Z",
+  "source_bindings": [
+    {
+      "bytes": 3764240,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20210723T0000_20210820T2356.csv",
+      "sha256": "c6f303bc13fcc92dd4f71692481af00651d208167c4e86338a284b3c6e8dc4ed"
+    },
+    {
+      "bytes": 3770146,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20210823T0005_20210920T2358.csv",
+      "sha256": "65a18c01b57413eadbfaa851638c37219b1f38e62277e57be57938fab239deae"
+    },
+    {
+      "bytes": 3942619,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20210921T0000_20211020T2358.csv",
+      "sha256": "5074b17ce766466bcdbcb7fee642a81f9ca9525ddf56821abbf462c6ff3a845c"
+    },
+    {
+      "bytes": 3958947,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20211021T0000_20211119T2356.csv",
+      "sha256": "34569c905c40ebedd49f23f222fcfdcd92263723cb6c530205e646929aef239c"
+    },
+    {
+      "bytes": 3540762,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20211122T0000_20211217T2356.csv",
+      "sha256": "b65e7a2077e9f9f781ed5a866fae7f61d5b0d665006a746c9ff337cb74b01a9e"
+    },
+    {
+      "bytes": 2091640,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20211220T0000_20220104T2358.csv",
+      "sha256": "57d4dff6d46491103fc4264e82125535ca8be123cff53cc3c14a2a74264f4428"
+    },
+    {
+      "bytes": 538641,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20220105T0000_20220107T2356.csv",
+      "sha256": "94b558b374cd80907d5b66df67bfe4f0bf7c35c6b8e911fa51f41754168c6064"
+    },
+    {
+      "bytes": 3588333,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20220110T0000_20220204T2356.csv",
+      "sha256": "1320673fc29673f1b7f13dee002b88e9ff5194dde706e07b821bb9fb25495c6b"
+    },
+    {
+      "bytes": 3943287,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20220207T0000_20220308T2358.csv",
+      "sha256": "7e7c8476399d9a5c8ed6d0d22e46b8447869f67f277e8b6100ddda0a5356abd7"
+    },
+    {
+      "bytes": 3921753,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20220309T0000_20220407T2358.csv",
+      "sha256": "a4163a486694987b81df42f0424bd4798a4135d922979a5f69abd8f3292b0155"
+    },
+    {
+      "bytes": 3735099,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20220408T0000_20220506T2356.csv",
+      "sha256": "93edd39fc839d9b1eab541261ed8d49c5f102449d0d8c4a320f0e718760c3c7c"
+    },
+    {
+      "bytes": 3717670,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20220509T0001_20220606T2358.csv",
+      "sha256": "614e321b5c4b48f3cd4658677dc5d11b525baaf7b2ac1e38a78b5c8f3a3bc367"
+    },
+    {
+      "bytes": 3902480,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20220607T0000_20220706T2358.csv",
+      "sha256": "ae04db4d64d4955387b40bb1a84057f85a5c564910297d378b82ec571def88d4"
+    },
+    {
+      "bytes": 3888399,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20220707T0000_20220805T2356.csv",
+      "sha256": "1f61309bc92ccea8b71522c8698a11a5057daeb955cabad46740be592308bf31"
+    },
+    {
+      "bytes": 3530213,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20220808T0000_20220902T2356.csv",
+      "sha256": "11ed9eafb2ed6188770dc238db5ed05715063b839028cf6d0b3a47bbce111351"
+    },
+    {
+      "bytes": 3883525,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20220905T0000_20221004T2358.csv",
+      "sha256": "b87e514f4374eb797059d1431dc876debafae1c9de3575829a97a49aeb2d6ba4"
+    },
+    {
+      "bytes": 3880073,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20221005T0000_20221103T2358.csv",
+      "sha256": "e692c74773daf5373b3f6c4ac8875ba05ecae6ebbc81dd1b95272b8634231f3f"
+    },
+    {
+      "bytes": 3718254,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20221104T0000_20221202T2356.csv",
+      "sha256": "a1593da87552e0c9613ef8f793bd6f9e37eedee0a11398c341962cc6d74ba817"
+    },
+    {
+      "bytes": 3368489,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20221205T0000_20221230T2356.csv",
+      "sha256": "c09c2d50399c8fed2b2a9b1de74898f25bf93f4273914470d6a878e6691e0f3c"
+    },
+    {
+      "bytes": 3542645,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20221205T0000_20230102T2358.csv",
+      "sha256": "c2e13bca6a79d8a63f044fef2fb4f0cc4b07b4a578a2d064756b462cb5cb4504"
+    },
+    {
+      "bytes": 3731399,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20230102T0003_20230130T2358.csv",
+      "sha256": "7b9a9d7fd46e664b0c30e66a834e9a61017d38db89d9c17037e9a206b619557c"
+    },
+    {
+      "bytes": 3913839,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20230131T0000_20230301T2358.csv",
+      "sha256": "9b83f004cc9db04b21a358883041e0535638007e1bf7dbe44f3735aca0a6bc34"
+    },
+    {
+      "bytes": 3912528,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20230302T0000_20230331T2356.csv",
+      "sha256": "2b02f4c21a8f34584617f2c48c97d3f509b9b2ce356e35364fb384f0da8b4237"
+    },
+    {
+      "bytes": 3549988,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20230403T0000_20230428T2356.csv",
+      "sha256": "38771dafa5ffcf1b78f775a79dc2fd3ecdee10a90dac6ecb72c03065a2d8ec4a"
+    },
+    {
+      "bytes": 3902041,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20230501T0000_20230530T2358.csv",
+      "sha256": "d05949d2fd8a55bc3156df2f5c6942ca4d9a7033322f307c849a983bc73a8f87"
+    },
+    {
+      "bytes": 3907546,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20230531T0000_20230629T2358.csv",
+      "sha256": "d83076339ed77a6ca8f0a5e9922e0881802b5feb5af8aedf076e4afe25776e54"
+    },
+    {
+      "bytes": 3731480,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20230630T0000_20230728T2356.csv",
+      "sha256": "2484058c6bb4b74f252d6d9b838d97470aef7ec24e724d8906c8ac3fde5c7cd1"
+    },
+    {
+      "bytes": 3727523,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20230731T0000_20230828T2358.csv",
+      "sha256": "740ba86b0bd30214f480c48cc7ee7a71a1e8b0be615e82f0f5bb6b30b90b02c8"
+    },
+    {
+      "bytes": 3908203,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20230829T0000_20230927T2358.csv",
+      "sha256": "249d4bdea42b0acef5787e7ce6d4ff31cf9fbf07e41e60ce67b0296d1600bc43"
+    },
+    {
+      "bytes": 3893881,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20230928T0000_20231027T2356.csv",
+      "sha256": "a8ca53f20946b43f955066faff45c95d6280e75037c4cd22ef44c2d6fc1e010f"
+    },
+    {
+      "bytes": 3553506,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20231030T0000_20231124T2356.csv",
+      "sha256": "0e498c68f18712242b8712db8b17a595925933bcf64cef498e1016f2514a77bd"
+    },
+    {
+      "bytes": 3737229,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20231127T0000_20231226T2358.csv",
+      "sha256": "75a6351e16eeccb39e83905b3d4e5b491dcaa43e919123a3d2f7706bf51f29df"
+    },
+    {
+      "bytes": 533576,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20231227T0000_20231229T2356.csv",
+      "sha256": "3eb6e3077c206112662927622e3f2e190c27b64d396880d2615451a710188940"
+    },
+    {
+      "bytes": 3738273,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20240102T0000_20240130T2358.csv",
+      "sha256": "a734b1b9bc1d389974b5f575dfdfb0537d61e615ced3f3376da36d2efe037e46"
+    },
+    {
+      "bytes": 3918046,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20240131T0000_20240229T2358.csv",
+      "sha256": "f8eee663ef182d1fe4338d63e595cb23f54b3dbe859af8a74304f2b4e1c1fce4"
+    },
+    {
+      "bytes": 3743714,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20240301T0000_20240329T2356.csv",
+      "sha256": "c8cab33a665fbba5455bf60ec83722f7d8ba823cd391d7b0051caedbda5ab0ce"
+    },
+    {
+      "bytes": 3743873,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20240401T0000_20240429T2358.csv",
+      "sha256": "1bfaa136e2ec4e09474066ea1957c5cc0604562a63f14d766211e8f399e3ac1d"
+    },
+    {
+      "bytes": 3916744,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20240430T0001_20240529T2358.csv",
+      "sha256": "db04fd6fc4e596cd6d07d9a92dc8e7882e91b54f8887bf1f8f113262c2bcd62b"
+    },
+    {
+      "bytes": 3917352,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20240530T0000_20240628T2356.csv",
+      "sha256": "daeacaf5e29cd70bb2532b8c52d799121da420b08ca1cf4daa0cfd65b5f3ace8"
+    },
+    {
+      "bytes": 3562472,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20240701T0000_20240726T2356.csv",
+      "sha256": "e998746ceba733463cf7ae6a000b992145a4057966b033123c6c77a8d5402743"
+    },
+    {
+      "bytes": 3917582,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20240729T0000_20240827T2358.csv",
+      "sha256": "d37e68d2f0e18578eca3ca005351b27aa087059ddadf5e05d9f0c5871e0d4852"
+    },
+    {
+      "bytes": 3908826,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20240828T0000_20240926T2358.csv",
+      "sha256": "bb1911ba3a952fe8e743d9c5d139454806f50ba92b56460871814783747b856d"
+    },
+    {
+      "bytes": 3743250,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20240927T0000_20241025T2356.csv",
+      "sha256": "0c9ffe5a9445dcd37e07d9a2508f1134122a1cabb2f4f2a06f7b682f3e6f28c3"
+    },
+    {
+      "bytes": 3732192,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20241028T0000_20241125T2358.csv",
+      "sha256": "a5cbe1e39b57e539f1a017fe97ea53e28cd8690a2e40e35ba00871899c50e443"
+    },
+    {
+      "bytes": 3723736,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20241126T0000_20241224T2358.csv",
+      "sha256": "590122abb10218786da162793fb8de8d3018ce7c979a1dbfd6579a9cbde7e465"
+    },
+    {
+      "bytes": 709422,
+      "path": "data/mt5/eurusd_1m_ic_markets_mt5_20241226T0000_20241231T2358.csv",
+      "sha256": "59fc8601f7f1af1d340dc7fa87890eb4ab1d2ce925ddcf4019d0e712b3a9decb"
+    },
+    {
+      "bytes": 7066664,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20210802T0100_20210929T2359.csv",
+      "sha256": "1567f6e848e8347c846e189f1b3985168a3cbb163a61d2aa67ef2cd19dccfa05"
+    },
+    {
+      "bytes": 6881910,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20210930T0100_20211126T2014.csv",
+      "sha256": "b85823c4cf4ed00129bd8394a4de98d966489e250a2d534857d2f917ff587bc8"
+    },
+    {
+      "bytes": 7023563,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20211129T0100_20220127T2359.csv",
+      "sha256": "4e5f3b0e0b25fb78057379c9a1eaf68e0b41aa44e0247964a75e0876b1fd79d5"
+    },
+    {
+      "bytes": 6930533,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20220128T0100_20220328T2358.csv",
+      "sha256": "204cb6e015a2387ccfeab939d6e9b2cc0424de58b18586013faab9f411aafbfb"
+    },
+    {
+      "bytes": 7089476,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20220329T0100_20220527T2359.csv",
+      "sha256": "ce91274a0197601b165d88c4fab1926f3792f11c8aa5ab54dcdfd1c349b8ab14"
+    },
+    {
+      "bytes": 6847060,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20220530T0100_20220726T2359.csv",
+      "sha256": "f9d018ddab94edcff03b5f0ef7e7bc269b64d9639fbe9cc6aa275eea847ba53a"
+    },
+    {
+      "bytes": 7037256,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20220727T0100_20220923T2359.csv",
+      "sha256": "8e3cd681bb80413d32265036f28719fdfeb274caabd25be9901b70a831f56b3c"
+    },
+    {
+      "bytes": 7112065,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20220926T0100_20221123T2353.csv",
+      "sha256": "893b020168f5dc1cc7c7aa81660eb8d633c854818df6aabcdc8fea9d0376469d"
+    },
+    {
+      "bytes": 6489667,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20221124T0100_20230120T2359.csv",
+      "sha256": "bebee0051edbd6eeaf2303d04e2cac6cc685eae4dbb0edfbb3b67fb65787d4c1"
+    },
+    {
+      "bytes": 7186113,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20230123T0100_20230323T2359.csv",
+      "sha256": "bb0ad9ef916cc2cb37c7da8e96aa4ea25bc1b9d16b457c5b35347c20d4070621"
+    },
+    {
+      "bytes": 6601547,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20230324T0100_20230522T2359.csv",
+      "sha256": "87f895df6979bf134604b83171075c7e97214ca728a831fee728b607a1bfca26"
+    },
+    {
+      "bytes": 7012322,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20230523T0100_20230721T2359.csv",
+      "sha256": "d76bb4da3942402ada489d0639e460e68203fb7a67468ce5606002db93bad522"
+    },
+    {
+      "bytes": 6800928,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20230724T0100_20230919T2359.csv",
+      "sha256": "2332b5d629a7956bfd951a44d4feede8752f51e663ae98ebf9cf212a16bc9eb7"
+    },
+    {
+      "bytes": 7040968,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20230920T0100_20231117T2359.csv",
+      "sha256": "700fdf3c6bd2e603ec9703676c4714660c8d1d4d9923424324b0e979e0704e9e"
+    },
+    {
+      "bytes": 6505691,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20231120T0100_20240117T2359.csv",
+      "sha256": "2a3553022fe59027b65c6e6550f139d82fbfa701cce450c5c7e8ea11a4059276"
+    },
+    {
+      "bytes": 6792910,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20240118T0100_20240315T2359.csv",
+      "sha256": "971dad50029291122380dc5af8aead66c55a465f3a75fbf66b60c358ca6c7d5a"
+    },
+    {
+      "bytes": 7319312,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20240318T0100_20240516T2359.csv",
+      "sha256": "a0000f2cdcc2b462a741e75de46d04e5ff18b690eea82de48fa40827eb664f5d"
+    },
+    {
+      "bytes": 7023241,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20240517T0000_20240715T2359.csv",
+      "sha256": "ddba62f4f20e3f0d0408bf11f2d3ab3dba2d89f1cee9ed0eb890f78306a900e0"
+    },
+    {
+      "bytes": 7314689,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20240716T0000_20240913T2354.csv",
+      "sha256": "aba6caeefdbd5418a3ad9a5fba60cf7c009e8f9ff9fbc358b365c7a1dc2fb9aa"
+    },
+    {
+      "bytes": 6917562,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20240916T0100_20241112T2359.csv",
+      "sha256": "416c435dd906f10dc76ad83b13a32e12f3d35a1a36cb67a6b73f86ed1ce419de"
+    },
+    {
+      "bytes": 5474572,
+      "path": "data/mt5/us500_1m_ic_markets_mt5_20241113T0100_20241231T2359.csv",
+      "sha256": "9f924e811e8c128e94ed4dc775ab5cf939c7538395b28e10d10ebd9c5dcc8107"
+    },
+    {
+      "bytes": 7547589,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20210802T0002_20210929T2358.csv",
+      "sha256": "d8facfe6f087008ffb007c47cfd8285eca50af47cf4f63f2b3bf9d6d2ab7eab3"
+    },
+    {
+      "bytes": 7384372,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20210930T0000_20211126T2353.csv",
+      "sha256": "9ccd488b88a22e20a31c744b354ee8728e3d2d9889d5519077d290d6fff5c10e"
+    },
+    {
+      "bytes": 7631784,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20211129T0000_20220127T2358.csv",
+      "sha256": "18ebfb59b5ea566e517bf7eaf4990cb63060b5c9a8fb5da47c84ea9f469ede42"
+    },
+    {
+      "bytes": 7397543,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20220128T0000_20220328T2358.csv",
+      "sha256": "e90af13ef8e7778bebf3db7ab84fcae0dcd93720abae78ee33b3f0cbac8f0048"
+    },
+    {
+      "bytes": 7739538,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20220329T0018_20220527T2356.csv",
+      "sha256": "5cde3b729e86048b7299bc868309788937b65a1fe064142875aa83a8822342d2"
+    },
+    {
+      "bytes": 7402502,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20220530T0003_20220726T2358.csv",
+      "sha256": "7a93fee1fba91418b9df2a4cd817b938b6cdcf7474a54283d454e5f5dccb8183"
+    },
+    {
+      "bytes": 7578339,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20220727T0000_20220923T2356.csv",
+      "sha256": "e6279ccee1604d4f66ca94f96ba9e618df48a1a38128133c947e4abf16a3d9d7"
+    },
+    {
+      "bytes": 7566976,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20220926T0000_20221123T2358.csv",
+      "sha256": "ef79fbb9f612161a9a1d39dd6bc00fed0d9d22b5c0061a7f85524de6d582d5c5"
+    },
+    {
+      "bytes": 7223858,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20221124T0000_20230120T2356.csv",
+      "sha256": "659ed37b888431a9698eaf0e59c8818402fe0b12416253ca3875784718766741"
+    },
+    {
+      "bytes": 7761857,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20230123T0000_20230323T2358.csv",
+      "sha256": "f98d5cd0e09901021e332d114415de5cfad3da918f3e43acee393eadb064a7f8"
+    },
+    {
+      "bytes": 7384302,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20230324T0000_20230522T2358.csv",
+      "sha256": "b21ddd4889f74178a27fc46ff6240e6f820dbea450046e03839505a256f7eb4c"
+    },
+    {
+      "bytes": 7741702,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20230523T0000_20230721T2356.csv",
+      "sha256": "68b36968637a5daa73f98b95c777ba5341225a2b39f99bbd9b81f8f3d042b01c"
+    },
+    {
+      "bytes": 7380913,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20230724T0000_20230919T2358.csv",
+      "sha256": "ea627a360e237581e3832d5f404991426ca90d87ae75586e33c7af78ec2576e7"
+    },
+    {
+      "bytes": 7571139,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20230920T0000_20231117T2356.csv",
+      "sha256": "4f2b2c3aa9732ec12c4f789274acdb9eaeee75dd33b56f9b339c91be26940f4a"
+    },
+    {
+      "bytes": 7226286,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20231120T0002_20240117T2358.csv",
+      "sha256": "67b4dc2e035503ad9a67f7d7518451e3b0b3249110579658bf610d51478ebcd6"
+    },
+    {
+      "bytes": 7410843,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20240118T0000_20240315T2356.csv",
+      "sha256": "a1da4f194404e217b227a79c563f4746c3398058454f517c49ee067236422fca"
+    },
+    {
+      "bytes": 7762450,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20240318T0000_20240516T2358.csv",
+      "sha256": "573db89c7ee8ec6bb0c86918e9e5c48e66890aaeaf91f383a2f2e1ffa36083f1"
+    },
+    {
+      "bytes": 7406871,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20240517T0000_20240715T2358.csv",
+      "sha256": "7797e1a426ae7d22ccba716315f7a85f27f964070e81ee666b8c1c45d020feb8"
+    },
+    {
+      "bytes": 7779335,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20240716T0000_20240913T2356.csv",
+      "sha256": "c8a6dcd6d5436f2facb6df1e38191af098382fa8d4aef6d824182dd66e326b4a"
+    },
+    {
+      "bytes": 7415712,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20240916T0000_20241112T2358.csv",
+      "sha256": "eae0926db1b905f9654347ab3b3b74905d3a10297532cbde9b0b772726be1738"
+    },
+    {
+      "bytes": 6000397,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20241113T0000_20241231T2358.csv",
+      "sha256": "96d1b5b0d06502a5c147dc10ebb6d3090f25b4dac85720786968fc1dc5f314b1"
+    },
+    {
+      "bytes": 7398087,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20210802T0100_20210929T2359.csv",
+      "sha256": "d942d9d8dfc27f091a9b7923c9689cd1dcc60a897d3014a43f69f5204b75100a"
+    },
+    {
+      "bytes": 7202617,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20210930T0100_20211126T2014.csv",
+      "sha256": "b0d72e5027712a7d906dad295980bfffbccb50e7b418acd8811b1fd79bbeb2f2"
+    },
+    {
+      "bytes": 7344351,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20211129T0100_20220127T2359.csv",
+      "sha256": "a46b145c907da5cdfa08aaba12f170ea1acce57077b26b4825a6774024ea7112"
+    },
+    {
+      "bytes": 7248043,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20220128T0100_20220328T2359.csv",
+      "sha256": "be51576a8153ead9fc69cbc26bcd0a66847c2c2628c69f537c2f23654aa46ffa"
+    },
+    {
+      "bytes": 7435079,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20220329T0100_20220527T2359.csv",
+      "sha256": "919b067e6eac959fa3a6b17f35fefc399d7d0d90595334a514d739d4d1c164f8"
+    },
+    {
+      "bytes": 7172683,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20220530T0101_20220726T2359.csv",
+      "sha256": "9c53ca7f0889f1fcc108cadb8d48afd8ebf71d6b01810ceb47ec0061bcc3ec07"
+    },
+    {
+      "bytes": 7409012,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20220727T0100_20220923T2359.csv",
+      "sha256": "fd51772fd49cff2904380d2a52af21496dd5d4ab28459066edafc9b18ae8e0b4"
+    },
+    {
+      "bytes": 7446594,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20220926T0100_20221123T2359.csv",
+      "sha256": "21dd30c28634f650ff3b240a327db208d88615bfdec7bf8c4f42cf98a539f456"
+    },
+    {
+      "bytes": 6823981,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20221124T0100_20230120T2359.csv",
+      "sha256": "38dbed848119b6a4206282432fcb2482952ee9c8d58cf251075edaa019b4e4c4"
+    },
+    {
+      "bytes": 7574319,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20230123T0100_20230323T2359.csv",
+      "sha256": "36fc7be67be923d4375cd8152650ca74b433b678777a19f1b0020cdac4525e88"
+    },
+    {
+      "bytes": 7085715,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20230324T0100_20230522T2359.csv",
+      "sha256": "2cfcd685908b3b7988ccf99bd0eb25b731115e0d6734c34bc41d2240e2060cbd"
+    },
+    {
+      "bytes": 7486219,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20230523T0100_20230721T2359.csv",
+      "sha256": "d6166991659cfaa29c09ec7a4081c7359f685ef629ca93df204c7855e3abfede"
+    },
+    {
+      "bytes": 7216875,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20230724T0100_20230919T2359.csv",
+      "sha256": "0cd66a27a5353ec2291694e48c5aa41723188c52707d3e1f336e024b2ec66bb2"
+    },
+    {
+      "bytes": 7436805,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20230920T0100_20231117T2359.csv",
+      "sha256": "fbab33b4f5e939cca6a6cbbf5af8c37925cedca552b43e114a6f5bd2b1ee4b17"
+    },
+    {
+      "bytes": 6997655,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20231120T0100_20240117T2359.csv",
+      "sha256": "564e56abe6f8c022a41d8303788750981b7374342d99d11accd04ac81d4e876c"
+    },
+    {
+      "bytes": 7234365,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20240118T0100_20240315T2359.csv",
+      "sha256": "fa26e0f6d8f47edb03e52a6ac183b75738adeffca49992d177751a5e75c0a677"
+    },
+    {
+      "bytes": 7602055,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20240318T0100_20240516T2359.csv",
+      "sha256": "b3011111d6121f2382a52e98d8c0528e1bd0a7969c26ece91e5dde10f9aa1e91"
+    },
+    {
+      "bytes": 7289566,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20240517T0100_20240715T2359.csv",
+      "sha256": "acf02d32510ab5da327fbff3fe23ec8efd6efb8ebc2b2b5cbf494dc8919ffcab"
+    },
+    {
+      "bytes": 7655512,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20240716T0000_20240913T2354.csv",
+      "sha256": "033e814a3abcaafd63465ca42f1ffe1293d9a5524a6cc84128a707a31d827b02"
+    },
+    {
+      "bytes": 7471934,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20240916T0100_20241112T2359.csv",
+      "sha256": "09bcefec5bd2a38428beabfeee2e38e08952446667f51ddd9e95c282c5c21d96"
+    },
+    {
+      "bytes": 5953346,
+      "path": "data/mt5/ustec_1m_ic_markets_mt5_20241113T0100_20241231T2359.csv",
+      "sha256": "19025fa916e469489334249c0babe62410bafab1347c79fcc1a7613f5b8cd997"
+    },
+    {
+      "bytes": 7009124,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20210802T0100_20210929T2358.csv",
+      "sha256": "5327380e1531ce2e34f07f7570a90ecc4aac9a4badb0387a71ed48988f754cc7"
+    },
+    {
+      "bytes": 6814575,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20210930T0100_20211126T2044.csv",
+      "sha256": "4617f82e4a64ba4b303468a3786587314d2a9329968b8adee2ae17358838d64e"
+    },
+    {
+      "bytes": 6930889,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20211129T0100_20220127T2358.csv",
+      "sha256": "c822552ecd46470330e2e875e59fc858eac03190de82749cda4aeaf4bb2f8b0c"
+    },
+    {
+      "bytes": 6849426,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20220128T0100_20220328T2358.csv",
+      "sha256": "71b5f9ddd9826adb0d21d90fbc1e15de6cfd30b38180211fa78e15cab20aaaf0"
+    },
+    {
+      "bytes": 7028498,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20220329T0100_20220527T2356.csv",
+      "sha256": "9eb13c1843b597e36cef1a69cc6eb4612291318f8c276adaf9ae6fbc9e4a2d09"
+    },
+    {
+      "bytes": 6812253,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20220530T0100_20220726T2358.csv",
+      "sha256": "b56d69f8a102ced9378d3f9fd94fdea73df15b6dd3e419c0692c62c13bc86441"
+    },
+    {
+      "bytes": 7015266,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20220727T0100_20220923T2356.csv",
+      "sha256": "2df84ec3ef5edb807b866374f8dd9f987302f26fdf6ce8d412c623ca69e3ca88"
+    },
+    {
+      "bytes": 7056843,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20220926T0100_20221123T2358.csv",
+      "sha256": "1d6b967ab26f7c4fd7d86b71c37a7a537588fb64d2ed54e16681bfdcc7ad6423"
+    },
+    {
+      "bytes": 6519236,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20221124T0100_20230120T2356.csv",
+      "sha256": "0d9e686976f4e0599eeb9185e277cc8a549a8b584d0542e668406ea2fa5e1fdb"
+    },
+    {
+      "bytes": 7216082,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20230123T0100_20230323T2358.csv",
+      "sha256": "41180057223e25cff3aa2a8508b99a8087ff853aaeab8eba373f332bf738d425"
+    },
+    {
+      "bytes": 6731178,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20230324T0100_20230522T2358.csv",
+      "sha256": "a87b6a17998ed76548c1058d90ea44a486e9e68cd7027e876422e4dba123a82d"
+    },
+    {
+      "bytes": 7179572,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20230523T0100_20230721T2356.csv",
+      "sha256": "3311c61e29a13d425ed22e836a74a018b3651ab6c92da9ed8bf29be6c076f086"
+    },
+    {
+      "bytes": 6860731,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20230724T0100_20230919T2358.csv",
+      "sha256": "8c6f81eac32678034de5b42c5b1a891526ce6c082148e42a00bcb2f44e8ad199"
+    },
+    {
+      "bytes": 7053785,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20230920T0100_20231117T2356.csv",
+      "sha256": "3816d0b7aafe6b5de5662ca9368cc21ba6683f5a4d66075256ff5bf7b3aaeba0"
+    },
+    {
+      "bytes": 6672481,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20231120T0100_20240117T2358.csv",
+      "sha256": "9492a7b89860d7fc826c5f79e95071402e9293f4db32ee0cb80446b2821c2a2c"
+    },
+    {
+      "bytes": 6857744,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20240118T0100_20240315T2356.csv",
+      "sha256": "4748586eae659f3db182101fb34a7312c99f4568a4e3b00406f88dbf0bf661f0"
+    },
+    {
+      "bytes": 7052533,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20240318T0100_20240516T2358.csv",
+      "sha256": "202a5c7b6ef211fb94f81ef2debea3ecb44d5696a71a6b98388e7948a36f6cab"
+    },
+    {
+      "bytes": 6864473,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20240517T0100_20240715T2358.csv",
+      "sha256": "348688ebce1aee8273d384c153270c8a91bba225b0d2a7080e5f382393cabe31"
+    },
+    {
+      "bytes": 7220990,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20240716T0100_20240913T2356.csv",
+      "sha256": "fdbf5efa47bc39ef61a45e384169282140925d6227cf9fd8ecdf1f9ac6251974"
+    },
+    {
+      "bytes": 6896442,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20240916T0100_20241112T2358.csv",
+      "sha256": "bc71c2980792ef4ccf47fb8fead75b530906757464568b33d7808d764743c1c9"
+    },
+    {
+      "bytes": 5536684,
+      "path": "data/mt5/xagusd_1m_ic_markets_mt5_20241113T0100_20241231T2358.csv",
+      "sha256": "b12b88615ed23cbe4810b655eb3aa61bc50aa5f4c2d646b21660185878a8b15c"
+    },
+    {
+      "bytes": 6738561,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20210802T0100_20210929T2358.csv",
+      "sha256": "9d17f2389cdc7ba372ddbc1238d478147f6761953268447bde19cb44eccca336"
+    },
+    {
+      "bytes": 6564895,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20210930T0100_20211126T2044.csv",
+      "sha256": "3dceb2ed6ef740e1c02f86b1d6bccecb4b5cc41eeff4237b292416bd137ba65a"
+    },
+    {
+      "bytes": 6741325,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20211129T0100_20220127T2358.csv",
+      "sha256": "f812c016ceb221fb82c1111c353f22213ec266f7885d6062fc383882552b483e"
+    },
+    {
+      "bytes": 6708077,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20220128T0100_20220328T2358.csv",
+      "sha256": "dbf470f561a9cfb58bdfd5b1457f6e3935d1abaaa5cd6086d7225637c104e903"
+    },
+    {
+      "bytes": 6963548,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20220329T0100_20220527T2356.csv",
+      "sha256": "39d0cc66673e3c440a604f4602b39702ad510a79b89e00375e8122addb8d7e2a"
+    },
+    {
+      "bytes": 6746344,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20220530T0100_20220726T2358.csv",
+      "sha256": "acb95520cd8099cd094b7dea1c57dc41a3d7ef3dbd48772ea68cfb9815cd4d3b"
+    },
+    {
+      "bytes": 6758685,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20220727T0100_20220923T2356.csv",
+      "sha256": "0416e39e3f8268c76deae4e08ac57ae1075fc4a33d1109c178c5851180b61e92"
+    },
+    {
+      "bytes": 6771931,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20220926T0100_20221123T2358.csv",
+      "sha256": "b994bd3dc886a6c9870ce503bfa08d33c329415f2a18a4f2e001a701e5d9e05d"
+    },
+    {
+      "bytes": 6231190,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20221124T0100_20230120T2356.csv",
+      "sha256": "2532a3c910d46116207524213e9930d5339b05816f93f2fe3a03fccfc111f2e4"
+    },
+    {
+      "bytes": 6859407,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20230123T0100_20230323T2358.csv",
+      "sha256": "0715961f5baef5b774a1b01e810fc32e083d5fe1c54285b6f49c71dfd9e5d90a"
+    },
+    {
+      "bytes": 6349240,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20230324T0100_20230522T2358.csv",
+      "sha256": "6f4f624b4f381c633b7bf4befab731abde473e87a0ec46a5c0ecffb64e82f580"
+    },
+    {
+      "bytes": 6788118,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20230523T0100_20230721T2356.csv",
+      "sha256": "2f0e81bba40e8177b9dada2b5afd48ca87a4f516d21ce0bbad73153ac23c5b6c"
+    },
+    {
+      "bytes": 6489372,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20230724T0100_20230919T2358.csv",
+      "sha256": "2664732435da62f3ae0ac6c36c17786b27f8c41581c2c1d077c86778bc371750"
+    },
+    {
+      "bytes": 6725337,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20230920T0100_20231117T2356.csv",
+      "sha256": "a6bcd028f97393eeac84bd5924af9ac1bec11f48a6a902bc8439dd9a06889e63"
+    },
+    {
+      "bytes": 6335781,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20231120T0100_20240117T2358.csv",
+      "sha256": "c1df48b2e6fd16fe7cf8b90839224a3cca34977c6eb03df46425996587a3c65b"
+    },
+    {
+      "bytes": 6465453,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20240118T0100_20240315T2356.csv",
+      "sha256": "897a7f28d7f444a22554429238c148f5341c2c38ce28aa254007f5bf88c995dc"
+    },
+    {
+      "bytes": 6768146,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20240318T0100_20240516T2358.csv",
+      "sha256": "8b393081048768f79e5b4c3b7ff37d02b9dd4dccdcce6b0c4523c239d926348b"
+    },
+    {
+      "bytes": 6555973,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20240517T0100_20240715T2358.csv",
+      "sha256": "6e0444fd75aa41cece21bcc59949ec3b44abc9eb976802c5f78826991f903455"
+    },
+    {
+      "bytes": 6912516,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20240716T0100_20240913T2356.csv",
+      "sha256": "90ebf1bfa9fbb5b9b6ac50c3aa04a065e5db39aa730c75188e7bc893a741c166"
+    },
+    {
+      "bytes": 6618592,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20240916T0100_20241112T2358.csv",
+      "sha256": "d92e936b55cbbd41cc26d14d2eaeb123c03d51f6c3777047500fc8224cdaeb86"
+    },
+    {
+      "bytes": 5296880,
+      "path": "data/mt5/xtiusd_1m_ic_markets_mt5_20241113T0100_20241231T2358.csv",
+      "sha256": "95860e41d0e775402380afba52d7db6214203e4ee87193ff200badd1a773e7cd"
+    },
+    {
+      "bytes": 890158,
+      "path": "research_artifacts/gold_casebook_v01/events.jsonl.gz",
+      "sha256": "c7875e09d9ed831ece0f223b8be5efb75550af5bf1996a2dfea9d6119b24e35f"
+    },
+    {
+      "bytes": 8511617,
+      "path": "research_artifacts/gold_casebook_v01/fundamentals.jsonl.gz",
+      "sha256": "d2b776f60c4535978bbfb28706b4700e6d054a10f8d57cfee171c83b212b7235"
+    },
+    {
+      "bytes": 92793,
+      "path": "research_artifacts/gold_casebook_v01/positioning.jsonl.gz",
+      "sha256": "e6d1aabf0d4401f3af4e54dc8ef4c0e4074772ec3f2199cfe9009b5a0b267228"
+    },
+    {
+      "bytes": 121686,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m2/certification.json",
+      "sha256": "ff59bae973835c6384c0ec8ef1ae416dec9312e29412d399b81b1ace382e4e87"
+    }
+  ],
+  "status": "SEALED_BEFORE_M2_MARKET_VALUE_ACCESS",
+  "synthetic_preaccess_proof": {
+    "direct_assertion_runner": "PASS",
+    "pytest_package_available": false,
+    "status": "PASS",
+    "tests": 4
+  },
+  "version": "MSBAM_V1_M2_FREEZE_1_0"
+}

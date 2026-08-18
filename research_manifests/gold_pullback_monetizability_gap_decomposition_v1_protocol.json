@@ -1,0 +1,51 @@
+{
+  "version": "GOLD_PULLBACK_MONETIZABILITY_GAP_DECOMPOSITION_V1_PROTOCOL_1_0",
+  "status": "FROZEN_BEFORE_DECOMPOSITION_RESULTS",
+  "development_period": ["2021-08-01T00:00:00Z", "2025-01-01T00:00:00Z"],
+  "forward_values_permitted": false,
+  "populations": {
+    "formation_aware_model_case_rows": 51918,
+    "pullback_cases": 8653,
+    "models_per_case": 6,
+    "executed_only": "FROZEN_MODEL_ROWS_WITH_STATUS_EXECUTED",
+    "stage_7": "CORRECTED_BLOCKED_OOF_PREDICTION_POPULATION_ONLY",
+    "technical_unavailable_label": "UNAVAILABLE_TECHNICAL"
+  },
+  "timeframes": ["M15", "H1", "H4"],
+  "timeframe_priority": {"H4": 0, "H1": 1, "M15": 2},
+  "models": [
+    {"model_id": "RUNAWAY_BREAKOUT", "time_exit_parent_bars": 8},
+    {"model_id": "BREAK_RETEST_CONTINUATION", "time_exit_parent_bars": 8},
+    {"model_id": "DEEP_RETRACE_CONTINUATION", "time_exit_parent_bars": 16},
+    {"model_id": "FALSE_CONTINUATION_REVERSAL", "time_exit_parent_bars": 8},
+    {"model_id": "IMMEDIATE_FAILURE_REVERSAL", "time_exit_parent_bars": 8},
+    {"model_id": "TWO_SIDED_REFERENCE_RETEST", "time_exit_parent_bars": 4}
+  ],
+  "router_tie_priority": [
+    "IMMEDIATE_FAILURE_REVERSAL",
+    "FALSE_CONTINUATION_REVERSAL",
+    "BREAK_RETEST_CONTINUATION",
+    "DEEP_RETRACE_CONTINUATION",
+    "RUNAWAY_BREAKOUT",
+    "TWO_SIDED_REFERENCE_RETEST"
+  ],
+  "fixed_risk_usd": 50.0,
+  "stages": [
+    "VISUAL_PIVOT_ORACLE",
+    "CHECKPOINT_MFE_CEILING",
+    "STOP_FEASIBLE_MFE_CEILING",
+    "FROZEN_EXIT_GROSS",
+    "FROZEN_EXIT_NET_COSTS",
+    "NON_OVERLAPPING_FIXED_RISK",
+    "FROZEN_VARIABLE_RISK_ROUTER"
+  ],
+  "path_interval": "[ENTRY_M1_OPEN, FROZEN_PARENT_BAR_DEADLINE)",
+  "same_bar_policy": "STOP_FIRST",
+  "stage_3_policy": "STOP_AT_OR_BEFORE_GLOBAL_MFE_MINUTE_RETURNS_GAP_AWARE_STOP_R_ELSE_STAGE_2_MFE",
+  "fixed_stage_normalized_pnl": "STAGE_R_TIMES_50_USD",
+  "dominant_bottleneck": "MOST_NEGATIVE_INCREMENTAL_NORMALIZED_USD_SEPARATELY_IN_FORMATION_AWARE_AND_EXECUTED_ONLY_VIEWS",
+  "independent_implementations": ["NUMPY_PRIMARY", "ITERATIVE_REFERENCE"],
+  "paid_acquisition_authorized": false,
+  "live_trading_authorized": false,
+  "retuning_permitted": false
+}

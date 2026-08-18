@@ -1,0 +1,44 @@
+{
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "checkpoint_identity_hash": "7810c672637655ebfbca5bf9f73a0f3b8e74029087f2f24ed4b33e831eeb5559",
+  "checkpoint_rows": 2095849,
+  "controls": {
+    "contract": {
+      "bytes": 12858,
+      "path": "GOLD_POINT_IN_TIME_AUCTION_STATE_AND_ADAPTIVE_TRADE_MANAGEMENT_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "98ee15c6cb11cf717e4aa1990d44759e8a4242b3f9d91463e731809a397ab2ad"
+    },
+    "definitions": {
+      "bytes": 8034,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_feature_definition_freeze.json",
+      "sha256": "7d115fe84087ce0a9d236d93bf48409ed932ec171413b6bc29ad5995412ed852"
+    },
+    "protocol": {
+      "bytes": 7230,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_protocol.json",
+      "sha256": "12dad79b3ff76875c27826066a6c34640808dc50ff1bed47ea02e45b0c0d083e"
+    },
+    "readiness": {
+      "bytes": 7181,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_preoutcome_freeze.json",
+      "sha256": "54ec36f58bd6aa97fa0e6a257cf1c515c8816cc8613e5c7036c8918b0013f0d8"
+    }
+  },
+  "development_outcomes_accessed": false,
+  "implementation": {
+    "bytes": 58559,
+    "path": "tools/materialize_gold_point_in_time_auction_state_v1_tape.py",
+    "sha256": "31dbce61c19a0571c85c0cc206670bf8cbc934e10e716faea2c6b4a9345248c4"
+  },
+  "paid_acquisition_usd": 0.0,
+  "sealed_at_utc": "2026-08-11T06:52:51.715748Z",
+  "status": "SEALED_BEFORE_CHECKPOINT_MARKET_VALUE_ACCESS",
+  "synthetic_proof": {
+    "fractal_known_index": 6,
+    "interval_queries_match": true,
+    "sample_count": 32,
+    "status": "PASS_SYNTHETIC_POINT_IN_TIME_FEATURE_PROOF"
+  },
+  "version": "GOLD_PIT_AUCTION_STATE_V1_TAPE_IMPLEMENTATION_FREEZE_1_0"
+}

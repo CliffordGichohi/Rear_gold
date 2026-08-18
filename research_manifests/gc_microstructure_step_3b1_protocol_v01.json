@@ -1,0 +1,325 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_3B1_PROTOCOL_V0_1",
+  "status": "FROZEN_BEFORE_MBP10_METADATA_QUOTE_AND_VALUE_ACCESS",
+  "frozen_at_utc": "2026-07-30T14:26:02.2199673Z",
+  "scope": "ENGINEERING_ONLY_VENDOR_MBP10_BENCHMARK_READINESS",
+  "research_or_validation_credit": "NONE",
+  "purpose": "Freeze the future comparison of the sealed GC MBO reconstruction with Databento's independently produced MBP-10 representation before any MBP-10 market value is accessed.",
+  "predecessor_preservation": {
+    "step_3a": {
+      "formal_verdict": "FAIL",
+      "verdict_preserved": true,
+      "manifest_path": "research_artifacts/gc_microstructure_step_3a_v01/manifest.json",
+      "manifest_bytes": 1902,
+      "manifest_sha256": "636db8296c32ec779fd4bca68a1d57467820d1e6098dc0d0dbaff4cc039ee5e3",
+      "declared_manifest_hash": "0897e33856c5329ee59040ff5a6c15f48cb65fc17dcf3e63ec1f8c5bf3c6c59c"
+    },
+    "step_3a1": {
+      "formal_verdict": "PASS",
+      "verdict_preserved": true,
+      "classification": "POST_RESULT_ENGINEERING_SEMANTICS_CORRECTION",
+      "research_or_validation_credit": "NONE",
+      "manifest_path": "research_artifacts/gc_microstructure_step_3a1_v01/manifest.json",
+      "manifest_bytes": 2655,
+      "manifest_sha256": "2c1c918f0cea8c3ae9766278f2c154730aec5317415cb1734710881c779d649e",
+      "declared_manifest_hash": "334b67560ee5912ed1939305715078b3f9460d389feb8cc17723a062543d657c"
+    },
+    "frozen_files": [
+      {
+        "path": "research_manifests/gc_microstructure_step_3a_protocol_v01.json",
+        "bytes": 4100,
+        "sha256": "5fc160917e92ee266a74993944f40b7266adcd697bd7a2416e23d85601f0d0b7"
+      },
+      {
+        "path": "research_manifests/gc_microstructure_step_3a1_amendment_v01.json",
+        "bytes": 4246,
+        "sha256": "154507fa69c784f3dddf16adaf248d65b538f590e7d0b742119974caa3f09bf6"
+      },
+      {
+        "path": "tools/reconstruct_gc_mbo_engineering_book.py",
+        "bytes": 46742,
+        "sha256": "e3b2672cac36a03aa52e0d228fb876d2e7df0c0d4cf496189c9c91406c0e24d9"
+      },
+      {
+        "path": "tools/reconstruct_gc_mbo_engineering_book_step3a1.py",
+        "bytes": 26381,
+        "sha256": "100c47eeda6dec21a9b83ab1c51b9614c5b69d14b4d0a21f13ea2fa6fe6034b4"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3a_v01/primary_replay.json",
+        "bytes": 6284,
+        "sha256": "62c6a25517dd8fefb03432e647e36c183df79ebb9ceea99ba482cbbf28578bca"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3a_v01/reference_replay.json",
+        "bytes": 6218,
+        "sha256": "f9075a9da91e3aea9a0e24ef73616244060d7922cca9905e47ea68bd503ff13d"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3a_v01/comparison.json",
+        "bytes": 5834,
+        "sha256": "7dc8b046cdef0cbb8ebcecd8d19a969edc5e546bf42ddb7b2625ba370b4c8932"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3a_boundary_diagnostic_v01.json",
+        "bytes": 1810,
+        "sha256": "59bc3db7dfe22fa8e50648100765203fe48d6e474a8d94319601cafc165d75a5"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3a1_v01/primary_replay.json",
+        "bytes": 6617,
+        "sha256": "59578441a72b0c4eac0f81549d9f133a638eff29d299fb1f9218e28aecfe7017"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3a1_v01/reference_replay.json",
+        "bytes": 6551,
+        "sha256": "52da793912c3c313303bb0d7fdeb8c06292caeeeac47bf091a1ee29964a35871"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3a1_v01/market_state_boundary_audit.json",
+        "bytes": 1332,
+        "sha256": "f967dd84cfbda7d869a5bb1ead30223f96447d33b845dbef90bb3537e4e6619c"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3a1_v01/comparison.json",
+        "bytes": 3859,
+        "sha256": "218be293c5f2ecbbba8bb6d20cf94ebeee696830cf763783131c842512916656"
+      }
+    ]
+  },
+  "provider_basis": {
+    "official_documentation": [
+      "https://databento.com/docs/schemas-and-data-formats/mbp-10",
+      "https://databento.com/docs/schemas-and-data-formats/mbo",
+      "https://databento.com/docs/standards-and-conventions/common-fields-enums-types",
+      "https://databento.com/docs/knowledge-base/datasets/glbx-mdp3",
+      "https://databento.com/docs/examples/order-book/limit-order-book",
+      "https://databento.com/docs/standards-and-conventions/mbo-snapshot"
+    ],
+    "frozen_interpretation": [
+      "MBO is the order-level source from which MBP-10 can be derived.",
+      "F_LAST marks the last MBO record in one event for an instrument.",
+      "The reconstructed book is sampled only after applying the F_LAST record.",
+      "MBP-10 carries the top ten bid and ask price levels with aggregate size and order count.",
+      "MBP-10 is a vendor-produced benchmark independent of the two local reconstruction implementations, but it is derived from the same underlying venue feed and is not independent trading evidence."
+    ]
+  },
+  "metadata_quote_request": {
+    "dataset": "GLBX.MDP3",
+    "symbols": [
+      "GC.v.0"
+    ],
+    "schema": "mbp-10",
+    "stype_in": "continuous",
+    "start": "2024-01-09T00:00:00Z",
+    "end": "2024-01-10T00:00:00Z"
+  },
+  "future_acquisition_identity": {
+    "dataset": "GLBX.MDP3",
+    "symbols": [
+      "GC.v.0"
+    ],
+    "schema": "mbp-10",
+    "stype_in": "continuous",
+    "stype_out": "instrument_id",
+    "start": "2024-01-09T00:00:00Z",
+    "end": "2024-01-10T00:00:00Z",
+    "encoding": "dbn",
+    "compression": "zstd",
+    "pretty_px": false,
+    "pretty_ts": false,
+    "map_symbols": false,
+    "split_duration": "day",
+    "split_symbols": false,
+    "delivery": "download"
+  },
+  "data_policy": {
+    "classification": "ENGINEERING_ONLY",
+    "calendar_date": "2024-01-09",
+    "permanently_excluded_from_relationship_discovery": true,
+    "permanently_excluded_from_candidate_selection": true,
+    "permanently_excluded_from_validation": true,
+    "edge_discovery_permitted": false,
+    "signal_testing_permitted": false,
+    "execution_optimization_permitted": false,
+    "market_outcome_analysis_permitted": false,
+    "trades_or_pnl_permitted": false
+  },
+  "comparison_population": {
+    "unit": "one completed MBO event for GC.v.0",
+    "mbo_sampling_boundary": "Every sealed MBO record carrying F_LAST, after that record has been applied to the book.",
+    "mbp10_sampling_boundary": "Every vendor MBP-10 record in the exact matching request.",
+    "expected_cardinality": "Exactly one vendor MBP-10 record per sealed MBO F_LAST boundary.",
+    "snapshot_boundary_included": true,
+    "maintenance_and_pre_open_included": true,
+    "silent_row_filtering_permitted": false
+  },
+  "alignment": {
+    "ordering": [
+      "ts_recv ascending",
+      "source ordinal ascending as the deterministic tie-breaker"
+    ],
+    "exact_primary_key": [
+      "publisher_id",
+      "instrument_id",
+      "sequence",
+      "ts_event",
+      "ts_recv"
+    ],
+    "mbo_key_source": "The MBO record carrying F_LAST for the completed event.",
+    "mbp10_key_source": "The corresponding MBP-10 record header.",
+    "join_cardinality": "ONE_TO_ONE",
+    "nearest_timestamp_matching_permitted": false,
+    "timestamp_tolerance_ns": 0,
+    "sequence_tolerance": 0,
+    "resampling_permitted": false,
+    "forward_fill_permitted": false,
+    "interpolation_permitted": false,
+    "duplicate_key_policy": "FAIL"
+  },
+  "exact_match_fields": {
+    "levels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "sides": [
+      "BID",
+      "ASK"
+    ],
+    "fields_per_side_and_level": [
+      "price_fixed_1e9",
+      "aggregate_size",
+      "order_count"
+    ],
+    "total_exact_book_fields_per_row": 60,
+    "price_tolerance_fixed_1e9_units": 0,
+    "size_tolerance": 0,
+    "order_count_tolerance": 0,
+    "empty_level_canonicalization": {
+      "price_fixed_1e9": 9223372036854775807,
+      "aggregate_size": 0,
+      "order_count": 0
+    },
+    "comparison_scope": "All 60 canonical book-state fields at every one-to-one aligned row in every market state."
+  },
+  "market_state_policy": {
+    "timezone": "UTC",
+    "intervals": [
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive": "2024-01-09T00:00:00Z",
+        "end_exclusive": "2024-01-09T22:00:00Z"
+      },
+      {
+        "state": "MAINTENANCE",
+        "start_inclusive": "2024-01-09T22:00:00Z",
+        "end_exclusive": "2024-01-09T22:45:00Z"
+      },
+      {
+        "state": "PRE_OPEN",
+        "start_inclusive": "2024-01-09T22:45:00Z",
+        "end_exclusive": "2024-01-09T23:00:00Z"
+      },
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive": "2024-01-09T23:00:00Z",
+        "end_exclusive": "2024-01-10T00:00:00Z"
+      }
+    ],
+    "classification_timestamp": "ts_recv",
+    "coverage_must_be_complete_and_nonoverlapping": true,
+    "book_field_exactness_applies_in_all_states": true,
+    "uncrossed_gate_applies_only_to_continuous_matching": true,
+    "maintenance_locked_or_crossed": "REPORT_SEPARATELY_NOT_REJECTED_BY_RELATION_GATE",
+    "pre_open_locked_or_crossed": "REPORT_SEPARATELY_NOT_REJECTED_BY_RELATION_GATE",
+    "vendor_and_reconstruction_relation_classification_must_match": true
+  },
+  "missing_data_policy": {
+    "missing_request_interval": "FAIL",
+    "missing_symbol_mapping": "FAIL",
+    "missing_or_extra_mbp10_row": "FAIL",
+    "missing_or_extra_mbo_boundary": "FAIL",
+    "duplicate_alignment_key": "FAIL",
+    "unmatched_row": "FAIL",
+    "f_maybe_bad_book_on_either_source": "FAIL",
+    "missing_level_representation": "Canonicalize only as the frozen undefined-price sentinel with zero size and zero count.",
+    "zero_imputation_for_observed_depth": false,
+    "dropping_mismatches": false,
+    "repair_after_value_access": false
+  },
+  "future_comparison_implementations": {
+    "primary": "Streaming event replay and exact merge join against the vendor MBP-10 stream.",
+    "reference": "Independent materialized-key comparison using separately generated canonical top-ten rows.",
+    "separate_source_passes_required": true,
+    "identical_alignment_counts_required": true,
+    "identical_mismatch_counts_required": true,
+    "identical_canonical_comparison_checksum_required": true
+  },
+  "future_pass_gates": {
+    "all_predecessor_seals_valid": true,
+    "mbo_source_seal_unchanged": true,
+    "mbp10_request_identity_exact": true,
+    "mbp10_raw_and_normalized_sources_hashed_and_sealed": true,
+    "full_requested_interval_covered": true,
+    "symbol_and_instrument_lineage_consistent": true,
+    "market_state_classification_complete_and_nonoverlapping": true,
+    "mbo_f_last_keys_unique": true,
+    "mbp10_alignment_keys_unique": true,
+    "one_to_one_alignment_complete": true,
+    "unmatched_mbo_boundaries": 0,
+    "unmatched_mbp10_rows": 0,
+    "bad_book_flag_rows": 0,
+    "book_field_mismatches": 0,
+    "continuous_matching_relation_mismatches": 0,
+    "continuous_matching_locked_or_crossed_rows": 0,
+    "primary_and_reference_comparison_checksums_match": true,
+    "primary_and_reference_counts_match": true,
+    "deterministic_repeat_checksum_matches": true
+  },
+  "future_verdict_rule": {
+    "PASS": "Every frozen future pass gate is satisfied exactly.",
+    "FAIL": "One or more frozen future pass gates is not satisfied.",
+    "retuning_after_value_access_permitted": false,
+    "formal_step_3a_fail_overwritten_by_future_pass": false,
+    "step_3a1_pass_overwritten_by_future_result": false
+  },
+  "step_3b1_readiness_gates": {
+    "predecessor_hashes_verified_before_protocol_freeze": true,
+    "protocol_frozen_before_metadata_quote": true,
+    "metadata_request_matches_frozen_identity": true,
+    "estimated_cost_is_finite_and_nonnegative": true,
+    "estimated_record_count_is_positive": true,
+    "estimated_billable_size_is_positive": true,
+    "batch_job_submitted": false,
+    "data_downloaded": false,
+    "charge_incurred": false,
+    "mbp10_values_accessed": false,
+    "market_outcomes_accessed": false
+  },
+  "prohibited_in_step_3b1": [
+    "batch job submission",
+    "time-series retrieval",
+    "data download",
+    "paid acquisition",
+    "MBP-10 market-value inspection",
+    "modifying any predecessor artifact",
+    "changing the frozen alignment after quote",
+    "edge discovery",
+    "directional analysis",
+    "feature or signal creation",
+    "execution optimization",
+    "outcome inspection",
+    "trades",
+    "PnL",
+    "R multiples",
+    "account returns"
+  ]
+}

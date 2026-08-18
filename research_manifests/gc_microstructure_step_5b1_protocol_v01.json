@@ -1,0 +1,357 @@
+{
+  "bad_ts_recv_diagnostic": {
+    "exclusive_violation_taxonomy_in_precedence_order": [
+      {
+        "disposition": "GENUINE_SOURCE_FAILURE",
+        "id": "BAD_STRUCTURAL_INVALID",
+        "rule": "Wrong publisher/date-mapped instrument, unknown action, or timestamp outside the frozen request."
+      },
+      {
+        "disposition": "GENUINE_SOURCE_FAILURE",
+        "id": "BAD_SNAPSHOT_CONTRADICTION",
+        "rule": "F_SNAPSHOT is set but the documented historical snapshot structure fails day-start receive, preserved event not after receive, or A/R action semantics."
+      },
+      {
+        "disposition": "DOCUMENTED_VALID_SEMANTICS",
+        "id": "BAD_NON_SNAPSHOT_DOCUMENTED",
+        "rule": "F_SNAPSHOT is not set and structural validity passes; the general F_BAD_TS_RECV definition documents the receive timestamp issue without requiring a snapshot."
+      },
+      {
+        "disposition": "UNRESOLVED",
+        "id": "BAD_OTHER_UNRESOLVED",
+        "rule": "Any remaining old-rule violation."
+      }
+    ],
+    "finding_rule": "DOCUMENTED_VALID_SEMANTICS only if all 174 violations are BAD_NON_SNAPSHOT_DOCUMENTED and every denominator and structural check passes; GENUINE_SOURCE_FAILURE if any genuine class occurs; otherwise UNRESOLVED.",
+    "old_rule_reproduction": "F_BAD_TS_RECV and any of: not F_SNAPSHOT, ts_recv not UTC day start, ts_event at/after day start, ts_event after ts_recv, or action outside A/R.",
+    "required_cross_tabs": [
+      "request and schema",
+      "snapshot boolean",
+      "action and side",
+      "flags integer",
+      "market state",
+      "overlap with receive-before-event scope",
+      "exclusive violation taxonomy"
+    ],
+    "scope": "Exactly the 174 F_BAD_TS_RECV rows that violated the former snapshot-only Step 5B rule, while scanning all F_BAD_TS_RECV rows for denominator and exhaustiveness checks."
+  },
+  "calendar_coverage_diagnostic": {
+    "finding_rules": {
+      "EXPECTED_CALENDAR_UNAVAILABILITY": "All tests pass and the only four incomplete windows are the two sessions in both schemas on the official holiday.",
+      "GENUINE_SOURCE_FAILURE": "A required open-session window is absent or a sealed source/file/completeness fact fails.",
+      "UNRESOLVED": "Official calendar evidence or technical coverage is insufficient for an exact disposition."
+    },
+    "required_tests": [
+      "Reproduce exactly four and no other incomplete windows.",
+      "Confirm 2022-04-15 is the official CME Good Friday holiday using the frozen official registry.",
+      "Confirm the daily DBN file exists and its hash is sealed for both schemas.",
+      "Confirm provider record counts, normalized row counts, source ordering, and date-mapped instrument lineage remain sealed.",
+      "Using ts_recv only, count rows in each frozen 15-minute lookback and through each cutoff without reading market values.",
+      "Confirm every 2022-04-11 through 2022-04-14 London and New York window remains complete.",
+      "Confirm both schemas independently show no qualifying coverage for the two Good Friday windows."
+    ],
+    "scope": "The four sealed incomplete windows: London and New York in Q017:mbo and Q018:mbp-10 on 2022-04-15."
+  },
+  "classification": "SOURCE_INTEGRITY_DIAGNOSTIC_ONLY",
+  "completion_policy": "Classify all 13 failed requests, independently reproduce the diagnostic, recommend at most one bounded value-blind amendment, seal Step 5B.1, and stop.",
+  "constants": {
+    "allowed_actions": [
+      "A",
+      "C",
+      "M",
+      "T",
+      "F",
+      "R",
+      "N"
+    ],
+    "expected_publisher_id": 1,
+    "flag_bad_ts_recv": 8,
+    "flag_last": 128,
+    "flag_snapshot": 32,
+    "historical_snapshot_actions": [
+      "A",
+      "R"
+    ],
+    "int32_max": 2147483647,
+    "int32_min": -2147483648,
+    "market_state_timezone": "America/Chicago",
+    "market_state_windows_local": {
+      "CONTINUOUS_MATCHING": "all remaining UTC-day times",
+      "MAINTENANCE": "16:00:00 inclusive to 16:45:00 exclusive",
+      "PRE_OPEN": "16:45:00 inclusive to 17:00:00 exclusive"
+    },
+    "native_event_group_key": [
+      "publisher_id",
+      "instrument_id",
+      "sequence"
+    ],
+    "timestamp_authority": "ts_recv",
+    "timezone": "UTC"
+  },
+  "formal_gates": {
+    "all_144352215_rows_scanned_by_each_implementation": true,
+    "all_frozen_occurrence_counts_reproduced": true,
+    "at_most_one_recommendation": true,
+    "every_failed_request_classified_exactly_once": true,
+    "every_target_row_classified_exactly_once": true,
+    "exactly_13_failed_requests_processed": true,
+    "no_prohibited_values_or_work": true,
+    "official_calendar_evidence_bound": true,
+    "primary_and_reference_outputs_identical": true,
+    "step5b_and_relevant_source_seals_valid": true
+  },
+  "frozen_at_utc": "2026-08-04T06:55:38.371192Z",
+  "independent_reproduction": {
+    "any_difference": "FAIL_STEP_5B1_DIAGNOSTIC_REPRODUCTION",
+    "each_implementation_reads": "Every row of all 13 failed normalized sources, selecting only the frozen technical metadata columns.",
+    "identical_required": [
+      "all source row counts",
+      "719,524 receive-before-event occurrence count",
+      "174 old snapshot-rule violation count",
+      "four incomplete-window classifications",
+      "all exclusive taxonomies and cross-tabs",
+      "ordered target-row identity checksums",
+      "native-event grouping counts and checksums",
+      "per-request and aggregate classifications",
+      "recommendation or NONE"
+    ],
+    "primary": "PyArrow Parquet batch scan with NumPy masks and run-length native-event grouping.",
+    "reference": "Independent PyArrow Dataset scan converted to pandas with separately coded predicates and group-boundary handling."
+  },
+  "official_semantics_registry": {
+    "cme_2022_good_friday_advisory": {
+      "frozen_fact": "The advisory identifies 2022-04-15 as the Good Friday holiday.",
+      "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-good-friday-advisory.pdf"
+    },
+    "cme_2022_good_friday_settlement_notice": {
+      "frozen_fact": "CME states it would not derive or disseminate CME, CBOT, NYMEX, or COMEX settlement prices on 2022-04-15.",
+      "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/good-friday-holiday-settlement-times-2022.pdf"
+    },
+    "cme_2022_metals_calendar": {
+      "frozen_fact": "2022-04-15 is marked as the Good Friday CME Group holiday.",
+      "url": "https://www.cmegroup.com/trading/metals/files/metals-prod-guide-2022.pdf"
+    },
+    "databento_common_fields": {
+      "frozen_facts": [
+        "ts_recv is the Databento capture-server receive timestamp.",
+        "ts_event is the publisher matching-engine event timestamp.",
+        "ts_in_delta is ts_recv minus the publisher sending timestamp.",
+        "ts_in_delta may be negative because publisher and Databento clocks need not be synchronized.",
+        "F_BAD_TS_RECV bit 8 means ts_recv is inaccurate due to clock issues or packet reordering.",
+        "F_SNAPSHOT bit 32 identifies replay or snapshot messages.",
+        "F_LAST bit 128 marks the final record in one native event for an instrument."
+      ],
+      "url": "https://databento.com/docs/standards-and-conventions/common-fields-enums-types"
+    },
+    "databento_glbx_mdp3": {
+      "frozen_fact": "GLBX.MDP3 contains CME Group MDP 3.0 publisher timestamps and Databento capture timestamps without adjusting the publisher timestamp domain.",
+      "url": "https://databento.com/docs/venues-and-datasets/glbx-mdp3"
+    },
+    "databento_mbo_snapshot": {
+      "frozen_facts": [
+        "Historical MBO snapshots are synthetic day-start recovery state.",
+        "Snapshot records carry F_SNAPSHOT and F_BAD_TS_RECV.",
+        "A snapshot starts with action R and continues with zero or more action A rows.",
+        "Snapshot ts_recv is the snapshot generation timestamp while ts_event is preserved."
+      ],
+      "url": "https://databento.com/docs/standards-and-conventions/mbo-snapshot"
+    }
+  },
+  "predecessor_preservation": {
+    "all_step5b_and_earlier_artifacts_immutable": true,
+    "formal_step5b_failure_remains_unchanged": true,
+    "required_step5b_failed_request_count": 13,
+    "required_step5b_manifest_hash": "6b4074aa95953232db878027aa0dc85666c478f4abd80e864022e61fded46683",
+    "required_step5b_quality_pass_count": 67,
+    "required_step5b_status": "FAIL_STEP_5B_BUDGET_C_SOURCE_INTEGRITY"
+  },
+  "preparation_audit": {
+    "charge_incurred_usd": 0.0,
+    "inventory_failed_request_count": 13,
+    "market_values_or_outcomes_accessed_or_reported": false,
+    "source_rows_accessed": false
+  },
+  "prohibited": [
+    "modifying any Step 5B or earlier verdict, seal, or source",
+    "filtering, repairing, relabeling, replacing, or reacquiring data",
+    "incurring a charge or using another account",
+    "reading or reporting price, depth, size, order-flow, or outcome values",
+    "calculating features, relationships, candidates, signals, or directional outcomes",
+    "optimizing execution or calculating trades, PnL, R multiples, or returns",
+    "implementing the recommendation or recertifying Step 5B"
+  ],
+  "purpose": "Classify only the three frozen Step 5B source-integrity failure families using technical metadata, without changing any source or calculating research features or outcomes.",
+  "receive_before_event_diagnostic": {
+    "derived_metadata": {
+      "event_to_send_ns": "publisher_send_ns - ts_event",
+      "publisher_send_ns": "ts_recv - ts_in_delta",
+      "receive_event_lead_ns": "ts_event - ts_recv, strictly positive"
+    },
+    "exclusive_row_taxonomy_in_precedence_order": [
+      {
+        "disposition": "GENUINE_SOURCE_FAILURE",
+        "id": "RB_STRUCTURAL_INVALID",
+        "rule": "Wrong publisher or date-mapped instrument, unknown action, timestamp outside the frozen request by ts_recv, event at/after request end, or undefined required metadata."
+      },
+      {
+        "disposition": "DOCUMENTED_VALID_SEMANTICS",
+        "id": "RB_FLAGGED_BAD_TS_RECV",
+        "rule": "F_BAD_TS_RECV is set after structural validity; the official flag explicitly documents inaccurate ts_recv from clock issues or packet reordering."
+      },
+      {
+        "disposition": "UNRESOLVED",
+        "id": "RB_UNFLAGGED_CLAMPED_TS_IN_DELTA",
+        "rule": "F_BAD_TS_RECV is not set and ts_in_delta equals INT32_MIN or INT32_MAX."
+      },
+      {
+        "disposition": "DOCUMENTED_VALID_SEMANTICS",
+        "id": "RB_UNFLAGGED_NEGATIVE_DELTA_COHERENT",
+        "rule": "F_BAD_TS_RECV is not set, ts_in_delta is negative, and derived publisher_send_ns is at or after ts_event."
+      },
+      {
+        "disposition": "GENUINE_SOURCE_FAILURE",
+        "id": "RB_UNFLAGGED_TIMESTAMP_INCOHERENT",
+        "rule": "All remaining structurally valid unflagged rows, including nonnegative ts_in_delta or publisher send time preceding event time."
+      }
+    ],
+    "finding_rule": "DOCUMENTED_VALID_SEMANTICS only if every occurrence is in a documented-valid row class and all source/group integrity tests pass; GENUINE_SOURCE_FAILURE if any genuine class occurs; otherwise UNRESOLVED.",
+    "lead_bins_ns": [
+      "1_TO_1K",
+      "1K_TO_10K",
+      "10K_TO_100K",
+      "100K_TO_1M",
+      "GT_1M"
+    ],
+    "per_row_fields_permitted": [
+      "source_file_index",
+      "source_row_ordinal",
+      "ts_recv",
+      "ts_event",
+      "publisher_id",
+      "instrument_id",
+      "action",
+      "side",
+      "flags",
+      "ts_in_delta",
+      "sequence"
+    ],
+    "required_cross_tabs": [
+      "request and trade date",
+      "action and side",
+      "exact flags integer and snapshot/reset booleans",
+      "market state",
+      "receive-event lead bins",
+      "exclusive row taxonomy",
+      "native-event group size, target-row count, F_LAST count, and contiguity"
+    ],
+    "scope": "Every row in the ten failed MBO requests satisfying ts_recv < ts_event; exactly 719,524 rows must be reproduced."
+  },
+  "recommendation_rule": {
+    "all_requests_explained_without_genuine_or_unresolved": {
+      "bounded_text": "In a separately authorized recertification only: accept structurally valid F_BAD_TS_RECV live rows under the general provider flag semantics; accept structurally valid unflagged ts_recv-before-ts_event rows only when negative, unclamped ts_in_delta yields publisher send time at/after event time; and mark the four 2022-04-15 London/New York windows unavailable under the official Good Friday calendar. Keep every other Step 5B source, feature definition, and integrity gate unchanged.",
+      "recommendation_id": "TIMESTAMP_FLAG_AND_OFFICIAL_HOLIDAY_DISPOSITION_V0_1"
+    },
+    "implementation_in_step5b1_permitted": false,
+    "maximum_recommendations": 1,
+    "otherwise": "NONE"
+  },
+  "request_classification": {
+    "exclusive_classes": [
+      "DOCUMENTED_VALID_SEMANTICS",
+      "EXPECTED_CALENDAR_UNAVAILABILITY",
+      "GENUINE_SOURCE_FAILURE",
+      "UNRESOLVED"
+    ],
+    "precedence": [
+      "GENUINE_SOURCE_FAILURE",
+      "UNRESOLVED",
+      "EXPECTED_CALENDAR_UNAVAILABILITY",
+      "DOCUMENTED_VALID_SEMANTICS"
+    ],
+    "rules": {
+      "DOCUMENTED_VALID_SEMANTICS": "Every applicable family returns only DOCUMENTED_VALID_SEMANTICS.",
+      "EXPECTED_CALENDAR_UNAVAILABILITY": "Every applicable family returns only EXPECTED_CALENDAR_UNAVAILABILITY.",
+      "GENUINE_SOURCE_FAILURE": "Any applicable diagnostic family returns GENUINE_SOURCE_FAILURE.",
+      "UNRESOLVED": "No genuine failure exists and any applicable family is UNRESOLVED, or valid and calendar dispositions are mixed within one request."
+    }
+  },
+  "research_or_validation_credit": "NONE",
+  "sealed_inputs": {
+    "expected_bad_ts_recv_old_snapshot_rule_violations": 174,
+    "expected_incomplete_prediction_windows": 4,
+    "expected_receive_before_event_rows": 719524,
+    "failed_request_ids_in_order": [
+      "Q007:mbo",
+      "Q008:mbp-10",
+      "Q017:mbo",
+      "Q018:mbp-10",
+      "Q035:mbo",
+      "Q037:mbo",
+      "Q039:mbo",
+      "Q041:mbo",
+      "Q043:mbo",
+      "Q045:mbo",
+      "Q063:mbo",
+      "Q077:mbo",
+      "Q083:mbo"
+    ],
+    "failed_request_rows": 144352215,
+    "predecessor_files": [
+      {
+        "path": "/home/wapi/rear_gold_step5b_v01/artifacts/step5b_budget_c_final/manifest.json",
+        "sha256": "0a4abebcc8957568d33b734d7511481c0203a73e7cb7cacfc4a89c933a21c6f9"
+      },
+      {
+        "path": "/home/wapi/rear_gold_step5b_v01/artifacts/step5b_budget_c_final/verdict.json",
+        "sha256": "2ee53fb8169bc1b47f38011cd2600ad74dec37404e806c1dd5a0ba0cbc2ce4bb"
+      },
+      {
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/acquisition_manifest.json",
+        "sha256": "b4e64d508790364dbd400da1478b139bb643d2b7afc9c97ff6691958365c5ccc"
+      },
+      {
+        "path": "/home/wapi/rear_gold_step5b_v01/artifacts/budget_c_quality_summary.json",
+        "sha256": "f9cafd05800df50513d5357ea8c5e23f75f44038cdd12bd32e9795699cc88bab"
+      },
+      {
+        "path": "/home/wapi/rear_gold_step5b_v01/artifacts/budget_c_verify.log",
+        "sha256": "1256ef75137d68416c89c2b9f4f56c881659be58787e317d9a004ade955521d1"
+      }
+    ],
+    "remote_root": "/home/wapi/rear_gold_step5b_v01",
+    "source_inventory": {
+      "bytes": 104466,
+      "path": "research_manifests/gc_microstructure_step_5b1_source_inventory_v01.json",
+      "sha256": "a4e2bf8acf97b0ddefde017f36142f5356223ec5ca106fc8e7228cdb5c75b0af"
+    },
+    "source_substitution_or_reacquisition_permitted": false
+  },
+  "status": "FROZEN_BEFORE_ROW_LEVEL_ACCESS",
+  "status_precedence": [
+    "FAIL_STEP_5B1_PREDECESSOR_OR_SOURCE_INTEGRITY",
+    "FAIL_STEP_5B1_DIAGNOSTIC_INTEGRITY",
+    "FAIL_STEP_5B1_DIAGNOSTIC_REPRODUCTION",
+    "PASS_STEP_5B1_DIAGNOSTIC_REPRODUCTION"
+  ],
+  "technical_output_policy": {
+    "no_raw_timestamp_or_row_identity_emission": true,
+    "permitted": [
+      "counts and boolean classifications",
+      "timestamp relation and elapsed-nanosecond bins",
+      "flags, actions, sides, sequence and event-group metadata",
+      "snapshot/reset and market-state classes",
+      "instrument identifiers and date mappings",
+      "technical session-window coverage",
+      "hashed row and group identities",
+      "checksums and source lineage"
+    ],
+    "prohibited": [
+      "price or price-derived values",
+      "depth, size, order count, imbalance, or order-flow values",
+      "market outcomes or directional relationships",
+      "features, signals, candidates, execution, trades, PnL, R multiples, or returns"
+    ],
+    "row_identity_hash": "SHA-256 over request ID, source file index, source row ordinal, ts_recv, ts_event, publisher ID, instrument ID, action, side, flags, ts_in_delta, and sequence in canonical UTF-8 pipe-delimited source order."
+  },
+  "version": "GC_MICROSTRUCTURE_STEP_5B1_PROTOCOL_V0_1"
+}

@@ -1,0 +1,61 @@
+{
+  "authorization": {
+    "calendar_2025_open_once_permitted_after_this_seal": true,
+    "calendar_2026_ytd_open_once_after_2025_seal_permitted": true,
+    "paid_acquisition_permitted": false,
+    "prospective_ledger_initialization_permitted": true,
+    "source_refresh_permitted": [
+      "IC_MARKETS_MT5_XAUUSD",
+      "US_VOLATILITY_INDEX",
+      "US_FINANCIAL_STRESS"
+    ]
+  },
+  "created_at": "2026-07-30T12:57:41.445624+00:00",
+  "implementation_freeze": {
+    "backend/src/gold_intel/analytics/session_behaviour_v3_m6b.py": "1e0b0172aa39fc25a191923e5791d03b8fcd309e7d16cfb8a4be17d2650827a7",
+    "backend/tests/unit/test_session_behaviour_v3_m6b.py": "9dff4099497f4a9496ed165d0e5a6dcb8bb2a578f855122ba9abfe84044d4859",
+    "backend/tools/refresh_gold_session_behaviour_v3_m6b_sources.py": "a3e9600ce7a4fa0b9699d2146a7ab9345f35c74345ae97dd3f8cd3a29b0353f4",
+    "backend/tools/run_gold_session_behaviour_v3_m6b.py": "879e40faa2f35812bebf4d032dfefd4b6381ee9ab989535cac7e52b58135bd34",
+    "backend/tools/seal_gold_session_behaviour_v3_m6b_sources.py": "9a26f4dd9427fd90738db574fd8aaca60d3fa3170b2e079a047c01af10e88444",
+    "backend/tools/validate_gold_session_behaviour_v3_m6b.py": "b376e7d1548a31fb095959f8f66fcb605421868f35128d79444ada6e667abcfd"
+  },
+  "manifest_hash": "fdf785eeceb506e258f604c48a950ba6817dc02d3cca32239043f1ca014e6bf1",
+  "manifest_version": "GOLD_SESSION_BEHAVIOUR_V3_M6B_PREOPEN_MANIFEST_V0_1",
+  "metadata_readiness": {
+    "all_historical_candidate_partition_metadata_gates_pass": true,
+    "file_sha256": "6afbc6a347ff1fb5ffbaacaa2aa1ac534560d02d06856b6c5677f7c0144b2fe6",
+    "path": "/workspace/research_artifacts/gold_session_behaviour_v3_m6b_source_snapshot_v01/metadata_readiness_audit.json",
+    "readiness_audit_hash": "de956e87b3b1b5015f29775cca1505cc9b0f0bc6e5d6c2cd49e23b341c04b6ab"
+  },
+  "milestone": "V3_M6B_ONE_TIME_FORWARD_VALUE_EVALUATION",
+  "predecessor": {
+    "file_sha256": "55aab7af7b3f08eb66a560697be7dc53497971ba9ec229ea8d49691dff048a66",
+    "output_seal_failures": 0,
+    "output_seals_verified": 12,
+    "path": "/workspace/research_artifacts/gold_session_behaviour_v3_state_v06a.json",
+    "state_hash": "fa8963661bb3a6e8eff1d95dac1c713015882019f6b2ba6937bc398d1ae85629"
+  },
+  "protocol_fingerprint": "308ff594d85b478b755f85397d19ed7e76faad50fa447af29f7ee8692dcd54de",
+  "research_boundary": {
+    "candidate_codes": [
+      "LONDON_VOLATILITY_DIRECTION_V0_1",
+      "NEW_YORK_FINANCIAL_STRESS_DIRECTION_V0_1"
+    ],
+    "candidate_definitions_changed": false,
+    "cot_used_as_pass_gate": false,
+    "execution_variants": 0,
+    "forward_candidate_states_outcomes_or_relationships_calculated": false,
+    "new_variables_or_candidates": 0,
+    "paid_acquisition": false,
+    "source_payloads_machine_hashed": true,
+    "source_values_printed_or_human_inspected": false,
+    "trades_or_returns": 0
+  },
+  "source_snapshot": {
+    "file_sha256": "8b9699b568fca23ea81ba31288ba6e0bc2c021d7394011c26899d1e738e12840",
+    "machine_hashed_without_human_value_inspection": true,
+    "path": "/workspace/research_artifacts/gold_session_behaviour_v3_m6b_source_snapshot_v01/source_snapshot.json",
+    "source_snapshot_hash": "855bf26184a471be0833dcca50b8af39d3e021e5323c7ff15a1d2577c6389df0"
+  },
+  "verdict": "PASS_M6B_PREOPEN_SOURCE_AND_IMPLEMENTATION_SEAL"
+}

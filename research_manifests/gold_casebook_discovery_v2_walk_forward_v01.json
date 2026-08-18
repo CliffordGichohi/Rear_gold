@@ -1,0 +1,179 @@
+{
+  "authorization": {
+    "authorized_on": "2026-07-29",
+    "scope": "Complete only V2 Milestone 4 for the sole contract-recognized inherited London candidate.",
+    "verbatim": "if everything looks great and no contract negotiation needed lets proceed to milestone 4"
+  },
+  "candidate": {
+    "candidate_code": "LONDON_ZN_4H_POSTHOC_V0_1",
+    "conditions": 1,
+    "feature_id": "cross_zn_v_0_4_hours",
+    "feature_transform": "SIGN_3",
+    "independent_validation_credit": false,
+    "origin": "CONTRACT_RECOGNIZED_POST_HOC_CANDIDATE",
+    "rule_table": {
+      "FLAT": "NO_BIAS",
+      "NEGATIVE": "SHORT",
+      "POSITIVE": "LONG",
+      "UNKNOWN": "NO_BIAS"
+    },
+    "session": "LONDON",
+    "threshold": null,
+    "tuning_permitted": false
+  },
+  "contract": {
+    "governing_document": "GOLD_CASEBOOK_DISCOVERY_CONTRACT_V2.md",
+    "manifest_hash": "81e39b469111bb92a46c0d2c70f863cba438b647345104d4b8e8bc1a9e4d8188",
+    "manifest_path": "research_manifests/gold_casebook_discovery_contract_v02.json"
+  },
+  "cost_stress": {
+    "base_cost_multiplier": 1.0,
+    "formula": "stressed selected net P&L per ounce = direction-adjusted gross move per ounce - 1.5 * frozen base cost per ounce",
+    "stress_cost_multiplier": 1.5,
+    "unchanged_items": [
+      "candidate direction",
+      "decision time",
+      "entry time",
+      "exit time",
+      "reference prices",
+      "quantity"
+    ]
+  },
+  "execution": {
+    "changes_permitted": false,
+    "execution_manifest_hash": "724a4fef0fa4b526b4d30b9743c2dfa013c53f87b19262a36b05f3fd07c87d76",
+    "execution_manifest_path": "research_manifests/gold_casebook_constant_execution_v01.json",
+    "fixed_notional_ounces": 1.0
+  },
+  "fold_design": {
+    "assignment": "Use each calendar test year exactly once. At a fold boundary, the training window contains only earlier development dates. The candidate has no fitted parameter and remains unchanged.",
+    "folds": [
+      {
+        "fold_id": "F01",
+        "test_end_exclusive": "2023-01-01",
+        "test_start_inclusive": "2022-01-01",
+        "training_end_exclusive": "2022-01-01",
+        "training_start_inclusive": "2021-08-01"
+      },
+      {
+        "fold_id": "F02",
+        "test_end_exclusive": "2024-01-01",
+        "test_start_inclusive": "2023-01-01",
+        "training_end_exclusive": "2023-01-01",
+        "training_start_inclusive": "2021-08-01"
+      },
+      {
+        "fold_id": "F03",
+        "test_end_exclusive": "2025-01-01",
+        "test_start_inclusive": "2024-01-01",
+        "training_end_exclusive": "2024-01-01",
+        "training_start_inclusive": "2021-08-01"
+      }
+    ],
+    "independent_validation_credit": false,
+    "warmup_role": "Calendar 2021 from August is training evidence only and is never reported as a forward test fold."
+  },
+  "gate_evaluation": {
+    "all_gates_required": true,
+    "aggregate_forward_gates": [
+      "Every one of the three test folds passes every test-fold support, mapping, economic, control, and cost-stress gate.",
+      "The combined 2022-2024 forward-fold ISO-week cluster-bootstrap lower 95% mean-return bound is above zero.",
+      "The combined forward-fold cluster sign-flip q-value for the one-candidate family is at or below 0.10."
+    ],
+    "rejection_policy": "If any required gate fails, reject internal walk-forward stability. Do not retune, replace, add a filter, change a fold, relax a gate, or promote a Milestone 3 q-failed relationship.",
+    "test_fold_gates": [
+      "At least 180 directional candidate cases.",
+      "At least 80 POSITIVE-to-LONG and 80 NEGATIVE-to-SHORT cases.",
+      "Each directional state spans at least 35 ISO-week clusters.",
+      "Mean net return after frozen 1.0x costs is above zero.",
+      "Profit factor after frozen 1.0x costs is above one.",
+      "Mean return beats the better ALWAYS_LONG or ALWAYS_SHORT control on exactly the same directional cases.",
+      "POSITIVE-to-LONG and NEGATIVE-to-SHORT cells each have mean net return above zero.",
+      "Mean selected P&L remains above zero at 1.5x frozen costs."
+    ],
+    "thresholds": {
+      "aggregate_maximum_bh_q_value": 0.1,
+      "test_minimum_directional_cases": 180,
+      "test_minimum_state_cases": 80,
+      "test_minimum_state_week_clusters": 35,
+      "training_minimum_directional_cases": 75,
+      "training_minimum_state_cases": 30,
+      "training_minimum_state_week_clusters": 15
+    },
+    "training_boundary_gates": [
+      "At least 75 directional candidate cases.",
+      "At least 30 POSITIVE-to-LONG and 30 NEGATIVE-to-SHORT cases.",
+      "Each directional state spans at least 15 ISO-week clusters.",
+      "Cumulative training mean net return is above zero.",
+      "Cumulative training profit factor is above one.",
+      "Cumulative training mean beats the better matched-direction unconditional control.",
+      "Cumulative POSITIVE-to-LONG and NEGATIVE-to-SHORT means are each above zero."
+    ],
+    "verdicts": [
+      "PASS_INTERNAL_WALK_FORWARD_STABILITY",
+      "REJECT_INTERNAL_WALK_FORWARD_STABILITY"
+    ]
+  },
+  "manifest_hash": "db1a7231e9e66a3de6608998024b9a19b38d21708d32d93defd7faae55e4d138",
+  "manifest_version": "GOLD_CASEBOOK_DISCOVERY_V2_WALK_FORWARD_MANIFEST_V0_1",
+  "milestone": "V2_M4_INTERNAL_EXPANDING_WALK_FORWARD",
+  "multiplicity": {
+    "family": "The sole contract-recognized LONDON_ZN_4H_POSTHOC_V0_1 candidate.",
+    "method": "BENJAMINI_HOCHBERG",
+    "number_of_candidates": 1,
+    "pass_q_threshold": 0.1,
+    "role": "The one-candidate BH q-value equals its cluster sign-flip p-value. This does not erase the candidate's post-hoc origin."
+  },
+  "outcome": {
+    "account_equity_or_leverage_assumption": null,
+    "fixed_execution_unchanged": true,
+    "source_bundle_hash": "e1493d2734109a07b83da1f60768def696201c9a67df1cd75e3d11bec5a484fc",
+    "source_bundle_path": "research_artifacts/gold_casebook_discovery_v2_outcome_atlas_v01",
+    "source_ledger_path": "outcomes.jsonl.gz",
+    "source_ledger_sha256": "ed2d4c85de8bdebe6d3c020710a5af8607034c8d6790202c4606fc3e76fc01f8"
+  },
+  "output": {
+    "bundle_path": "research_artifacts/gold_casebook_discovery_v2_walk_forward_v01",
+    "required_artifacts": [
+      "fold_decisions.jsonl.gz",
+      "walk_forward_results.json",
+      "manifest.json",
+      "semantic_validation.json"
+    ]
+  },
+  "prohibited": {
+    "account_scaling_or_return_target_evaluation": true,
+    "calendar_2025_access": true,
+    "calendar_2026_access": true,
+    "candidate_addition_or_replacement": true,
+    "entry_exit_stop_target_or_reward_to_risk_optimization": true,
+    "milestone_3_q_failed_relationship_promotion": true,
+    "new_york_evaluation": true,
+    "rule_threshold_or_feature_retuning": true,
+    "session_pairing": true
+  },
+  "source": {
+    "development_feature_ledger_sha256": "bc11401075c160dad03c967146644b18576e43d29c4b8c0604db16993d41896c",
+    "development_feature_path": "development_features.jsonl.gz",
+    "milestone_3_bundle_hash": "0ffc6d7b5f243d21490b23fa5af649cc94b921bd8223f188b5e81004427591b2",
+    "milestone_3_bundle_path": "research_artifacts/gold_casebook_discovery_v2_relationships_v01",
+    "milestone_3_discovery_leads": 0,
+    "milestone_3_research_manifest_hash": "9e86a05f32c7f5c52b8e3c57b704531fa34a75586b3af3807e5b68ab119718ab",
+    "milestone_3_semantic_validation_hash": "3de9f676d875217a86164c8234dcdaea9c3bc8dce27dfe19e7fdd1c58cd51e44"
+  },
+  "status": "FROZEN_BEFORE_WALK_FORWARD_CALCULATION",
+  "uncertainty": {
+    "cluster": "ISO week of session_date",
+    "cluster_bootstrap": {
+      "confidence_interval": "Type-7 2.5 and 97.5 percent quantiles of bootstrapped mean net return.",
+      "replications": 5000,
+      "seed": "First eight bytes of SHA-256(manifest hash | candidate code | window id | BOOTSTRAP)"
+    },
+    "cluster_sign_flip_test": {
+      "alternative": "Mean selected return is greater than zero.",
+      "method": "Independently multiply every ISO-week cluster's return sum by +1 or -1 with equal probability, preserve its observation count, and compare the randomized weighted mean with the observed mean.",
+      "replications": 20000,
+      "seed": "First eight bytes of SHA-256(manifest hash | candidate code | window id | SIGN_FLIP)"
+    }
+  }
+}

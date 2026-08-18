@@ -1,0 +1,39 @@
+{
+  "attempt_budget": {
+    "primary_reruns": 0,
+    "reference_diagnostic_attempts": 1
+  },
+  "authorization_sha256": "ee71bb21da12d28d942b62504cdf7fe2224fbc2b00514d34bec99fa6b8f80380",
+  "comparison_gate": "Exact equality of all 18 findings, classifications, evidence, normalized result checksum, and per-finding checksums.",
+  "frozen_at_utc": "2026-08-05T07:30:02.196719Z",
+  "pre_freeze_proof": {
+    "bytes": 9731,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_session_trigger_edge_m2r1a1_v01\\pre_freeze_reader_proof.json",
+    "sha256": "3073c4ebca82410e8daf62fc3852716a95e6e985bf13f1a65fdd6b59ed934d39"
+  },
+  "preserved_verdicts": {
+    "m2_status_preserved": "FAIL_FULL_SESSION_TIMESTAMP_COVERAGE",
+    "m2r1_final_seal_receipt": "6d728c21f52cb189d82db2b20d8acd402bb8cf9d44ca142064b708e5d1865df2",
+    "m2r1_status_preserved": "FAIL_DIAGNOSTIC_REPRODUCTION",
+    "sealed_primary_findings": 18,
+    "sealed_primary_sha256": "82444ce02a05de75d276eb2e773b68b6f8dfd97a659277c557ecd51a672cd91d"
+  },
+  "prohibitions": [
+    "data repair",
+    "classification change",
+    "outcome access",
+    "2025/2026 access",
+    "data acquisition",
+    "relationships",
+    "trades",
+    "PnL"
+  ],
+  "single_change": {
+    "after": "pa.scalar(statistic, type=Parquet ts_recv timestamp[ns])",
+    "all_other_reader_and_diagnostic_logic": "UNCHANGED_IMPORTED_FROM_SEALED_R1",
+    "before": "pa.scalar(statistic) inferred timestamp unit",
+    "component": "reference Parquet ts_recv row-group statistics conversion"
+  },
+  "status": "FROZEN_AFTER_READER_PROOF_BEFORE_DEVELOPMENT_METADATA",
+  "version": "GC_SESSION_TRIGGER_EDGE_M2_R1_A1_PROTOCOL_V1_0"
+}

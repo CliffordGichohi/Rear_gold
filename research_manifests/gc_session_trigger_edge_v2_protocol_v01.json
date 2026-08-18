@@ -1,0 +1,82 @@
+{
+  "version": "GC_SESSION_TRIGGER_EDGE_V2_PROTOCOL_V1_0",
+  "status": "DEFINED_BEFORE_ENGINEERING_PROOF_OR_DEVELOPMENT_METADATA_ACCESS",
+  "branch": "GC_SESSION_TRIGGER_EDGE_DISCOVERY_V2",
+  "v1_disposition": "PERMANENTLY_TERMINATED_PRESERVED",
+  "scope": {
+    "development_start": "2021-11-08",
+    "development_end": "2024-12-13",
+    "registered_session_rows": 376,
+    "expected_available_sessions": 374,
+    "documented_unavailable_sessions": 2,
+    "calendar_2025_locked": true,
+    "calendar_2026_locked": true,
+    "outcomes_hidden_and_unjoined": true
+  },
+  "analytical_policy": {
+    "feature_columns": 85,
+    "derived_microstructure_states": 8,
+    "event_families": 6,
+    "feature_rows_per_available_session": 18900,
+    "decision_rows_per_available_session": 240,
+    "corrected_reference_timestamp_unit": "nanoseconds",
+    "v1_r2_universal_unavailability_policy_unchanged": true,
+    "threshold_or_definition_change_permitted": false
+  },
+  "streaming_policy": {
+    "feature_execution_unit": "ONE_IMPLEMENTATION_ONE_SESSION_ONE_CHILD_PROCESS",
+    "implementation_order": ["primary", "reference"],
+    "simultaneous_primary_reference_source_tables_permitted": false,
+    "feature_fragment_row_groups": 1,
+    "feature_fragment_rows": 18900,
+    "final_assembly": "ONE_COMMITTED_FRAGMENT_AT_A_TIME",
+    "source_or_feature_state_carry_between_sessions": false
+  },
+  "resource_policy": {
+    "formal_rss_cap_bytes": 4294967296,
+    "child_guard_rss_bytes": 4026531840,
+    "maximum_sampling_interval_ms": 50,
+    "guard_breach_disposition": "FORMAL_FAIL_NO_SILENT_RETRY",
+    "record_parent_and_child_high_water_marks": true
+  },
+  "checkpoint_policy": {
+    "logical_development_attempts": 1,
+    "invocation_records": "IMMUTABLE_APPEND_ONLY",
+    "pass_checkpoints": "IMMUTABLE_AND_HASH_BOUND",
+    "session_commits": "IMMUTABLE_AND_HASH_BOUND",
+    "committed_session_recalculation_permitted": false,
+    "uncommitted_pass_restart_after_infrastructure_interruption_permitted": true,
+    "incomplete_temporary_file_policy": "HASH_AND_QUARANTINE_NEVER_USE_AS_INPUT",
+    "resume_requires_full_checkpoint_verification": true
+  },
+  "engineering_proof": {
+    "classification": "ENGINEERING_ONLY_ZERO_RESEARCH_OR_VALIDATION_CREDIT",
+    "dates": [
+      "2024-01-05",
+      "2024-01-09",
+      "2024-01-11",
+      "2024-01-30",
+      "2024-01-31",
+      "2024-03-20"
+    ],
+    "sessions_per_date": ["LONDON", "NEW_YORK"],
+    "windows": 12,
+    "existing_payload_comparison": "EXACT_SCHEMA_ROWS_NULLS_COLUMN_CHECKSUMS_COMPLETE_CHECKSUM",
+    "development_metadata_permitted_before_pass": false
+  },
+  "formal_full_pass_gates": [
+    "all predecessor and source bindings valid",
+    "engineering reproduction and resource proof passed before development metadata",
+    "exact 374 immutable session commits and two documented unavailable rows",
+    "exact 7068600 feature rows and 89760 decision rows per implementation",
+    "exact primary/reference source feature decision event support and technical reproduction",
+    "exact preserved 15 terminal crossed states and 3 unresolved XAUUSD timestamps",
+    "all 12 frozen Stage-1 session-family tests support eligible",
+    "zero invalid state contributions to eligible microstructure events",
+    "all parent and child high-water marks at or below 4 GiB",
+    "zero outcomes relationships candidates forward years execution trades or PnL",
+    "zero acquisition and zero charge"
+  ],
+  "pass_disposition": "SEAL_AND_STOP_BEFORE_RELATIONSHIP_DISCOVERY",
+  "fail_disposition": "SEAL_HONEST_REASON_AND_STOP_WITHOUT_AUTOMATIC_REPAIR"
+}

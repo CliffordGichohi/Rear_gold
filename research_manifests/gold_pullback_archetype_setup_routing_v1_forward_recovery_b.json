@@ -1,0 +1,23 @@
+{
+  "version": "GOLD_PULLBACK_ARCHETYPE_SETUP_ROUTING_V1_FORWARD_RECOVERY_B_1_0",
+  "status": "FROZEN_BEFORE_FINAL_IMPLEMENTATION_RESTART",
+  "frozen_at_utc": "2026-08-10T11:43:09.8825911Z",
+  "scope": "FROZEN_FIELD_PATH_CORRECTION_ONLY",
+  "preserved_failure": {
+    "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_forward/forward_attempt_2_failure.json"
+  },
+  "sole_permitted_correction": {
+    "from": "implementation['reverse_checkpoint']['maximum_delay_minutes']",
+    "to": "implementation['reverse_checkpoint_max_m1_delay_minutes']",
+    "frozen_value": 5
+  },
+  "analytical_changes_permitted": false,
+  "rule_changes_permitted": false,
+  "parameter_changes_permitted": false,
+  "source_changes_permitted": false,
+  "retuning_permitted": false,
+  "additional_source_openings_permitted": 1,
+  "required_cumulative_source_opening_count": 3,
+  "paid_acquisition_authorized": false,
+  "charge_cap_usd": 0.0
+}

@@ -1,0 +1,144 @@
+{
+  "action": {
+    "case_policy": "EARLIEST_POSITIVE_CHECKPOINT",
+    "otherwise": "NO_TRADE",
+    "positive": "PREDICTED_2P_MINUS_1_MINUS_OBSERVABLE_COST_GT_0P05"
+  },
+  "bootstrap": {
+    "resamples": 2000,
+    "seed": 932773,
+    "unit": "SESSION_DATE"
+  },
+  "checkpoint": "FROZEN_FIRST_COMPLETED_RELATIVE_TRACK_BAR_0P25_ATR_DISPLACEMENT_AND_OUTER_QUARTER_CLOSE",
+  "costs": {
+    "formula": "MAX(ACTUAL_ENTRY_EXIT_SPREAD_R_PLUS_0P03R,0P05R)",
+    "observable_router_estimate": "MAX(CHECKPOINT_SPREAD_R_PLUS_0P03R,0P05R)",
+    "stress_multiplier": 1.5
+  },
+  "development": {
+    "cases": 10388,
+    "end_exclusive": "2025-01-01",
+    "expected_checkpoints": {
+      "H1": 9353,
+      "H4": 4098,
+      "M15": 10385
+    },
+    "start_inclusive": "2021-08-01"
+  },
+  "economic_gates": {
+    "brier_skill_gt": 0,
+    "cluster_ci95_low_gt": 0,
+    "drawdown_lte_R": 15,
+    "ece_lte": 0.05,
+    "expectancy_gt": 0,
+    "max_year_or_session_positive_contribution_lte": 0.7,
+    "positive_folds_gte": 4,
+    "positive_years_gte": 2,
+    "profit_factor_gte": 1.1,
+    "stress_expectancy_gt": 0,
+    "trades_gte": 180,
+    "trades_per_month_gte": 5
+  },
+  "execution_unchanged": {
+    "ambiguous": "STOP_FIRST",
+    "deadline": "SESSION_END",
+    "entry": "NEXT_OBSERVED_M1_OPEN_AFTER_1_MINUTE_LATENCY_MAX_2_MINUTE_NO_TICK_DELAY",
+    "stop_ATR": 1.0,
+    "target_ATR": 1.0
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "training": "ALL_DEVELOPMENT_BEFORE_VALIDATION_START",
+      "validation_end_exclusive": "2022-07-01",
+      "validation_start": "2022-01-01"
+    },
+    {
+      "fold": 2,
+      "training": "ALL_DEVELOPMENT_BEFORE_VALIDATION_START",
+      "validation_end_exclusive": "2023-01-01",
+      "validation_start": "2022-07-01"
+    },
+    {
+      "fold": 3,
+      "training": "ALL_DEVELOPMENT_BEFORE_VALIDATION_START",
+      "validation_end_exclusive": "2023-07-01",
+      "validation_start": "2023-01-01"
+    },
+    {
+      "fold": 4,
+      "training": "ALL_DEVELOPMENT_BEFORE_VALIDATION_START",
+      "validation_end_exclusive": "2024-01-01",
+      "validation_start": "2023-07-01"
+    },
+    {
+      "fold": 5,
+      "training": "ALL_DEVELOPMENT_BEFORE_VALIDATION_START",
+      "validation_end_exclusive": "2024-07-01",
+      "validation_start": "2024-01-01"
+    },
+    {
+      "fold": 6,
+      "training": "ALL_DEVELOPMENT_BEFORE_VALIDATION_START",
+      "validation_end_exclusive": "2025-01-01",
+      "validation_start": "2024-07-01"
+    }
+  ],
+  "forward": "OPEN_2025_ONCE_THEN_2026_ONCE_ONLY_AFTER_COMPLETE_DEVELOPMENT_PASS; OTHERWISE_REMAIN_LOCKED",
+  "frozen_at_utc": "2026-08-12T13:36:45.182099Z",
+  "interpretation": "REJECT_INDISCRIMINATE_CONSTANT_ROUTING_NOT_ALL_CONDITIONAL_POLICIES",
+  "preserved_verdict": "FAIL_M3_CURRENT_UNIVERSE_BELOW_10R_CAPACITY",
+  "primary_endpoint": {
+    "stop_first": 0,
+    "target_first": 1,
+    "time_exit": "CENSORED_FOR_PROBABILITY_RETAINED_FOR_ECONOMICS"
+  },
+  "prohibitions": [
+    "OPTIMIZE_FOR_10R",
+    "ALTER_TRIGGER",
+    "ALTER_EXECUTION",
+    "WEAKEN_GATES",
+    "USE_REALISED_ARCHETYPE",
+    "REMOVE_LOSSES",
+    "ADD_UNREGISTERED_FEATURE",
+    "OPEN_FORWARD_BEFORE_PASS",
+    "PAID_ACQUISITION"
+  ],
+  "risk": {
+    "account_usd": 10000,
+    "clusters": {
+      "ENERGY": [
+        "XTIUSD"
+      ],
+      "PRECIOUS_METALS": [
+        "XAGUSD"
+      ],
+      "USD_FX": [
+        "EURUSD",
+        "USDJPY"
+      ],
+      "US_EQUITY_INDICES": [
+        "USTEC",
+        "US500"
+      ]
+    },
+    "maximum_cluster_risk_usd": 100,
+    "maximum_drawdown_R": 15
+  },
+  "router_model": {
+    "criterion": "LOG_LOSS",
+    "max_depth": 3,
+    "min_samples_leaf": 200,
+    "seed": 932771,
+    "type": "DECISION_TREE"
+  },
+  "status": "FROZEN_BEFORE_CHECKPOINT_OR_OUTCOME_VALUE_ACCESS",
+  "univariate_model": {
+    "C": 0.25,
+    "max_iter": 1000,
+    "seed": 932771,
+    "solver": "LBFGS",
+    "type": "L2_LOGISTIC"
+  },
+  "version": "MAOASCR_V1_PROTOCOL_1_0"
+}

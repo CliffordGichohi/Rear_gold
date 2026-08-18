@@ -1,0 +1,319 @@
+{
+  "authority": {
+    "authorized_instrument": "XAUUSD",
+    "authorized_provider": "IC_MARKETS_MT5",
+    "authorized_request_count": 4,
+    "authorized_step": "STEP_5D_R2",
+    "authorized_timeframe": "1m",
+    "charge_authorized": false,
+    "mandatory_stop": "Stop after recovery, sixteen-key metadata certification, documentation, and sealing. Do not calculate outcomes or resume research."
+  },
+  "classification": "BOUNDED_OUTCOME_COVERAGE_RECOVERY_AND_METADATA_CERTIFICATION",
+  "coverage_audit": {
+    "all_16_keys": [
+      {
+        "session_code": "LONDON",
+        "session_date": "2021-12-13"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2021-12-13"
+      },
+      {
+        "session_code": "LONDON",
+        "session_date": "2021-12-15"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2021-12-15"
+      },
+      {
+        "session_code": "LONDON",
+        "session_date": "2022-07-12"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2022-07-12"
+      },
+      {
+        "session_code": "LONDON",
+        "session_date": "2022-10-11"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2022-10-11"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2023-03-15"
+      },
+      {
+        "session_code": "LONDON",
+        "session_date": "2023-08-15"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2023-08-15"
+      },
+      {
+        "session_code": "LONDON",
+        "session_date": "2023-09-11"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2023-09-11"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2023-09-13"
+      },
+      {
+        "session_code": "LONDON",
+        "session_date": "2024-05-13"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2024-05-13"
+      }
+    ],
+    "dst_method": "Python IANA zoneinfo using Europe/London or America/New_York; UTC endpoints and complete expected timestamp hashes are frozen before MT5 access.",
+    "existing_358_outcomes_reopened": false,
+    "existing_source_keys": [
+      {
+        "session_code": "LONDON",
+        "session_date": "2021-12-13"
+      },
+      {
+        "session_code": "LONDON",
+        "session_date": "2021-12-15"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2021-12-15"
+      },
+      {
+        "session_code": "LONDON",
+        "session_date": "2022-07-12"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2022-07-12"
+      },
+      {
+        "session_code": "LONDON",
+        "session_date": "2022-10-11"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2022-10-11"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2023-08-15"
+      },
+      {
+        "session_code": "LONDON",
+        "session_date": "2023-09-11"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2023-09-11"
+      },
+      {
+        "session_code": "LONDON",
+        "session_date": "2024-05-13"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2024-05-13"
+      }
+    ],
+    "neutral_window": "08:01 through the 11:59 bar closing at 12:00 in the session IANA timezone; exactly 239 one-minute records.",
+    "pass_rule": "PASS only if all four refresh requests are exact and all sixteen missing keys are metadata-constructible, yielding 374 of 374 required non-holiday outcomes under the unchanged neutral definition.",
+    "refreshed_source_keys": [
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2021-12-13"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2023-03-15"
+      },
+      {
+        "session_code": "LONDON",
+        "session_date": "2023-08-15"
+      },
+      {
+        "session_code": "NEW_YORK",
+        "session_date": "2023-09-13"
+      }
+    ],
+    "reproduction": "Primary byte-regex and independent structural byte-scanner projections must produce identical sixteen-key results and checksums without deserializing OHLC values."
+  },
+  "failure_rules": {
+    "coverage_or_integrity": "Seal FAIL_STEP_5D_R2_RECOVERY_OR_METADATA_CERTIFICATION if any timestamp, lineage, source-count, reproduction, or 374/374 gate fails.",
+    "mt5_preflight": "Seal FAIL_STEP_5D_R2_MT5_PREFLIGHT if terminal, account lineage, or XAUUSD is unavailable.",
+    "no_repair_or_substitution": true
+  },
+  "frozen_at_utc": "2026-08-04T11:37:55.606217Z",
+  "implementation": {
+    "modification_after_freeze_prohibited": true,
+    "path": "tools/recover_gc_microstructure_step5dr2.py",
+    "sha256": "c6b80372062d75aef3e6edf8f2294d0f5fa0e05d8a5573b5b63f930986d1ed24",
+    "synthetic_self_test_required_before_freeze": true
+  },
+  "metadata_integrity_gates": [
+    "exactly 239 unique open timestamps per refreshed request",
+    "first and last opens equal the frozen endpoints",
+    "one-minute contiguous timestamp grid with no duplicates",
+    "provider IC_MARKETS_MT5 instrument XAUUSD timeframe 1m",
+    "complete=true and missing_source_minutes=0",
+    "close_time equals open_time plus one minute",
+    "available_at is no later than close_time",
+    "record_id record_hash batch_id source_record_key and source_hash are structurally valid",
+    "raw and normalized row counts both equal 956",
+    "raw normalized manifests and complete lineage are hashed and sealed",
+    "no existing casebook artifact changes"
+  ],
+  "mt5_source": {
+    "account_session": "Reuse only the already logged-in local terminal session; do not store an account identifier or credential.",
+    "broker_identity_gate": "Connected account company or server metadata must identify IC Markets.",
+    "operation": "Read-only copy_rates_range; order_send is forbidden.",
+    "provider_availability_semantics": "Historical one-minute bar is market-known at close_time; capture ingested_at records the later recovery timestamp separately.",
+    "symbol_gate": "XAUUSD must be selectable from the connected terminal.",
+    "terminal_executable_sha256": "c4d4434b243d08e49d2c33bc952f6edcd18cacf8989a5342692951690391af95",
+    "terminal_path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe"
+  },
+  "predecessor_bindings": {
+    "existing_casebook_price_source": {
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    "step5d_failure": {
+      "path": "research_artifacts/gc_microstructure_step5d_v01/outcome_opening_failure.json",
+      "sha256": "44f32d8da4e58d19f1f4e2d2a9fccace63457f75fa58370e119d0b5273090805"
+    },
+    "step5d_verdict": {
+      "path": "research_artifacts/gc_microstructure_step5d_v01/verdict.json",
+      "sha256": "3ec082a95bd48cb412b9771eaae8cffd1641593c7ad60b033da3c9a95a6994ef"
+    },
+    "step5dr1_corrected_final_seal": {
+      "path": "research_artifacts/gc_microstructure_step5dr1_corrected_v01/final_seal.json",
+      "sha256": "885d292f604669011a76b28bb649baf8389d7a2ecd59ff43d42abce08e9ae578"
+    },
+    "step5dr1_corrected_manifest": {
+      "path": "research_artifacts/gc_microstructure_step5dr1_corrected_v01/manifest.json",
+      "sha256": "fe53160bd36f3d073b4250d65a23fbafb8f2beb48a580681f84c21049498af85"
+    },
+    "step5dr1_corrected_primary": {
+      "path": "research_artifacts/gc_microstructure_step5dr1_corrected_v01/primary_corrected_diagnostic.json",
+      "sha256": "f7e3460e32df145a15b24696bd5db8d78c15069b85e002310c6685c47b37421c"
+    },
+    "step5dr1_corrected_reference": {
+      "path": "research_artifacts/gc_microstructure_step5dr1_corrected_v01/reference_corrected_diagnostic.json",
+      "sha256": "3e81ae8e8d925f266c2a98c18061368ef534055ea0f52bfe5bd806776cbf7cb9"
+    },
+    "step5dr1_corrected_verdict": {
+      "path": "research_artifacts/gc_microstructure_step5dr1_corrected_v01/verdict.json",
+      "sha256": "7737aeac938bb26d33391409d72c25c56f230582a9483c95e614c13e28145686"
+    },
+    "step5dr1_freeze": {
+      "path": "research_manifests/gc_microstructure_step_5dr1_freeze_v01.json",
+      "sha256": "3d2602f6c2efb8c2146835c8b877727d7a0a4bc82aa66d5617e08be18fc5b34d"
+    },
+    "step5dr1_original_final_seal": {
+      "path": "research_artifacts/gc_microstructure_step5dr1_v01/final_seal.json",
+      "sha256": "d163c989e9c1008163c36732db026955c0a325ee57d2096adeaa5053e4848bf9"
+    },
+    "step5dr1_protocol": {
+      "path": "research_manifests/gc_microstructure_step_5dr1_protocol_v01.json",
+      "sha256": "18c4637970505d6b2f58e74e7cc4f8bb862bf50e1336aa6fd62057eaac3536ac"
+    }
+  },
+  "preserved_history": {
+    "all_prior_verdicts_and_artifacts_immutable": true,
+    "existing_casebook_immutable": true,
+    "previously_found_outcomes": 358,
+    "step5d_source_stream_open_count": 1,
+    "step5d_status": "FAIL_STEP_5D_OUTCOME_JOIN_COVERAGE",
+    "step5dr1_corrected_status": "PASS_STEP_5D_R1_DIAGNOSTIC_REPRODUCTION_AFTER_IMPLEMENTATION_CORRECTION",
+    "step5dr1_result_checksum": "461dd90a7c9e37547cce4b2c515122ecef2896b1d24729c306284080f0382348"
+  },
+  "prohibited": [
+    "human inspection or reporting of OHLC volume spread displacement direction return or outcome values",
+    "modification of gold_casebook_v01 or any predecessor artifact",
+    "substitution of another provider symbol instrument or timeframe",
+    "construction or joining of outcomes",
+    "opening the 358 previously found outcomes",
+    "Stage 1 or Stage 2 tests relationships candidates signals or retuning",
+    "2025 or 2026 value access",
+    "execution optimization trades PnL R multiples or returns",
+    "orders payments charges or paid acquisition"
+  ],
+  "protocol_hash": "6b7676bb9ce4bd5685fec1ce951e9bf7bc2a437b0e7f0f963629cce295e1d15d",
+  "recovery_requests": [
+    {
+      "end_utc_exclusive": "2021-12-13T17:00:00Z",
+      "expected_first_open": "2021-12-13T13:01:00Z",
+      "expected_last_open": "2021-12-13T16:59:00Z",
+      "expected_open_timestamp_count": 239,
+      "expected_open_timestamp_hash": "35fa31c030c48005b2869c6ded39051fc4edbd05e5aa42d433630bef7f1302bb",
+      "mt5_copy_rates_date_to_inclusive": "2021-12-13T16:59:00Z",
+      "request_id": "R2-20211213-NEW_YORK",
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-13",
+      "session_timezone": "America/New_York",
+      "start_utc_inclusive": "2021-12-13T13:01:00Z"
+    },
+    {
+      "end_utc_exclusive": "2023-03-15T16:00:00Z",
+      "expected_first_open": "2023-03-15T12:01:00Z",
+      "expected_last_open": "2023-03-15T15:59:00Z",
+      "expected_open_timestamp_count": 239,
+      "expected_open_timestamp_hash": "bb1a0f1bdf03e81db2c184f98184a8fff275c384cfa14bcce9311ea25170b02d",
+      "mt5_copy_rates_date_to_inclusive": "2023-03-15T15:59:00Z",
+      "request_id": "R2-20230315-NEW_YORK",
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-15",
+      "session_timezone": "America/New_York",
+      "start_utc_inclusive": "2023-03-15T12:01:00Z"
+    },
+    {
+      "end_utc_exclusive": "2023-08-15T11:00:00Z",
+      "expected_first_open": "2023-08-15T07:01:00Z",
+      "expected_last_open": "2023-08-15T10:59:00Z",
+      "expected_open_timestamp_count": 239,
+      "expected_open_timestamp_hash": "fd4756b51eae9b167722f675ed7debe101458dc56f0b3d678f5ceebf49bf1a52",
+      "mt5_copy_rates_date_to_inclusive": "2023-08-15T10:59:00Z",
+      "request_id": "R2-20230815-LONDON",
+      "session_code": "LONDON",
+      "session_date": "2023-08-15",
+      "session_timezone": "Europe/London",
+      "start_utc_inclusive": "2023-08-15T07:01:00Z"
+    },
+    {
+      "end_utc_exclusive": "2023-09-13T16:00:00Z",
+      "expected_first_open": "2023-09-13T12:01:00Z",
+      "expected_last_open": "2023-09-13T15:59:00Z",
+      "expected_open_timestamp_count": 239,
+      "expected_open_timestamp_hash": "1120fdc1a95a08edd2561edf1748dc32b5e5b339f79be311c8cc7d0db45099a7",
+      "mt5_copy_rates_date_to_inclusive": "2023-09-13T15:59:00Z",
+      "request_id": "R2-20230913-NEW_YORK",
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-13",
+      "session_timezone": "America/New_York",
+      "start_utc_inclusive": "2023-09-13T12:01:00Z"
+    }
+  ],
+  "source_capture": {
+    "human_value_inspection": false,
+    "normalized_policy": "Create a separate deterministic versioned PRICE_BAR JSONL bundle with observed OHLC/volume/spread retained, source lineage, close_time, market available_at, recovery ingested_at, source hash, and record hash.",
+    "raw_policy": "Serialize provider rows without modification into a deterministic gzip JSONL capture; values remain sealed and unreported.",
+    "request_policy": "Exactly four copy_rates_range calls, one per frozen request, with inclusive start and inclusive expected last-open timestamp.",
+    "row_policy": "Retain only rows whose open timestamp is one of the 239 authorized timestamps for that request.",
+    "selection_policy": "For each of the four refresh keys, use the complete versioned refresh window as one source; never cherry-pick or splice only missing minutes. The other twelve keys remain bound to gold_casebook_v01.",
+    "versioning_policy": "Never update, append to, or overwrite gold_casebook_v01. The complete refreshed four-window source is a new immutable Step 5D-R2 version."
+  },
+  "status": "SEALED_BEFORE_MT5_ACCESS",
+  "version": "GC_MICROSTRUCTURE_STEP_5D_R2_RECOVERY_PROTOCOL_V0_1"
+}

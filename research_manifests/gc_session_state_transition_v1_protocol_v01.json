@@ -1,0 +1,107 @@
+{
+  "version": "GC_SESSION_STATE_TRANSITION_EDGE_DISCOVERY_V1_0",
+  "status": "FROZEN_BEFORE_OUTCOME_ACCESS",
+  "frozen_at_utc": "2026-08-06T11:54:05Z",
+  "development": {
+    "start_inclusive": "2021-08-01",
+    "end_inclusive": "2024-12-31",
+    "locked_years": [2025, 2026],
+    "engineering_only_dates": ["2024-01-05", "2024-01-09", "2024-01-11", "2024-01-30", "2024-01-31", "2024-03-20"],
+    "sessions": {
+      "LONDON": {"timezone": "Europe/London", "event_decision_start_local": "08:15:00", "event_decision_end_local_inclusive": "11:00:00"},
+      "NEW_YORK": {"timezone": "America/New_York", "event_decision_start_local": "08:15:00", "event_decision_end_local_inclusive": "11:00:00"}
+    }
+  },
+  "event_families": {
+    "xauusd": [
+      "LEVEL_SWEEP_RECLAIM",
+      "LEVEL_BREAK_ACCEPT",
+      "LEVEL_FAILED_ACCEPTANCE",
+      "STRUCTURE_BREAK_CONTINUATION",
+      "STRUCTURE_STATE_REVERSAL",
+      "COMPRESSION_EXPANSION_BREAK"
+    ],
+    "gc_existing_sealed_only": [
+      "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "ABSORPTION_ONSET",
+      "FRAGILITY_FLOW_ONSET"
+    ]
+  },
+  "level_families": ["ASIA_RANGE", "PRIOR_DAY_RANGE", "SESSION_OPENING_RANGE_15", "LONDON_PRE_NEW_YORK_RANGE"],
+  "structure": {
+    "bar_minutes": 5,
+    "swing_left_bars": 2,
+    "swing_right_bars": 2,
+    "atr_bars": 20,
+    "compression_prior_bars": 6,
+    "compression_width_atr_max": 2.5,
+    "expansion_true_range_atr_min": 1.5
+  },
+  "canonicalization": {
+    "level_first_per_family_direction_level_date": true,
+    "merge_simultaneous_level_events": true,
+    "maximum_events_per_family_date": 3,
+    "nonlevel_first_per_family_direction_date": true,
+    "first_event_sensitivity": true
+  },
+  "contexts": [
+    "MACRO_CONCORDANT",
+    "MACRO_REAL_USD_CONCORDANT",
+    "SESSION_OPEN_STRUCTURE_CONCORDANT",
+    "GC_CONFIRMING_WITHIN_5M"
+  ],
+  "gc_confirmation_policy": "ANOTHER_EVENT_ID_SAME_DIRECTION_WITHIN_PRIOR_5_MINUTES; FOR_GC_TRIGGERS_REQUIRE_DIFFERENT_GC_EVENT_FAMILY",
+  "outcomes": {
+    "anchor": "CONFIRMING_XAUUSD_1M_CLOSE",
+    "scale": "POINT_IN_TIME_SIMPLE_ATR20_COMPLETE_5M",
+    "barrier_atr_multiple": 1.0,
+    "primary_horizon_minutes": 60,
+    "diagnostic_horizons_minutes": [30, 120],
+    "first_passage_states": ["FAVORABLE_FIRST", "ADVERSE_FIRST", "BOTH_SAME_BAR", "NEITHER", "UNKNOWN"],
+    "score_map": {"FAVORABLE_FIRST": 1, "ADVERSE_FIRST": -1, "BOTH_SAME_BAR": 0, "NEITHER": 0},
+    "path_metrics": ["FAVORABLE_EXCURSION_ATR", "ADVERSE_EXCURSION_ATR", "PATH_DOMINANCE_ATR"]
+  },
+  "registry": {
+    "stage1_per_session": 9,
+    "stage2_per_session": 36,
+    "total_per_session": 45,
+    "stage2_rule": "EVENT_FAMILY_X_EXACTLY_ONE_CONTEXT"
+  },
+  "support": {
+    "stage1": {"events": 100, "dates": 80, "iso_weeks": 24, "events_each_direction": 30, "dates_each_direction": 25, "dates_each_required_year": 12},
+    "stage2_condition": {"events": 50, "dates": 40, "iso_weeks": 16, "events_each_direction": 15, "dates_each_direction": 12, "dates_each_required_year": 8},
+    "stage2_comparison": {"events": 75, "dates": 60, "iso_weeks": 20}
+  },
+  "inference": {
+    "primary": "SESSION_DATE_CLUSTER_ROBUST_OLS_ONE_SIDED",
+    "bootstrap_resamples": 5000,
+    "bootstrap_cluster": "SESSION_DATE",
+    "confidence": 0.95,
+    "multiplicity": "BENJAMINI_HOCHBERG_SEPARATE_BY_SESSION_AND_STAGE",
+    "q_max": 0.05,
+    "deterministic_seed": "SHA256(PROTOCOL_VERSION|SESSION|STAGE|TEST_ID|METHOD)"
+  },
+  "pass_gates": {
+    "stage1_mean_score_min": 0.10,
+    "stage2_condition_mean_score_min": 0.10,
+    "stage2_lift_min": 0.10,
+    "required_lower_confidence_bounds_strictly_positive": true,
+    "favorable_minus_adverse_incidence_min_pp": 10.0,
+    "required_positive_years": [2022, 2023, 2024],
+    "positive_chronological_blocks_min": 3,
+    "chronological_blocks": 4,
+    "minimum_block_effect": -0.05,
+    "both_directions_positive": true,
+    "first_event_effect_ratio_min": 0.5,
+    "diagnostic_effect_floor": -0.05
+  },
+  "candidate_limit_per_session": 3,
+  "prohibitions": [
+    "2025_OR_2026_ACCESS",
+    "NEW_DATA_ACQUISITION",
+    "POST_OUTCOME_RETUNING",
+    "CANDIDATE_INVERSION_OR_REPAIR",
+    "EXECUTION_OPTIMIZATION",
+    "TRADES_OR_PNL_OR_R_MULTIPLES_OR_RETURNS"
+  ]
+}

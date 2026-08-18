@@ -1,0 +1,35 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4B2_PRE_SUBMISSION_AMENDMENT_A_V0_1",
+  "status": "FROZEN_BEFORE_FRESH_ESTIMATE_AND_BATCH_SUBMISSION",
+  "frozen_at_utc": "2026-07-31T14:18:00Z",
+  "classification": "NARROW_NORMALIZATION_FIELD_ORDER_CLARIFICATION",
+  "research_or_validation_credit": "NONE",
+  "preserved_authorization": {
+    "path": "research_manifests/gc_microstructure_step_4b2_authorization_v01.json",
+    "sha256": "db0eeb999708cd815af5064a92f8e7722013bd9396e2c321572fd0ae0e208bda"
+  },
+  "preserved_freeze_receipt": {
+    "path": "research_manifests/gc_microstructure_step_4b2_freeze_v01.json",
+    "sha256": "d7bb8167b35149d67da3882a290c700c5de8c2c47a668f2e54e00e7b2e026b61"
+  },
+  "reason": "The authorization's prose description of MBP-10 book-column order was price-major, but the sealed Step 3B.2 normalizer and certified Step 4A feature registry use the canonical per-level side-major order.",
+  "replaces_only": {
+    "authorization_pointer": "/normalization_contract/mbp10_book_columns",
+    "original_text": "For levels 00 through 09 in level-major order: bid_px, ask_px, bid_sz, ask_sz, bid_ct, ask_ct, each with the two-digit level suffix.",
+    "amended_text": "For levels 00 through 09 in level-major order, then side-major bid followed by ask, then field-major px, sz, ct: bid_px, bid_sz, bid_ct, ask_px, ask_sz, ask_ct, each with the two-digit level suffix."
+  },
+  "binding_dependency": {
+    "tool": "tools/databento_gc_mbp10_step3b2.py",
+    "sha256": "551fc9a76036739f3dc24adbe8b754e63971953614279de93bd162590e3486c5"
+  },
+  "requests_changed": false,
+  "selected_dates_changed": false,
+  "schemas_changed": false,
+  "maximum_charge_changed": false,
+  "validation_gates_changed": false,
+  "normalization_values_or_formulas_changed": false,
+  "fresh_estimate_requested_before_this_amendment": false,
+  "batch_job_submitted_before_this_amendment": false,
+  "data_downloaded_before_this_amendment": false,
+  "completion_policy": "Apply only the corrected canonical MBP-10 column ordering and preserve every other Step 4B.2 term unchanged."
+}

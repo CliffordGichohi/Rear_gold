@@ -1,0 +1,374 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4B3_PROTOCOL_V0_1",
+  "status": "FROZEN_BEFORE_FEATURE_VALUE_ACCESS",
+  "frozen_at_utc": "2026-08-03T07:00:34.8119386Z",
+  "classification": "ENGINEERING_ONLY_MULTI_DAY_FEATURE_ROBUSTNESS",
+  "research_or_validation_credit": "NONE",
+  "purpose": "Apply the unchanged dual Step 4A feature calculations to the five sealed Step 4B.2 engineering dates and test deterministic multi-day integrity and reproduction without inspecting feature values or outcomes.",
+  "predecessor_preservation": {
+    "required_step_4b2_status": "PASS_ENGINEERING_SOURCE_ACQUISITION",
+    "required_step_4b2_manifest_file_sha256": "ff1ad43729343b37c35dfbd60cfc06384c4846661cf41a123c05e61e2fad7966",
+    "required_step_4b2_manifest_hash": "899ee63ba569b2df08b34feb495739bcc17a556ef9c31c9607b32cd258881397",
+    "required_step_4b2_verdict_file_sha256": "c560b07798530e8dfbb79ebbaf34bb886f178fc4ddb2b7f1b4b6641f04c1245e",
+    "required_step_4b2_verdict_hash": "ece7ac4c8d2c975d3a05fe455c379fceaae8c18fef231600e8f064bb11df01e7",
+    "required_acquisition_manifest_sha256": "674c71ddd25ba21f50b60469fc3a3131e7d4c9bb5a88471b1c94861645dd6dca",
+    "required_step_4a3_status": "PASS_FEATURE_INTEGRITY_RECERTIFICATION",
+    "required_step_4a3_manifest_file_sha256": "633a5cee430cbb785f7d84c96af519127406d177427ae439c4886abc6ad6368d",
+    "required_step_4a3_manifest_hash": "879a4321c535a02ad89905a3a4d926e052a8c611b36af9774d5ba403485e610e",
+    "required_step_4a3_verdict_file_sha256": "d55367d7e128e9eafa12cb1df483bb39deb1ccbf3dc1726eb7f829dd8187cf77",
+    "required_step_4a3_verdict_hash": "f959516ceea67ca69648850196dc6bdd24f2b8229ea61222059a7f5b52729a0b",
+    "all_step_4b2_and_earlier_verdicts_and_artifacts_immutable": true
+  },
+  "feature_engine": {
+    "base_engine_path": "tools/build_gc_microstructure_features_step4a.py",
+    "base_engine_sha256": "c5589914a1acae6a3a1e9079c302821477866bba3741317392c567bb590c2369",
+    "feature_schema_sha256": "dfaf74cdc55b37469966857fc1ed2279b3d18c98f90454ced65859cb32494232",
+    "feature_column_count": 85,
+    "primary_binding": "Import and call the sealed Step 4A _calculate_primary implementation unchanged for one date per process.",
+    "reference_binding": "Import and call the sealed Step 4A _calculate_reference implementation unchanged for one date per process.",
+    "unchanged_shared_helpers": [
+      "_validate_column_lengths",
+      "_integrity_checks with only the two Step 4A.3 superseded gates replaced",
+      "_feature_hashes",
+      "_write_feature_parquet"
+    ],
+    "retained_without_change": [
+      "all 85 feature names and definitions",
+      "all formulas and integer rounding",
+      "one-second bucket boundaries",
+      "ts_recv timestamp authority",
+      "reset treatment",
+      "missing-data and persistence rules",
+      "vendor MBP-10 authority for top-ten book state",
+      "MBO receive-time event-flow policy",
+      "no MBO-to-MBP row alignment",
+      "snapshot-semantic BAD_TS_RECV exception",
+      "continuous-matching bucket-close crossed-book gate"
+    ],
+    "permitted_generalization_only": [
+      "calendar-date origin",
+      "expected source record counts",
+      "expected instrument ID",
+      "sealed source paths and hashes",
+      "DST-aware market-state windows"
+    ],
+    "feature_definition_or_formula_change_permitted": false
+  },
+  "temporal_contract": {
+    "availability_timestamp": "ts_recv",
+    "timestamp_unit": "nanoseconds_since_unix_epoch_utc",
+    "bucket_width_ns": 1000000000,
+    "bucket_count_per_date": 86400,
+    "bucket_interval": "[bucket_start_ns,bucket_end_ns)",
+    "row_order": [
+      "ts_recv",
+      "source_row_ordinal"
+    ],
+    "future_row_access_permitted": false,
+    "date_boundary_rule": "Each date is executed in a fresh process-scoped calculation with empty event arrays, empty book state, and no predecessor-date state.",
+    "segment_boundary_rule": "Clear persisted MBP state and quote-OFI transition baseline at every segment start; never carry book or event state across segments.",
+    "cross_date_state_carry_permitted": false,
+    "cross_segment_state_carry_permitted": false
+  },
+  "frozen_dates": {
+    "2024-01-05": {
+      "day_start_inclusive_ns": 1704412800000000000,
+      "day_end_exclusive_ns": 1704499200000000000,
+      "expected_instrument_id": 41512,
+      "dst_window_class": "UTC-06:00_CST",
+      "segments": [
+        {"segment_id": "CONTINUOUS_00_22", "state": "CONTINUOUS_MATCHING", "start_inclusive_ns": 1704412800000000000, "end_exclusive_ns": 1704492000000000000},
+        {"segment_id": "MAINTENANCE_22_2245", "state": "MAINTENANCE", "start_inclusive_ns": 1704492000000000000, "end_exclusive_ns": 1704494700000000000},
+        {"segment_id": "PRE_OPEN_2245_23", "state": "PRE_OPEN", "start_inclusive_ns": 1704494700000000000, "end_exclusive_ns": 1704495600000000000},
+        {"segment_id": "CONTINUOUS_23_24", "state": "CONTINUOUS_MATCHING", "start_inclusive_ns": 1704495600000000000, "end_exclusive_ns": 1704499200000000000}
+      ],
+      "mbo": {
+        "path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-5B8UC56H64/normalized/gc_v_0_2024_01_05_mbo.parquet",
+        "records": 3264913,
+        "bytes": 44647988,
+        "sha256": "3efa36a1845567773fd6cc9414547761e325e3967baf9e291f52ef2b251604f6",
+        "quality_path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-5B8UC56H64/normalized/data_quality.json",
+        "quality_bytes": 3924,
+        "quality_sha256": "e15a79f5aee4b6b2fe7664d881add3946f369a239cd6dad3de33f65401b0b3b7",
+        "bad_ts_recv_rows": 2590,
+        "adjacent_exact_duplicates": 0
+      },
+      "mbp10": {
+        "path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-XDNE766EPK/normalized/gc_v_0_2024_01_05_mbp10.parquet",
+        "records": 2699804,
+        "bytes": 113910007,
+        "sha256": "55c227e4ea2d5371959d43cf3c8e3a31a451697f21e7b71d15ec5a5878c9d232",
+        "quality_path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-XDNE766EPK/normalized/data_quality.json",
+        "quality_bytes": 4701,
+        "quality_sha256": "da9e047b27a9f49541d8749a618b55be40eb5c02df2bfaf8e139e5f41263d087",
+        "bad_ts_recv_rows": 1,
+        "adjacent_exact_duplicates": 166
+      }
+    },
+    "2024-01-11": {
+      "day_start_inclusive_ns": 1704931200000000000,
+      "day_end_exclusive_ns": 1705017600000000000,
+      "expected_instrument_id": 41512,
+      "dst_window_class": "UTC-06:00_CST",
+      "segments": [
+        {"segment_id": "CONTINUOUS_00_22", "state": "CONTINUOUS_MATCHING", "start_inclusive_ns": 1704931200000000000, "end_exclusive_ns": 1705010400000000000},
+        {"segment_id": "MAINTENANCE_22_2245", "state": "MAINTENANCE", "start_inclusive_ns": 1705010400000000000, "end_exclusive_ns": 1705013100000000000},
+        {"segment_id": "PRE_OPEN_2245_23", "state": "PRE_OPEN", "start_inclusive_ns": 1705013100000000000, "end_exclusive_ns": 1705014000000000000},
+        {"segment_id": "CONTINUOUS_23_24", "state": "CONTINUOUS_MATCHING", "start_inclusive_ns": 1705014000000000000, "end_exclusive_ns": 1705017600000000000}
+      ],
+      "mbo": {
+        "path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-8METPEGFM3/normalized/gc_v_0_2024_01_11_mbo.parquet",
+        "records": 3823552,
+        "bytes": 51521121,
+        "sha256": "de34cb5ffc55bf20c451dbe1d0c597739e83538ae2ae369a5313457a31b9d521",
+        "quality_path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-8METPEGFM3/normalized/data_quality.json",
+        "quality_bytes": 3926,
+        "quality_sha256": "477d5cc7c0871a67eab5bef91ba36c9b2b875127be4fc7ffa07bcd4d112d8971",
+        "bad_ts_recv_rows": 3019,
+        "adjacent_exact_duplicates": 0
+      },
+      "mbp10": {
+        "path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-Y937HJFMBF/normalized/gc_v_0_2024_01_11_mbp10.parquet",
+        "records": 3203119,
+        "bytes": 134400537,
+        "sha256": "ccaa46003b56a18dbdbd7bab8bb984bad22840bcb4a400aeb633f97b3876eae9",
+        "quality_path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-Y937HJFMBF/normalized/data_quality.json",
+        "quality_bytes": 4702,
+        "quality_sha256": "835b8fd3559491d4b5f62e34969f262ccbecd2a88a8d3b469105f69819d45b00",
+        "bad_ts_recv_rows": 1,
+        "adjacent_exact_duplicates": 342
+      }
+    },
+    "2024-01-30": {
+      "day_start_inclusive_ns": 1706572800000000000,
+      "day_end_exclusive_ns": 1706659200000000000,
+      "expected_instrument_id": 41512,
+      "dst_window_class": "UTC-06:00_CST",
+      "segments": [
+        {"segment_id": "CONTINUOUS_00_22", "state": "CONTINUOUS_MATCHING", "start_inclusive_ns": 1706572800000000000, "end_exclusive_ns": 1706652000000000000},
+        {"segment_id": "MAINTENANCE_22_2245", "state": "MAINTENANCE", "start_inclusive_ns": 1706652000000000000, "end_exclusive_ns": 1706654700000000000},
+        {"segment_id": "PRE_OPEN_2245_23", "state": "PRE_OPEN", "start_inclusive_ns": 1706654700000000000, "end_exclusive_ns": 1706655600000000000},
+        {"segment_id": "CONTINUOUS_23_24", "state": "CONTINUOUS_MATCHING", "start_inclusive_ns": 1706655600000000000, "end_exclusive_ns": 1706659200000000000}
+      ],
+      "mbo": {
+        "path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-5GBR4MMQQW/normalized/gc_v_0_2024_01_30_mbo.parquet",
+        "records": 143495,
+        "bytes": 2282903,
+        "sha256": "392ec7cbfb2dfa8d87da7f64c1d212a2a0882e9731ab9ca5ff07c5b0d9681406",
+        "quality_path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-5GBR4MMQQW/normalized/data_quality.json",
+        "quality_bytes": 3911,
+        "quality_sha256": "7761fb03ba2292bbacc8fbfec13584176049d48eaf91aa19d8ab11b7779617b0",
+        "bad_ts_recv_rows": 213,
+        "adjacent_exact_duplicates": 0
+      },
+      "mbp10": {
+        "path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-JL3F6Y4A68/normalized/gc_v_0_2024_01_30_mbp10.parquet",
+        "records": 140265,
+        "bytes": 5790550,
+        "sha256": "cfbca8db717ba4177c572bd88f6b4a6e6e033780aff3cce5804dd61583d0dc8e",
+        "quality_path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-JL3F6Y4A68/normalized/data_quality.json",
+        "quality_bytes": 4691,
+        "quality_sha256": "10ee34908409feba3fd51f4c7542fe579c9d0398751925c0aea90028b1ef5927",
+        "bad_ts_recv_rows": 1,
+        "adjacent_exact_duplicates": 3
+      }
+    },
+    "2024-01-31": {
+      "day_start_inclusive_ns": 1706659200000000000,
+      "day_end_exclusive_ns": 1706745600000000000,
+      "expected_instrument_id": 44740,
+      "dst_window_class": "UTC-06:00_CST",
+      "segments": [
+        {"segment_id": "CONTINUOUS_00_22", "state": "CONTINUOUS_MATCHING", "start_inclusive_ns": 1706659200000000000, "end_exclusive_ns": 1706738400000000000},
+        {"segment_id": "MAINTENANCE_22_2245", "state": "MAINTENANCE", "start_inclusive_ns": 1706738400000000000, "end_exclusive_ns": 1706741100000000000},
+        {"segment_id": "PRE_OPEN_2245_23", "state": "PRE_OPEN", "start_inclusive_ns": 1706741100000000000, "end_exclusive_ns": 1706742000000000000},
+        {"segment_id": "CONTINUOUS_23_24", "state": "CONTINUOUS_MATCHING", "start_inclusive_ns": 1706742000000000000, "end_exclusive_ns": 1706745600000000000}
+      ],
+      "mbo": {
+        "path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-VPT4NJWMXQ/normalized/gc_v_0_2024_01_31_mbo.parquet",
+        "records": 3229893,
+        "bytes": 43416688,
+        "sha256": "361016be38684e2e9722a1efa2185918d9c466202d62cfe397afc74d480b02c1",
+        "quality_path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-VPT4NJWMXQ/normalized/data_quality.json",
+        "quality_bytes": 3926,
+        "quality_sha256": "0a3c19e4ac54b3ab81339c483e70c8d9b65d7ad3f7900152f2f58f577c1a9367",
+        "bad_ts_recv_rows": 2212,
+        "adjacent_exact_duplicates": 0
+      },
+      "mbp10": {
+        "path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-UC9PNQYEPY/normalized/gc_v_0_2024_01_31_mbp10.parquet",
+        "records": 2648313,
+        "bytes": 111243904,
+        "sha256": "ca81dcbfc58234a2d0432687057f3d9e2843816d04c3b784af07d2a4fc83174e",
+        "quality_path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-UC9PNQYEPY/normalized/data_quality.json",
+        "quality_bytes": 4701,
+        "quality_sha256": "56f7d4c8c6f36dbc78787e5833f33e3d606459225dc79c1e1260ed96f4d7d674",
+        "bad_ts_recv_rows": 1,
+        "adjacent_exact_duplicates": 95
+      }
+    },
+    "2024-03-20": {
+      "day_start_inclusive_ns": 1710892800000000000,
+      "day_end_exclusive_ns": 1710979200000000000,
+      "expected_instrument_id": 44740,
+      "dst_window_class": "UTC-05:00_CDT",
+      "segments": [
+        {"segment_id": "CONTINUOUS_00_21", "state": "CONTINUOUS_MATCHING", "start_inclusive_ns": 1710892800000000000, "end_exclusive_ns": 1710968400000000000},
+        {"segment_id": "MAINTENANCE_21_2145", "state": "MAINTENANCE", "start_inclusive_ns": 1710968400000000000, "end_exclusive_ns": 1710971100000000000},
+        {"segment_id": "PRE_OPEN_2145_22", "state": "PRE_OPEN", "start_inclusive_ns": 1710971100000000000, "end_exclusive_ns": 1710972000000000000},
+        {"segment_id": "CONTINUOUS_22_24", "state": "CONTINUOUS_MATCHING", "start_inclusive_ns": 1710972000000000000, "end_exclusive_ns": 1710979200000000000}
+      ],
+      "mbo": {
+        "path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-EA9VSU99GN/normalized/gc_v_0_2024_03_20_mbo.parquet",
+        "records": 3333973,
+        "bytes": 44999484,
+        "sha256": "bb142abf8b251a2b1f4a6e992273554c3bb02d3da3c105f85c974349cf21c2ce",
+        "quality_path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-EA9VSU99GN/normalized/data_quality.json",
+        "quality_bytes": 3926,
+        "quality_sha256": "382d9919e38e59ea5268b22afb0fe12de86f800d0270fd31a1cf18bbdd85df2e",
+        "bad_ts_recv_rows": 3194,
+        "adjacent_exact_duplicates": 0
+      },
+      "mbp10": {
+        "path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-67BQQDVWG7/normalized/gc_v_0_2024_03_20_mbp10.parquet",
+        "records": 2660637,
+        "bytes": 112098896,
+        "sha256": "5dd8210f37b61b4d2bbdd988a494786cc3599615c5a5a4cdd74444fc51aee990",
+        "quality_path": "data/raw/databento_gc_multiday_engineering_v01/GLBX-20260731-67BQQDVWG7/normalized/data_quality.json",
+        "quality_bytes": 4703,
+        "quality_sha256": "7d269d9ca79e65c6924fa0f0a8ffe506bf6e0fcbe4454e1f0d15d465092c7565",
+        "bad_ts_recv_rows": 1,
+        "adjacent_exact_duplicates": 170
+      }
+    }
+  },
+  "source_processing_policy": {
+    "one_complete_source_pass_per_implementation_per_date": true,
+    "every_provider_row_allocated_exactly_once": true,
+    "original_source_order_required": true,
+    "row_drop_filter_repair_relabel_substitution_or_deduplication_permitted": false,
+    "source_quality_for_snapshot_exception": "Use only the sealed Step 4B.2 data-quality classification bound by hash; do not add a source-row pass.",
+    "source_acquisition_permitted": false
+  },
+  "duplicate_policy": {
+    "scope": "Exact-adjacent full-record MBP-10 duplicates already counted and sealed in Step 4B.2.",
+    "per_date": {
+      "2024-01-05": 166,
+      "2024-01-11": 342,
+      "2024-01-30": 3,
+      "2024-01-31": 95,
+      "2024-03-20": 170
+    },
+    "sealed_mbp10_duplicate_total": 776,
+    "treatment": "Preserve each duplicate as a provider emission, process it once, and include it in mbp_update_count.",
+    "reporting": "Report duplicate contribution to technical MBP update counts separately.",
+    "deduplication_filtering_repair_relabel_or_substitution_permitted": false
+  },
+  "snapshot_semantic_exception": {
+    "replaces_only_original_gate": "bad_ts_recv_flag_rows_zero",
+    "replacement_gate": "bad_ts_recv_rows_all_confirmed_snapshot_semantics",
+    "predicates": [
+      "flags bit 32 snapshot is set",
+      "ts_recv equals the frozen UTC day start exactly",
+      "ts_recv is inside the frozen UTC request day",
+      "ts_event is before the frozen UTC day start",
+      "ts_event is not after ts_recv",
+      "action is A or R"
+    ],
+    "classification_authority": "The exact sealed Step 4B.2 source-quality JSON for each source.",
+    "required_semantic_violations_per_source": 0,
+    "flag_clearing_filtering_repair_or_relabeling_permitted": false
+  },
+  "crossed_book_gate": {
+    "replaces_only_original_gate": "continuous_crossed_book_rows_zero",
+    "replacement_gate": "continuous_matching_bucket_close_crossed_states_zero",
+    "gate_scope": "One-second authoritative MBP-10 bucket-close states where market_state is CONTINUOUS_MATCHING.",
+    "required_continuous_crossed_bucket_closes_per_date": 0,
+    "pre_open_crossed_states": "Report separately; not a failure.",
+    "maintenance_crossed_states": "Report separately; not a failure.",
+    "raw_crossed_source_rows": "Technical diagnostic only; not a failure gate.",
+    "row_filtering_or_repair_permitted": false
+  },
+  "independent_reproduction": {
+    "primary": "Sealed fixed-array calculation and sequential MBP as-of state machine.",
+    "reference": "Sealed dictionary calculation and independently coded ordered-grid MBP state machine.",
+    "one_fresh_process_scoped_calculation_per_date_and_implementation": true,
+    "identical_required_per_date": [
+      "source input checksums",
+      "86400 ordered bucket rows",
+      "85-column registry and schema hash",
+      "exact source-row allocation",
+      "null counts",
+      "per-column canonical checksums",
+      "complete-row checksum",
+      "technical diagnostics",
+      "snapshot-semantic classification",
+      "crossed bucket-close classifications by segment and state",
+      "duplicate technical update contribution",
+      "all amended and unchanged integrity gates",
+      "Parquet byte length and SHA-256"
+    ],
+    "byte_identical_parquet_outputs_required": true,
+    "partial_reproduction_credit_permitted": false
+  },
+  "per_date_integrity_gates": {
+    "predecessor_protocol_freeze_and_source_seals_valid": true,
+    "required_input_columns_present": true,
+    "source_record_counts_exact": true,
+    "publisher_and_instrument_exact": true,
+    "all_receive_timestamps_in_frozen_day": true,
+    "receive_timestamp_and_source_ordinal_order_nondecreasing": true,
+    "every_source_row_allocated_exactly_once": true,
+    "output_bucket_rows_exactly_86400": true,
+    "output_bucket_grid_complete_unique_and_ordered": true,
+    "feature_columns_exactly_85": true,
+    "no_cross_segment_or_cross_date_state_carry": true,
+    "empty_levels_canonical": true,
+    "book_sizes_and_counts_nonnegative": true,
+    "bad_ts_recv_rows_all_confirmed_snapshot_semantics": true,
+    "continuous_matching_bucket_close_crossed_states_zero": true,
+    "pre_open_and_maintenance_crossed_states_reported_separately": true,
+    "maybe_bad_book_flag_rows_zero": true,
+    "unknown_action_rows_zero": true,
+    "all_duplicate_provider_emissions_processed_once": true,
+    "no_mbo_to_mbp_alignment": true,
+    "no_value_inspection_outcome_signal_execution_or_pnl_work": true
+  },
+  "verdict_precedence_per_date": [
+    "FAIL_PREDECESSOR_OR_SOURCE_INTEGRITY",
+    "FAIL_FEATURE_INTEGRITY",
+    "FAIL_REPRODUCTION",
+    "PASS_FEATURE_ROBUSTNESS"
+  ],
+  "overall_verdict_rule": "PASS_MULTIDAY_FEATURE_ROBUSTNESS only if all five date verdicts are PASS_FEATURE_ROBUSTNESS; otherwise FAIL_MULTIDAY_FEATURE_ROBUSTNESS.",
+  "reporting_policy": {
+    "permitted": [
+      "formal statuses",
+      "source and output record counts",
+      "feature column count and null counts",
+      "technical integrity counts and classifications",
+      "snapshot-semantic aggregate counts",
+      "crossed bucket-close aggregate counts by frozen segment and state",
+      "duplicate contribution to MBP update counts",
+      "checksums and hashes",
+      "reproduction results"
+    ],
+    "prices_depth_order_flow_or_feature_values_may_be_reported": false,
+    "human_or_model_market_or_feature_value_inspection": false,
+    "feature_payloads_sealed_without_value_inspection": true
+  },
+  "prohibited": [
+    "modifying any predecessor verdict or sealed artifact",
+    "changing any Step 4A feature name, definition, formula, timestamp, bucket, reset, missing-data, state-authority, event-flow, or state-persistence rule",
+    "carrying book, OFI baseline, event, or feature state across a market segment or calendar date",
+    "filtering, deduplicating, dropping, repairing, relabeling, or substituting any provider row",
+    "changing the two bounded Step 4A.3 integrity amendments",
+    "MBO-to-MBP row alignment or comparator correction",
+    "acquiring or substituting data",
+    "inspecting or reporting prices, depth, order-flow values, or feature values",
+    "outcome inspection, directional relationship discovery, targets, labels, signals, candidates, or edges",
+    "feature selection or ranking",
+    "execution optimization, trades, PnL, R multiples, or account returns"
+  ],
+  "completion_policy": "Run and reproduce all five engineering dates once under the frozen protocol, record separate date verdicts and an all-dates verdict, document and seal Step 4B.3, and stop without research."
+}

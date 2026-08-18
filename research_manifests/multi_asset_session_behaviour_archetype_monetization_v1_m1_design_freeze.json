@@ -1,0 +1,94 @@
+{
+  "artifacts": [
+    {
+      "bytes": 6164,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "f1f8d2591e4ca51d433ca9dfd8592d5e12306a694e3478ed09a571dbd9eda457"
+    },
+    {
+      "bytes": 7543,
+      "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_protocol.json",
+      "sha256": "182967631ef05f2060e9d49b74b0028be85c9d8b62cee5f8cba3341cae7c71a7"
+    },
+    {
+      "bytes": 44665,
+      "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_traceability.json",
+      "sha256": "bf8e99aac359972cef38df5c54d2288757e12a7d7ba0fd07bad848aa0c5524b6"
+    },
+    {
+      "bytes": 12244,
+      "path": "research_schemas/multi_asset_session_behaviour_archetype_monetization_v1_case_matrix.schema.json",
+      "sha256": "511c5c2782d33baf2a1c10e894c10d41366a1c65a2541e3e3a7111ea9c7beff0"
+    },
+    {
+      "bytes": 7352763,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1/session_identity_registry.json",
+      "sha256": "6a87dd55531371038db9d57824285549bf41f4a67d6c14d0db617ed5d595c796"
+    },
+    {
+      "bytes": 1249,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_V1_TRACEABILITY.md",
+      "sha256": "885f29295f2c2a3de0afc9edf81b00602e4097b6f7f0462cbfc60f3d4640649c"
+    },
+    {
+      "bytes": 1783,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_V1_CASE_MATRIX.md",
+      "sha256": "f741809638d178a83638bd8567fc31ebc62d06dd811a400c4b6d82d59b062238"
+    }
+  ],
+  "controls": {
+    "2025_values_accessed": false,
+    "2026_values_accessed": false,
+    "OHLC_accessed": false,
+    "charge_usd": 0.0,
+    "outcomes_calculated": false,
+    "relationships_calculated": false
+  },
+  "every_source_hash_verified": true,
+  "predecessors": {
+    "all_verified": true,
+    "held_gold_final_result": {
+      "bytes": 17098,
+      "path": "research_artifacts/gold_h4_liquidity_target_capture_falsification_v1/final_result.json",
+      "sha256": "64a250affd1d781db10de1231170b415e688309f39e81212eeff2cb26c82a246"
+    },
+    "held_gold_freeze": {
+      "bytes": 3099,
+      "path": "research_manifests/gold_h4_liquidity_target_capture_falsification_v1_final_freeze.json",
+      "sha256": "ebde55df5faa73369e19aa1b65ca85609d32790eaa319dade742613e05fb351b"
+    },
+    "held_gold_policy": {
+      "observed_development_r_per_month": 1.1888167031,
+      "policy_id": "TARGET_TAKE_25_RUN_75",
+      "status": "HELD_UNCHANGED_EXCLUDED_FROM_BRANCH",
+      "validation_claim": "NONE"
+    },
+    "milestone_1_seal": {
+      "bytes": 2705,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_milestone1_seal.json",
+      "sha256": "a8f8c7d257354f03a2782a20965f0524cfae6a9f8402c5c0e4bf70179ece94a0"
+    },
+    "milestone_1_status": "PASS_MILESTONE_1_CONTRACT_AND_AUDIT__SOURCE_BACKFILL_REQUIRED_BEFORE_DISCOVERY",
+    "milestone_2_seal": {
+      "bytes": 3116,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_milestone2_seal.json",
+      "sha256": "acb07c44b816958f01e86d64334d940c5e1ad988649085b781b190846314fdca"
+    },
+    "milestone_2_status": "PASS_MILESTONE_2_ALL_SEVEN_INSTRUMENTS_SOURCE_CERTIFIED",
+    "milestone_3_seal": {
+      "bytes": 4719,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_milestone3_seal.json",
+      "sha256": "2515b0b3c3cd5f339f346f359c9c15f928f66d2a5ba5dcf2a976fab2753273c8"
+    },
+    "milestone_3_status": "REJECT_NO_MULTI_ASSET_PORTFOLIO_EDGE"
+  },
+  "sealed_at_utc": "2026-08-12T10:18:36.481757Z",
+  "source_certification": {
+    "bytes": 121686,
+    "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m2/certification.json",
+    "sha256": "ff59bae973835c6384c0ec8ef1ae416dec9312e29412d399b81b1ace382e4e87"
+  },
+  "source_file_count": 151,
+  "status": "SEALED_BEFORE_TIMESTAMP_COVERAGE_AUDIT_AND_ANY_BEHAVIOUR_ACCESS",
+  "version": "MULTI_ASSET_SESSION_BEHAVIOUR_V1_M1_DESIGN_FREEZE_1_0"
+}

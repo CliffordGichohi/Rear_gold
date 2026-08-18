@@ -1,0 +1,19 @@
+{
+  "amendment_sha256": "5161d28ef99da7d5e3955e43294eeccd8d2d2b07de754b755e7eacd6cc6a0e5d",
+  "changed_files_sha256": "455fdd36db8fdf6bfbeb8e4cfbb3f5ed40d40dc144f92c20b1394302b830a172",
+  "human_decisions": 0,
+  "original_final_manifest_sha256": "7cddda6aa443a54825031b8c4b655840cd867f112fe3cbb0cbc9768e85739993",
+  "scored_labeling": "CLOSED_V2_PRACTICE_ONLY_CERTIFIED",
+  "sealed_at": "2026-08-14T11:15:17.202188+00:00",
+  "sealed_outputs": [
+    {
+      "bytes": 5930,
+      "path": "research_artifacts/gold_blind_synchronized_setup_replay_v2/postcert_status_amendment_a_certification.json",
+      "sha256": "531a16f487d0aa32b68ba45f971602d325264f80c29984f1cc9ed1c1a5a106e6"
+    }
+  ],
+  "sealed_outputs_sha256": "9268fb12a9b60c77c72a251514ad9fcbc054605d08969d13b2e6470230eaae2e",
+  "status": "SEALED_READY_FOR_V2_PRACTICE_HUMAN_LABELING_SCORED_CLOSED",
+  "verdict": "PASS_V2_POSTCERT_STATUS_AMENDMENT_A",
+  "version": "GOLD_BLIND_SYNCHRONIZED_SETUP_REPLAY_V2_POSTCERT_STATUS_AMENDMENT_A_SEAL_1_0"
+}

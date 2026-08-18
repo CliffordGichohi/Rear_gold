@@ -1,0 +1,102 @@
+{
+  "version": "GOLD_H4_CONTINUATION_TRADABLE_CEILING_V1_PROTOCOL_1_0",
+  "status": "FROZEN_BEFORE_H4_PATH_REOPENING",
+  "branch": "GOLD_H4_CONTINUATION_TRADABLE_CEILING_V1",
+  "predecessor": {
+    "verdict": "REJECT_NO_DEVELOPMENT_ECONOMIC_EDGE",
+    "candidate": "H4::CONTINUATION_ONLY_CONTROL",
+    "population_oof": 424,
+    "no_trade": 176,
+    "executable_pre_overlap": 248,
+    "overlap_skips": 50,
+    "retained": 198
+  },
+  "matched_population": {
+    "waterfall_cases": 248,
+    "no_trade_cases_reported_separately": 176,
+    "post_overlap_skips_assigned_zero_pnl": true,
+    "months": 39,
+    "timeframe": "H4",
+    "model_id": "CONTINUATION_ONLY_CONTROL"
+  },
+  "path": {
+    "source": "SEALED_XAUUSD_M1",
+    "interval": "FROZEN_ENTRY_OPEN_THROUGH_BAR_CLOSING_AT_FROZEN_DEADLINE",
+    "stop_first": true,
+    "same_bar_favourable_excursion_after_stop_forbidden": true,
+    "gap_stop": "WORSE_OF_STOP_AND_BAR_OPEN",
+    "missing_or_invalid": "MATCHED_CASE_INTEGRITY_FAILURE_NO_IMPUTATION"
+  },
+  "normalization": {
+    "risk_usd": 50.0,
+    "account_usd": 10000.0,
+    "one_percent_risk_usd": 100.0,
+    "r_month": "TOTAL_USD_DIVIDED_BY_50_DIVIDED_BY_39",
+    "one_percent_scaling": "DOLLARS_MULTIPLIED_BY_TWO_R_MONTH_UNCHANGED"
+  },
+  "main_waterfall": [
+    "BEHAVIOURAL_ORACLE",
+    "OBSERVABLE_ENTRY_PERFECT_EXIT_GROSS",
+    "STOP_FEASIBLE_PERFECT_EXIT_GROSS",
+    "FROZEN_EXECUTION_GROSS_PRE_OVERLAP",
+    "FROZEN_EXECUTION_NET_PRE_OVERLAP",
+    "FROZEN_EXECUTION_NET_AFTER_OVERLAP"
+  ],
+  "stop_feasible_rule": {
+    "entry_bar_stop": "STOP_FIRST_GAP_ADJUSTED_STOP_FILL",
+    "later_stop": "MAX_NONNEGATIVE_FAVOURABLE_EXCURSION_STRICTLY_BEFORE_STOP_BAR",
+    "no_stop": "MAX_NONNEGATIVE_FAVOURABLE_EXCURSION_THROUGH_DEADLINE",
+    "perfect_exit_is_hindsight_only": true
+  },
+  "operational_upper_bound": [
+    "STOP_FEASIBLE_NET_BASE_COST",
+    "STOP_FEASIBLE_NET_1P5X_COST",
+    "STOP_FEASIBLE_NET_BASE_COST_AFTER_OVERLAP",
+    "STOP_FEASIBLE_NET_1P5X_COST_AFTER_OVERLAP"
+  ],
+  "diagnostics": [
+    "FULL_PATH_MFE_MAE_R",
+    "MFE_BEFORE_INVALIDATION_R",
+    "STOPPED_THEN_PLUS_1R",
+    "STOPPED_THEN_PLUS_2R",
+    "STOPPED_THEN_ORIGINAL_TARGET",
+    "TARGET_TRUNCATION",
+    "TIME_TRUNCATION",
+    "STOP_MANAGEMENT_GAP",
+    "COST_LOSS",
+    "SIGNED_OVERLAP_EFFECT",
+    "STAGE_C_TO_D_GAP_BY_EXIT_REASON"
+  ],
+  "decision": {
+    "target_r_per_month": 10.0,
+    "mathematical_capacity": "OBSERVABLE_ENTRY_PERFECT_EXIT_GROSS_R_MONTH_GTE_10",
+    "operational_capacity": "STOP_FEASIBLE_NET_BASE_COST_AFTER_OVERLAP_R_MONTH_GTE_10",
+    "demonstrated": "FROZEN_EXECUTION_NET_AFTER_OVERLAP_R_MONTH_GTE_10",
+    "below_operational_ceiling": "TERMINATE_GOLD_ONLY_OPTIMIZATION_BRANCH",
+    "at_or_above_operational_ceiling": "RECOMMEND_EXACTLY_ONE_LARGEST_LOSS_BOTTLENECK_DIRECTION_WITHOUT_IMPLEMENTATION"
+  },
+  "reproduction": {
+    "implementations": ["PRIMARY_NUMPY_RECURSIVE_RANGE_TREE", "REFERENCE_BISECT_ITERATIVE_RANGE_TREE"],
+    "required": [
+      "IDENTICAL_424_IDENTITIES",
+      "IDENTICAL_248_MATCHED_PATHS",
+      "IDENTICAL_FIRST_PASSAGES",
+      "IDENTICAL_PER_CASE_FIELDS",
+      "BYTE_IDENTICAL_PARQUET",
+      "IDENTICAL_RESULTS_JSON",
+      "IDENTICAL_VERDICT"
+    ]
+  },
+  "forbidden": [
+    "NEW_STRATEGY_OR_CANDIDATE",
+    "ENTRY_STOP_TARGET_OR_EXIT_OPTIMIZATION",
+    "SUBGROUP_SELECTION",
+    "LOSS_REMOVAL",
+    "2025_OR_2026_ACCESS",
+    "DATA_ACQUISITION_OR_CHARGE"
+  ],
+  "h4_paths_accessed": false,
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "paid_acquisition_usd": 0.0
+}

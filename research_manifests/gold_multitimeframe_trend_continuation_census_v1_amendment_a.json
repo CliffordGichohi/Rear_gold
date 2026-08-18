@@ -1,0 +1,16 @@
+{
+  "version": "GOLD_MT_CENSUS_V1_AMENDMENT_A_1_0",
+  "status": "SEALED_BEFORE_CENSUS_MATERIALIZATION",
+  "scope": "Deterministic structural edge cases",
+  "rules": {
+    "break_boundary": "LATEST_KNOWN_UNBROKEN_SWING_PER_SIDE",
+    "same_direction_multi_level_break": "ONE_EVENT_LIST_ALL_CROSSED_KNOWN_UNBROKEN_LEVELS",
+    "simultaneous_opposite_boundary_breach": "USE_MORE_RECENT_KNOWN_BOUNDARY; IF_IDENTICAL_KNOWN_TIME_USE_MORE_RECENT_PIVOT; IF_STILL_TIED_RECORD_NO_DIRECTIONAL_EVENT",
+    "pivot_reveal_order": "STRUCTURE_BREAK_EVALUATION_FIRST_THEN_NEW_PIVOTS_BECOME_KNOWN_AT_BAR_CLOSE",
+    "pullback_trend_ownership": "STATE_AND_SEGMENT_EXISTING_AT_VISUAL_PIVOT_TIMESTAMP",
+    "pre_confirmation_resolution": "STORE_RESOLUTION_WITH_RESOLVED_AT_EARLIER_THAN_KNOWN_AT_AND_NEVER_TREAT_AS_ACTIONABLE",
+    "open_segment_end": "NULL_WITH_OPEN_AT_BOUNDARY_STATUS"
+  },
+  "relationships_or_edge_tested": false,
+  "forward_values_accessed": false
+}

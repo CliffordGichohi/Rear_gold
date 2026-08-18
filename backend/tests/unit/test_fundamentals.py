@@ -562,3 +562,29 @@ def test_cot_availability_uses_holiday_shifted_official_schedule() -> None:
     ordinary, ordinary_quality = cot_publication_at(date(2025, 6, 17))
     assert ordinary.date() == date(2025, 6, 20)
     assert ordinary_quality == "ESTIMATED_STANDARD_FRIDAY"
+
+
+def test_bulk_research_can_skip_hash_without_changing_decision_state() -> None:
+    as_of = datetime(2026, 1, 7, 12, 0, tzinfo=UTC)
+    observations = _observations()
+    full = calculate_fundamental_state(
+        observations,
+        _cot_points(),
+        as_of=as_of,
+    )
+    bulk = calculate_fundamental_state(
+        observations,
+        _cot_points(),
+        as_of=as_of,
+        compute_data_hash=False,
+    )
+
+    assert full.data_hash != "NOT_COMPUTED"
+    assert bulk.data_hash == "NOT_COMPUTED"
+    assert bulk.directional_score == full.directional_score
+    assert bulk.confidence == full.confidence
+    assert bulk.coverage == full.coverage
+    assert bulk.bias_label == full.bias_label
+    assert bulk.regime_label == full.regime_label
+    assert bulk.reaction_function == full.reaction_function
+    assert bulk.components == full.components

@@ -1,0 +1,306 @@
+{
+  "charge_incurred_usd": 0.0,
+  "classification": "OUTCOME_BLIND_DEVELOPMENT_FEATURE_MATERIALIZATION_ONLY",
+  "completion_policy": "Document, seal, independently verify, and stop after Step 5C before any outcome or relationship access.",
+  "derived_microstructure_states": {
+    "ABSORPTION_STATE_W60": "Require nonzero directional trade quantity, known midpoint progress, and at least one known quote-OFI or L5-depth confirmation. Buy>sell with non-positive progress and a negative confirmation is BEARISH_ABSORPTION; sell>buy with non-negative progress and a positive confirmation is BULLISH_ABSORPTION; otherwise NONE.",
+    "DEPTH_PRESSURE_W60_W900": "Use deterministic medians of L1/L5/L10 depth imbalance and terminal microprice-minus-midpoint sign. At least three known inputs are required; three or more positive is BULLISH, three or more negative is BEARISH, otherwise CONFLICTED.",
+    "FLOW_DEPTH_ALIGNMENT": "BULLISH when FLOW_PRESSURE_W60 and DEPTH_PRESSURE_W60 are both BULLISH; BEARISH when both BEARISH; CONFLICTED when they oppose; otherwise NEUTRAL_OR_UNKNOWN.",
+    "FLOW_PRESSURE_W60_W900": "Recompute displayed-pressure and trade-imbalance ratios from window aggregate quantities. quote_ofi_raw is known only with at least one eligible transition. BULLISH requires at least two known positive components and no known negative component; BEARISH is the mirror; otherwise CONFLICTED; fewer than two known is UNKNOWN.",
+    "LIQUIDITY_ACTIVITY_SHIFT": "Compare W60 and W900 per-second rates for mbo_live_records, mbp_update_count, and quote_ofi_transition_count by exact cross multiplication. At least two higher is HIGH, at least two lower is LOW, otherwise STABLE.",
+    "LIQUIDITY_FRAGILITY": "Compare W60 median spread to W900 median, terminal book age to W900 median, and W60 median total L10 depth to W900 median. At least two fragile comparisons is FRAGILE, two exact reverse comparisons is RESILIENT, otherwise MIXED; fewer than two known comparisons is UNKNOWN.",
+    "median": "Sort non-null integer bucket-close values; odd uses center; even uses integer midpoint with half-away-from-zero rounding.",
+    "rounding": "All ratios and even-count integer medians use half-away-from-zero rounding.",
+    "state_ids": [
+      "FLOW_PRESSURE_W60",
+      "FLOW_PRESSURE_W900",
+      "DEPTH_PRESSURE_W60",
+      "DEPTH_PRESSURE_W900",
+      "LIQUIDITY_ACTIVITY_SHIFT",
+      "LIQUIDITY_FRAGILITY",
+      "ABSORPTION_STATE_W60",
+      "FLOW_DEPTH_ALIGNMENT"
+    ],
+    "threshold_search_or_retuning": false
+  },
+  "development_outcomes_accessed": false,
+  "frozen_at_utc": "2026-08-04T09:14:47.208991Z",
+  "fundamental_contexts": {
+    "COT_MANAGED_MONEY_CROWDING": "Retain eligible published crowding_state; age >10 calendar days or unverified available_at is UNKNOWN; epistemic class INFERRED.",
+    "COT_WEEKLY_CHANGE_SIGN": "Use latest two reports both published/available by decision_at; compare managed-money net contracts: UP, DOWN, or FLAT; either stale/unavailable makes UNKNOWN.",
+    "FINANCIAL_STRESS_STATE": "Eligible latest level >0 STRESS, <=0 NORMAL, otherwise UNKNOWN.",
+    "MACRO_ENGINE_BIAS_STATE": "Directional score >=+20 BULLISH, <=-20 BEARISH, otherwise NEUTRAL; missing/ineligible UNKNOWN.",
+    "REAL_YIELD_USD_CONFIRMATION": "Use eligible observation-to-observation absolute-change signs: both negative GOLD_BULLISH, both positive GOLD_BEARISH, otherwise CONFLICTED; either unknown/stale makes UNKNOWN.",
+    "RECENT_RELEASE_SURPRISE_DIRECTION": "Use eligible pre-existing event-impact direction only when tied to the latest importance-5 release in the prior 24 hours with verified pre-release forecast availability; otherwise UNKNOWN.",
+    "REGIME_REACTION_FUNCTION_STATE": "Retain eligible reaction-function category without relabeling.",
+    "UPCOMING_CATALYST_RISK": "HIGH only for a verified scheduled importance-5 US macro/FOMC event strictly after decision_at and no later than observation_end; NONE only with verified calendar coverage; otherwise UNKNOWN.",
+    "context_ids": [
+      "MACRO_ENGINE_BIAS_STATE",
+      "REAL_YIELD_USD_CONFIRMATION",
+      "REGIME_REACTION_FUNCTION_STATE",
+      "RECENT_RELEASE_SURPRISE_DIRECTION",
+      "UPCOMING_CATALYST_RISK",
+      "FINANCIAL_STRESS_STATE",
+      "COT_MANAGED_MONEY_CROWDING",
+      "COT_WEEKLY_CHANGE_SIGN"
+    ]
+  },
+  "independent_reproduction": {
+    "book_equality_may_not_select_rows": true,
+    "primary": "NumPy mask/bincount event allocation, forward latest-state selection, and direct context extractors.",
+    "reference": "Independent NumPy add.at allocation, reverse unique latest-state selection, and separately implemented context extractors.",
+    "required_identical": [
+      "output schemas",
+      "row identities",
+      "null counts",
+      "per-column checksums",
+      "complete-row checksums",
+      "technical diagnostics",
+      "byte-identical Parquet outputs"
+    ]
+  },
+  "integrity_gates": {
+    "all_BAD_TS_RECV_rows_must_remain_within_Step5B2_permitted_semantics": true,
+    "all_predecessor_and_80_source_seals_verify": true,
+    "context_available_at_not_after_decision": true,
+    "continuous_matching_bucket_close_crossed_states_zero": true,
+    "empty_levels_canonical_and_sizes_counts_nonnegative": true,
+    "every_selected_row_allocated_once_and_anchors_excluded": true,
+    "exact_85_column_schema_and_order": true,
+    "exactly_336600_available_bucket_rows": true,
+    "exactly_376_unique_decision_rows": true,
+    "no_post_cutoff_or_cross_date_segment_state_carry": true,
+    "outcome_columns_or_accesses_zero": true,
+    "primary_reference_exact_reproduction": true,
+    "publisher_and_per_date_instrument_mapping_exact": true,
+    "timestamps_and_source_ordinals_nondecreasing": true,
+    "unknown_actions_and_maybe_bad_book_rows_zero": true
+  },
+  "market_values_accessed_before_freeze": false,
+  "missing_data": {
+    "UNKNOWN_is_not_zero_flat_normal_or_no_event": true,
+    "documented_good_friday_rows": [
+      "STEP5C:2022-04-15:LONDON",
+      "STEP5C:2022-04-15:NEW_YORK"
+    ],
+    "missing_bucket_window": "No raw rows; all eight states UNKNOWN; contexts remain independently point-in-time materialized where eligible.",
+    "missing_context": "State UNKNOWN with epistemic_status UNKNOWN, quality MISSING, and source_signature UNKNOWN.",
+    "repair_or_backfill": false
+  },
+  "outcome_blind_context_projection": {
+    "asia_history_rule": "For ASIA_RANGE_COMPRESSION use the prior 20 eligible unique development session dates from the complete sealed 2021-2024 casebook chronology, excluding the current date; Type-7 25th/75th percentiles; fewer than 20 observations is UNKNOWN.",
+    "forbidden_fields": [
+      "subsequent_behaviour",
+      "neutral session direction",
+      "fixed-horizon returns",
+      "excursions",
+      "session close",
+      "path outcome",
+      "MFE",
+      "MAE",
+      "trade fields"
+    ],
+    "point_in_time_gate": "Every fact and price bar must have available_at <= the receiving row's decision_at; equality is permitted only for a fully published/closed record.",
+    "price_bar_rule": "For New York-only handover contexts, admit complete XAUUSD bars from the London 08:01 local reference through a close no later than the New York decision cutoff. Never expose those bars to the London row.",
+    "projection_fields": [
+      "case/session identity",
+      "decision_state only",
+      "pre-New-York registered price-path inputs only",
+      "lineage and quality"
+    ],
+    "selected_decision_rows": 376,
+    "source": "Sealed gold_casebook_v01 source bundle, rebuilt without calling subsequent-behaviour construction and without reading a post-cutoff price bar."
+  },
+  "pass_rule": "PASS only if all source/predecessor gates, both feature implementations, the outcome-blind context projection, exact coverage/null/schema/checksum gates, and independent reproduction pass. Otherwise record an honest formal failure without repair.",
+  "price_level_session_contexts": {
+    "ASIA_PREDECISION_BREAK_STATE": "Apply the frozen two-consecutive-complete-5m-close acceptance rule after both Asia levels are known and through decision_at. Accepted/holding maps ACCEPTED_ABOVE/BELOW; rejected breach or returned-inside accepted break maps REJECTED_ABOVE/BELOW; none maps NO_BREAK. If both sides complete, select the latest completion timestamp; an exact opposing tie is UNKNOWN.",
+    "ASIA_RANGE_COMPRESSION": "Current Asia range <= prior-20 Type-7 p25 LOW, >= p75 HIGH, otherwise NORMAL; missing or fewer than 20 prior eligible ranges UNKNOWN.",
+    "ASIA_RANGE_LOCATION": "Eligible decision XAUUSD price above Asia high, below Asia low, or inside; missing coordinate is UNKNOWN.",
+    "LONDON_ASIA_INTERACTION_PRE_NEW_YORK": "NEW_YORK only: same frozen 5m/two-close acceptance rule from London 08:00 local to the New York cutoff against Asia high/low. Holding acceptance maps ACCEPTED; rejected/failed accepted break maps REJECTED; none maps NO_COMPLETED_INTERACTION; latest completion wins and exact opposing tie is UNKNOWN. LONDON rows are UNKNOWN.",
+    "LONDON_PRE_NEW_YORK_DIRECTION": "NEW_YORK only: first complete one-minute bar opening exactly 08:01 Europe/London to last complete bar closing <= New York cutoff. Displacement >+0.01 UP, <-0.01 DOWN, otherwise FLAT. LONDON rows are UNKNOWN by registered session eligibility.",
+    "PRIOR_DAY_RANGE_LOCATION": "Eligible decision XAUUSD price above prior-day high, below prior-day low, or inside; missing coordinate is UNKNOWN.",
+    "STRUCTURE_15M_1H_ALIGNMENT": "Both eligible frozen trends bullish -> BULLISH; both bearish -> BEARISH; both known otherwise -> MIXED; any unknown -> UNKNOWN.",
+    "context_ids": [
+      "ASIA_RANGE_LOCATION",
+      "ASIA_PREDECISION_BREAK_STATE",
+      "PRIOR_DAY_RANGE_LOCATION",
+      "STRUCTURE_15M_1H_ALIGNMENT",
+      "ASIA_RANGE_COMPRESSION",
+      "LONDON_PRE_NEW_YORK_DIRECTION",
+      "LONDON_ASIA_INTERACTION_PRE_NEW_YORK"
+    ]
+  },
+  "prohibited": [
+    "acquisition or charge",
+    "source repair/filter/relabel/deduplication",
+    "development outcome access or join",
+    "2025 or 2026 value access",
+    "relationship/effect/p-value calculation",
+    "candidate/signal creation",
+    "execution/trade/PnL/R/return calculation",
+    "feature/window/state/context/threshold retuning",
+    "Step 5D"
+  ],
+  "purpose": "Materialize the preregistered GC microstructure decision state and eligible point-in-time contexts without opening or joining a development outcome.",
+  "raw_feature_payload": {
+    "column_order_source": "gc_microstructure_step_5a_feature_hypothesis_registry_v01.json",
+    "columns": 85,
+    "expected_available_rows": 336600,
+    "formulas": "Unchanged Step 4A formulas, integer rounding, missingness, authoritative MBP-10 state, MBO flow, and one-second bucket semantics.",
+    "good_friday": "2022-04-15 emits no bucket rows and remains in the decision matrix as UNAVAILABLE_DOCUMENTED/UNKNOWN.",
+    "outputs": [
+      "LONDON 85-column bucket Parquet",
+      "NEW_YORK 85-column bucket Parquet"
+    ],
+    "schema_sha256": "dfaf74cdc55b37469966857fc1ed2279b3d18c98f90454ced65859cb32494232"
+  },
+  "required_predecessors": {
+    "all_prior_verdicts_and_artifacts_immutable": true,
+    "case_matrix_manifest_hash": "d6aad4b861d98899d6fdcc92ea53a20221434af5038a3bcb86a8b9faa1d8e7b7",
+    "casebook_source_manifest_hash": "d1241633b073cd7307f1da00a13a2d76c132f3dccefc52a076be2c641f06b85f",
+    "feature_schema_sha256": "dfaf74cdc55b37469966857fc1ed2279b3d18c98f90454ced65859cb32494232",
+    "step4b3_manifest_hash": "6252b239c4962fd8dcf3bce1a712b416e67af8303bbea7cd40de2ab6a3522bbe",
+    "step4b3_status": "PASS_MULTIDAY_FEATURE_ROBUSTNESS",
+    "step5b2_manifest_hash": "ccbf10b2e23612d3de2e2d880cfcde2a569fbb3b419de421e8887c17cf81cc4f",
+    "step5b2_status": "PASS_STEP_5B2_SOURCE_INTEGRITY_RECERTIFICATION"
+  },
+  "row_registry": {
+    "bytes": 464322,
+    "dates": 188,
+    "path": "research_manifests/gc_microstructure_step_5c_row_registry_v01.json",
+    "registry_hash": "a30605c6aeab463b818fa283cf63bbdb016354da193255c97f979fc502d82229",
+    "session_rows": 376,
+    "sha256": "a0c2b6dff0dd6c57e25b5f194342c69202e02f2e642f6fe8ae75ac2ea1bbe225"
+  },
+  "sealed_inputs": {
+    "backend/src/gold_intel/analytics/casebook.py": {
+      "bytes": 16079,
+      "path": "backend/src/gold_intel/analytics/casebook.py",
+      "sha256": "fa4370052d4ffdc9ec144009373d427c13477a4b4bbfc31bf72eaeb737f381e3"
+    },
+    "backend/src/gold_intel/analytics/session_behaviour_v3.py": {
+      "bytes": 102112,
+      "path": "backend/src/gold_intel/analytics/session_behaviour_v3.py",
+      "sha256": "33d53780a2db17f5cb8940bf3251797ddf273531f8b64ed330b7cb892c5115be"
+    },
+    "backend/src/gold_intel/analytics/session_behaviour_v3_discovery.py": {
+      "bytes": 76608,
+      "path": "backend/src/gold_intel/analytics/session_behaviour_v3_discovery.py",
+      "sha256": "921a6d02c71514438e46a81d22f0ea788b2bdfca88172e564d10b510f14e96dc"
+    },
+    "research_artifacts/gc_microstructure_step_4b3_v01/manifest.json": {
+      "bytes": 15664,
+      "path": "research_artifacts/gc_microstructure_step_4b3_v01/manifest.json",
+      "sha256": "54ba09d63c6c791bfdcd2047112b15a431c686a12f6e1f7a82beae9e5a3e6249"
+    },
+    "research_artifacts/gc_microstructure_step_4b3_v01/verdict.json": {
+      "bytes": 2578,
+      "path": "research_artifacts/gc_microstructure_step_4b3_v01/verdict.json",
+      "sha256": "fc2d5e4040f15d8edfb72935ec0f491000c58d8116baf763c19fe59588260c48"
+    },
+    "research_artifacts/gc_microstructure_step_5b2_v01/step5b2_final/manifest.json": {
+      "bytes": 2409,
+      "path": "research_artifacts/gc_microstructure_step_5b2_v01/step5b2_final/manifest.json",
+      "sha256": "3fedb586ce4f9621721575b748b82043f47a4f6630488c29e0b2f8e73b4c86f1"
+    },
+    "research_artifacts/gc_microstructure_step_5b2_v01/step5b2_final/verdict.json": {
+      "bytes": 3172,
+      "path": "research_artifacts/gc_microstructure_step_5b2_v01/step5b2_final/verdict.json",
+      "sha256": "5f3bd13cc2336a50c09ecfcc44c7d63b226a4d212f9d08666d6a50e93e09a6cb"
+    },
+    "research_artifacts/gc_microstructure_step_5b_budget_c_v01/acquisition_manifest.json": {
+      "bytes": 1311616,
+      "path": "research_artifacts/gc_microstructure_step_5b_budget_c_v01/acquisition_manifest.json",
+      "sha256": "b4e64d508790364dbd400da1478b139bb643d2b7afc9c97ff6691958365c5ccc"
+    },
+    "research_artifacts/gold_casebook_v01/manifest.json": {
+      "bytes": 5372,
+      "path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6"
+    },
+    "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/manifest.json": {
+      "bytes": 4086,
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/manifest.json",
+      "sha256": "dddbe125d11afef2094b7843f5521b7bbfcc95178e3fa376b60af8bdd2efc3b5"
+    },
+    "research_manifests/gc_microstructure_conditional_edge_discovery_contract_v01.json": {
+      "bytes": 19990,
+      "path": "research_manifests/gc_microstructure_conditional_edge_discovery_contract_v01.json",
+      "sha256": "da9048f497c853ef3b1f2a4debe6c80f8c650217004bfe6df05e045751554fcb"
+    },
+    "research_manifests/gc_microstructure_step_4b3_protocol_v01.json": {
+      "bytes": 21355,
+      "path": "research_manifests/gc_microstructure_step_4b3_protocol_v01.json",
+      "sha256": "8a67158b943add18bdeaea5b8b87a8c41fd1427ef6aa45248a38eb03293539cd"
+    },
+    "research_manifests/gc_microstructure_step_5a_feature_hypothesis_registry_v01.json": {
+      "bytes": 26872,
+      "path": "research_manifests/gc_microstructure_step_5a_feature_hypothesis_registry_v01.json",
+      "sha256": "4b207a1dec5aa78a904c86cf8c6a14bf0a517dd918f24c5270c254400c865f01"
+    },
+    "research_manifests/gc_microstructure_step_5b_budget_amendment_c_v01.json": {
+      "bytes": 2486,
+      "path": "research_manifests/gc_microstructure_step_5b_budget_amendment_c_v01.json",
+      "sha256": "60ae7fa1bdca50461ab2f1089040996f8f99ad6e7def1dbb9dc7ab181c30f246"
+    },
+    "research_manifests/gc_microstructure_step_5b_budget_c_freeze_v01.json": {
+      "bytes": 3598,
+      "path": "research_manifests/gc_microstructure_step_5b_budget_c_freeze_v01.json",
+      "sha256": "ddfe58d2a366410f649de89bc7081b0081d16717a7245fec83f5d2bfa9efa916"
+    },
+    "research_manifests/gc_microstructure_step_5b_budget_c_request_registry_v01.json": {
+      "bytes": 234004,
+      "path": "research_manifests/gc_microstructure_step_5b_budget_c_request_registry_v01.json",
+      "sha256": "d8dfe8a04e0f824c98ec4e88b6c75b7e56214616e56124b76bdbfe0b20b0dd99"
+    },
+    "research_schemas/gold_session_behaviour_v3_case_matrix.schema.json": {
+      "bytes": 39740,
+      "path": "research_schemas/gold_session_behaviour_v3_case_matrix.schema.json",
+      "sha256": "33d47e452695e624f5ae10dc29ebbd99d05bd0c6f8096540cce69f9b521e92a7"
+    },
+    "tools/build_gc_microstructure_features_step4a.py": {
+      "bytes": 79670,
+      "path": "tools/build_gc_microstructure_features_step4a.py",
+      "sha256": "c5589914a1acae6a3a1e9079c302821477866bba3741317392c567bb590c2369"
+    }
+  },
+  "source_allocation": {
+    "MBO_role": "Event-flow measurements only; no MBO-to-MBP row alignment.",
+    "MBP10_role": "Authoritative top-ten book state and quote-OFI measurements.",
+    "allocation_identity": "Every selected source row is assigned to exactly one non-overlapping session window; anchors are marked ANCHOR_ONLY and never counted as a window update.",
+    "duplicates": "Preserve every provider emission in original order; never deduplicate.",
+    "filter_repair_relabel_substitute": false,
+    "normalized_payloads_only": true,
+    "outside_window_rows": "Classify as OUTSIDE_FEATURE_WINDOWS using sealed Parquet row counts; do not open their market fields.",
+    "request_pairs": 40,
+    "selected_row_rule": "Read only rows with ts_recv in a frozen 900-second decision window, plus exactly one value-blindly located prior MBP-10 row per available window as the state/OFI anchor.",
+    "source_order": [
+      "ts_recv",
+      "source_row_ordinal"
+    ],
+    "source_requests": 80
+  },
+  "status": "FROZEN_BEFORE_RESEARCH_MARKET_VALUE_ACCESS",
+  "status_precedence": [
+    "FAIL_PREDECESSOR_OR_SOURCE",
+    "FAIL_CONTEXT_PROJECTION",
+    "FAIL_FEATURE_INTEGRITY",
+    "FAIL_REPRODUCTION",
+    "PASS_STEP_5C_FEATURE_MATERIALIZATION"
+  ],
+  "temporal_contract": {
+    "W60": "Last 60 complete one-second buckets of the feature window.",
+    "W900": "All 900 complete one-second buckets of the feature window.",
+    "availability_timestamp": "ts_recv",
+    "bucket_interval": "[bucket_start_ns,bucket_end_ns)",
+    "bucket_width_ns": 1000000000,
+    "date_boundary": "Clear book, quote-OFI, event, and anchor state at every UTC calendar-date boundary.",
+    "dst_source": "IANA Europe/London, America/New_York, and America/Chicago rules encoded in the frozen row registry and recomputed independently.",
+    "feature_window": "[decision_cutoff-900 seconds,decision_cutoff)",
+    "post_cutoff_rows_permitted": false,
+    "segment_boundary": "Clear book and quote-OFI baselines at every CME market-segment boundary.",
+    "target_state": "Every available target window must be CONTINUOUS_MATCHING under the DST-aware CME schedule.",
+    "terminal_bucket": "[decision_cutoff-1 second,decision_cutoff)"
+  },
+  "version": "GC_MICROSTRUCTURE_STEP_5C_PROTOCOL_V0_1"
+}

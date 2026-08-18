@@ -1,0 +1,21 @@
+{
+  "version": "EXTERNAL_EVIDENCE_EDGE_REPLICATION_V1_PROTOCOL_1_0",
+  "status": "FROZEN_PRE_OUTCOME",
+  "contract": "EXTERNAL_EVIDENCE_EDGE_REPLICATION_AND_TRANSFER_CONTRACT_V1.md",
+  "development_window": {"start_inclusive": "2021-08-01T00:00:00Z", "end_exclusive": "2025-01-01T00:00:00Z", "economic_gate_start": "2022-01-01", "economic_gate_end": "2024-12-31", "partial_2021": "descriptive_only"},
+  "candidates": [
+    {"id": "EER_C01_EQUITY_MIM_R1", "family": "EER_F01", "symbols": ["US500", "USTEC"], "signal": "sign(p1/p0-1)", "entry": "p12_at_15_30_America_New_York", "exit": "p13_at_16_00_America_New_York"},
+    {"id": "EER_C02_EQUITY_MIM_R1_R12", "family": "EER_F01", "symbols": ["US500", "USTEC"], "signal": "long_if_r1_gt_0_and_r12_gt_0;short_if_r1_lte_0_and_r12_lte_0;otherwise_no_trade", "entry": "p12_at_15_30_America_New_York", "exit": "p13_at_16_00_America_New_York"},
+    {"id": "EER_C03_WTI_MIM_R1", "family": "EER_F02", "symbols": ["XTIUSD"], "signal": "sign(p1/p0-1)", "entry": "p12_at_15_30_America_New_York", "exit": "p13_at_16_00_America_New_York"}
+  ],
+  "bar_mapping": {"p0": "close_of_15_59_bar_on_previous_observed_ET_session", "p1": "close_of_09_59_bar", "p11": "close_of_14_59_bar", "p12": "close_of_15_29_bar", "p13": "close_of_15_59_bar", "timestamp_semantics": "MT5_open_time; completed_bar_close_is_one_minute_later", "timezone": "America/New_York"},
+  "risk_and_costs": {"account_usd": 10000, "one_r_usd": 100, "max_concurrent_cluster_risk_r": 1, "clusters": {"US_EQUITY_INDICES": ["US500", "USTEC"], "ENERGY": ["XTIUSD"]}, "exante_risk": "std_of_preceding_60_eligible_last_half_hour_returns_minimum_20", "volume": "round_down_to_broker_step", "notional_cap_usd_per_cluster": 50000, "hard_stop": null, "target": null, "observed_spread": "long_entry_or_short_exit_bid_chart_spread", "additional_latency_slippage_r": 0.03, "minimum_round_trip_cost_r": 0.05, "cost_multipliers": [1.0, 1.5, 2.0]},
+  "folds": ["2022_H1", "2022_H2", "2023_H1", "2023_H2", "2024_H1", "2024_H2"],
+  "support": {"candidate_dates_gte": 300, "each_year_dates_gte": 80, "each_fold_dates_gte": 40},
+  "statistics": {"unit": "trading_date_after_same_cluster_aggregation", "bootstrap_draws": 5000, "bootstrap_seed": 20260813, "sign_randomization_draws": 20000, "sign_randomization_seed": 20260814, "multiplicity": "Holm_in_order_C01_C02_C03"},
+  "pass_gates": ["support", "net_expectancy_gt_zero", "profit_factor_gte_1p10", "cluster_ci95_low_gt_zero", "holm_p_lte_0p05", "stress_1p5_expectancy_gt_zero", "positive_folds_gte_4", "positive_years_gte_2", "maximum_drawdown_lte_15r", "year_concentration_lte_0p70", "equity_instrument_concentration_lte_0p70"],
+  "portfolio_priority": ["EER_C01_EQUITY_MIM_R1", "EER_C02_EQUITY_MIM_R1_R12", "EER_C03_WTI_MIM_R1"],
+  "forward_policy": "Open_2025_and_2026_only_if_at_least_one_candidate_passes;otherwise_leave_locked",
+  "optimization_permitted": false,
+  "paid_data_permitted": false
+}

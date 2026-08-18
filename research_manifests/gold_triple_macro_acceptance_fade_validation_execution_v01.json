@@ -1,0 +1,52 @@
+{
+  "version": "GOLD_TRIPLE_MACRO_ACCEPTANCE_FADE_VALIDATION_EXECUTION_FREEZE_V0_1",
+  "status": "FROZEN_AFTER_SYNTHETIC_PROOF_BEFORE_OUTCOME_OPEN",
+  "frozen_at_utc": "2026-08-07T00:00:00Z",
+  "candidate": "TRIPLE_MACRO_ACCEPTANCE_FADE_V0_1",
+  "runner": {
+    "path": "tools/run_gold_triple_macro_acceptance_fade_validation_v1.py",
+    "sha256": "98f6c9582e5a0747f7b9cbd68905458b1780c48fc26fdd378d3e3251fc97b8bf"
+  },
+  "synthetic_proof": {
+    "status": "PASS_SYNTHETIC_SERIALIZER_JOIN_AND_BOUNDARY_PROOF",
+    "primary_reference_exact": true,
+    "future_bar_used_at_decision": false,
+    "expected_primary_displacement": 10.0
+  },
+  "endpoint_semantics": {
+    "reference": "close of bar opened at release minus one minute and available at release",
+    "five_minutes": "close of bar opened at release plus four minutes and available at release plus five minutes",
+    "fifteen_minutes": "close of bar opened at release plus fourteen minutes and available at release plus fifteen minutes",
+    "sixty_minutes": "close of bar opened at release plus fifty-nine minutes and available at release plus sixty minutes"
+  },
+  "fundamental_identity": "one point-in-time standardized gold-direction value per unique release component and source value ID; duplicated algorithm-version calculations are not separate economic components",
+  "market_vote": "sign of the sum of nonzero five-minute ZT, ZN and EURUSD close changes; all three required; any ZT or ZN instrument-ID change makes the vote unknown",
+  "eligibility": "F equals M equals G, with exact endpoints and a nonflat primary outcome",
+  "prediction": "negative M",
+  "statistics": {
+    "primary": "signed XAUUSD close displacement from release plus five minutes to release plus fifteen minutes",
+    "consistency": "signed XAUUSD close displacement from release plus five minutes to release plus sixty minutes",
+    "direction_balanced_hit_rate": "mean of bullish-prediction and bearish-prediction hit rates",
+    "bootstrap": "calendar-month block resampling with replacement; 20000 samples; linear 5th and 95th percentiles",
+    "permutation": "shuffle primary outcome signs against fixed predictions within each separately reported calendar segment; one-sided; 50000 permutations",
+    "seed": 20260807
+  },
+  "segments": [
+    {
+      "code": "EXPOSED_2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z",
+      "independent_validation_credit": false
+    },
+    {
+      "code": "INDEPENDENT_2026_YTD",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-07-30T00:00:00Z",
+      "independent_validation_credit": true
+    }
+  ],
+  "outcome_source_opening_count": 0,
+  "relationships_calculated": false,
+  "execution_optimized": false,
+  "pnl_calculated": false
+}

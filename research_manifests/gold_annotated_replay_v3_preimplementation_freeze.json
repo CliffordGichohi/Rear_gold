@@ -1,0 +1,56 @@
+{
+  "acquisition_performed": false,
+  "calendar_2025": "LOCKED",
+  "calendar_2026": "LOCKED",
+  "charge_usd": 0.0,
+  "human_practice_events": 0,
+  "practice_population_sha256": "8d6a1bbc4e9fe0cd51d7ffbe73d40914c8f79e3f23ff0044f309137658ddf07f",
+  "predecessor": {
+    "bytes": 1030,
+    "path": "research_manifests/gold_blind_synchronized_setup_replay_v2_regression_correction_amendment_e_seal.json",
+    "sha256": "6e4ead10a17434b978c4078296ad723e087b4c071d43ad690fc59d4d6b970cf8"
+  },
+  "primary_collection_state": "CLOSED_NOT_MATERIALIZED",
+  "primary_collection_year": "2022",
+  "sealed_at": "2026-08-14T13:51:48.074883+00:00",
+  "sealed_outputs": [
+    {
+      "bytes": 14782,
+      "path": "GOLD_ANNOTATED_TRADINGVIEW_STYLE_REPLAY_AND_HUMAN_EDGE_AUDIT_CONTRACT_V3.md",
+      "sha256": "4f3f67d3e280bdac0e1b5514a6c93f6d462803c53e4299c5862244ff402560f8"
+    },
+    {
+      "bytes": 4533,
+      "path": "research_artifacts/gold_annotated_replay_v3/metadata_coverage_audit.json",
+      "sha256": "075861ae333ade8a1383387427e4e11edd6dd1c16c53168c3db7eb5c65588e2a"
+    },
+    {
+      "bytes": 10178,
+      "path": "research_artifacts/gold_annotated_replay_v3/practice_registry.private.json",
+      "sha256": "e37ee8008a9c8c7ee7da24791a5a573035ab6973c5eeeaae9ac4bdcf48ca9998"
+    },
+    {
+      "bytes": 3452,
+      "path": "research_artifacts/gold_annotated_replay_v3/practice_registry.public.json",
+      "sha256": "28a859bc199f508deb71eea02792239258b7612380f02f9b023da62b8ae93e97"
+    },
+    {
+      "bytes": 1393,
+      "path": "research_artifacts/gold_annotated_replay_v3/execution_policy.json",
+      "sha256": "02f79fca12b325277b311104e82d6881c4fd1411846b02806f229d0f3e590414"
+    },
+    {
+      "bytes": 1246,
+      "path": "research_artifacts/gold_annotated_replay_v3/ledger_policy.json",
+      "sha256": "bfb276bd81c95092a3a728c6a4febe6ea1ef374269f496db301de978aa6eea6f"
+    },
+    {
+      "bytes": 17143,
+      "path": "tools/prepare_gold_annotated_replay_v3.py",
+      "sha256": "6007699bee6595e92ef329b6c9c26989fd996f33716f3f9ab61204424604a116"
+    }
+  ],
+  "status": "SEALED_PRACTICE_ONLY_BEFORE_VALUE_MATERIALIZATION",
+  "verdict": "PASS_V3_CONTRACT_COVERAGE_AND_POLICY_FREEZE",
+  "version": "GOLD_ANNOTATED_REPLAY_V3_PREIMPLEMENTATION_FREEZE_1_0"
+}

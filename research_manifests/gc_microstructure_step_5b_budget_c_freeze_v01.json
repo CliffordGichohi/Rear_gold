@@ -1,0 +1,82 @@
+{
+  "amendment_hash": "63ea7fb3bb4496a041c9edb09826250c38d4d59159bb7d9dbe392bc8a100e10b",
+  "available_credits_usd": 108.78,
+  "batch_jobs_submitted": 0,
+  "card_charge_permitted": false,
+  "classification": "PAID_ACQUISITION_CONTROL_FREEZE_NO_CARD_CHARGE",
+  "data_acquired": false,
+  "freeze_hash": "88cb9d781e14789c520b15807662238c0ae904ebe0364e7fe8266b17bfc58cf6",
+  "frozen_at_utc": "2026-08-03T14:09:15.905529Z",
+  "market_values_or_outcomes_accessed": false,
+  "maximum_combined_estimate_usd": 108.78,
+  "minimum_destination_free_bytes": 375809638400,
+  "provider_metadata_called_after_amendment": false,
+  "provider_requests": 80,
+  "records": {
+    "acquisition_tool": {
+      "bytes": 89679,
+      "path": "tools/acquire_gc_microstructure_step5b_budget_c.py",
+      "sha256": "a8f197e5fe5d4e65369c02a9131bccb80bb0a3e8811a01a4fbbba39f8a459177"
+    },
+    "amended_request_registry": {
+      "bytes": 234004,
+      "path": "research_manifests/gc_microstructure_step_5b_budget_c_request_registry_v01.json",
+      "sha256": "d8dfe8a04e0f824c98ec4e88b6c75b7e56214616e56124b76bdbfe0b20b0dd99"
+    },
+    "amendment_c": {
+      "bytes": 2486,
+      "path": "research_manifests/gc_microstructure_step_5b_budget_amendment_c_v01.json",
+      "sha256": "60ae7fa1bdca50461ab2f1089040996f8f99ad6e7def1dbb9dc7ab181c30f246"
+    },
+    "attempt1_manifest": {
+      "bytes": 2395,
+      "path": "research_artifacts/gc_microstructure_step_5b_v01/manifest.json",
+      "sha256": "ac1418b0e8b5db020fa3c20319c6eec597dfa4898cffb51f6b6b0397520fddec"
+    },
+    "attempt2_manifest": {
+      "bytes": 2738,
+      "path": "research_artifacts/gc_microstructure_step_5b_resume_v01/manifest.json",
+      "sha256": "b635c6cd0d195e1bd21c50417bcd1396c7c2f0f4993c40ae0f20d91fbd8bd711"
+    },
+    "attempt2_preflight": {
+      "bytes": 79835,
+      "path": "research_artifacts/gc_microstructure_step_5b_resume_v01/pre_submission_quote.json",
+      "sha256": "9c4a83c9502d8915a12a526fcaa3784ad348af98eaa42700b1283560fb77a701"
+    },
+    "mbo_normalizer": {
+      "bytes": 44144,
+      "path": "tools/databento_gc_mbo_engineering_pilot.py",
+      "sha256": "ddb4225576c2b37370712cf7b1d20707f1aa0b91bcdbb4acf6a369bd51bc590c"
+    },
+    "mbp10_normalizer": {
+      "bytes": 41760,
+      "path": "tools/databento_gc_mbp10_step3b2.py",
+      "sha256": "551fc9a76036739f3dc24adbe8b754e63971953614279de93bd162590e3486c5"
+    },
+    "original_authorization": {
+      "bytes": 2123,
+      "path": "research_manifests/gc_microstructure_step_5b_authorization_v01.json",
+      "sha256": "653c37f265ab055ff42928d1fb60853593a8556e0d744d6b671630a5e933e76a"
+    },
+    "prepare_tool": {
+      "bytes": 18845,
+      "path": "tools/prepare_gc_microstructure_step5b_budget_c.py",
+      "sha256": "d5edf7b7a1c1171905b81a0627aad2016342223390111e4d269cc62615c2c4bb"
+    },
+    "quote_tool": {
+      "bytes": 46280,
+      "path": "tools/quote_gc_microstructure_step5a.py",
+      "sha256": "1d84e69e44ded71e11dfc4648b93c39b86984bab20f4dac7aaef50beca851dbf"
+    },
+    "step5a_manifest": {
+      "bytes": 3421,
+      "path": "research_artifacts/gc_microstructure_step_5a_v01/manifest.json",
+      "sha256": "4fbc2b8365badb5c44f35201524629782873b43eb3b06861e4d289f8449b51c9"
+    }
+  },
+  "registry_hash": "cb2da256981b7b99286eb8e7e58d04e68a357bd89f85f358c135299fcda13045",
+  "request_intervals": 40,
+  "selected_dates": 188,
+  "status": "FROZEN_BEFORE_FRESH_AMENDED_PROVIDER_QUOTE_OR_BATCH_SUBMISSION",
+  "version": "GC_MICROSTRUCTURE_STEP_5B_BUDGET_C_FREEZE_V0_1"
+}

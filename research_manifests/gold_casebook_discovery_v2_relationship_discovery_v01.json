@@ -1,0 +1,164 @@
+{
+  "authorization": {
+    "authorized_on": "2026-07-29",
+    "scope": "Complete only V2 Milestone 3 under the existing contract.",
+    "verbatim": "If everything looks great, lets move to milestone 3, or there is contract renegotiation you need?"
+  },
+  "contract": {
+    "governing_document": "GOLD_CASEBOOK_DISCOVERY_CONTRACT_V2.md",
+    "manifest_hash": "81e39b469111bb92a46c0d2c70f863cba438b647345104d4b8e8bc1a9e4d8188",
+    "manifest_path": "research_manifests/gold_casebook_discovery_contract_v02.json"
+  },
+  "development_interval": {
+    "end_exclusive": "2025-01-01T00:00:00+00:00",
+    "independent_validation_credit": false,
+    "start_inclusive": "2021-08-01T00:00:00+00:00"
+  },
+  "evaluation": {
+    "candidate_definition": "For each non-UNKNOWN state, select LONG or SHORT by the higher mean net return after frozen costs. All other states map to NO_BIAS.",
+    "maximum_conditions_per_candidate": 2,
+    "sequence": [
+      "Evaluate all declared individual-variable states within each session.",
+      "Evaluate only the 17 declared two-condition interaction states within each session.",
+      "Apply support gates.",
+      "Apply one Benjamini-Hochberg correction family to all support-eligible individual and interaction states within that session.",
+      "Apply the frozen lead gates and known-hypothesis exclusions.",
+      "Rank with the frozen deterministic order."
+    ],
+    "session_pairing_permitted": false,
+    "sessions": [
+      "LONDON",
+      "NEW_YORK"
+    ]
+  },
+  "feature_design": {
+    "declared_feature_count": 88,
+    "declared_interaction_count": 17,
+    "design_fingerprint": "bee30eaf3e27cb0b03ac8d1be938ca8b63a443a93953b48b66b0d6aeac3fe695",
+    "reuse_policy": "Reuse transforms, feature_universe, and interactions byte-for-byte by semantic value. No field, state, threshold, or interaction may be added after this manifest is frozen.",
+    "source_manifest_hash": "044b0d1ca776a052b17e18068363f72d5a0edd61408bb94080a413219180b426",
+    "source_manifest_path": "research_manifests/gold_casebook_relationship_discovery_v01.json",
+    "tertile_fit": "Fit TYPE-7 33.333333% and 66.666667% thresholds separately by session on all 2021-2024 development cases for Milestone 3 only. Milestone 4 must refit thresholds within each expanding training fold.",
+    "unknown_policy": "Missing, stale, unavailable, or roll-crossing values remain UNKNOWN and are excluded from the affected state; they are never confirmation."
+  },
+  "known_hypotheses": {
+    "declared_interactions_involving_zn": "Eligible as materially distinct frozen two-condition development hypotheses, but receive no independent-validation credit.",
+    "london_single_zn_4h": {
+      "classification": "KNOWN_POSTHOC",
+      "feature_id": "cross_zn_v_0_4_hours",
+      "lead_eligible": false,
+      "reason": "The London-only ZN rule was selected after its 2024 London result was known and is governed separately as LONDON_ZN_4H_POSTHOC_V0_1."
+    },
+    "new_york_single_zn_4h": {
+      "classification": "PRIOR_REJECTED_RULE_COMPONENT",
+      "feature_id": "cross_zn_v_0_4_hours",
+      "lead_eligible": false,
+      "reason": "The unchanged New York component belonged to the rejected universal ZN rule and cannot be renamed as a fresh discovery."
+    },
+    "other_states": {
+      "classification": "INHERITED_PREDECLARED_DEVELOPMENT_SCREEN",
+      "independent_validation_credit": false
+    }
+  },
+  "lead_gate": {
+    "meaning": "A Milestone 3 lead is only eligible for expanding walk-forward stability in Milestone 4. It is not a validated edge and is not yet a frozen candidate.",
+    "requirements": [
+      "support eligible",
+      "not excluded by the known-hypothesis policy",
+      "mean net return after frozen costs above zero",
+      "profit factor above one",
+      "mean net return beats the same-session same-direction unconditional development control",
+      "positive selected-direction mean in both chronological halves",
+      "positive selected-direction mean in at least three adequately supported calendar years",
+      "lower bound of the ISO-week cluster-bootstrap 95% interval above zero",
+      "Benjamini-Hochberg q-value at or below 0.10"
+    ]
+  },
+  "manifest_hash": "9e86a05f32c7f5c52b8e3c57b704531fa34a75586b3af3807e5b68ab119718ab",
+  "manifest_version": "GOLD_CASEBOOK_DISCOVERY_V2_RELATIONSHIP_MANIFEST_V0_1",
+  "milestone": "V2_M3_BOUNDED_RELATIONSHIP_DISCOVERY",
+  "outcome": {
+    "account_equity_or_leverage_assumption": null,
+    "fixed_execution_unchanged": true,
+    "primary_measure": "mean net return basis points after observed spread, frozen slippage, and frozen commission",
+    "source_bundle_hash": "e1493d2734109a07b83da1f60768def696201c9a67df1cd75e3d11bec5a484fc",
+    "source_bundle_path": "research_artifacts/gold_casebook_discovery_v2_outcome_atlas_v01",
+    "source_ledger_path": "outcomes.jsonl.gz",
+    "source_ledger_sha256": "ed2d4c85de8bdebe6d3c020710a5af8607034c8d6790202c4606fc3e76fc01f8"
+  },
+  "output": {
+    "bundle_path": "research_artifacts/gold_casebook_discovery_v2_relationships_v01",
+    "required_artifacts": [
+      "development_features.jsonl.gz",
+      "relationships.jsonl.gz",
+      "rankings.json",
+      "manifest.json",
+      "semantic_validation.json"
+    ]
+  },
+  "prohibited": {
+    "account_scaling_or_return_target_ranking": true,
+    "calendar_2025_access": true,
+    "calendar_2026_access": true,
+    "execution_optimization": true,
+    "feature_or_interaction_addition_after_result": true,
+    "mae_mfe_or_intraperiod_path_access": true,
+    "machine_learning_selector": true,
+    "session_pairing": true,
+    "threshold_search_beyond_declared_transforms": true
+  },
+  "ranking": {
+    "order": [
+      "discovery_lead descending",
+      "support_eligible descending",
+      "Benjamini-Hochberg q-value ascending with null last",
+      "cluster-bootstrap lower 95% mean net return descending",
+      "excess mean net return versus same-direction control descending",
+      "mean net return descending",
+      "case count descending",
+      "relationship_id ascending",
+      "state ascending"
+    ],
+    "return_target_used": false
+  },
+  "source": {
+    "casebook_manifest_hash": "d1241633b073cd7307f1da00a13a2d76c132f3dccefc52a076be2c641f06b85f",
+    "casebook_manifest_path": "research_artifacts/gold_casebook_v01/manifest.json",
+    "execution_manifest_hash": "724a4fef0fa4b526b4d30b9743c2dfa013c53f87b19262a36b05f3fd07c87d76",
+    "execution_manifest_path": "research_manifests/gold_casebook_constant_execution_v01.json"
+  },
+  "status": "FROZEN_BEFORE_FIRST_CONDITIONAL_RESULT",
+  "support_and_stability": {
+    "chronological_halves": "Within each session, sort all 2021-2024 development cases by decision time and split at the median case count.",
+    "cot_feature_or_interaction_min_distinct_reports": 18,
+    "development_year_buckets": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "interaction_state_min_cases": 60,
+    "maximum_state_prevalence_pct": 80.0,
+    "minimum_development_years_with_10_cases": 3,
+    "minimum_iso_week_clusters": 30,
+    "single_state_min_cases": 80,
+    "stability_flag": "positive selected-direction mean in both chronological halves and at least three calendar-year buckets with at least ten cases"
+  },
+  "uncertainty_and_multiplicity": {
+    "confidence_interval": {
+      "method": "ISO_WEEK_CLUSTER_BOOTSTRAP_PERCENTILE",
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "replications": 2000,
+      "seed": "SHA-256 of this manifest hash, session, relationship_id, and state"
+    },
+    "multiple_testing": {
+      "family": "all support-eligible individual and declared interaction states within each session",
+      "method": "BENJAMINI_HOCHBERG",
+      "reported_q_threshold": 0.1
+    },
+    "selection_adjustment": "Double the one-sided normal-approximation p-value because LONG versus SHORT is selected on development data."
+  }
+}

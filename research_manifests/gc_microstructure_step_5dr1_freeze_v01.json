@@ -1,0 +1,31 @@
+{
+  "authorized_key_count": 16,
+  "authorized_key_hash": "57aae70f54e808326ce8b7a1923ece9e5483bbd96b87b4c2f1dcc1840699e281",
+  "bound_predecessors": {
+    "casebook_builder_rules": "fa4370052d4ffdc9ec144009373d427c13477a4b4bbfc31bf72eaeb737f381e3",
+    "casebook_manifest": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6",
+    "price_bar_source": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+    "session_source": "2695a2c0b9e8f41fcbf64c9f388e8883ebf7e1f0b3b09b90fb3a60ba7e64966a",
+    "step5d_failure": "44f32d8da4e58d19f1f4e2d2a9fccace63457f75fa58370e119d0b5273090805",
+    "step5d_final_seal": "17f2a97487c72cf447eed34b6dabda558af7f88671fc845316139c2a1c71c2db",
+    "step5d_manifest": "3bf05208cd89dc7ec8743d8daaa40799134521faac2ea5cc620a719ba50a8eda",
+    "step5d_protocol": "835361070b3955912938b5519ec0b7b32542d6774c895f43bde11a93fb268b64",
+    "step5d_test_registry": "e3b7a132f03cebaff4c05cc646e00f0b1867881d0109c65b71f1076e74ab2d4a",
+    "step5d_verdict": "3ec082a95bd48cb412b9771eaae8cffd1641593c7ad60b033da3c9a95a6994ef",
+    "v3_case_builder": "1e24762f388e4e8cf5a20c64544995079a831f0d4d7d4b5ca01c6aa0641ada68",
+    "v3_outcome_rules": "33d53780a2db17f5cb8940bf3251797ddf273531f8b64ed330b7cb892c5115be"
+  },
+  "freeze_receipt": "5390d6267f28254b0d8a0277f98b64318100c0aaa9c0de08e9be4d2c72cd71f1",
+  "frozen_at_utc": "2026-08-04T11:11:56.995610Z",
+  "market_or_outcome_values_accessed_before_freeze": false,
+  "next_action": "Run only the two frozen metadata projections, compare, classify, recommend at most one recovery path, seal, and stop.",
+  "protocol": {
+    "path": "research_manifests/gc_microstructure_step_5dr1_protocol_v01.json",
+    "protocol_hash": "331d5ba46d90ce8e903ac7d141b487073f11dd09e3cba9611018cc5b475fff7e",
+    "sha256": "18c4637970505d6b2f58e74e7cc4f8bb862bf50e1336aa6fd62057eaac3536ac"
+  },
+  "row_level_metadata_accessed_before_freeze": false,
+  "status": "SEALED_BEFORE_ROW_LEVEL_SOURCE_METADATA_ACCESS",
+  "version": "GC_MICROSTRUCTURE_STEP_5D_R1_FREEZE_V0_1",
+  "year_2025_or_2026_values_accessed": false
+}

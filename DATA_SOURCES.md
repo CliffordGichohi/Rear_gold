@@ -1,6 +1,6 @@
 # Data-Source Plan
 
-Verified against official source documentation on 23 July 2026. Provider terms,
+Verified against official source documentation on 27 July 2026. Provider terms,
 interfaces, and release schedules can change, so every adapter exposes a health and
 metadata check rather than assuming permanent availability.
 
@@ -23,7 +23,7 @@ metadata check rather than assuming permanent availability.
 | XAUUSD OHLCV | User/demo CSV | Required adapter | Explicit bar open/close and provider availability | Licensed spot or broker feed |
 | COMEX contract OHLCV/OI/volume | CSV interface only | Optional | Contract identity and publication/fill latency required | Licensed CME feed/DataMine |
 | 2Y/10Y nominal, 10Y real, breakeven | FRED/ALFRED; optional Treasury verification | Public API | Preserve vintages and actual source availability; daily data is not intraday confirmation | Licensed intraday Treasury feed |
-| Dollar | Fed nominal broad dollar index `DTWEXBGS` | Public FRED/H.10 | Weekly release timing makes it stale for intraday event confirmation | Licensed DXY or real-time USD proxy |
+| Dollar | Fed nominal broad dollar index `DTWEXBGS`; IC Markets EURUSD bars | Public FRED/H.10 plus observed broker feed | Weekly broad index is daily context only; completed EURUSD bars are an `INFERRED` inverse intraday-USD proxy and are never relabelled DXY | Licensed DXY and broader real-time FX basket |
 | CPI/core CPI/NFP/unemployment | BLS plus ALFRED vintages | Public API | Exact scheduled/release time plus initial/revised values | Licensed normalized macro feed |
 | PCE/core PCE | BEA plus ALFRED vintages | Public API | Exact release and vintage identity | Licensed normalized macro feed |
 | Fed policy rate | Federal Reserve/FRED | Public API | Target range/effective rate series with release availability | Direct licensed policy feed unnecessary |
@@ -35,7 +35,7 @@ metadata check rather than assuming permanent availability.
 | Options/strikes/IV/gamma | Mock/provider interface | Out of scored Phase 1 when absent | Dealer gamma always `INFERRED`; quality requires coverage | Licensed CME/options vendor |
 | Equity/VIX | FRED public market series | Public API | Conservative next-day availability; daily confirmation only | Licensed intraday market-data feed |
 | Silver | Generic timestamped CSV | Optional | Provider and exact availability required | Licensed market-data feed |
-| Event metadata | Official BLS/BEA/Fed calendars plus manual JSON | Public/manual | Scheduled time can change; versions retained | Licensed economic calendar |
+| Event metadata | MT5 calendar, U.S. Treasury Fiscal Data auctions, Federal Reserve RSS, plus manual JSON | Public/broker/manual | Scheduled time can change; versions retained; released RSS items are not a forward calendar | Licensed economic calendar |
 | News/geopolitical events | Manual event metadata | Optional | Source and first-known timestamp required | Licensed news/event feed |
 
 ## 3. Official public adapters
@@ -73,6 +73,9 @@ Initial canonical series:
 
 The source catalog verifies title, unit, frequency, seasonal adjustment, and current
 source metadata before activating a series. A series-ID match alone is insufficient.
+The public graph adapter also enforces the requested start/end dates after parsing:
+FRED can return a discontinued series' full archive even when query dates were
+supplied. Genuine out-of-range rows are not admitted to a newly declared batch.
 
 Daily FRED values do not become intraday observations merely because the API returns
 them. For example, the [Federal Reserve H.10 release](https://www.federalreserve.gov/Releases/H10/)
@@ -106,6 +109,23 @@ their surprises.
 Federal Reserve calendars, statements, target-range changes, projections, and
 speeches are official event metadata. Phase 1 scores structured policy-rate/path
 facts only; it does not apply unconstrained sentiment analysis to speeches.
+
+The implemented RSS adapter consumes the Federal Reserve's official speech and
+monetary-policy feeds. It preserves the feed publication timestamp and classifies
+released statements, projections, minutes, press conferences, and speeches as
+event metadata. Every RSS item is `RELEASED`, has
+`forward_calendar_eligible=false`, and carries no hawkish/dovish direction unless a
+separate, versioned text model is later implemented and validated.
+
+### U.S. Treasury auctions
+
+The implemented adapter uses the official Treasury Securities Auctions Data API.
+It stores the announcement date, auction date, security term/type, CUSIP, offering
+amount, and the competitive bid close. The source's Eastern-time close is converted
+with `America/New_York`, so daylight-saving changes are deterministic. Where the
+source supplies only an announcement date, availability is conservatively the end
+of that New York date. The auction is a scheduled catalyst, not a directional
+signal before its result is known.
 
 ### CFTC COT
 
@@ -153,6 +173,115 @@ two decimals with `SYMBOL_POINT=0.01`, so the normalized adapter can derive
 friction and abnormal-liquidity warnings, but it is neither COMEX depth nor
 centralized gold volume. A future exchange adapter must use `volume_type=EXCHANGE`
 and retain its own venue and license metadata.
+
+The same provider-independent price contract now accepts `EURUSD_1M` with
+`SYMBOL_POINT=0.00001`. The observed store contains 1,283,406 completed IC Markets
+EURUSD one-minute bars from 23 July 2021 through 31 December 2024. Research uses
+only completed EURUSD bars as an inverse intraday-USD proxy: rising EURUSD can
+confirm weak-dollar support for long gold and falling EURUSD can confirm
+strong-dollar pressure for short gold. That relationship is `INFERRED`, not an
+observed DXY fact. It supplies no intraday Treasury-yield or Fed-path evidence.
+
+The normalized store also contains 1,221,634 completed IC Markets XAGUSD
+one-minute bars from 21 July 2021 through 31 December 2024. XAGUSD is an
+`OBSERVED` broker silver quote and its relationship to gold is a calculated or
+inferred confirmation, not proof of institutional activity.
+
+The immutable local research archive contains 1,212,998 completed IC Markets
+US500 minutes over the same pre-2025 boundary and 328,177 TLT.NAS minutes from
+21 July 2021 through 31 December 2024. The first 173,860 US500 bars, through
+15 January 2022 00:00 UTC, are normalized in PostgreSQL; the frozen
+cross-market study streamed the full monotonic CSV archive directly and
+required complete five-minute buckets. TLT.NAS is an `OBSERVED` ETF price but
+only an `INFERRED` inverse nominal-yield proxy. It is never presented as an
+observed Treasury yield, and its exchange hours leave London-session rate
+confirmation unavailable.
+
+The frozen cross-instrument transfer archive adds six previously untested
+IC Markets instruments. It was exported read-only from the connected
+`ICMarketsKE-Demo` terminal, ends at the exclusive `2025-01-01` boundary, and
+contains 7,595,984 observed one-minute broker bars in 132 immutable CSV chunks:
+
+| Instrument | One-minute bars | First broker bar | Final pre-2025 broker bar |
+|---|---:|---|---|
+| AUDUSD | 1,302,348 | 2021-07-01 00:00 UTC | 2024-12-31 23:58 UTC |
+| GBPUSD | 1,305,872 | 2021-07-01 00:00 UTC | 2024-12-31 23:58 UTC |
+| USDJPY | 1,305,828 | 2021-07-01 00:00 UTC | 2024-12-31 23:58 UTC |
+| USTEC | 1,240,097 | 2021-07-01 01:00 UTC | 2024-12-31 23:59 UTC |
+| DE40 | 1,205,174 | 2021-07-01 01:02 UTC | 2024-12-30 23:58 UTC |
+| XTIUSD | 1,236,665 | 2021-07-01 01:00 UTC | 2024-12-31 23:58 UTC |
+
+The short initial index/energy gaps occur before the August research start and
+reflect the first broker trading session, not imputed prices. The research
+loader rejects duplicate or out-of-order minutes, requires five consecutive
+observed minutes for every five-minute bucket, and never fills a market closure.
+These rows are broker CFD/FX observations and tick activity, not exchange
+consolidated volume.
+
+Every transfer backtest uses the historical per-minute broker spread. The Raw
+Spread FX planning model also charges 3.50 USD per standard lot per side, as
+described by IC's
+[Raw Spread account page](https://www.icmarkets.com/global/en/trading-accounts/raw-spread-account).
+USDJPY uses a deliberately conservative fixed price equivalent for that USD
+commission. IC's published
+[index specification](https://www.icmarkets.com/global/en/trading-markets/indices)
+states no index commission, and its
+[commodity specification](https://cdn.icmarkets.com/uploads/FSA/Commodity-Specification-Sheet.pdf)
+lists zero Raw Spread commission for commodities. Additional adverse slippage
+is still charged per side and every result is repeated at 1.50 times total
+friction. These public specifications are research assumptions, not a substitute
+for reconciling the user's exact IC Markets KE account statement before paper or
+live deployment.
+
+At the 27 July 2026 provider audit, the same terminal catalog exposed
+`DXY_U6` (US Dollar Index September 2026 CFD) and `UST10Y_U6` (US 10-year
+Treasury-note September 2026 CFD). It exposed no 2-year Treasury contract. Direct
+read-only history requests returned recent bars for `DXY_U6` but no bars for the
+January 2024 research probe; `UST10Y_U6` likewise returned no January 2024 bars.
+These current-contract symbols can support prospective cross-market observation
+after contract-identity/roll handling is implemented. They cannot supply
+historical intraday confirmation for the 2023-2024 discovery ledger, and the
+system must not backfill that gap with current or daily values.
+
+### Acquired historical rates/path dataset
+
+The non-duplicative acquisition was CME exchange history, not another gold
+broker feed. Databento batch job `GLBX-20260728-3SHU3737P8` completed on
+2026-07-28 for `GLBX.MDP3`, `ohlcv-1m`, from 2021-07-01 through the exclusive
+2025-01-01 boundary. The provider billed `11.25590525567532 USD` of historical
+credit and returned `3,083,147` records in four annual DBN files.
+
+The acquired symbols are:
+
+- `ZT.v.0`: volume-led 2-year Treasury-note future;
+- `ZN.v.0`: volume-led 10-year Treasury-note future;
+- `ZQ.v.0`: volume-led 30-day Fed-funds future; and
+- `SR3.v.0`: volume-led three-month SOFR future.
+
+The immutable download, provider manifest, request condition, metadata,
+normalization manifest, and normalized gzip CSVs live under the gitignored
+`data/raw/databento_cme_pre2025/` directory. Every downloaded file passed a
+SHA-256 comparison against both the Databento manifest and the local acquisition
+manifest. Coverage begins at `2021-07-01T00:00:00Z` and the final bar begins at
+`2024-12-31T21:59:00Z`; no 2025 record is present.
+
+Databento's
+[continuous-contract documentation](https://databento.com/docs/standards-and-conventions/symbology)
+states that these map to actual contracts over time and return original,
+unadjusted prices. Normalization therefore retains `instrument_id` on every
+bar. Returns spanning an instrument-ID change are `UNKNOWN`, never interpreted
+as market moves. The point-in-time feature loader makes each minute bar
+available at interval start plus one minute, never fabricates volume, carries
+Treasury prices for at most 10 minutes and policy-futures prices for at most
+60 minutes, and reports older values as `UNKNOWN`.
+
+The resumable acquisition command is `tools/databento_cme_history.py`; its
+request fingerprint prevents a power loss from creating a duplicate batch
+order. The credential remains only in `DATABENTO_API_KEY` in the gitignored
+root `.env`. [Databento historical pricing](https://databento.com/pricing)
+describes the usage-based service. Official
+[CME DataMine](https://www.cmegroup.com/datamine.html) remains the
+direct-exchange fallback.
 
 ### Fed expectations
 
@@ -298,12 +427,22 @@ holiday-shifted Monday releases. Older rows are labelled
 a strict historical decision near a holiday until an exact historical calendar is
 loaded.
 
-The expanded successful sync (2023-01-01 through 2026-07-23) stores 8,510 normalized
-daily/weekly observations and 185 gold COT reports. Both raw datasets are
-content-addressed, append-only, and idempotent. Public endpoints require no
+The current store contains 19,920 normalized FRED public observations, 4,845
+ALFRED vintage observations, and 342 gold COT reports. The 27 July refresh exposed
+an upstream graph-endpoint edge case:
+two discontinued/lagged series returned genuine older history outside the requested
+range. Those immutable real observations were preserved; the adapter now applies a
+tested local date fence so later batches cannot misstate their range. Both raw
+datasets remain content-addressed and append-only. Public endpoints require no
 credential. A free FRED API key is required for the separate official API/ALFRED
 vintage adapter; licensed forecasts, ETF, options, depth, and dealer-gamma data
 remain separate provider contracts.
+
+The credential-free official-catalyst adapter has also stored 248 Treasury auction
+events and 30 released Federal Reserve communications. Treasury events use exact
+competitive bid closes and conservative announcement availability. Federal Reserve
+RSS rows are retrospective released metadata only; they are excluded from the
+forward-calendar and directional-tone contracts.
 
 ## 9. Current event-data boundary
 

@@ -1,0 +1,83 @@
+{
+  "version": "YOUTUBE_JPY_PUBLIC_RULE_TRANSLATION_V1_PROTOCOL_1_0",
+  "status": "FROZEN_PRE_OUTCOME",
+  "frozen_at": "2026-08-13",
+  "contract": "YOUTUBE_JPY_PUBLIC_RULE_TRANSLATION_AND_FALSIFICATION_CONTRACT_V1.md",
+  "instrument": "USDJPY",
+  "period": {
+    "source_start_inclusive": "2021-08-01T00:00:00Z",
+    "source_end_exclusive": "2025-01-01T00:00:00Z",
+    "strict_credit": "2023-01-01/2024-12-31",
+    "calendar_2025": "LOCKED",
+    "calendar_2026": "LOCKED"
+  },
+  "clock": {
+    "timezone": "Africa/Nairobi",
+    "session": "06:00/20:00",
+    "daily": "00:00/24:00",
+    "dst": false,
+    "intervals": "LEFT_CLOSED_RIGHT_OPEN"
+  },
+  "translation": {
+    "trend": "SIGN_OLS_SLOPE_LATEST_252_COMPLETE_EAT_DAILY_CLOSES",
+    "previous_day": "BODY_SIGN_EQUALS_TREND",
+    "daily_pivots": "STRICT_2_LEFT_2_RIGHT_KNOWN_AT_SECOND_RIGHT_CLOSE",
+    "level_lookback_days": 504,
+    "level_cluster_atr": 0.15,
+    "level_touch_separation_days": 5,
+    "level_min_touches": 3,
+    "level_break_close_atr": 0.2,
+    "bounce_distance_atr": 0.2,
+    "m15_pivots": "STRICT_1_LEFT_1_RIGHT_KNOWN_AT_RIGHT_CLOSE",
+    "impulse_min_atr": 0.75,
+    "pullback_ratio_inclusive": [0.382, 1.0],
+    "pattern_leg_min_atr": 0.25,
+    "pattern_max_m15_bars": 16,
+    "confirmation_break_atr": 0.02,
+    "latency_minutes": 1,
+    "order_expiry": "20:00_AFRICA_NAIROBI",
+    "max_holding_hours": 10,
+    "one_fill_per_day": true,
+    "one_open_position": true
+  },
+  "news": {
+    "calendar": "METAQUOTES_MT5_US_EXISTING_SEALED_EXPORT",
+    "full_day_event_ids": ["840030001", "840030002", "840030003", "840030004", "840030005", "840030006", "840030007", "840030008", "840030009", "840030010", "840030033", "840030034", "840030035", "840030036", "840050014"],
+    "full_iso_week_event_ids": ["840030016"],
+    "values_used": false
+  },
+  "economics": {
+    "pip_price": 0.01,
+    "broker_point": 0.001,
+    "stop_pips": 15,
+    "target_pips": 45,
+    "break_even_activation_pips": 20,
+    "account_usd": 10000,
+    "planned_risk_usd": 100,
+    "base_cost_r": "MAX(MAX_ENTRY_EXIT_SPREAD_POINTS_TIMES_0P001_DIVIDED_BY_0P15_PLUS_0P03,0P05)",
+    "cost_stress": [1.0, 1.5, 2.0],
+    "ambiguous_bar": "ACTIVE_STOP_FIRST",
+    "volume_step": 0.01
+  },
+  "statistics": {
+    "cluster": "NAIROBI_ISO_CALENDAR_WEEK",
+    "bootstrap_draws": 5000,
+    "bootstrap_seed": 20260813,
+    "sign_randomization_draws": 20000,
+    "sign_randomization_seed": 20260814,
+    "folds": ["2023_H1", "2023_H2", "2024_H1", "2024_H2"]
+  },
+  "stage_support": {
+    "stage1": {"overall": 150, "per_year": 60, "per_fold": 25},
+    "stage2": {"overall": 50, "per_year": 15, "per_fold": 8},
+    "stage3": {"overall": 30, "per_year": 10, "per_fold": 5}
+  },
+  "controls": {
+    "early_stop_mandatory": true,
+    "outcome_accessed_before_freeze": false,
+    "optimization": false,
+    "paid_data": false,
+    "charge_usd": 0,
+    "forward_open_only_after_stage4_pass": true
+  }
+}

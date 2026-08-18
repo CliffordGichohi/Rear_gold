@@ -1,0 +1,33 @@
+{
+  "version": "GOLD_ANNOTATED_REPLAY_V3_POST_PRACTICE_INTERPRETATION_SEAL_1_0",
+  "sealed_at": "2026-08-17T14:45:00Z",
+  "status": "SEALED_INFERRED_REVIEW_ZERO_CREDIT",
+  "source_diagnostic": {
+    "path": "research_artifacts/gold_annotated_replay_v3/post_practice_diagnostic.json",
+    "bytes": 82413,
+    "sha256": "98d088ab7973d5bc64899d0690794107112a083667ec294d14e4752827b57bf1"
+  },
+  "source_diagnostic_seal": {
+    "path": "research_manifests/gold_annotated_replay_v3_post_practice_diagnostic_seal.json",
+    "bytes": 1525,
+    "sha256": "2b4de7dfa710a19c3e10414647860f359683594cf8a63de54e660ba852da2414"
+  },
+  "interpretation": {
+    "path": "GOLD_ANNOTATED_REPLAY_V3_POST_PRACTICE_INTERPRETATION.md",
+    "bytes": 9581,
+    "sha256": "1bbe25b0d777dde1e0bfbc3ed3bb2827eee3ad960108fa64dcb0eb00c10687a1"
+  },
+  "post_hoc_hypothesis": {
+    "id": "M15_STRUCTURE_TRANSITION_AT_LIQUIDITY_POST_HOC_V0_1",
+    "support": 7,
+    "wins": 5,
+    "net_r50": 7.705244,
+    "expectancy_r50": 1.100749,
+    "profit_factor": 5.451067,
+    "validation_credit": "ZERO"
+  },
+  "edge_verdict": "PROMISING_HUMAN_PROCESS_EVIDENCE_NOT_VALIDATED_EDGE",
+  "one_year_collection": "CLOSED",
+  "calendar_2025": "LOCKED",
+  "calendar_2026": "LOCKED"
+}

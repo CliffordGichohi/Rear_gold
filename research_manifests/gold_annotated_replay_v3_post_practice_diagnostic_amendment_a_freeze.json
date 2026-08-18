@@ -1,0 +1,54 @@
+{
+  "acquisition_performed": false,
+  "authorization": "USER_EXPLICIT_POST_COMPLETION_ANALYSIS_REQUEST_2026_08_17",
+  "calendar_2025": "LOCKED",
+  "calendar_2026": "LOCKED",
+  "charge_usd": 0.0,
+  "frozen_methods": {
+    "expectancy_interval": "COMPLETED_DAY_CLUSTER_BOOTSTRAP_20000_SEED_20260817",
+    "independent_reproduction": true,
+    "mfe_mae": "ACTUAL_FILL_THROUGH_ACTUAL_EXIT_INCLUSIVE_M1",
+    "primary_return": "NET_PNL_DIVIDED_BY_50_USD",
+    "same_bar": "RECORDED_STOP_FIRST",
+    "secondary_return": "NET_PNL_DIVIDED_BY_SUBMITTED_PLANNED_RISK",
+    "segment_support_floor": 3,
+    "sharpe_sortino_minimum_trades": 30,
+    "win_rate_interval": "WILSON_95"
+  },
+  "frozen_sources": [
+    {
+      "bytes": 8174,
+      "path": "GOLD_ANNOTATED_REPLAY_V3_POST_PRACTICE_DIAGNOSTIC_AMENDMENT_A.md",
+      "sha256": "909a1b93271424165ce0a02ffbde07126d2528bc6384851089a36605332f0112"
+    },
+    {
+      "bytes": 1191,
+      "path": "research_manifests/gold_annotated_replay_v3_practice_certification_seal.json",
+      "sha256": "cd6a6e3d90d737476a45d9888562cb05515ea8c39a18f6b305eb94f06a8b7e32"
+    },
+    {
+      "bytes": 1547433,
+      "path": "research_artifacts/gold_annotated_replay_v3/ledgers/practice_event_ledger_v3.jsonl",
+      "sha256": "7639d3609b904a2bd7f92c6df5a596cecf148a91d4853282a6d5a17e68d193d6"
+    },
+    {
+      "bytes": 12368991,
+      "path": "research_artifacts/gold_annotated_replay_v3/practice_streams_v3_1.primary.jsonl.gz",
+      "sha256": "b9219d8704eb55b6b30f4beff822c981c5698bede68cbac7ef1e6eabdd8b4919"
+    },
+    {
+      "bytes": 12368991,
+      "path": "research_artifacts/gold_annotated_replay_v3/practice_streams_v3_1.reference.jsonl.gz",
+      "sha256": "b9219d8704eb55b6b30f4beff822c981c5698bede68cbac7ef1e6eabdd8b4919"
+    }
+  ],
+  "ledger_head_sha256": "fd347277b2cd312469689fd142fa78b30836208a60d26561baa478287f60a416",
+  "ledger_records": 2041,
+  "one_year_collection": "CLOSED_NOT_MATERIALIZED_OR_ACCESSIBLE",
+  "practice_cases": 20,
+  "pre_analysis_exposure": "FIRST_TWO_INDIVIDUAL_LIFECYCLES_ONLY_FOR_CAPTURE_CONFIRMATION",
+  "research_credit": "ZERO_CREDIT_DESCRIPTIVE",
+  "sealed_at": "2026-08-17T14:25:44.316696+00:00",
+  "status": "SEALED_BEFORE_FULL_PRACTICE_OUTCOME_ANALYSIS",
+  "version": "GOLD_ANNOTATED_REPLAY_V3_POST_PRACTICE_DIAGNOSTIC_AMENDMENT_A_FREEZE_1_0"
+}

@@ -1,5 +1,5 @@
 #property copyright "Gold Market Intelligence Engine"
-#property version   "1.00"
+#property version   "1.01"
 #property strict
 #property script_show_inputs
 
@@ -10,7 +10,9 @@
 // place orders, modify positions, or enable automated trading.
 
 input datetime InpDateFrom = D'2021.07.23 00:00:00';
-input datetime InpDateTo = D'2026.07.25 00:00:00';
+// IC Markets KE is UTC+3 during this validation window. 03:00 server time
+// covers the frozen UTC endpoint of 2026-07-30T00:00:00Z.
+input datetime InpDateTo = D'2026.07.30 03:00:00';
 input string   InpCountryCode = "US";
 input int      InpChunkDays = 180;
 input string   InpOutputFile = "GoldIntel\\mt5_us_calendar_raw.csv";

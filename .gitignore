@@ -19,12 +19,23 @@ node_modules/
 coverage/
 playwright-report/
 test-results/
+*.tsbuildinfo
 
 # Runtime data
 data/raw/*
 !data/raw/.gitkeep
 data/mt5/*
 !data/mt5/.gitkeep
+
+# Research payloads, replay ledgers, screenshots, traces and recordings are
+# large local/sealed artifacts and can contain private runtime state. Their
+# compact, content-addressed audit records belong in research_manifests/.
+research_artifacts/
+.codex_runs/
+
+# Named Playwright runs use suffixed output directories.
+frontend/playwright-report*/
+frontend/test-results*/
 
 # Editors and operating systems
 .idea/

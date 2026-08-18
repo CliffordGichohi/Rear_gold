@@ -1,0 +1,94 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_3A_PROTOCOL_V0_1",
+  "status": "FROZEN_BEFORE_REPLAY",
+  "frozen_on": "2026-07-30",
+  "scope": "ENGINEERING_ONLY_LIMIT_ORDER_BOOK_RECONSTRUCTION",
+  "source": {
+    "acquisition_manifest_path": "data/raw/databento_gc_mbo_engineering_pilot/acquisition_manifest.json",
+    "acquisition_manifest_sha256": "252bf6565c553ef12a744ed4bbd978c27bba9982eb74e69ebc1c98226eb28662",
+    "seal_sha256": "c1280717735436dd95d2e32c940962b20de503bd127d04d901494b4083686b9f",
+    "seal_hash": "d83b02bba366d25b9cdfedbedd7e32cea8c3b224e9749f87a2e663818e6568a4",
+    "normalized_records": 2322905,
+    "quality_gate": "PASS",
+    "classification": "ENGINEERING_ONLY",
+    "research_and_validation_exclusion": "PERMANENT"
+  },
+  "provider_semantics": {
+    "documentation": [
+      "https://databento.com/docs/schemas-and-data-formats/mbo",
+      "https://databento.com/docs/examples/order-book/order-tracking",
+      "https://databento.com/docs/examples/order-book/limit-order-book",
+      "https://databento.com/docs/standards-and-conventions/mbo-snapshot"
+    ],
+    "actions": {
+      "R": "clear all resting orders for the instrument",
+      "A": "add a resting order",
+      "C": "cancel the event size from a resting order and remove it at zero",
+      "M": "replace price and size; a missing order is treated as an add",
+      "T": "aggressing trade record; no direct book mutation",
+      "F": "resting fill record; no direct book mutation",
+      "N": "no direct book mutation"
+    },
+    "priority": {
+      "add": "append at the end of its price-level queue",
+      "modify_price_change": "loses priority",
+      "modify_size_increase": "loses priority",
+      "modify_same_price_nonincrease": "retains priority"
+    },
+    "event_boundary": "inspect reconstructed book state only after F_LAST",
+    "snapshot": "F_SNAPSHOT clear record followed by zero or more adds; final record carries F_LAST"
+  },
+  "implementations": {
+    "primary": "order map plus explicit price levels, aggregate depth, ordered queues, and lazy best-price heaps",
+    "reference": "independent order-only map with priority ordinals and price-level reconstruction at checkpoints",
+    "separate_source_passes_required": true,
+    "checkpoint_interval_records": 250000,
+    "snapshot_completion_checkpoint_required": true,
+    "final_checkpoint_required": true
+  },
+  "frozen_pass_gates": {
+    "source_seal_valid": true,
+    "decoded_record_count_equals_sealed_count": true,
+    "input_stream_hashes_match": true,
+    "all_checkpoint_state_hashes_match": true,
+    "all_checkpoint_structure_hashes_match": true,
+    "final_state_hashes_match": true,
+    "lifecycle_metric_counts_match": true,
+    "receive_timestamp_regressions": 0,
+    "invalid_action_records": 0,
+    "invalid_side_records": 0,
+    "duplicate_add_records": 0,
+    "orphan_cancel_records": 0,
+    "oversized_cancel_records": 0,
+    "cancel_side_mismatch_records": 0,
+    "cancel_price_mismatch_records": 0,
+    "modify_side_mismatch_records": 0,
+    "nonpositive_resting_order_violations": 0,
+    "negative_or_inconsistent_level_depth_violations": 0,
+    "queue_consistency_violations": 0,
+    "crossed_or_locked_book_boundaries": 0,
+    "maybe_bad_book_flag_records": 0,
+    "snapshot_structure_valid": true,
+    "snapshot_recovery_valid": true,
+    "synthetic_semantics_self_test": true
+  },
+  "reported_but_not_rejected": {
+    "modify_without_prior_order": "apply as add and report count and rate, as specified by provider semantics",
+    "empty_book_side_at_event_boundary": "report count; an empty side is not a crossed book",
+    "event_timestamp_regressions": "report separately because receive time is the replay ordering key",
+    "sequence_regressions": "report separately and do not infer market meaning"
+  },
+  "prohibited": [
+    "additional data acquisition",
+    "price-direction analysis",
+    "conditional relationships",
+    "feature or signal creation",
+    "outcome inspection",
+    "candidate creation",
+    "execution optimization",
+    "trades",
+    "PnL",
+    "R multiples",
+    "account returns"
+  ]
+}

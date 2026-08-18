@@ -166,6 +166,7 @@ def calculate_fundamental_state(
     events: list[FundamentalEventPoint] | None = None,
     policy_path_points: list[PolicyPathFundamentalPoint] | None = None,
     quarterly_policy_expectations: list[QuarterlyPolicyExpectationPoint] | None = None,
+    compute_data_hash: bool = True,
 ) -> FundamentalState:
     if as_of.tzinfo is None:
         raise ValueError("as_of must include a timezone")
@@ -293,14 +294,18 @@ def calculate_fundamental_state(
     )
     regime_label = _regime_label(raw_score, components)
     layers = _layer_statuses(components)
-    evidence_hash = _data_hash(
-        series,
-        eligible_cot,
-        eligible_surprises,
-        events or [],
-        policy_path_points or [],
-        quarterly_policy_expectations or [],
-        cutoff,
+    evidence_hash = (
+        _data_hash(
+            series,
+            eligible_cot,
+            eligible_surprises,
+            events or [],
+            policy_path_points or [],
+            quarterly_policy_expectations or [],
+            cutoff,
+        )
+        if compute_data_hash
+        else "NOT_COMPUTED"
     )
     known_explanations = [
         component.explanation for component in available if component.direction != 0
@@ -372,11 +377,23 @@ def _with_effective_weight(
 def _eligible_series(
     observations: list[FundamentalObservation], as_of: datetime
 ) -> dict[str, list[FundamentalObservation]]:
-    canonical: dict[tuple[str, datetime], FundamentalObservation] = {}
-    for point in sorted(
-        observations,
-        key=lambda item: (item.series_code, item.observation_time, item.available_at),
+    def sort_key(
+        item: FundamentalObservation,
+    ) -> tuple[str, datetime, datetime]:
+        return (
+            item.series_code,
+            item.observation_time,
+            item.available_at,
+        )
+
+    ordered = observations
+    if any(
+        sort_key(observations[index]) > sort_key(observations[index + 1])
+        for index in range(len(observations) - 1)
     ):
+        ordered = sorted(observations, key=sort_key)
+    canonical: dict[tuple[str, datetime], FundamentalObservation] = {}
+    for point in ordered:
         if point.available_at <= as_of and point.observation_time <= as_of:
             canonical[(point.series_code, point.observation_time)] = point
     output: dict[str, list[FundamentalObservation]] = {}

@@ -1,0 +1,31 @@
+{
+  "boundary": {
+    "book_traceability_sha256": "9690360ed1c9eceac1b26428460e54ec4326b7ffb0ef94c73dd1574589a2bd92",
+    "gold_coverage_sha256": "cebb15fa9437eed519bbf6740ff84085395be20f216cc3d7f911d33848209d1c",
+    "m3r1_final_seal_receipt": "35f34d03b7d9e003c882fb7ca557b02a78f804b1e5e4170bad6129010b57e159",
+    "m4_final_seal_receipt": "71afb4cc3d58c0fd3d72a22106a7580c80ac71a2bde62e4670e030bed50de82d",
+    "outcome_artifacts_opened": false,
+    "reference_book_sha256": "3e7ddc561932a859a4c9043a38ff71b7003907963fb52247e41edaeefc8ac42a",
+    "status": "PASS_V3_M1_PREDECESSOR_AND_SCOPE_CLOSURE",
+    "step5c_manifest_sha256": "f7150f861f4883e3f7c100822af527ba497b8343225c24ebe16ffe11107e31fb",
+    "trigger_traceability_sha256": "16e583fc8914388ea0cbb0555f2960c4032855d5f554c8db80e37e04b50ecee5",
+    "v2_technical_manifest_receipt": "e16330bfbae62b22c88e8fceaedb80da1dc1c887cd7056d1fa0cb83e4d8fe644",
+    "v2_technical_verdict_receipt": "a824712569ba57df4b579dc25b9bbc924797d8a705b82ceaae136fb90380d486",
+    "year_2025_or_2026_values_accessed": false
+  },
+  "contract_sha256": "6cf07ec324c5a6f4ba0f645fd150ab596001dac35e5ab48245b68aff8f7ba573",
+  "feature_registry_receipt": "08780951f2956b57eed5359acce4bad70d2c7b13551e744a0061ee5e85a438c6",
+  "feature_registry_sha256": "84d97ec1e26d650f0b9ddd8c216b637db1eafae1b84dcbcddec3270fa3b858b1",
+  "freeze_receipt": "e651648c989720914b23c96d400c0c5d528f87b05358cb692e637e3a35ed7caf",
+  "frozen_at_utc": "2026-08-06T08:15:56.659961Z",
+  "implementation_sha256": "670c8a8a2863060bdcc9dfa46a6629ba5269b7e85455f1bddb2d5ba28ef05488",
+  "model_registry_receipt": "b1642c2872731b45aaaa6469f4291a835c1e43d5d0fb8ca993354a1be4b04790",
+  "model_registry_sha256": "98c856fe0ec5363bcc1bdd63ed069534b469398ac1a2972ec5a41b6ff1a5964b",
+  "outcomes_accessed": false,
+  "status": "PASS_V3_M1_PRE_METADATA_AUDIT_FREEZE",
+  "test_sha256": "8c556aa746606dc3fd2f1a016e7a566fe4cf09194b391a09a0318bbe8f66b699",
+  "traceability_receipt": "e0f3e473737d633667c1be318a12887bc43a6bef98d0df7cd59685b31af3e1bc",
+  "traceability_sha256": "767039935bccefe1922ff898ad5d389ba37effc2f2c3b7a11b103f4377da8ed8",
+  "version": "GC_CSR_EDGE_DISCOVERY_V3_M1_FREEZE_V1_0",
+  "year_2025_or_2026_values_accessed": false
+}

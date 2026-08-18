@@ -1,0 +1,311 @@
+{
+  "deferred_visible_fields": [
+    {
+      "domain": "POSITIONING",
+      "fields": [
+        "COT managed-money level/change/crowding"
+      ],
+      "reason": "0 of 376 prior certified decision projections were known; not eligible until an outcome-blind coverage repair is separately authorized."
+    },
+    {
+      "domain": "CATALYSTS",
+      "fields": [
+        "historical pre-event forecast/surprise",
+        "upcoming event risk"
+      ],
+      "reason": "Pre-event availability was not generally verified and prior decision coverage was 0 of 376."
+    },
+    {
+      "domain": "INSTITUTIONAL_PAID_OR_UNAVAILABLE",
+      "fields": [
+        "ETF flows",
+        "central-bank demand",
+        "options/gamma",
+        "intraday open interest",
+        "unscheduled news"
+      ],
+      "reason": "No licensed, point-in-time development source is sealed."
+    }
+  ],
+  "feature_count": 12,
+  "features": [
+    {
+      "availability_rule": "Use only valid one-second buckets with bucket_end <= decision_at in trailing W60; require at least 57 valid state buckets when book state is required.",
+      "book_factor_ids": [
+        "MECH_DEPTH_RESILIENCE_IMPACT",
+        "MECH_VOLUME"
+      ],
+      "domain": "MICROSTRUCTURE",
+      "epistemic_class": "CALCULATED",
+      "expected_gold_sign": "POSITIVE",
+      "feature_id": "CSR_FLOW_QUOTE_OFI_W60",
+      "formula": "sum(quote_ofi_raw) / sum(quote_ofi_transition_count); zero transition denominator => UNKNOWN",
+      "outcome_selected": false,
+      "role": "STAGE1_DIRECTIONAL",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_inputs": [
+        "quote_ofi_raw",
+        "quote_ofi_transition_count"
+      ]
+    },
+    {
+      "availability_rule": "Use only valid one-second buckets with bucket_end <= decision_at in trailing W60; require at least 57 valid state buckets when book state is required.",
+      "book_factor_ids": [
+        "MECH_VOLUME",
+        "MECH_DEPTH_RESILIENCE_IMPACT"
+      ],
+      "domain": "MICROSTRUCTURE",
+      "epistemic_class": "CALCULATED",
+      "expected_gold_sign": "POSITIVE",
+      "feature_id": "CSR_FLOW_TRADE_IMBALANCE_W60",
+      "formula": "(sum(trade_qty_buy)-sum(trade_qty_sell))/(sum(trade_qty_buy)+sum(trade_qty_sell)); zero denominator => UNKNOWN",
+      "outcome_selected": false,
+      "role": "STAGE1_DIRECTIONAL",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_inputs": [
+        "trade_qty_buy",
+        "trade_qty_sell"
+      ]
+    },
+    {
+      "availability_rule": "Use only valid one-second buckets with bucket_end <= decision_at in trailing W60; require at least 57 valid state buckets when book state is required.",
+      "book_factor_ids": [
+        "MECH_DEPTH_RESILIENCE_IMPACT"
+      ],
+      "domain": "MICROSTRUCTURE",
+      "epistemic_class": "CALCULATED",
+      "expected_gold_sign": "POSITIVE",
+      "feature_id": "CSR_FLOW_DISPLAYED_IMBALANCE_W60",
+      "formula": "((add_qty_bid+cancel_qty_ask)-(add_qty_ask+cancel_qty_bid))/total of those four quantities; zero denominator => UNKNOWN",
+      "outcome_selected": false,
+      "role": "STAGE1_DIRECTIONAL",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_inputs": [
+        "add_qty_bid",
+        "add_qty_ask",
+        "cancel_qty_bid",
+        "cancel_qty_ask"
+      ]
+    },
+    {
+      "availability_rule": "Use only valid one-second buckets with bucket_end <= decision_at in trailing W60; require at least 57 valid state buckets when book state is required.",
+      "book_factor_ids": [
+        "MECH_DEPTH_RESILIENCE_IMPACT",
+        "STRUCT_LIQUIDITY_STOP_ZONES"
+      ],
+      "domain": "MICROSTRUCTURE",
+      "epistemic_class": "CALCULATED",
+      "expected_gold_sign": "POSITIVE",
+      "feature_id": "CSR_BOOK_DEPTH_IMBALANCE_L5_W60",
+      "formula": "median(depth_imbalance_l5_ppb) over W60 valid terminal states",
+      "outcome_selected": false,
+      "role": "STAGE1_DIRECTIONAL",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_inputs": [
+        "depth_imbalance_l5_ppb",
+        "state_available",
+        "book_crossed"
+      ]
+    },
+    {
+      "availability_rule": "Latest valid uncrossed terminal state at or before decision_at.",
+      "book_factor_ids": [
+        "MECH_SPREAD",
+        "MECH_DEPTH_RESILIENCE_IMPACT"
+      ],
+      "domain": "MICROSTRUCTURE",
+      "epistemic_class": "CALCULATED",
+      "expected_gold_sign": "POSITIVE",
+      "feature_id": "CSR_BOOK_MICROPRICE_DISLOCATION_T0",
+      "formula": "(microprice_fixed_1e9-midpoint_fixed_1e9)/spread_fixed_1e9 at latest valid terminal state; nonpositive spread => UNKNOWN",
+      "outcome_selected": false,
+      "role": "STAGE1_DIRECTIONAL",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_inputs": [
+        "microprice_fixed_1e9",
+        "midpoint_fixed_1e9",
+        "spread_fixed_1e9",
+        "state_available",
+        "book_crossed"
+      ]
+    },
+    {
+      "availability_rule": "All component bars and ATR available_at <= decision_at.",
+      "book_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM",
+        "STRUCT_TREND_RANGE"
+      ],
+      "domain": "MARKET_STRUCTURE",
+      "epistemic_class": "CALCULATED",
+      "expected_gold_sign": "POSITIVE",
+      "feature_id": "CSR_STRUCTURE_MOMENTUM_15M",
+      "formula": "(latest complete 15m close - fourth prior complete 15m close) / point-in-time 1h ATR; missing ATR or bars => UNKNOWN",
+      "outcome_selected": false,
+      "role": "STAGE1_DIRECTIONAL",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_inputs": [
+        "XAUUSD_1M",
+        "STRUCTURE_15M",
+        "ATR_1H"
+      ]
+    },
+    {
+      "availability_rule": "Latest engine state with available_at <= decision_at; UNKNOWN remains unknown.",
+      "book_factor_ids": [
+        "SYNTHESIS_EVIDENCE_CHAIN",
+        "REGIME_REACTION_FUNCTION"
+      ],
+      "domain": "FUNDAMENTAL",
+      "epistemic_class": "INFERRED",
+      "expected_gold_sign": "POSITIVE",
+      "feature_id": "CSR_MACRO_ENGINE_SCORE",
+      "formula": "Existing transparent gold directional score retained continuously without thresholding",
+      "outcome_selected": false,
+      "role": "STAGE1_DIRECTIONAL",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_inputs": [
+        "V3_M4:MACRO_ENGINE_SCORE"
+      ]
+    },
+    {
+      "availability_rule": "Both observations must be released and available by decision_at.",
+      "book_factor_ids": [
+        "RATES_REAL_YIELD_10Y",
+        "CROSS_RATES_DRIVER"
+      ],
+      "domain": "FUNDAMENTAL_CROSS_MARKET",
+      "epistemic_class": "CALCULATED",
+      "expected_gold_sign": "POSITIVE",
+      "feature_id": "CSR_MACRO_REAL_YIELD_SUPPORT",
+      "formula": "negative of latest point-in-time 10y real-yield observation-to-observation change in percentage points",
+      "outcome_selected": false,
+      "role": "STAGE1_DIRECTIONAL",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_inputs": [
+        "V3_M4:MACRO_REAL_YIELD_10Y_CHANGE"
+      ]
+    },
+    {
+      "availability_rule": "Both observations must be available by decision_at; broad USD is never relabelled DXY.",
+      "book_factor_ids": [
+        "USD_CONTEXT",
+        "CROSS_CONFIRMATION_DIVERGENCE"
+      ],
+      "domain": "FUNDAMENTAL_CROSS_MARKET",
+      "epistemic_class": "CALCULATED",
+      "expected_gold_sign": "POSITIVE",
+      "feature_id": "CSR_MACRO_USD_SUPPORT",
+      "formula": "negative 10,000 * log(latest broad USD / previous broad USD)",
+      "outcome_selected": false,
+      "role": "STAGE1_DIRECTIONAL",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_inputs": [
+        "V3_M4:MACRO_USD_BROAD_CHANGE"
+      ]
+    },
+    {
+      "availability_rule": "Both observations must be available by decision_at and roll-safe.",
+      "book_factor_ids": [
+        "RATES_TREASURY_2Y",
+        "EXPECT_POLICY_REPRICING"
+      ],
+      "domain": "FUNDAMENTAL_EXPECTATIONS",
+      "epistemic_class": "CALCULATED",
+      "expected_gold_sign": "POSITIVE",
+      "feature_id": "CSR_MACRO_2Y_SUPPORT",
+      "formula": "negative of latest point-in-time 2y Treasury yield change in basis points",
+      "outcome_selected": false,
+      "role": "STAGE1_DIRECTIONAL",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_inputs": [
+        "V3_M4:MACRO_TREASURY_2Y_CHANGE"
+      ]
+    },
+    {
+      "availability_rule": "Both W60 and W900 end at decision_at; any invalid terminal latch remains unavailable.",
+      "book_factor_ids": [
+        "MECH_SPREAD",
+        "SESSION_ROLLOVER_LIQUIDITY"
+      ],
+      "domain": "LIQUIDITY",
+      "epistemic_class": "CALCULATED",
+      "expected_gold_sign": null,
+      "feature_id": "CSR_LIQ_SPREAD_FRAGILITY_60_900",
+      "formula": "log((median W60 spread + one GC tick)/(median W900 spread + one GC tick)); W900 requires at least 855 valid states",
+      "outcome_selected": false,
+      "role": "STAGE2_MODIFIER_ONLY",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_inputs": [
+        "spread_fixed_1e9",
+        "state_available",
+        "book_crossed"
+      ]
+    },
+    {
+      "availability_rule": "Asia range, level coordinate, XAU price, and ATR must all be fully formed and available by decision_at.",
+      "book_factor_ids": [
+        "SESSION_ASIA_STATE",
+        "STRUCT_SUPPORT_RESISTANCE_LEVELS",
+        "STRUCT_LIQUIDITY_STOP_ZONES"
+      ],
+      "domain": "SESSION_PRICE_LEVEL",
+      "epistemic_class": "CALCULATED",
+      "expected_gold_sign": null,
+      "feature_id": "CSR_SESSION_LEVEL_TENSION",
+      "formula": "1 / ((1+max(Asia range/1h ATR,0))*(1+max(distance to nearest decision-known level/1h ATR,0)))",
+      "outcome_selected": false,
+      "role": "STAGE2_MODIFIER_ONLY",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_inputs": [
+        "V3_M4:SESSION_ASIA_RANGE_TO_1H_ATR",
+        "V3_M4:LEVEL_NEAREST_KNOWN_TO_1H_ATR"
+      ]
+    }
+  ],
+  "fixed_windows_seconds": [
+    60,
+    900
+  ],
+  "registry_receipt": "08780951f2956b57eed5359acce4bad70d2c7b13551e744a0061ee5e85a438c6",
+  "stage1_directional_count": 10,
+  "stage2_modifier_count": 2,
+  "status": "FROZEN_OUTCOME_BLIND_FEATURE_REGISTRY",
+  "unknown_policy": "Never impute, carry backward, or convert UNKNOWN to neutral/zero.",
+  "version": "GC_CSR_EDGE_DISCOVERY_V3_FEATURE_REGISTRY_V1_0"
+}

@@ -1,0 +1,66 @@
+{
+  "charge_incurred_usd": 0.0,
+  "controls": {
+    "contract": {
+      "bytes": 10912,
+      "path": "GC_SESSION_STATE_TRANSITION_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "b499e3fc7f80ff6fc288f689eb6a6e3823ceeb19f51d482b56c59304725ccf9a"
+    },
+    "design_freeze": {
+      "bytes": 4340,
+      "path": "research_manifests/gc_session_state_transition_v1_design_freeze_v01.json",
+      "sha256": "e6d198679c5c27ed52e0c5ef1bd4096c4e44bb19e04c600a7fc687aaaf9115c3"
+    },
+    "implementation": {
+      "bytes": 97263,
+      "path": "tools/run_gc_session_state_transition_v1.py",
+      "sha256": "c49cefb96e7dbcd7225a709c1640de085799675a0d9d1f2f57a1622f19247ca8"
+    },
+    "materialization_diagnostics": {
+      "bytes": 1548,
+      "path": "research_artifacts/gc_session_state_transition_v1_v01/materialization_diagnostics.json",
+      "sha256": "4b7069d97ce2ec2675046d24fac73853cfef92b95ad4976fa218fa3b2020796d"
+    },
+    "primary_events": {
+      "bytes": 2966469,
+      "path": "research_artifacts/gc_session_state_transition_v1_v01/primary_events.parquet",
+      "sha256": "9f445022f9a0b890217b5cb695d59028f6b3b2fbb26def32de08628941fe89eb"
+    },
+    "protocol": {
+      "bytes": 4203,
+      "path": "research_manifests/gc_session_state_transition_v1_protocol_v01.json",
+      "sha256": "ea25bc471f5d45cd8cc5e8621a599dae4f8da43d2a7aa74b403d339bad5f03a8"
+    },
+    "reference_events": {
+      "bytes": 2966469,
+      "path": "research_artifacts/gc_session_state_transition_v1_v01/reference_events.parquet",
+      "sha256": "9f445022f9a0b890217b5cb695d59028f6b3b2fbb26def32de08628941fe89eb"
+    },
+    "support_snapshot": {
+      "bytes": 24153,
+      "path": "research_artifacts/gc_session_state_transition_v1_v01/preoutcome_support_snapshot.json",
+      "sha256": "023638a0e690adfad732f26a04ee9b4583129d81a4ae90cd9f739b866f05d679"
+    },
+    "test_registry": {
+      "bytes": 27724,
+      "path": "research_manifests/gc_session_state_transition_v1_test_registry_v01.json",
+      "sha256": "c3dd5e78bf313f0df424c8009aeea741257963e632d52dc0b85bd3e92fed3c65"
+    }
+  },
+  "data_acquired": false,
+  "freeze_receipt": "c801ffcb9b75cd0e8425578d617c71f97aa2cc3b5dd5b6ae02a2da9898a07652",
+  "outcome_values_accessed": false,
+  "population": {
+    "event_ids_checksum": "e7bd601e190bc344e5eb21ec6cc3f3754e9d3d86f8bbf2b822a2b85c63dc38e3",
+    "event_rows": 19345,
+    "event_rows_checksum": "1d453a640522ee34631bb3fdc5e8ebeb47993542bc7fa0dbabcbe4cffc2c0abf",
+    "first_session_date": "2021-08-02",
+    "last_session_date": "2024-12-31",
+    "research_sessions": 1649
+  },
+  "relationships_calculated": false,
+  "sealed_at_utc": "2026-08-06T12:23:22.595991Z",
+  "status": "SEALED_EXACT_EVENT_POPULATION_AND_IMPLEMENTATION_BEFORE_OUTCOMES",
+  "version": "GC_SESSION_STATE_TRANSITION_V1_PREOUTCOME_FREEZE_1_0",
+  "year_2025_or_2026_accessed": false
+}

@@ -1,0 +1,64 @@
+{
+  "version": "GOLD_PIT_AUCTION_STATE_ADAPTIVE_MANAGEMENT_V1_CLOSURE_1_0",
+  "status": "SEALED_FINAL_REJECTION",
+  "sealed_at_utc": "2026-08-11T11:35:06.2656886Z",
+  "verdict": "REJECT_NO_ECONOMICALLY_PROVEN_DEVELOPMENT_EDGE",
+  "base_development": {
+    "verdict": "REJECT_NO_DEVELOPMENT_ECONOMIC_EDGE",
+    "passing_candidates": [],
+    "best_near_miss": "H4::LINEAR_COMPETING_RISK_V1::CONSTANT_50",
+    "artifact": {
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_results/development_results.json",
+      "bytes": 192103,
+      "sha256": "60e8f6402749b031967d4ae21771e6d6f8035b8f970156425b34f6956ef57277"
+    },
+    "freeze": {
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_development_freeze.json",
+      "bytes": 192370,
+      "sha256": "4f4ffe14e8a7f43a888aae5b3d7e5418f67eb6969278521a86ea357ee1fd53c5"
+    }
+  },
+  "gc_incremental": {
+    "verdict": "NO_PROVEN_INCREMENTAL_GC_VALUE",
+    "passing_comparisons": [],
+    "comparisons_tested": 12,
+    "standalone_candidate_credit": false,
+    "artifact": {
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental_r3/gc_incremental_r3_results.json",
+      "bytes": 151108,
+      "sha256": "59b89b5bb2d70729fce8b6ff6bdb3f83bc32008ceec6903a6d439d817f43584f"
+    },
+    "freeze": {
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental_r3_final_freeze.json",
+      "bytes": 151378,
+      "sha256": "78ea56c3b0e5ede12d805d643b435bf37657104d3126a74dfcfb64533f7ce5a6"
+    },
+    "complete_reproduction": {
+      "primary": {
+        "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental_r3/primary_complete_evaluation.json",
+        "bytes": 747448,
+        "sha256": "3041db305e577df98bc120a47ef10f3055757ef88ffc82f7fc8ab03bc2f3e293"
+      },
+      "reference": {
+        "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental_r3/reference_complete_evaluation.json",
+        "bytes": 747448,
+        "sha256": "3041db305e577df98bc120a47ef10f3055757ef88ffc82f7fc8ab03bc2f3e293"
+      },
+      "byte_identical": true
+    }
+  },
+  "forward_disposition": {
+    "calendar_2025_values_accessed": false,
+    "calendar_2026_values_accessed": false,
+    "forward_opening": "NOT_AUTHORIZED_BY_FROZEN_GATE_BECAUSE_ZERO_DEVELOPMENT_CANDIDATES_PASSED",
+    "prospective_ledger_initialized": false
+  },
+  "cost": {
+    "paid_acquisition_usd": 0.0
+  },
+  "report": {
+    "path": "GOLD_POINT_IN_TIME_AUCTION_STATE_AND_ADAPTIVE_MANAGEMENT_V1_FINAL_VERDICT.md",
+    "bytes": 3254,
+    "sha256": "62ce379cef294c0a5670855bcadb2a4ec490923e3f1e7a66795b18837750b248"
+  }
+}

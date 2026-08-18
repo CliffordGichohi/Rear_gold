@@ -1,0 +1,314 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_3E_PROTOCOL_V0_1",
+  "status": "FROZEN_BEFORE_RESIDUAL_METADATA_ACCESS",
+  "frozen_at_utc": "2026-07-31T09:55:02.1277560Z",
+  "classification": "POST_FAILURE_ENGINEERING_ONLY_METADATA_DIAGNOSTIC",
+  "research_or_validation_credit": "NONE",
+  "purpose": "Diagnose the 2,552 Step 3D unaligned residual records using headers and event-group metadata only, and recommend at most one deterministic value-blind correction without implementing it.",
+  "predecessor_preservation": {
+    "step_3a": {
+      "formal_verdict": "FAIL",
+      "verdict_preserved": true,
+      "declared_manifest_hash": "0897e33856c5329ee59040ff5a6c15f48cb65fc17dcf3e63ec1f8c5bf3c6c59c"
+    },
+    "step_3a1": {
+      "formal_verdict": "PASS",
+      "verdict_preserved": true,
+      "declared_manifest_hash": "334b67560ee5912ed1939305715078b3f9460d389feb8cc17723a062543d657c"
+    },
+    "step_3b1": {
+      "formal_verdict": "FAIL_PRE_ACQUISITION_READINESS",
+      "verdict_preserved": true,
+      "declared_manifest_hash": "e4ddc27c8916df1d22e69a63d9b67f52ce0c81c55ccd172310a51cfe7d0533ac"
+    },
+    "step_3b2": {
+      "formal_verdict": "FAIL",
+      "verdict_preserved": true,
+      "declared_manifest_hash": "9fcdde66ca1f5d605f92fd5aba83de1b042fc01b3020e53d3f3bda904d850e8f"
+    },
+    "step_3c": {
+      "formal_status": "PASS_DIAGNOSTIC_REPRODUCTION",
+      "status_preserved": true,
+      "declared_manifest_hash": "e14afa4de4e487f2a8db9b6e044de4aba6c7d9fcaeef10f6b0ca8ee337bcb749"
+    },
+    "step_3d": {
+      "formal_verdict": "FAIL_UNALIGNED_RESIDUAL",
+      "verdict_preserved": true,
+      "declared_manifest_hash": "2a8e9aecc3c21887968b6741e7093c28b069441c52a25e355802d2ab0434585b",
+      "declared_verdict_hash": "1c45844ebe71c71624fb5d6e9b6d521d65b59b0d397c002c607e218e74e27360",
+      "residual_records": 2552
+    },
+    "immutability_rule": "Every predecessor verdict and sealed source, protocol, tool, result, report, and manifest remains byte-for-byte unchanged."
+  },
+  "sealed_sources": {
+    "calendar_date": "2024-01-09",
+    "classification": "ENGINEERING_ONLY",
+    "research_and_validation_exclusion": "PERMANENT",
+    "mbo": {
+      "path": "data/raw/databento_gc_mbo_engineering_pilot/GLBX-20260730-WB9AXCVFET/normalized/gc_v_0_2024_01_09_mbo.parquet",
+      "records": 2322905,
+      "bytes": 31661220,
+      "sha256": "43a8a3bb2be9a4a36ab324e3fe0ca0e29ccb4529f445013a87156d3bad4c0ba3"
+    },
+    "mbp10": {
+      "path": "data/raw/databento_gc_mbp10_engineering_benchmark/GLBX-20260731-UJHWEDQUSX/normalized/gc_v_0_2024_01_09_mbp10.parquet",
+      "records": 1924786,
+      "bytes": 81164829,
+      "sha256": "4ead358f538d7c383a14f39bbde35b8ccfa21e38e58205edbc51bedfb2ed80d4"
+    },
+    "additional_data_acquisition_permitted": false,
+    "source_substitution_permitted": false
+  },
+  "official_semantics_review": {
+    "accessed_at_utc": "2026-07-31T09:50:00Z",
+    "sources": [
+      {
+        "title": "Market by order (MBO)",
+        "url": "https://databento.com/docs/schemas-and-data-formats/mbo",
+        "facts_used": [
+          "MBO contains order events including add, cancel, modify, trade, fill, and clear.",
+          "MBO normalization can differ by venue and dataset."
+        ]
+      },
+      {
+        "title": "Market by price (MBP-10)",
+        "url": "https://databento.com/docs/schemas-and-data-formats/market-by-price",
+        "facts_used": [
+          "MBP-10 contains every top-ten book event and aggregate depth.",
+          "MBP-10 can be derived from MBO."
+        ]
+      },
+      {
+        "title": "Common fields, enums and types",
+        "url": "https://databento.com/docs/standards-and-conventions/common-fields-enums-types",
+        "facts_used": [
+          "Action N means no action and may carry flags or other information.",
+          "Side N means no side was specified.",
+          "F_LAST is 128 and marks the last record in an event for an instrument.",
+          "F_PUBLISHER_SPECIFIC is 2 and its semantics depend on publisher_id.",
+          "Flags describe event boundaries, message characteristics, or data quality."
+        ]
+      },
+      {
+        "title": "State management of resting orders",
+        "url": "https://databento.com/docs/examples/order-book/order-tracking",
+        "facts_used": [
+          "A publisher event can normalize into multiple MBO records.",
+          "F_LAST identifies the last record for an instrument in an event."
+        ]
+      },
+      {
+        "title": "Databento release notes",
+        "url": "https://databento.com/docs/release-notes",
+        "facts_used": [
+          "A None action variant was introduced for historical and live GLBX.MDP3 normalization."
+        ]
+      }
+    ],
+    "documented_limit": "The reviewed pages do not state that MBP-10 action, side, and flags must be a byte-for-byte copy of one originating MBO record.",
+    "inference_policy": "Any conclusion beyond the cited field definitions is labeled LIKELY or UNRESOLVED rather than official fact."
+  },
+  "metadata_only_policy": {
+    "permitted_mbo_columns": [
+      "source_row_ordinal",
+      "ts_recv",
+      "ts_event",
+      "publisher_id",
+      "instrument_id",
+      "sequence",
+      "action",
+      "side",
+      "flags"
+    ],
+    "permitted_mbp10_columns": [
+      "source_row_ordinal",
+      "ts_recv",
+      "ts_event",
+      "publisher_id",
+      "instrument_id",
+      "sequence",
+      "action",
+      "side",
+      "depth",
+      "flags"
+    ],
+    "forbidden_columns": [
+      "price_fixed_1e9",
+      "size",
+      "order_id",
+      "bid_px_00 through bid_px_09",
+      "ask_px_00 through ask_px_09",
+      "bid_sz_00 through bid_sz_09",
+      "ask_sz_00 through ask_sz_09",
+      "bid_ct_00 through bid_ct_09",
+      "ask_ct_00 through ask_ct_09"
+    ],
+    "book_state_reconstruction_permitted": false,
+    "book_equality_comparison_permitted": false,
+    "market_values_reported": false
+  },
+  "residual_population_definition": {
+    "step_3d_rule": "Same K5, action, side, flags, and within-identical-metadata occurrence.",
+    "residual_condition": "The requested one-based MBO occurrence does not exist under the exact Step 3D metadata tuple.",
+    "expected_population": 2552,
+    "population_must_be_reproduced_from_metadata": true,
+    "silent_filtering_permitted": false,
+    "same_k5_mbo_group_required": true
+  },
+  "diagnostic_taxonomy": {
+    "CONFIRMED": "An exhaustive metadata count or invariant is reproduced identically by both implementations.",
+    "LIKELY": "The metadata accounts for at least 95 percent but less than 100 percent of the stated population and is consistent with, but not explicitly guaranteed by, official semantics.",
+    "UNRESOLVED": "The frozen threshold is not met, multiple interpretations remain, or official documentation does not establish the causal semantic rule.",
+    "cause_labels": [
+      "FLAGS_AS_NONIDENTITY_METADATA",
+      "UNSPECIFIED_SIDE",
+      "ACTION_PRESERVATION",
+      "MULTI_RECORD_EVENT_EMISSION",
+      "PUBLISHER_SPECIFIC_NORMALIZATION",
+      "UNRESOLVED_HEADER_DERIVATION"
+    ]
+  },
+  "exact_tests": [
+    {
+      "id": "T01_RESIDUAL_REPRODUCTION",
+      "tests": [
+        "Reproduce the Step 3D exact metadata selector using metadata columns only.",
+        "Require exactly 2,552 residual vendor rows and require every residual to have a same-K5 MBO group.",
+        "Count source-order and group completeness invariants."
+      ]
+    },
+    {
+      "id": "T02_HEADER_COMPONENT_PRESENCE",
+      "tests": [
+        "For every residual, count whether its action, side, flags, masked flags, and each pairwise combination occurs anywhere in the same-K5 MBO group.",
+        "Count exact and masked flag XOR distributions without timestamps, prices, sizes, or order IDs.",
+        "Cross-tabulate residual vendor action, side, flags, and depth."
+      ]
+    },
+    {
+      "id": "T03_EVENT_TOPOLOGY",
+      "tests": [
+        "Count same-K5 MBO group cardinality and action, side, and flags set cardinalities.",
+        "Compare vendor metadata with the first, last, and every F_LAST MBO record in the group.",
+        "Count F_LAST cardinality and whether the group contains publisher-specific, None-action, or None-side records.",
+        "Record metadata crosswalk counts from each residual vendor tuple to every same-K5 MBO action/side/flags tuple."
+      ]
+    },
+    {
+      "id": "T04_FROZEN_CANDIDATE_COVERAGE",
+      "tests": [
+        "Apply every frozen candidate using metadata only and count available, unavailable, selected reuse, candidate cardinality, and occurrence shortfall.",
+        "Do not inspect or compare the book state selected by any candidate."
+      ]
+    },
+    {
+      "id": "T05_SEMANTIC_CLASSIFICATION",
+      "tests": [
+        "Classify each cause label using the frozen confidence definitions and supporting counts.",
+        "Distinguish official field definitions from empirical inference.",
+        "Record every negative and unresolved result."
+      ]
+    }
+  ],
+  "frozen_candidate_registry": [
+    {
+      "rank": 1,
+      "id": "C01_MASK_PUBLISHER_SPECIFIC_FLAG",
+      "selector": "Same K5, action, side, flags after clearing only bit 2 on vendor and MBO, then within-transformed-metadata occurrence.",
+      "recommendation_eligible": true
+    },
+    {
+      "rank": 2,
+      "id": "C02_IGNORE_FLAGS",
+      "selector": "Same K5, action, side, then within-identical-action-side occurrence; flags are not identity qualifiers.",
+      "recommendation_eligible": true
+    },
+    {
+      "rank": 3,
+      "id": "C03_SIDE_IF_SPECIFIED_IGNORE_FLAGS",
+      "selector": "Same K5 and action; require exact side only when vendor side is not N, treat vendor side N as unspecified, ignore flags, then within-transformed-metadata occurrence.",
+      "recommendation_eligible": true
+    },
+    {
+      "rank": 4,
+      "id": "C04_ACTION_ONLY",
+      "selector": "Same K5 and action, then within-identical-action occurrence; ignore side and flags.",
+      "recommendation_eligible": true
+    },
+    {
+      "rank": 5,
+      "id": "C05_K5_OCCURRENCE_DIAGNOSTIC_ONLY",
+      "selector": "Same K5 and within-K5 occurrence; ignore action, side, and flags.",
+      "recommendation_eligible": false
+    }
+  ],
+  "candidate_occurrence_policy": {
+    "vendor_order": "One-based source_row_ordinal order inside the candidate's transformed vendor key.",
+    "mbo_order": "One-based source_row_ordinal order inside the candidate's transformed MBO key.",
+    "selection": "Vendor occurrence n selects only MBO occurrence n if it exists.",
+    "alternative_search_permitted": false,
+    "book_values_may_not_break_ties": true
+  },
+  "recommendation_rule": {
+    "maximum_corrections": 1,
+    "ranking_order": [
+      "C01_MASK_PUBLISHER_SPECIFIC_FLAG",
+      "C02_IGNORE_FLAGS",
+      "C03_SIDE_IF_SPECIFIED_IGNORE_FLAGS",
+      "C04_ACTION_ONLY"
+    ],
+    "eligibility": [
+      "Covers all 2,552 residual rows with no occurrence shortfall.",
+      "Selects no MBO row more than once.",
+      "Uses only the frozen metadata fields and transform.",
+      "Retains action identity.",
+      "Is consistent with the reviewed official definitions.",
+      "Is reproduced exactly by both implementations."
+    ],
+    "selection": "Recommend the first eligible candidate in frozen ranking order.",
+    "if_none_eligible": "Recommend no correction and classify header derivation as unresolved.",
+    "implementation_during_step_3e_permitted": false,
+    "validation_credit": "NONE"
+  },
+  "independent_reproduction": {
+    "primary": "Indexed transformed-key candidate lists.",
+    "reference": "Direct predicate filtering and occurrence counting within each same-K5 group.",
+    "separate_complete_metadata_source_passes_required": true,
+    "identical_residual_population_required": true,
+    "identical_test_counts_required": true,
+    "identical_candidate_counts_required": true,
+    "identical_metadata_decision_checksum_required": true,
+    "any_difference": "FAIL_DIAGNOSTIC_REPRODUCTION"
+  },
+  "completion_gates": {
+    "all_predecessor_and_source_seals_valid": true,
+    "protocol_frozen_before_residual_access": true,
+    "only_permitted_metadata_columns_loaded": true,
+    "exact_step_3d_residual_population_reproduced": true,
+    "all_same_k5_groups_present": true,
+    "all_five_test_families_completed": true,
+    "all_five_candidates_reported": true,
+    "primary_and_reference_results_identical": true,
+    "at_most_one_correction_recommended": true,
+    "no_correction_implemented": true,
+    "no_data_acquired": true,
+    "no_book_values_or_outcomes_accessed": true,
+    "no_prohibited_analysis": true
+  },
+  "prohibited": [
+    "modifying any predecessor verdict or sealed artifact",
+    "loading price, size, order ID, or bid/ask book fields",
+    "reconstructing or comparing book states",
+    "selecting or ranking candidates using book equality",
+    "adding, removing, retuning, reordering, or repairing candidates after residual access",
+    "implementing a correction",
+    "acquiring or substituting data",
+    "inspecting market outcomes or calculating directional relationships",
+    "features or signals",
+    "execution optimization",
+    "trades",
+    "PnL",
+    "R multiples",
+    "account returns"
+  ]
+}

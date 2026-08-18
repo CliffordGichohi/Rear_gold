@@ -68,6 +68,11 @@ data_kind, schema_version, provider_code, dataset_code, file,
 declared_source_published_at?, is_synthetic
 ```
 
+The Phase 1 implementation content-addresses every raw file. An exact retry
+returns the existing batch. A differently chunked overlapping price upload
+creates its own immutable raw batch but performs `ON CONFLICT DO NOTHING` on
+the normalized price-fact key; it never overwrites an existing market fact.
+
 The response includes batch ID, content hash, duplicate status, raw-object reference,
 and normalization job link. Re-uploading identical content returns the existing batch
 without duplicating raw or normalized facts.
@@ -98,21 +103,40 @@ applies the per-series limit.
 ## 6. Intelligence and layers
 
 ```text
-POST /intelligence/calculations
-GET  /intelligence/snapshots/latest
-GET  /intelligence/snapshots/{snapshot_id}
-GET  /intelligence/snapshots
-GET  /intelligence/snapshots/{snapshot_id}/signals
-GET  /intelligence/snapshots/{snapshot_id}/reasoning
-GET  /layers/{layer_number}/snapshot
-GET  /signals
-GET  /signals/{signal_id}
+POST /decisions/snapshots
+GET  /decisions/snapshots/latest?instrument=XAUUSD
+GET  /decisions/snapshots/{snapshot_id}
+GET  /factors/coverage
+POST /fundamentals/snapshots
+GET  /fundamentals/snapshots/latest
 ```
 
-`POST /intelligence/calculations` takes `instrument`, `as_of`, optional configuration
-IDs, and knowledge mode. Repeating the same deterministic input returns the existing
-calculation/result unless `force_recalculate` is authorized and a new engine version
-is declared.
+`POST /decisions/snapshots` is the canonical reference-book decision. It takes
+`instrument`, `provider_code`, timezone-aware `as_of`, data mode, and an optional
+bounded source-bar limit. It persists the directional calculation, all seven layer
+assessments, session/liquidity/structure context, separate bias/trigger/invalidation/
+risk outputs, coverage, reasoning, and input hashes.
+
+The older `/intelligence/*` endpoints expose the first vertical-slice score only.
+They remain for compatibility and are marked deprecated in generated OpenAPI; the
+Executive dashboard does not use them.
+
+### Implemented official-provider commands
+
+```text
+GET  /providers/public/health
+POST /providers/public/sync
+GET  /providers/alfred/health
+POST /providers/alfred/sync
+GET  /providers/official-catalysts/health
+POST /providers/official-catalysts/sync
+GET  /providers/atlanta-fed-mpt/health
+POST /providers/atlanta-fed-mpt/sync
+```
+
+The official-catalyst command stores announced Treasury auction closes and already
+released Federal Reserve communications. Federal Reserve RSS is not returned as a
+fabricated forward speech calendar or policy-tone score.
 
 ## 6.1 Implemented backtest endpoints
 
@@ -124,97 +148,88 @@ GET  /backtests/runs/{run_id}
 ```
 
 `POST /backtests/runs` currently executes the transparent
-`ASIA_RANGE_ACCEPTANCE_V1` strategy synchronously over the selected observed MT5
-range. The response includes parameters, source-data hash, source-bar count,
-point-in-time provenance, metrics, equity curve, and the complete trade ledger.
-Longer multi-year and walk-forward jobs will use the asynchronous job contract.
+`ASIA_RANGE_ACCEPTANCE_V1` control or
+`BOOK_ALIGNED_ASIA_ACCEPTANCE_RESEARCH_V1` version `1.5.0` synchronously over the
+selected observed MT5 range. The response includes parameters, source-data hash,
+source-bar count, point-in-time provenance, metrics, equity curve, and the complete
+trade ledger. Unknown catalyst risk and unknown liquidity fail closed. The
+`allow_unknown_event_risk` and `allow_unknown_liquidity` flags are explicit,
+persisted research-only overrides. Longer multi-year and walk-forward jobs will use
+the asynchronous job contract.
+
+`GET /backtests/runs` returns lightweight comparison rows by default. Its bounded
+`detail_limit` query includes full equity, provenance, and trade ledgers only for
+that many newest runs; every summary provides the stable full-run endpoint. This
+prevents the dashboard from hydrating several megabytes of repeated evidence just
+to draw the comparison table.
 
 ### Headline response shape
 
 ```json
 {
-  "meta": {
-    "snapshot_id": "uuid",
-    "instrument": "XAUUSD",
-    "as_of": "2026-07-22T12:00:00Z",
-    "calculated_at": "2026-07-22T12:00:02Z",
-    "knowledge_mode": "SOURCE_AVAILABLE",
-    "config_version": "baseline-1",
-    "code_version": "git-sha",
-    "is_synthetic": true
-  },
-  "bias": {
-    "label": "MODERATELY_BULLISH",
-    "overall_score": 63.0,
-    "bullish_score": 71.0,
-    "bearish_score": 8.0,
-    "neutrality_score": 21.0,
-    "conflict_score": 20.3,
-    "neutral_conflict_score": 21.0
-  },
-  "confidence": {
-    "analysis": 74.0,
-    "execution": 39.0,
-    "evidence_coverage": 82.0,
-    "is_probability_of_profit": false,
-    "penalties": ["CPI_IN_4_HOURS", "CROWDED_LONGS"]
-  },
-  "context": {
-    "regime": "SLOWDOWN_DISINFLATION",
-    "reaction_profile": "GROWTH_LABOUR_FOCUS",
-    "dominant_driver": "FALLING_REAL_YIELD",
-    "main_contradiction": "ETF_HOLDINGS_FALLING",
-    "highest_risk_assumption": "PROBABLE_SHORT_COVERING",
-    "current_session": "LONDON_NEW_YORK_OVERLAP"
-  },
-  "catalyst": {
-    "event_id": "uuid",
-    "name": "US CPI",
-    "scheduled_at": "2026-07-22T16:00:00Z",
-    "risk": "HIGH"
-  },
-  "execution": {
-    "state": "WAIT",
-    "trigger": "Two closed 5m bars accepted above resistance",
-    "invalidation": "Gold loses support while real yield and USD reverse higher",
-    "risk_warnings": ["EVENT_SLIPPAGE", "POSITIONING_CROWDING"]
-  },
+  "id": "uuid",
+  "instrument": "XAUUSD",
+  "provider_code": "IC_MARKETS_MT5",
+  "as_of": "2026-07-27T07:21:53Z",
+  "epistemic_status": "INFERRED",
+  "directional_score": -12.681,
+  "bullish_score": 1.365,
+  "bearish_score": 14.046,
+  "neutral_conflict_score": 17.715,
+  "directional_confidence": 28.258,
+  "execution_confidence": 16.955,
+  "directional_evidence_coverage_pct": 92.0,
+  "phase1_factor_coverage_pct": 86.25,
+  "book_factor_coverage_pct": 72.63,
+  "book_usable_coverage_pct": 56.84,
+  "bias": "MODERATELY_BEARISH",
+  "regime": "OVERHEATING",
+  "reaction_function": "MIXED_MACRO_REACTION_FUNCTION",
+  "dominant_driver": "INFLATION_REGIME",
+  "main_contradiction": "Published managed-money net positioning increased.",
+  "event_risk": "ELEVATED",
+  "current_session": "LONDON",
+  "liquidity_state": "NORMAL",
+  "price_macro_alignment": "CONFLICTED",
+  "execution_state": "WAIT_FOR_PRICE_ACCEPTANCE",
   "layers": [
     {
       "number": 1,
       "name": "MARKET_REGIME",
-      "status": "AVAILABLE",
-      "summary": "Weakening growth with disinflation",
-      "signal_ids": ["uuid"]
-    },
-    {
-      "number": 3,
-      "name": "POSITIONING",
       "status": "PARTIAL",
-      "summary": "COT available; ETF data stale",
-      "unknown_requirements": ["CURRENT_ETF_HOLDINGS"]
+      "operational_status": "ACTIVE",
+      "book_factor_count": 21,
+      "known_factor_count": 20,
+      "usable_factor_count": 12,
+      "book_coverage_pct": 95.24,
+      "phase1_coverage_pct": 100.0,
+      "directional_contribution": -9.341,
+      "confidence": 45.113,
+      "supporting_evidence": ["Rising real yield increases gold's opportunity cost."],
+      "contradicting_evidence": ["Labour conditions are balanced."],
+      "unknown_factors": ["FED_SEP_PROJECTIONS"]
     }
   ],
-  "insights": {
-    "what_changed": ["..."],
-    "confirms": ["..."],
-    "contradicts": ["..."],
-    "invalidates": ["..."]
+  "execution_plan": {
+    "bias": {"side": "SHORT", "state": "MODERATELY_BEARISH"},
+    "trigger": {"state": "WAITING", "side": "SHORT"},
+    "invalidation": {"price_level": 4092.92},
+    "risk": {"position_size_status": "UNKNOWN_ACCOUNT_EQUITY_AND_CONTRACT_SPECIFICATION"},
+    "is_trade_instruction": false
   },
   "reasoning": {
-    "nodes": [{"id": "claim-1", "fact_ids": ["uuid"], "text": "..."}],
-    "edges": [{"from": "claim-1", "to": "claim-2", "relation": "CONSISTENT_WITH"}]
+    "confidence_is_not_win_probability": true,
+    "score_is_not_trade_signal": true
   },
-  "data_health": {
-    "status": "DEGRADED",
-    "stale_series": ["ETF_HOLDINGS"],
-    "open_issue_count": 1
-  }
+  "data_hash": "sha256",
+  "ruleset_version": "gold-reference-book-7-layer-v1-decision-v1"
 }
 ```
 
-This is a shape example, not seed output. Text explanations remain linked to IDs in
-the full response; clients may request compact mode for overview cards.
+This is an abbreviated shape using the 27 July live checkpoint. The actual response
+includes every layer field, component, upcoming catalyst, highest-risk assumption,
+separate confirmation/invalidation requirements, source snapshot IDs, and all
+evidence hashes.
 
 ## 7. Event and event-study API
 
@@ -246,6 +261,67 @@ candidate/eligible/excluded counts, reaction rows, grouped statistics, normal
 approximation confidence intervals, and a SHA-256 reproducibility hash. The
 current synchronous Phase 1 endpoint is bounded to three years; a queued job can
 replace its transport later without changing the research contract.
+
+## 7.1 Session and liquidity edge-study API
+
+Implemented by research version `LONDON_SWEEP_RECLAIM_V0_1`:
+
+```text
+POST /api/v1/session-edge-studies/runs
+POST /api/v1/session-edge-studies/comparisons
+GET  /api/v1/session-edge-studies/runs
+GET  /api/v1/session-edge-studies/runs/{run_id}
+GET  /api/v1/session-edge-studies/runs/{run_id}/opportunities
+```
+
+The POST contract accepts an observed price period, provider, a flag controlling
+whether point-in-time fundamentals are attached, and the complete versioned
+detector configuration. It creates one append-only opportunity row for every
+eligible London session. Missing Asian bars, no sweep, failed reclaim, missing
+displacement, and incomplete outcomes are returned as explicit statuses rather
+than disappearing from the denominator.
+
+The response contains the session funnel and matched cohorts for all triggers,
+fundamental alignment/opposition, catalyst state, Asian compression, and trade
+direction. Outcome fields are observational MFE/MAE and ordered target-before-stop
+paths; they are not represented as executed trades or a proven strategy.
+`UNKNOWN` catalyst risk is retained as its own cohort and never relabelled safe.
+List endpoints support bounded detail, while the opportunity endpoint supports
+pagination plus status and bias-alignment filters.
+
+`POST /comparisons` accepts two to ten non-overlapping immutable run IDs. It
+rejects different instruments, providers, detector versions, or parameters and
+recomputes the funnel, cohorts, and deterministic bootstrap intervals from the
+underlying session rows. This is the supported way to combine bounded annual
+runs; averaging already-rounded annual metrics is not.
+
+Synchronous runs are capped at 640 calendar days and 800,000 observed source bars.
+Longer discovery periods are split chronologically without changing the immutable
+ruleset or the eventual locked-validation boundary.
+
+## 7.2 Session-edge executable-strategy API
+
+Implemented by `C1_DELAYED_RECLAIM_EXECUTION_V1`:
+
+```text
+POST /api/v1/session-edge-strategies/runs
+GET  /api/v1/session-edge-strategies/runs
+GET  /api/v1/session-edge-strategies/runs/{run_id}
+```
+
+POST accepts one to ten non-overlapping immutable session-study run IDs plus an
+explicit price-control or fundamental-aligned mode. It rejects source runs with
+different instruments, providers, detector versions, or configurations. The
+evaluator loads only the one-minute execution windows linked to triggered
+opportunities, chooses earliest point-in-time eligible bar versions, and requires
+observed spread at both fills.
+
+The response uses the standard backtest run/trade envelope and adds the complete
+exclusion funnel, gross/net R, spread/slippage/commission decomposition, annual
+and direction results, deterministic bootstrap interval, 1.00x/1.50x/2.00x cost
+stress, the nine-cell frozen parameter neighbourhood, and a machine-readable
+development gate. Every trade links to its source opportunity ID, source run ID,
+source hash, and entry/exit bar record keys.
 
 ## 8. Strategy-backtest API
 
@@ -301,6 +377,9 @@ snapshot, score, execution state, or stored deterministic insight.
 - Immutable resources use strong ETags based on content hash.
 - “Latest” responses use short TTLs and include snapshot ID/as-of; write jobs evict
   only affected instrument/config keys.
+- Live factor coverage and market structure coalesce identical requests in-process
+  for 60 and 30 seconds respectively. Any explicit historical `as_of` bypasses the
+  live cache, so point-in-time research never receives a cached present-day result.
 - Research progress can use polling first; server-sent events are an optional later
   optimization.
 - API responses are committed only after all score components and lineage rows are

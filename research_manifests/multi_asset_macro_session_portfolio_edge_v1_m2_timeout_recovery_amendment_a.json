@@ -1,0 +1,50 @@
+{
+  "version": "MULTI_ASSET_MACRO_SESSION_PORTFOLIO_EDGE_V1_M2_TIMEOUT_RECOVERY_AMENDMENT_A_1_0",
+  "frozen_at_utc": "2026-08-12T08:35:00Z",
+  "status": "SEALED_BEFORE_RECOVERY_HISTORY_ACCESS",
+  "preserved_preacquisition_freeze": {
+    "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_m2_preacquisition_freeze.json",
+    "sha256": "95a935fe3c514c4e62a3dcb5a65370bdf9cb5f4955243007426d5b7b08fb121b"
+  },
+  "preserved_attempt_1_failure": {
+    "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m2/attempt_1_failure.json",
+    "sha256": "d96c00195bc28512790e7c2fe44ae823d81b9b5ec558e58bcae6253ce05f9524",
+    "verdict": "FAIL_EXTERNAL_COMMAND_TIMEOUT_DURING_FROZEN_ACQUISITION"
+  },
+  "classification": "NARROW_ENGINEERING_ORCHESTRATION_RECOVERY",
+  "only_changes": [
+    "PERMIT_EXACT_HASH_VERIFIED_COMPLETED_FILES_FROM_ATTEMPT_1",
+    "SKIP_PROVIDER_REREQUEST_FOR_EACH VERIFIED_COMPLETED_FROZEN_CHUNK",
+    "PRESERVE_INTERRUPTED_TEMPORARY_FILE_IN_ARTIFACT_QUARANTINE",
+    "REREQUEST_ONLY_THE_IDENTICAL_UNFINISHED_FROZEN_CHUNKS",
+    "ALLOW_A_LONGER_COMMAND_RUNTIME_WITHOUT_CHANGING_DATA_REQUESTS"
+  ],
+  "recovery_implementation": {
+    "path": "tools/acquire_multi_asset_macro_session_portfolio_v1_m2_mt5.py",
+    "bytes": 15608,
+    "sha256": "be668ef19177095a5ae0aea094ee95cb66cdec58a4c58e923681e2efde9e95aa"
+  },
+  "frozen_recovery_limits": {
+    "completed_files_reused": 49,
+    "remaining_provider_requests": 56,
+    "maximum_cumulative_provider_requests_including_interrupted_request": 106,
+    "recovery_attempts": 1,
+    "maximum_charge_usd": 0.0
+  },
+  "unchanged": [
+    "SYMBOLS",
+    "START_AND_END_TIMESTAMPS",
+    "M1_SCHEMA",
+    "60_DAY_CHUNKS",
+    "NORMALIZATION",
+    "DEDUPLICATION",
+    "COVERAGE_GATES",
+    "SESSION_GATES",
+    "SPREAD_GATES",
+    "INDEPENDENT_REPRODUCTION",
+    "2025_AND_2026_LOCKS",
+    "NO_RELATIONSHIPS_TRADES_OR_PNL",
+    "NO_PAID_DATA"
+  ],
+  "another_recovery_permitted": false
+}

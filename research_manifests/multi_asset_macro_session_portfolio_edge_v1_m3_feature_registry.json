@@ -1,0 +1,107 @@
+{
+  "excluded": [
+    "2025_VALUES",
+    "2026_VALUES",
+    "UNVERIFIED_PRE_RELEASE_FORECASTS",
+    "FUTURE_SWINGS",
+    "TARGET_INSTRUMENT_FUTURE_EVENT_RESPONSE",
+    "UNREGISTERED_FEATURES",
+    "REALIZED_LABELS"
+  ],
+  "identities": [
+    {
+      "available_at_gate": true,
+      "classification": "CALCULATED",
+      "id": "PIT_MACRO_COMPONENT_DELTAS",
+      "lineage": "FRED_ALFRED_VINTAGE"
+    },
+    {
+      "classification": "INFERRED",
+      "id": "PIT_INSTRUMENT_MACRO_SCORE_STATE",
+      "states": [
+        "ALIGNED",
+        "OPPOSED",
+        "NEUTRAL",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "classification": "OBSERVED_AND_CALCULATED",
+      "id": "PIT_METALS_COT_CONTEXT",
+      "pass_gate": false
+    },
+    {
+      "classification": "CALCULATED",
+      "id": "COMPLETED_W1_D1_H4_H1_M15_M5_PRESSURE"
+    },
+    {
+      "classification": "CALCULATED",
+      "future_formed_levels": false,
+      "id": "CONFIRMED_2L2R_SWINGS_AND_H4_BREAKS"
+    },
+    {
+      "classification": "CALCULATED",
+      "id": "PRIOR_WEEK_DAY_SESSION_AND_OPENING_RANGE_LEVELS",
+      "known_before_decision": true
+    },
+    {
+      "classification": "CALCULATED",
+      "id": "SESSION_RANGE_VOLUME_SPREAD_PHASE"
+    },
+    {
+      "classification": "CALCULATED",
+      "id": "CROSS_MARKET_EVENT_SHOCK_ZT_ZN_EURUSD_RISK",
+      "target_response_excluded": true
+    },
+    {
+      "classification": "INFERRED",
+      "id": "E1_ACCEPTANCE_REJECTION_TRIGGER"
+    },
+    {
+      "classification": "INFERRED",
+      "id": "E2_SWEEP_RECLAIM_TRIGGER"
+    },
+    {
+      "classification": "INFERRED",
+      "id": "E3_BREAK_ACCEPT_RETEST_TRIGGER"
+    },
+    {
+      "classification": "INFERRED",
+      "id": "E4_HTF_PULLBACK_RESOLUTION_TRIGGER"
+    }
+  ],
+  "outcome_fields_hidden_until_single_open": [
+    "entry",
+    "stop",
+    "target",
+    "exit",
+    "gross_R",
+    "cost_R",
+    "net_R",
+    "MFE_R",
+    "MAE_R",
+    "PnL_USD"
+  ],
+  "status": "FROZEN_BEFORE_DEVELOPMENT_OUTCOME_ACCESS",
+  "stored_signal_fields": [
+    "identity",
+    "instrument",
+    "family",
+    "session",
+    "session_date",
+    "fold",
+    "direction",
+    "decision",
+    "deadline",
+    "macro_state",
+    "macro_score",
+    "macro_confidence",
+    "trade_eligibility",
+    "trigger_extreme",
+    "ATR15",
+    "known_levels",
+    "feature_evidence",
+    "lineage_hash"
+  ],
+  "version": "MULTI_ASSET_MACRO_SESSION_PORTFOLIO_EDGE_V1_M3_FEATURE_REGISTRY_1_0"
+}

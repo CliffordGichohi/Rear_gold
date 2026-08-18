@@ -1,0 +1,170 @@
+{
+  "artifacts": {
+    "primary_registry": {
+      "bytes": 841647,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_preoutcome/primary_case_tape_registry.parquet",
+      "sha256": "2bbf0abe0c1ad6e6d74412da396ef5e60b0264f0da1cb347bddf5449374128c7"
+    },
+    "reference_registry": {
+      "bytes": 841647,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_preoutcome/reference_case_tape_registry.parquet",
+      "sha256": "2bbf0abe0c1ad6e6d74412da396ef5e60b0264f0da1cb347bddf5449374128c7"
+    },
+    "summary": {
+      "bytes": 1299,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_preoutcome/readiness_summary.json",
+      "sha256": "fc83598690c5e65a10a0e19ef297ef4a71cd2502d5ce795883aed22c52283936"
+    }
+  },
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "casebook_sources": {
+    "fundamentals.jsonl.gz": {
+      "bytes": 8511617,
+      "path": "research_artifacts/gold_casebook_v01/fundamentals.jsonl.gz",
+      "sha256": "d2b776f60c4535978bbfb28706b4700e6d054a10f8d57cfee171c83b212b7235"
+    },
+    "positioning.jsonl.gz": {
+      "bytes": 92793,
+      "path": "research_artifacts/gold_casebook_v01/positioning.jsonl.gz",
+      "sha256": "e6d1aabf0d4401f3af4e54dc8ef4c0e4074772ec3f2199cfe9009b5a0b267228"
+    },
+    "price_bars.jsonl.gz": {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    }
+  },
+  "checkpoint_identity_hash": "7810c672637655ebfbca5bf9f73a0f3b8e74029087f2f24ed4b33e831eeb5559",
+  "checkpoint_rows": 2095849,
+  "controls": {
+    "contract": {
+      "bytes": 12858,
+      "path": "GOLD_POINT_IN_TIME_AUCTION_STATE_AND_ADAPTIVE_TRADE_MANAGEMENT_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "98ee15c6cb11cf717e4aa1990d44759e8a4242b3f9d91463e731809a397ab2ad"
+    },
+    "protocol": {
+      "bytes": 7230,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_protocol.json",
+      "sha256": "12dad79b3ff76875c27826066a6c34640808dc50ff1bed47ea02e45b0c0d083e"
+    }
+  },
+  "frozen_at_utc": "2026-08-10T14:07:34.574641Z",
+  "gc_technical_manifest": {
+    "bytes": 5411,
+    "path": "research_artifacts/gc_session_trigger_edge_v2r1_v01/manifest.json",
+    "sha256": "f8b9805ffab9d86d4e695eef82e5e9c4fa22c3764eed1059b7638d91bd81264e"
+  },
+  "outcomes_opened_before_freeze": false,
+  "paid_acquisition_usd": 0.0,
+  "predecessor_seals": {
+    "atlas": {
+      "bytes": 1313,
+      "path": "research_artifacts/gold_pullback_behavioural_archetypes_v1/final_seal.json",
+      "sha256": "189f574a3d68e6cff279d9efd684e643a9942c300d8fe187c8fe9d209d89bcd9"
+    },
+    "census": {
+      "bytes": 3938,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/final_seal.json",
+      "sha256": "e5a4527769cfe1fcfb92975dcbea4f15e5b057c4d6b42709fb53eebff421654d"
+    },
+    "features": {
+      "bytes": 2881,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/final_seal.json",
+      "sha256": "bee62baee614908884a54f4a318c93823707e74dd7ab99f90eb712eba8122472"
+    },
+    "sequential_rejection": {
+      "bytes": 1178,
+      "path": "research_artifacts/gold_sequential_auction_confirmation_entry_v1_development/final_seal.json",
+      "sha256": "1d3bfbb87688eda47166a4eccddf071e0db5a6d926492863eb21fe6fd01f0a16"
+    }
+  },
+  "source_pairs": {
+    "atlas": {
+      "byte_identical": true,
+      "primary": {
+        "bytes": 1906259,
+        "path": "research_artifacts/gold_pullback_behavioural_archetypes_v1/primary_archetypes.parquet",
+        "sha256": "1b48075bbaa4c14873a84cd66f570259eca044813a008e768f9d1ecca41ba856"
+      },
+      "reference": {
+        "bytes": 1906259,
+        "path": "research_artifacts/gold_pullback_behavioural_archetypes_v1/reference_archetypes.parquet",
+        "sha256": "1b48075bbaa4c14873a84cd66f570259eca044813a008e768f9d1ecca41ba856"
+      },
+      "rows": 8653
+    },
+    "cases": {
+      "byte_identical": true,
+      "primary": {
+        "bytes": 4976288,
+        "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_pullback_cases.parquet",
+        "sha256": "067fc581ffcbaadb589ac0ea428d82bc26b3546b549a4dfd1a6afbc512af35ee"
+      },
+      "reference": {
+        "bytes": 4976288,
+        "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/reference_pullback_cases.parquet",
+        "sha256": "067fc581ffcbaadb589ac0ea428d82bc26b3546b549a4dfd1a6afbc512af35ee"
+      },
+      "rows": 37191
+    },
+    "events": {
+      "byte_identical": true,
+      "primary": {
+        "bytes": 4933833,
+        "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_structure_events.parquet",
+        "sha256": "05fcf2e1cfb4d4fde7bec65f14d0fcd26157ac498e620b9fe0210a63bdaf589d"
+      },
+      "reference": {
+        "bytes": 4933833,
+        "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/reference_structure_events.parquet",
+        "sha256": "05fcf2e1cfb4d4fde7bec65f14d0fcd26157ac498e620b9fe0210a63bdaf589d"
+      },
+      "rows": 46247
+    },
+    "features": {
+      "byte_identical": true,
+      "primary": {
+        "bytes": 7804461,
+        "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/primary_features.parquet",
+        "sha256": "972706fcf161bb8d3c84677bedea45d9a8e2b6fd463a2c7853bb624e0acf2cac"
+      },
+      "reference": {
+        "bytes": 7804461,
+        "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/reference_features.parquet",
+        "sha256": "972706fcf161bb8d3c84677bedea45d9a8e2b6fd463a2c7853bb624e0acf2cac"
+      },
+      "rows": 37191
+    },
+    "swings": {
+      "byte_identical": true,
+      "primary": {
+        "bytes": 5514276,
+        "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_swings.parquet",
+        "sha256": "81966751e033cfbcbc7c291c42acca78289ec01a728c9d06d77024a5ec1d35a6"
+      },
+      "reference": {
+        "bytes": 5514276,
+        "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/reference_swings.parquet",
+        "sha256": "81966751e033cfbcbc7c291c42acca78289ec01a728c9d06d77024a5ec1d35a6"
+      },
+      "rows": 96909
+    },
+    "triggers": {
+      "byte_identical": true,
+      "primary": {
+        "bytes": 2198130,
+        "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/primary_trigger_facts.parquet",
+        "sha256": "d6c2e8e8d5115bf0cf6a0e4b3bae8eded76d143ff573ffe4de7ab4b627775a4a"
+      },
+      "reference": {
+        "bytes": 2198130,
+        "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/reference_trigger_facts.parquet",
+        "sha256": "d6c2e8e8d5115bf0cf6a0e4b3bae8eded76d143ff573ffe4de7ab4b627775a4a"
+      },
+      "rows": 42085
+    }
+  },
+  "status": "FROZEN_READY_FOR_OUTCOME_BLIND_TAPE_FEATURES",
+  "version": "GOLD_PIT_AUCTION_STATE_V1_PREOUTCOME_FREEZE_1_0"
+}

@@ -12,29 +12,76 @@ strategy/control comparison are implemented. The reference book was read in full
 before the domain model was designed and remains the primary business and
 market-logic specification.
 
-The platform can ingest observed IC Markets XAUUSD one-minute bars from a locally
-logged-in MetaTrader 5 terminal, preserve their source and availability timestamps,
-ingest official public Treasury/real-yield/breakeven/dollar/Fed-rate,
-equity/volatility/financial-stress, and CFTC gold-positioning history, ingest
-official ALFRED vintages, versioned calendar/consensus/release bundles, and complete
-Fed-path probability surfaces; calculate economic surprises and post-release gold
-reactions; calculate a transparent fundamental permission score; run a DST-aware
-Asian-range acceptance strategy; model spread/slippage/commission; and compare the
-macro-filtered version with its price-only control. Every trade stores the exact
-fundamental snapshot used at its decision clock. The 88-factor reference-book
-registry keeps every unconnected factor explicitly `UNKNOWN` or `PARTIAL`. The
-Coverage & Health page now renders all 88 factors—including later licensed
-contracts—and the Executive Overview surfaces the book decision brief: driver,
-catalyst, session, price confirmation, execution state, confirmation, invalidation,
-and highest-risk assumptions.
+The platform ingests observed IC Markets XAUUSD one-minute bars, official public
+rates/USD/risk series, CFTC positioning, ALFRED vintages, economic events, and
+provider-independent Fed-path surfaces. The free Atlanta Fed source is stored
+truthfully as quarterly SOFR distributions rather than exact meeting-level
+FedWatch. Official Treasury auction closes and released Federal Reserve
+communications are also connected.
 
-The currently loaded ALFRED sync added 2,754 revision-aware macro vintages and the
-MT5 store contains 1,770,267 completed one-minute bars from 2021-07-23 through
-2026-07-24. The MT5 economic-calendar import adds 588 grouped US releases, 1,117
-observed component values, and 1,059 consensus snapshots over the same five-year
-window. MT5's chart-history limit is verified at 100,000,000 bars. Phase 1 factor
-coverage is 82.19% and the latest fundamental snapshot has 77% evidence coverage.
-These are coverage measurements, not performance claims.
+The engine calculates economic surprises, event reactions, deterministic structure,
+liquidity, and one persisted seven-layer decision. Every research trade stores the
+exact point-in-time evidence used at its decision clock. The 97-factor registry
+keeps every unconnected factor explicitly `UNKNOWN` or `PARTIAL`.
+Coverage & Health renders the full registry—including licensed contracts—and the
+Executive Overview surfaces driver, catalyst, session, liquidity, price
+confirmation, execution state, confirmation, invalidation, risk, and the
+highest-risk assumption from the canonical server decision.
+
+The currently loaded ALFRED sync added 2,754 revision-aware macro vintages. The
+normalized MT5 store contains 1,778,683 XAUUSD one-minute bars through
+2026-07-27 07:21 UTC, plus complete pre-2025 EURUSD and XAGUSD histories of
+1,283,406 and 1,221,634 bars respectively. The MT5 economic-calendar import adds
+588 grouped US releases, 1,117 observed component values, and 1,059 consensus
+snapshots over the same five-year window. MT5's chart-history limit is verified
+at 100,000,000 bars. At the 27 July 2026 alignment checkpoint, Phase 1 coverage
+is 69/80 (86.25%) and full layered-book coverage is 69/95 (72.63%). Fresh usable
+coverage is measured separately at every decision clock. These are coverage
+measurements, not performance claims.
+
+Earlier frozen pre-2025 research covered auctions, sessions, objective
+liquidity levels, exact macro releases, cross-market confirmation, fundamental
+target validity, and transparent walk-forward models. No candidate was stable
+across development regimes or survived cost stress, so the honest status is
+still `RESEARCH / NO DEPLOYABLE EDGE / PAPER ONLY`; calendar 2025 remains
+locked.
+[AUCTION_EDGE_RESEARCH.md](AUCTION_EDGE_RESEARCH.md) contains the numerical
+audit trail.
+
+The next bounded phase is governed by
+[GOLD_CASEBOOK_RESEARCH_CONTRACT.md](GOLD_CASEBOOK_RESEARCH_CONTRACT.md). It
+has now frozen the complete pre-2025 point-in-time London and New York casebook,
+including market structure, fundamentals, positioning, events, cross-markets,
+provenance, and quality. See
+[GOLD_CASEBOOK_MILESTONE_2.md](GOLD_CASEBOOK_MILESTONE_2.md) and
+[GOLD_CASEBOOK_DATA_DICTIONARY.md](GOLD_CASEBOOK_DATA_DICTIONARY.md).
+[GOLD_CASEBOOK_MILESTONE_3.md](GOLD_CASEBOOK_MILESTONE_3.md) records the
+completed constant-execution hurdle: 833 London and 826 New York cases, zero
+exclusions, and six hash-verified controls. All unconditional controls were net
+negative after frozen observed-spread, slippage, and commission costs.
+[GOLD_CASEBOOK_MILESTONE_4.md](GOLD_CASEBOOK_MILESTONE_4.md) records the
+completed bounded relationship discovery over 582 London and 575 New York
+development cases. The clearest simple relationship was book-consistent:
+four-hour ZT/ZN futures-price direction tracked gold direction through the
+yield-repricing channel. It was positive after costs across all three
+development years and both chronological halves, but no state survived the
+predeclared false-discovery gate across 510 eligible tests. It remains an
+exploratory candidate, not a validated edge. Conditional 2024 data and calendar
+2025 remain locked, and entry, stop, target, and reward-to-risk optimization
+remain prohibited.
+[GOLD_CASEBOOK_MILESTONE_5.md](GOLD_CASEBOOK_MILESTONE_5.md) records the
+authorized and frozen universal ZN four-hour selector. On development data
+only, its fixed one-ounce mean net return was +3.2842 basis points in London
+and +6.0757 in New York after the unchanged costs, with both directions, all
+development-year buckets, and both chronological halves positive. It remains
+an example of development evidence that required validation.
+[GOLD_CASEBOOK_MILESTONE_6.md](GOLD_CASEBOOK_MILESTONE_6.md) records the
+one-time calendar-2024 result: `REJECT_CHRONOLOGICAL_VALIDATION`. Although
+London remained positive and the combined selector returned +2.8011 mean net
+basis points, the New York bullish cell returned -0.2366 basis points and the
+New York early half returned -3.4584 basis points. Two of ten frozen gates
+therefore failed. The branch is closed without retuning; calendar 2025 remains
+unopened and execution research did not begin.
 
 ## Run locally
 
@@ -56,12 +103,28 @@ Open:
 - sessions and market structure: <http://localhost:3000/structure>
 - factor coverage: <http://localhost:3000/data-health>
 - backtest lab: <http://localhost:3000/backtests>
+- blind discretionary replay: <http://localhost:3000/replay>
+- matched human-Codex replay: <http://localhost:3000/replay/matched>
 - OpenAPI: <http://localhost:8000/docs>
 - readiness: <http://localhost:8000/api/v1/health/ready>
 
 The seed is idempotent: running it again reuses the original ingestion batches and
-intelligence snapshot. It deliberately includes one missing minute so Data Health
+demo snapshot. It deliberately includes one missing minute so Data Health
 reports a warning instead of silently fabricating a candle.
+
+The blind replay begins with 20 zero-credit practice cases and then 240 scored
+cases. Decisions are irreversible and sequential. Before starting, read
+[the frozen audit contract](GOLD_BLIND_POINT_IN_TIME_DISCRETIONARY_REPLAY_EDGE_AUDIT_CONTRACT_V1.md)
+and [the pre-label certification](GOLD_BLIND_DISCRETIONARY_REPLAY_V1_PRELABEL_REPORT.md).
+Scored outcomes remain unavailable until all 240 decisions have been locked.
+
+The matched human-Codex replay uses the same 30 calendar-2022 cases already
+completed by the Codex operator. It keeps the human decisions in a separate
+append-only ledger so the two interpretations can be compared only after the
+human collection is complete. Follow the
+[matched replay user guide](GOLD_MATCHED_HUMAN_CODEX_REPLAY_COMPARISON_V1_USER_GUIDE.md),
+[frozen contract](GOLD_MATCHED_HUMAN_CODEX_REPLAY_COMPARISON_CONTRACT_V1.md) and
+[readiness certificate](GOLD_MATCHED_HUMAN_CODEX_REPLAY_COMPARISON_V1_READINESS.md).
 
 Sync the credential-free official public slice and calculate a snapshot:
 
@@ -69,8 +132,13 @@ Sync the credential-free official public slice and calculate a snapshot:
 $body = @{ start = "2023-01-01"; end = "2026-07-23" } | ConvertTo-Json
 Invoke-RestMethod -Method Post -Uri http://localhost:8000/api/v1/providers/public/sync -ContentType application/json -Body $body
 
-$snapshot = @{ instrument = "XAUUSD"; as_of = (Get-Date).ToUniversalTime().ToString("o") } | ConvertTo-Json
-Invoke-RestMethod -Method Post -Uri http://localhost:8000/api/v1/fundamentals/snapshots -ContentType application/json -Body $snapshot
+$snapshot = @{
+  instrument = "XAUUSD"
+  provider_code = "IC_MARKETS_MT5"
+  as_of = (Get-Date).ToUniversalTime().ToString("o")
+  data_mode = "REAL_ONLY"
+} | ConvertTo-Json
+Invoke-RestMethod -Method Post -Uri http://localhost:8000/api/v1/decisions/snapshots -ContentType application/json -Body $snapshot
 ```
 
 The public sync is content-hash idempotent. It stores raw payloads and normalized
@@ -79,6 +147,17 @@ The current public market slice covers ten FRED series plus the CFTC gold report
 Equity/VIX and financial-stress interpretations are explicitly `INFERRED`; severe
 deleveraging remains a documented contradiction because it can initially liquidate
 gold even when defensive demand is rising.
+
+Sync the credential-free official catalyst sources:
+
+```powershell
+$catalysts = @{ start = "2026-01-01"; end = "2026-08-31" } | ConvertTo-Json
+Invoke-RestMethod -Method Post -Uri http://localhost:8000/api/v1/providers/official-catalysts/sync -ContentType application/json -Body $catalysts
+```
+
+Treasury rows are forward scheduled events with exact Eastern-time competitive
+closes. Federal Reserve RSS rows are released communications only; they do not
+become a fabricated forward speech calendar or hawkish/dovish tone signal.
 
 ## Point-in-time sessions and structure
 
@@ -95,6 +174,87 @@ Daily XAUUSD aggregation uses a versioned provider session template rather than 
 open and recurring maintenance pause; unscheduled missing minutes still make the
 aggregate incomplete. Asia, London, New York, overlap, LBMA, rollover, and close
 windows use IANA timezones so daylight-saving changes are deterministic.
+
+## Fundamental-biased session edge study
+
+The Backtest Lab now includes research version
+`LONDON_SWEEP_RECLAIM_V0_1`. It creates one opportunity row per London
+session, freezes fundamentals before the session, maps the Asian and prior
+day/week levels, detects bounded sweep/reclaim/displacement paths, and compares
+MFE/MAE and target-before-stop outcomes across matched cohorts. It does not
+represent those observations as executed trades or a proven edge.
+
+Run a bounded observed-data slice from PowerShell:
+
+```powershell
+.\tools\run_session_edge_study.ps1 `
+  -Start "2023-04-01T00:00:00Z" `
+  -End "2024-01-01T00:00:00Z"
+```
+
+The helper prints the run ID, session funnel, fundamental alignment, catalyst,
+compression, volume/spread, confluence, long/short cohorts, and data hash.
+Detailed immutable rows are available at:
+
+```text
+POST /api/v1/session-edge-studies/comparisons
+GET /api/v1/session-edge-studies/runs/{run_id}
+GET /api/v1/session-edge-studies/runs/{run_id}/opportunities
+```
+
+The frozen 2023-2024 discovery comparison contains 457 requested sessions and
+97 triggers. Its unconditional gross path proxy is +0.037 R with a bootstrap 95%
+interval of [-0.169, +0.229] R, before costs. This is
+`RESEARCH / EDGE NOT YET ESTABLISHED`. Delayed reclaim is a positive but
+19-observation lead whose interval also crosses zero. See
+`SESSION_EDGE_RESEARCH.md` for the exact run IDs, cohort evidence, and locked
+2025 protocol.
+
+The executable follow-up is frozen in `SESSION_EDGE_STRATEGY.md`. It predeclares
+the price-control and fundamental-aligned variants, next-bar fill, structural
+stop, 1R target, four-hour exit, observed-spread cost model, parameter
+neighbourhood, development continuation gate, and the condition that keeps 2025
+locked when development fails.
+
+The executable development result is visible on the same Backtest Lab page. The
+19-trade price control returned +0.164 R net expectancy after 249.74 USD of
+modeled costs and passed its development checks. The eight-trade
+fundamental-aligned primary returned -0.044 R and failed the gate. Consequently,
+the application has not consumed the 2025 holdout.
+
+Unknown historical catalyst state remains its own cohort. It is never treated as
+known-safe and no longer erases the underlying session observation.
+
+### Four-year session and bias audit
+
+The observed research store now also contains 1,283,406 completed IC Markets
+EURUSD one-minute bars through 31 December 2024, 19,920 FRED market
+observations, 4,845 ALFRED vintage observations, and 342 gold COT reports.
+EURUSD is used only as a labelled inverse intraday-USD proxy; it is not DXY or
+intraday rates.
+
+Reproduce the locked pre-2025 bias diagnostic and P9-P11 executable study:
+
+```powershell
+docker compose --profile test run --rm backend-test `
+  python tools/research_bias_target_validity.py `
+  --start 2021-08-01 --end 2025-01-01
+
+docker compose --profile test run --rm backend-test `
+  python tools/research_macro_session_execution.py `
+  --start 2021-08-01 --end 2025-01-01
+```
+
+The sessions moved materially, but no tested rule qualified as a stable edge.
+The apparent P9 aggregate profit came entirely from 2024 and was negative in
+2021-2022 and 2023. The system therefore remains
+`RESEARCH / NO DEPLOYABLE EDGE / PAPER ONLY`, and calendar 2025 remains unopened.
+See `DAILY_SESSION_PLAYBOOK_RESEARCH.md` for the complete funnel, transaction-cost
+model, annual splits, and rejection evidence.
+
+The stricter auction-window, one-minute structural execution, interpretable
+bias, and exact point-in-time fundamental-permission evidence is recorded in
+[`AUCTION_EDGE_RESEARCH.md`](AUCTION_EDGE_RESEARCH.md).
 
 ## Point-in-time events and event studies
 
@@ -272,25 +432,27 @@ PRICE_ONLY_CONTROL
 FUNDAMENTAL_ALIGNED = same mechanical candidate
   + directional score/coverage/confidence gate
   + high-impact catalyst blackout
+  + unknown-catalyst fail-closed gate
+  + broker-liquidity fail-closed gate
   + post-blackout re-evaluation
 ```
 
-The first one-month diagnostic looked profitable and was correctly challenged with
-the longer available sample. Across 38 mechanical candidates, the price-only
-control lost 744.37 USD with -0.202 R expectancy and 12.65% drawdown. The same
-fundamental gate kept 18 candidates and reduced the loss to 120.70 USD, -0.070 R,
-and 6.29% drawdown. This supports the gate as a filter in this sample, but the
-surviving default entry/exit is not profitable.
+The untouched 1 April through 29 July 2023 interval produced 61 mechanical
+candidates. With strict v1.5 defaults, all 61 are rejected because the imported
+archive does not prove when its pre-release catalyst schedule/consensus first became
+knowable. Run `fddda1a6-f5c2-432c-ae4b-ed9030ee2dbc` therefore has zero trades:
+this is the correct point-in-time result, not missing-value neutralization.
 
-A provisional 2.0-ATR stop / 1.25R target produced +549.78 USD, +0.322 R
-expectancy, 1.735 profit factor, and 3.94% drawdown. It remains
-`RESEARCH / INSUFFICIENT EVIDENCE`: there are only 18 trades, all are shorts, and
-both parametric and deterministic-bootstrap 95% intervals cross zero. The Backtest
-Lab now shows those intervals and seeded trade-order Monte Carlo drawdown instead
-of presenting a positive P&L as proof. Real Atlanta Fed quarterly SOFR path history
-is now connected; exact meeting-date CME FedWatch, ETF, options, and intraday
-cross-market evidence remain visibly separate or absent until licensed sources are
-connected.
+An explicitly stored `allow_unknown_event_risk=true` ablation retained 16 trades
+and recorded 5 wins, -0.414617 R expectancy, -649.48 USD, 0.542568 profit factor,
+and 11.333195% drawdown
+(`fd03a168-48e0-4f25-a9dd-c9bcfb6de956`). It lost after spread, slippage, and
+commission. The Asia/London acceptance rule has no demonstrated edge and remains
+rejected; earlier short-sample positive parameter results are research history, not
+a strategy claim. Real Atlanta Fed quarterly SOFR path history is connected, while
+exact meeting-date FedWatch, authorized ETF/options data, timestamped historical
+pre-release consensus, and intraday cross-market evidence remain separate or
+`UNKNOWN`.
 
 The Cross-market page is no longer a placeholder. It synchronizes the eligible
 daily gold, 2Y/10Y nominal yield, 10Y real yield, breakeven, broad USD, equity, and
@@ -353,12 +515,14 @@ bridge remains the active IC Markets price-data path.
 
 | Document | Purpose |
 |---|---|
+| [BOOK_ALIGNMENT.md](BOOK_ALIGNMENT.md) | Authoritative seven-layer implementation, coverage, and remaining-data matrix |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Architecture, assumptions, MVP boundaries, repository structure, and risks |
 | [DATA_MODEL.md](DATA_MODEL.md) | Entity model, temporal contract, ER diagrams, and proposed schema |
 | [DATA_SOURCES.md](DATA_SOURCES.md) | Phase 1 source and licensing plan |
 | [SCORING_ENGINE.md](SCORING_ENGINE.md) | Transparent signal, score, confidence, and reasoning design |
 | [BACKTESTING.md](BACKTESTING.md) | Point-in-time event-study and strategy-backtest design |
 | [STRATEGY_RESEARCH.md](STRATEGY_RESEARCH.md) | Book-aligned strategy hypotheses and graduation protocol |
+| [SESSION_EDGE_RESEARCH.md](SESSION_EDGE_RESEARCH.md) | Frozen fundamental-biased London liquidity-edge protocol and milestones |
 | [API_DESIGN.md](API_DESIGN.md) | Initial REST contracts and response shapes |
 | [DASHBOARDS.md](DASHBOARDS.md) | Page map and wireframe descriptions |
 | [MILESTONES.md](MILESTONES.md) | Incremental Phase 1 plan and exact first vertical slice |

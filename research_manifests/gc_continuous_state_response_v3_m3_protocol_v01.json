@@ -1,0 +1,162 @@
+{
+  "version": "GC_CSR_EDGE_DISCOVERY_V3_M3_PROTOCOL_V1_0",
+  "status": "READY_TO_FREEZE_PRE_OUTCOME",
+  "predecessor": {
+    "m2_status": "PASS_V3_M2_OUTCOME_BLIND_PREDICTOR_MATERIALIZATION",
+    "m2_final_seal_receipt": "cd90cda29077067a84613559abec866bab17d88665384ab81a836efadd663a62",
+    "m2_r1_status": "PASS_V3_M2_R1_SUPPORT_FEASIBILITY_AND_SOURCE_COVERAGE_DISPOSITION",
+    "m2_r1_final_seal_receipt": "b02c5d9337b65c6d5e748180f29c58a9d89ec866aa17d23e9ef2c9fad3dfc8c6",
+    "eligible_registry_receipt": "bda16c3cc7ad6919ed4da8fcf1bdd64ba4c0f4c4e1845eaa4f0a6ce8522eadc0"
+  },
+  "population": {
+    "period": "2021-11-08/2024-12-13",
+    "anchors_total": 5984,
+    "anchors_per_session": 2992,
+    "sessions": ["LONDON", "NEW_YORK"],
+    "anchor_offsets_minutes": [0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225],
+    "stage1_eligible_per_session": 9,
+    "stage2_eligible_per_session": 5,
+    "stage1_support_fail": ["CSR_STRUCTURE_MOMENTUM_15M"],
+    "stage2_support_fail": ["CSR_INT_OFI_SESSION_LEVEL_TENSION"],
+    "unsupported_modifier": ["CSR_SESSION_LEVEL_TENSION"]
+  },
+  "outcomes": {
+    "source": "sealed IC Markets MT5 XAUUSD one-minute source",
+    "source_sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+    "fixed_point_scale": 1000000000,
+    "start": "close of exact complete bar [decision_at-1m, decision_at) with available_at <= decision_at",
+    "endpoint": "close of Hth exact complete subsequent bar in [decision_at, decision_at+H)",
+    "primary_horizon_minutes": 15,
+    "diagnostic_horizons_minutes": [5, 30, 60],
+    "maximum_required_timestamp_span_minutes": 61,
+    "neutral": "exact zero fixed-point displacement",
+    "neutral_in_spearman": true,
+    "neutral_excluded_from_nonflat_accuracy_only": true,
+    "missing_policy": "retain the frozen anchor and mark the affected horizon UNKNOWN; no gap skipping, interpolation, imputation, substitute provider, or later bar",
+    "primary_metadata_readiness": "per session require at least 80% anchor completeness, 150 dates, 30 blocks, each validation fold at least 35 dates and 480 anchors, and at least 80% of each frozen OOF-year date universe",
+    "test_specific_primary_outcome_coverage": "apply the same gates after intersecting the frozen predictor or interaction availability with valid 15m outcomes; failure is INCONCLUSIVE_OUTCOME_COVERAGE",
+    "test_specific_primary_outcome_coverage_gates": {
+      "stage1_completeness_minimum": 0.8,
+      "stage2_joint_completeness_minimum": 0.7,
+      "distinct_dates_minimum": 150,
+      "distinct_blocks_minimum": 30,
+      "each_validation_fold_dates_minimum": 35,
+      "each_validation_fold_anchors_minimum": 480,
+      "each_required_year_oof_date_coverage_minimum": 0.8,
+      "annual_denominator": "frozen predictor-eligible or interaction-joint-eligible OOF session dates in that year",
+      "annual_minimum_rounding": "ceil",
+      "failure_disposition": "INCONCLUSIVE_OUTCOME_COVERAGE_WITH_NO_RELATIONSHIP_STATISTIC"
+    },
+    "diagnostic_horizon_missingness": "reported as UNKNOWN and excluded only from that diagnostic; never a primary pass gate and never a rescue",
+    "source_opening_limit": 1
+  },
+  "transform": {
+    "fit_on_training_fold_only": true,
+    "winsor_quantiles": [0.01, 0.99],
+    "quantile_method": "linear",
+    "center": "median",
+    "scale": "unscaled MAD, then population standard deviation only if MAD is zero",
+    "zero_or_nonfinite_scale": "INCONCLUSIVE_MODEL_DEGENERACY",
+    "outcome_winsorized": false
+  },
+  "stage1": {
+    "model": "deterministic Huber IRLS",
+    "epsilon": 1.35,
+    "alpha_slope_only": 0.0001,
+    "fit_intercept": true,
+    "intercept_penalized": false,
+    "maximum_iterations": 1000,
+    "relative_tolerance": 1e-10,
+    "primary_score": "expected-sign-adjusted training-fold-transformed predictor",
+    "coefficient_gate": "Huber slope has registered expected sign in every fold"
+  },
+  "stage2": {
+    "model": "closed-form hierarchical ridge main effects plus registered interaction",
+    "alpha_all_slopes": 1.0,
+    "fit_intercept": true,
+    "intercept_penalized": false,
+    "primary_score": "registered interaction score after training-only input transforms",
+    "comparison": "separately fitted main-effects ridge under the identical fold",
+    "incremental_oof_spearman_minimum": 0.03,
+    "oof_mae_reduction_minimum_fraction": 0.01,
+    "interaction_coefficient_gate": "interaction slope has registered expected sign in every fold"
+  },
+  "folds": [
+    {"fold": 1, "train_blocks": [1, 10], "validate_blocks": [11, 19]},
+    {"fold": 2, "train_blocks": [1, 19], "validate_blocks": [20, 28]},
+    {"fold": 3, "train_blocks": [1, 28], "validate_blocks": [29, 38]}
+  ],
+  "resampling": {
+    "bootstrap": {
+      "repetitions": 20000,
+      "unit": "selected_month_week_id",
+      "method": "fixed full-OOF average ranks with resampled-block weighted rank correlation and accuracy lift",
+      "quantiles": [0.025, 0.975],
+      "quantile_method": "linear",
+      "minimum_finite": 19000
+    },
+    "permutation": {
+      "repetitions": 100000,
+      "unit": "session_date",
+      "method": "permute complete outcome date vectors within validation fold and identical anchor-offset signature",
+      "two_sided": true,
+      "p_value": "(1 + count(abs(permuted_rho) >= abs(observed_rho))) / (repetitions + 1)"
+    },
+    "seed": {
+      "generator": "NumPy PCG64",
+      "derivation": "base seed is the first eight SHA-256 bytes, big-endian unsigned, of GC_CSR_V3_M3|session|stage|test_id|method; each horizon permutation sub-seed is the first eight SHA-256 bytes, big-endian unsigned, of base_seed|Hhorizon"
+    }
+  },
+  "primary_gates": {
+    "signed_oof_spearman_min": 0.08,
+    "oof_nonflat_direction_accuracy_min": 0.54,
+    "bootstrap_lower_rho_gt": 0.0,
+    "bootstrap_lower_accuracy_lift_gt": 0.0,
+    "bootstrap_finite_each_gte": 19000,
+    "bh_q_max": 0.05,
+    "all_validation_fold_rho_gt": 0.0,
+    "validation_folds_rho_gte_0_05_minimum_count": 2,
+    "required_year_rho_gt_zero": [2022, 2023, 2024],
+    "expected_coefficient_sign_every_fold": true
+  },
+  "multiplicity": {
+    "primary": "Benjamini-Hochberg separately by session and stage across every support-eligible test",
+    "technical_inconclusive_in_bh_family": "retain the preregistered family member with p=1.0 rather than shrinking the family",
+    "diagnostic_horizons": "Holm across 5m, 30m, and 60m within test; descriptive only"
+  },
+  "status_rules": {
+    "PASS": "every frozen primary and stage-specific gate passes",
+    "REJECT": "technical gates pass but one or more relationship/robustness gates fail",
+    "INCONCLUSIVE": "only preregistered outcome coverage, model convergence/degeneracy, or finite-resampling technical failure",
+    "SUPPORT_FAIL": "preserved outcome-blind M2-R1 disposition; no outcome calculation"
+  },
+  "candidate_policy": {
+    "maximum_per_session": 2,
+    "zero_acceptable": true,
+    "development_pass_is_validated_edge": false,
+    "ranking": [
+      "lowest BH q",
+      "highest bootstrap lower rho",
+      "highest accuracy",
+      "highest minimum fold rho",
+      "greatest date support",
+      "lexical test ID"
+    ]
+  },
+  "reproduction": {
+    "primary_predictor_reader": "whole-table",
+    "reference_predictor_reader": "row-group batches of seven",
+    "outcome_arithmetic": "independent native-float and Decimal parses compared at fixed-point scale",
+    "joined_parquet_byte_identical": true,
+    "primary_reference_stage_payload_exact": true,
+    "stage1_sealed_before_stage2": true
+  },
+  "locked": {
+    "calendar_2025": true,
+    "calendar_2026": true,
+    "feature_or_test_addition": true,
+    "retuning_inversion_repair_selective_filtering": true,
+    "additional_source_acquisition": true,
+    "execution_entries_exits_trades_pnl_r_multiples_returns": true
+  }
+}

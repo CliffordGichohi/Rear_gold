@@ -1,0 +1,98 @@
+{
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "control_set_hash": "4b34a0edf1fd9726ec979be326c401ad3b620a734ef6f46270ecf42add15d3b5",
+  "controls": {
+    "contract": {
+      "bytes": 7896,
+      "path": "GOLD_TREND_PULLBACK_CONTINUATION_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "cdcc428d5a7423bfa1ea9c598f8aa17c903206465a524acbcee45e0b91692bb3"
+    },
+    "feature_registry": {
+      "bytes": 2866,
+      "path": "research_manifests/gold_trend_pullback_continuation_edge_v1_feature_registry.json",
+      "sha256": "face5d96956d2d498137c7c2672b858a2381de13b3321b570f37382bd02980f6"
+    },
+    "protocol": {
+      "bytes": 1356,
+      "path": "research_manifests/gold_trend_pullback_continuation_edge_v1_protocol.json",
+      "sha256": "8673fe1ebcc67458c4b1cb74d3c114ec86dbb876e56e7960b8e2da26b0d6e08d"
+    },
+    "test_registry": {
+      "bytes": 3286,
+      "path": "research_manifests/gold_trend_pullback_continuation_edge_v1_test_registry.json",
+      "sha256": "cb55bdf6655a3b79c6a2c42492a3262f7fb1682d6d90fc95b584a9d197b35723"
+    }
+  },
+  "development_outcomes_accessed": false,
+  "execution_or_pnl_permitted": false,
+  "feature_values_accessed": false,
+  "paid_acquisition_authorized": false,
+  "predecessor_verification": {
+    "casebook_manifest_hash": "d1241633b073cd7307f1da00a13a2d76c132f3dccefc52a076be2c641f06b85f",
+    "census_artifact_set_hash": "7f58c4048af5b4bb2b01f569a2a071213dbb8a4abf2cdd0326fdadfca20b7294",
+    "census_status": "PASS_COMPLETE_DESCRIPTIVE_CENSUS",
+    "primary_reference_census_exact": true
+  },
+  "sealed_at_utc": "2026-08-07T12:46:57.297392Z",
+  "source_set_hash": "91482508214d9cd21880028a31a94ed2fb035582c1660b38934838508ea4ad25",
+  "sources": {
+    "casebook_manifest": {
+      "bytes": 5372,
+      "path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6"
+    },
+    "census_events_primary": {
+      "bytes": 4933833,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_structure_events.parquet",
+      "sha256": "05fcf2e1cfb4d4fde7bec65f14d0fcd26157ac498e620b9fe0210a63bdaf589d"
+    },
+    "census_events_reference": {
+      "bytes": 4933833,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/reference_structure_events.parquet",
+      "sha256": "05fcf2e1cfb4d4fde7bec65f14d0fcd26157ac498e620b9fe0210a63bdaf589d"
+    },
+    "census_final_seal": {
+      "bytes": 3938,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/final_seal.json",
+      "sha256": "e5a4527769cfe1fcfb92975dcbea4f15e5b057c4d6b42709fb53eebff421654d"
+    },
+    "census_pullbacks_primary": {
+      "bytes": 4976288,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_pullback_cases.parquet",
+      "sha256": "067fc581ffcbaadb589ac0ea428d82bc26b3546b549a4dfd1a6afbc512af35ee"
+    },
+    "census_pullbacks_reference": {
+      "bytes": 4976288,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/reference_pullback_cases.parquet",
+      "sha256": "067fc581ffcbaadb589ac0ea428d82bc26b3546b549a4dfd1a6afbc512af35ee"
+    },
+    "census_swings_primary": {
+      "bytes": 5514276,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_swings.parquet",
+      "sha256": "81966751e033cfbcbc7c291c42acca78289ec01a728c9d06d77024a5ec1d35a6"
+    },
+    "census_swings_reference": {
+      "bytes": 5514276,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/reference_swings.parquet",
+      "sha256": "81966751e033cfbcbc7c291c42acca78289ec01a728c9d06d77024a5ec1d35a6"
+    },
+    "fundamentals": {
+      "bytes": 8511617,
+      "path": "research_artifacts/gold_casebook_v01/fundamentals.jsonl.gz",
+      "sha256": "d2b776f60c4535978bbfb28706b4700e6d054a10f8d57cfee171c83b212b7235"
+    },
+    "positioning": {
+      "bytes": 92793,
+      "path": "research_artifacts/gold_casebook_v01/positioning.jsonl.gz",
+      "sha256": "e6d1aabf0d4401f3af4e54dc8ef4c0e4074772ec3f2199cfe9009b5a0b267228"
+    },
+    "price_bars": {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    }
+  },
+  "status": "SEALED_BEFORE_CONDITIONAL_FEATURE_OR_OUTCOME_ACCESS",
+  "version": "GOLD_TPCE_V1_DESIGN_FREEZE_1_0"
+}

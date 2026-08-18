@@ -353,9 +353,9 @@ trades, metrics, and result hash.
 ## 13. Implemented control-versus-fundamental experiment
 
 `ASIA_RANGE_ACCEPTANCE_V1` is retained as the price-only control.
-`FUNDAMENTAL_GUIDED_ASIA_ACCEPTANCE_V2` uses the exact same candidate, entry, exit,
-risk, and cost rules, then asks the point-in-time fundamental state for permission.
-Default gate requirements are:
+`BOOK_ALIGNED_ASIA_ACCEPTANCE_RESEARCH_V1` uses the exact same candidate, entry,
+exit, risk, and cost rules, then asks the point-in-time fundamental, catalyst, and
+broker-liquidity states for permission. Backtester version `1.5.0` defaults to:
 
 ```text
 coverage >= 35%
@@ -363,6 +363,8 @@ confidence >= 25%
 LONG:  directional_score >= +5
 SHORT: directional_score <= -5
 event risk: HIGH or EXTREME -> wait
+catalyst risk: UNKNOWN -> wait
+broker liquidity: ELEVATED, ABNORMAL, or UNKNOWN -> wait
 ```
 
 At each candidate close the evaluator filters observations by `available_at` and COT
@@ -377,6 +379,13 @@ mechanical setup after the event-risk state clears. A later accepted entry still
 requires closed-bar acceptance and occurs at the next bar; the macro bias never
 creates the entry by itself. The blackout can be disabled only as an explicit,
 stored research-control parameter.
+
+Unknown catalyst risk and unknown liquidity fail closed by default because absence
+of evidence is not evidence of safety. The Backtest Lab exposes
+`allow_unknown_event_risk` and `allow_unknown_liquidity` only as explicit
+research-control overrides. Those values, all gate decisions, data hashes, and the
+ruleset version are stored in run provenance. A result using either override is an
+ablation and cannot be called strict book-aligned evidence.
 
 The first 25-day sample looked positive, but the expanded observed interval
 correctly falsified that headline. Latest like-for-like IC Markets diagnostic,
@@ -488,3 +497,77 @@ Run IDs are `723adeee-e1c4-4d86-9033-c9a33b7e1fc8` and
 negative side. This rejects the current Asia/London acceptance candidate and
 preserves the remaining history for a separately specified, event-driven
 research hypothesis.
+
+### Version 1.5 point-in-time catalyst audit
+
+The same 1 April through 29 July 2023 interval was rerun after catalyst risk was
+made fail-closed:
+
+| Run | Candidates | Trades | Result | Interpretation |
+|---|---:|---:|---|---|
+| strict v1.5 default | 61 | 0 | all 61 rejected as `CATALYST_RISK_UNKNOWN_GATE` | Correct point-in-time result: the archive does not prove when its pre-release schedule and consensus first became knowable |
+| v1.5 research override | 61 | 16 | 5 wins, -0.414617 R expectancy, -649.48 USD, 0.542568 profit factor, 11.333195% max DD | Explicit ablation with `allow_unknown_event_risk=true`; not strict book-aligned evidence |
+
+Run IDs are `fddda1a6-f5c2-432c-ae4b-ed9030ee2dbc` (strict) and
+`fd03a168-48e0-4f25-a9dd-c9bcfb6de956` (override). The override retained 16
+candidates after rejecting 25 shorts and 18 longs for directional disagreement and
+2 candidates for elevated liquidity. It still lost after spread, slippage, and
+commission. Therefore the mechanical-plus-macro hypothesis has no demonstrated
+edge, while the strict result also identifies the exact missing dataset needed for
+a valid pre-release test: historical schedule/consensus snapshots with first-known
+timestamps.
+
+## 17. Fundamental-biased session opportunity study
+
+Research version `LONDON_SWEEP_RECLAIM_V0_1` is a separate observational engine,
+not an optimization of the rejected Asia-acceptance strategy.
+
+The engine:
+
+1. aggregates only earliest-version one-minute bars that were available by each
+   five-minute close;
+2. freezes the fundamental state five minutes before the DST-aware London open;
+3. constructs the complete 10:05-16:00 Tokyo range plus prior trading-day/week
+   levels known at London open;
+4. detects a bounded Asian-boundary sweep, rapid reclaim, and displacement
+   through pre-sweep micro structure;
+5. records a hypothetical next-complete-bar entry and structural invalidation;
+6. calculates 30/60/120/240-minute MFE, MAE, terminal R, and conservative
+   target-before-stop paths; and
+7. persists every requested London session, including incomplete and no-trigger
+   states.
+
+This design corrects the interpretation error exposed by the strict Candidate A
+run: unknown historical catalyst risk is a data-availability state, not proof
+that London produced no opportunity. Session studies retain that row in an
+`UNKNOWN` catalyst cohort. A later executable backtest may still fail closed or
+apply a separately frozen event policy.
+
+The stored cohort comparison is matched over the same opportunity rows:
+all triggers, fundamentals aligned/opposed/neutral, catalyst known-low/unknown/
+elevated, compressed/non-compressed Asia, and long/short. Positive observational
+paths do not become a performance claim. Transaction costs, explicit exit rules,
+walk-forward evaluation, and the one-shot 2025 validation remain mandatory before
+promotion.
+
+The complete frozen protocol is
+[SESSION_EDGE_RESEARCH.md](SESSION_EDGE_RESEARCH.md).
+
+## 18. Candidate C1 executable development result
+
+`C1_DELAYED_RECLAIM_EXECUTION_V1` converts the delayed-reclaim observational lead
+into exact one-minute fills. It uses next-five-minute-bar entry, the stored
+structural invalidation, a 1R target, a 240-minute time exit, observed entry/exit
+broker spread, 0.05 USD/oz adverse slippage per side, 7 USD/lot round-turn
+commission, and conservative stop-first ordering.
+
+The 19-trade price control produced +0.164 R net expectancy, 63.16% winners,
+1.402 profit factor, +301.93 USD net PnL, 249.74 USD costs, and 3.27% maximum
+drawdown. It remained positive in 2023, 2024, all nine predeclared parameter
+neighbours, and at 2.00x costs. Its bootstrap interval nevertheless crosses zero.
+
+The fundamental-aligned primary retained eight trades and produced -0.044 R,
+0.904 profit factor, and -37.23 USD. It was negative in 2024 and at every cost
+stress level. This primary fails the frozen continuation gate, so the system has
+not run the 2025 C1 holdout. `SESSION_EDGE_STRATEGY.md` is the authoritative
+contract and evidence checkpoint.

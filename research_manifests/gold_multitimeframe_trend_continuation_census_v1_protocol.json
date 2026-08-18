@@ -1,0 +1,24 @@
+{
+  "version": "GOLD_MT_TREND_CONTINUATION_CENSUS_V1_PROTOCOL_1_0",
+  "status": "SEALED_BEFORE_CENSUS_MATERIALIZATION",
+  "development": {"start_inclusive": "2021-08-01T00:00:00Z", "end_exclusive": "2025-01-01T00:00:00Z"},
+  "forward_locked": ["2025", "2026"],
+  "timeframes": {"M15": "15m", "H1": "1h", "H4": "4h"},
+  "scales": {"MICRO": 1, "STANDARD": 2, "MAJOR": 3},
+  "strict_extrema": true,
+  "swing_known_after_right_bars": true,
+  "same_bar_new_pivot_break_permitted": false,
+  "structure_event_types": [
+    "BULLISH_STRUCTURE_SWITCH", "BEARISH_STRUCTURE_SWITCH",
+    "BULLISH_CONTINUATION_BREAK", "BEARISH_CONTINUATION_BREAK"
+  ],
+  "pullback_resolutions": [
+    "CONTINUED", "FAILED_STRUCTURE_SWITCH",
+    "RESOLVED_BEFORE_CONFIRMATION", "UNRESOLVED_AT_BOUNDARY"
+  ],
+  "eligibility_filters": [],
+  "engineering_dates_research_eligible": false,
+  "relationship_testing_permitted": false,
+  "execution_or_pnl_permitted": false,
+  "paid_acquisition_authorized": false
+}

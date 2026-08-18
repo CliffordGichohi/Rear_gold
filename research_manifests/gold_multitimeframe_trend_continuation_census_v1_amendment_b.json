@@ -1,0 +1,10 @@
+{
+  "version": "GOLD_MT_CENSUS_V1_AMENDMENT_B_1_0",
+  "status": "SEALED_BEFORE_LINEAGE_RECERTIFICATION",
+  "preserved_v01_final_seal_sha256": "58fed3d76cb4ec002faf50703ca261b60ecc14e419d781658226d2dede384990",
+  "reason": "The V01 development counts reproduced exactly, but 106 structure events referenced July warm-up swings omitted from the exported swing registry and eight pullbacks referenced warm-up structure events omitted from the exported event registry.",
+  "bounded_correction": "Export all source-support swings and structure events needed for referential lineage with research_eligible=false before 2021-08-01. Keep development census counts and every structural definition unchanged. Add required year/timeframe/scale/direction tables and enforce zero missing references.",
+  "relationships_or_edge_tested": false,
+  "execution_or_pnl_calculated": false,
+  "forward_values_accessed": false
+}

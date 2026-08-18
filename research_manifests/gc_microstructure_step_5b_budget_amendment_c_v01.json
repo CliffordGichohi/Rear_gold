@@ -1,0 +1,61 @@
+{
+  "amendment_hash": "63ea7fb3bb4496a041c9edb09826250c38d4d59159bb7d9dbe392bc8a100e10b",
+  "authorized_at_utc": "2026-08-03T13:37:10.804769Z",
+  "batch_jobs_submitted": 0,
+  "budget": {
+    "available_credits_usd": 108.78,
+    "card_charge_permitted": false,
+    "maximum_amended_estimate_usd": 108.78,
+    "pre_amendment_reference_estimate_usd": 106.208453795313,
+    "pre_amendment_reference_headroom_usd": 2.571546204686996
+  },
+  "changes_only": {
+    "amended_dates": 188,
+    "amended_requests": 80,
+    "amended_start": "2021-11-08",
+    "end_unchanged": "2024-12-13",
+    "original_dates": 203,
+    "original_requests": 86,
+    "original_start": "2021-08-09",
+    "removed_months": [
+      "2021-08",
+      "2021-09",
+      "2021-10"
+    ]
+  },
+  "charge_incurred": false,
+  "classification": "OUTCOME_BLIND_BUDGET_REDUCTION_ONLY",
+  "data_acquired": false,
+  "fail_fast_gates": [
+    "all predecessor and Amendment C seals verify",
+    "destination remains at least 350 GiB free",
+    "all 80 amended estimates are freshly rerun",
+    "fresh combined estimate does not exceed USD 108.78",
+    "all amended requests and symbology match the frozen amended registry",
+    "no card charge is required or permitted"
+  ],
+  "market_values_or_outcomes_accessed": false,
+  "preserved_verdicts": {
+    "all_prior_research_and_engineering_verdicts": "PRESERVED_UNCHANGED",
+    "attempt_01": "STOP_STEP_5B_PRE_SUBMISSION_STORAGE_GATE",
+    "attempt_02": "STOP_STEP_5B_PRE_SUBMISSION_CREDIT_GATE"
+  },
+  "request_registry": {
+    "bytes": 234004,
+    "path": "research_manifests/gc_microstructure_step_5b_budget_c_request_registry_v01.json",
+    "sha256": "d8dfe8a04e0f824c98ec4e88b6c75b7e56214616e56124b76bdbfe0b20b0dd99"
+  },
+  "status": "FROZEN_USER_AUTHORIZATION_BEFORE_AMENDED_PROVIDER_QUOTE_OR_SUBMISSION",
+  "unchanged": [
+    "GLBX.MDP3",
+    "GC.v.0 continuous symbology",
+    "MBO and MBP-10 schemas",
+    "all 85 feature definitions",
+    "London and New York DST-aware cutoffs",
+    "fundamental and price/session context definitions",
+    "missing-data policy",
+    "no execution, trade, PnL, or outcome access in Step 5B"
+  ],
+  "user_instruction": "Remove the complete August, September, and October 2021 monthly blocks, producing 188 dates and 80 requests from 2021-11-08 through 2024-12-13; retain both schemas and prohibit any card charge.",
+  "version": "GC_MICROSTRUCTURE_STEP_5B_BUDGET_AMENDMENT_C_V0_1"
+}

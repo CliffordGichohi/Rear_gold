@@ -1,0 +1,47 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4A1_FREEZE_V0_1",
+  "status": "DIAGNOSTIC_PROTOCOL_SEALED_BEFORE_IMPLEMENTATION_AND_ROW_LEVEL_ACCESS",
+  "sealed_at_utc": "2026-07-31T12:03:00.9065348Z",
+  "classification": "ENGINEERING_FAILURE_DIAGNOSTIC_ONLY",
+  "research_or_validation_credit": "NONE",
+  "protocol": {
+    "path": "research_manifests/gc_microstructure_step_4a1_protocol_v01.json",
+    "bytes": 12901,
+    "sha256": "8520f5d87d128131085075d61381425d680b2d0e6d1469c6e8b1c440263824e4",
+    "json_valid": true
+  },
+  "pre_freeze_verification": {
+    "step_4a_status": "FAIL_FEATURE_INTEGRITY",
+    "step_4a_manifest_hash": "4960f1ee7f03e21cc490ea81b8e15554ed6c879527d8a02c3956b849cab2bf0f",
+    "step_4a_sealed_artifacts_verified": 7,
+    "step_4a_and_earlier_verdicts_preserved": true,
+    "mbo_source_sha256": "43a8a3bb2be9a4a36ab324e3fe0ca0e29ccb4529f445013a87156d3bad4c0ba3",
+    "mbp10_source_sha256": "4ead358f538d7c383a14f39bbde35b8ccfa21e38e58205edbc51bedfb2ed80d4",
+    "mbo_snapshot_quality_sha256": "e9cec68c3d78e3f54638dad9e05e172ca44e1bac15bffee2329eb8aa29e37185",
+    "mbp10_quality_sha256": "2782aeface4c16001195c4a7b4b4cf095f40e5e7adc5e28da4b46760baecb7ec",
+    "source_rows_accessed": false,
+    "book_values_accessed": false
+  },
+  "frozen_scope": {
+    "bad_ts_recv_tests_frozen": true,
+    "crossed_book_tests_frozen": true,
+    "native_event_group_key_frozen": true,
+    "completed_boundary_rule_frozen": true,
+    "exclusive_taxonomy_frozen": true,
+    "finding_rules_frozen": true,
+    "recommendation_rule_frozen": true,
+    "maximum_recommendations": 1,
+    "feature_pipeline_modification_permitted": false,
+    "correction_implementation_permitted": false
+  },
+  "prohibited_work_not_started": {
+    "feature_pipeline_rerun": false,
+    "data_repair_or_filter": false,
+    "additional_data_acquisition": false,
+    "another_date_inspection": false,
+    "market_value_reporting": false,
+    "outcome_or_signal_testing": false,
+    "execution_optimization": false,
+    "pnl_or_return_calculation": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "version": "GC_CSR_EDGE_DISCOVERY_V3_M2_PROTOCOL_V1_0",
+  "status": "FROZEN_PRE_PREDICTOR_VALUE_ACCESS",
+  "population": {
+    "period": "2021-11-08/2024-12-13",
+    "sessions": ["LONDON", "NEW_YORK"],
+    "session_dates_per_session": 187,
+    "anchors_per_session_date": 16,
+    "anchor_offsets_minutes": [0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225],
+    "anchors_per_session": 2992,
+    "anchors_total": 5984,
+    "binary_event_conditioning": false
+  },
+  "permitted_sources": {
+    "primary_london_gc_sha256": "f7cbc05e103f941dd8e9d3de641e263cb8184cc07b54bc158bc8fdb54091ef2d",
+    "primary_new_york_gc_sha256": "0ef075d27d1661e9c54438f2ab161d7df937208e79b03ba6b6c5c4e785f93c7e",
+    "reference_london_gc_sha256": "f7cbc05e103f941dd8e9d3de641e263cb8184cc07b54bc158bc8fdb54091ef2d",
+    "reference_new_york_gc_sha256": "0ef075d27d1661e9c54438f2ab161d7df937208e79b03ba6b6c5c4e785f93c7e",
+    "decision_context_projection_sha256": "6472047f31116f25f9d7bd289f5bd290175373e0efbe3fe0495047f0319700ff",
+    "xauusd_price_bars_sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+    "row_registry_sha256": "a7a36ae82d92ce91a25e36fcb7f1c95807de67c996d01198648246daa345dc5d",
+    "data_acquisition_permitted": false,
+    "charge_permitted_usd": 0.0
+  },
+  "streaming": {
+    "primary_reference_sequential": true,
+    "session_date_payloads_sequential": true,
+    "release_session_payload_immediately": true,
+    "one_parquet_row_group_per_session_date": true,
+    "formal_rss_cap_bytes": 4294967296,
+    "child_guard_bytes": 4026531840,
+    "rss_sampling_seconds": 0.05
+  },
+  "point_in_time": {
+    "feature_windows": "right-closed (decision-window, decision] by bucket_end",
+    "w60_valid_state_minimum": 57,
+    "w900_valid_state_minimum": 855,
+    "terminal_t0_requires_anchor_bucket": true,
+    "xau_bar_rule": "complete exact one-minute bar with close_time and available_at <= decision_at",
+    "aggregate_alignment": "UTC epoch aligned",
+    "momentum_15m": "latest complete close minus close exactly four contiguous complete 15m buckets earlier",
+    "atr_1h": "arithmetic mean of latest 14 true ranges using one preceding complete hour close",
+    "unknown_is_never_zero_or_neutral": true,
+    "stop_before_first_2025_record_deserialization": true
+  },
+  "feature_implementation": {
+    "feature_count": 12,
+    "stage1_count": 10,
+    "modifier_count": 2,
+    "gc_tick_fixed_1e9": 100000000,
+    "macro_snapshot_policy": "latest existing sealed session state remains current until superseded; no intraday state is fabricated",
+    "technical_latch_policy": "state-dependent values remain unavailable until the source reports a valid uncrossed terminal state",
+    "lineage_per_feature_per_anchor": true
+  },
+  "support_audit": {
+    "distinct_dates": 150,
+    "distinct_blocks": 30,
+    "validation_fold_dates": 35,
+    "validation_fold_anchors": 480,
+    "required_year_dates": 35,
+    "required_years": [2022, 2023, 2024],
+    "stage1_completeness": 0.8,
+    "stage2_joint_completeness": 0.7,
+    "positive_predictor_dates": 40,
+    "negative_predictor_dates": 40,
+    "stage2_sign_support": "For each chronological validation fold, fit the frozen robust center/scale to training blocks only, apply the registered interaction formula without outcomes, and require nonzero positive and negative interaction scores on at least 40 distinct OOF dates each.",
+    "statistics_are_outcome_blind": true
+  },
+  "reproduction": {
+    "independent_primary_reference_calculators": true,
+    "identical_row_identities": true,
+    "identical_schemas": true,
+    "identical_null_classifications": true,
+    "identical_per_column_semantic_checksums": true,
+    "identical_complete_row_checksums": true,
+    "identical_diagnostics": true,
+    "byte_identical_parquet": true
+  },
+  "locked": {
+    "development_outcomes": true,
+    "calendar_2025": true,
+    "calendar_2026": true,
+    "relationships_hit_rates_candidates_signals": true,
+    "execution_trades_pnl_r_multiples_returns": true
+  },
+  "pass_rule": "Technical PASS requires every predecessor, source, population, point-in-time, resource, schema, lineage, equality, reproduction and seal gate. Registered predictor support failures are recorded without replacement and do not by themselves fail technical materialization."
+}

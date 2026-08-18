@@ -1,0 +1,59 @@
+{
+  "cache_proof": {
+    "all_query_comparisons_equal": true,
+    "primary_reference_query_comparisons": 6,
+    "same_object_reused": true,
+    "status": "PASS_SYNTHETIC_IMMUTABLE_RANGE_TREE_CACHE_PROOF"
+  },
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "controls": {
+    "amendment_a": {
+      "bytes": 1329,
+      "path": "research_manifests/gold_h4_liquidity_target_capture_falsification_v1_amendment_a.json",
+      "sha256": "cf27ea04b8158d0446342ed2b4fc7bebef236eb409780427ba59b8c239686fc0"
+    },
+    "attempt_1_failure": {
+      "bytes": 915,
+      "path": "research_artifacts/gold_h4_liquidity_target_capture_falsification_v1/attempt_1_failure.json",
+      "sha256": "867a9bec186c82a37ef69677b2ce43039cbb61cea702dc29dfb8eb83d27ad97d"
+    },
+    "contract": {
+      "bytes": 9275,
+      "path": "GOLD_H4_LIQUIDITY_TARGET_CAPTURE_FALSIFICATION_CONTRACT_V1.md",
+      "sha256": "305c8e985b5ec814c486a679770221fe70eb61f0593ccd5681822f96b797a127"
+    },
+    "original_implementation": {
+      "bytes": 61776,
+      "path": "tools/run_gold_h4_liquidity_target_capture_falsification_v1.py",
+      "sha256": "88bd1757805c5834f47ba92af3f6a3dbe17c9c52a15820bdecf325376916c7f1"
+    },
+    "original_prepath_freeze": {
+      "bytes": 3648,
+      "path": "research_manifests/gold_h4_liquidity_target_capture_falsification_v1_prepath_freeze.json",
+      "sha256": "076911ebb718b9689aac8df8a069970c9256ec9c6f3c919e87d21e7fcb82d671"
+    },
+    "protocol": {
+      "bytes": 5208,
+      "path": "research_manifests/gold_h4_liquidity_target_capture_falsification_v1_protocol.json",
+      "sha256": "1fc74fa94c68526536861b5d1e109f0e8c25764d113138e1da16716f7ac943ea"
+    },
+    "recovery_implementation": {
+      "bytes": 12567,
+      "path": "tools/run_gold_h4_liquidity_target_capture_falsification_v1_r1.py",
+      "sha256": "20b4fefee3b17c8f34cf8dcbe31c17b2db985abe81e6f6c423433a43913425a9"
+    },
+    "recovery_tests": {
+      "bytes": 978,
+      "path": "tests/test_gold_h4_liquidity_target_capture_falsification_v1_r1.py",
+      "sha256": "9cfec69c3e8a926294974b55bb95897cca19f4db954281be5fb8b3b977c762dc"
+    }
+  },
+  "cumulative_path_opening_count_before_recovery": 1,
+  "paid_acquisition_usd": 0.0,
+  "research_result_produced_before_recovery": false,
+  "sealed_at_utc": "2026-08-12T07:23:07.029795Z",
+  "single_change": "REUSE_ONE_IMMUTABLE_RANGE_TREE_PER_IN_MEMORY_PRICE_FRAME",
+  "status": "SEALED_BEFORE_RECOVERY_PATH_REOPENING",
+  "version": "GOLD_H4_LIQUIDITY_TARGET_CAPTURE_FALSIFICATION_V1_RECOVERY_FREEZE_A_1_0"
+}

@@ -1,0 +1,215 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4A2_PROTOCOL_V0_1",
+  "status": "FROZEN_BEFORE_IMPLEMENTATION_AND_FEATURE_ROW_ACCESS",
+  "frozen_at_utc": "2026-07-31T12:31:19.2963824Z",
+  "classification": "FINAL_METADATA_CLASSIFICATION_DISPOSITION_ONLY",
+  "research_or_validation_credit": "NONE",
+  "purpose": "Classify the already-sealed Step 4A bucket-close book_crossed booleans by frozen market segment and state and issue exactly one bounded recertify-or-reject recommendation.",
+  "predecessor_preservation": {
+    "step_4a": {
+      "required_status": "FAIL_FEATURE_INTEGRITY",
+      "required_manifest_hash": "4960f1ee7f03e21cc490ea81b8e15554ed6c879527d8a02c3956b849cab2bf0f",
+      "required_verdict_hash": "853c99ea3c8655869ead48c15b09409952789cd8cb964df06c53aa84583c2c07"
+    },
+    "step_4a1": {
+      "required_status": "FAIL_DIAGNOSTIC_INTEGRITY",
+      "required_manifest_hash": "6bcc2f207fa8554f780aec269bd0ad3f4bff6686a37260bfc60b479b6f07eee5",
+      "required_verdict_hash": "85fee3a5de442f89ae2622ec4e66f15f6bb7fce3579dd714447bd53d635f97fb",
+      "required_bad_ts_recv_finding": "CONFIRMED",
+      "required_crossed_event_finding": "NOT_CONFIRMED",
+      "required_recommendation": "NONE"
+    },
+    "all_predecessor_artifacts_immutable": true,
+    "feature_pipeline_modification_permitted": false,
+    "prior_recommendation_implementation_permitted": false
+  },
+  "sealed_feature_payloads": {
+    "primary": {
+      "path": "research_artifacts/gc_microstructure_step_4a_v01/primary_features.parquet",
+      "bytes": 5957736,
+      "rows": 86400,
+      "columns": 85,
+      "sha256": "b559771bc332f400900da43e3c16619a5b75b9457c2a15975d390e977085eda3"
+    },
+    "reference": {
+      "path": "research_artifacts/gc_microstructure_step_4a_v01/reference_features.parquet",
+      "bytes": 5957736,
+      "rows": 86400,
+      "columns": 85,
+      "sha256": "b559771bc332f400900da43e3c16619a5b75b9457c2a15975d390e977085eda3"
+    },
+    "payloads_must_be_byte_identical": true,
+    "sealed_total_crossed_bucket_count_to_reproduce": 60,
+    "additional_data_acquisition_permitted": false,
+    "source_mbo_or_mbp_row_access_permitted": false,
+    "another_date_may_be_inspected": false
+  },
+  "allowed_column_contract": {
+    "columns_in_exact_read_order": [
+      "bucket_index",
+      "bucket_start_ns",
+      "bucket_end_ns",
+      "market_segment",
+      "market_state",
+      "book_crossed",
+      "state_source_row_ordinal"
+    ],
+    "types": {
+      "bucket_index": "int64_non_null",
+      "bucket_start_ns": "int64_non_null",
+      "bucket_end_ns": "int64_non_null",
+      "market_segment": "string_non_null",
+      "market_state": "string_non_null",
+      "book_crossed": "boolean_non_null",
+      "state_source_row_ordinal": "int64_nullable_accessed_only_for_hashing"
+    },
+    "all_other_feature_columns_prohibited": true,
+    "state_source_row_ordinal_may_not_be_emitted": true
+  },
+  "temporal_grid": {
+    "day_start_inclusive_ns": 1704758400000000000,
+    "day_end_exclusive_ns": 1704844800000000000,
+    "bucket_width_ns": 1000000000,
+    "bucket_count": 86400,
+    "bucket_index_rule": "0 through 86399 exactly once in increasing order",
+    "bucket_timestamp_rule": "start equals day_start plus bucket_index times one second; end equals start plus one second",
+    "segments": [
+      {
+        "segment_id": "CONTINUOUS_00_22",
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive_ns": 1704758400000000000,
+        "end_exclusive_ns": 1704837600000000000,
+        "expected_bucket_count": 79200
+      },
+      {
+        "segment_id": "MAINTENANCE_22_2245",
+        "state": "MAINTENANCE",
+        "start_inclusive_ns": 1704837600000000000,
+        "end_exclusive_ns": 1704840300000000000,
+        "expected_bucket_count": 2700
+      },
+      {
+        "segment_id": "PRE_OPEN_2245_23",
+        "state": "PRE_OPEN",
+        "start_inclusive_ns": 1704840300000000000,
+        "end_exclusive_ns": 1704841200000000000,
+        "expected_bucket_count": 900
+      },
+      {
+        "segment_id": "CONTINUOUS_23_24",
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive_ns": 1704841200000000000,
+        "end_exclusive_ns": 1704844800000000000,
+        "expected_bucket_count": 3600
+      }
+    ],
+    "expected_state_bucket_counts": {
+      "CONTINUOUS_MATCHING": 82800,
+      "MAINTENANCE": 2700,
+      "PRE_OPEN": 900
+    }
+  },
+  "classification_tests": {
+    "per_payload": [
+      "verify exact payload hash, byte size, row count, full schema column count, and allowed-column presence before row access",
+      "read exactly and only the seven allowed columns",
+      "verify complete unique ordered bucket grid and exact segment/state labels",
+      "verify book_crossed is non-null for all 86,400 buckets",
+      "verify every crossed bucket has a non-null state_source_row_ordinal",
+      "count total buckets and crossed buckets separately by segment_id",
+      "count total buckets and crossed buckets separately by market_state",
+      "sum crossed buckets in CONTINUOUS_00_22 and CONTINUOUS_23_24 as continuous_crossed_bucket_closes",
+      "reproduce the sealed total of 60 crossed bucket closes",
+      "calculate a complete selected-column stream checksum",
+      "calculate a crossed-bucket identity checksum without emitting raw state_source_row_ordinal"
+    ],
+    "crossed_bucket_identity_hash": "For each crossed row in bucket order, SHA-256 the payload-independent canonical tuple bucket_index, bucket_start_ns, bucket_end_ns, market_segment, market_state, book_crossed, and state_source_row_ordinal; then SHA-256 the ordered concatenation of those row hashes.",
+    "no_price_depth_or_other_feature_access": true
+  },
+  "independent_reproduction": {
+    "primary": "Sequential row scanner with fixed segment/state counters and streaming identity digests.",
+    "reference": "Independent column-vector validation followed by separately coded boolean-mask classification and canonical identity hashing.",
+    "each_implementation_reads_its_corresponding_sealed_payload": true,
+    "identical_required": [
+      "selected-column stream checksum",
+      "bucket-grid and schema integrity counts",
+      "total bucket counts by segment and state",
+      "crossed bucket counts by segment and state",
+      "continuous crossed bucket-close count",
+      "total crossed bucket-close count",
+      "crossed-bucket identity checksum",
+      "finding and recommendation"
+    ],
+    "any_difference": "FAIL_DISPOSITION_REPRODUCTION"
+  },
+  "binary_decision_rule": {
+    "zero_continuous_crossed_bucket_closes": {
+      "finding": "CONTINUOUS_BUCKET_CLOSE_STATES_CLEAN",
+      "recommendation_id": "RECERTIFY_WITH_SNAPSHOT_EXCEPTION_AND_CONTINUOUS_BUCKET_CLOSE_GATE_V0_1",
+      "recommendation_text": "In a separately authorized amendment, permit BAD_TS_RECV only for rows satisfying the Step 4A.1 confirmed snapshot semantics; apply the crossed-book integrity gate only to CONTINUOUS_MATCHING one-second bucket-close states; report PRE_OPEN and MAINTENANCE crossed states separately without treating them as continuous-state failures; keep every other Step 4A definition and gate unchanged."
+    },
+    "one_or_more_continuous_crossed_bucket_closes": {
+      "finding": "CONTINUOUS_BUCKET_CLOSE_STATES_CROSSED",
+      "recommendation_id": "REJECT_CURRENT_ASOF_STATE_CONSTRUCTION_V0_1",
+      "recommendation_text": "Reject the current Step 4A as-of-state construction for research use; do not repair it on the engineering date."
+    },
+    "exactly_one_recommendation_required": true,
+    "recommendation_implementation_permitted": false
+  },
+  "technical_output_policy": {
+    "permitted": [
+      "payload metadata and hashes",
+      "bucket counts by segment and state",
+      "book_crossed boolean counts",
+      "hashed crossed-bucket and state-row identities",
+      "integrity booleans and checksums",
+      "finding and recommendation"
+    ],
+    "prohibited": [
+      "raw state_source_row_ordinal",
+      "prices, depths, sizes, counts, spreads, midpoints, microprices, imbalances, event flows, or other feature values",
+      "source MBO or MBP rows",
+      "outcomes, signals, execution, trades, or PnL"
+    ]
+  },
+  "formal_gates": {
+    "step_4a_and_step_4a1_seals_valid": true,
+    "feature_payload_hashes_sizes_schema_and_rows_exact": true,
+    "only_allowed_columns_accessed": true,
+    "bucket_grid_segments_and_states_exact": true,
+    "book_crossed_complete_boolean": true,
+    "crossed_state_identity_available_and_only_hashed": true,
+    "sealed_total_60_crossed_buckets_reproduced": true,
+    "primary_and_reference_results_identical": true,
+    "exactly_one_binary_recommendation": true,
+    "recommendation_not_implemented": true,
+    "no_source_data_other_date_market_value_outcome_signal_execution_or_pnl_access": true
+  },
+  "status_precedence": [
+    "FAIL_PREDECESSOR_OR_PAYLOAD_INTEGRITY",
+    "FAIL_DISPOSITION_INTEGRITY",
+    "FAIL_DISPOSITION_REPRODUCTION",
+    "PASS_DISPOSITION_REPRODUCTION"
+  ],
+  "status_rules": {
+    "FAIL_PREDECESSOR_OR_PAYLOAD_INTEGRITY": "A predecessor seal, feature payload hash, byte size, row count, schema, or allowed column differs.",
+    "FAIL_DISPOSITION_INTEGRITY": "A grid, segment, state, boolean-completeness, identity, sealed-count, allowed-access, recommendation-count, or prohibited-work gate fails.",
+    "FAIL_DISPOSITION_REPRODUCTION": "The independent payload classifications differ on any frozen required output.",
+    "PASS_DISPOSITION_REPRODUCTION": "Every frozen integrity and independent-reproduction gate passes and the binary recommendation is recorded without implementation."
+  },
+  "prohibited": [
+    "modifying or relabeling Step 4A, Step 4A.1, or any earlier artifact or verdict",
+    "reading any feature column outside the seven-column allowlist",
+    "emitting raw state_source_row_ordinal",
+    "accessing MBO or MBP source rows",
+    "accessing or reporting market values or other feature values",
+    "repairing, filtering, or rerunning the feature pipeline",
+    "acquiring or substituting data",
+    "inspecting another date",
+    "testing outcomes, signals, candidates, or relationships",
+    "execution optimization",
+    "trades, PnL, R multiples, or account returns",
+    "implementing either recommendation"
+  ],
+  "completion_policy": "Record the exact segment/state counts, independently reproduce them, issue exactly one binary recommendation, document and seal Step 4A.2, and stop without implementation."
+}

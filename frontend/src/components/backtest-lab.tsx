@@ -41,6 +41,7 @@ type FormState = {
   fundamentalCoverage: string;
   fundamentalConfidence: string;
   blockHighImpactEvents: boolean;
+  allowUnknownEventRisk: boolean;
   blockLiquidityRisk: boolean;
   allowUnknownLiquidity: boolean;
 };
@@ -99,6 +100,8 @@ export function BacktestLab({ initialRange, initialRun, initialRuns }: Props) {
     ),
     blockHighImpactEvents:
       initialRun?.parameters.block_high_impact_events !== false,
+    allowUnknownEventRisk:
+      initialRun?.parameters.allow_unknown_event_risk === true,
     blockLiquidityRisk:
       initialRun?.parameters.block_elevated_or_abnormal_liquidity !== false,
     allowUnknownLiquidity:
@@ -168,6 +171,7 @@ export function BacktestLab({ initialRange, initialRun, initialRuns }: Props) {
           fundamental_min_coverage: Number(form.fundamentalCoverage),
           fundamental_min_confidence: Number(form.fundamentalConfidence),
           block_high_impact_events: form.blockHighImpactEvents,
+          allow_unknown_event_risk: form.allowUnknownEventRisk,
           block_elevated_or_abnormal_liquidity: form.blockLiquidityRisk,
           allow_unknown_liquidity: form.allowUnknownLiquidity,
         }),
@@ -365,6 +369,24 @@ export function BacktestLab({ initialRange, initialRun, initialRuns }: Props) {
                     Block new entries during high/extreme event risk. Keep this
                     enabled for the book-aligned strategy; disable only as a
                     named research control.
+                  </span>
+                </label>
+                <label className="col-span-2 flex items-start gap-3 rounded-xl border border-[var(--border)] bg-black/10 p-4 text-xs leading-5 text-[var(--muted)]">
+                  <input
+                    checked={form.allowUnknownEventRisk}
+                    className="mt-1 accent-[var(--gold)]"
+                    type="checkbox"
+                    onChange={(event) =>
+                      setForm((current) => ({
+                        ...current,
+                        allowUnknownEventRisk: event.target.checked,
+                      }))
+                    }
+                  />
+                  <span>
+                    Allow unknown historical catalyst risk only as an explicit
+                    research override. The book-aligned default is to wait when
+                    the point-in-time calendar cannot prove what was approaching.
                   </span>
                 </label>
                 <label className="col-span-2 flex items-start gap-3 rounded-xl border border-[var(--border)] bg-black/10 p-4 text-xs leading-5 text-[var(--muted)]">

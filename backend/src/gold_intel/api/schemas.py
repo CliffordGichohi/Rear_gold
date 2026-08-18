@@ -512,6 +512,7 @@ class BacktestRunRequest(BaseModel):
     fundamental_min_coverage: float = Field(default=35.0, ge=0, le=100)
     fundamental_min_confidence: float = Field(default=25.0, ge=0, le=100)
     block_high_impact_events: bool = True
+    allow_unknown_event_risk: bool = False
     block_elevated_or_abnormal_liquidity: bool = True
     allow_unknown_liquidity: bool = False
 

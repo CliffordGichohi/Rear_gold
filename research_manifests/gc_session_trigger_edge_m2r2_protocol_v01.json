@@ -1,0 +1,49 @@
+{
+  "attempt_budget": {
+    "recertification_attempts": 1
+  },
+  "authorization_sha256": "5a0d7a746eed11217e4886d0a9b17e7e528e9c57e73113cc1d7c94d075fd64a1",
+  "formal_pass_gates": [
+    "predecessor and source seals valid",
+    "exact preserved 15 crossed and 3 unresolved findings",
+    "raw terminal crossed count exactly 15 and post-policy crossed count zero",
+    "zero invalid book-state values retained",
+    "exact primary/reference source rows and anchors",
+    "exact feature row identities, missingness classifications, column/null/complete checksums",
+    "exact decision and event identities/checksums",
+    "exact support counts and all 12 session-family Stage-1 tests support eligible",
+    "no invalid state contributes to an eligible GC microstructure event",
+    "one attempt, zero prohibited work"
+  ],
+  "frozen_at_utc": "2026-08-05T08:34:22.284109Z",
+  "hard_kill_gate": "Any formal FAIL permanently terminates this microstructure branch without another engineering diagnostic.",
+  "pass_disposition": "Advance only to separately authorized relationship discovery.",
+  "pre_freeze_proof": {
+    "bytes": 3342,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_session_trigger_edge_m2r2_v01\\pre_freeze_policy_proof.json",
+    "sha256": "cfba124ba6c7be8d6fb1c9f4d71eb9f7761bcdde27516884b783357851d1a7c6"
+  },
+  "predecessors": {
+    "m2_final_seal_receipt": "39aaf9ac37851a2bc948aba2fb503d68085563071604a50a672094f1560f000f",
+    "m2_status": "FAIL_FULL_SESSION_TIMESTAMP_COVERAGE",
+    "m2r1_final_seal_receipt": "6d728c21f52cb189d82db2b20d8acd402bb8cf9d44ca142064b708e5d1865df2",
+    "m2r1_status": "FAIL_DIAGNOSTIC_REPRODUCTION",
+    "m2r1a1_final_seal_receipt": "31b659447d417696dc625dacfc7ccca8bfa913a1efa0866bd77be18315a01517",
+    "m2r1a1_status": "PASS_M2_R1_A1_REFERENCE_REPRODUCTION",
+    "preserved_finding_checksum": "4d4c4a122a6eee52549720d091311c30bc5b8c1f4552b67382da7de7d66e1182",
+    "preserved_terminal_crossed_findings": 15,
+    "preserved_unresolved_xau_findings": 3
+  },
+  "status": "FROZEN_AFTER_POLICY_PROOF_BEFORE_DEVELOPMENT_METADATA",
+  "universal_policy": {
+    "book_fields_during_latch": "state_available=false; state identity, age, prices and depths null; locked/crossed false only in the disposition output while raw classification remains separately counted.",
+    "latch_release": "First later, different source ordinal that is F_LAST, state-available, two-sided, unlocked, and uncrossed.",
+    "mbo_flow_during_latch": "Retained because event-flow metadata does not use the invalid MBP book state.",
+    "ofi_during_latch": "quote OFI transitions become skipped, transition count and raw contribution become zero.",
+    "preserve_original_classifications": true,
+    "scope": "Every 2021-2024 development bucket and XAU-dependent context, not only known findings.",
+    "terminal_crossed": "When the bucket-close state is two-sided crossed and its selected emission is F_LAST, latch UNAVAILABLE_TECHNICAL.",
+    "xau_missing": "Never impute. Current-bar and dependent-context quality is UNAVAILABLE_TECHNICAL; any event whose frozen +60-minute availability window contains a missing expected minute is UNAVAILABLE_TECHNICAL and excluded from support."
+  },
+  "version": "GC_SESSION_TRIGGER_EDGE_M2_R2_PROTOCOL_V1_0"
+}

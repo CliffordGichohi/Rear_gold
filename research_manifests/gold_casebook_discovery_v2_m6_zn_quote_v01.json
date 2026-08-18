@@ -1,0 +1,73 @@
+{
+  "authorization": {
+    "authorized_on": "2026-07-29",
+    "scope": "Obtain and report only a metadata cost estimate for the frozen calendar-2025 ZN source. Stop before any paid submission or market-value access.",
+    "verbatim": "Proceed to V2 Milestone 6 under the existing contract. First obtain a metadata-only Databento cost estimate for calendar-2025 GLBX.MDP3 ZN.v.0 one-minute data and report it before submitting any paid download. Do not inspect 2025 values or outcomes yet."
+  },
+  "authorization_boundary": {
+    "current_authorization": "METADATA_COST_ESTIMATE_ONLY",
+    "holdout_outcome_access_authorized": false,
+    "market_value_access_authorized": false,
+    "paid_submission_authorized": false
+  },
+  "contract": {
+    "governing_document": "GOLD_CASEBOOK_DISCOVERY_CONTRACT_V2.md",
+    "manifest_hash": "81e39b469111bb92a46c0d2c70f863cba438b647345104d4b8e8bc1a9e4d8188",
+    "milestone_6_rule": "Acquire and seal missing candidate-specific 2025 inputs without examining outcomes, verify hashes and completeness, then open the holdout once."
+  },
+  "manifest_hash": "25b4a24ebb01b783d567da3bb3cf9fa825e5e97f435dcb13281b7f3518ae1bcc",
+  "manifest_version": "GOLD_CASEBOOK_DISCOVERY_V2_M6_ZN_QUOTE_MANIFEST_V0_1",
+  "milestone": "V2_M6_PREOPEN_ZN_COST_ESTIMATE",
+  "output": {
+    "bundle_path": "research_artifacts/gold_casebook_discovery_v2_m6_zn_quote_v01",
+    "required_artifacts": [
+      "quote.json",
+      "manifest.json"
+    ]
+  },
+  "prohibited": {
+    "account_balance_or_entitlement_mutation": true,
+    "batch_job_submission": true,
+    "calendar_2025_feature_calculation": true,
+    "calendar_2025_market_value_access": true,
+    "calendar_2025_outcome_access": true,
+    "calendar_2026_market_value_access": true,
+    "candidate_retuning_or_replacement": true,
+    "paid_download": true,
+    "proxy_substitution": true
+  },
+  "request": {
+    "dataset": "GLBX.MDP3",
+    "end": "2026-01-01T00:00:00Z",
+    "schema": "ohlcv-1m",
+    "start": "2025-01-01T00:00:00Z",
+    "stype_in": "continuous",
+    "symbols": [
+      "ZN.v.0"
+    ]
+  },
+  "source": {
+    "coverage_data_hash": "d5b84416bc75fa1cf9f3ddb35dc04af630b0fcf41a6b2ba8b731aebd12606eb6",
+    "shortlist_bundle_hash": "774655f1dcfb0ebd95b6ec3e50fd480e2c5d5ea75abd4221dd5e7e79986f22ac",
+    "shortlist_hash": "25e3f9632fa8b661ad556522836c74474c5e874174a824d727b4fa43cff94686",
+    "shortlist_status": "FROZEN_BLOCKED_PENDING_ZN_2025_ACQUISITION"
+  },
+  "verified_sources": [
+    {
+      "path": "research_manifests/gold_casebook_discovery_contract_v02.json",
+      "sha256": "bf46840cdc9f0274cf454a22ff366f6ec4ee8c52b04d46a5258e7de5602e416e"
+    },
+    {
+      "path": "research_artifacts/gold_casebook_discovery_v2_shortlist_v01/manifest.json",
+      "sha256": "caf6c5147fb35dc428bdbd9b0245ef725bbcd72e6cb98de9740345353a55db95"
+    },
+    {
+      "path": "research_artifacts/gold_casebook_discovery_v2_shortlist_v01/shortlist.json",
+      "sha256": "6e87e7e9532cb378f2451a4e6a837608c732500941b0390b4e7d9979077da822"
+    },
+    {
+      "path": "research_artifacts/gold_casebook_discovery_v2_shortlist_v01/semantic_validation.json",
+      "sha256": "d0f0727366a45499e817feb6f91fb704af2a29dd444554ed82596cb6fa30a18e"
+    }
+  ]
+}

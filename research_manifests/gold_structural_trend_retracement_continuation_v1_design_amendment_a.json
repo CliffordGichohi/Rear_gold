@@ -1,0 +1,23 @@
+{
+  "version": "GOLD_STRC_V1_DESIGN_AMENDMENT_A_1_0",
+  "status": "SEALED_BEFORE_MARKET_MATERIALIZATION_OR_OUTCOME_ACCESS",
+  "scope": "Deterministic edge-case and retention semantics omitted from the prose contract; no threshold or research proposition is changed.",
+  "rules": {
+    "simultaneous_opposite_transition_confirmation": "NEUTRAL_CONFLICT_AND_CLEAR_BOTH_ARMS",
+    "new_sweep_replaces_same_direction_arm": true,
+    "transition_confirmation_must_follow_sweep_bar": true,
+    "h1_target_swings_retained_each_side": 4,
+    "h1_target_swing_max_age_calendar_days": 20,
+    "session_locations_frozen_at_session_open": true,
+    "zone_touch": "BAR_HIGH_GTE_ZONE_LOW_AND_BAR_LOW_LTE_ZONE_HIGH",
+    "impulse_internal_bos_confirmation_window": "SIX_BARS_STRICTLY_AFTER_FIRST_TOUCH",
+    "first_setup_occurrence_per_session_date": true,
+    "forming_candle_use": false,
+    "state_warmup": "ATR14_AND_TWO_LEFT_TWO_RIGHT_SWINGS_REQUIRED",
+    "entry_target_registry_time": "SIGNAL_CONFIRMATION_CLOSE_WITH_LEVELS_ALREADY_KNOWN",
+    "component_incomplete_closed_aggregate_policy": "ELIGIBLE_WITH_QUALITY_DIAGNOSTIC"
+  },
+  "development_outcomes_accessed": false,
+  "forward_values_accessed": false,
+  "paid_acquisition_usd": 0.0
+}

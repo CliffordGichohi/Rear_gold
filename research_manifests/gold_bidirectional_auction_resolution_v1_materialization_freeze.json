@@ -1,0 +1,25 @@
+{
+  "byte_identical": true,
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "certification": {
+    "bytes": 3687,
+    "path": "research_artifacts/gold_bidirectional_auction_resolution_v1/materialization_certification.json",
+    "sha256": "5aef1bb3565945dfbdfd763e54d9ef9964320aef88283d0288c4ad6e16d47c5a"
+  },
+  "development_outcomes_accessed": true,
+  "paid_acquisition_usd": 0.0,
+  "primary_plans": {
+    "bytes": 5934634,
+    "path": "research_artifacts/gold_bidirectional_auction_resolution_v1/primary_case_plans.parquet",
+    "sha256": "6b2b169629fff1d39ce0cf8dcb786fd60ed102068fa12b51d2929bebc62ff9fd"
+  },
+  "reference_plans": {
+    "bytes": 5934634,
+    "path": "research_artifacts/gold_bidirectional_auction_resolution_v1/reference_case_plans.parquet",
+    "sha256": "6b2b169629fff1d39ce0cf8dcb786fd60ed102068fa12b51d2929bebc62ff9fd"
+  },
+  "sealed_at_utc": "2026-08-11T12:44:36.751230Z",
+  "status": "PASS_BIDIRECTIONAL_PLAN_MATERIALIZATION",
+  "version": "GOLD_BIDIRECTIONAL_AUCTION_RESOLUTION_V1_MATERIALIZATION_FREEZE_1_0"
+}

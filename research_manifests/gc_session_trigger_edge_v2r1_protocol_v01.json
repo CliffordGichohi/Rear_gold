@@ -1,0 +1,70 @@
+{
+  "version": "GC_SESSION_TRIGGER_EDGE_V2R1_PROTOCOL_V1_0",
+  "status": "FROZEN_SCOPE_BEFORE_EXTERNAL_MEMORY_IMPLEMENTATION_PROOF",
+  "predecessor": {
+    "v2_status": "FAIL_GC_SESSION_TRIGGER_EDGE_V2_EXECUTION",
+    "v2_final_seal_receipt": "0f64374ad742ce60d00d0c381f3034b5170e028fc37391a44ad96e4d7c5831d3",
+    "v2_final_seal_sha256": "4184e39cc0cd2aaae34ee5c84ec64e8c469f45c0204bc3389048e0fa935a3a07",
+    "v2_verdict_sha256": "f38520305ac0c6e81df726effca8e7f83cdfe434c2bd3efc841bef4c0dbcea15",
+    "v2_freeze_sha256": "18396e473086374d963d6ac5ddd08f8e9d8f52cca09082cf8c477b07949a01fd",
+    "v2_implementation_sha256": "20167fee1028957c980335b7b13c0d5cfa32fca4db0fb1f635439d4151a9f319",
+    "sealed_committed_sessions": 293,
+    "failed_row_id": "TRIGGER_M2:2024-04-12:NEW_YORK",
+    "failed_implementation": "primary",
+    "failed_maximum_observed_rss_bytes": 4120739840
+  },
+  "analytical_definitions_changed": false,
+  "reader": {
+    "interval": "[start,end)",
+    "source_order": "source_row_order",
+    "primary_batch_rows": 65536,
+    "reference_batch_rows": 32768,
+    "primary_method": "pyarrow_dataset_filtered_batch_scan",
+    "reference_method": "parquet_row_group_ordered_batch_scan_with_independent_filter",
+    "mbo_retention": "aggregate_bucket_arrays_only",
+    "mbp10_retention": "anchor_previous_transition_and_terminal_bucket_state_only",
+    "source_identity": "deterministic_streaming_semantic_checksum_value_blind"
+  },
+  "resource": {
+    "formal_rss_cap_bytes": 4294967296,
+    "child_guard_rss_bytes": 3758096384,
+    "proof_qualification_rss_bytes": 2684354560,
+    "sampling_interval_seconds": 0.05,
+    "primary_and_reference_sequential": true,
+    "sessions_sequential": true
+  },
+  "proof": {
+    "engineering_dates": [
+      "2024-01-05",
+      "2024-01-09",
+      "2024-01-11",
+      "2024-01-30",
+      "2024-01-31",
+      "2024-03-20"
+    ],
+    "engineering_sessions": ["LONDON", "NEW_YORK"],
+    "adjacent_control_row_id": "TRIGGER_M2:2024-04-12:LONDON",
+    "stress_row_id": "TRIGGER_M2:2024-04-12:NEW_YORK",
+    "engineering_feature_equality": "exact",
+    "adjacent_v2_commit_equality": "exact",
+    "stress_primary_reference_feature_missingness_policy_and_technical_equality": "exact",
+    "proof_children_must_not_exceed_bytes": 2684354560,
+    "outcomes_permitted": false
+  },
+  "continuation": {
+    "imported_v2_commits": 293,
+    "expected_new_commits": 81,
+    "expected_total_available_sessions": 374,
+    "import_policy": "hash_verify_reference_only_no_copy_no_mutation_no_recompute",
+    "checkpoint_policy": "append_only_hash_verified_resume",
+    "logical_attempts": 1
+  },
+  "locked": {
+    "development_outcomes": true,
+    "calendar_2025": true,
+    "calendar_2026": true,
+    "relationships_candidates_execution_trades_pnl_returns": true,
+    "data_acquisition_and_charges": true
+  },
+  "failure_policy": "Any predecessor, source, proof, equality, support, resource, or seal failure terminates V2-R1 without another correction."
+}

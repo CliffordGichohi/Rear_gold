@@ -1,0 +1,27 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4B2_FREEZE_V0_1",
+  "status": "AUTHORIZATION_SEALED_BEFORE_FRESH_ESTIMATE_AND_BATCH_SUBMISSION",
+  "sealed_at_utc": "2026-07-31T14:14:50.0429677Z",
+  "classification": "ENGINEERING_ONLY_MULTI_DAY_SOURCE_ACQUISITION",
+  "research_or_validation_credit": "NONE",
+  "authorization": {
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_manifests\\gc_microstructure_step_4b2_authorization_v01.json",
+    "bytes": 10631,
+    "sha256": "db0eeb999708cd815af5064a92f8e7722013bd9396e2c321572fd0ae0e208bda"
+  },
+  "step_4b1_manifest": {
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_microstructure_step_4b1_v01\\manifest.json",
+    "bytes": 2993,
+    "sha256": "e53cd5aafbb447cf4d5ab4a2e65f89a1e063e7bfc0c164301a58170c1a891fd9",
+    "canonical_manifest_hash": "d58fb44b18af6173f597b3a99feba69e68ac0a7de265151e40799cb286d69d0d"
+  },
+  "maximum_combined_charge_usd": 3.5,
+  "minimum_free_storage_bytes": 21474836480,
+  "preliminary_free_storage_bytes": 200428007424,
+  "exact_request_count": 10,
+  "batch_job_submitted_before_this_receipt": false,
+  "charge_incurred_before_this_receipt": false,
+  "data_downloaded_before_this_receipt": false,
+  "market_values_or_outcomes_accessed_before_this_receipt": false,
+  "feature_or_signal_calculation_permitted": false
+}

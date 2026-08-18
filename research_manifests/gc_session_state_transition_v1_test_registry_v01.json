@@ -1,0 +1,756 @@
+{
+  "contexts": [
+    "MACRO_CONCORDANT",
+    "MACRO_REAL_USD_CONCORDANT",
+    "SESSION_OPEN_STRUCTURE_CONCORDANT",
+    "GC_CONFIRMING_WITHIN_5M"
+  ],
+  "counts": {
+    "per_session": 45,
+    "stage1": 18,
+    "stage2": 72,
+    "total": 90
+  },
+  "event_families": [
+    "LEVEL_SWEEP_RECLAIM",
+    "LEVEL_BREAK_ACCEPT",
+    "LEVEL_FAILED_ACCEPTANCE",
+    "STRUCTURE_BREAK_CONTINUATION",
+    "STRUCTURE_STATE_REVERSAL",
+    "COMPRESSION_EXPANSION_BREAK",
+    "FLOW_DEPTH_ALIGNMENT_ONSET",
+    "ABSORPTION_ONSET",
+    "FRAGILITY_FLOW_ONSET"
+  ],
+  "outcomes_accessed": false,
+  "registry_receipt": "9cb50705d0074f2e3f48ce2c9b745f82a9ac550bbd47e4318d219b117e2dff73",
+  "sessions": [
+    "LONDON",
+    "NEW_YORK"
+  ],
+  "status": "FROZEN_COMPLETE_REGISTRY_BEFORE_OUTCOME_ACCESS",
+  "tests": [
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON|S1|LEVEL_SWEEP_RECLAIM"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON|S1|LEVEL_BREAK_ACCEPT"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON|S1|LEVEL_FAILED_ACCEPTANCE"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "STRUCTURE_BREAK_CONTINUATION",
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON|S1|STRUCTURE_BREAK_CONTINUATION"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "STRUCTURE_STATE_REVERSAL",
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON|S1|STRUCTURE_STATE_REVERSAL"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "COMPRESSION_EXPANSION_BREAK",
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON|S1|COMPRESSION_EXPANSION_BREAK"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON|S1|FLOW_DEPTH_ALIGNMENT_ONSET"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "ABSORPTION_ONSET",
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON|S1|ABSORPTION_ONSET"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON|S1|FRAGILITY_FLOW_ONSET"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|LEVEL_SWEEP_RECLAIM|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|LEVEL_SWEEP_RECLAIM|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|LEVEL_SWEEP_RECLAIM|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|LEVEL_SWEEP_RECLAIM|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|LEVEL_BREAK_ACCEPT|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|LEVEL_BREAK_ACCEPT|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|LEVEL_BREAK_ACCEPT|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|LEVEL_BREAK_ACCEPT|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|LEVEL_FAILED_ACCEPTANCE|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|LEVEL_FAILED_ACCEPTANCE|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|LEVEL_FAILED_ACCEPTANCE|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|LEVEL_FAILED_ACCEPTANCE|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_BREAK_CONTINUATION",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|STRUCTURE_BREAK_CONTINUATION|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_BREAK_CONTINUATION",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|STRUCTURE_BREAK_CONTINUATION|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_BREAK_CONTINUATION",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|STRUCTURE_BREAK_CONTINUATION|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_BREAK_CONTINUATION",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|STRUCTURE_BREAK_CONTINUATION|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_STATE_REVERSAL",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|STRUCTURE_STATE_REVERSAL|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_STATE_REVERSAL",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|STRUCTURE_STATE_REVERSAL|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_STATE_REVERSAL",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|STRUCTURE_STATE_REVERSAL|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_STATE_REVERSAL",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|STRUCTURE_STATE_REVERSAL|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "COMPRESSION_EXPANSION_BREAK",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|COMPRESSION_EXPANSION_BREAK|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "COMPRESSION_EXPANSION_BREAK",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|COMPRESSION_EXPANSION_BREAK|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "COMPRESSION_EXPANSION_BREAK",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|COMPRESSION_EXPANSION_BREAK|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "COMPRESSION_EXPANSION_BREAK",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|COMPRESSION_EXPANSION_BREAK|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|FLOW_DEPTH_ALIGNMENT_ONSET|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|FLOW_DEPTH_ALIGNMENT_ONSET|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|FLOW_DEPTH_ALIGNMENT_ONSET|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|FLOW_DEPTH_ALIGNMENT_ONSET|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "ABSORPTION_ONSET",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|ABSORPTION_ONSET|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "ABSORPTION_ONSET",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|ABSORPTION_ONSET|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "ABSORPTION_ONSET",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|ABSORPTION_ONSET|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "ABSORPTION_ONSET",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|ABSORPTION_ONSET|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|FRAGILITY_FLOW_ONSET|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|FRAGILITY_FLOW_ONSET|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|FRAGILITY_FLOW_ONSET|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON|S2|FRAGILITY_FLOW_ONSET|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK|S1|LEVEL_SWEEP_RECLAIM"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK|S1|LEVEL_BREAK_ACCEPT"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK|S1|LEVEL_FAILED_ACCEPTANCE"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "STRUCTURE_BREAK_CONTINUATION",
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK|S1|STRUCTURE_BREAK_CONTINUATION"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "STRUCTURE_STATE_REVERSAL",
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK|S1|STRUCTURE_STATE_REVERSAL"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "COMPRESSION_EXPANSION_BREAK",
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK|S1|COMPRESSION_EXPANSION_BREAK"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK|S1|FLOW_DEPTH_ALIGNMENT_ONSET"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "ABSORPTION_ONSET",
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK|S1|ABSORPTION_ONSET"
+    },
+    {
+      "context": null,
+      "estimand": "MEAN_FIRST_PASSAGE_SCORE_VS_ZERO",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK|S1|FRAGILITY_FLOW_ONSET"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|LEVEL_SWEEP_RECLAIM|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|LEVEL_SWEEP_RECLAIM|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|LEVEL_SWEEP_RECLAIM|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|LEVEL_SWEEP_RECLAIM|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|LEVEL_BREAK_ACCEPT|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|LEVEL_BREAK_ACCEPT|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|LEVEL_BREAK_ACCEPT|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|LEVEL_BREAK_ACCEPT|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|LEVEL_FAILED_ACCEPTANCE|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|LEVEL_FAILED_ACCEPTANCE|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|LEVEL_FAILED_ACCEPTANCE|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|LEVEL_FAILED_ACCEPTANCE|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_BREAK_CONTINUATION",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|STRUCTURE_BREAK_CONTINUATION|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_BREAK_CONTINUATION",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|STRUCTURE_BREAK_CONTINUATION|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_BREAK_CONTINUATION",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|STRUCTURE_BREAK_CONTINUATION|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_BREAK_CONTINUATION",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|STRUCTURE_BREAK_CONTINUATION|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_STATE_REVERSAL",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|STRUCTURE_STATE_REVERSAL|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_STATE_REVERSAL",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|STRUCTURE_STATE_REVERSAL|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_STATE_REVERSAL",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|STRUCTURE_STATE_REVERSAL|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "STRUCTURE_STATE_REVERSAL",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|STRUCTURE_STATE_REVERSAL|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "COMPRESSION_EXPANSION_BREAK",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|COMPRESSION_EXPANSION_BREAK|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "COMPRESSION_EXPANSION_BREAK",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|COMPRESSION_EXPANSION_BREAK|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "COMPRESSION_EXPANSION_BREAK",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|COMPRESSION_EXPANSION_BREAK|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "COMPRESSION_EXPANSION_BREAK",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|COMPRESSION_EXPANSION_BREAK|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|FLOW_DEPTH_ALIGNMENT_ONSET|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|FLOW_DEPTH_ALIGNMENT_ONSET|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|FLOW_DEPTH_ALIGNMENT_ONSET|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|FLOW_DEPTH_ALIGNMENT_ONSET|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "ABSORPTION_ONSET",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|ABSORPTION_ONSET|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "ABSORPTION_ONSET",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|ABSORPTION_ONSET|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "ABSORPTION_ONSET",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|ABSORPTION_ONSET|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "ABSORPTION_ONSET",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|ABSORPTION_ONSET|GC_CONFIRMING_WITHIN_5M"
+    },
+    {
+      "context": "MACRO_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|FRAGILITY_FLOW_ONSET|MACRO_CONCORDANT"
+    },
+    {
+      "context": "MACRO_REAL_USD_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|FRAGILITY_FLOW_ONSET|MACRO_REAL_USD_CONCORDANT"
+    },
+    {
+      "context": "SESSION_OPEN_STRUCTURE_CONCORDANT",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|FRAGILITY_FLOW_ONSET|SESSION_OPEN_STRUCTURE_CONCORDANT"
+    },
+    {
+      "context": "GC_CONFIRMING_WITHIN_5M",
+      "estimand": "CONDITION_MINUS_KNOWN_CONTEXT_COMPLEMENT_FIRST_PASSAGE_SCORE",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK|S2|FRAGILITY_FLOW_ONSET|GC_CONFIRMING_WITHIN_5M"
+    }
+  ],
+  "version": "GC_SESSION_STATE_TRANSITION_V1_TEST_REGISTRY_1_0",
+  "year_2025_or_2026_accessed": false
+}

@@ -1,0 +1,276 @@
+{
+  "artifact_policy": {
+    "atlas_artifact": "research_artifacts/gold_session_behaviour_v3_atlas_v01/atlas.json",
+    "deterministic_json": {
+      "encoding": "UTF-8",
+      "key_order": "SORTED",
+      "newline_at_eof": true
+    },
+    "manifest_artifact": "research_artifacts/gold_session_behaviour_v3_atlas_v01/manifest.json",
+    "semantic_validation_artifact": "research_artifacts/gold_session_behaviour_v3_atlas_v01/semantic_validation.json"
+  },
+  "authorization": {
+    "authorized_on": "2026-07-30",
+    "scope": "Complete only V3 Milestone 3 descriptive development behaviour atlas and stop.",
+    "verbatim": "Proceed to V3 Milestone 3 under the existing contract. Use only the sealed 2021-08-01 through 2024-12-31 development case matrix. Build the descriptive behaviour atlas separately for London and New York, covering session paths, direction frequencies, excursions, timing, level interactions, and calendar stability. Do not attribute causes, test conditional relationships, create or rank candidates, optimize execution, or inspect 2025 or 2026 values. Record the results honestly and stop after completing Milestone 3."
+  },
+  "calendar_stability": {
+    "annual_stability_summary": {
+      "fields": [
+        "up_percentage_range",
+        "down_percentage_range",
+        "flat_percentage_range",
+        "median_signed_close_displacement_range",
+        "median_session_range_range"
+      ],
+      "interpretation": "Descriptive across-year range only; no trend test, significance test, selection, or stability pass/fail gate."
+    },
+    "groupings": {
+      "month_of_year": {
+        "keys": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "pooled_across_development_years": true
+      },
+      "weekday": {
+        "keys": [
+          "MONDAY",
+          "TUESDAY",
+          "WEDNESDAY",
+          "THURSDAY",
+          "FRIDAY"
+        ]
+      },
+      "year": {
+        "keys": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "partial_2021_label": "PARTIAL_FROM_2021_08_01"
+      }
+    },
+    "metrics_per_group": [
+      "case_count",
+      "close_direction_counts_and_percentages",
+      "signed_close_displacement_summary",
+      "session_range_summary",
+      "maximum_upward_displacement_summary",
+      "maximum_downward_displacement_summary",
+      "extreme_order_counts_and_percentages"
+    ],
+    "session_transfer_inference_permitted": false
+  },
+  "development_partition": {
+    "access_class": "DEVELOPMENT",
+    "end_exclusive": "2025-01-01T00:00:00+00:00",
+    "session_date_end_inclusive": "2024-12-31",
+    "session_date_start_inclusive": "2021-08-01",
+    "start_inclusive": "2021-08-01T00:00:00+00:00"
+  },
+  "direction_frequency": {
+    "denominator": "All complete cases for the relevant session and horizon.",
+    "horizons": [
+      "5m",
+      "15m",
+      "30m",
+      "60m",
+      "SESSION_CLOSE"
+    ],
+    "percentage_rounding_decimals": 6,
+    "states": {
+      "DOWN": "signed displacement < -0.01 USD/oz",
+      "FLAT": "absolute signed displacement <= 0.01 USD/oz",
+      "UP": "signed displacement > 0.01 USD/oz"
+    }
+  },
+  "excursion_and_close_measurements": {
+    "fields": [
+      "signed_close_displacement",
+      "absolute_close_displacement",
+      "maximum_upward_displacement",
+      "maximum_downward_displacement",
+      "maximum_downward_displacement_magnitude",
+      "session_range",
+      "path_efficiency",
+      "close_location_fraction"
+    ],
+    "maximum_downward_displacement_magnitude": "absolute value of the non-positive source maximum_downward_displacement",
+    "side_conditioned": false,
+    "trade_interpretation": false
+  },
+  "frozen_inputs": {
+    "case_matrix": {
+      "artifact_bytes": 103763781,
+      "artifact_path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/cases.jsonl.gz",
+      "artifact_sha256": "d0f5120713b5f9ce641c6285941bfc23d3aac3b83b561c8fc1138e33a5ede9b9",
+      "case_counts": {
+        "london": 833,
+        "new_york": 826,
+        "total": 1659
+      },
+      "manifest_file_sha256": "dddbe125d11afef2094b7843f5521b7bbfcc95178e3fa376b60af8bdd2efc3b5",
+      "manifest_hash": "d6aad4b861d98899d6fdcc92ea53a20221434af5038a3bcb86a8b9faa1d8e7b7",
+      "manifest_path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/manifest.json",
+      "schema_version": "gold-session-behaviour-v3-case-matrix-0.1.0"
+    },
+    "contract_manifest_hash": "79a74f81bce0b80ca6c5da6b420400479013484a4bb759684402546672fa140b",
+    "predecessor_state": {
+      "file_sha256": "3ef1b663e7267f1fe9979aaba4e57d34e1e0c69adaf7f9585205b57e5d5cb421",
+      "path": "research_artifacts/gold_session_behaviour_v3_state_v02.json",
+      "state_hash": "26bc72f56c868a542b4cafce57b177f59df94fd26a4db39b342cd0b35244d46c"
+    },
+    "traceability_catalog_hash": "8707c39eb75bf3c74ce33908b0a3f4b0a1f679ee68848f1d10dce25e4bdf6bb4"
+  },
+  "level_interactions": {
+    "allowed_decision_fields": [
+      "decision_state.levels[].level_id",
+      "decision_state.levels[].level_type"
+    ],
+    "first_interaction_timing": {
+      "denominator": "Touched levels with non-null first_interaction_at.",
+      "measurement": "whole minutes from case decision_at to first_interaction_at",
+      "summary": "frozen numeric summary"
+    },
+    "grouping": "level_type within session",
+    "metrics": [
+      "eligible_level_count",
+      "cases_with_level",
+      "touched_count_and_percentage",
+      "breached_count_and_percentage",
+      "accepted_count_and_percentage",
+      "rejected_count_and_percentage",
+      "failed_break_count_and_percentage",
+      "retested_count_and_percentage"
+    ],
+    "percentage_denominator": "eligible_level_count",
+    "permitted_by_contract": "Descriptive level interactions only; no claim that a level type causes or predicts an outcome."
+  },
+  "manifest_hash": "30ae532aeeb3c3639bc87adc089757b11d4b83ba698af689dbf312a8ad2c2cf2",
+  "manifest_version": "GOLD_SESSION_BEHAVIOUR_V3_M3_ATLAS_V0_1",
+  "milestone": "V3_M3_DEVELOPMENT_BEHAVIOUR_ATLAS",
+  "numeric_policy": {
+    "input_conversion": "Decimal constructed from the source JSON number string",
+    "mean": "arithmetic mean",
+    "missing_policy": "Null is excluded from the relevant numeric denominator and counted explicitly; no imputation.",
+    "numeric_output_rounding_decimals": 8,
+    "percentile_method": "Hyndman-Fan type 7 linear interpolation",
+    "percentiles": [
+      5,
+      10,
+      25,
+      50,
+      75,
+      90,
+      95
+    ],
+    "standard_deviation": "sample standard deviation with denominator n-1; null for n < 2"
+  },
+  "path_atlas": {
+    "baseline": "Each case's frozen neutral_reference.price at 08:01 local.",
+    "curve": "For each of the 48 source five-minute path points, calculate observed five-minute close minus neutral reference and summarize across all complete cases in the same session.",
+    "offsets": "The source path open offsets 0,5,...,235 minutes; its close becomes available five minutes later.",
+    "summary_per_offset": [
+      "count",
+      "missing_count",
+      "mean",
+      "standard_deviation",
+      "minimum",
+      "p05",
+      "p10",
+      "p25",
+      "median",
+      "p75",
+      "p90",
+      "p95",
+      "maximum",
+      "UP_count_and_percentage",
+      "DOWN_count_and_percentage",
+      "FLAT_count_and_percentage"
+    ]
+  },
+  "prohibited": {
+    "attribution_or_causal_language": true,
+    "calendar_2025_or_2026_source_open": true,
+    "candidate_creation_ranking_or_shortlisting": true,
+    "conditional_slice_by_macro_positioning_structure_cross_market_or_signal": true,
+    "correlation_regression_or_feature_outcome_join": true,
+    "decision_state_value_access_except_session_identity_date_and_level_id_type": true,
+    "execution_optimization": true,
+    "hypothesis_or_significance_testing": true,
+    "london_new_york_transfer_or_superiority_claim": true,
+    "mfe_mae_trade_direction_entry_stop_target_pnl_r_multiple_or_account_return": true,
+    "multiplicity_or_candidate_gate_calculation": true,
+    "p_value_or_predictive_metric": true
+  },
+  "recorded_at": "2026-07-30T09:45:55.2340749Z",
+  "session_separation": {
+    "combined_result_permitted": false,
+    "cross_session_difference_or_ranking_permitted": false,
+    "sessions": [
+      "LONDON",
+      "NEW_YORK"
+    ]
+  },
+  "timing_atlas": {
+    "extreme_order_states": [
+      "HIGH_FIRST",
+      "LOW_FIRST",
+      "SAME_BAR"
+    ],
+    "high_low_measurement": "whole minutes from decision_at to the earliest one-minute bar attaining the session high or low",
+    "time_bins_minutes_inclusive": [
+      {
+        "code": "M01_30",
+        "lower": 1,
+        "upper": 30
+      },
+      {
+        "code": "M31_60",
+        "lower": 31,
+        "upper": 60
+      },
+      {
+        "code": "M61_120",
+        "lower": 61,
+        "upper": 120
+      },
+      {
+        "code": "M121_180",
+        "lower": 121,
+        "upper": 180
+      },
+      {
+        "code": "M181_239",
+        "lower": 181,
+        "upper": 239
+      }
+    ]
+  },
+  "validation_gates": [
+    "The M2 result manifest, M2 state, M2 independent validation, and case artifact hashes match before any case row is read.",
+    "Exactly 1,659 development rows are read: 833 London and 826 New York.",
+    "Every case record hash recomputes and every row remains DEVELOPMENT_2021_2024.",
+    "Only the frozen outcome paths plus session identity/date and level ID/type fields are accessed.",
+    "London and New York results are separate; no combined score, difference, ranking, or transfer claim is produced.",
+    "All direction and extreme-order counts reconcile exactly to their denominators.",
+    "All calendar subgroup counts reconcile to each session total.",
+    "Every path offset has the complete session denominator and the frozen offset set.",
+    "Level-interaction counts reconcile to eligible level denominators and level IDs map uniquely.",
+    "No relationship, causal attribution, candidate, predictive metric, hypothesis test, execution field, trade result, 2025 value, or 2026 value is produced.",
+    "Atlas and result-manifest hashes recompute exactly.",
+    "An independent read-back validator passes before acceptance."
+  ]
+}

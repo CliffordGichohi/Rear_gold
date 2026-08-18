@@ -1,0 +1,66 @@
+{
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "controls": {
+    "pre_outcome_freeze": {
+      "bytes": 5420,
+      "path": "research_manifests/gold_sequential_auction_confirmation_entry_v1_pre_outcome_freeze.json",
+      "sha256": "69977f039d016ee4d454fb1cfd34092f9f89bbe4ceafb642c6dbf1d9120ead53"
+    },
+    "protocol": {
+      "bytes": 4780,
+      "path": "research_manifests/gold_sequential_auction_confirmation_entry_v1_protocol.json",
+      "sha256": "d67ff442df44bdb8f0a76da401620591179ba5b2b367bde3f7b96e21ee60b1c9"
+    }
+  },
+  "expected_output_rows": 133158,
+  "frozen_at_utc": "2026-08-10T13:16:30.440673Z",
+  "implementation": {
+    "bytes": 43855,
+    "path": "tools/materialize_gold_sequential_auction_confirmation_entry_v1.py",
+    "sha256": "67db485849fa72033bfb416f936235d72f93ae940b31bedba2b14610d4e7487d"
+  },
+  "independence": {
+    "primary_aggregation": "NUMPY_GROUP_AND_SEARCHSORTED",
+    "primary_sequence_lookup": "NUMPY_SEARCHSORTED",
+    "reference_aggregation": "TIMESTAMP_MAP_AND_PYTHON_ITERATION",
+    "reference_sequence_lookup": "EXACT_TIMESTAMP_DICTIONARY",
+    "required": "LOGICAL_EXACTNESS_DIAGNOSTIC_EXACTNESS_AND_BYTE_IDENTICAL_PARQUET"
+  },
+  "outcomes_opened_before_freeze": false,
+  "paid_acquisition_usd": 0.0,
+  "pre_entry_path": {
+    "interval": "ORIGINAL_ENTRY_INCLUSIVE_DELAYED_ENTRY_EXCLUSIVE",
+    "original_stop_touch": "PERMITTED_WITHOUT_POSITION",
+    "requires_contiguous_m1": true,
+    "target_touch": "NO_TRADE"
+  },
+  "signal_bar_semantics": {
+    "aggregation": "UTC_EPOCH_ALIGNED_EXACT_CONSTITUENT_M1_BARS",
+    "atr14": "MEAN_TRUE_RANGE_OF_14_STRICTLY_PRECEDING_BARS_WITH_15_BAR_CONTIGUOUS_PREHISTORY",
+    "decision": "COMPLETED_BAR_ONLY_ENTRY_AT_NEXT_COMPLETE_SIGNAL_BAR_OPEN",
+    "missing_expected_bar": "UNAVAILABLE_NO_COMPRESSION_ACROSS_GAP",
+    "search_origin": "FIRST_ALIGNED_SIGNAL_BAR_OPEN_GTE_ORIGINAL_ENTRY"
+  },
+  "status": "FROZEN_BEFORE_DEVELOPMENT_SEQUENCE_VALUES",
+  "synthetic_proof": {
+    "aggregation_minutes": [
+      1,
+      5,
+      15
+    ],
+    "sequence_result": {
+      "reason": "NO_TWO_CLOSE_ACCEPTANCE",
+      "status": "NO_CONFIRMATION"
+    },
+    "status": "PASS_SYNTHETIC_MATERIALIZER_PROOF"
+  },
+  "transition_semantics": {
+    "family_1": "FIRST_TWO_CONSECUTIVE_ACCEPTED_CLOSES_THEN_FIRST_VALID_RETEST",
+    "family_2": "FIRST_SWEEP_RECLAIM_THEN_FIRST_VALID_DISPLACEMENT_THEN_FIRST_VALID_RETEST",
+    "family_3": "FIRST_VALID_DISPLACEMENT_THEN_FIRST_VALID_RETEST",
+    "micro_break": "STRICT_CLOSE_THROUGH_EXTREME_OF_EXACT_THREE_PRECEDING_COMPLETE_SIGNAL_BARS",
+    "selection": "FIRST_QUALIFYING_STATE_THEN_FIRST_QUALIFYING_NEXT_STATE_WITHIN_FROZEN_WINDOW"
+  },
+  "version": "GOLD_SEQUENTIAL_AUCTION_CONFIRMATION_ENTRY_V1_MATERIALIZATION_IMPLEMENTATION_FREEZE_1_0"
+}

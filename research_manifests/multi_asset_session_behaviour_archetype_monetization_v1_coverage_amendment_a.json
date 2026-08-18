@@ -1,0 +1,37 @@
+{
+  "amendment_hash": "eaa7d85c972bb1f686de1ebfc629458502db411713ef544f5886039b551ffd2f",
+  "attempt_limit": 1,
+  "branch_gate": {
+    "each_of_six_instruments_has_passing_unit": true,
+    "minimum_passing_units": 10
+  },
+  "controls": {
+    "2025": false,
+    "2026": false,
+    "charge_usd": 0.0,
+    "market_values": false,
+    "outcomes": false
+  },
+  "documented_closure_rule": "R1_FROZEN_RULE_UNCHANGED",
+  "eligible_gap_classes": [
+    "DOCUMENTED_MARKET_UNAVAILABLE",
+    "NORMAL_NO_TICK_BAR_EMISSION"
+  ],
+  "failed_unit_disposition": "TECHNICALLY_UNAVAILABLE_RETAIN_IDENTITY_NO_DELETE_NO_IMPUTE",
+  "further_coverage_diagnostic_permitted": false,
+  "identity_count": 13380,
+  "normal_no_tick_rule": "R1_FROZEN_RULE_UNCHANGED",
+  "policy": "OBSERVED_QUOTE_PATH_VALIDITY_V0_1",
+  "preserved_m1_verdict": "FAIL_MILESTONE_1_COVERAGE_STOP",
+  "preserved_r1_verdict": "PASS_MILESTONE_1_R1_DIAGNOSTIC_REPRODUCTION",
+  "sealed_at_utc": "2026-08-12T12:44:03.786739Z",
+  "status": "FROZEN_BEFORE_R1_CLASSIFICATION_ROW_ACCESS",
+  "unavailable_gap_classes": [
+    "RECOVERABLE_EXISTING_SEALED_SOURCE",
+    "GENUINE_SOURCE_GAP",
+    "UNRESOLVED"
+  ],
+  "unit_policy": "EVALUATE_EACH_OF_15_UNITS_SEPARATELY",
+  "unit_readiness_floor": 0.9,
+  "version": "MSBAM_V1_COVERAGE_AMENDMENT_A_1_0"
+}

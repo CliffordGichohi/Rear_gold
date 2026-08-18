@@ -1,0 +1,161 @@
+{
+  "authorization": {
+    "authorized_on": "2026-07-29",
+    "scope": "Create and complete only the V2 contract and metadata-only coverage audit.",
+    "verbatim": "Create the Gold Casebook Discovery Contract V2. Preserve the original rejection, treat 2021-2024 as development, recognize London ZN as a post-hoc candidate with no 2024 validation credit, separate London and New York, keep execution constant, and keep 2025 locked. Complete only the contract and coverage audit first. Do not begin relationship discovery or inspect 2025 outcomes."
+  },
+  "candidate_budget": {
+    "london_maximum": 2,
+    "new_york_maximum": 2,
+    "post_hoc_london_zn_may_consume_one_london_slot": true,
+    "zero_candidates_per_session_permitted": true
+  },
+  "discovery_policy": {
+    "book_role": "Business vocabulary, data, epistemic, point-in-time, and explanation specification; not a predetermined answer.",
+    "candidate_maximum_conditions": 2,
+    "constant_execution_required": true,
+    "data_first": true,
+    "feature_universe_must_be_frozen_before_results": true,
+    "machine_learning_selector_permitted": false,
+    "missing_data_policy": "UNKNOWN; never neutral confirmation",
+    "return_target_is_ranking_criterion": false,
+    "session_specific_research": true
+  },
+  "execution": {
+    "changes_permitted": false,
+    "execution_manifest_hash": "724a4fef0fa4b526b4d30b9743c2dfa013c53f87b19262a36b05f3fd07c87d76",
+    "execution_manifest_path": "research_manifests/gold_casebook_constant_execution_v01.json",
+    "fixed_notional_ounces": 1.0,
+    "sessions": {
+      "LONDON": {
+        "decision_clock_local": "08:00",
+        "entry_clock_local": "08:01",
+        "exit_clock_local": "12:00",
+        "timezone": "Europe/London"
+      },
+      "NEW_YORK": {
+        "decision_clock_local": "08:00",
+        "entry_clock_local": "08:01",
+        "exit_clock_local": "12:00",
+        "timezone": "America/New_York"
+      }
+    }
+  },
+  "governing_document": "GOLD_CASEBOOK_DISCOVERY_CONTRACT_V2.md",
+  "holdout_access_policy": {
+    "allowed_before_shortlist_freeze": [
+      "filenames",
+      "file hashes",
+      "byte sizes",
+      "row counts",
+      "provider and source identifiers",
+      "minimum and maximum timestamps",
+      "timestamp-only session completeness",
+      "non-null counts",
+      "synthetic flags",
+      "point-in-time timestamp ordering counts"
+    ],
+    "holdout_year": 2025,
+    "open_once_for_entire_shortlist": true,
+    "prohibited_before_shortlist_freeze": [
+      "OHLC or market values",
+      "price direction",
+      "returns or P&L",
+      "MFE or MAE",
+      "feature values",
+      "feature-outcome joins",
+      "conditional performance",
+      "charts revealing price behaviour"
+    ],
+    "repair_after_holdout": false
+  },
+  "manifest_hash": "81e39b469111bb92a46c0d2c70f863cba438b647345104d4b8e8bc1a9e4d8188",
+  "manifest_version": "GOLD_CASEBOOK_DISCOVERY_CONTRACT_V0_2",
+  "milestones": [
+    "V2_M1_CONTRACT_AND_METADATA_COVERAGE",
+    "V2_M2_DESCRIPTIVE_OUTCOME_ATLAS",
+    "V2_M3_BOUNDED_RELATIONSHIP_DISCOVERY",
+    "V2_M4_INTERNAL_EXPANDING_WALK_FORWARD",
+    "V2_M5_SHORTLIST_FREEZE",
+    "V2_M6_CALENDAR_2025_HOLDOUT",
+    "V2_M7_EXECUTION_RESEARCH"
+  ],
+  "post_hoc_candidate": {
+    "candidate_code": "LONDON_ZN_4H_POSTHOC_V0_1",
+    "development_validation_credit": false,
+    "feature_id": "cross_zn_v_0_4_hours",
+    "rule_table": {
+      "FLAT": "NO_BIAS",
+      "NEGATIVE": "SHORT",
+      "POSITIVE": "LONG",
+      "UNKNOWN": "NO_BIAS"
+    },
+    "session": "LONDON",
+    "threshold": null,
+    "tuning_permitted": false
+  },
+  "predecessor": {
+    "candidate_code": "UNIVERSAL_ZN_4H_SIGN_V0_1",
+    "chronological_validation_manifest_hash": "4e070218bfe2be8d0113762bbc42d944e39fccf8916f9f7286a998c05e170269",
+    "chronological_validation_manifest_path": "research_manifests/gold_casebook_chronological_validation_v01.json",
+    "milestone_report_path": "GOLD_CASEBOOK_MILESTONE_6.md",
+    "result_manifest_hash": "e508b049961c622d09b8474815e0a4d3c8e3c814f03ce1f72b0154116594d3c4",
+    "result_manifest_path": "research_artifacts/gold_casebook_chronological_validation_v01/manifest.json",
+    "verdict": "REJECT_CHRONOLOGICAL_VALIDATION"
+  },
+  "prohibited": {
+    "account_scaling_or_leverage_search": true,
+    "calendar_2025_outcome_access": true,
+    "calendar_2026_repair_data": true,
+    "entry_exit_stop_target_or_reward_to_risk_optimization": true,
+    "new_york_clone_of_rejected_zn_sign_rule": true,
+    "opaque_machine_learning": true,
+    "requested_return_target_optimization": true,
+    "universal_session_pass_requirement": true
+  },
+  "research_units": {
+    "combined_statistics_role": "DESCRIPTIVE_ONLY",
+    "sessions": [
+      "LONDON",
+      "NEW_YORK"
+    ],
+    "verdict_scope": "INDEPENDENT_BY_SESSION_AND_CANDIDATE"
+  },
+  "status": "FROZEN_BEFORE_V2_RESEARCH_RESULTS",
+  "time_partitions": {
+    "development": {
+      "end_exclusive": "2025-01-01T00:00:00+00:00",
+      "includes_consumed_2024": true,
+      "independent_validation_credit": false,
+      "start_inclusive": "2021-08-01T00:00:00+00:00"
+    },
+    "excluded": {
+      "end_exclusive": "2027-01-01T00:00:00+00:00",
+      "purpose": "Not available to V2 candidate selection or repair.",
+      "start_inclusive": "2026-01-01T00:00:00+00:00"
+    },
+    "locked_holdout": {
+      "data_values_loaded": false,
+      "end_exclusive": "2026-01-01T00:00:00+00:00",
+      "metadata_audit_permitted": true,
+      "start_inclusive": "2025-01-01T00:00:00+00:00"
+    }
+  },
+  "v2_milestone_1": {
+    "allowed": [
+      "contract creation",
+      "metadata-only coverage audit",
+      "source hashing",
+      "coverage validation"
+    ],
+    "authorized": true,
+    "code": "V2_M1_CONTRACT_AND_METADATA_COVERAGE",
+    "prohibited": [
+      "descriptive outcome atlas",
+      "relationship discovery",
+      "candidate ranking",
+      "2025 outcome or value inspection",
+      "execution optimization"
+    ]
+  }
+}

@@ -1,0 +1,644 @@
+{
+  "manifest_version": "GOLD_CASEBOOK_RELATIONSHIP_DISCOVERY_V0_1",
+  "status": "FROZEN_BEFORE_FIRST_CONDITIONAL_RESULT",
+  "governing_contract": "GOLD_CASEBOOK_RESEARCH_CONTRACT.md",
+  "milestone": "4_RELATIONSHIP_DISCOVERY",
+  "source": {
+    "casebook_manifest_path": "research_artifacts/gold_casebook_v01/manifest.json",
+    "casebook_manifest_hash": "d1241633b073cd7307f1da00a13a2d76c132f3dccefc52a076be2c641f06b85f",
+    "baseline_manifest_path": "research_artifacts/gold_casebook_baseline_v01/manifest.json",
+    "baseline_manifest_hash": "dff92e13105b0b6fd6c9a71a5d9f7668384361d37475fac5fc8b2a33521ea032",
+    "baseline_results_hash": "61624c9bcbf5ef25894c61cd02add0e0d56c2b9ffc9d3f26c54e5ea97a01ab6e",
+    "baseline_trade_ledger_sha256": "afbe8f78cadb27ed5b3178573d7d74e1d6ae069a8543cebcf4cab3ef5f99fa85",
+    "execution_manifest_hash": "724a4fef0fa4b526b4d30b9743c2dfa013c53f87b19262a36b05f3fd07c87d76"
+  },
+  "time_partitions": {
+    "development": {
+      "start_inclusive": "2021-08-01T00:00:00+00:00",
+      "end_exclusive": "2024-01-01T00:00:00+00:00",
+      "purpose": "Milestone 4 relationship discovery and milestone 5 rule specification only"
+    },
+    "chronological_validation_reserve": {
+      "start_inclusive": "2024-01-01T00:00:00+00:00",
+      "end_exclusive": "2025-01-01T00:00:00+00:00",
+      "conditional_features_or_returns_loaded_in_milestone_4": false,
+      "purpose": "Milestone 6 only"
+    },
+    "locked_holdout": {
+      "start_inclusive": "2025-01-01T00:00:00+00:00",
+      "end_exclusive": null,
+      "loaded": false,
+      "purpose": "Milestone 7 one-time holdout only"
+    }
+  },
+  "outcome": {
+    "source": "Milestone 3 immutable baseline trade ledger",
+    "controls_used": [
+      "ALWAYS_LONG",
+      "ALWAYS_SHORT"
+    ],
+    "random_control_used_for_relationship_discovery": false,
+    "fixed_execution_unchanged": true,
+    "selection": "For each predeclared feature state, choose the direction with the higher development-sample mean net return; retain both direction metrics in evidence.",
+    "primary_measure": "mean_net_return_basis_points",
+    "secondary_measures": [
+      "mean_net_pnl_usd_per_ounce",
+      "net_win_rate_pct",
+      "profit_factor",
+      "excess_mean_net_return_vs_same_session_same_direction_baseline_bps",
+      "cluster_bootstrap_95pct_ci_bps",
+      "selection_adjusted_p_value",
+      "benjamini_hochberg_q_value",
+      "positive_development_years",
+      "chronological_half_means_bps"
+    ],
+    "account_equity_or_leverage_assumption": null
+  },
+  "transforms": {
+    "CATEGORY": {
+      "missing_state": "UNKNOWN",
+      "data_dependent_threshold": false
+    },
+    "DIRECTION_3": {
+      "bearish_max_inclusive": -0.1,
+      "bullish_min_inclusive": 0.1,
+      "otherwise": "NEUTRAL",
+      "missing_state": "UNKNOWN"
+    },
+    "SIGN_3": {
+      "negative_max_exclusive": 0.0,
+      "positive_min_exclusive": 0.0,
+      "exact_zero": "FLAT",
+      "epsilon": 1e-12,
+      "missing_state": "UNKNOWN"
+    },
+    "TERTILE": {
+      "quantiles": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "method": "LINEAR_TYPE_7",
+      "fit_scope": "separately by session using development cases only",
+      "states": [
+        "LOW",
+        "MID",
+        "HIGH"
+      ],
+      "missing_state": "UNKNOWN"
+    },
+    "RANGE_RELATION": {
+      "states": [
+        "BELOW",
+        "INSIDE",
+        "ABOVE"
+      ],
+      "boundary_treatment": "equal to a boundary is INSIDE",
+      "missing_state": "UNKNOWN"
+    }
+  },
+  "feature_universe": [
+    {
+      "family_code": "FUNDAMENTAL_ENGINE",
+      "layer": "MARKET_REGIME_EXPECTATIONS_AND_CROSS_MARKET",
+      "source_artifact": "fundamentals.jsonl.gz",
+      "features": [
+        {
+          "feature_id": "macro_bias_label",
+          "source": "engine_state.bias_label",
+          "transform": "CATEGORY"
+        },
+        {
+          "feature_id": "macro_regime",
+          "source": "engine_state.regime_label",
+          "transform": "CATEGORY"
+        },
+        {
+          "feature_id": "reaction_function",
+          "source": "engine_state.reaction_function",
+          "transform": "CATEGORY"
+        },
+        {
+          "feature_id": "macro_score",
+          "source": "engine_state.directional_score",
+          "transform": "DIRECTION_3"
+        },
+        {
+          "feature_id": "macro_confidence",
+          "source": "engine_state.confidence",
+          "transform": "TERTILE"
+        }
+      ],
+      "component_direction_features": [
+        "REAL_YIELD",
+        "USD",
+        "TWO_YEAR_YIELD",
+        "INFLATION_REGIME",
+        "GROWTH_REGIME",
+        "LABOUR_REGIME",
+        "FED_PATH",
+        "POSITIONING_FLOW",
+        "CATALYST_SURPRISE",
+        "EQUITY_RISK",
+        "NOMINAL_DECOMPOSITION",
+        "FINANCIAL_STRESS"
+      ],
+      "component_transform": "DIRECTION_3"
+    },
+    {
+      "family_code": "FUNDAMENTAL_SERIES_CHANGE",
+      "layer": "MARKET_REGIME_AND_CROSS_MARKET",
+      "source_artifact": "fundamentals.jsonl.gz",
+      "transform": "SIGN_3",
+      "features": [
+        {
+          "feature_id": "real_yield_10y_change",
+          "series_code": "US_REAL_YIELD_10Y",
+          "field": "absolute_change"
+        },
+        {
+          "feature_id": "treasury_2y_change",
+          "series_code": "US_TREASURY_2Y",
+          "field": "absolute_change"
+        },
+        {
+          "feature_id": "treasury_10y_change",
+          "series_code": "US_TREASURY_10Y",
+          "field": "absolute_change"
+        },
+        {
+          "feature_id": "breakeven_10y_change",
+          "series_code": "US_BREAKEVEN_10Y",
+          "field": "absolute_change"
+        },
+        {
+          "feature_id": "broad_usd_change",
+          "series_code": "USD_BROAD_NOMINAL",
+          "field": "percent_change"
+        },
+        {
+          "feature_id": "daily_equity_change",
+          "series_code": "US_EQUITY_PROXY",
+          "field": "percent_change"
+        },
+        {
+          "feature_id": "daily_volatility_change",
+          "series_code": "US_VOLATILITY_INDEX",
+          "field": "percent_change"
+        },
+        {
+          "feature_id": "high_yield_oas_change",
+          "series_code": "US_HIGH_YIELD_OAS",
+          "field": "absolute_change"
+        },
+        {
+          "feature_id": "financial_stress_change",
+          "series_code": "US_FINANCIAL_STRESS",
+          "field": "absolute_change"
+        }
+      ]
+    },
+    {
+      "family_code": "POSITIONING",
+      "layer": "POSITIONING_AND_INSTITUTIONAL_BEHAVIOUR",
+      "source_artifact": "positioning.jsonl.gz",
+      "features": [
+        {
+          "feature_id": "cot_net_percentile",
+          "source": "calculated.managed_money_net_percentile",
+          "transform": "TERTILE"
+        },
+        {
+          "feature_id": "cot_net_change",
+          "source": "calculated.managed_money_net_change divided by open_interest",
+          "transform": "SIGN_3"
+        },
+        {
+          "feature_id": "cot_net_change_acceleration",
+          "source": "calculated.managed_money_net_change_acceleration divided by open_interest",
+          "transform": "SIGN_3"
+        },
+        {
+          "feature_id": "cot_open_interest_change",
+          "source": "calculated.open_interest_change divided by open_interest",
+          "transform": "SIGN_3"
+        },
+        {
+          "feature_id": "cot_producer_net",
+          "source": "calculated.producer_net divided by open_interest",
+          "transform": "SIGN_3"
+        },
+        {
+          "feature_id": "cot_crowding_state",
+          "source": "inferred.crowding_state",
+          "transform": "CATEGORY"
+        },
+        {
+          "feature_id": "cot_participation_state",
+          "source": "inferred.participation_state",
+          "transform": "CATEGORY"
+        },
+        {
+          "feature_id": "cot_long_liquidation_risk",
+          "source": "inferred.long_liquidation_risk",
+          "transform": "CATEGORY"
+        },
+        {
+          "feature_id": "cot_short_covering_risk",
+          "source": "inferred.short_covering_risk",
+          "transform": "CATEGORY"
+        }
+      ],
+      "independent_support_key": "record_id",
+      "classification_warning": "CFTC categories are observed; crowding, participation, and motive remain inferred."
+    },
+    {
+      "family_code": "MARKET_STRUCTURE",
+      "layer": "SESSIONS_STRUCTURE_AND_EXECUTION_CONTEXT",
+      "source_artifact": "structure_snapshots.jsonl.gz",
+      "timeframes": [
+        "5m",
+        "15m",
+        "1h",
+        "4h",
+        "1d"
+      ],
+      "features_per_timeframe": [
+        {
+          "suffix": "trend",
+          "source": "trend",
+          "transform": "CATEGORY"
+        },
+        {
+          "suffix": "momentum",
+          "source": "momentum_atr",
+          "transform": "SIGN_3"
+        }
+      ],
+      "tertile_features_for_timeframes": {
+        "timeframes": [
+          "15m",
+          "1h",
+          "4h"
+        ],
+        "features": [
+          {
+            "suffix": "compression",
+            "source": "compression_ratio"
+          },
+          {
+            "suffix": "range_location",
+            "source": "(last_close - range_low) / (range_high - range_low)"
+          }
+        ]
+      },
+      "recent_action_feature": {
+        "timeframes": [
+          "15m",
+          "1h",
+          "4h"
+        ],
+        "lookback_bars": 12,
+        "selection": "latest detected_at, then kind, from directional actionable kinds",
+        "states": [
+          "BULLISH",
+          "BEARISH",
+          "NONE"
+        ],
+        "transform": "CATEGORY"
+      }
+    },
+    {
+      "family_code": "SESSION_AND_LIQUIDITY",
+      "layer": "SESSIONS_AND_LIQUIDITY",
+      "source_artifact": "sessions.jsonl.gz",
+      "features": [
+        {
+          "feature_id": "asia_return",
+          "sessions": [
+            "LONDON",
+            "NEW_YORK"
+          ],
+          "source": "(asia.close - asia.open) / asia.open",
+          "transform": "SIGN_3"
+        },
+        {
+          "feature_id": "asia_range",
+          "sessions": [
+            "LONDON",
+            "NEW_YORK"
+          ],
+          "source": "asia.range",
+          "transform": "TERTILE"
+        },
+        {
+          "feature_id": "asia_close_location",
+          "sessions": [
+            "LONDON",
+            "NEW_YORK"
+          ],
+          "source": "(asia.close - asia.low) / (asia.high - asia.low)",
+          "transform": "TERTILE"
+        },
+        {
+          "feature_id": "prior_same_session_return",
+          "sessions": [
+            "LONDON",
+            "NEW_YORK"
+          ],
+          "source": "(prior_same_session.close - prior_same_session.open) / prior_same_session.open",
+          "transform": "SIGN_3"
+        },
+        {
+          "feature_id": "prior_same_session_range",
+          "sessions": [
+            "LONDON",
+            "NEW_YORK"
+          ],
+          "source": "prior_same_session.range",
+          "transform": "TERTILE"
+        },
+        {
+          "feature_id": "london_return_before_new_york",
+          "sessions": [
+            "NEW_YORK"
+          ],
+          "source": "(london.close - london.open) / london.open",
+          "transform": "SIGN_3"
+        },
+        {
+          "feature_id": "london_range_before_new_york",
+          "sessions": [
+            "NEW_YORK"
+          ],
+          "source": "london.range",
+          "transform": "TERTILE"
+        },
+        {
+          "feature_id": "london_close_location",
+          "sessions": [
+            "NEW_YORK"
+          ],
+          "source": "(london.close - london.low) / (london.high - london.low)",
+          "transform": "TERTILE"
+        },
+        {
+          "feature_id": "london_range_vs_asia_range",
+          "sessions": [
+            "NEW_YORK"
+          ],
+          "source": "london.range / asia.range",
+          "transform": "TERTILE"
+        },
+        {
+          "feature_id": "new_york_price_vs_asia_range",
+          "sessions": [
+            "NEW_YORK"
+          ],
+          "source": "london.close relative to asia.low and asia.high",
+          "transform": "RANGE_RELATION"
+        }
+      ],
+      "stale_prior_day_and_prior_week_features_enabled": false,
+      "reason": "The immutable records preserve these levels, but material stale gaps make them ineligible until freshness is explicitly repaired."
+    },
+    {
+      "family_code": "INTRADAY_CROSS_MARKET",
+      "layer": "CROSS_MARKET_CONFIRMATION",
+      "source_artifact": "cross_market_snapshots.jsonl.gz",
+      "instruments": [
+        "XAUUSD",
+        "EURUSD",
+        "XAGUSD",
+        "US500",
+        "ZT.v.0",
+        "ZN.v.0",
+        "ZQ.v.0",
+        "SR3.v.0"
+      ],
+      "horizons": [
+        "1_HOUR",
+        "4_HOURS",
+        "1_DAY"
+      ],
+      "source": "changes.<horizon>.percent_change",
+      "required_status": "READY",
+      "transform": "SIGN_3",
+      "roll_or_stale_policy": "UNKNOWN and excluded; never neutralized"
+    }
+  ],
+  "interactions": [
+    {
+      "interaction_id": "macro_bias_x_structure_15m_trend",
+      "left": "macro_bias_label",
+      "right": "structure_15m_trend",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "macro_bias_x_structure_1h_trend",
+      "left": "macro_bias_label",
+      "right": "structure_1h_trend",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "macro_bias_x_xauusd_4h",
+      "left": "macro_bias_label",
+      "right": "cross_xauusd_4_hours",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "real_yield_x_usd",
+      "left": "component_real_yield",
+      "right": "component_usd",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "real_yield_x_two_year",
+      "left": "component_real_yield",
+      "right": "component_two_year_yield",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "inflation_x_real_yield",
+      "left": "component_inflation_regime",
+      "right": "component_real_yield",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "reaction_function_x_macro_bias",
+      "left": "reaction_function",
+      "right": "macro_bias_label",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "cot_crowding_x_macro_bias",
+      "left": "cot_crowding_state",
+      "right": "macro_bias_label",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "cot_crowding_x_structure_1h",
+      "left": "cot_crowding_state",
+      "right": "structure_1h_trend",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "cot_participation_x_xauusd_1d",
+      "left": "cot_participation_state",
+      "right": "cross_xauusd_1_day",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "asia_range_x_asia_return",
+      "left": "asia_range",
+      "right": "asia_return",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "asia_return_x_structure_15m",
+      "left": "asia_return",
+      "right": "structure_15m_trend",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "london_return_x_macro_bias",
+      "left": "london_return_before_new_york",
+      "right": "macro_bias_label",
+      "sessions": [
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "london_return_x_structure_15m",
+      "left": "london_return_before_new_york",
+      "right": "structure_15m_trend",
+      "sessions": [
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "ny_price_vs_asia_x_macro_bias",
+      "left": "new_york_price_vs_asia_range",
+      "right": "macro_bias_label",
+      "sessions": [
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "eurusd_4h_x_zn_4h",
+      "left": "cross_eurusd_4_hours",
+      "right": "cross_zn_v_0_4_hours",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "interaction_id": "silver_4h_x_gold_4h",
+      "left": "cross_xagusd_4_hours",
+      "right": "cross_xauusd_4_hours",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    }
+  ],
+  "support_and_stability": {
+    "single_state_min_cases": 60,
+    "interaction_state_min_cases": 45,
+    "maximum_state_prevalence_pct": 80.0,
+    "minimum_iso_week_clusters": 20,
+    "minimum_development_years_with_10_cases": 2,
+    "cot_feature_or_interaction_min_distinct_reports": 12,
+    "development_year_buckets": [
+      2021,
+      2022,
+      2023
+    ],
+    "chronological_halves": "Within each session, sort development cases by decision time and split at the median case count.",
+    "stability_flag": "positive selected-direction mean net return in both chronological halves and at least two development year buckets with adequate support"
+  },
+  "uncertainty_and_multiplicity": {
+    "confidence_interval": {
+      "method": "ISO_WEEK_CLUSTER_BOOTSTRAP_PERCENTILE",
+      "replications": 2000,
+      "seed": "SHA-256 of manifest_hash, session, relationship_id, and state",
+      "percentiles": [
+        2.5,
+        97.5
+      ]
+    },
+    "selection_adjustment": "Double the one-sided normal-approximation p-value because LONG versus SHORT is chosen on development data.",
+    "multiple_testing": {
+      "method": "BENJAMINI_HOCHBERG",
+      "family": "all support-eligible single and interaction states within each session",
+      "reported_q_threshold": 0.1
+    },
+    "ranking": [
+      "support_eligible descending",
+      "cluster_bootstrap_lower_95pct_mean_net_bps descending",
+      "mean_net_return_basis_points descending",
+      "case_count descending",
+      "relationship_id ascending",
+      "state ascending"
+    ]
+  },
+  "discovery_lead_flag": {
+    "requirements": [
+      "support eligible",
+      "mean net return after frozen costs above zero",
+      "profit factor above one",
+      "beats same-session same-direction unconditional development baseline",
+      "positive in both chronological halves",
+      "positive in at least two adequately supported development years",
+      "Benjamini-Hochberg q-value at or below 0.10"
+    ],
+    "meaning": "A lead is eligible for explicit milestone 5 case specification; it is not a validated edge."
+  },
+  "prohibited": {
+    "calendar_2024_conditional_feature_or_return_access": true,
+    "calendar_2025_access": true,
+    "feature_addition_after_result": true,
+    "interaction_addition_after_result": true,
+    "threshold_search_beyond_declared_transforms": true,
+    "entry_exit_stop_target_or_reward_to_risk_optimization": true,
+    "machine_learning_model": true,
+    "account_scaling_or_leverage_search": true
+  },
+  "manifest_hash": "044b0d1ca776a052b17e18068363f72d5a0edd61408bb94080a413219180b426"
+}

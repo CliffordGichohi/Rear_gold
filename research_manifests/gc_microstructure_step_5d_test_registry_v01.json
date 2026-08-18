@@ -1,0 +1,3339 @@
+{
+  "construction": {
+    "contradictions_rejections_and_unregistered_states": "Descriptive only; never inverted, repaired, or promoted.",
+    "stage_1": "Every preregistered directional state of the six directional microstructure fields, once per session.",
+    "stage_2": "Only Step 5A registered variable pairs. Signed contexts use same-direction confirming states only; non-directional conditioners use every explicitly known registered state crossed with each registered directional micro state.",
+    "unknown_state_exclusions": [
+      "UNKNOWN",
+      "NEUTRAL_OR_UNKNOWN",
+      "UNKNOWN_WITHOUT_EVENT_AND_REGIME_CORE"
+    ]
+  },
+  "counts": {
+    "london_stage_1": 12,
+    "london_stage_2": 60,
+    "new_york_stage_1": 12,
+    "new_york_stage_2": 64,
+    "stage_1": 24,
+    "stage_2": 124,
+    "total": 148
+  },
+  "frozen_at_utc": "2026-08-04T10:54:55.039606Z",
+  "registry_hash": "76af433e1a1f50634c90259684e4cb337172abc92e0f65b59aa9537901c075eb",
+  "status": "FROZEN_BEFORE_DEVELOPMENT_OUTCOME_ACCESS",
+  "tests": [
+    {
+      "bootstrap_seed_uint64": 3883900835314672146,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BEARISH_ABSORPTION"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H3_ABSORPTION_REVERSAL"
+      ],
+      "permutation_seed_uint64": 18348287187265156529,
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON:STAGE_1:ABSORPTION_STATE_W60=BEARISH_ABSORPTION:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 15102975900661643387,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BULLISH_ABSORPTION"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H3_ABSORPTION_REVERSAL"
+      ],
+      "permutation_seed_uint64": 5675131708433301568,
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON:STAGE_1:ABSORPTION_STATE_W60=BULLISH_ABSORPTION:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 15346432930649515763,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "DEPTH_PRESSURE_W60",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H2_DEPTH_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 9760390442820239069,
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON:STAGE_1:DEPTH_PRESSURE_W60=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 17594999753648185857,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "DEPTH_PRESSURE_W60",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H2_DEPTH_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 2630773596371701519,
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON:STAGE_1:DEPTH_PRESSURE_W60=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 7173709002256780875,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "DEPTH_PRESSURE_W900",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H2_DEPTH_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 15182762796838840406,
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON:STAGE_1:DEPTH_PRESSURE_W900=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 6697996041633006056,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "DEPTH_PRESSURE_W900",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H2_DEPTH_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 15251281484459479041,
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON:STAGE_1:DEPTH_PRESSURE_W900=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 15525365940843210716,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H1_MICRO_FLOW_CONTINUATION",
+        "H2_DEPTH_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 12484296091902208556,
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON:STAGE_1:FLOW_DEPTH_ALIGNMENT=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 12446267035572605631,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H1_MICRO_FLOW_CONTINUATION",
+        "H2_DEPTH_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 16085414702042105211,
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON:STAGE_1:FLOW_DEPTH_ALIGNMENT=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 10645462296639377972,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H1_MICRO_FLOW_CONTINUATION"
+      ],
+      "permutation_seed_uint64": 8492047665868752806,
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON:STAGE_1:FLOW_PRESSURE_W60=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 583010239015716194,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H1_MICRO_FLOW_CONTINUATION"
+      ],
+      "permutation_seed_uint64": 16446922178689056463,
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON:STAGE_1:FLOW_PRESSURE_W60=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 14987528350766978224,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W900",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H1_MICRO_FLOW_CONTINUATION"
+      ],
+      "permutation_seed_uint64": 11399312448775153360,
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON:STAGE_1:FLOW_PRESSURE_W900=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 10136047593083210531,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W900",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H1_MICRO_FLOW_CONTINUATION"
+      ],
+      "permutation_seed_uint64": 15082212069709829967,
+      "session": "LONDON",
+      "stage": 1,
+      "test_id": "LONDON:STAGE_1:FLOW_PRESSURE_W900=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 11501450195911332397,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BEARISH_ABSORPTION"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H3_ABSORPTION_REVERSAL"
+      ],
+      "permutation_seed_uint64": 10309442801064160012,
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK:STAGE_1:ABSORPTION_STATE_W60=BEARISH_ABSORPTION:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 9958379832249478956,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BULLISH_ABSORPTION"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H3_ABSORPTION_REVERSAL"
+      ],
+      "permutation_seed_uint64": 10809327900556364994,
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK:STAGE_1:ABSORPTION_STATE_W60=BULLISH_ABSORPTION:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 7135618507022797236,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "DEPTH_PRESSURE_W60",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H2_DEPTH_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 2502288214638086044,
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK:STAGE_1:DEPTH_PRESSURE_W60=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 1534400983712027426,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "DEPTH_PRESSURE_W60",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H2_DEPTH_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 1882708599955628871,
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK:STAGE_1:DEPTH_PRESSURE_W60=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 9454420114221676850,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "DEPTH_PRESSURE_W900",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H2_DEPTH_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 8351018379214581130,
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK:STAGE_1:DEPTH_PRESSURE_W900=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 4184813621107092353,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "DEPTH_PRESSURE_W900",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H2_DEPTH_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 15202590407684939213,
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK:STAGE_1:DEPTH_PRESSURE_W900=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 5982524636178673880,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H1_MICRO_FLOW_CONTINUATION",
+        "H2_DEPTH_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 16144548612633527107,
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK:STAGE_1:FLOW_DEPTH_ALIGNMENT=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 17333977356821336346,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H1_MICRO_FLOW_CONTINUATION",
+        "H2_DEPTH_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 16036703249104753664,
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK:STAGE_1:FLOW_DEPTH_ALIGNMENT=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 16035593603660011363,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H1_MICRO_FLOW_CONTINUATION"
+      ],
+      "permutation_seed_uint64": 16310500873159940350,
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK:STAGE_1:FLOW_PRESSURE_W60=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 9553898525819903308,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H1_MICRO_FLOW_CONTINUATION"
+      ],
+      "permutation_seed_uint64": 11071760225948986424,
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK:STAGE_1:FLOW_PRESSURE_W60=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 13027795167501976939,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W900",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H1_MICRO_FLOW_CONTINUATION"
+      ],
+      "permutation_seed_uint64": 16958518636796233011,
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK:STAGE_1:FLOW_PRESSURE_W900=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 6251939649320369397,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W900",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H1_MICRO_FLOW_CONTINUATION"
+      ],
+      "permutation_seed_uint64": 17349853920018565545,
+      "session": "NEW_YORK",
+      "stage": 1,
+      "test_id": "NEW_YORK:STAGE_1:FLOW_PRESSURE_W900=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 3654000094405430438,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BEARISH_ABSORPTION"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "BALANCED"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 8506374964343104686,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:ABSORPTION_STATE_W60=BEARISH_ABSORPTION+COT_MANAGED_MONEY_CROWDING=BALANCED:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 18114419098741751205,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BEARISH_ABSORPTION"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_LONGS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 6494292338396843591,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:ABSORPTION_STATE_W60=BEARISH_ABSORPTION+COT_MANAGED_MONEY_CROWDING=CROWDED_LONGS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 13426719051613884210,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BEARISH_ABSORPTION"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_SHORTS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 14672605630858729383,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:ABSORPTION_STATE_W60=BEARISH_ABSORPTION+COT_MANAGED_MONEY_CROWDING=CROWDED_SHORTS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 9936536681016614246,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BULLISH_ABSORPTION"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "BALANCED"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 7359013844578223368,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:ABSORPTION_STATE_W60=BULLISH_ABSORPTION+COT_MANAGED_MONEY_CROWDING=BALANCED:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 18437753904066751534,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BULLISH_ABSORPTION"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_LONGS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 1564535931011898269,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:ABSORPTION_STATE_W60=BULLISH_ABSORPTION+COT_MANAGED_MONEY_CROWDING=CROWDED_LONGS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 4908313890445840837,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BULLISH_ABSORPTION"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_SHORTS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 17957682842548251324,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:ABSORPTION_STATE_W60=BULLISH_ABSORPTION+COT_MANAGED_MONEY_CROWDING=CROWDED_SHORTS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 17925120310635744939,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ASIA_PREDECISION_BREAK_STATE",
+          "state": "ACCEPTED_ABOVE"
+        },
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 17772823851911480214,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:ASIA_PREDECISION_BREAK_STATE=ACCEPTED_ABOVE+FLOW_PRESSURE_W60=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 7081051487086528975,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ASIA_PREDECISION_BREAK_STATE",
+          "state": "ACCEPTED_BELOW"
+        },
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 13148758858013140260,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:ASIA_PREDECISION_BREAK_STATE=ACCEPTED_BELOW+FLOW_PRESSURE_W60=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 13523341469673725497,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ASIA_RANGE_LOCATION",
+          "state": "ABOVE_ASIA_HIGH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 11908644282789041469,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:ASIA_RANGE_LOCATION=ABOVE_ASIA_HIGH+FLOW_DEPTH_ALIGNMENT=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 18321673224948134370,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ASIA_RANGE_LOCATION",
+          "state": "BELOW_ASIA_LOW"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 16076398291734692825,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:ASIA_RANGE_LOCATION=BELOW_ASIA_LOW+FLOW_DEPTH_ALIGNMENT=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 1110397587383977170,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "BALANCED"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 5853656615175620895,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+COT_MANAGED_MONEY_CROWDING=BALANCED:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 5461668842625633816,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_LONGS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 883984114511004800,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+COT_MANAGED_MONEY_CROWDING=CROWDED_LONGS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 3466509646079610372,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_SHORTS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 7210002372062993369,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+COT_MANAGED_MONEY_CROWDING=CROWDED_SHORTS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 17064110396958862843,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "COT_WEEKLY_CHANGE_SIGN",
+          "state": "DOWN"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 17968616563508273781,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+COT_WEEKLY_CHANGE_SIGN=DOWN:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 11548166172120009741,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "COT_WEEKLY_CHANGE_SIGN",
+          "state": "FLAT"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 15634226333856184812,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+COT_WEEKLY_CHANGE_SIGN=FLAT:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 3068742894402800606,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "COT_WEEKLY_CHANGE_SIGN",
+          "state": "UP"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 7311318008624279959,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+COT_WEEKLY_CHANGE_SIGN=UP:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 12798765548224088629,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "FINANCIAL_STRESS_STATE",
+          "state": "NORMAL"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 13192608294644903675,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+FINANCIAL_STRESS_STATE=NORMAL:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 7914035946309144440,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "FINANCIAL_STRESS_STATE",
+          "state": "STRESS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 14602004178022124013,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+FINANCIAL_STRESS_STATE=STRESS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 2626839429149604630,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "LIQUIDITY_FRAGILITY",
+          "state": "FRAGILE"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 12960534575144473311,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+LIQUIDITY_FRAGILITY=FRAGILE:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 11557622943037721500,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "LIQUIDITY_FRAGILITY",
+          "state": "RESILIENT"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 4250823763010433607,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+LIQUIDITY_FRAGILITY=RESILIENT:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 16727757962587838744,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "BALANCED_REACTION_FUNCTION"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 6923830657231153891,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+REGIME_REACTION_FUNCTION_STATE=BALANCED_REACTION_FUNCTION:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 282819898931861906,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "EVENT_SURPRISE_WITH_PARTIAL_MACRO"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 2026506494392203431,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+REGIME_REACTION_FUNCTION_STATE=EVENT_SURPRISE_WITH_PARTIAL_MACRO:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 10688703291675608684,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "FINANCIAL_STRESS_FOCUS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 17955219828106851585,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+REGIME_REACTION_FUNCTION_STATE=FINANCIAL_STRESS_FOCUS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 3452255799743693711,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "GROWTH_LABOUR_FOCUS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 16194524757002974645,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+REGIME_REACTION_FUNCTION_STATE=GROWTH_LABOUR_FOCUS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 8755795891316655216,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "INFLATION_FOCUS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 15542879177087953677,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+REGIME_REACTION_FUNCTION_STATE=INFLATION_FOCUS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 6456361594930491033,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "BALANCED"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 11230504928979820782,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+COT_MANAGED_MONEY_CROWDING=BALANCED:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 14252572573249270264,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_LONGS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 17348291678353410972,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+COT_MANAGED_MONEY_CROWDING=CROWDED_LONGS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 1658207694103885924,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_SHORTS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 5853485172542043510,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+COT_MANAGED_MONEY_CROWDING=CROWDED_SHORTS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 14485228820454394611,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "COT_WEEKLY_CHANGE_SIGN",
+          "state": "DOWN"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 6920543055314420697,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+COT_WEEKLY_CHANGE_SIGN=DOWN:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 4502080132846107185,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "COT_WEEKLY_CHANGE_SIGN",
+          "state": "FLAT"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 4095012808561985691,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+COT_WEEKLY_CHANGE_SIGN=FLAT:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 17789796952268966538,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "COT_WEEKLY_CHANGE_SIGN",
+          "state": "UP"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 2237295936620327229,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+COT_WEEKLY_CHANGE_SIGN=UP:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 2610720825877497098,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "FINANCIAL_STRESS_STATE",
+          "state": "NORMAL"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 254217992173714742,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+FINANCIAL_STRESS_STATE=NORMAL:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 6502619539616033211,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "FINANCIAL_STRESS_STATE",
+          "state": "STRESS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 15771745059557648143,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+FINANCIAL_STRESS_STATE=STRESS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 5829708645179203499,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "LIQUIDITY_FRAGILITY",
+          "state": "FRAGILE"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 11130577694555835372,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+LIQUIDITY_FRAGILITY=FRAGILE:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 3715758219811377682,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "LIQUIDITY_FRAGILITY",
+          "state": "RESILIENT"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 14228997898137326634,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+LIQUIDITY_FRAGILITY=RESILIENT:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 3500269656065287980,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "BALANCED_REACTION_FUNCTION"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 5076428666415783723,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+REGIME_REACTION_FUNCTION_STATE=BALANCED_REACTION_FUNCTION:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 1098980660806694168,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "EVENT_SURPRISE_WITH_PARTIAL_MACRO"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 13780200125569856636,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+REGIME_REACTION_FUNCTION_STATE=EVENT_SURPRISE_WITH_PARTIAL_MACRO:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 16155028475129137638,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "FINANCIAL_STRESS_FOCUS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 13499506090170888634,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+REGIME_REACTION_FUNCTION_STATE=FINANCIAL_STRESS_FOCUS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 13917488095120203478,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "GROWTH_LABOUR_FOCUS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 7994189400979601253,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+REGIME_REACTION_FUNCTION_STATE=GROWTH_LABOUR_FOCUS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 17522527790457622621,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "INFLATION_FOCUS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 3552356385909396195,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+REGIME_REACTION_FUNCTION_STATE=INFLATION_FOCUS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 13235316746977370596,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        },
+        {
+          "field": "ASIA_RANGE_COMPRESSION",
+          "state": "HIGH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 8171733384195660408,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_PRESSURE_W60=BEARISH+ASIA_RANGE_COMPRESSION=HIGH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 6665851431874456077,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        },
+        {
+          "field": "ASIA_RANGE_COMPRESSION",
+          "state": "LOW"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 10523592564380583698,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_PRESSURE_W60=BEARISH+ASIA_RANGE_COMPRESSION=LOW:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 13069990892076866695,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        },
+        {
+          "field": "ASIA_RANGE_COMPRESSION",
+          "state": "NORMAL"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 12238928693400440784,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_PRESSURE_W60=BEARISH+ASIA_RANGE_COMPRESSION=NORMAL:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 18238715080922763606,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        },
+        {
+          "field": "LIQUIDITY_ACTIVITY_SHIFT",
+          "state": "HIGH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 11902087153122584952,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_PRESSURE_W60=BEARISH+LIQUIDITY_ACTIVITY_SHIFT=HIGH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 15769108404854139627,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        },
+        {
+          "field": "LIQUIDITY_ACTIVITY_SHIFT",
+          "state": "LOW"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 5610110505827499628,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_PRESSURE_W60=BEARISH+LIQUIDITY_ACTIVITY_SHIFT=LOW:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 11839877222415878488,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        },
+        {
+          "field": "ASIA_RANGE_COMPRESSION",
+          "state": "HIGH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 11803337937821804898,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_PRESSURE_W60=BULLISH+ASIA_RANGE_COMPRESSION=HIGH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 16514455135622430639,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        },
+        {
+          "field": "ASIA_RANGE_COMPRESSION",
+          "state": "LOW"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 12774386063906416979,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_PRESSURE_W60=BULLISH+ASIA_RANGE_COMPRESSION=LOW:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 170093043226064048,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        },
+        {
+          "field": "ASIA_RANGE_COMPRESSION",
+          "state": "NORMAL"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 17020889670994718717,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_PRESSURE_W60=BULLISH+ASIA_RANGE_COMPRESSION=NORMAL:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 12517964492403085734,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        },
+        {
+          "field": "LIQUIDITY_ACTIVITY_SHIFT",
+          "state": "HIGH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 13891545315254023106,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_PRESSURE_W60=BULLISH+LIQUIDITY_ACTIVITY_SHIFT=HIGH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 1516670902876914658,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        },
+        {
+          "field": "LIQUIDITY_ACTIVITY_SHIFT",
+          "state": "LOW"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 550849753938518652,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:FLOW_PRESSURE_W60=BULLISH+LIQUIDITY_ACTIVITY_SHIFT=LOW:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 13848171920721969779,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "MACRO_ENGINE_BIAS_STATE",
+          "state": "BEARISH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 11355006977324631155,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:MACRO_ENGINE_BIAS_STATE=BEARISH+FLOW_DEPTH_ALIGNMENT=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 9023377404837201767,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "MACRO_ENGINE_BIAS_STATE",
+          "state": "BULLISH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 16756157423798941570,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:MACRO_ENGINE_BIAS_STATE=BULLISH+FLOW_DEPTH_ALIGNMENT=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 2009922083200033456,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "PRIOR_DAY_RANGE_LOCATION",
+          "state": "ABOVE_PRIOR_HIGH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 10338049410174528854,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:PRIOR_DAY_RANGE_LOCATION=ABOVE_PRIOR_HIGH+FLOW_DEPTH_ALIGNMENT=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 12866909650431337346,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "PRIOR_DAY_RANGE_LOCATION",
+          "state": "BELOW_PRIOR_LOW"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 8144907152012154101,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:PRIOR_DAY_RANGE_LOCATION=BELOW_PRIOR_LOW+FLOW_DEPTH_ALIGNMENT=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 17894559947006842032,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "REAL_YIELD_USD_CONFIRMATION",
+          "state": "GOLD_BEARISH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 2204642903967759688,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:REAL_YIELD_USD_CONFIRMATION=GOLD_BEARISH+FLOW_DEPTH_ALIGNMENT=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 12057448852296905357,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "REAL_YIELD_USD_CONFIRMATION",
+          "state": "GOLD_BULLISH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 4536428450606694798,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:REAL_YIELD_USD_CONFIRMATION=GOLD_BULLISH+FLOW_DEPTH_ALIGNMENT=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 9824425930768006213,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "RECENT_RELEASE_SURPRISE_DIRECTION",
+          "state": "BEARISH"
+        },
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 6300957500840472889,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:RECENT_RELEASE_SURPRISE_DIRECTION=BEARISH+FLOW_PRESSURE_W60=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 1691095578325390433,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "RECENT_RELEASE_SURPRISE_DIRECTION",
+          "state": "BULLISH"
+        },
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 521144691846978877,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:RECENT_RELEASE_SURPRISE_DIRECTION=BULLISH+FLOW_PRESSURE_W60=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 18112525689840237192,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "STRUCTURE_15M_1H_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 14165651580083325678,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:STRUCTURE_15M_1H_ALIGNMENT=BEARISH+FLOW_DEPTH_ALIGNMENT=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 1680114594006038066,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "STRUCTURE_15M_1H_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 7096870652476734043,
+      "session": "LONDON",
+      "stage": 2,
+      "test_id": "LONDON:STAGE_2:STRUCTURE_15M_1H_ALIGNMENT=BULLISH+FLOW_DEPTH_ALIGNMENT=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 8876050338276784247,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BEARISH_ABSORPTION"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "BALANCED"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 17603851949739451229,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:ABSORPTION_STATE_W60=BEARISH_ABSORPTION+COT_MANAGED_MONEY_CROWDING=BALANCED:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 4372211642995154887,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BEARISH_ABSORPTION"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_LONGS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 5287162329421727837,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:ABSORPTION_STATE_W60=BEARISH_ABSORPTION+COT_MANAGED_MONEY_CROWDING=CROWDED_LONGS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 10087107293475698698,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BEARISH_ABSORPTION"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_SHORTS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 7716246288335916482,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:ABSORPTION_STATE_W60=BEARISH_ABSORPTION+COT_MANAGED_MONEY_CROWDING=CROWDED_SHORTS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 9342845802246107714,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BULLISH_ABSORPTION"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "BALANCED"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 17014633975170102392,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:ABSORPTION_STATE_W60=BULLISH_ABSORPTION+COT_MANAGED_MONEY_CROWDING=BALANCED:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 8070371383645379442,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BULLISH_ABSORPTION"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_LONGS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 15367151782474150718,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:ABSORPTION_STATE_W60=BULLISH_ABSORPTION+COT_MANAGED_MONEY_CROWDING=CROWDED_LONGS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 15256577023086017031,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ABSORPTION_STATE_W60",
+          "state": "BULLISH_ABSORPTION"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_SHORTS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 3655047571854115321,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:ABSORPTION_STATE_W60=BULLISH_ABSORPTION+COT_MANAGED_MONEY_CROWDING=CROWDED_SHORTS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 406405438761718853,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ASIA_PREDECISION_BREAK_STATE",
+          "state": "ACCEPTED_ABOVE"
+        },
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 13966533102621304658,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:ASIA_PREDECISION_BREAK_STATE=ACCEPTED_ABOVE+FLOW_PRESSURE_W60=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 17377734120871144339,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ASIA_PREDECISION_BREAK_STATE",
+          "state": "ACCEPTED_BELOW"
+        },
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 14365543479257894866,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:ASIA_PREDECISION_BREAK_STATE=ACCEPTED_BELOW+FLOW_PRESSURE_W60=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 3553298616784989145,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ASIA_RANGE_LOCATION",
+          "state": "ABOVE_ASIA_HIGH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 2036278660879927945,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:ASIA_RANGE_LOCATION=ABOVE_ASIA_HIGH+FLOW_DEPTH_ALIGNMENT=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 8399807730736546612,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "ASIA_RANGE_LOCATION",
+          "state": "BELOW_ASIA_LOW"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 9919249160299070954,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:ASIA_RANGE_LOCATION=BELOW_ASIA_LOW+FLOW_DEPTH_ALIGNMENT=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 6880835993404173125,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "BALANCED"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 13575887012813646315,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+COT_MANAGED_MONEY_CROWDING=BALANCED:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 4966433243630143005,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_LONGS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 2878562774161644561,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+COT_MANAGED_MONEY_CROWDING=CROWDED_LONGS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 16272750288112205611,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_SHORTS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 105021519834976733,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+COT_MANAGED_MONEY_CROWDING=CROWDED_SHORTS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 6153117554549629405,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "COT_WEEKLY_CHANGE_SIGN",
+          "state": "DOWN"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 770735208497755181,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+COT_WEEKLY_CHANGE_SIGN=DOWN:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 2848989292444182997,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "COT_WEEKLY_CHANGE_SIGN",
+          "state": "FLAT"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 11807814109919407736,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+COT_WEEKLY_CHANGE_SIGN=FLAT:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 5726673513729645000,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "COT_WEEKLY_CHANGE_SIGN",
+          "state": "UP"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 16241312527403392554,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+COT_WEEKLY_CHANGE_SIGN=UP:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 4316265523256249970,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "FINANCIAL_STRESS_STATE",
+          "state": "NORMAL"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 759482898433759994,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+FINANCIAL_STRESS_STATE=NORMAL:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 7117892300269342929,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "FINANCIAL_STRESS_STATE",
+          "state": "STRESS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 6635791386478785332,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+FINANCIAL_STRESS_STATE=STRESS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 9660245442040972607,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "LIQUIDITY_FRAGILITY",
+          "state": "FRAGILE"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 15049686369938461898,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+LIQUIDITY_FRAGILITY=FRAGILE:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 16863808609308255305,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "LIQUIDITY_FRAGILITY",
+          "state": "RESILIENT"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 8270243812012732991,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+LIQUIDITY_FRAGILITY=RESILIENT:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 11087861034566556568,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "BALANCED_REACTION_FUNCTION"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 7439219866803539255,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+REGIME_REACTION_FUNCTION_STATE=BALANCED_REACTION_FUNCTION:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 1028193216670064868,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "EVENT_SURPRISE_WITH_PARTIAL_MACRO"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 18244738976943675010,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+REGIME_REACTION_FUNCTION_STATE=EVENT_SURPRISE_WITH_PARTIAL_MACRO:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 9647800077397907170,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "FINANCIAL_STRESS_FOCUS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 18229826690362552838,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+REGIME_REACTION_FUNCTION_STATE=FINANCIAL_STRESS_FOCUS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 13853485172209570094,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "GROWTH_LABOUR_FOCUS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 3439211571204412675,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+REGIME_REACTION_FUNCTION_STATE=GROWTH_LABOUR_FOCUS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 10040652661101469636,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "INFLATION_FOCUS"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 17885521251111063875,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BEARISH+REGIME_REACTION_FUNCTION_STATE=INFLATION_FOCUS:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 4575450273101235939,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "BALANCED"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 4752191909145472687,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+COT_MANAGED_MONEY_CROWDING=BALANCED:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 8797289203668183164,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_LONGS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 8765128793909201064,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+COT_MANAGED_MONEY_CROWDING=CROWDED_LONGS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 10923590187251174554,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "COT_MANAGED_MONEY_CROWDING",
+          "state": "CROWDED_SHORTS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 401295470255146574,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+COT_MANAGED_MONEY_CROWDING=CROWDED_SHORTS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 15219916793466936124,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "COT_WEEKLY_CHANGE_SIGN",
+          "state": "DOWN"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 10624129747229955272,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+COT_WEEKLY_CHANGE_SIGN=DOWN:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 1988174952959642280,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "COT_WEEKLY_CHANGE_SIGN",
+          "state": "FLAT"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 6948881934012786456,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+COT_WEEKLY_CHANGE_SIGN=FLAT:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 15042709280080419935,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "COT_WEEKLY_CHANGE_SIGN",
+          "state": "UP"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H7_POSITIONING_AMPLIFICATION"
+      ],
+      "permutation_seed_uint64": 15884523040896034312,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+COT_WEEKLY_CHANGE_SIGN=UP:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 10564695522264566068,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "FINANCIAL_STRESS_STATE",
+          "state": "NORMAL"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 7373397146365242801,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+FINANCIAL_STRESS_STATE=NORMAL:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 9464866030281906725,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "FINANCIAL_STRESS_STATE",
+          "state": "STRESS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 16902827753705192820,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+FINANCIAL_STRESS_STATE=STRESS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 11368689991171686059,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "LIQUIDITY_FRAGILITY",
+          "state": "FRAGILE"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 4306459763467905446,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+LIQUIDITY_FRAGILITY=FRAGILE:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 12804181599385037681,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "LIQUIDITY_FRAGILITY",
+          "state": "RESILIENT"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 12542426248411312582,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+LIQUIDITY_FRAGILITY=RESILIENT:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 7813852576972063014,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "BALANCED_REACTION_FUNCTION"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 14482863123519646636,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+REGIME_REACTION_FUNCTION_STATE=BALANCED_REACTION_FUNCTION:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 13166161217969099274,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "EVENT_SURPRISE_WITH_PARTIAL_MACRO"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 16058903440428263253,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+REGIME_REACTION_FUNCTION_STATE=EVENT_SURPRISE_WITH_PARTIAL_MACRO:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 6371801470143596324,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "FINANCIAL_STRESS_FOCUS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 8851779855778666379,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+REGIME_REACTION_FUNCTION_STATE=FINANCIAL_STRESS_FOCUS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 17907303267522146365,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "GROWTH_LABOUR_FOCUS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 14400380652337709289,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+REGIME_REACTION_FUNCTION_STATE=GROWTH_LABOUR_FOCUS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 3213582726544874624,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "REGIME_REACTION_FUNCTION_STATE",
+          "state": "INFLATION_FOCUS"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 11800735931419632780,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_DEPTH_ALIGNMENT=BULLISH+REGIME_REACTION_FUNCTION_STATE=INFLATION_FOCUS:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 5781971631366326282,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        },
+        {
+          "field": "ASIA_RANGE_COMPRESSION",
+          "state": "HIGH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 7968493928897537550,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_PRESSURE_W60=BEARISH+ASIA_RANGE_COMPRESSION=HIGH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 17578383341385984865,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        },
+        {
+          "field": "ASIA_RANGE_COMPRESSION",
+          "state": "LOW"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 15729184357349920082,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_PRESSURE_W60=BEARISH+ASIA_RANGE_COMPRESSION=LOW:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 9805510280537267735,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        },
+        {
+          "field": "ASIA_RANGE_COMPRESSION",
+          "state": "NORMAL"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 5808388615630389549,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_PRESSURE_W60=BEARISH+ASIA_RANGE_COMPRESSION=NORMAL:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 12076388030353262139,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        },
+        {
+          "field": "LIQUIDITY_ACTIVITY_SHIFT",
+          "state": "HIGH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 10680253388180908453,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_PRESSURE_W60=BEARISH+LIQUIDITY_ACTIVITY_SHIFT=HIGH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 2597790334590162305,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        },
+        {
+          "field": "LIQUIDITY_ACTIVITY_SHIFT",
+          "state": "LOW"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 6400337305550831288,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_PRESSURE_W60=BEARISH+LIQUIDITY_ACTIVITY_SHIFT=LOW:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 12044549571128496971,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        },
+        {
+          "field": "ASIA_RANGE_COMPRESSION",
+          "state": "HIGH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 4458334641929109266,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_PRESSURE_W60=BULLISH+ASIA_RANGE_COMPRESSION=HIGH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 15550094124124167504,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        },
+        {
+          "field": "ASIA_RANGE_COMPRESSION",
+          "state": "LOW"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 5913409233053088195,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_PRESSURE_W60=BULLISH+ASIA_RANGE_COMPRESSION=LOW:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 2561558265953318766,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        },
+        {
+          "field": "ASIA_RANGE_COMPRESSION",
+          "state": "NORMAL"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 10797825761249738879,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_PRESSURE_W60=BULLISH+ASIA_RANGE_COMPRESSION=NORMAL:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 12125807826361351023,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        },
+        {
+          "field": "LIQUIDITY_ACTIVITY_SHIFT",
+          "state": "HIGH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 17712112824664210785,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_PRESSURE_W60=BULLISH+LIQUIDITY_ACTIVITY_SHIFT=HIGH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 9455193332994478334,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        },
+        {
+          "field": "LIQUIDITY_ACTIVITY_SHIFT",
+          "state": "LOW"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H4_LIQUIDITY_CONDITIONING"
+      ],
+      "permutation_seed_uint64": 5412371500374523754,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:FLOW_PRESSURE_W60=BULLISH+LIQUIDITY_ACTIVITY_SHIFT=LOW:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 7777022843060932632,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "LONDON_ASIA_INTERACTION_PRE_NEW_YORK",
+          "state": "ACCEPTED_ABOVE"
+        },
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H8_NEW_YORK_HANDOVER"
+      ],
+      "permutation_seed_uint64": 7673850809648500841,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:LONDON_ASIA_INTERACTION_PRE_NEW_YORK=ACCEPTED_ABOVE+FLOW_PRESSURE_W60=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 3330176735278953068,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "LONDON_ASIA_INTERACTION_PRE_NEW_YORK",
+          "state": "ACCEPTED_BELOW"
+        },
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H8_NEW_YORK_HANDOVER"
+      ],
+      "permutation_seed_uint64": 14844854598194957251,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:LONDON_ASIA_INTERACTION_PRE_NEW_YORK=ACCEPTED_BELOW+FLOW_PRESSURE_W60=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 6256641627042512483,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "LONDON_PRE_NEW_YORK_DIRECTION",
+          "state": "DOWN"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H8_NEW_YORK_HANDOVER"
+      ],
+      "permutation_seed_uint64": 17379416914407568071,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:LONDON_PRE_NEW_YORK_DIRECTION=DOWN+FLOW_DEPTH_ALIGNMENT=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 694930509460335140,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "LONDON_PRE_NEW_YORK_DIRECTION",
+          "state": "UP"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H8_NEW_YORK_HANDOVER"
+      ],
+      "permutation_seed_uint64": 6391561514933582252,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:LONDON_PRE_NEW_YORK_DIRECTION=UP+FLOW_DEPTH_ALIGNMENT=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 477424286429459963,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "MACRO_ENGINE_BIAS_STATE",
+          "state": "BEARISH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 10294329012607754340,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:MACRO_ENGINE_BIAS_STATE=BEARISH+FLOW_DEPTH_ALIGNMENT=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 5651749323648859760,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "MACRO_ENGINE_BIAS_STATE",
+          "state": "BULLISH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 5152668930449186404,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:MACRO_ENGINE_BIAS_STATE=BULLISH+FLOW_DEPTH_ALIGNMENT=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 9219879881558867742,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "PRIOR_DAY_RANGE_LOCATION",
+          "state": "ABOVE_PRIOR_HIGH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 6969573131040112381,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:PRIOR_DAY_RANGE_LOCATION=ABOVE_PRIOR_HIGH+FLOW_DEPTH_ALIGNMENT=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 17997077207089358925,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "PRIOR_DAY_RANGE_LOCATION",
+          "state": "BELOW_PRIOR_LOW"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 11956076837326979174,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:PRIOR_DAY_RANGE_LOCATION=BELOW_PRIOR_LOW+FLOW_DEPTH_ALIGNMENT=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 606501153851626133,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "REAL_YIELD_USD_CONFIRMATION",
+          "state": "GOLD_BEARISH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 9054022942809140103,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:REAL_YIELD_USD_CONFIRMATION=GOLD_BEARISH+FLOW_DEPTH_ALIGNMENT=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 10450559039856057972,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "REAL_YIELD_USD_CONFIRMATION",
+          "state": "GOLD_BULLISH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 7179059168342997243,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:REAL_YIELD_USD_CONFIRMATION=GOLD_BULLISH+FLOW_DEPTH_ALIGNMENT=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 808109319022372408,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "RECENT_RELEASE_SURPRISE_DIRECTION",
+          "state": "BEARISH"
+        },
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 17093119582848696929,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:RECENT_RELEASE_SURPRISE_DIRECTION=BEARISH+FLOW_PRESSURE_W60=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 7554900631033159564,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "RECENT_RELEASE_SURPRISE_DIRECTION",
+          "state": "BULLISH"
+        },
+        {
+          "field": "FLOW_PRESSURE_W60",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H5_MACRO_MICRO_CONFIRMATION"
+      ],
+      "permutation_seed_uint64": 14923864106448663171,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:RECENT_RELEASE_SURPRISE_DIRECTION=BULLISH+FLOW_PRESSURE_W60=BULLISH:UP"
+    },
+    {
+      "bootstrap_seed_uint64": 2309647661650536942,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "STRUCTURE_15M_1H_ALIGNMENT",
+          "state": "BEARISH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BEARISH"
+        }
+      ],
+      "favorable_direction": "DOWN",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 14786725387916281608,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:STRUCTURE_15M_1H_ALIGNMENT=BEARISH+FLOW_DEPTH_ALIGNMENT=BEARISH:DOWN"
+    },
+    {
+      "bootstrap_seed_uint64": 1441550372589533815,
+      "complement_semantics": "ALL_CONSTITUENTS_KNOWN_AND_EXACT_REGISTERED_CONDITION_FALSE",
+      "condition_semantics": "ALL_EXACT_STATES_MUST_MATCH",
+      "conditions": [
+        {
+          "field": "STRUCTURE_15M_1H_ALIGNMENT",
+          "state": "BULLISH"
+        },
+        {
+          "field": "FLOW_DEPTH_ALIGNMENT",
+          "state": "BULLISH"
+        }
+      ],
+      "favorable_direction": "UP",
+      "hypothesis_ids": [
+        "H6_LEVEL_MICRO_ACCEPTANCE"
+      ],
+      "permutation_seed_uint64": 6093875455408475452,
+      "session": "NEW_YORK",
+      "stage": 2,
+      "test_id": "NEW_YORK:STAGE_2:STRUCTURE_15M_1H_ALIGNMENT=BULLISH+FLOW_DEPTH_ALIGNMENT=BULLISH:UP"
+    }
+  ],
+  "version": "GC_MICROSTRUCTURE_STEP_5D_TEST_REGISTRY_V0_1"
+}

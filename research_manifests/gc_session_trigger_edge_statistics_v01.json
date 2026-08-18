@@ -1,0 +1,121 @@
+{
+  "analysis_separation": "London and New York are separate multiplicity families and separate candidate shortlists.",
+  "candidate_rules": {
+    "development_candidate_is_a_trading_edge": false,
+    "maximum_candidates_per_session": 2,
+    "ranking_order": [
+      "lowest BH q-value",
+      "highest lower confidence bound on favorable hit-rate lift",
+      "highest minimum of bullish and bearish distinct-date support",
+      "largest favorable effect",
+      "largest distinct-date support",
+      "lexicographically smallest test_id"
+    ],
+    "retuning_inversion_repair_or_selective_filtering": false,
+    "verdicts": [
+      "PROVISIONAL_DEVELOPMENT_CANDIDATE_NOT_VALIDATED",
+      "REJECT",
+      "SUPPORT_FAIL"
+    ],
+    "zero_candidates_acceptable": true
+  },
+  "effect_and_uncertainty_gates": {
+    "flat_policy": "Retain and report; exclude only from binary hit-rate denominator, never from continuous displacement.",
+    "stage1_cluster_bootstrap_95pct_lower_hit_rate": ">0.50",
+    "stage1_cluster_bootstrap_95pct_lower_median_favorable_displacement": ">0",
+    "stage1_favorable_hit_rate_minimum": 0.56,
+    "stage2_cluster_bootstrap_95pct_lower_lift_pp": ">0",
+    "stage2_cluster_bootstrap_95pct_lower_median_favorable_difference": ">0",
+    "stage2_condition_favorable_hit_rate_minimum": 0.56,
+    "stage2_condition_minus_comparison_hit_rate_lift_pp_minimum": 10.0
+  },
+  "frozen_at_utc": "2026-08-04T12:55:54.699888Z",
+  "independent_units": {
+    "event_rows_are_not_independent": true,
+    "first_event_sensitivity": true,
+    "primary_cluster": "selected_month_week_id",
+    "secondary_cluster": "session_date",
+    "within_date_cap": "At most three canonical events per event family and date in the primary analysis."
+  },
+  "maximum_registered_tests": {
+    "both_sessions": 78,
+    "stage1_per_session": 6,
+    "stage2_per_session": 33,
+    "total_per_session": 39
+  },
+  "milestone_2_support_only_admission": {
+    "manual_preference_or_result_based_selection": false,
+    "market_direction_or_forward_path_access": false,
+    "rule": "M2 may materialize trigger timestamps, feature/context availability, and support counts without forward outcomes. It may admit or exclude a future test only by these frozen support/completeness rules.",
+    "zero_admitted_tests_acceptable": true
+  },
+  "multiplicity": {
+    "families": "Separate by session and stage on every support-eligible primary-endpoint test.",
+    "method": "Benjamini-Hochberg",
+    "q_threshold": 0.05,
+    "secondary_horizons": "Holm correction across 5, 30, and 60 minutes for reporting; secondary results cannot rescue or create a candidate.",
+    "support_failures": "Recorded but not assigned a p-value; never silently removed from the complete registry."
+  },
+  "outcome_values_accessed": false,
+  "primary_endpoint_only_for_pass": "XAUUSD_FWD_15M_SIGNED_DISPLACEMENT",
+  "stability_gates": {
+    "block_segment_rule": "Favorable sign in at least three of four segments and no segment hit-rate lift below -5 percentage points when segment support is adequate.",
+    "calendar_years": "The favorable effect must have the same sign in every one of 2022, 2023, and 2024 that satisfies the frozen per-year support floor; 2021 is reported but cannot be required because it has only ten selected dates.",
+    "cross_venue": "Median GC fifteen-minute consistency displacement may be UNKNOWN but must not have a statistically supported opposite sign.",
+    "first_event_only": "Same favorable sign and at least 50 percent of the all-canonical-event effect magnitude.",
+    "ordered_block_segments": [
+      "blocks_01_10",
+      "blocks_11_20",
+      "blocks_21_29",
+      "blocks_30_38"
+    ]
+  },
+  "stage_1": {
+    "benchmark": "Favorable direction probability 0.50 after multiplying each outcome by its preregistered event sign.",
+    "directional_balance_rule": "A one-sided family is ASYMMETRIC_DESCRIPTIVE_ONLY and cannot advance in V1.",
+    "maximum_tests_per_session": 6,
+    "support_floors": {
+      "bearish_distinct_dates": 20,
+      "bearish_event_instances": 30,
+      "bullish_distinct_dates": 20,
+      "bullish_event_instances": 30,
+      "calendar_years": 3,
+      "distinct_month_week_blocks": 20,
+      "distinct_session_dates": 50,
+      "event_instances": 80,
+      "minimum_total_events_in_each_eligible_year": 8
+    },
+    "unit": "One pooled sign-normalized test per event family and session; bullish and bearish variants are not separate candidates."
+  },
+  "stage_2": {
+    "comparison": "Same event family and session when the registered context is not aligned; UNKNOWN context rows are excluded and reported.",
+    "maximum_tests_per_session": 33,
+    "support_floors": {
+      "calendar_years": 3,
+      "comparison_bearish_distinct_dates": 15,
+      "comparison_bullish_distinct_dates": 15,
+      "comparison_distinct_dates": 40,
+      "comparison_distinct_month_week_blocks": 18,
+      "comparison_event_instances": 70,
+      "condition_bearish_distinct_dates": 12,
+      "condition_bullish_distinct_dates": 12,
+      "condition_distinct_dates": 30,
+      "condition_distinct_month_week_blocks": 15,
+      "condition_event_instances": 50,
+      "minimum_condition_dates_per_eligible_year": 5
+    },
+    "unit": "One event family crossed with exactly one permitted context; no three-way interaction."
+  },
+  "statistical_protocol_receipt": "fcbc10fbbcd2b812460bede4931b7bca7b157c3610bc0cc414a8eee64d2c2a12",
+  "status": "FROZEN_BEFORE_EVENT_SUPPORT_OR_OUTCOME_ACCESS",
+  "uncertainty": {
+    "cluster_bootstrap_resamples": 20000,
+    "cluster_bootstrap_unit": "selected_month_week_id with all dates and events preserved inside the sampled block",
+    "confidence_level": 0.95,
+    "randomization": "Deterministic date-cluster directional sign flips under the null; all events from a date flip together.",
+    "randomization_repetitions": 100000,
+    "seed": "uint64 from the first sixteen hex characters of SHA256(contract_version|session|stage|test_id|method)"
+  },
+  "version": "GC_SESSION_TRIGGER_EDGE_STATISTICAL_PROTOCOL_V1_0",
+  "year_2025_or_2026_values_accessed": false
+}

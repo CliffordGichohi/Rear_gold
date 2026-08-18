@@ -1,0 +1,218 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4A3_AMENDMENT_V0_1",
+  "status": "FROZEN_BEFORE_IMPLEMENTATION_AND_SOURCE_ROW_ACCESS",
+  "frozen_at_utc": "2026-07-31T13:17:42.3272939Z",
+  "classification": "ENGINEERING_ONLY_FEATURE_INTEGRITY_RECERTIFICATION",
+  "research_or_validation_credit": "NONE",
+  "purpose": "Rerun the two unchanged Step 4A feature calculations and alter only the two integrity classifications authorized by the sealed Step 4A.2 recommendation.",
+  "predecessor_preservation": {
+    "step_4a": {
+      "required_status": "FAIL_FEATURE_INTEGRITY",
+      "required_manifest_hash": "4960f1ee7f03e21cc490ea81b8e15554ed6c879527d8a02c3956b849cab2bf0f",
+      "required_verdict_hash": "853c99ea3c8655869ead48c15b09409952789cd8cb964df06c53aa84583c2c07"
+    },
+    "step_4a1": {
+      "required_status": "FAIL_DIAGNOSTIC_INTEGRITY",
+      "required_manifest_hash": "6bcc2f207fa8554f780aec269bd0ad3f4bff6686a37260bfc60b479b6f07eee5",
+      "required_verdict_hash": "85fee3a5de442f89ae2622ec4e66f15f6bb7fce3579dd714447bd53d635f97fb",
+      "required_bad_ts_recv_finding": "CONFIRMED"
+    },
+    "step_4a2": {
+      "required_status": "PASS_DISPOSITION_REPRODUCTION",
+      "required_manifest_hash": "b273efc3826a3e10856e5693c75262ca286d4aa66bfe4cef6c53b64e893e0fb2",
+      "required_verdict_hash": "f750b8f9359a9e56fc69ea8931ea2b486c221c5e07890c68e6cd6cab74573353",
+      "required_finding": "CONTINUOUS_BUCKET_CLOSE_STATES_CLEAN",
+      "required_recommendation": "RECERTIFY_WITH_SNAPSHOT_EXCEPTION_AND_CONTINUOUS_BUCKET_CLOSE_GATE_V0_1"
+    },
+    "all_predecessor_verdicts_and_artifacts_immutable": true
+  },
+  "sealed_sources": {
+    "calendar_date": "2024-01-09",
+    "research_and_validation_exclusion": "PERMANENT",
+    "mbo": {
+      "records": 2322905,
+      "sha256": "43a8a3bb2be9a4a36ab324e3fe0ca0e29ccb4529f445013a87156d3bad4c0ba3"
+    },
+    "mbp10": {
+      "records": 1924786,
+      "sha256": "4ead358f538d7c383a14f39bbde35b8ccfa21e38e58205edbc51bedfb2ed80d4"
+    },
+    "additional_data_acquisition_permitted": false,
+    "source_substitution_permitted": false,
+    "another_date_may_be_inspected": false
+  },
+  "unchanged_feature_pipeline": {
+    "required_original_protocol_sha256": "8f1ba7230919b7422344253d4f3e55fea1e86495551cbbbf53f3e1bdcb9ec3a2",
+    "required_original_freeze_sha256": "dba14cef54b8469b28c1e30700c1f0bf64d77962a82479011e53361ac916d32f",
+    "required_original_tool_sha256": "c5589914a1acae6a3a1e9079c302821477866bba3741317392c567bb590c2369",
+    "implementation_binding": {
+      "primary": "Call the sealed original _calculate_primary implementation unchanged.",
+      "reference": "Call the sealed original _calculate_reference implementation unchanged.",
+      "shared_unchanged_helpers": [
+        "_validate_column_lengths",
+        "_feature_hashes",
+        "_write_feature_parquet"
+      ]
+    },
+    "expected_feature_rows": 86400,
+    "expected_feature_columns": 85,
+    "expected_feature_schema_hash": "dfaf74cdc55b37469966857fc1ed2279b3d18c98f90454ced65859cb32494232",
+    "expected_complete_row_checksum": "10e9282feaedd99bf13ad4e77415c49c3a6b193bf87a4fc184abce57da96fd30",
+    "expected_feature_parquet_sha256": "b559771bc332f400900da43e3c16619a5b75b9457c2a15975d390e977085eda3",
+    "expected_feature_parquet_bytes": 5957736,
+    "expected_source_input_checksums": {
+      "mbo_complete_pass": "09f51c7711200041f41c2c98a4b1da97f161e34318c1a4cf5f96da37ddd8ebb1",
+      "mbp10_complete_pass": "2dcb350f27bce920b6495569b0453024460160290d620e6d1fff66214bf3f944"
+    },
+    "feature_definition_change_permitted": false,
+    "timestamp_or_bucket_change_permitted": false,
+    "reset_or_missing_data_change_permitted": false,
+    "row_filter_drop_repair_or_relabel_permitted": false
+  },
+  "amendment_one_bad_ts_recv": {
+    "replaces_only_original_gate": "bad_ts_recv_flag_rows_zero",
+    "replacement_gate": "bad_ts_recv_rows_all_confirmed_snapshot_semantics",
+    "scope": "Every MBO and MBP-10 source row with flags bit 8 set.",
+    "permitted_only_if_all_predicates_true": [
+      "flags bit 32 snapshot is set",
+      "ts_recv equals 1704758400000000000 exactly",
+      "1704758400000000000 <= ts_recv < 1704844800000000000",
+      "ts_event < 1704758400000000000",
+      "ts_event <= ts_recv",
+      "action is A or R"
+    ],
+    "required_exact_counts": {
+      "combined_bad_flag_rows": 2745,
+      "mbo_bad_flag_rows": 2744,
+      "mbo_action_A": 2743,
+      "mbo_action_R": 1,
+      "mbp10_bad_flag_rows": 1,
+      "mbp10_action_A": 1,
+      "mbp10_action_R": 0,
+      "violating_bad_flag_rows": 0
+    },
+    "feature_counts_remain_observed": true,
+    "flag_clearing_filtering_repair_or_relabeling_permitted": false,
+    "primary_audit": "Streaming batch arrays with direct predicate counters.",
+    "reference_audit": "Independent Arrow-table boolean-mask classification with separately expressed predicates."
+  },
+  "amendment_two_crossed_book": {
+    "replaces_only_original_gate": "continuous_crossed_book_rows_zero",
+    "replacement_gate": "continuous_matching_bucket_close_crossed_states_zero",
+    "gate_scope": "One-second output bucket-close states where market_state equals CONTINUOUS_MATCHING.",
+    "crossed_definition": "The unchanged Step 4A book_crossed output boolean is true.",
+    "required_continuous_crossed_bucket_closes": 0,
+    "required_reporting_by_segment": {
+      "CONTINUOUS_00_22": {
+        "bucket_closes": 79200,
+        "crossed_bucket_closes": 0
+      },
+      "MAINTENANCE_22_2245": {
+        "bucket_closes": 2700,
+        "crossed_bucket_closes": 0
+      },
+      "PRE_OPEN_2245_23": {
+        "bucket_closes": 900,
+        "crossed_bucket_closes": 60
+      },
+      "CONTINUOUS_23_24": {
+        "bucket_closes": 3600,
+        "crossed_bucket_closes": 0
+      }
+    },
+    "required_reporting_by_market_state": {
+      "CONTINUOUS_MATCHING": {
+        "bucket_closes": 82800,
+        "crossed_bucket_closes": 0
+      },
+      "MAINTENANCE": {
+        "bucket_closes": 2700,
+        "crossed_bucket_closes": 0
+      },
+      "PRE_OPEN": {
+        "bucket_closes": 900,
+        "crossed_bucket_closes": 60
+      }
+    },
+    "raw_continuous_crossed_source_rows": {
+      "required_reported_count": 1,
+      "is_integrity_gate": false,
+      "source_row_filtering_or_repair_permitted": false
+    }
+  },
+  "unchanged_original_integrity_gates": [
+    "predecessor_and_source_seals_valid",
+    "required_input_columns_present",
+    "source_record_counts_exact",
+    "publisher_and_instrument_exact",
+    "all_receive_timestamps_in_frozen_day",
+    "receive_timestamp_and_source_ordinal_order_nondecreasing",
+    "every_source_row_allocated_exactly_once",
+    "output_bucket_rows_exact",
+    "output_bucket_grid_complete_unique_and_ordered",
+    "no_cross_segment_state_carry",
+    "empty_levels_canonical",
+    "book_sizes_and_counts_nonnegative",
+    "maybe_bad_book_flag_rows_zero",
+    "unknown_action_rows_zero",
+    "no_mbo_to_mbp_alignment",
+    "no_outcome_signal_execution_or_pnl_work"
+  ],
+  "independent_reproduction": {
+    "complete_original_primary_and_reference_source_passes_required": true,
+    "snapshot_semantics_primary_and_reference_audits_required": true,
+    "identical_required": [
+      "source input checksums",
+      "feature row and column counts",
+      "feature schema hash",
+      "null counts",
+      "per-column checksums",
+      "complete-row checksum",
+      "technical diagnostics",
+      "output Parquet SHA-256",
+      "snapshot-semantic counts and classifications",
+      "crossed bucket-close counts by segment and market state",
+      "all amended and unchanged integrity gates"
+    ],
+    "original_feature_payload_exact_reproduction_required": true
+  },
+  "verdict_precedence": [
+    "FAIL_PREDECESSOR_OR_SOURCE_INTEGRITY",
+    "FAIL_FEATURE_INTEGRITY_RECERTIFICATION",
+    "FAIL_RECERTIFICATION_REPRODUCTION",
+    "PASS_FEATURE_INTEGRITY_RECERTIFICATION"
+  ],
+  "verdict_rules": {
+    "FAIL_PREDECESSOR_OR_SOURCE_INTEGRITY": "Any predecessor, source seal, schema, record-count, date, publisher, instrument, completeness, or implementation-binding gate fails.",
+    "FAIL_FEATURE_INTEGRITY_RECERTIFICATION": "Either implementation violates an unchanged Step 4A gate or either bounded amended gate.",
+    "FAIL_RECERTIFICATION_REPRODUCTION": "Both implementations pass independently but differ on any frozen required count, diagnostic, classification, checksum, or payload hash.",
+    "PASS_FEATURE_INTEGRITY_RECERTIFICATION": "Both unchanged feature calculations reproduce the original payload exactly, every unchanged and amended integrity gate passes, and both implementations reproduce exactly.",
+    "partial_pass_label_permitted": false
+  },
+  "reporting_policy": {
+    "permitted": [
+      "formal status",
+      "source and output record counts",
+      "technical integrity counts and boolean classifications",
+      "snapshot-semantic aggregate counts",
+      "crossed bucket-close aggregate counts by frozen segment and market state",
+      "checksums and hashes",
+      "reproduction result"
+    ],
+    "market_prices_depths_or_other_feature_values_may_be_reported": false,
+    "human_or_model_market_value_inspection": false
+  },
+  "prohibited": [
+    "modifying any predecessor verdict or sealed artifact",
+    "changing a Step 4A feature definition, formula, timestamp, bucket, reset, segment, state-carry, or missing-data rule",
+    "clearing a source flag or filtering, dropping, repairing, relabeling, or substituting a source row",
+    "changing any original integrity gate other than the two explicitly replaced gates",
+    "MBO-to-MBP row alignment or comparator correction",
+    "acquiring data or inspecting another date",
+    "human or model inspection or reporting of market prices, depths, or emitted feature values",
+    "outcome inspection, edge discovery, targets, labels, signals, candidates, or directional relationships",
+    "feature selection or ranking",
+    "execution optimization, trades, PnL, R multiples, or account returns"
+  ],
+  "completion_policy": "Apply the frozen bounded recertification once, record an honest PASS or FAIL, document and seal Step 4A.3, and stop without research."
+}

@@ -1,0 +1,90 @@
+{
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "controls": {
+    "contract": {
+      "bytes": 9275,
+      "path": "GOLD_H4_LIQUIDITY_TARGET_CAPTURE_FALSIFICATION_CONTRACT_V1.md",
+      "sha256": "305c8e985b5ec814c486a679770221fe70eb61f0593ccd5681822f96b797a127"
+    },
+    "implementation": {
+      "bytes": 61776,
+      "path": "tools/run_gold_h4_liquidity_target_capture_falsification_v1.py",
+      "sha256": "88bd1757805c5834f47ba92af3f6a3dbe17c9c52a15820bdecf325376916c7f1"
+    },
+    "predecessor_final_seal": {
+      "bytes": 2340,
+      "path": "research_manifests/gold_h4_continuation_tradable_ceiling_v1_final_freeze.json",
+      "sha256": "7739599c718d3bf91e27983d6ee05b39428af09fa5e56acb47fb1f9d94f88365"
+    },
+    "protocol": {
+      "bytes": 5208,
+      "path": "research_manifests/gold_h4_liquidity_target_capture_falsification_v1_protocol.json",
+      "sha256": "1fc74fa94c68526536861b5d1e109f0e8c25764d113138e1da16716f7ac943ea"
+    },
+    "tests": {
+      "bytes": 2119,
+      "path": "tests/test_gold_h4_liquidity_target_capture_falsification_v1.py",
+      "sha256": "e55c76f55694322f17f393856d0663cb823d7864125243406f5e0b3bbe90805f"
+    }
+  },
+  "expected_population": {
+    "executable": 248,
+    "no_trade": 176,
+    "oof": 424
+  },
+  "paid_acquisition_usd": 0.0,
+  "post_target_paths_accessed": false,
+  "registered_policies": [
+    "TARGET_TAKE_25_RUN_75",
+    "TARGET_TAKE_50_RUN_50",
+    "TARGET_TAKE_75_RUN_25"
+  ],
+  "sealed_at_utc": "2026-08-12T07:06:11.942601Z",
+  "sources": {
+    "predecessor_cases_primary": {
+      "bytes": 102287,
+      "path": "research_artifacts/gold_h4_continuation_tradable_ceiling_v1/primary_h4_ceiling_cases.parquet",
+      "sha256": "03a9717aa18fa3bd464b91ac9baea891b6ba685bb043fb976118d6026f1f20ee"
+    },
+    "predecessor_cases_reference": {
+      "bytes": 102287,
+      "path": "research_artifacts/gold_h4_continuation_tradable_ceiling_v1/reference_h4_ceiling_cases.parquet",
+      "sha256": "03a9717aa18fa3bd464b91ac9baea891b6ba685bb043fb976118d6026f1f20ee"
+    },
+    "primary_oof": {
+      "bytes": 2637838,
+      "path": "research_artifacts/gold_bidirectional_auction_resolution_v1/primary_oof_cases.parquet",
+      "sha256": "88147e2c4ceddd26673af3b0a1cda677d0c578ed31ac04a734d3f40af1a37ff4"
+    },
+    "primary_plans": {
+      "bytes": 5934634,
+      "path": "research_artifacts/gold_bidirectional_auction_resolution_v1/primary_case_plans.parquet",
+      "sha256": "6b2b169629fff1d39ce0cf8dcb786fd60ed102068fa12b51d2929bebc62ff9fd"
+    },
+    "raw_price": {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    "reference_oof": {
+      "bytes": 2637838,
+      "path": "research_artifacts/gold_bidirectional_auction_resolution_v1/reference_oof_cases.parquet",
+      "sha256": "88147e2c4ceddd26673af3b0a1cda677d0c578ed31ac04a734d3f40af1a37ff4"
+    },
+    "reference_plans": {
+      "bytes": 5934634,
+      "path": "research_artifacts/gold_bidirectional_auction_resolution_v1/reference_case_plans.parquet",
+      "sha256": "6b2b169629fff1d39ce0cf8dcb786fd60ed102068fa12b51d2929bebc62ff9fd"
+    }
+  },
+  "status": "SEALED_BEFORE_2021_2024_POST_TARGET_PATH_ACCESS",
+  "synthetic_proof": {
+    "acceptance_rejection_cases": 2,
+    "atr_primary_reference_equal": true,
+    "pivot_primary_reference_equal": true,
+    "status": "PASS_SYNTHETIC_TARGET_STATE_AND_LIQUIDITY_PROOF",
+    "whole_ounce_allocation_cases": 9
+  },
+  "version": "GOLD_H4_LIQUIDITY_TARGET_CAPTURE_FALSIFICATION_V1_PREPATH_FREEZE_1_0"
+}

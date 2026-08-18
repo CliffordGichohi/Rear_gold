@@ -1,0 +1,127 @@
+{
+  "version": "MULTI_ASSET_MACRO_SESSION_PORTFOLIO_EDGE_V1_PROTOCOL_1_0",
+  "status": "FROZEN_BEFORE_MARKET_OUTCOME_ACCESS",
+  "branch": "MULTI_ASSET_MACRO_SESSION_PORTFOLIO_EDGE_V1",
+  "development": {"start_inclusive": "2021-08-01T00:00:00Z", "end_exclusive": "2025-01-01T00:00:00Z", "months": 41},
+  "forward_locks": {"calendar_2025": "LOCKED_UNTIL_COMPLETE_POLICY_FREEZE", "calendar_2026": "LOCKED_FOR_LATER_ROBUSTNESS_AND_PROSPECTIVE_TRACKING"},
+  "instruments": [
+    {"research_id": "XAUUSD", "mt5_symbol": "XAUUSD", "asset_class": "PRECIOUS_METAL", "cluster": "PRECIOUS_METALS", "sessions": ["LONDON_DECISION", "NEW_YORK_DECISION"]},
+    {"research_id": "XAGUSD", "mt5_symbol": "XAGUSD", "asset_class": "PRECIOUS_METAL", "cluster": "PRECIOUS_METALS", "sessions": ["LONDON_DECISION", "NEW_YORK_DECISION"]},
+    {"research_id": "EURUSD", "mt5_symbol": "EURUSD", "asset_class": "FX", "cluster": "USD_FX", "sessions": ["LONDON_DECISION", "NEW_YORK_DECISION"]},
+    {"research_id": "USDJPY", "mt5_symbol": "USDJPY", "asset_class": "FX", "cluster": "USD_FX", "sessions": ["LONDON_DECISION", "NEW_YORK_DECISION"]},
+    {"research_id": "NAS100", "mt5_symbol": "USTEC", "asset_class": "US_EQUITY_INDEX_CFD", "cluster": "US_EQUITY_INDICES", "sessions": ["US_CASH_OPEN"]},
+    {"research_id": "US500", "mt5_symbol": "US500", "asset_class": "US_EQUITY_INDEX_CFD", "cluster": "US_EQUITY_INDICES", "sessions": ["US_CASH_OPEN"]},
+    {"research_id": "WTI", "mt5_symbol": "XTIUSD", "asset_class": "ENERGY_CFD", "cluster": "ENERGY", "sessions": ["US_ENERGY"]}
+  ],
+  "eligibility": {
+    "required_resolution": "M1",
+    "all_41_months": true,
+    "first_session_lte": "2021-08-02",
+    "last_session_gte": "2024-12-31",
+    "active_weekday_presence_gte": 0.90,
+    "primary_session_complete_fraction_gte": 0.90,
+    "session_complete_means_expected_minute_fraction_gte": 0.90,
+    "spread_metadata_fraction_gte": 0.95,
+    "unique_canonical_timestamp_keys": true,
+    "catalog_availability_alone_is_inadequate": true,
+    "partial_snapshots_do_not_substitute_for_m1": true
+  },
+  "sessions": {
+    "ASIA_BUILD": {"timezone": "Europe/London", "start": "00:00", "end": "07:00"},
+    "LONDON_DECISION": {"timezone": "Europe/London", "start": "07:00", "end": "12:00", "opening_range_minutes": 15},
+    "NEW_YORK_DECISION": {"timezone": "America/New_York", "start": "08:00", "end": "12:00", "opening_range_minutes": 15},
+    "US_CASH_OPEN": {"timezone": "America/New_York", "start": "09:30", "end": "12:00", "opening_range_minutes": 30},
+    "US_ENERGY": {"timezone": "America/New_York", "start": "08:00", "end": "14:30", "opening_range_minutes": 30}
+  },
+  "edge_families": [
+    {"id": "E1_POST_MACRO_ACCEPTANCE_REJECTION", "instruments": "ALL_ELIGIBLE"},
+    {"id": "E2_PRIOR_SESSION_SWEEP_RECLAIM", "instruments": ["XAUUSD", "XAGUSD", "EURUSD", "USDJPY"]},
+    {"id": "E3_PRIMARY_SESSION_BREAK_ACCEPT_RETEST", "instruments": "ALL_ELIGIBLE"},
+    {"id": "E4_HTF_PULLBACK_RESOLUTION", "instruments": "ALL_ELIGIBLE"}
+  ],
+  "interactions": {"maximum_conditions": 2, "only": "REGISTERED_TRIGGER_X_MACRO_STATE", "macro_states": ["ALIGNED", "OPPOSED", "NEUTRAL", "UNKNOWN"]},
+  "execution": {
+    "entry": "NEXT_EXACT_M1_OPEN_AFTER_COMPLETED_TRIGGER",
+    "latency_minutes": 1,
+    "stop": "TRIGGER_OR_RETEST_EXTREME_PLUS_0P10_M15_ATR",
+    "stop_distance_atr_min": 0.25,
+    "stop_distance_atr_max": 1.50,
+    "target": "NEAREST_PREEXISTING_LIQUIDITY_1P25R_TO_3R_ELSE_2R",
+    "same_bar": "STOP_FIRST",
+    "gap_stop": "WORSE_OF_STOP_AND_M1_OPEN",
+    "one_open_position_per_instrument": true,
+    "reentry_same_family_session": false
+  },
+  "costs": {
+    "base_round_trip_r": "MAX(POINT_IN_TIME_ENTRY_EXIT_SPREAD_R_PLUS_0P03R,0P05R)",
+    "stress_multipliers": [1.0, 1.5, 2.0],
+    "whole_broker_volume_steps": true,
+    "planned_risk_rounding": "DOWN_ONLY"
+  },
+  "folds": [
+    {"fold": 1, "train": ["2021-08-01", "2021-12-31"], "validate": ["2022-01-01", "2022-06-30"]},
+    {"fold": 2, "train_end": "2022-06-30", "validate": ["2022-07-01", "2022-12-31"]},
+    {"fold": 3, "train_end": "2022-12-31", "validate": ["2023-01-01", "2023-06-30"]},
+    {"fold": 4, "train_end": "2023-06-30", "validate": ["2023-07-01", "2023-12-31"]},
+    {"fold": 5, "train_end": "2023-12-31", "validate": ["2024-01-01", "2024-06-30"]},
+    {"fold": 6, "train_end": "2024-06-30", "validate": ["2024-07-01", "2024-12-31"]}
+  ],
+  "support": {
+    "stage1": {"cases": 90, "dates": 60, "per_fold": 15, "per_signed_direction": 30},
+    "stage2": {"cases": 60, "dates": 40, "per_fold": 10, "per_state": 20}
+  },
+  "statistics": {
+    "cluster": "DECISION_DATE",
+    "bootstrap_resamples": 5000,
+    "seed": 731947,
+    "stage1_multiplicity": "BH_FDR_Q_0P05_COMPLETE_REGISTRY_SUPPORT_FAIL_P_EQUALS_1",
+    "stage2_multiplicity": "HOLM_FWER_ALPHA_0P05_COMPLETE_REGISTRY",
+    "candidate_limit_per_instrument": 2,
+    "candidate_limit_portfolio": 8
+  },
+  "candidate_gates": {
+    "net_oof_expectancy_gt": 0.0,
+    "profit_factor_gte": 1.15,
+    "clustered_ci95_low_gt": 0.0,
+    "adjusted_significance_required": true,
+    "cost_1p5x_expectancy_gt": 0.0,
+    "positive_folds_gte": 4,
+    "positive_years_gte": 2,
+    "neighbour_sign_agreement_gte": "2_OF_3",
+    "maximum_positive_session_share_lte": 0.70,
+    "maximum_drawdown_pct_at_0p25pct_risk_lte": 10.0
+  },
+  "risk": {
+    "account_usd": 10000.0,
+    "portfolio_r_usd": 100.0,
+    "single_trade_risk_portfolio_r": 0.25,
+    "single_trade_risk_pct": 0.25,
+    "cluster_concurrent_risk_portfolio_r_lte": 1.0,
+    "portfolio_concurrent_risk_portfolio_r_lte": 2.0,
+    "tier1_us_macro_supercluster_risk_portfolio_r_lte": 1.0,
+    "supercluster_window_minutes": [-15, 120]
+  },
+  "clusters": {
+    "PRECIOUS_METALS": ["XAUUSD", "XAGUSD"],
+    "USD_FX": ["EURUSD", "USDJPY"],
+    "US_EQUITY_INDICES": ["USTEC", "US500"],
+    "ENERGY": ["XTIUSD"]
+  },
+  "portfolio_gates": {
+    "net_expectancy_gt": 0.0,
+    "profit_factor_gte": 1.15,
+    "clustered_ci95_low_gt": 0.0,
+    "cost_1p5x_expectancy_gt": 0.0,
+    "positive_folds_gte": 4,
+    "positive_years_gte": 2,
+    "maximum_drawdown_pct_lte": 15.0,
+    "maximum_instrument_positive_pnl_share_lte": 0.50,
+    "maximum_cluster_positive_pnl_share_lte": 0.50
+  },
+  "target_capacity": {"portfolio_r_per_month": 10.0, "optimization_input": false, "report_only_after_frozen_portfolio": true},
+  "milestone_1_forbidden": ["OHLC_VALUE_ACCESS", "RETURN_OR_RELATIONSHIP_CALCULATION", "CASE_OR_SIGNAL_CONSTRUCTION", "TRADE_OR_PNL_CALCULATION", "2025_OR_2026_MARKET_VALUE_ACCESS", "PAID_ACQUISITION"],
+  "market_outcomes_accessed": false,
+  "calendar_2025_market_values_accessed": false,
+  "calendar_2026_market_values_accessed": false,
+  "paid_acquisition_usd": 0.0
+}

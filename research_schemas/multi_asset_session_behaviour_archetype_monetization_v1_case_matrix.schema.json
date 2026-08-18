@@ -1,0 +1,547 @@
+{
+  "$defs": {
+    "decisionFact": {
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "UNKNOWN"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {
+        "as_of": {
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "available_at": {
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "decision_eligible": {
+          "const": true
+        },
+        "epistemic_status": {
+          "enum": [
+            "OBSERVED",
+            "CALCULATED",
+            "INFERRED",
+            "UNKNOWN"
+          ]
+        },
+        "explanation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "field_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "quality": {
+          "enum": [
+            "VALID",
+            "PARTIAL",
+            "STALE",
+            "UNAVAILABLE_TECHNICAL",
+            "UNKNOWN"
+          ]
+        },
+        "source_hashes": {
+          "items": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {}
+      },
+      "required": [
+        "field_id",
+        "value",
+        "unit",
+        "epistemic_status",
+        "as_of",
+        "available_at",
+        "quality",
+        "method",
+        "source_hashes",
+        "decision_eligible"
+      ],
+      "type": "object"
+    },
+    "outcomeFact": {
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "UNKNOWN"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {
+        "as_of": {
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "available_at": {
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "decision_eligible": {
+          "const": false
+        },
+        "epistemic_status": {
+          "enum": [
+            "OBSERVED",
+            "CALCULATED",
+            "INFERRED",
+            "UNKNOWN"
+          ]
+        },
+        "explanation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "field_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "quality": {
+          "enum": [
+            "VALID",
+            "PARTIAL",
+            "STALE",
+            "UNAVAILABLE_TECHNICAL",
+            "UNKNOWN"
+          ]
+        },
+        "source_hashes": {
+          "items": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {}
+      },
+      "required": [
+        "field_id",
+        "value",
+        "unit",
+        "epistemic_status",
+        "as_of",
+        "available_at",
+        "quality",
+        "method",
+        "source_hashes",
+        "decision_eligible"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "urn:gold-intel:multi-asset-session-behaviour-v1:case",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "case_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "case_id": {
+          "pattern": "^MSBAM-V1::[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "cluster": {
+          "enum": [
+            "ENERGY",
+            "PRECIOUS_METALS",
+            "USD_FX",
+            "US_EQUITY_INDICES"
+          ]
+        },
+        "decision_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "instrument": {
+          "enum": [
+            "XAGUSD",
+            "EURUSD",
+            "USDJPY",
+            "USTEC",
+            "US500",
+            "XTIUSD"
+          ]
+        },
+        "observation_end": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "observation_start": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "partition": {
+          "enum": [
+            "DEVELOPMENT",
+            "LOCKED_2025",
+            "LOCKED_2026",
+            "PROSPECTIVE"
+          ]
+        },
+        "research_id": {
+          "enum": [
+            "XAGUSD",
+            "EURUSD",
+            "USDJPY",
+            "NAS100",
+            "US500",
+            "WTI"
+          ]
+        },
+        "session_code": {
+          "enum": [
+            "ASIA_SESSION",
+            "LONDON_SESSION",
+            "NEW_YORK_SESSION",
+            "US_CASH_SESSION",
+            "US_ENERGY_SESSION"
+          ]
+        },
+        "session_date_local": {
+          "format": "date",
+          "type": "string"
+        },
+        "timezone": {
+          "enum": [
+            "America/New_York",
+            "Europe/London"
+          ]
+        }
+      },
+      "required": [
+        "case_id",
+        "instrument",
+        "research_id",
+        "cluster",
+        "session_code",
+        "session_date_local",
+        "timezone",
+        "decision_at",
+        "observation_start",
+        "observation_end",
+        "partition"
+      ],
+      "type": "object"
+    },
+    "decision_state": {
+      "additionalProperties": false,
+      "properties": {
+        "facts": {
+          "items": {
+            "$ref": "#/$defs/decisionFact"
+          },
+          "minItems": 73,
+          "type": "array"
+        },
+        "unknown_field_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "facts",
+        "unknown_field_ids"
+      ],
+      "type": "object"
+    },
+    "lineage": {
+      "additionalProperties": false,
+      "properties": {
+        "contract_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "identity_registry_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "protocol_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "source_hashes": {
+          "items": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "traceability_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "transform_versions": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "contract_sha256",
+        "protocol_sha256",
+        "traceability_sha256",
+        "identity_registry_sha256",
+        "source_hashes",
+        "transform_versions"
+      ],
+      "type": "object"
+    },
+    "quality": {
+      "additionalProperties": false,
+      "properties": {
+        "DST_pass": {
+          "type": "boolean"
+        },
+        "duplicate_identity_pass": {
+          "type": "boolean"
+        },
+        "expected_m1_bars": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "observed_m1_bars": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "path_completeness_pass": {
+          "type": "boolean"
+        },
+        "point_in_time_pass": {
+          "type": "boolean"
+        },
+        "status": {
+          "enum": [
+            "VALID",
+            "PARTIAL",
+            "UNAVAILABLE_TECHNICAL"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "expected_m1_bars",
+        "observed_m1_bars",
+        "point_in_time_pass",
+        "DST_pass",
+        "duplicate_identity_pass",
+        "path_completeness_pass"
+      ],
+      "type": "object"
+    },
+    "research_policy": {
+      "additionalProperties": false,
+      "properties": {
+        "account_return_calculated": {
+          "const": false
+        },
+        "candidate_created": {
+          "const": false
+        },
+        "entry_assumed": {
+          "const": false
+        },
+        "execution_optimized": {
+          "const": false
+        },
+        "exit_assumed": {
+          "const": false
+        },
+        "pnl_calculated": {
+          "const": false
+        },
+        "position_sized": {
+          "const": false
+        },
+        "relationship_calculated": {
+          "const": false
+        }
+      },
+      "required": [
+        "relationship_calculated",
+        "candidate_created",
+        "entry_assumed",
+        "exit_assumed",
+        "position_sized",
+        "execution_optimized",
+        "pnl_calculated",
+        "account_return_calculated"
+      ],
+      "type": "object"
+    },
+    "subsequent_behaviour": {
+      "additionalProperties": false,
+      "properties": {
+        "archetype": {
+          "additionalProperties": false,
+          "properties": {
+            "classification_version": {
+              "const": "ARCHETYPE_TAXONOMY_V1_0"
+            },
+            "decision_eligible": {
+              "const": false
+            },
+            "direction": {
+              "enum": [
+                "UP",
+                "DOWN",
+                "BOTH",
+                "NONE",
+                "UNKNOWN"
+              ]
+            },
+            "family": {
+              "enum": [
+                "DATA_UNAVAILABLE",
+                "SWEEP_REVERSAL",
+                "FAILED_BREAK",
+                "BREAKOUT_HOLD",
+                "ONE_SIDED",
+                "TWO_SIDED_EXPANSION",
+                "TREND",
+                "BALANCED_COMPRESSION",
+                "ROTATIONAL",
+                "MIXED_UNCLASSIFIED"
+              ]
+            }
+          },
+          "required": [
+            "family",
+            "direction",
+            "classification_version",
+            "decision_eligible"
+          ],
+          "type": "object"
+        },
+        "decision_eligible": {
+          "const": false
+        },
+        "facts": {
+          "items": {
+            "$ref": "#/$defs/outcomeFact"
+          },
+          "type": "array"
+        },
+        "first_passage": {
+          "items": {
+            "$ref": "#/$defs/outcomeFact"
+          },
+          "type": "array"
+        },
+        "neutral_reference": {
+          "additionalProperties": false,
+          "properties": {
+            "coordinate": {
+              "type": "number"
+            },
+            "not_an_entry": {
+              "const": true
+            },
+            "timestamp": {
+              "format": "date-time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "timestamp",
+            "coordinate",
+            "not_an_entry"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "decision_eligible",
+        "neutral_reference",
+        "facts",
+        "first_passage",
+        "archetype"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "case_metadata",
+    "lineage",
+    "decision_state",
+    "subsequent_behaviour",
+    "quality",
+    "research_policy"
+  ],
+  "title": "Multi-Asset Session Behaviour, Archetype and Monetization V1 Case Matrix",
+  "type": "object",
+  "x-traceability-sha256": "bf8e99aac359972cef38df5c54d2288757e12a7d7ba0fd07bad848aa0c5524b6"
+}

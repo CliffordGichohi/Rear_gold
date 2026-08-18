@@ -227,6 +227,7 @@ def test_fundamental_gate_rejects_a_mechanical_trigger_against_the_bias() -> Non
         end=datetime(2026, 1, 6, 22, 0, tzinfo=UTC),
         config=StrategyConfig(
             strategy_mode="FUNDAMENTAL_ALIGNED",
+            allow_unknown_event_risk=True,
             allow_unknown_liquidity=True,
         ),
         fundamental_state_at=lambda at: _fundamental_state(at, score=-20),
@@ -245,6 +246,7 @@ def test_fundamental_gate_allows_and_attaches_traceable_evidence() -> None:
         end=datetime(2026, 1, 6, 22, 0, tzinfo=UTC),
         config=StrategyConfig(
             strategy_mode="FUNDAMENTAL_ALIGNED",
+            allow_unknown_event_risk=True,
             allow_unknown_liquidity=True,
         ),
         fundamental_state_at=lambda at: _fundamental_state(at, score=20),
@@ -256,12 +258,39 @@ def test_fundamental_gate_allows_and_attaches_traceable_evidence() -> None:
     assert evidence["data_hash"] == "fundamental:20"
 
 
+def test_book_aligned_mode_blocks_when_catalyst_risk_is_unknown() -> None:
+    result = run_asia_range_acceptance(
+        _designed_breakout(),
+        start=datetime(2026, 1, 6, 0, 0, tzinfo=UTC),
+        end=datetime(2026, 1, 6, 22, 0, tzinfo=UTC),
+        config=StrategyConfig(
+            strategy_mode="FUNDAMENTAL_ALIGNED",
+            allow_unknown_liquidity=True,
+        ),
+        fundamental_state_at=lambda at: _fundamental_state(at, score=20),
+    )
+
+    assert result.trades == ()
+    assert (
+        result.metrics["fundamental_gate_rejection_reasons"][
+            "CATALYST_RISK_UNKNOWN_GATE"
+        ]
+        == 1
+    )
+    gate = result.provenance["fundamental_gate"]
+    assert gate["allow_unknown_event_risk"] is False
+    assert gate["decisions"][0]["event_risk"] == "UNKNOWN"
+
+
 def test_book_aligned_mode_blocks_when_historical_liquidity_is_unknown() -> None:
     result = run_asia_range_acceptance(
         _designed_breakout(),
         start=datetime(2026, 1, 6, 0, 0, tzinfo=UTC),
         end=datetime(2026, 1, 6, 22, 0, tzinfo=UTC),
-        config=StrategyConfig(strategy_mode="FUNDAMENTAL_ALIGNED"),
+        config=StrategyConfig(
+            strategy_mode="FUNDAMENTAL_ALIGNED",
+            allow_unknown_event_risk=True,
+        ),
         fundamental_state_at=lambda at: _fundamental_state(at, score=20),
     )
 
@@ -328,7 +357,7 @@ def test_fundamental_gate_can_reconsider_after_the_event_blackout_clears() -> No
         fundamental_state_at=lambda at: _fundamental_state(
             at,
             score=20,
-            event_risk=("HIGH" if at <= datetime(2026, 1, 6, 8, 10, tzinfo=UTC) else "UNKNOWN"),
+            event_risk=("HIGH" if at <= datetime(2026, 1, 6, 8, 10, tzinfo=UTC) else "LOW"),
         ),
     )
 

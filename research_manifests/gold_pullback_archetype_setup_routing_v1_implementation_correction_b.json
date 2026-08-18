@@ -1,0 +1,31 @@
+{
+  "version": "GOLD_PULLBACK_ARCHETYPE_SETUP_ROUTING_V1_IMPLEMENTATION_CORRECTION_B_1_0",
+  "status": "FROZEN_BEFORE_CORRECTED_DEVELOPMENT_RERUN",
+  "preserved_failed_result": {
+    "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1/development_seal.json",
+    "sha256": "dc6fb90862968a7aaf3f108d61787488bd2743a54e83a1d54d8ae5ef7cbc8335",
+    "formal_disposition": "FAIL_OOF_ROUTER_LIVE_ELIGIBILITY_LEAKAGE"
+  },
+  "failure": "OOF prediction and routing incorrectly required the future-resolved technical_available archetype flag",
+  "sole_correction": [
+    "Train probability trees and calculate calibration metrics only on technically labeled cases",
+    "Apply each training-only tree and payoff estimator to every validation-period executed point-in-time signal regardless of later archetype technical availability",
+    "Retain UNAVAILABLE_TECHNICAL as an unknown outcome label excluded only from classifier scoring and payoff-cell estimation, never from trade eligibility"
+  ],
+  "unchanged": [
+    "population identities",
+    "six entry models",
+    "entries, stops, targets and exits",
+    "predictor registry",
+    "walk-forward folds",
+    "tree and calibration method",
+    "payoff estimator",
+    "risk tiers",
+    "costs",
+    "overlap policy",
+    "pass gates"
+  ],
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "retuning_authorized": false
+}

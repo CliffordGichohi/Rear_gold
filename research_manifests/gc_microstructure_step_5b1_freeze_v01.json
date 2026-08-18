@@ -1,0 +1,51 @@
+{
+  "classification": "SOURCE_INTEGRITY_DIAGNOSTIC_ONLY",
+  "frozen_scope": {
+    "bad_ts_recv_tests_frozen": true,
+    "calendar_coverage_tests_frozen": true,
+    "classification_precedence_frozen": true,
+    "correction_or_recertification_implementation_permitted": false,
+    "diagnostic_taxonomy_frozen": true,
+    "independent_reproduction_requirements_frozen": true,
+    "maximum_recommendations": 1,
+    "timestamp_tests_frozen": true
+  },
+  "pre_freeze_verification": {
+    "failed_request_count": 13,
+    "failed_request_normalized_payload_hashes_verified": 13,
+    "failed_request_quality_lineage_and_seal_hashes_verified": 39,
+    "market_values_or_outcomes_accessed_or_reported": false,
+    "parquet_footer_record_counts_verified": 13,
+    "source_rows_accessed": false,
+    "step5b_manifest_hash": "6b4074aa95953232db878027aa0dc85666c478f4abd80e864022e61fded46683",
+    "step5b_status": "FAIL_STEP_5B_BUDGET_C_SOURCE_INTEGRITY"
+  },
+  "preparation_tool": {
+    "bytes": 35298,
+    "path": "tools/prepare_gc_microstructure_step5b1.py",
+    "sha256": "d0776bb10383b18b732334c5db7c4e7ae211b6b480fe516398e9c830fb3575ff"
+  },
+  "prohibited_work_not_started": {
+    "data_repair_filter_replacement_or_reacquisition": false,
+    "execution_optimization": false,
+    "feature_calculation": false,
+    "market_value_or_outcome_inspection": false,
+    "paid_request": false,
+    "relationship_or_signal_testing": false,
+    "trades_pnl_or_returns": false
+  },
+  "protocol": {
+    "bytes": 16903,
+    "path": "research_manifests/gc_microstructure_step_5b1_protocol_v01.json",
+    "sha256": "62eaf586944d720ccab584e7ebfb1ce40d7eaabfe9e9508f542680873cfd5f87"
+  },
+  "research_or_validation_credit": "NONE",
+  "sealed_at_utc": "2026-08-04T06:55:38.384925Z",
+  "source_inventory": {
+    "bytes": 104466,
+    "path": "research_manifests/gc_microstructure_step_5b1_source_inventory_v01.json",
+    "sha256": "a4e2bf8acf97b0ddefde017f36142f5356223ec5ca106fc8e7228cdb5c75b0af"
+  },
+  "status": "DIAGNOSTIC_PROTOCOL_SEALED_BEFORE_ROW_LEVEL_ACCESS",
+  "version": "GC_MICROSTRUCTURE_STEP_5B1_FREEZE_V0_1"
+}

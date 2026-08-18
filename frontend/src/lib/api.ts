@@ -332,6 +332,51 @@ export const backtestRunSchema = z.object({
   trades: z.array(backtestTradeSchema),
 });
 
+const sessionEdgeRobustnessRowSchema = z.object({
+  label: z.string(),
+  trades: z.number().int(),
+  win_rate_pct: nullableMetric,
+  net_expectancy_r: nullableMetric,
+  total_net_pnl: z.number(),
+  total_costs: z.number(),
+  profit_factor: nullableMetric,
+  exclusions: z.record(z.string(), z.number().int()),
+  target_r: z.number().optional(),
+  max_holding_minutes: z.number().int().optional(),
+});
+
+export const sessionEdgeStrategyMetricsSchema = backtestMetricsSchema.extend({
+  candidate_version: z.string(),
+  strategy_mode: z.string(),
+  triggered_opportunities: z.number().int(),
+  eligible_trades: z.number().int(),
+  exclusion_funnel: z.record(z.string(), z.number().int()),
+  gross_expectancy_r: nullableMetric,
+  net_expectancy_r: nullableMetric,
+  total_gross_pnl: z.number(),
+  spread_costs: z.number(),
+  slippage_costs: z.number(),
+  commissions: z.number(),
+  unknown_catalyst_trades: z.number().int(),
+  performance_by_year: z.record(z.string(), groupedBacktestMetricsSchema),
+  robustness: z.object({
+    cost_stress: z.array(sessionEdgeRobustnessRowSchema),
+    parameter_neighbourhood: z.array(sessionEdgeRobustnessRowSchema),
+    selection_policy: z.string(),
+  }),
+  development_gate: z.object({
+    status: z.enum(["PASS", "FAIL"]),
+    continue_to_locked_validation: z.boolean(),
+    criteria: z.record(z.string(), z.boolean()),
+    largest_regime_share_pct: z.number(),
+    holdout_policy: z.string(),
+  }),
+});
+
+export const sessionEdgeStrategyRunSchema = backtestRunSchema.extend({
+  metrics: sessionEdgeStrategyMetricsSchema,
+});
+
 export const backtestDataRangeSchema = z.object({
   instrument: z.string(),
   provider_code: z.string(),
@@ -398,6 +443,87 @@ export const eventStudyRunSchema = z.object({
   results: z.record(z.string(), z.unknown()),
   created_at: z.string(),
   completed_at: z.string().nullable(),
+});
+
+const sessionEdgeCohortSchema = z.object({
+  setup_count: z.number().int(),
+  complete_outcome_count: z.number().int(),
+  mean_gross_path_outcome_r_1r: z.number().nullable(),
+  median_gross_path_outcome_r_1r: z.number().nullable(),
+  gross_path_outcome_r_bootstrap_95ci: z.tuple([
+    z.number().nullable(),
+    z.number().nullable(),
+  ]),
+  mean_mfe_r: z.number().nullable(),
+  median_mfe_r: z.number().nullable(),
+  mean_mae_r: z.number().nullable(),
+  median_mae_r: z.number().nullable(),
+  target_before_stop_pct: z.record(z.string(), z.number().nullable()),
+});
+
+export const sessionOpportunitySchema = z.object({
+  id: z.string(),
+  run_id: z.string(),
+  session_date: z.string(),
+  fundamental_freeze_time: z.string(),
+  level_freeze_time: z.string(),
+  london_start_time: z.string(),
+  london_end_time: z.string(),
+  status: z.string(),
+  no_trigger_reason: z.string().nullable(),
+  setup_side: z.enum(["LONG", "SHORT"]).nullable(),
+  signal_time: z.string().nullable(),
+  entry_time: z.string().nullable(),
+  bias_alignment: z.string(),
+  directional_score: z.number().nullable(),
+  fundamental_confidence: z.number().nullable(),
+  fundamental_coverage: z.number().nullable(),
+  regime_label: z.string(),
+  dominant_driver: z.string().nullable(),
+  event_risk: z.string(),
+  asia_high: z.number().nullable(),
+  asia_low: z.number().nullable(),
+  asia_range_size: z.number().nullable(),
+  asia_range_percentile: z.number().nullable(),
+  asia_compression_state: z.string(),
+  entry_reference_price: z.number().nullable(),
+  invalidation_price: z.number().nullable(),
+  risk_distance: z.number().nullable(),
+  facts: z.record(z.string(), z.unknown()),
+  outcomes: z.array(z.record(z.string(), z.unknown())),
+  evidence: z.record(z.string(), z.unknown()),
+  data_hash: z.string(),
+  created_at: z.string(),
+});
+
+export const sessionEdgeStudyRunSchema = z.object({
+  id: z.string(),
+  strategy_name: z.string(),
+  strategy_version: z.string(),
+  instrument: z.string(),
+  provider_code: z.string(),
+  start: z.string(),
+  end: z.string(),
+  status: z.string(),
+  parameters: z.record(z.string(), z.unknown()),
+  data_hash: z.string(),
+  source_bar_count: z.number().int(),
+  session_count: z.number().int(),
+  trigger_count: z.number().int(),
+  results: z.object({
+    research_status: z.string(),
+    session_count: z.number().int(),
+    complete_session_count: z.number().int(),
+    trigger_count: z.number().int(),
+    trigger_rate_pct: z.number().nullable(),
+    status_funnel: z.record(z.string(), z.number().int()),
+    cohorts: z.record(z.string(), sessionEdgeCohortSchema),
+    interpretation: z.string(),
+  }),
+  provenance: z.record(z.string(), z.unknown()),
+  created_at: z.string(),
+  completed_at: z.string().nullable(),
+  opportunities: z.array(sessionOpportunitySchema),
 });
 
 export const licensedProviderHealthSchema = z
@@ -545,6 +671,346 @@ export const marketObservationSchema = z.object({
   source_record_key: z.string(),
 });
 
+export const blindReplayStatusSchema = z.object({
+  protocol: z.string(),
+  ready: z.boolean(),
+  phase: z.enum(["PRACTICE", "SCORED", "COMPLETE"]),
+  practice_completed: z.number().int().min(0).max(20),
+  practice_total: z.literal(20),
+  scored_completed: z.number().int().min(0).max(240),
+  scored_total: z.literal(240),
+  total_locked: z.number().int().min(0).max(260),
+  next_case_alias: z.string().nullable(),
+  ledger_head_sha256: z.string().length(64),
+  scored_outcomes_locked: z.boolean(),
+  research_status: z.string(),
+});
+
+export const blindReplayBarSchema = z.object({
+  ordinal: z.number().optional(),
+  minutes_after_checkpoint: z.number().int().optional(),
+  open: z.number(),
+  high: z.number(),
+  low: z.number(),
+  close: z.number(),
+  volume: z.number().nullable().optional(),
+  spread_price_index: z.number().nullable().optional(),
+});
+
+export const blindReplayPayloadSchema = z
+  .object({
+    case_alias: z.string(),
+    mode: z.enum(["PRACTICE", "SCORED"]),
+    mode_sequence: z.number().int().positive(),
+    global_sequence: z.number().int().positive(),
+    session_code: z.enum(["LONDON", "NEW_YORK"]),
+    checkpoint_label: z.literal("SESSION_OPEN_PLUS_60_MINUTES"),
+    reference_index: z.literal(100),
+    m15_atr_index: z.number().positive(),
+    charts: z.record(z.string(), z.array(blindReplayBarSchema)),
+    chart_availability: z.object({
+      status: z.string(),
+      counts: z.record(z.string(), z.number().int().nonnegative()),
+      required: z.record(z.string(), z.number().int().positive()),
+    }),
+    session: z.record(z.string(), z.unknown()),
+    structure: z.record(z.string(), z.unknown()),
+    fundamental: z.record(z.string(), z.unknown()),
+    cross_market: z.record(z.string(), z.unknown()),
+    positioning: z.record(z.string(), z.unknown()),
+    released_events: z.array(z.record(z.string(), z.unknown())),
+    liquidity: z.record(z.string(), z.unknown()),
+    gc_order_flow: z.record(z.string(), z.unknown()),
+    display_policy: z.object({
+      absolute_date_hidden: z.literal(true),
+      absolute_time_hidden: z.literal(true),
+      absolute_price_hidden: z.literal(true),
+      completed_candles_only: z.literal(true),
+      future_scored_path_present: z.literal(false),
+    }),
+    payload_sha256: z.string().length(64),
+  })
+  .passthrough();
+
+export const blindReplayCaseSchema = z.object({
+  case: blindReplayPayloadSchema,
+  progress: blindReplayStatusSchema,
+});
+
+export const blindReplayDecisionResponseSchema = z.object({
+  locked: z.literal(true),
+  idempotent_replay: z.boolean(),
+  record_sha256: z.string().length(64),
+  case_alias: z.string(),
+  mode: z.enum(["PRACTICE", "SCORED"]),
+  progress: blindReplayStatusSchema,
+  practice_feedback: z
+    .object({
+      case_alias: z.string(),
+      status: z.string(),
+      bars: z.array(blindReplayBarSchema),
+      economic_result: z.string(),
+    })
+    .nullable(),
+});
+
+export const blindReplayV2BarSchema = z.object({
+  bar_id: z.string().length(64),
+  close_offset_minutes: z.number().int().max(180),
+  available_offset_minutes: z.number().int().max(180),
+  open: z.number(),
+  high: z.number(),
+  low: z.number(),
+  close: z.number(),
+  volume: z.number().nullable().optional(),
+});
+
+export const blindReplayV2StatusSchema = z.object({
+  protocol: z.literal("GOLD_BLIND_SYNCHRONIZED_SETUP_REPLAY_V2_PROTOCOL_1_0"),
+  ready: z.boolean(),
+  phase: z.enum(["PRACTICE", "PRACTICE_COMPLETE_SCORED_CLOSED"]),
+  practice_completed: z.number().int().min(0).max(20),
+  practice_total: z.literal(20),
+  total_locked: z.number().int().min(0).max(20),
+  next_case_alias: z.string().nullable(),
+  cursor_minute: z.number().int().min(0).max(180).nullable(),
+  cursor_ledger_head_sha256: z.string().length(64),
+  setup_ledger_head_sha256: z.string().length(64),
+  scored_labeling: z.literal("CLOSED_V2_PRACTICE_ONLY_CERTIFIED"),
+  research_credit: z.literal("ZERO_PRACTICE_ONLY"),
+});
+
+const blindReplayV2VisibilitySchema = z.object({
+  count: z.number().int().nonnegative(),
+  terminal_bar_id: z.string().length(64).nullable(),
+  sha256: z.string().length(64),
+});
+
+export const blindReplayV2PayloadSchema = z.object({
+  version: z.literal("GOLD_BLIND_SYNCHRONIZED_SETUP_REPLAY_V2_SNAPSHOT_1_0"),
+  case_alias: z.string().regex(/^P-\d{3}$/),
+  mode: z.literal("PRACTICE"),
+  mode_sequence: z.number().int().min(1).max(20),
+  session_code: z.enum(["LONDON", "NEW_YORK"]),
+  cursor_minute: z.number().int().min(0).max(180),
+  maximum_cursor_minute: z.literal(180),
+  selected_timeframe_default: z.literal("15m"),
+  reference_index: z.literal(100),
+  latest_visible_m1_close_index: z.number(),
+  latest_point_in_time_m15_atr_index: z.number().positive(),
+  context_frozen_at_cursor_minute: z.literal(0),
+  context_staleness_minutes: z.number().int().min(0).max(180),
+  context: z.record(z.string(), z.unknown()),
+  context_sha256: z.string().length(64),
+  charts: z.record(z.string(), z.array(blindReplayV2BarSchema)),
+  visible_timeframes: z.record(z.string(), blindReplayV2VisibilitySchema),
+  visible_charts_sha256: z.string().length(64),
+  display_policy: z.object({
+    one_way_cursor: z.literal(true),
+    future_values_in_response: z.literal(false),
+    timeframe_switch_changes_cursor: z.literal(false),
+    drawings_case_global: z.literal(true),
+    scored_labeling_closed: z.literal(true),
+    context_frozen_at_t0: z.literal(true),
+  }),
+});
+
+export const blindReplayV2CaseSchema = z.object({
+  case: blindReplayV2PayloadSchema,
+  progress: blindReplayV2StatusSchema,
+});
+
+export const blindReplayV2DecisionResponseSchema = z.object({
+  locked: z.literal(true),
+  idempotent_replay: z.boolean(),
+  record_sha256: z.string().length(64),
+  case_alias: z.string(),
+  locked_cursor_minute: z.number().int().min(0).max(180),
+  progress: blindReplayV2StatusSchema,
+  practice_feedback: z.object({
+    status: z.literal("PRACTICE_RESOLUTION_REVEALED_ZERO_RESEARCH_CREDIT"),
+    locked_cursor_minute: z.number().int().min(0).max(180),
+    bars: z.array(blindReplayV2BarSchema),
+    economic_result: z.string(),
+  }),
+});
+
+export const blindReplayV3BarSchema = z.object({
+  bar_id: z.string().length(64),
+  timeframe: z.string(),
+  open_at: z.string(),
+  close_at: z.string(),
+  available_at: z.string(),
+  open: z.number(),
+  high: z.number(),
+  low: z.number(),
+  close: z.number(),
+  volume: z.number().nullable().optional(),
+  spread_price: z.number().nullable().optional(),
+  complete: z.boolean(),
+  missing_source_minutes: z.number().int().nonnegative(),
+});
+
+export const blindReplayV3StatusSchema = z.object({
+  protocol: z.literal("GOLD_ANNOTATED_TRADINGVIEW_STYLE_REPLAY_V3_PROTOCOL_1_0"),
+  ready: z.boolean(),
+  phase: z.enum(["PRACTICE", "PRACTICE_COMPLETE_COLLECTION_CLOSED"]),
+  practice_completed: z.number().int().min(0).max(20),
+  practice_total: z.literal(20),
+  current_case_alias: z.string().nullable(),
+  event_ledger_head_sha256: z.string().length(64),
+  collection_year: z.number().int(),
+  collection_state: z.literal("CLOSED_NOT_MATERIALIZED_OR_ACCESSIBLE"),
+  calendar_2025: z.literal("LOCKED"),
+  calendar_2026: z.literal("LOCKED"),
+  research_credit: z.literal("ZERO_PRACTICE_ONLY"),
+  practice_cases: z.array(z.object({
+    case_alias: z.string(),
+    trading_date_utc: z.string(),
+    completed: z.boolean(),
+    active: z.boolean(),
+    research_credit: z.literal("ZERO_PRACTICE_ONLY"),
+  })),
+});
+
+export const blindReplayV3OrderSchema = z.object({
+  order_id: z.string(),
+  case_alias: z.string(),
+  state: z.enum(["PENDING_ORDER", "ACTIVE_POSITION", "CANCELLED", "EXPIRED", "RESOLVED"]),
+  submitted_at: z.string(),
+  effective_at: z.string(),
+  direction: z.enum(["LONG", "SHORT"]),
+  order_type: z.enum(["MARKET", "LIMIT", "STOP"]),
+  entry: z.number(),
+  stop: z.number(),
+  target: z.number(),
+  expiry_at: z.string(),
+  quantity_ounces: z.number().int().positive(),
+  risk_usd: z.number().nonnegative(),
+  selected_timeframe: z.string(),
+  drawings: z.array(z.record(z.string(), z.unknown())),
+  annotation: z.record(z.string(), z.unknown()),
+  fill: z.record(z.string(), z.unknown()).optional(),
+  resolution: z.record(z.string(), z.unknown()).optional(),
+}).passthrough();
+
+const blindReplayV3VisibilitySchema = z.object({
+  count: z.number().int().nonnegative(),
+  terminal_bar_id: z.string().length(64).nullable(),
+  sha256: z.string().length(64),
+});
+
+export const blindReplayV3PayloadSchema = z.object({
+  version: z.literal("GOLD_ANNOTATED_REPLAY_V3_SNAPSHOT_1_0"),
+  case_alias: z.string().regex(/^V3-P-\d{3}$/),
+  mode: z.literal("PRACTICE"),
+  mode_sequence: z.number().int().min(1).max(20),
+  trading_date_utc: z.string(),
+  start_at: z.string(),
+  end_at: z.string(),
+  cursor_at: z.string(),
+  selected_timeframe_default: z.literal("15m"),
+  charts: z.record(z.string(), z.array(blindReplayV3BarSchema)),
+  visible_timeframes: z.record(z.string(), blindReplayV3VisibilitySchema),
+  context: z.record(z.string(), z.unknown()),
+  live_order: blindReplayV3OrderSchema.nullable(),
+  order_history: z.array(blindReplayV3OrderSchema),
+  visible_state_sha256: z.string().length(64),
+  execution: z.object({
+    maximum_planned_risk_usd: z.number(),
+    account_equity_usd: z.number(),
+    one_live_order_or_position: z.literal(true),
+    post_fill_geometry_mutable: z.literal(false),
+    same_bar_ambiguity: z.literal("STOP_FIRST"),
+  }),
+  display_policy: z.record(z.string(), z.unknown()),
+});
+
+export const blindReplayV3CaseSchema = z.object({
+  case: blindReplayV3PayloadSchema,
+  progress: blindReplayV3StatusSchema,
+});
+
+export const blindReplayV3MutationSchema = z.object({
+  event_sha256: z.string().length(64),
+  idempotent_replay: z.boolean(),
+  case: blindReplayV3PayloadSchema.nullable(),
+  progress: blindReplayV3StatusSchema,
+});
+
+export const codexOperatorReplayStatusSchema = z.object({
+  protocol: z.enum([
+    "GOLD_BLIND_CODEX_OPERATOR_REPLAY_AUDIT_V1_PROTOCOL_1_0",
+    "GOLD_MATCHED_HUMAN_CODEX_REPLAY_COMPARISON_V1_PROTOCOL_1_0",
+  ]),
+  ready: z.boolean(),
+  phase: z.enum(["BLIND_COLLECTION", "BLIND_COLLECTION_COMPLETE_OUTCOMES_LOCKED"]),
+  cases_completed: z.number().int().nonnegative(),
+  cases_total: z.number().int().positive(),
+  current_case_alias: z.string().nullable(),
+  visible_ledger_head_sha256: z.string().length(64),
+  outcome_vault_state: z.literal("SEALED_OPERATOR_INACCESSIBLE"),
+  human_decisions: z.enum(["HIDDEN", "CURRENT_OPERATOR_ONLY_CODEX_HIDDEN"]),
+  calendar_2025: z.literal("LOCKED"),
+  calendar_2026: z.literal("LOCKED"),
+  research_credit: z.enum([
+    "BLINDED_HISTORICAL_OPERATOR_EVIDENCE",
+    "ZERO_CREDIT_MATCHED_METHOD_DIAGNOSTIC",
+  ]),
+  cases: z.array(z.object({
+    case_alias: z.string(),
+    trading_date_utc: z.string(),
+    completed: z.boolean(),
+    active: z.boolean(),
+  })),
+});
+
+const codexOperatorReplayVisibilitySchema = z.object({
+  count: z.number().int().nonnegative(),
+  terminal_bar_id: z.string().nullable(),
+  sha256: z.string().length(64),
+});
+
+export const codexOperatorReplayPayloadSchema = z.object({
+  version: z.literal("GOLD_BLIND_CODEX_OPERATOR_REPLAY_V1_SNAPSHOT_1_0"),
+  case_alias: z.string().regex(/^CBR-2022-\d{3}$/),
+  mode: z.enum(["CODEX_BLIND", "MATCHED_HUMAN_DIAGNOSTIC"]),
+  mode_sequence: z.number().int().positive(),
+  trading_date_utc: z.string(),
+  start_at: z.string(),
+  end_at: z.string(),
+  cursor_at: z.string(),
+  observation_terminal_at: z.string(),
+  active_entry_session: z.enum(["LONDON", "LONDON_NEW_YORK_OVERLAP", "NEW_YORK"]).nullable(),
+  selected_timeframe_default: z.literal("15m"),
+  charts: z.record(z.string(), z.array(blindReplayV3BarSchema)),
+  visible_timeframes: z.record(z.string(), codexOperatorReplayVisibilitySchema),
+  context: z.record(z.string(), z.unknown()),
+  visible_state_sha256: z.string().length(64),
+  inspected_timeframes: z.array(z.string()),
+  execution: z.object({
+    maximum_planned_risk_usd: z.literal(50),
+    maximum_effective_risk_usd: z.literal(55),
+    order_types: z.tuple([z.literal("MARKET")]),
+    one_trade_per_case: z.literal(true),
+    same_bar_ambiguity: z.literal("STOP_FIRST"),
+  }),
+  display_policy: z.record(z.string(), z.unknown()),
+});
+
+export const codexOperatorReplayCaseSchema = z.object({
+  case: codexOperatorReplayPayloadSchema,
+  progress: codexOperatorReplayStatusSchema,
+});
+
+export const codexOperatorReplayMutationSchema = z.object({
+  event_sha256: z.string().length(64),
+  idempotent_replay: z.boolean(),
+  case: codexOperatorReplayPayloadSchema.nullable(),
+  progress: codexOperatorReplayStatusSchema,
+  outcome_hidden: z.literal(true),
+});
+
 export type IntelligenceSnapshot = z.infer<typeof intelligenceSnapshotSchema>;
 export type DataHealth = z.infer<typeof dataHealthSchema>;
 export type FundamentalComponent = z.infer<typeof fundamentalComponentSchema>;
@@ -552,15 +1018,44 @@ export type FundamentalSnapshot = z.infer<typeof fundamentalSnapshotSchema>;
 export type DecisionSnapshot = z.infer<typeof decisionSnapshotSchema>;
 export type FactorCoverage = z.infer<typeof factorCoverageSchema>;
 export type BacktestRun = z.infer<typeof backtestRunSchema>;
+export type SessionEdgeStrategyRun = z.infer<
+  typeof sessionEdgeStrategyRunSchema
+>;
 export type BacktestDataRange = z.infer<typeof backtestDataRangeSchema>;
 export type EconomicEvent = z.infer<typeof economicEventSchema>;
 export type EconomicSurprise = z.infer<typeof economicSurpriseSchema>;
 export type EventStudyRun = z.infer<typeof eventStudyRunSchema>;
+export type SessionEdgeStudyRun = z.infer<typeof sessionEdgeStudyRunSchema>;
+export type SessionOpportunity = z.infer<typeof sessionOpportunitySchema>;
 export type LicensedProviderHealth = z.infer<
   typeof licensedProviderHealthSchema
 >;
 export type MarketStructureSnapshot = z.infer<typeof marketStructureSnapshotSchema>;
 export type MarketObservation = z.infer<typeof marketObservationSchema>;
+export type BlindReplayStatus = z.infer<typeof blindReplayStatusSchema>;
+export type BlindReplayBar = z.infer<typeof blindReplayBarSchema>;
+export type BlindReplayPayload = z.infer<typeof blindReplayPayloadSchema>;
+export type BlindReplayCase = z.infer<typeof blindReplayCaseSchema>;
+export type BlindReplayDecisionResponse = z.infer<
+  typeof blindReplayDecisionResponseSchema
+>;
+export type BlindReplayV2Bar = z.infer<typeof blindReplayV2BarSchema>;
+export type BlindReplayV2Status = z.infer<typeof blindReplayV2StatusSchema>;
+export type BlindReplayV2Payload = z.infer<typeof blindReplayV2PayloadSchema>;
+export type BlindReplayV2Case = z.infer<typeof blindReplayV2CaseSchema>;
+export type BlindReplayV2DecisionResponse = z.infer<
+  typeof blindReplayV2DecisionResponseSchema
+>;
+export type BlindReplayV3Bar = z.infer<typeof blindReplayV3BarSchema>;
+export type BlindReplayV3Status = z.infer<typeof blindReplayV3StatusSchema>;
+export type BlindReplayV3Order = z.infer<typeof blindReplayV3OrderSchema>;
+export type BlindReplayV3Payload = z.infer<typeof blindReplayV3PayloadSchema>;
+export type BlindReplayV3Case = z.infer<typeof blindReplayV3CaseSchema>;
+export type BlindReplayV3Mutation = z.infer<typeof blindReplayV3MutationSchema>;
+export type CodexOperatorReplayStatus = z.infer<typeof codexOperatorReplayStatusSchema>;
+export type CodexOperatorReplayPayload = z.infer<typeof codexOperatorReplayPayloadSchema>;
+export type CodexOperatorReplayCase = z.infer<typeof codexOperatorReplayCaseSchema>;
+export type CodexOperatorReplayMutation = z.infer<typeof codexOperatorReplayMutationSchema>;
 
 export const publicApiUrl =
   process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000/api/v1";

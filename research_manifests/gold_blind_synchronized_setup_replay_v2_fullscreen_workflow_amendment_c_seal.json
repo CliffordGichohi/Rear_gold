@@ -1,0 +1,23 @@
+{
+  "version": "GOLD_BLIND_SYNCHRONIZED_SETUP_REPLAY_V2_FULLSCREEN_WORKFLOW_AMENDMENT_C_SEAL_1_0",
+  "verdict": "PASS_V2_FULLSCREEN_WORKFLOW_AMENDMENT_C",
+  "sealed_at": "2026-08-14T12:00:27.2360310+00:00",
+  "predecessor_manifest_sha256": "87dc5c60b0d220b3ed47a7615a0ec294e2abc7710bd17abc20edd501a08b0812",
+  "amendment_sha256": "2b170a2aa5822de85b40e426b15605369f247ec61f5434076ec70f4318d9169f",
+  "sealed_outputs": [
+    {
+      "path": "research_artifacts/gold_blind_synchronized_setup_replay_v2/fullscreen_workflow_amendment_c_certification.json",
+      "bytes": 3300,
+      "sha256": "214ffb0ade3179e1576576ac97810b48baa326ddff7c10e92c4a87bf2851d30f"
+    }
+  ],
+  "practice_cursor": {
+    "case_alias": "P-001",
+    "cursor_minute": 172,
+    "total_locked": 0,
+    "setup_ledger_head_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "scored_labeling": "CLOSED_V2_PRACTICE_ONLY_CERTIFIED",
+  "charge_usd": 0.0,
+  "status": "SEALED_READY_FOR_V2_PRACTICE_HUMAN_LABELING_SCORED_CLOSED"
+}

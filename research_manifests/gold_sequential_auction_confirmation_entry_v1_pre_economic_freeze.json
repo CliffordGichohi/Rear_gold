@@ -1,0 +1,1383 @@
+{
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "candidate_limit": 2,
+  "controls": {
+    "materialization_seal": {
+      "bytes": 1974,
+      "path": "research_artifacts/gold_sequential_auction_confirmation_entry_v1_materialization/materialization_seal.json",
+      "sha256": "09a77f7c356b1f6cd9406ef3a713c2830a6255b9ae1efb722d1e64ff703523bc"
+    },
+    "primary_sequences": {
+      "bytes": 7830999,
+      "path": "research_artifacts/gold_sequential_auction_confirmation_entry_v1_materialization/primary_sequences.parquet",
+      "sha256": "f14c1c0d5356066fc57f1ce2efce626be8d8d92573f15fc6c6ba3807e883afd9"
+    },
+    "protocol": {
+      "bytes": 4780,
+      "path": "research_manifests/gold_sequential_auction_confirmation_entry_v1_protocol.json",
+      "sha256": "d67ff442df44bdb8f0a76da401620591179ba5b2b367bde3f7b96e21ee60b1c9"
+    },
+    "reference_sequences": {
+      "bytes": 7830999,
+      "path": "research_artifacts/gold_sequential_auction_confirmation_entry_v1_materialization/reference_sequences.parquet",
+      "sha256": "f14c1c0d5356066fc57f1ce2efce626be8d8d92573f15fc6c6ba3807e883afd9"
+    }
+  },
+  "formal_population": "BLOCKED_OOF_VALIDATION_UNION_ONLY_AFTER_PER_CANDIDATE_OVERLAP",
+  "frozen_at_utc": "2026-08-10T13:25:03.133946Z",
+  "outcome_join": {
+    "end_key": "EXACT_ORIGINAL_DEADLINE_AT_UTC",
+    "entry_key": "EXACT_DELAYED_ENTRY_AT_UTC",
+    "opening_count_before_freeze": 0,
+    "source": "SEALED_DEVELOPMENT_XAUUSD_M1"
+  },
+  "outcomes_accessed_before_freeze": false,
+  "overlap": {
+    "accept": "ENTRY_GTE_CURRENT_EXIT",
+    "same_timestamp": "LOWEST_TRADE_ID",
+    "scope": "VARIANT_X_CANDIDATE",
+    "sort": [
+      "DELAYED_ENTRY_AT_UTC",
+      "TRADE_ID"
+    ]
+  },
+  "paid_acquisition_usd": 0.0,
+  "pass_gates": {
+    "bh_q_lte": 0.1,
+    "both_sensitivity_bundle_expectancies_gt": 0.0,
+    "cluster_ci95_low_gt": 0.0,
+    "cost_1p5x_expectancy_gt": 0.0,
+    "maximum_positive_session_share_lte": 0.7,
+    "maximum_positive_year_share_lte": 0.7,
+    "net_expectancy_gt": 0.0,
+    "positive_calendar_years_gte": 2,
+    "positive_sessions_gte": 2,
+    "positive_validation_folds_gte": 2,
+    "profit_factor_gte": 1.05
+  },
+  "primary_candidate_ids": [
+    "H1::BREAK_RETEST_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+    "H1::BREAK_RETEST_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+    "H1::DEEP_RETRACE_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+    "H1::DEEP_RETRACE_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+    "H1::FALSE_CONTINUATION_REVERSAL::TRACK_A_ORIGINAL_STOP",
+    "H1::FALSE_CONTINUATION_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+    "H1::IMMEDIATE_FAILURE_REVERSAL::TRACK_A_ORIGINAL_STOP",
+    "H1::IMMEDIATE_FAILURE_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+    "H1::RUNAWAY_BREAKOUT::TRACK_A_ORIGINAL_STOP",
+    "H1::RUNAWAY_BREAKOUT::TRACK_B_CONFIRMED_RETEST_STOP",
+    "H1::TWO_SIDED_REFERENCE_RETEST::TRACK_A_ORIGINAL_STOP",
+    "H1::TWO_SIDED_REFERENCE_RETEST::TRACK_B_CONFIRMED_RETEST_STOP",
+    "H4::BREAK_RETEST_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+    "H4::BREAK_RETEST_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+    "H4::DEEP_RETRACE_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+    "H4::DEEP_RETRACE_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+    "H4::FALSE_CONTINUATION_REVERSAL::TRACK_A_ORIGINAL_STOP",
+    "H4::FALSE_CONTINUATION_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+    "H4::IMMEDIATE_FAILURE_REVERSAL::TRACK_A_ORIGINAL_STOP",
+    "H4::IMMEDIATE_FAILURE_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+    "H4::RUNAWAY_BREAKOUT::TRACK_A_ORIGINAL_STOP",
+    "H4::RUNAWAY_BREAKOUT::TRACK_B_CONFIRMED_RETEST_STOP",
+    "H4::TWO_SIDED_REFERENCE_RETEST::TRACK_A_ORIGINAL_STOP",
+    "H4::TWO_SIDED_REFERENCE_RETEST::TRACK_B_CONFIRMED_RETEST_STOP",
+    "M15::BREAK_RETEST_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+    "M15::BREAK_RETEST_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+    "M15::DEEP_RETRACE_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+    "M15::DEEP_RETRACE_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+    "M15::FALSE_CONTINUATION_REVERSAL::TRACK_A_ORIGINAL_STOP",
+    "M15::FALSE_CONTINUATION_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+    "M15::IMMEDIATE_FAILURE_REVERSAL::TRACK_A_ORIGINAL_STOP",
+    "M15::IMMEDIATE_FAILURE_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+    "M15::RUNAWAY_BREAKOUT::TRACK_A_ORIGINAL_STOP",
+    "M15::RUNAWAY_BREAKOUT::TRACK_B_CONFIRMED_RETEST_STOP",
+    "M15::TWO_SIDED_REFERENCE_RETEST::TRACK_A_ORIGINAL_STOP",
+    "M15::TWO_SIDED_REFERENCE_RETEST::TRACK_B_CONFIRMED_RETEST_STOP"
+  ],
+  "ranking": [
+    "CI95_LOW_DESC",
+    "COST_1P5X_EXPECTANCY_DESC",
+    "PROFIT_FACTOR_DESC",
+    "TRADES_DESC",
+    "MAX_DRAWDOWN_ASC",
+    "CANDIDATE_ID_ASC"
+  ],
+  "statistics": {
+    "base_seed": 970331,
+    "bootstrap_clusters": "TRADING_DATE",
+    "bootstrap_resamples": 5000,
+    "daily_sharpe_sortino": "STATIC_10000_ACCOUNT_DAILY_NORMALIZED_PNL_SQRT252",
+    "multiplicity": "BH_BY_TIMEFRAME_ACROSS_12_PRIMARY_CANDIDATES"
+  },
+  "status": "FROZEN_BEFORE_DEVELOPMENT_OUTCOME_PATHS",
+  "support_registry_pre_outcome": [
+    {
+      "entry_eligible_dates_pre_overlap": 228,
+      "entry_eligible_pre_overlap": 254,
+      "identity": "LENIENT::H1::BREAK_RETEST_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 931,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 254,
+        "NO_CONFIRMATION": 348,
+        "NO_TRADE_GATE": 305,
+        "UNAVAILABLE": 24
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 295,
+      "entry_eligible_pre_overlap": 359,
+      "identity": "LENIENT::H1::BREAK_RETEST_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 931,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 359,
+        "NO_CONFIRMATION": 348,
+        "NO_TRADE_GATE": 200,
+        "UNAVAILABLE": 24
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 82,
+      "entry_eligible_pre_overlap": 84,
+      "identity": "LENIENT::H1::DEEP_RETRACE_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 929,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 84,
+        "NO_CONFIRMATION": 374,
+        "NO_TRADE_GATE": 388,
+        "UNAVAILABLE": 83
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 178,
+      "entry_eligible_pre_overlap": 202,
+      "identity": "LENIENT::H1::DEEP_RETRACE_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 929,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 202,
+        "NO_CONFIRMATION": 374,
+        "NO_TRADE_GATE": 270,
+        "UNAVAILABLE": 83
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 3,
+      "entry_eligible_pre_overlap": 3,
+      "identity": "LENIENT::H1::FALSE_CONTINUATION_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 340,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 3,
+        "NO_CONFIRMATION": 228,
+        "NO_TRADE_GATE": 105,
+        "UNAVAILABLE": 4
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 3,
+      "entry_eligible_pre_overlap": 3,
+      "identity": "LENIENT::H1::FALSE_CONTINUATION_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 340,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 3,
+        "NO_CONFIRMATION": 228,
+        "NO_TRADE_GATE": 105,
+        "UNAVAILABLE": 4
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 3,
+      "entry_eligible_pre_overlap": 3,
+      "identity": "LENIENT::H1::IMMEDIATE_FAILURE_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 361,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 3,
+        "NO_CONFIRMATION": 218,
+        "NO_TRADE_GATE": 132,
+        "UNAVAILABLE": 8
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 3,
+      "entry_eligible_pre_overlap": 3,
+      "identity": "LENIENT::H1::IMMEDIATE_FAILURE_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 361,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 3,
+        "NO_CONFIRMATION": 218,
+        "NO_TRADE_GATE": 132,
+        "UNAVAILABLE": 8
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 273,
+      "entry_eligible_pre_overlap": 328,
+      "identity": "LENIENT::H1::RUNAWAY_BREAKOUT::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 1035,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 328,
+        "NO_CONFIRMATION": 417,
+        "NO_TRADE_GATE": 263,
+        "UNAVAILABLE": 27
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 310,
+      "entry_eligible_pre_overlap": 374,
+      "identity": "LENIENT::H1::RUNAWAY_BREAKOUT::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 1035,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 374,
+        "NO_CONFIRMATION": 417,
+        "NO_TRADE_GATE": 217,
+        "UNAVAILABLE": 27
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 1,
+      "entry_eligible_pre_overlap": 1,
+      "identity": "LENIENT::H1::TWO_SIDED_REFERENCE_RETEST::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 293,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1,
+        "NO_CONFIRMATION": 148,
+        "NO_TRADE_GATE": 130,
+        "UNAVAILABLE": 14
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 28,
+      "entry_eligible_pre_overlap": 28,
+      "identity": "LENIENT::H1::TWO_SIDED_REFERENCE_RETEST::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 293,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 28,
+        "NO_CONFIRMATION": 148,
+        "NO_TRADE_GATE": 103,
+        "UNAVAILABLE": 14
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 60,
+      "entry_eligible_pre_overlap": 60,
+      "identity": "LENIENT::H4::BREAK_RETEST_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 229,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 60,
+        "NO_CONFIRMATION": 80,
+        "NO_TRADE_GATE": 84,
+        "UNAVAILABLE": 5
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 92,
+      "entry_eligible_pre_overlap": 93,
+      "identity": "LENIENT::H4::BREAK_RETEST_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 229,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 93,
+        "NO_CONFIRMATION": 80,
+        "NO_TRADE_GATE": 51,
+        "UNAVAILABLE": 5
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 15,
+      "entry_eligible_pre_overlap": 15,
+      "identity": "LENIENT::H4::DEEP_RETRACE_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 181,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 15,
+        "NO_CONFIRMATION": 71,
+        "NO_TRADE_GATE": 59,
+        "UNAVAILABLE": 36
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 30,
+      "entry_eligible_pre_overlap": 30,
+      "identity": "LENIENT::H4::DEEP_RETRACE_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 181,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 30,
+        "NO_CONFIRMATION": 71,
+        "NO_TRADE_GATE": 44,
+        "UNAVAILABLE": 36
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "LENIENT::H4::FALSE_CONTINUATION_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 57,
+      "status_counts": {
+        "NO_CONFIRMATION": 27,
+        "NO_TRADE_GATE": 29,
+        "UNAVAILABLE": 1
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "LENIENT::H4::FALSE_CONTINUATION_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 57,
+      "status_counts": {
+        "NO_CONFIRMATION": 27,
+        "NO_TRADE_GATE": 29,
+        "UNAVAILABLE": 1
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "LENIENT::H4::IMMEDIATE_FAILURE_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 48,
+      "status_counts": {
+        "NO_CONFIRMATION": 26,
+        "NO_TRADE_GATE": 19,
+        "UNAVAILABLE": 3
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "LENIENT::H4::IMMEDIATE_FAILURE_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 48,
+      "status_counts": {
+        "NO_CONFIRMATION": 26,
+        "NO_TRADE_GATE": 19,
+        "UNAVAILABLE": 3
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 93,
+      "entry_eligible_pre_overlap": 93,
+      "identity": "LENIENT::H4::RUNAWAY_BREAKOUT::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 250,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 93,
+        "NO_CONFIRMATION": 88,
+        "NO_TRADE_GATE": 63,
+        "UNAVAILABLE": 6
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 101,
+      "entry_eligible_pre_overlap": 101,
+      "identity": "LENIENT::H4::RUNAWAY_BREAKOUT::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 250,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 101,
+        "NO_CONFIRMATION": 88,
+        "NO_TRADE_GATE": 55,
+        "UNAVAILABLE": 6
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 1,
+      "entry_eligible_pre_overlap": 1,
+      "identity": "LENIENT::H4::TWO_SIDED_REFERENCE_RETEST::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 56,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1,
+        "NO_CONFIRMATION": 35,
+        "NO_TRADE_GATE": 15,
+        "UNAVAILABLE": 5
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 4,
+      "entry_eligible_pre_overlap": 4,
+      "identity": "LENIENT::H4::TWO_SIDED_REFERENCE_RETEST::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 56,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 4,
+        "NO_CONFIRMATION": 35,
+        "NO_TRADE_GATE": 12,
+        "UNAVAILABLE": 5
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 742,
+      "entry_eligible_pre_overlap": 1437,
+      "identity": "LENIENT::M15::BREAK_RETEST_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 3906,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1437,
+        "NO_CONFIRMATION": 1379,
+        "NO_TRADE_GATE": 1063,
+        "UNAVAILABLE": 27
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 801,
+      "entry_eligible_pre_overlap": 1712,
+      "identity": "LENIENT::M15::BREAK_RETEST_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 3906,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1712,
+        "NO_CONFIRMATION": 1379,
+        "NO_TRADE_GATE": 788,
+        "UNAVAILABLE": 27
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 422,
+      "entry_eligible_pre_overlap": 603,
+      "identity": "LENIENT::M15::DEEP_RETRACE_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 4233,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 603,
+        "NO_CONFIRMATION": 1965,
+        "NO_TRADE_GATE": 1585,
+        "UNAVAILABLE": 80
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 645,
+      "entry_eligible_pre_overlap": 1158,
+      "identity": "LENIENT::M15::DEEP_RETRACE_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 4233,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1158,
+        "NO_CONFIRMATION": 1965,
+        "NO_TRADE_GATE": 1030,
+        "UNAVAILABLE": 80
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 4,
+      "entry_eligible_pre_overlap": 4,
+      "identity": "LENIENT::M15::FALSE_CONTINUATION_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 1586,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 4,
+        "NO_CONFIRMATION": 1120,
+        "NO_TRADE_GATE": 457,
+        "UNAVAILABLE": 5
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 5,
+      "entry_eligible_pre_overlap": 5,
+      "identity": "LENIENT::M15::FALSE_CONTINUATION_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 1586,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 5,
+        "NO_CONFIRMATION": 1120,
+        "NO_TRADE_GATE": 456,
+        "UNAVAILABLE": 5
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 3,
+      "entry_eligible_pre_overlap": 3,
+      "identity": "LENIENT::M15::IMMEDIATE_FAILURE_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 1534,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 3,
+        "NO_CONFIRMATION": 1133,
+        "NO_TRADE_GATE": 396,
+        "UNAVAILABLE": 2
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 3,
+      "entry_eligible_pre_overlap": 3,
+      "identity": "LENIENT::M15::IMMEDIATE_FAILURE_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 1534,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 3,
+        "NO_CONFIRMATION": 1133,
+        "NO_TRADE_GATE": 396,
+        "UNAVAILABLE": 2
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 810,
+      "entry_eligible_pre_overlap": 1817,
+      "identity": "LENIENT::M15::RUNAWAY_BREAKOUT::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 4776,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1817,
+        "NO_CONFIRMATION": 1813,
+        "NO_TRADE_GATE": 1114,
+        "UNAVAILABLE": 32
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 831,
+      "entry_eligible_pre_overlap": 1968,
+      "identity": "LENIENT::M15::RUNAWAY_BREAKOUT::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 4776,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1968,
+        "NO_CONFIRMATION": 1813,
+        "NO_TRADE_GATE": 963,
+        "UNAVAILABLE": 32
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 12,
+      "entry_eligible_pre_overlap": 12,
+      "identity": "LENIENT::M15::TWO_SIDED_REFERENCE_RETEST::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 1448,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 12,
+        "NO_CONFIRMATION": 880,
+        "NO_TRADE_GATE": 542,
+        "UNAVAILABLE": 14
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 182,
+      "entry_eligible_pre_overlap": 197,
+      "identity": "LENIENT::M15::TWO_SIDED_REFERENCE_RETEST::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 1448,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 197,
+        "NO_CONFIRMATION": 880,
+        "NO_TRADE_GATE": 357,
+        "UNAVAILABLE": 14
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 174,
+      "entry_eligible_pre_overlap": 193,
+      "identity": "PRIMARY::H1::BREAK_RETEST_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 931,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 193,
+        "NO_CONFIRMATION": 427,
+        "NO_TRADE_GATE": 279,
+        "UNAVAILABLE": 32
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 238,
+      "entry_eligible_pre_overlap": 272,
+      "identity": "PRIMARY::H1::BREAK_RETEST_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 931,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 272,
+        "NO_CONFIRMATION": 427,
+        "NO_TRADE_GATE": 200,
+        "UNAVAILABLE": 32
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 38,
+      "entry_eligible_pre_overlap": 38,
+      "identity": "PRIMARY::H1::DEEP_RETRACE_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 929,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 38,
+        "NO_CONFIRMATION": 491,
+        "NO_TRADE_GATE": 316,
+        "UNAVAILABLE": 84
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 98,
+      "entry_eligible_pre_overlap": 104,
+      "identity": "PRIMARY::H1::DEEP_RETRACE_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 929,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 104,
+        "NO_CONFIRMATION": 491,
+        "NO_TRADE_GATE": 250,
+        "UNAVAILABLE": 84
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "PRIMARY::H1::FALSE_CONTINUATION_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 340,
+      "status_counts": {
+        "NO_CONFIRMATION": 231,
+        "NO_TRADE_GATE": 105,
+        "UNAVAILABLE": 4
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "PRIMARY::H1::FALSE_CONTINUATION_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 340,
+      "status_counts": {
+        "NO_CONFIRMATION": 231,
+        "NO_TRADE_GATE": 105,
+        "UNAVAILABLE": 4
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 3,
+      "entry_eligible_pre_overlap": 3,
+      "identity": "PRIMARY::H1::IMMEDIATE_FAILURE_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 361,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 3,
+        "NO_CONFIRMATION": 218,
+        "NO_TRADE_GATE": 132,
+        "UNAVAILABLE": 8
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 3,
+      "entry_eligible_pre_overlap": 3,
+      "identity": "PRIMARY::H1::IMMEDIATE_FAILURE_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 361,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 3,
+        "NO_CONFIRMATION": 218,
+        "NO_TRADE_GATE": 132,
+        "UNAVAILABLE": 8
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 226,
+      "entry_eligible_pre_overlap": 259,
+      "identity": "PRIMARY::H1::RUNAWAY_BREAKOUT::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 1035,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 259,
+        "NO_CONFIRMATION": 492,
+        "NO_TRADE_GATE": 251,
+        "UNAVAILABLE": 33
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 256,
+      "entry_eligible_pre_overlap": 293,
+      "identity": "PRIMARY::H1::RUNAWAY_BREAKOUT::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 1035,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 293,
+        "NO_CONFIRMATION": 492,
+        "NO_TRADE_GATE": 217,
+        "UNAVAILABLE": 33
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "PRIMARY::H1::TWO_SIDED_REFERENCE_RETEST::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 293,
+      "status_counts": {
+        "NO_CONFIRMATION": 183,
+        "NO_TRADE_GATE": 99,
+        "UNAVAILABLE": 11
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 11,
+      "entry_eligible_pre_overlap": 11,
+      "identity": "PRIMARY::H1::TWO_SIDED_REFERENCE_RETEST::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 293,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 11,
+        "NO_CONFIRMATION": 183,
+        "NO_TRADE_GATE": 88,
+        "UNAVAILABLE": 11
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 45,
+      "entry_eligible_pre_overlap": 45,
+      "identity": "PRIMARY::H4::BREAK_RETEST_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 229,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 45,
+        "NO_CONFIRMATION": 100,
+        "NO_TRADE_GATE": 79,
+        "UNAVAILABLE": 5
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 73,
+      "entry_eligible_pre_overlap": 73,
+      "identity": "PRIMARY::H4::BREAK_RETEST_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 229,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 73,
+        "NO_CONFIRMATION": 100,
+        "NO_TRADE_GATE": 51,
+        "UNAVAILABLE": 5
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 7,
+      "entry_eligible_pre_overlap": 7,
+      "identity": "PRIMARY::H4::DEEP_RETRACE_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 181,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 7,
+        "NO_CONFIRMATION": 89,
+        "NO_TRADE_GATE": 49,
+        "UNAVAILABLE": 36
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 15,
+      "entry_eligible_pre_overlap": 15,
+      "identity": "PRIMARY::H4::DEEP_RETRACE_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 181,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 15,
+        "NO_CONFIRMATION": 89,
+        "NO_TRADE_GATE": 41,
+        "UNAVAILABLE": 36
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "PRIMARY::H4::FALSE_CONTINUATION_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 57,
+      "status_counts": {
+        "NO_CONFIRMATION": 27,
+        "NO_TRADE_GATE": 29,
+        "UNAVAILABLE": 1
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "PRIMARY::H4::FALSE_CONTINUATION_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 57,
+      "status_counts": {
+        "NO_CONFIRMATION": 27,
+        "NO_TRADE_GATE": 29,
+        "UNAVAILABLE": 1
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "PRIMARY::H4::IMMEDIATE_FAILURE_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 48,
+      "status_counts": {
+        "NO_CONFIRMATION": 26,
+        "NO_TRADE_GATE": 19,
+        "UNAVAILABLE": 3
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "PRIMARY::H4::IMMEDIATE_FAILURE_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 48,
+      "status_counts": {
+        "NO_CONFIRMATION": 26,
+        "NO_TRADE_GATE": 19,
+        "UNAVAILABLE": 3
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 76,
+      "entry_eligible_pre_overlap": 76,
+      "identity": "PRIMARY::H4::RUNAWAY_BREAKOUT::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 250,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 76,
+        "NO_CONFIRMATION": 110,
+        "NO_TRADE_GATE": 58,
+        "UNAVAILABLE": 6
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 80,
+      "entry_eligible_pre_overlap": 80,
+      "identity": "PRIMARY::H4::RUNAWAY_BREAKOUT::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 250,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 80,
+        "NO_CONFIRMATION": 110,
+        "NO_TRADE_GATE": 54,
+        "UNAVAILABLE": 6
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "PRIMARY::H4::TWO_SIDED_REFERENCE_RETEST::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 56,
+      "status_counts": {
+        "NO_CONFIRMATION": 39,
+        "NO_TRADE_GATE": 10,
+        "UNAVAILABLE": 7
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "PRIMARY::H4::TWO_SIDED_REFERENCE_RETEST::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 56,
+      "status_counts": {
+        "NO_CONFIRMATION": 39,
+        "NO_TRADE_GATE": 10,
+        "UNAVAILABLE": 7
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 663,
+      "entry_eligible_pre_overlap": 1133,
+      "identity": "PRIMARY::M15::BREAK_RETEST_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 3906,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1133,
+        "NO_CONFIRMATION": 1767,
+        "NO_TRADE_GATE": 978,
+        "UNAVAILABLE": 28
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 715,
+      "entry_eligible_pre_overlap": 1329,
+      "identity": "PRIMARY::M15::BREAK_RETEST_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 3906,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1329,
+        "NO_CONFIRMATION": 1767,
+        "NO_TRADE_GATE": 782,
+        "UNAVAILABLE": 28
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 243,
+      "entry_eligible_pre_overlap": 287,
+      "identity": "PRIMARY::M15::DEEP_RETRACE_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 4233,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 287,
+        "NO_CONFIRMATION": 2596,
+        "NO_TRADE_GATE": 1270,
+        "UNAVAILABLE": 80
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 431,
+      "entry_eligible_pre_overlap": 587,
+      "identity": "PRIMARY::M15::DEEP_RETRACE_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 4233,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 587,
+        "NO_CONFIRMATION": 2596,
+        "NO_TRADE_GATE": 970,
+        "UNAVAILABLE": 80
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 1,
+      "entry_eligible_pre_overlap": 1,
+      "identity": "PRIMARY::M15::FALSE_CONTINUATION_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 1586,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1,
+        "NO_CONFIRMATION": 1126,
+        "NO_TRADE_GATE": 454,
+        "UNAVAILABLE": 5
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 1,
+      "entry_eligible_pre_overlap": 1,
+      "identity": "PRIMARY::M15::FALSE_CONTINUATION_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 1586,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1,
+        "NO_CONFIRMATION": 1126,
+        "NO_TRADE_GATE": 454,
+        "UNAVAILABLE": 5
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 1,
+      "entry_eligible_pre_overlap": 1,
+      "identity": "PRIMARY::M15::IMMEDIATE_FAILURE_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 1534,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1,
+        "NO_CONFIRMATION": 1135,
+        "NO_TRADE_GATE": 396,
+        "UNAVAILABLE": 2
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 1,
+      "entry_eligible_pre_overlap": 1,
+      "identity": "PRIMARY::M15::IMMEDIATE_FAILURE_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 1534,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1,
+        "NO_CONFIRMATION": 1135,
+        "NO_TRADE_GATE": 396,
+        "UNAVAILABLE": 2
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 727,
+      "entry_eligible_pre_overlap": 1399,
+      "identity": "PRIMARY::M15::RUNAWAY_BREAKOUT::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 4776,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1399,
+        "NO_CONFIRMATION": 2280,
+        "NO_TRADE_GATE": 1061,
+        "UNAVAILABLE": 36
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 754,
+      "entry_eligible_pre_overlap": 1502,
+      "identity": "PRIMARY::M15::RUNAWAY_BREAKOUT::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 4776,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 1502,
+        "NO_CONFIRMATION": 2280,
+        "NO_TRADE_GATE": 958,
+        "UNAVAILABLE": 36
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 4,
+      "entry_eligible_pre_overlap": 4,
+      "identity": "PRIMARY::M15::TWO_SIDED_REFERENCE_RETEST::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 1448,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 4,
+        "NO_CONFIRMATION": 1045,
+        "NO_TRADE_GATE": 385,
+        "UNAVAILABLE": 14
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 70,
+      "entry_eligible_pre_overlap": 74,
+      "identity": "PRIMARY::M15::TWO_SIDED_REFERENCE_RETEST::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 1448,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 74,
+        "NO_CONFIRMATION": 1045,
+        "NO_TRADE_GATE": 315,
+        "UNAVAILABLE": 14
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 106,
+      "entry_eligible_pre_overlap": 114,
+      "identity": "STRICT::H1::BREAK_RETEST_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 931,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 114,
+        "NO_CONFIRMATION": 534,
+        "NO_TRADE_GATE": 250,
+        "UNAVAILABLE": 33
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 149,
+      "entry_eligible_pre_overlap": 161,
+      "identity": "STRICT::H1::BREAK_RETEST_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 931,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 161,
+        "NO_CONFIRMATION": 534,
+        "NO_TRADE_GATE": 203,
+        "UNAVAILABLE": 33
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 18,
+      "entry_eligible_pre_overlap": 18,
+      "identity": "STRICT::H1::DEEP_RETRACE_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 929,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 18,
+        "NO_CONFIRMATION": 575,
+        "NO_TRADE_GATE": 254,
+        "UNAVAILABLE": 82
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 35,
+      "entry_eligible_pre_overlap": 35,
+      "identity": "STRICT::H1::DEEP_RETRACE_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 929,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 35,
+        "NO_CONFIRMATION": 575,
+        "NO_TRADE_GATE": 237,
+        "UNAVAILABLE": 82
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::H1::FALSE_CONTINUATION_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 340,
+      "status_counts": {
+        "NO_CONFIRMATION": 231,
+        "NO_TRADE_GATE": 105,
+        "UNAVAILABLE": 4
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::H1::FALSE_CONTINUATION_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 340,
+      "status_counts": {
+        "NO_CONFIRMATION": 231,
+        "NO_TRADE_GATE": 105,
+        "UNAVAILABLE": 4
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::H1::IMMEDIATE_FAILURE_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 361,
+      "status_counts": {
+        "NO_CONFIRMATION": 221,
+        "NO_TRADE_GATE": 132,
+        "UNAVAILABLE": 8
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::H1::IMMEDIATE_FAILURE_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 361,
+      "status_counts": {
+        "NO_CONFIRMATION": 221,
+        "NO_TRADE_GATE": 132,
+        "UNAVAILABLE": 8
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 128,
+      "entry_eligible_pre_overlap": 139,
+      "identity": "STRICT::H1::RUNAWAY_BREAKOUT::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 1035,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 139,
+        "NO_CONFIRMATION": 618,
+        "NO_TRADE_GATE": 240,
+        "UNAVAILABLE": 38
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 151,
+      "entry_eligible_pre_overlap": 162,
+      "identity": "STRICT::H1::RUNAWAY_BREAKOUT::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 1035,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 162,
+        "NO_CONFIRMATION": 618,
+        "NO_TRADE_GATE": 217,
+        "UNAVAILABLE": 38
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::H1::TWO_SIDED_REFERENCE_RETEST::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 293,
+      "status_counts": {
+        "NO_CONFIRMATION": 202,
+        "NO_TRADE_GATE": 80,
+        "UNAVAILABLE": 11
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 2,
+      "entry_eligible_pre_overlap": 2,
+      "identity": "STRICT::H1::TWO_SIDED_REFERENCE_RETEST::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 293,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 2,
+        "NO_CONFIRMATION": 202,
+        "NO_TRADE_GATE": 78,
+        "UNAVAILABLE": 11
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 25,
+      "entry_eligible_pre_overlap": 25,
+      "identity": "STRICT::H4::BREAK_RETEST_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 229,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 25,
+        "NO_CONFIRMATION": 130,
+        "NO_TRADE_GATE": 68,
+        "UNAVAILABLE": 6
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 41,
+      "entry_eligible_pre_overlap": 41,
+      "identity": "STRICT::H4::BREAK_RETEST_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 229,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 41,
+        "NO_CONFIRMATION": 130,
+        "NO_TRADE_GATE": 52,
+        "UNAVAILABLE": 6
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 3,
+      "entry_eligible_pre_overlap": 3,
+      "identity": "STRICT::H4::DEEP_RETRACE_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 181,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 3,
+        "NO_CONFIRMATION": 103,
+        "NO_TRADE_GATE": 39,
+        "UNAVAILABLE": 36
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 6,
+      "entry_eligible_pre_overlap": 6,
+      "identity": "STRICT::H4::DEEP_RETRACE_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 181,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 6,
+        "NO_CONFIRMATION": 103,
+        "NO_TRADE_GATE": 36,
+        "UNAVAILABLE": 36
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::H4::FALSE_CONTINUATION_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 57,
+      "status_counts": {
+        "NO_CONFIRMATION": 27,
+        "NO_TRADE_GATE": 29,
+        "UNAVAILABLE": 1
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::H4::FALSE_CONTINUATION_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 57,
+      "status_counts": {
+        "NO_CONFIRMATION": 27,
+        "NO_TRADE_GATE": 29,
+        "UNAVAILABLE": 1
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::H4::IMMEDIATE_FAILURE_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 48,
+      "status_counts": {
+        "NO_CONFIRMATION": 26,
+        "NO_TRADE_GATE": 19,
+        "UNAVAILABLE": 3
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::H4::IMMEDIATE_FAILURE_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 48,
+      "status_counts": {
+        "NO_CONFIRMATION": 26,
+        "NO_TRADE_GATE": 19,
+        "UNAVAILABLE": 3
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 39,
+      "entry_eligible_pre_overlap": 39,
+      "identity": "STRICT::H4::RUNAWAY_BREAKOUT::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 250,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 39,
+        "NO_CONFIRMATION": 146,
+        "NO_TRADE_GATE": 58,
+        "UNAVAILABLE": 7
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 43,
+      "entry_eligible_pre_overlap": 43,
+      "identity": "STRICT::H4::RUNAWAY_BREAKOUT::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 250,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 43,
+        "NO_CONFIRMATION": 146,
+        "NO_TRADE_GATE": 54,
+        "UNAVAILABLE": 7
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::H4::TWO_SIDED_REFERENCE_RETEST::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 56,
+      "status_counts": {
+        "NO_CONFIRMATION": 44,
+        "NO_TRADE_GATE": 8,
+        "UNAVAILABLE": 4
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::H4::TWO_SIDED_REFERENCE_RETEST::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 56,
+      "status_counts": {
+        "NO_CONFIRMATION": 44,
+        "NO_TRADE_GATE": 8,
+        "UNAVAILABLE": 4
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 447,
+      "entry_eligible_pre_overlap": 592,
+      "identity": "STRICT::M15::BREAK_RETEST_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 3906,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 592,
+        "NO_CONFIRMATION": 2395,
+        "NO_TRADE_GATE": 885,
+        "UNAVAILABLE": 34
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 498,
+      "entry_eligible_pre_overlap": 692,
+      "identity": "STRICT::M15::BREAK_RETEST_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 3906,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 692,
+        "NO_CONFIRMATION": 2395,
+        "NO_TRADE_GATE": 785,
+        "UNAVAILABLE": 34
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 86,
+      "entry_eligible_pre_overlap": 87,
+      "identity": "STRICT::M15::DEEP_RETRACE_CONTINUATION::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 4233,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 87,
+        "NO_CONFIRMATION": 3020,
+        "NO_TRADE_GATE": 1044,
+        "UNAVAILABLE": 82
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 191,
+      "entry_eligible_pre_overlap": 213,
+      "identity": "STRICT::M15::DEEP_RETRACE_CONTINUATION::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 4233,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 213,
+        "NO_CONFIRMATION": 3020,
+        "NO_TRADE_GATE": 918,
+        "UNAVAILABLE": 82
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::M15::FALSE_CONTINUATION_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 1586,
+      "status_counts": {
+        "NO_CONFIRMATION": 1131,
+        "NO_TRADE_GATE": 451,
+        "UNAVAILABLE": 4
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::M15::FALSE_CONTINUATION_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 1586,
+      "status_counts": {
+        "NO_CONFIRMATION": 1131,
+        "NO_TRADE_GATE": 451,
+        "UNAVAILABLE": 4
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::M15::IMMEDIATE_FAILURE_REVERSAL::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 1534,
+      "status_counts": {
+        "NO_CONFIRMATION": 1136,
+        "NO_TRADE_GATE": 396,
+        "UNAVAILABLE": 2
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::M15::IMMEDIATE_FAILURE_REVERSAL::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 1534,
+      "status_counts": {
+        "NO_CONFIRMATION": 1136,
+        "NO_TRADE_GATE": 396,
+        "UNAVAILABLE": 2
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 529,
+      "entry_eligible_pre_overlap": 758,
+      "identity": "STRICT::M15::RUNAWAY_BREAKOUT::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 4776,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 758,
+        "NO_CONFIRMATION": 2971,
+        "NO_TRADE_GATE": 1006,
+        "UNAVAILABLE": 41
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 548,
+      "entry_eligible_pre_overlap": 805,
+      "identity": "STRICT::M15::RUNAWAY_BREAKOUT::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 4776,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 805,
+        "NO_CONFIRMATION": 2971,
+        "NO_TRADE_GATE": 959,
+        "UNAVAILABLE": 41
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 0,
+      "entry_eligible_pre_overlap": 0,
+      "identity": "STRICT::M15::TWO_SIDED_REFERENCE_RETEST::TRACK_A_ORIGINAL_STOP",
+      "setup_rows": 1448,
+      "status_counts": {
+        "NO_CONFIRMATION": 1135,
+        "NO_TRADE_GATE": 299,
+        "UNAVAILABLE": 14
+      }
+    },
+    {
+      "entry_eligible_dates_pre_overlap": 11,
+      "entry_eligible_pre_overlap": 11,
+      "identity": "STRICT::M15::TWO_SIDED_REFERENCE_RETEST::TRACK_B_CONFIRMED_RETEST_STOP",
+      "setup_rows": 1448,
+      "status_counts": {
+        "ENTRY_ELIGIBLE": 11,
+        "NO_CONFIRMATION": 1135,
+        "NO_TRADE_GATE": 288,
+        "UNAVAILABLE": 14
+      }
+    }
+  ],
+  "version": "GOLD_SEQUENTIAL_AUCTION_CONFIRMATION_ENTRY_V1_PRE_ECONOMIC_FREEZE_1_0"
+}

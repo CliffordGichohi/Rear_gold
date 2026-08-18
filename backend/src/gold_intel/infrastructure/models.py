@@ -864,6 +864,105 @@ class EventStudyRun(Base):
     completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
 
+class SessionEdgeStudyRun(Base):
+    __tablename__ = "session_edge_study_runs"
+    __table_args__ = {"schema": "analytics"}
+
+    id: Mapped[UUID] = mapped_column(primary_key=True, default=uuid4)
+    strategy_name: Mapped[str] = mapped_column(String(128), nullable=False)
+    strategy_version: Mapped[str] = mapped_column(String(64), nullable=False)
+    instrument_code: Mapped[str] = mapped_column(String(64), nullable=False)
+    provider_code: Mapped[str] = mapped_column(String(64), nullable=False)
+    start_time: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    end_time: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    status: Mapped[str] = mapped_column(String(24), nullable=False)
+    parameters: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False)
+    data_hash: Mapped[str] = mapped_column(String(64), nullable=False)
+    source_bar_count: Mapped[int] = mapped_column(Integer, nullable=False)
+    session_count: Mapped[int] = mapped_column(Integer, nullable=False)
+    trigger_count: Mapped[int] = mapped_column(Integer, nullable=False)
+    results: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False)
+    provenance: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=func.now()
+    )
+    completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+class SessionOpportunity(Base):
+    __tablename__ = "session_opportunities"
+    __table_args__ = (
+        UniqueConstraint("run_id", "session_date"),
+        CheckConstraint(
+            "directional_score IS NULL OR "
+            "(directional_score >= -100 AND directional_score <= 100)",
+            name="ck_session_opportunity_directional_score",
+        ),
+        CheckConstraint(
+            "fundamental_confidence IS NULL OR "
+            "(fundamental_confidence >= 0 AND fundamental_confidence <= 100)",
+            name="ck_session_opportunity_fundamental_confidence",
+        ),
+        CheckConstraint(
+            "fundamental_coverage IS NULL OR "
+            "(fundamental_coverage >= 0 AND fundamental_coverage <= 100)",
+            name="ck_session_opportunity_fundamental_coverage",
+        ),
+        CheckConstraint(
+            "asia_range_percentile IS NULL OR "
+            "(asia_range_percentile >= 0 AND asia_range_percentile <= 100)",
+            name="ck_session_opportunity_asia_percentile",
+        ),
+        {"schema": "analytics"},
+    )
+
+    id: Mapped[UUID] = mapped_column(primary_key=True, default=uuid4)
+    run_id: Mapped[UUID] = mapped_column(
+        ForeignKey("analytics.session_edge_study_runs.id", ondelete="CASCADE"),
+        nullable=False,
+    )
+    session_date: Mapped[date] = mapped_column(Date, nullable=False)
+    fundamental_freeze_time: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False
+    )
+    level_freeze_time: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False
+    )
+    london_start_time: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False
+    )
+    london_end_time: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False
+    )
+    status: Mapped[str] = mapped_column(String(40), nullable=False)
+    no_trigger_reason: Mapped[str | None] = mapped_column(String(96))
+    setup_side: Mapped[str | None] = mapped_column(String(8))
+    signal_time: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    entry_time: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    bias_alignment: Mapped[str] = mapped_column(String(40), nullable=False)
+    directional_score: Mapped[Decimal | None] = mapped_column(Numeric(7, 3))
+    fundamental_confidence: Mapped[Decimal | None] = mapped_column(Numeric(6, 3))
+    fundamental_coverage: Mapped[Decimal | None] = mapped_column(Numeric(6, 3))
+    regime_label: Mapped[str] = mapped_column(String(64), nullable=False)
+    dominant_driver: Mapped[str | None] = mapped_column(String(96))
+    event_risk: Mapped[str] = mapped_column(String(24), nullable=False)
+    asia_high: Mapped[Decimal | None] = mapped_column(Numeric(18, 6))
+    asia_low: Mapped[Decimal | None] = mapped_column(Numeric(18, 6))
+    asia_range_size: Mapped[Decimal | None] = mapped_column(Numeric(18, 6))
+    asia_range_percentile: Mapped[Decimal | None] = mapped_column(Numeric(7, 3))
+    asia_compression_state: Mapped[str] = mapped_column(String(24), nullable=False)
+    entry_reference_price: Mapped[Decimal | None] = mapped_column(Numeric(18, 6))
+    invalidation_price: Mapped[Decimal | None] = mapped_column(Numeric(18, 6))
+    risk_distance: Mapped[Decimal | None] = mapped_column(Numeric(18, 6))
+    facts: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False)
+    outcomes: Mapped[list[dict[str, Any]]] = mapped_column(JSONB, nullable=False)
+    evidence: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False)
+    data_hash: Mapped[str] = mapped_column(String(64), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=func.now()
+    )
+
+
 class BacktestRun(Base):
     __tablename__ = "backtest_runs"
     __table_args__ = {"schema": "analytics"}

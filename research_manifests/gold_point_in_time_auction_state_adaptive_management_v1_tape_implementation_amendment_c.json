@@ -1,0 +1,33 @@
+{
+  "version": "GOLD_PIT_AUCTION_STATE_V1_TAPE_IMPLEMENTATION_AMENDMENT_C_1_0",
+  "status": "FROZEN_AFTER_COMPLETE_METADATA_AUDIT_BEFORE_AMENDED_IMPLEMENTATION_OR_RERUN",
+  "frozen_at_utc": "2026-08-11T07:39:16Z",
+  "predecessor_failure": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_tape/attempt_3_failure.json",
+  "metadata_audit_seal": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_setup_baseline_metadata_audit_seal.json",
+  "audit_population": 8653,
+  "frozen_disposition": {
+    "exact_completed_signal_close_available": 8418,
+    "exact_completed_signal_close_unavailable": 235,
+    "available_rule": "USE_THE_EXACT_COMPLETED_SIGNAL_FRAME_CLOSE_AT_KNOWN_AT_AS_SETUP_CLOSE",
+    "unavailable_rule": "DO_NOT_SUBSTITUTE_AN_INCOMPLETE_BAR_PARENT_BAR_OR_FIRST_ACTIONABLE_PRICE;SET_CURRENT_DISPLACEMENT_RUNNING_FAVOURABLE_AND_RUNNING_ADVERSE_TO_NULL_UNDER_THE_EXISTING_NUMERIC_MISSING_DATA_POLICY",
+    "row_disposition": "RETAIN_ALL_CHECKPOINT_ROWS_AND_DO_NOT_MARK_THE_WHOLE_ROW_UNAVAILABLE_SOLELY_FOR_THESE_THREE_NULL_PREDICTORS"
+  },
+  "running_extrema": "CALCULATE_FROM_ALL_AVAILABLE_SIGNAL_BARS_CLOSING_AT_OR_AFTER_KNOWN_AT_THROUGH_THE_CURRENT_CHECKPOINT;THE_VALUES_REMAIN_NULL_WHEN_SETUP_CLOSE_IS_UNAVAILABLE",
+  "forbidden_changes": [
+    "CASE_OR_CHECKPOINT_IDENTITIES",
+    "ANY_OTHER_FEATURE_DEFINITION",
+    "MISSING_VALUE_IMPUTATION_RULE",
+    "MODEL_OR_POLICY_RULES",
+    "OUTCOME_ACCESS",
+    "2025_OR_2026_ACCESS"
+  ],
+  "required_proofs": [
+    "PRIMARY_REFERENCE_BASELINE_AVAILABILITY_COUNTS_EQUAL_8418_AVAILABLE_AND_235_UNAVAILABLE",
+    "BASELINE_CLASSIFICATION_HASH_EQUALS_B9FAF50E048622EA35BD958F200D217F6482584CE7D983F653966173C1E38733",
+    "ALL_CHECKPOINT_IDENTITIES_REMAIN_UNCHANGED"
+  ],
+  "market_outcomes_accessed": false,
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "paid_acquisition_usd": 0.0
+}

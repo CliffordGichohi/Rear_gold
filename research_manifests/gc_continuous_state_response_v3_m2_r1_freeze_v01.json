@@ -1,0 +1,100 @@
+{
+  "boundary": {
+    "m2_final_seal_receipt": "cd90cda29077067a84613559abec866bab17d88665384ab81a836efadd663a62",
+    "m2_final_seal_sha256": "722fa49726a05dfc37191135f052053b83d1a308db812447295f6f1601264263",
+    "m2_manifest_receipt": "a58ab98c8118e87d11bdd835169bb4a43c5d4119751d4cdfd04fbbc8984343f6",
+    "m2_manifest_sha256": "074acc15a0359fbb269b0973da9b9fa99656df244fc36c909719e7834e36ed01",
+    "m2_primary_london_sha256": "4114fba9fa9c6e7b42aaa939151c8098ca66677d254158c8a6cdfb04929acfda",
+    "m2_primary_new_york_sha256": "ed6c96591ea86f54c38e127afb09f103f5a4bc4609963dd75e982463d510753e",
+    "m2_reference_london_sha256": "4114fba9fa9c6e7b42aaa939151c8098ca66677d254158c8a6cdfb04929acfda",
+    "m2_reference_new_york_sha256": "ed6c96591ea86f54c38e127afb09f103f5a4bc4609963dd75e982463d510753e",
+    "m2_status": "PASS_V3_M2_OUTCOME_BLIND_PREDICTOR_MATERIALIZATION",
+    "m2_verdict_receipt": "0d1cf754bf270bb72ec7753ac20b76f8392579af2c44959a22ba61bcd01f329b",
+    "m2_verdict_sha256": "d7d97f6f40c6188e57248401d928a3cec0ede538fbdd9cd6bdac061bf86301ef",
+    "xauusd_source_bytes": 258834096,
+    "xauusd_source_sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+  },
+  "diagnostic_taxonomy": {
+    "dispositions": [
+      "RECOVERABLE_EXISTING_SEALED_SOURCE",
+      "REQUIRES_ADDITIONAL_SOURCE",
+      "DEFINITION_INDUCED_UNAVAILABLE",
+      "GENUINE_SOURCE_GAP",
+      "UNRESOLVED"
+    ],
+    "implementation_permitted": false,
+    "local_source_envelope": "minimum through maximum valid open timestamp independently for each UTC calendar date",
+    "maximum_recovery_recommendations": 1,
+    "permitted_fields": [
+      "anchor identity",
+      "session and calendar date",
+      "chronological block",
+      "decision timestamp",
+      "availability classification",
+      "available-at timestamp",
+      "lineage hash",
+      "XAUUSD one-minute open/close/available-at timestamps",
+      "XAUUSD timeframe/instrument/complete metadata",
+      "DST and frozen session-window metadata",
+      "source and coverage hashes"
+    ],
+    "registered_interactions": [
+      "CSR_INT_OFI_SESSION_LEVEL_TENSION"
+    ],
+    "required_price_windows": {
+      "CSR_SESSION_LEVEL_TENSION": "union of the latest fifteen complete UTC one-hour buckets and the exact complete one-minute bar ending at decision_at",
+      "CSR_STRUCTURE_MOMENTUM_15M": "union of the latest fifteen complete UTC one-hour buckets and five contiguous complete UTC fifteen-minute buckets ending no later than decision_at"
+    },
+    "target_features": [
+      "CSR_STRUCTURE_MOMENTUM_15M",
+      "CSR_SESSION_LEVEL_TENSION"
+    ]
+  },
+  "document_sha256": "35c85f09e22c3c137a12d343f490ffb7b7d39270e716e33e448455fddff21708",
+  "feature_registry_sha256": "84d97ec1e26d650f0b9ddd8c216b637db1eafae1b84dcbcddec3270fa3b858b1",
+  "freeze_receipt": "842373c4b809ab7cf27cea23edb44eb21582b83c2354ae406d5ed4ec69c7c6e3",
+  "frozen_at_utc": "2026-08-06T10:23:17.974797Z",
+  "implementation_sha256": "d64c6972fb21f4f2100e36637d48e98529a5b597e08a317f1ffec34a73525ee2",
+  "m2_freeze_sha256": "6265efaafff415f60828204caee7ba712d1af9a2732b27fb6da8fdaa2be869a7",
+  "m2_protocol_sha256": "f75104bc8fe536bae0252f6a190c4d9ecd4bb570d69187eec4287e13e272c654",
+  "model_registry_sha256": "98c856fe0ec5363bcc1bdd63ed069534b469398ac1a2972ec5a41b6ff1a5964b",
+  "outcomes_accessed": false,
+  "protocol_sha256": "62d1379fd06af154ca86bc418823207f3d36f80cd200aa249796c1404c73bef1",
+  "r1_availability_classifications_accessed_before_freeze": false,
+  "r1_predictor_rows_accessed_before_freeze": false,
+  "sole_gate_replacement": {
+    "add": "each_required_year_oof_coverage_gte_80pct",
+    "coverage_fraction": 0.8,
+    "denominator": "all frozen OOF session dates in the year under the unchanged blocked-fold registry, independent of predictor availability",
+    "minimum": "ceil(0.80 * denominator)",
+    "numerator_stage1": "frozen OOF dates with the registered predictor available",
+    "numerator_stage2": "frozen OOF dates with both registered interaction inputs available",
+    "remove": "each_required_year_oof_dates_gte_35",
+    "years": [
+      2022,
+      2023,
+      2024
+    ]
+  },
+  "status": "PASS_V3_M2_R1_PRE_ROW_ACCESS_FREEZE",
+  "synthetic_proof": {
+    "annual_gate_fail_checksum": "0198e4c6ebf9687930c2da1c8bce4e9517551631812c77dd76ff1bba9b6c322b",
+    "annual_gate_pass_checksum": "fc314e876e6eee6600570b2e7f8cccd9f89da69c77814754124ee0cbe749ede1",
+    "status": "PASS_SYNTHETIC_PRE_ACCESS_PROOF",
+    "taxonomy_checksum": "24c49f33d1102cdf3848928971b61cdb9f7cf341addaf9e7c3170f85a2734339"
+  },
+  "test_sha256": "2b1a806574edd3fa21d9cfb948f580c685cd3336fa8eafd372f763de36aae199",
+  "unchanged_support_gates": {
+    "distinct_blocks": 30,
+    "distinct_dates": 150,
+    "negative_predictor_dates": 40,
+    "positive_predictor_dates": 40,
+    "stage1_completeness": 0.8,
+    "stage2_joint_completeness": 0.7,
+    "stage2_sign_support": "unchanged frozen training-fold robust center/scale and registered formula",
+    "validation_fold_anchors": 480,
+    "validation_fold_dates": 35
+  },
+  "version": "GC_CSR_EDGE_DISCOVERY_V3_M2_R1_FREEZE_V1_0",
+  "year_2025_or_2026_values_accessed": false
+}

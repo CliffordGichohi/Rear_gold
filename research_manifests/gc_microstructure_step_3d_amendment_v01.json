@@ -1,0 +1,234 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_3D_AMENDMENT_V0_1",
+  "status": "FROZEN_BEFORE_STEP_3D_IMPLEMENTATION_AND_ROW_ACCESS",
+  "frozen_at_utc": "2026-07-31T09:32:11.4006191Z",
+  "classification": "POST_DIAGNOSTIC_ENGINEERING_ONLY_COMPARATOR_AMENDMENT",
+  "research_or_validation_credit": "NONE",
+  "purpose": "Implement and test one value-blind MBP-10-to-MBO alignment rule selected from the sealed Step 3C engineering diagnostic.",
+  "predecessor_preservation": {
+    "step_3a": {
+      "formal_verdict": "FAIL",
+      "verdict_preserved": true,
+      "declared_manifest_hash": "0897e33856c5329ee59040ff5a6c15f48cb65fc17dcf3e63ec1f8c5bf3c6c59c"
+    },
+    "step_3a1": {
+      "formal_verdict": "PASS",
+      "verdict_preserved": true,
+      "declared_manifest_hash": "334b67560ee5912ed1939305715078b3f9460d389feb8cc17723a062543d657c"
+    },
+    "step_3b1": {
+      "formal_verdict": "FAIL_PRE_ACQUISITION_READINESS",
+      "verdict_preserved": true,
+      "declared_manifest_hash": "e4ddc27c8916df1d22e69a63d9b67f52ce0c81c55ccd172310a51cfe7d0533ac"
+    },
+    "step_3b2": {
+      "formal_verdict": "FAIL",
+      "verdict_preserved": true,
+      "declared_manifest_hash": "9fcdde66ca1f5d605f92fd5aba83de1b042fc01b3020e53d3f3bda904d850e8f"
+    },
+    "step_3c": {
+      "formal_status": "PASS_DIAGNOSTIC_REPRODUCTION",
+      "status_preserved": true,
+      "declared_manifest_hash": "e14afa4de4e487f2a8db9b6e044de4aba6c7d9fcaeef10f6b0ca8ee337bcb749",
+      "declared_findings_hash": "d362c7999ee5503a149b764375ed079ada79bd4282dc2121fc8ada354aeb8f7f"
+    },
+    "immutability_rule": "Every predecessor verdict, source, protocol, tool, result, manifest, and report remains byte-for-byte unchanged."
+  },
+  "sealed_sources": {
+    "calendar_date": "2024-01-09",
+    "classification": "ENGINEERING_ONLY",
+    "research_and_validation_exclusion": "PERMANENT",
+    "mbo": {
+      "path": "data/raw/databento_gc_mbo_engineering_pilot/GLBX-20260730-WB9AXCVFET/normalized/gc_v_0_2024_01_09_mbo.parquet",
+      "records": 2322905,
+      "bytes": 31661220,
+      "sha256": "43a8a3bb2be9a4a36ab324e3fe0ca0e29ccb4529f445013a87156d3bad4c0ba3"
+    },
+    "mbp10": {
+      "path": "data/raw/databento_gc_mbp10_engineering_benchmark/GLBX-20260731-UJHWEDQUSX/normalized/gc_v_0_2024_01_09_mbp10.parquet",
+      "records": 1924786,
+      "bytes": 81164829,
+      "sha256": "4ead358f538d7c383a14f39bbde35b8ccfa21e38e58205edbc51bedfb2ed80d4"
+    },
+    "additional_data_acquisition_permitted": false,
+    "source_substitution_permitted": false
+  },
+  "frozen_alignment_rule": {
+    "name": "SAME_K5_ACTION_SIDE_FLAGS_OCCURRENCE_POST_V0_1",
+    "selection_uses_book_values": false,
+    "selection_fields_in_order": [
+      "publisher_id",
+      "instrument_id",
+      "sequence",
+      "ts_event",
+      "ts_recv",
+      "action",
+      "side",
+      "flags",
+      "within_identical_metadata_occurrence"
+    ],
+    "k5": [
+      "publisher_id",
+      "instrument_id",
+      "sequence",
+      "ts_event",
+      "ts_recv"
+    ],
+    "metadata_qualifiers": [
+      "action",
+      "side",
+      "flags"
+    ],
+    "vendor_occurrence_definition": "One-based source_row_ordinal order among MBP-10 rows with identical K5, action, side, and flags.",
+    "mbo_occurrence_definition": "One-based source_row_ordinal order among MBO rows with identical K5, action, side, and flags.",
+    "mapping": "Vendor occurrence n maps only to MBO occurrence n under the identical frozen metadata tuple.",
+    "comparison_state": "The reconstructed top-ten state immediately after applying the selected MBO row.",
+    "f_last_has_special_priority": false,
+    "nearest_timestamp_matching_permitted": false,
+    "timestamp_tolerance_ns": 0,
+    "resampling_permitted": false,
+    "forward_fill_permitted": false,
+    "interpolation_permitted": false,
+    "book_equality_fallback_permitted": false,
+    "alternative_candidate_search_permitted": false,
+    "unaligned_policy": "If MBO occurrence n does not exist under the exact frozen metadata tuple, classify the vendor row as UNALIGNED_RESIDUAL and formal failure. Do not compare it to another boundary.",
+    "unselected_mbo_policy": "Report unselected MBO rows and groups as technical counts only; they are not benchmark omissions."
+  },
+  "book_comparison": {
+    "fields": "All 60 MBP-10 bid/ask price, aggregate-size, and order-count fields across levels zero through nine.",
+    "book_fields_per_aligned_record": 60,
+    "price_tolerance_fixed_1e9_units": 0,
+    "size_tolerance": 0,
+    "order_count_tolerance": 0,
+    "undefined_level_canonicalization": {
+      "price_fixed_1e9": 9223372036854775807,
+      "aggregate_size": 0,
+      "order_count": 0
+    },
+    "aligned_mismatch_policy": "Any unequal field makes the row BOOK_MISMATCH and formal failure.",
+    "book_values_may_be_accessed_only_after_metadata_selection": true,
+    "market_values_reported": false
+  },
+  "residual_reporting": {
+    "report_counts_only": true,
+    "dimensions": [
+      "action",
+      "side",
+      "flags",
+      "depth",
+      "market_state",
+      "K5 multiplicity",
+      "within-identical-metadata occurrence",
+      "matching MBO metadata candidate count"
+    ],
+    "price_or_size_values_permitted": false,
+    "repair_or_new_selector_permitted": false
+  },
+  "market_state_policy": {
+    "timezone": "UTC",
+    "classification_timestamp": "ts_recv",
+    "intervals": [
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive": "2024-01-09T00:00:00Z",
+        "end_exclusive": "2024-01-09T22:00:00Z"
+      },
+      {
+        "state": "MAINTENANCE",
+        "start_inclusive": "2024-01-09T22:00:00Z",
+        "end_exclusive": "2024-01-09T22:45:00Z"
+      },
+      {
+        "state": "PRE_OPEN",
+        "start_inclusive": "2024-01-09T22:45:00Z",
+        "end_exclusive": "2024-01-09T23:00:00Z"
+      },
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive": "2024-01-09T23:00:00Z",
+        "end_exclusive": "2024-01-10T00:00:00Z"
+      }
+    ],
+    "coverage_must_be_complete_and_nonoverlapping": true
+  },
+  "step_3c_traceability_expectation": {
+    "classification": "KNOWN_POST_HOC_ENGINEERING_EXPECTATION_NOT_VALIDATION_CREDIT",
+    "vendor_records": 1924786,
+    "expected_metadata_aligned_records": 1922234,
+    "expected_unaligned_residual_records": 2552,
+    "expected_aligned_mismatched_rows": 0,
+    "expected_aligned_field_mismatches": 0,
+    "expected_prior_step3b2_failures_resolved_when_metadata_aligned": 73887,
+    "exact_reproduction_required_as_implementation_traceability": true
+  },
+  "independent_reproduction": {
+    "implementations": [
+      "explicit price-level FIFO reconstruction with independently maintained sorted price index",
+      "order-map reconstruction with independently aggregated level index"
+    ],
+    "separate_complete_source_passes_required": true,
+    "identical_alignment_counts_required": true,
+    "identical_residual_strata_required": true,
+    "identical_field_mismatch_counts_required": true,
+    "identical_alignment_and_comparison_checksum_required": true,
+    "identical_final_reconstruction_state_required": true,
+    "any_reproduction_difference": "FAIL_REPRODUCTION"
+  },
+  "formal_gates": {
+    "all_predecessor_seals_valid": true,
+    "sources_exact_and_unchanged": true,
+    "all_mbo_and_mbp10_rows_processed": true,
+    "metadata_selector_applied_without_book_values": true,
+    "every_vendor_row_aligned": true,
+    "unaligned_residual_rows": 0,
+    "all_aligned_rows_compared": true,
+    "aligned_book_mismatch_rows": 0,
+    "aligned_book_field_mismatches": 0,
+    "market_state_coverage_complete": true,
+    "both_reconstruction_invariants_hold": true,
+    "primary_and_reference_results_identical": true,
+    "step_3c_traceability_expectation_reproduced": true,
+    "no_predecessor_or_source_modified": true,
+    "no_additional_data_acquired": true,
+    "no_prohibited_analysis": true
+  },
+  "verdict_precedence": [
+    "FAIL_INTEGRITY",
+    "FAIL_REPRODUCTION",
+    "FAIL_UNALIGNED_RESIDUAL",
+    "FAIL_BOOK_MISMATCH",
+    "PASS"
+  ],
+  "verdict_rule": {
+    "PASS": "Every frozen formal gate is satisfied exactly.",
+    "FAIL_UNALIGNED_RESIDUAL": "One or more vendor rows lacks the exact metadata-selected MBO occurrence, even if every aligned row matches.",
+    "FAIL_BOOK_MISMATCH": "Every vendor row aligns but one or more aligned book fields differs.",
+    "FAIL_REPRODUCTION": "The two independent implementations differ on any frozen result or checksum.",
+    "FAIL_INTEGRITY": "A predecessor, source, completeness, invariant, or prohibited-work gate fails.",
+    "partial_pass_label_permitted": false
+  },
+  "fixed_recommendation": {
+    "id": "NO_FURTHER_CORRECTION_RECOMMENDED_IN_STEP_3D",
+    "text": "Record the formal verdict and residual counts honestly, preserve all failures, recommend no additional selector, repair, fallback, acquisition, or optimization, and stop.",
+    "maximum_additional_corrections": 0
+  },
+  "prohibited": [
+    "modifying any predecessor artifact or verdict",
+    "modifying or repairing the Step 3B.2 or Step 3C tools",
+    "selecting an MBO row by comparing book values",
+    "trying another MBO candidate after a metadata-selected mismatch",
+    "falling back to F_LAST or any alternative boundary",
+    "dropping, filtering, repairing, or reclassifying residual rows",
+    "changing the selector, occurrence definition, tolerance, gate, or verdict rule after row access",
+    "acquiring or substituting data",
+    "human inspection or reporting of market values",
+    "outcome inspection or directional analysis",
+    "features or signals",
+    "execution optimization",
+    "trades",
+    "PnL",
+    "R multiples",
+    "account returns",
+    "recommending another correction during Step 3D"
+  ]
+}

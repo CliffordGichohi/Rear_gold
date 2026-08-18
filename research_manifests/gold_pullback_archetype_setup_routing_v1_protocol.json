@@ -1,0 +1,145 @@
+{
+  "version": "GOLD_PULLBACK_ARCHETYPE_SETUP_ROUTING_V1_PROTOCOL_1_0",
+  "status": "FROZEN_BEFORE_NEW_MODEL_BY_ARCHETYPE_PERFORMANCE_MEASUREMENT",
+  "development": ["2021-08-01T00:00:00Z", "2025-01-01T00:00:00Z"],
+  "forward": {
+    "2025": ["2025-01-01T00:00:00Z", "2026-01-01T00:00:00Z"],
+    "2026_YTD": ["2026-01-01T00:00:00Z", "2026-07-30T00:00:00Z"],
+    "evidence_classification": "EXPOSED_HISTORICAL_ROBUSTNESS_NO_INDEPENDENT_VALIDATION_CREDIT"
+  },
+  "population": {
+    "timeframes": ["M15", "H1", "H4"],
+    "scale": "STANDARD",
+    "archetypes": [
+      "RUNAWAY_CONTINUATION",
+      "BREAK_RETEST_CONTINUATION",
+      "DEEP_RETRACE_CONTINUATION",
+      "FALSE_CONTINUATION",
+      "IMMEDIATE_FAILURE",
+      "TWO_SIDED_CHOPPY"
+    ],
+    "technical_unavailable": "PRESERVE_EXCLUDE_FROM_SUPERVISED_LABELS"
+  },
+  "entry_models": [
+    {
+      "model_id": "RUNAWAY_BREAKOUT",
+      "intended_archetype": "RUNAWAY_CONTINUATION",
+      "trigger": "CONFIRMATION_EXTREME_BREAK",
+      "trade_direction": "TREND",
+      "stop": "CONFIRMATION_EXTREME_BUFFER_0P05_ATR",
+      "target": "FIXED_2P0_R",
+      "time_exit_parent_bars": 8
+    },
+    {
+      "model_id": "BREAK_RETEST_CONTINUATION",
+      "intended_archetype": "BREAK_RETEST_CONTINUATION",
+      "trigger": "BREAK_RETEST_CONFIRM",
+      "trade_direction": "TREND",
+      "stop": "CONFIRMATION_EXTREME_BUFFER_0P05_ATR",
+      "target": "FIXED_1P5_R",
+      "time_exit_parent_bars": 8
+    },
+    {
+      "model_id": "DEEP_RETRACE_CONTINUATION",
+      "intended_archetype": "DEEP_RETRACE_CONTINUATION",
+      "trigger": "RESPONSE_HALF_RETRACE_LIMIT",
+      "trade_direction": "TREND",
+      "stop": "PIVOT_BUFFER_0P15_ATR",
+      "target": "FIXED_2P0_R",
+      "time_exit_parent_bars": 16
+    },
+    {
+      "model_id": "FALSE_CONTINUATION_REVERSAL",
+      "intended_archetype": "FALSE_CONTINUATION",
+      "trigger": "OPPOSING_STRUCTURE_SWITCH_AFTER_CONFIRMATION_BREAK",
+      "trade_direction": "REVERSE",
+      "stop": "CONFIRMATION_EXTREME_BUFFER_0P05_ATR",
+      "target": "FIXED_2P0_R",
+      "time_exit_parent_bars": 8
+    },
+    {
+      "model_id": "IMMEDIATE_FAILURE_REVERSAL",
+      "intended_archetype": "IMMEDIATE_FAILURE",
+      "trigger": "OPPOSING_STRUCTURE_SWITCH_WITHOUT_CONFIRMATION_BREAK",
+      "trade_direction": "REVERSE",
+      "stop": "CONFIRMATION_EXTREME_BUFFER_0P05_ATR",
+      "target": "FIXED_1P5_R",
+      "time_exit_parent_bars": 8
+    },
+    {
+      "model_id": "TWO_SIDED_REFERENCE_RETEST",
+      "intended_archetype": "TWO_SIDED_CHOPPY",
+      "trigger": "REFERENCE_LEVEL_RETEST_LIMIT",
+      "trade_direction": "TREND",
+      "stop": "PIVOT_BUFFER_0P15_ATR",
+      "target": "FIXED_1P0_R",
+      "time_exit_parent_bars": 4
+    }
+  ],
+  "walk_forward": [
+    {"fold": 1, "train": ["2021-08-01", "2022-06-30"], "validate": ["2022-07-01", "2023-03-31"]},
+    {"fold": 2, "train": ["2021-08-01", "2023-03-31"], "validate": ["2023-04-01", "2023-12-31"]},
+    {"fold": 3, "train": ["2021-08-01", "2023-12-31"], "validate": ["2024-01-01", "2024-12-31"]}
+  ],
+  "probability_tree": {
+    "maximum_depth": 4,
+    "minimum_leaf": {"M15": 80, "H1": 30, "H4": 15},
+    "numeric_quantiles": [0.2, 0.4, 0.6, 0.8],
+    "leaf_dirichlet_count_per_class": 1.0,
+    "minimum_entropy_gain": 0.002,
+    "calibration_fraction": 0.2,
+    "temperature_grid": [0.75, 1.0, 1.25, 1.5, 2.0],
+    "calibration_gates": {
+      "minimum_oof_rows": {"M15": 100, "H1": 50, "H4": 25},
+      "brier_skill_gt": 0.0,
+      "log_loss_lte_prior": true,
+      "top1_accuracy_gte_prior": true,
+      "ece_lte": 0.12
+    }
+  },
+  "payoff_estimator": {
+    "cell_shrinkage_observations": 20,
+    "conservative_standard_errors": 1.0,
+    "variance_fallback": "ENTRY_MODEL_WIDE_TRAINING_VARIANCE"
+  },
+  "risk": {
+    "account_usd": 10000.0,
+    "fixed_benchmark_risk_usd": 50.0,
+    "variable_tiers": [
+      {"score_gt": null, "score_lte": 0.0, "risk_usd": 0.0},
+      {"score_gt": 0.0, "score_lte": 0.1, "risk_usd": 25.0},
+      {"score_gt": 0.1, "score_lte": 0.2, "risk_usd": 50.0},
+      {"score_gt": 0.2, "score_lte": 0.3, "risk_usd": 75.0},
+      {"score_gt": 0.3, "score_lte": null, "risk_usd": 100.0}
+    ],
+    "compounding": false,
+    "whole_ounce_sizing": true,
+    "maximum_concurrent_positions": 1
+  },
+  "costs_usd_per_ounce_roundtrip": {
+    "spread": "OBSERVED_AT_ENTRY_OR_0P30_FALLBACK",
+    "commission": 0.07,
+    "slippage": 0.10,
+    "stress_multipliers": [1.0, 1.5, 2.0]
+  },
+  "router_tie_priority": [
+    "IMMEDIATE_FAILURE_REVERSAL",
+    "FALSE_CONTINUATION_REVERSAL",
+    "BREAK_RETEST_CONTINUATION",
+    "DEEP_RETRACE_CONTINUATION",
+    "RUNAWAY_BREAKOUT",
+    "TWO_SIDED_REFERENCE_RETEST"
+  ],
+  "development_pass_gates": {
+    "minimum_oof_trades": 100,
+    "expectancy_r_gt": 0.0,
+    "profit_factor_gte": 1.05,
+    "cluster_bootstrap_ci95_low_gt": 0.0,
+    "cost_1p5x_expectancy_r_gt": 0.0,
+    "positive_validation_folds_gte": 2,
+    "maximum_positive_gross_r_share_per_model": 0.70
+  },
+  "paid_acquisition_authorized": false,
+  "live_trading_authorized": false,
+  "retuning_after_results": false
+}

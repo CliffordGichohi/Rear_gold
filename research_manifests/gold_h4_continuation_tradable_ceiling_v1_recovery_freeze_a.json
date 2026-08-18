@@ -1,0 +1,50 @@
+{
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "controls": {
+    "amendment_a": {
+      "bytes": 1625,
+      "path": "research_manifests/gold_h4_continuation_tradable_ceiling_v1_amendment_a.json",
+      "sha256": "a1d36be7af7f3965a71db11bdb3ef21a16144caef572c68a684b8327ef893e1d"
+    },
+    "original_failure": {
+      "bytes": 1382,
+      "path": "research_artifacts/gold_h4_continuation_tradable_ceiling_v1/attempt_1_failure.json",
+      "sha256": "6cf533998fc919c6123b46c5c0ad7dabf1404528d23124b9c40da7f5a3ec2040"
+    },
+    "original_prepath_freeze": {
+      "bytes": 3151,
+      "path": "research_manifests/gold_h4_continuation_tradable_ceiling_v1_prepath_freeze.json",
+      "sha256": "b9601de6ac4e0b391268002b05167266e4233bfec9d326dcbf6e80fc2f083743"
+    },
+    "recovery_implementation": {
+      "bytes": 14244,
+      "path": "tools/run_gold_h4_continuation_tradable_ceiling_v1_r1.py",
+      "sha256": "e36dffdbc17482ffcec51b8fe1aa13a7fe0fe6aad38fcbc1a774a0c2659a8ffa"
+    },
+    "recovery_tests": {
+      "bytes": 696,
+      "path": "tests/test_gold_h4_continuation_tradable_ceiling_v1_r1.py",
+      "sha256": "27a06dd3ef3b80afa2495bfc8047ff522bc21f6a2608a46fd542b7426e8df397"
+    }
+  },
+  "cumulative_source_opening_count_before_recovery": 1,
+  "oracle_coverage": {
+    "available": 215,
+    "executable": 248,
+    "overlap_unavailable": 9,
+    "retained_unavailable": 24,
+    "unavailable": 33
+  },
+  "paid_acquisition_usd": 0.0,
+  "performance_results_calculated": false,
+  "sealed_at_utc": "2026-08-11T13:24:52.255428Z",
+  "status": "SEALED_BEFORE_RECOVERY_PATH_REOPENING",
+  "synthetic_proof": {
+    "event_comparisons": 4,
+    "extrema_comparisons": 1,
+    "status": "PASS_SYNTHETIC_STOP_FIRST_AND_PREINVALIDATION_CEILING_PROOF"
+  },
+  "unchanged_decision_population": 248,
+  "version": "GOLD_H4_CONTINUATION_TRADABLE_CEILING_V1_RECOVERY_FREEZE_A_1_0"
+}

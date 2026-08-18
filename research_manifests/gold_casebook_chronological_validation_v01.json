@@ -1,0 +1,187 @@
+{
+  "authorization": {
+    "authorized_on": "2026-07-29",
+    "scope": "Open calendar 2024 once for Milestone 6 chronological validation of the unchanged frozen selector.",
+    "verbatim": "Proceed to Milestone 6 under the existing research contract. Open calendar 2024 once and apply UNIVERSAL_ZN_4H_SIGN_V0_1 unchanged, using the frozen execution, data policy, and pass/reject gates. Do not retune the rule, add variables, optimize execution, or inspect 2025. Record an honest pass or rejection and stop after completing Milestone 6."
+  },
+  "bootstrap": {
+    "cluster": "ISO week of session_date",
+    "confidence_interval": "Type-7 2.5 and 97.5 percent quantiles of the bootstrapped mean net return",
+    "replications": 5000,
+    "seed": "First eight bytes of SHA-256(validation manifest hash + vertical bar + session code + vertical bar + selector code)",
+    "verdict_role": "Diagnostic only; the interval is reported but is not an adjustable pass threshold."
+  },
+  "case_materialization": {
+    "chronological_halves": {
+      "assignment": "Within each session, sort every eligible 2024 SESSION_CASE by decision_at then case_id. The first floor(N/2) cases are EARLY and the remaining cases are LATE. Assign halves before removing NO_BIAS cases.",
+      "labels": [
+        "EARLY",
+        "LATE"
+      ]
+    },
+    "cross_market_join": {
+      "availability_rule": "CROSS_MARKET_SNAPSHOT available_at must be no later than the SESSION_CASE decision_at.",
+      "feature": "cross_zn_v_0_4_hours",
+      "feature_source": "instruments['ZN.v.0'].changes['4_HOURS'].percent_change",
+      "identity_rule": "SESSION_CASE decision_state.cross_market_snapshot_id must match the joined CROSS_MARKET_SNAPSHOT record_id.",
+      "point_in_time_rule": "CROSS_MARKET_SNAPSHOT as_of must equal SESSION_CASE decision_at.",
+      "ready_rule": "The ZN instrument and 4_HOURS change must both have status READY; otherwise the feature is UNKNOWN.",
+      "roll_rule": "A CONTINUOUS_CONTRACT_ROLL change remains UNKNOWN and produces NO_BIAS.",
+      "source_key": "cross snapshot record_id + instrument + horizon + ZN source_record_key"
+    },
+    "locked_holdout_rule": "Reject any calendar-2025 source row before JSON deserialization.",
+    "selector": {
+      "feature_id": "cross_zn_v_0_4_hours",
+      "rule_table": {
+        "FLAT": "NO_BIAS",
+        "NEGATIVE": "SHORT",
+        "POSITIVE": "LONG",
+        "UNKNOWN": "NO_BIAS"
+      },
+      "selector_code": "UNIVERSAL_ZN_4H_SIGN_V0_1",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "universal_session_rule": true
+    },
+    "validation_interval": {
+      "end_exclusive": "2025-01-01",
+      "field": "SESSION_CASE.session_date",
+      "start_inclusive": "2024-01-01"
+    }
+  },
+  "cost_stress": {
+    "base_cost_multiplier": 1.0,
+    "formula": "stressed_net_pnl_usd = gross_pnl_usd - 1.5 * (spread_cost_usd + slippage_cost_usd + commission_usd)",
+    "net_return_formula": "10000 * stressed_net_pnl_usd / (reference_entry_price * quantity_ounces)",
+    "stress_cost_multiplier": 1.5,
+    "unchanged_items": [
+      "direction",
+      "entry time",
+      "exit time",
+      "reference entry price",
+      "reference exit price",
+      "quantity"
+    ]
+  },
+  "execution": {
+    "changes_permitted": false,
+    "execution_manifest_hash": "724a4fef0fa4b526b4d30b9743c2dfa013c53f87b19262a36b05f3fd07c87d76",
+    "execution_manifest_path": "research_manifests/gold_casebook_constant_execution_v01.json",
+    "fixed_exit_clock_local": "12:00",
+    "fixed_notional_ounces": 1.0,
+    "next_bar_entry_clock_local": "08:01",
+    "session_decision_clock_local": "08:00"
+  },
+  "gate_evaluation": {
+    "all_gates_required": true,
+    "gates": [
+      {
+        "gate_id": "G01_POINT_IN_TIME_INTEGRITY",
+        "pass_condition": "Every joined session, cross-market feature, and selected fixed-execution outcome satisfies record hashes, lineage, availability, decision-clock, and calendar boundaries."
+      },
+      {
+        "gate_id": "G02_DIRECTIONAL_SESSION_SUPPORT",
+        "pass_condition": "Each session has at least 100 directional selector cases."
+      },
+      {
+        "gate_id": "G03_DIRECTIONAL_STATE_SUPPORT",
+        "pass_condition": "Each session has at least 40 POSITIVE-to-LONG cases and at least 40 NEGATIVE-to-SHORT cases."
+      },
+      {
+        "gate_id": "G04_STATE_WEEK_SUPPORT",
+        "pass_condition": "Each session and each directional state spans at least 20 distinct ISO-week clusters."
+      },
+      {
+        "gate_id": "G05_SESSION_MEAN_POSITIVE",
+        "pass_condition": "Each session selector has mean net return above zero after frozen 1.0x costs."
+      },
+      {
+        "gate_id": "G06_SESSION_PROFIT_FACTOR",
+        "pass_condition": "Each session selector has profit factor strictly above one after frozen 1.0x costs."
+      },
+      {
+        "gate_id": "G07_BEATS_BEST_UNCONDITIONAL_CONTROL",
+        "pass_condition": "For each session, selector mean net return is strictly above the larger same-period mean net return of ALWAYS_LONG and ALWAYS_SHORT."
+      },
+      {
+        "gate_id": "G08_DIRECTION_MAPPING_CONSISTENCY",
+        "pass_condition": "Within each session, POSITIVE-to-LONG and NEGATIVE-to-SHORT cells each have mean net return above zero after frozen 1.0x costs."
+      },
+      {
+        "gate_id": "G09_CHRONOLOGICAL_HALF_STABILITY",
+        "pass_condition": "Within each session, both EARLY and LATE selector halves have mean net return above zero after frozen 1.0x costs."
+      },
+      {
+        "gate_id": "G10_COST_STRESS",
+        "pass_condition": "Each session selector has mean net P&L above zero after 1.5x spread, slippage, and commission costs."
+      }
+    ],
+    "rejection_policy": "If any gate fails, reject UNIVERSAL_ZN_4H_SIGN_V0_1. Calendar 2024 cannot be used to rename, retune, replace, or add a gate to this candidate.",
+    "session_baseline_selection": "For each session, compare against max(ALWAYS_LONG mean net return, ALWAYS_SHORT mean net return) using the same calendar-2024 cases and frozen 1.0x execution.",
+    "thresholds": {
+      "minimum_directional_cases_per_session": 100,
+      "minimum_directional_cases_per_session_and_state": 40,
+      "minimum_iso_week_clusters_per_session_and_state": 20
+    },
+    "verdicts": [
+      "PASS_CHRONOLOGICAL_VALIDATION",
+      "REJECT_CHRONOLOGICAL_VALIDATION"
+    ]
+  },
+  "governing_contract": "GOLD_CASEBOOK_RESEARCH_CONTRACT.md",
+  "manifest_hash": "4e070218bfe2be8d0113762bbc42d944e39fccf8916f9f7286a998c05e170269",
+  "manifest_version": "GOLD_CASEBOOK_CHRONOLOGICAL_VALIDATION_V0_1",
+  "milestone": "6_CHRONOLOGICAL_VALIDATION",
+  "output_policy": {
+    "decision_records": "One immutable validation decision for every 2024 SESSION_CASE, including NO_BIAS.",
+    "metric_units": "USD per fixed one-ounce position and basis points of entry notional.",
+    "required_breakdowns": [
+      "session",
+      "directional state",
+      "chronological half",
+      "unconditional controls",
+      "1.5x cost stress",
+      "gate"
+    ]
+  },
+  "prohibited": {
+    "account_scaling_or_leverage_search": true,
+    "calendar_2025_access": true,
+    "entry_exit_stop_target_or_reward_to_risk_optimization": true,
+    "feature_or_interaction_addition": true,
+    "machine_learning_model": true,
+    "rule_or_threshold_retuning": true,
+    "session_specific_rule": true,
+    "zt_fallback_or_confirmation": true
+  },
+  "source": {
+    "baseline_bundle_manifest_hash": "dff92e13105b0b6fd6c9a71a5d9f7668384361d37475fac5fc8b2a33521ea032",
+    "baseline_bundle_manifest_path": "research_artifacts/gold_casebook_baseline_v01/manifest.json",
+    "baseline_trades_sha256": "afbe8f78cadb27ed5b3178573d7d74e1d6ae069a8543cebcf4cab3ef5f99fa85",
+    "case_specification_manifest_hash": "a4696482f0db166fab9dd36a6d6742fb5589a1e5f2b6beeb705747a3d059c8de",
+    "case_specification_manifest_path": "research_manifests/gold_casebook_case_specification_v01.json",
+    "casebook_cross_market_sha256": "470a2e1c020cd2f97f2ad5b0d7f9c5220aff4f644689c4d680c24373964eb285",
+    "casebook_manifest_hash": "d1241633b073cd7307f1da00a13a2d76c132f3dccefc52a076be2c641f06b85f",
+    "casebook_manifest_path": "research_artifacts/gold_casebook_v01/manifest.json",
+    "casebook_sessions_sha256": "2695a2c0b9e8f41fcbf64c9f388e8883ebf7e1f0b3b09b90fb3a60ba7e64966a"
+  },
+  "status": "FROZEN_BEFORE_2024_CONDITIONAL_ACCESS",
+  "time_partitions": {
+    "chronological_validation": {
+      "conditional_data_loaded": false,
+      "end_exclusive": "2025-01-01T00:00:00+00:00",
+      "start_inclusive": "2024-01-01T00:00:00+00:00"
+    },
+    "development": {
+      "end_exclusive": "2024-01-01T00:00:00+00:00",
+      "status": "closed"
+    },
+    "locked_holdout": {
+      "data_loaded": false,
+      "end_exclusive": "2026-01-01T00:00:00+00:00",
+      "start_inclusive": "2025-01-01T00:00:00+00:00"
+    }
+  }
+}

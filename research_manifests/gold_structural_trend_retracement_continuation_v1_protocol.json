@@ -1,0 +1,43 @@
+{
+  "version": "GOLD_STRC_V1_PROTOCOL_1_0",
+  "status": "SEALED_BEFORE_ANY_BRANCH_OUTCOME_ACCESS",
+  "development": {"start": "2021-08-01", "end": "2024-12-31"},
+  "exposed": [
+    {"segment": "EXPOSED_2025", "start": "2025-01-01", "end": "2025-12-31", "independent_credit": false},
+    {"segment": "EXPOSED_2026_YTD", "start": "2026-01-01", "end": "2026-07-29", "independent_credit": false}
+  ],
+  "fundamental_permission": {"bullish_min": 20.0, "bearish_max": -20.0, "coverage_min": 50.0, "confidence_min": 35.0},
+  "sessions": {
+    "LONDON": {"timezone": "Europe/London", "scan_start": "08:00", "scan_end": "11:00", "forced_exit": "13:00"},
+    "NEW_YORK": {"timezone": "America/New_York", "scan_start": "08:00", "scan_end": "11:00", "forced_exit": "13:00"}
+  },
+  "structure": {
+    "timeframes": ["H1", "H4"], "pivot_left": 2, "pivot_right": 2,
+    "transition_expiry_bars": 12, "atr_window": 14, "displacement_tr_atr_min": 1.0,
+    "displacement_body_range_min": 0.5, "directional_close_fraction": 0.3333333333333333,
+    "stale_calendar_days": 15, "opposite_h4_veto": true
+  },
+  "zones": {"break_level_atr_half_width": 0.15, "impulse_retracement_low": 0.382, "impulse_retracement_high": 0.786},
+  "setups": [
+    {"id": "STRC_BREAK_LEVEL_RETEST_REJECTION", "timeframe": "M5", "body_range_min": 0.5, "range_atr_min": 0.8, "close_outer_fraction": 0.3333333333333333},
+    {"id": "STRC_IMPULSE_ZONE_INTERNAL_BOS", "timeframe": "M5", "pre_touch_bars": 3, "confirmation_bars_max": 6, "body_range_min": 0.4, "close_outer_fraction": 0.4},
+    {"id": "STRC_ASIA_SWEEP_CONTINUATION", "timeframe": "M5", "body_range_min": 0.4, "close_outer_fraction": 0.3333333333333333}
+  ],
+  "execution": {
+    "entry": "NEXT_M1_OPEN", "stop_buffer_atr": 0.15, "sensitivity_stop_buffers_atr": [0.10, 0.15, 0.20],
+    "risk_atr_min": 0.75, "risk_atr_max": 3.0, "cost_per_ounce": 0.47, "cost_r_max": 0.20,
+    "target_min_r": 1.5, "target_cap_r": 3.0, "max_holding_minutes": 180,
+    "same_bar": "STOP_FIRST", "risk_pct": 0.5, "starting_equity": 10000.0,
+    "contract_ounces": 100.0, "lot_step": 0.01, "cost_stress": [1.0, 1.5, 2.0]
+  },
+  "statistics": {
+    "bootstrap_resamples": 5000, "bootstrap_cluster": "SESSION_DATE", "seed": 26080702,
+    "multiplicity": "HOLM_WITHIN_SESSION", "alpha": 0.05,
+    "blocks": [["2021-08-01", "2022-06-30"], ["2022-07-01", "2023-03-31"], ["2023-04-01", "2023-12-31"], ["2024-01-01", "2024-12-31"]]
+  },
+  "support": {"trades": 40, "dates": 30, "weeks": 20, "each_direction": 10, "each_year_2022_2024": 8},
+  "candidate_limit_per_session": 3,
+  "paid_acquisition_authorized": false,
+  "future_level_use_permitted": false,
+  "retuning_after_outcomes_permitted": false
+}

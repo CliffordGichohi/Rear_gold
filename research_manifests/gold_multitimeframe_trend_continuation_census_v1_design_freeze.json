@@ -1,0 +1,41 @@
+{
+  "controls": {
+    "contract": {
+      "bytes": 5082,
+      "path": "GOLD_MULTITIMEFRAME_TREND_CONTINUATION_CENSUS_CONTRACT_V1.md",
+      "sha256": "671bfe0da7604165b3ce6d700ae80a74f6be299e2e49faba7954cf93f6a1d0d6",
+      "verification": "HASHED_NOW"
+    },
+    "protocol": {
+      "bytes": 978,
+      "path": "research_manifests/gold_multitimeframe_trend_continuation_census_v1_protocol.json",
+      "sha256": "97411e90aa95d6803fcc7fea6ccdc0e0eb270bf34da7963e8b4a534596eab322",
+      "verification": "HASHED_NOW"
+    }
+  },
+  "forward_values_accessed": false,
+  "paid_acquisition_authorized": false,
+  "preflight": {
+    "bytes": 1284,
+    "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v01/preflight.json",
+    "sha256": "2473e9ec4b3442ecb77265a0f3421b704a7ab4f8f354b8730da676a99fe24ba8",
+    "verification": "HASHED_NOW"
+  },
+  "sealed_at_utc": "2026-08-07T12:06:25.348038+00:00",
+  "sources": {
+    "casebook_manifest": {
+      "bytes": 5372,
+      "path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6",
+      "verification": "HASHED_NOW"
+    },
+    "price_bars": {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+      "verification": "INHERITED_FROM_SEALED_CASEBOOK"
+    }
+  },
+  "status": "SEALED_BEFORE_CENSUS_MATERIALIZATION",
+  "version": "GOLD_MT_CENSUS_V1_DESIGN_FREEZE_1_0"
+}

@@ -1,0 +1,51 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4A3_FREEZE_V0_1",
+  "status": "AMENDMENT_SEALED_BEFORE_IMPLEMENTATION_AND_SOURCE_ROW_ACCESS",
+  "sealed_at_utc": "2026-07-31T13:18:41.9031728Z",
+  "classification": "ENGINEERING_ONLY_FEATURE_INTEGRITY_RECERTIFICATION",
+  "research_or_validation_credit": "NONE",
+  "amendment": {
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_manifests\\gc_microstructure_step_4a3_amendment_v01.json",
+    "bytes": 10170,
+    "sha256": "59861ceb1ad282772dcd9bdfa196432aa879916f222550ad547a3f006ca74e24"
+  },
+  "predecessor_manifests": {
+    "step_4a": {
+      "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_microstructure_step_4a_v01\\manifest.json",
+      "bytes": 4070,
+      "sha256": "cd26f0fd52e281d1354671c18003dd7bba2566c17d2b8781adc3103b9b8eb83b",
+      "canonical_manifest_hash": "4960f1ee7f03e21cc490ea81b8e15554ed6c879527d8a02c3956b849cab2bf0f"
+    },
+    "step_4a1": {
+      "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_microstructure_step_4a1_v01\\manifest.json",
+      "bytes": 4033,
+      "sha256": "3daa94955006f49d12b7f4cb9b6ba7d7be9f580457f7f5c37b85f6fc1083bf01",
+      "canonical_manifest_hash": "6bcc2f207fa8554f780aec269bd0ad3f4bff6686a37260bfc60b479b6f07eee5"
+    },
+    "step_4a2": {
+      "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_microstructure_step_4a2_v01\\manifest.json",
+      "bytes": 3718,
+      "sha256": "3205056103e4434003a455f5ec0dbe33f3608cf689eb4cf3e17ea8ff50beb72d",
+      "canonical_manifest_hash": "b273efc3826a3e10856e5693c75262ca286d4aa66bfe4cef6c53b64e893e0fb2"
+    }
+  },
+  "unchanged_feature_engine": {
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\tools\\build_gc_microstructure_features_step4a.py",
+    "bytes": 79670,
+    "sha256": "c5589914a1acae6a3a1e9079c302821477866bba3741317392c567bb590c2369"
+  },
+  "sealed_sources": {
+    "mbo_sha256": "43a8a3bb2be9a4a36ab324e3fe0ca0e29ccb4529f445013a87156d3bad4c0ba3",
+    "mbp10_sha256": "4ead358f538d7c383a14f39bbde35b8ccfa21e38e58205edbc51bedfb2ed80d4"
+  },
+  "bounded_changes": [
+    "Replace bad_ts_recv_flag_rows_zero only with the exact confirmed snapshot-semantics gate.",
+    "Replace continuous_crossed_book_rows_zero only with the continuous-matching one-second bucket-close crossed-state gate."
+  ],
+  "all_other_step_4a_calculations_and_gates_unchanged": true,
+  "implementation_started_before_this_receipt": false,
+  "step_4a3_source_rows_accessed_before_this_receipt": false,
+  "additional_data_acquisition_permitted": false,
+  "another_date_may_be_inspected": false,
+  "outcomes_signals_execution_or_pnl_permitted": false
+}

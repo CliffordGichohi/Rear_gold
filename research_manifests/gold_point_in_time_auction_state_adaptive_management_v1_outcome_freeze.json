@@ -1,0 +1,50 @@
+{
+  "artifacts": {
+    "certification": {
+      "bytes": 13232,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_development/outcome_materialization_certification.json",
+      "sha256": "a5870a406353f19607aaa447fdde689e7a60f814e3fe4893a84c110161ef1210"
+    },
+    "primary": {
+      "bytes": 236896705,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_development/primary_checkpoint_outcomes.parquet",
+      "sha256": "3e2775802c0dea70a973134d27d71bc253c8fdb796523ff1e71b972ad296ad67"
+    },
+    "reference": {
+      "bytes": 236896705,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_development/reference_checkpoint_outcomes.parquet",
+      "sha256": "3e2775802c0dea70a973134d27d71bc253c8fdb796523ff1e71b972ad296ad67"
+    }
+  },
+  "byte_identical": true,
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "complete_checksum": "ed20f4220b6135b2965e68dfd29eaef4ced70ecce20d3b135399d002e2347c20",
+  "controls": {
+    "execution": {
+      "bytes": 7494,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_outcome_model_policy_execution_freeze.json",
+      "sha256": "df325b7e62f4d81b161fcfadecec55c597136f4c1f1b8543a3a33df699d92d7c"
+    },
+    "implementation": {
+      "bytes": 1208,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_outcome_implementation_freeze.json",
+      "sha256": "15454528c4d2594921cf79bea47196fccf02108cd514ec2d4d2aaf6b07ce7b31"
+    },
+    "opening": {
+      "bytes": 1075,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_development/development_outcome_opening.json",
+      "sha256": "b0c7cf1112cf0a2aa1194893dae578c843775988c5db24b78152e0bfd4de1ede"
+    },
+    "tape": {
+      "bytes": 4415,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_tape_freeze.json",
+      "sha256": "d7b5f207d6df361ea06b8d143f0a6d39b524127f42cef7f060856f883c18cd5f"
+    }
+  },
+  "paid_acquisition_usd": 0.0,
+  "rows": 2095849,
+  "sealed_at_utc": "2026-08-11T08:24:28.271050Z",
+  "status": "PASS_DEVELOPMENT_CHECKPOINT_OUTCOME_MATERIALIZATION",
+  "version": "GOLD_PIT_AUCTION_STATE_V1_OUTCOME_FREEZE_1_0"
+}

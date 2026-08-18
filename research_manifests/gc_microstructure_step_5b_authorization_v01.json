@@ -1,0 +1,46 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_5B_AUTHORIZATION_V0_1",
+  "status": "FROZEN_USER_AUTHORIZATION_WITH_FAIL_FAST_GATES",
+  "authorized_at_utc": "2026-08-03T10:04:29.8504984Z",
+  "classification": "ACQUISITION_AND_VALUE_BLIND_SOURCE_INTEGRITY_ONLY",
+  "predecessor": {
+    "step_5a_freeze_hash": "cb67d1ba793a80e58d5439be2f3c07ac5fcac1b965440f2035bb48b86efde949",
+    "step_5a_manifest_hash": "ec869c52c223d460a086a2aeb19265777761a9b9296fbe012f96f62bdf174706",
+    "step_5a_status": "PASS_STEP_5A_METADATA_READINESS"
+  },
+  "frozen_requests": {
+    "registry_path": "research_manifests/gc_microstructure_step_5a_request_registry_v01.json",
+    "request_count": 86,
+    "selected_dates": 203,
+    "dataset": "GLBX.MDP3",
+    "symbol": "GC.v.0",
+    "schemas": ["mbo", "mbp-10"]
+  },
+  "pre_submission_gates_in_order": [
+    "all predecessor seals verify",
+    "usable destination capacity is at least 350 GiB",
+    "all 86 frozen metadata estimates are rerun",
+    "combined estimate is at most USD 120.00",
+    "usable credits are sufficient",
+    "symbology and every frozen request remain unchanged"
+  ],
+  "fail_fast": true,
+  "maximum_charge_usd": 120.0,
+  "minimum_usable_destination_bytes": 375809638400,
+  "minimum_usable_destination_gib": 350,
+  "permitted_after_all_gates_pass": [
+    "submit and download only the 86 frozen requests",
+    "preserve raw payloads unchanged",
+    "normalize deterministically",
+    "verify technical source integrity without reporting market values",
+    "hash and seal every source and normalized payload"
+  ],
+  "prohibited": [
+    "submitting after any failed gate",
+    "changing dates, schemas, symbol, symbology, or request spans",
+    "inspecting or reporting prices, depth, order flow, outcomes, relationships, candidates, signals, execution, trades, PnL, or R multiples",
+    "using 2025 or 2026 values",
+    "granting research or validation credit to engineering dates"
+  ],
+  "completion_policy": "Stop immediately and record the failed gate if any pre-submission condition fails; otherwise complete only acquisition and value-blind source-integrity certification."
+}

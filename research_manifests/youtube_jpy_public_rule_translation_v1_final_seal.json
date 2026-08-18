@@ -1,0 +1,48 @@
+{
+  "files": [
+    {
+      "bytes": 540,
+      "path": "research_artifacts/youtube_jpy_public_rule_v1/development_outcome_opening.json",
+      "sha256": "131bb51881f3e3132db58eb5a062a5a916eaabe5eac07379adfbccb9d7c8b1ef"
+    },
+    {
+      "bytes": 2999,
+      "path": "research_artifacts/youtube_jpy_public_rule_v1/final_result.json",
+      "sha256": "7c1dc7699c045c60443ecbfd8f5c3a1e405e6dd9bcf232eaff5c521119c9a6dd"
+    },
+    {
+      "bytes": 150666,
+      "path": "research_artifacts/youtube_jpy_public_rule_v1/stage_1_primary_rows.json",
+      "sha256": "fc5b9ceb0569c8828669daf1d6036e87eab0b3abbac812f01d3681eb4e34e0a6"
+    },
+    {
+      "bytes": 150666,
+      "path": "research_artifacts/youtube_jpy_public_rule_v1/stage_1_reference_rows.json",
+      "sha256": "fc5b9ceb0569c8828669daf1d6036e87eab0b3abbac812f01d3681eb4e34e0a6"
+    },
+    {
+      "bytes": 2405,
+      "path": "research_artifacts/youtube_jpy_public_rule_v1/stage_1_reproduction.json",
+      "sha256": "c68949a817f2cc3fa8389400a4357e089194b359ec60b1617f4a9ad0da618d6d"
+    },
+    {
+      "bytes": 1734,
+      "path": "research_artifacts/youtube_jpy_public_rule_v1/stage_1_result.json",
+      "sha256": "57d57cf44e667f95b354dcc4f89e667f4703835caa1c6ec1742b83809719e7c9"
+    },
+    {
+      "bytes": 874,
+      "path": "YOUTUBE_JPY_PUBLIC_RULE_TRANSLATION_AND_FALSIFICATION_V1_REPORT.md",
+      "sha256": "95d59f31858d488ece29596c4ea1c8aefaa955a794f9a58a97ca4199d5c5712f"
+    },
+    {
+      "bytes": 7397,
+      "path": "research_manifests/youtube_jpy_public_rule_v1_preoutcome_freeze.json",
+      "sha256": "77940cab249f4a99d375149f7fae5535d747f82310e9b750266aebc28af43090"
+    }
+  ],
+  "manifest_sha256": "ef3359802b3be63ab3eb27a57a6429b74485d78006108845c9ec276cf4b941db",
+  "sealed_at": "2026-08-13T08:34:14.504468+00:00",
+  "status": "SEALED_FINAL",
+  "version": "YOUTUBE_JPY_PUBLIC_RULE_TRANSLATION_V1_FINAL_SEAL_1_0"
+}

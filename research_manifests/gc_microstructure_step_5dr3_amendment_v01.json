@@ -1,0 +1,239 @@
+{
+  "amendment_receipt": "bf891687f7784cf61480de8803cff20cee6fe4173f697af5e9a268de0fa37f0f",
+  "authority": {
+    "authorized_operations": [
+      "exactly one controlled recovery outcome construction and join",
+      "unchanged Stage 1 followed by unchanged registered Stage 2",
+      "independent complete reproduction, documentation, and sealing"
+    ],
+    "authorized_step": "STEP_5D_R3",
+    "mandatory_stop": "Stop after the Step 5D-R3 result is independently reproduced, documented, and sealed."
+  },
+  "classification": "BOUNDED_SOURCE_UNAVAILABILITY_AND_OUTCOME_POPULATION_AMENDMENT",
+  "disposition_rules": {
+    "four_keys_are_explicit_unknown_rows": true,
+    "holiday_reclassification": false,
+    "imputation": false,
+    "provider_substitution": false,
+    "selective_filtering": false
+  },
+  "effective_population": {
+    "documented_unknown_rows": 6,
+    "feature_rows_retained": 376,
+    "known_outcomes": 370,
+    "previously_available_v3_outcomes": 358,
+    "recoverable_from_existing_sealed_price_source": 12,
+    "session_counts": {
+      "LONDON": {
+        "feature_rows": 188,
+        "known_outcomes": 186,
+        "recovered_price_bar_outcomes": 6,
+        "unknown_rows": 2,
+        "v3_payload_outcomes": 180
+      },
+      "NEW_YORK": {
+        "feature_rows": 188,
+        "known_outcomes": 184,
+        "recovered_price_bar_outcomes": 6,
+        "unknown_rows": 4,
+        "v3_payload_outcomes": 178
+      }
+    }
+  },
+  "frozen_at_utc": "2026-08-04T12:24:49.632226Z",
+  "implementation": {
+    "modification_after_freeze_prohibited": true,
+    "original_frozen_step5d_runner_sha256": "b129b18d6f62ba8338c81b05163b9ee8e4cff0fd79d8f3fd89a50b7ecef6e44a",
+    "path": "tools/run_gc_microstructure_step5dr3.py",
+    "sha256": "de3cb40e895d8d7ce28557f5c6dfec917ed7d722723375c5f22df8cb2bf09aab"
+  },
+  "outcome_values_accessed_before_amendment_seal": false,
+  "permanent_dispositions": [
+    {
+      "disposition": "DOCUMENTED_SOURCE_UNAVAILABLE_FOR_THIS_STUDY",
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-13"
+    },
+    {
+      "disposition": "DOCUMENTED_SOURCE_UNAVAILABLE_FOR_THIS_STUDY",
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-15"
+    },
+    {
+      "disposition": "DOCUMENTED_SOURCE_UNAVAILABLE_FOR_THIS_STUDY",
+      "session_code": "LONDON",
+      "session_date": "2023-08-15"
+    },
+    {
+      "disposition": "DOCUMENTED_SOURCE_UNAVAILABLE_FOR_THIS_STUDY",
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-13"
+    }
+  ],
+  "predecessor_bindings": {
+    "casebook_price_bars": {
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    "discovery_contract": {
+      "path": "research_manifests/gc_microstructure_conditional_edge_discovery_contract_v01.json",
+      "sha256": "da9048f497c853ef3b1f2a4debe6c80f8c650217004bfe6df05e045751554fcb"
+    },
+    "feature_hypothesis_registry": {
+      "path": "research_manifests/gc_microstructure_step_5a_feature_hypothesis_registry_v01.json",
+      "sha256": "4b207a1dec5aa78a904c86cf8c6a14bf0a517dd918f24c5270c254400c865f01"
+    },
+    "step5b2_amendment": {
+      "path": "research_manifests/gc_microstructure_step_5b2_amendment_v01.json",
+      "sha256": "1a6dd3372f40b52d219b38e35504b9a96046ffc284117ed1ac6cc703d009f9d7"
+    },
+    "step5b2_freeze": {
+      "path": "research_manifests/gc_microstructure_step_5b2_freeze_v01.json",
+      "sha256": "0c1e7b8db099ea4489c201dda9893da184a55f8159f89a4ce946e78a1485f918"
+    },
+    "step5b2_manifest": {
+      "path": "research_artifacts/gc_microstructure_step_5b2_v01/step5b2_final/manifest.json",
+      "sha256": "3fedb586ce4f9621721575b748b82043f47a4f6630488c29e0b2f8e73b4c86f1"
+    },
+    "step5b2_verdict": {
+      "path": "research_artifacts/gc_microstructure_step_5b2_v01/step5b2_final/verdict.json",
+      "sha256": "5f3bd13cc2336a50c09ecfcc44c7d63b226a4d212f9d08666d6a50e93e09a6cb"
+    },
+    "step5c_freeze": {
+      "path": "research_manifests/gc_microstructure_step_5c_freeze_v01.json",
+      "sha256": "5ad5d57af1fdab6a80e90cb872408f1f6df99d2d7a4a892a5f380c49aee9f82d"
+    },
+    "step5c_manifest": {
+      "path": "research_artifacts/gc_microstructure_step5c_v01/manifest.json",
+      "sha256": "f7150f861f4883e3f7c100822af527ba497b8343225c24ebe16ffe11107e31fb"
+    },
+    "step5c_primary_features": {
+      "path": "research_artifacts/gc_microstructure_step5c_v01/primary_decision_features.parquet",
+      "sha256": "277993e0cd2d5bff2e8f49c6aaf519ac024a1f7ac1ed8bbd0808f5d3213b5d98"
+    },
+    "step5c_protocol": {
+      "path": "research_manifests/gc_microstructure_step_5c_protocol_v01.json",
+      "sha256": "25e087ae505bd2b304b5d9533c9fb8dd8042b47e8e498ed82242ad48365e272d"
+    },
+    "step5c_reference_features": {
+      "path": "research_artifacts/gc_microstructure_step5c_v01/reference_decision_features.parquet",
+      "sha256": "277993e0cd2d5bff2e8f49c6aaf519ac024a1f7ac1ed8bbd0808f5d3213b5d98"
+    },
+    "step5c_row_registry": {
+      "path": "research_manifests/gc_microstructure_step_5c_row_registry_v01.json",
+      "sha256": "a0c2b6dff0dd6c57e25b5f194342c69202e02f2e642f6fe8ae75ac2ea1bbe225"
+    },
+    "step5c_verdict": {
+      "path": "research_artifacts/gc_microstructure_step5c_v01/verdict.json",
+      "sha256": "f98702e5260f60fa258a8f5ed43adc944724075bf442f958677fdf8fe3dee2ad"
+    },
+    "step5d_final_seal": {
+      "path": "research_artifacts/gc_microstructure_step5d_v01/final_seal.json",
+      "sha256": "17f2a97487c72cf447eed34b6dabda558af7f88671fc845316139c2a1c71c2db"
+    },
+    "step5d_freeze": {
+      "path": "research_manifests/gc_microstructure_step_5d_freeze_v01.json",
+      "sha256": "982464e185fabaab57b5871506fc3f75b9f577267eb3bcd52ebd83a4fbf2725d"
+    },
+    "step5d_frozen_runner": {
+      "path": "tools/run_gc_microstructure_step5d.py",
+      "sha256": "b129b18d6f62ba8338c81b05163b9ee8e4cff0fd79d8f3fd89a50b7ecef6e44a"
+    },
+    "step5d_implementation_amendment_a": {
+      "path": "research_manifests/gc_microstructure_step_5d_implementation_amendment_a_v01.json",
+      "sha256": "436300bc285914a9151c3fe74ec25a8b6c7651716a2e94c0e0c86f39537332fe"
+    },
+    "step5d_implementation_v02": {
+      "path": "research_manifests/gc_microstructure_step_5d_implementation_v02.json",
+      "sha256": "ffebe445bb2732a2e29105c148b702bf800fb211a9d47a545722597ae2fa38c3"
+    },
+    "step5d_outcome_join_failure": {
+      "path": "research_artifacts/gc_microstructure_step5d_v01/outcome_opening_failure.json",
+      "sha256": "44f32d8da4e58d19f1f4e2d2a9fccace63457f75fa58370e119d0b5273090805"
+    },
+    "step5d_protocol": {
+      "path": "research_manifests/gc_microstructure_step_5d_protocol_v01.json",
+      "sha256": "835361070b3955912938b5519ec0b7b32542d6774c895f43bde11a93fb268b64"
+    },
+    "step5d_test_registry": {
+      "path": "research_manifests/gc_microstructure_step_5d_test_registry_v01.json",
+      "sha256": "e3b7a132f03cebaff4c05cc646e00f0b1867881d0109c65b71f1076e74ab2d4a"
+    },
+    "step5d_verdict": {
+      "path": "research_artifacts/gc_microstructure_step5d_v01/verdict.json",
+      "sha256": "3ec082a95bd48cb412b9771eaae8cffd1641593c7ad60b033da3c9a95a6994ef"
+    },
+    "step5dr1_corrected_final_seal": {
+      "path": "research_artifacts/gc_microstructure_step5dr1_corrected_v01/final_seal.json",
+      "sha256": "885d292f604669011a76b28bb649baf8389d7a2ecd59ff43d42abce08e9ae578"
+    },
+    "step5dr1_freeze": {
+      "path": "research_manifests/gc_microstructure_step_5dr1_freeze_v01.json",
+      "sha256": "3d2602f6c2efb8c2146835c8b877727d7a0a4bc82aa66d5617e08be18fc5b34d"
+    },
+    "step5dr1_primary_corrected": {
+      "path": "research_artifacts/gc_microstructure_step5dr1_corrected_v01/primary_corrected_diagnostic.json",
+      "sha256": "f7e3460e32df145a15b24696bd5db8d78c15069b85e002310c6685c47b37421c"
+    },
+    "step5dr1_protocol": {
+      "path": "research_manifests/gc_microstructure_step_5dr1_protocol_v01.json",
+      "sha256": "18c4637970505d6b2f58e74e7cc4f8bb862bf50e1336aa6fd62057eaac3536ac"
+    },
+    "step5dr1_reference_corrected": {
+      "path": "research_artifacts/gc_microstructure_step5dr1_corrected_v01/reference_corrected_diagnostic.json",
+      "sha256": "3e81ae8e8d925f266c2a98c18061368ef534055ea0f52bfe5bd806776cbf7cb9"
+    },
+    "step5dr2_certification": {
+      "path": "research_artifacts/gc_microstructure_step5dr2_v01/certification.json",
+      "sha256": "454638ff5b011c75f94ba690114c0552bb333902986b7fa24dbaf4b707292e67"
+    },
+    "step5dr2_final_seal": {
+      "path": "research_artifacts/gc_microstructure_step5dr2_v01/final_seal.json",
+      "sha256": "65a7b19971eae1d434720f79d0dcd39d4c05d4fbb41ab995ac4632f49d80ad24"
+    },
+    "step5dr2_freeze": {
+      "path": "research_manifests/gc_microstructure_step_5dr2_recovery_freeze_v01.json",
+      "sha256": "6cc8d3c91351068d303e1e4e49804fb5ef5fc32e1b2002adfde8bb1059414334"
+    },
+    "step5dr2_protocol": {
+      "path": "research_manifests/gc_microstructure_step_5dr2_recovery_protocol_v01.json",
+      "sha256": "fdd48b9bf9c70070cbc876612956dd9cc4dcb6097cddf3229febea2e64ef9590"
+    },
+    "step5dr2_verdict": {
+      "path": "research_artifacts/gc_microstructure_step5dr2_v01/verdict.json",
+      "sha256": "af596de71061eca5f18706bd62dea2f90b81b5799642bc03ba4f5f9b87592533"
+    },
+    "v3_case_payload": {
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/cases.jsonl.gz",
+      "sha256": "d0f5120713b5f9ce641c6285941bfc23d3aac3b83b561c8fc1138e33a5ede9b9"
+    }
+  },
+  "preserved_history": {
+    "all_prior_verdicts_artifacts_and_seals_immutable": true,
+    "step5d_original_source_open_count": 1,
+    "step5d_original_status": "FAIL_STEP_5D_OUTCOME_JOIN_COVERAGE",
+    "step5d_original_tests_executed": 0,
+    "step5dr1_corrected_status": "PASS_STEP_5D_R1_DIAGNOSTIC_REPRODUCTION_AFTER_IMPLEMENTATION_CORRECTION",
+    "step5dr2_status": "FAIL_STEP_5D_R2_RECOVERY_OR_METADATA_CERTIFICATION"
+  },
+  "prohibited": [
+    "adding retuning inverting repairing or selectively filtering tests or candidates",
+    "changing seeds multiplicity support stability ranking or verdict rules",
+    "2025 or 2026 value access",
+    "execution optimization or calculation of trades PnL R multiples or account returns",
+    "new acquisition charge or provider substitution"
+  ],
+  "status": "SEALED_BEFORE_R3_OUTCOME_VALUE_ACCESS",
+  "unchanged_analysis": {
+    "all_test_definitions_seeds_multiplicity_support_stability_ranking_and_verdict_gates": "UNCHANGED",
+    "maximum_provisional_candidates_per_session": 2,
+    "neutral_outcome_definition": "Open of first complete one-minute bar at 08:01 local through close of the 11:59 local bar; UP above +0.01, DOWN below -0.01, otherwise FLAT.",
+    "registered_tests": 148,
+    "sessions_separate": true,
+    "stage_order": "Seal complete Stage 1 before evaluating Stage 2.",
+    "test_registry_sha256": "e3b7a132f03cebaff4c05cc646e00f0b1867881d0109c65b71f1076e74ab2d4a",
+    "zero_candidates_acceptable": true
+  },
+  "version": "GC_MICROSTRUCTURE_STEP_5D_R3_SOURCE_UNAVAILABILITY_AMENDMENT_V0_1",
+  "year_2025_or_2026_values_accessed": false
+}

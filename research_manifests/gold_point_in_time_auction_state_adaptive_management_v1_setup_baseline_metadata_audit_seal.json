@@ -1,0 +1,21 @@
+{
+  "audit": {
+    "bytes": 313436,
+    "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_tape/setup_baseline_metadata_audit.json",
+    "sha256": "378620d4d0741f0fdcb88989478f94957ed298575a009acd2f5db287cf10f880"
+  },
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "classification_hash": "b9faf50e048622ea35bd958f200d217f6482584ce7d983f653966173c1e38733",
+  "development_outcomes_accessed": false,
+  "paid_acquisition_usd": 0.0,
+  "recommendation": "NO_UNIVERSAL_SIGNAL_BASELINE_AVAILABLE",
+  "sealed_at_utc": "2026-08-11T07:38:50.085152Z",
+  "source_registry": {
+    "bytes": 841647,
+    "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_preoutcome/primary_case_tape_registry.parquet",
+    "sha256": "2bbf0abe0c1ad6e6d74412da396ef5e60b0264f0da1cb347bddf5449374128c7"
+  },
+  "status": "PASS_REPRODUCED_BASELINE_METADATA_AUDIT",
+  "version": "GOLD_PIT_AUCTION_STATE_V1_SETUP_BASELINE_METADATA_AUDIT_SEAL_1_0"
+}

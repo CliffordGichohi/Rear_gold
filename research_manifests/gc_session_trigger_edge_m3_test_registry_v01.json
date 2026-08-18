@@ -1,0 +1,3468 @@
+{
+  "counts": {
+    "stage1_support_eligible": 12,
+    "stage1_total": 12,
+    "stage2_support_eligible": 26,
+    "stage2_support_fail": 34,
+    "stage2_total": 60,
+    "total": 72
+  },
+  "normalized_support_payload_hash": "3808033bd9d5d916753fb8947e23b51464b826c9cfc084135b72ffc0a5f91adb",
+  "outcome_values_accessed": false,
+  "registry_receipt": "672312ca923aab51d0800b2f28a522b2bc17fcc35e58e6ff2d72786448147927",
+  "sealed_at_utc": "2026-08-06T06:58:38.519404Z",
+  "status": "SEALED_COMPLETE_SUPPORT_CLASSIFIED_TEST_REGISTRY_BEFORE_OUTCOME_ACCESS",
+  "tests": [
+    {
+      "assigned_event_count": 369,
+      "assigned_event_ids_hash": "67e3c24f032243338a6269acc566b0ed363e3cbfa7df5f0a06fbdfdf7e6705ac",
+      "bootstrap_seed_uint64": 5947824178387145179,
+      "context": null,
+      "event_family": "ABSORPTION_ONSET",
+      "gc_bootstrap_seed_uint64": 14326138248939324149,
+      "randomization_seed_uint64": 9324533865169680520,
+      "secondary_randomization_seeds": {
+        "30": 13419467899179497707,
+        "5": 1335094228642178078,
+        "60": 12499493007570058047
+      },
+      "session": "LONDON",
+      "stage": 1,
+      "support_counts": {
+        "bearish_distinct_dates": 185,
+        "bearish_event_instances": 185,
+        "bullish_distinct_dates": 184,
+        "bullish_event_instances": 184,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 186,
+        "event_instances": 369,
+        "events_by_year": {
+          "2021": 20,
+          "2022": 116,
+          "2023": 118,
+          "2024": 115
+        }
+      },
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S1:LONDON:ABSORPTION_ONSET"
+    },
+    {
+      "assigned_event_count": 304,
+      "assigned_event_ids_hash": "e7c51dbe83792e0ab8930fa2cfd81d419ec9315c83d0bc791f87a7338cb7019e",
+      "bootstrap_seed_uint64": 10083801239498898313,
+      "context": null,
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "gc_bootstrap_seed_uint64": 2248403368159627937,
+      "randomization_seed_uint64": 3567780228754492216,
+      "secondary_randomization_seeds": {
+        "30": 6728198217611132166,
+        "5": 6259076311679881634,
+        "60": 16985769266479297648
+      },
+      "session": "LONDON",
+      "stage": 1,
+      "support_counts": {
+        "bearish_distinct_dates": 142,
+        "bearish_event_instances": 142,
+        "bullish_distinct_dates": 162,
+        "bullish_event_instances": 162,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 176,
+        "event_instances": 304,
+        "events_by_year": {
+          "2021": 18,
+          "2022": 106,
+          "2023": 103,
+          "2024": 77
+        }
+      },
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S1:LONDON:FLOW_DEPTH_ALIGNMENT_ONSET"
+    },
+    {
+      "assigned_event_count": 343,
+      "assigned_event_ids_hash": "240c3649af0e99bf7489e8c0df8569fa472c2ca065155c8e1734b1893260adb9",
+      "bootstrap_seed_uint64": 15694692949958981387,
+      "context": null,
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "gc_bootstrap_seed_uint64": 2691442394790688970,
+      "randomization_seed_uint64": 5481226445267909918,
+      "secondary_randomization_seeds": {
+        "30": 13162155306499092985,
+        "5": 16039450823034962097,
+        "60": 11157495724225011153
+      },
+      "session": "LONDON",
+      "stage": 1,
+      "support_counts": {
+        "bearish_distinct_dates": 172,
+        "bearish_event_instances": 172,
+        "bullish_distinct_dates": 171,
+        "bullish_event_instances": 171,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 185,
+        "event_instances": 343,
+        "events_by_year": {
+          "2021": 20,
+          "2022": 108,
+          "2023": 113,
+          "2024": 102
+        }
+      },
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S1:LONDON:FRAGILITY_FLOW_ONSET"
+    },
+    {
+      "assigned_event_count": 507,
+      "assigned_event_ids_hash": "dd95a2e9ef5db0601cecd2b6b947f467821defe498ee5f36ec6d2e6266a19285",
+      "bootstrap_seed_uint64": 7048365330256500870,
+      "context": null,
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 9704913795892369366,
+      "randomization_seed_uint64": 18249700814815636434,
+      "secondary_randomization_seeds": {
+        "30": 4314569830700049336,
+        "5": 15660672415301104985,
+        "60": 8536409222250055781
+      },
+      "session": "LONDON",
+      "stage": 1,
+      "support_counts": {
+        "bearish_distinct_dates": 151,
+        "bearish_event_instances": 236,
+        "bullish_distinct_dates": 162,
+        "bullish_event_instances": 271,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 186,
+        "event_instances": 507,
+        "events_by_year": {
+          "2021": 24,
+          "2022": 168,
+          "2023": 162,
+          "2024": 153
+        }
+      },
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S1:LONDON:LEVEL_BREAK_ACCEPT"
+    },
+    {
+      "assigned_event_count": 422,
+      "assigned_event_ids_hash": "0f6745d41b401428b6164ebc0e7e65a33990ad637af0f5b5e4b43fcac8c2a7c8",
+      "bootstrap_seed_uint64": 1470911832620250107,
+      "context": null,
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 15953206404566242814,
+      "randomization_seed_uint64": 13226845516977850275,
+      "secondary_randomization_seeds": {
+        "30": 14674715818189625090,
+        "5": 13268075678630521203,
+        "60": 4947310670304825941
+      },
+      "session": "LONDON",
+      "stage": 1,
+      "support_counts": {
+        "bearish_distinct_dates": 157,
+        "bearish_event_instances": 223,
+        "bullish_distinct_dates": 150,
+        "bullish_event_instances": 199,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 179,
+        "event_instances": 422,
+        "events_by_year": {
+          "2021": 21,
+          "2022": 136,
+          "2023": 129,
+          "2024": 136
+        }
+      },
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S1:LONDON:LEVEL_FAILED_ACCEPTANCE"
+    },
+    {
+      "assigned_event_count": 473,
+      "assigned_event_ids_hash": "94c4e1be6e1b73a672c2fb809439e3460e62d9488457a7bf46f6b94e0b3dc8eb",
+      "bootstrap_seed_uint64": 11107210013223227940,
+      "context": null,
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 12817970754311390823,
+      "randomization_seed_uint64": 3417789594716891808,
+      "secondary_randomization_seeds": {
+        "30": 4011997480516956301,
+        "5": 13941293956128564362,
+        "60": 6574611960949736800
+      },
+      "session": "LONDON",
+      "stage": 1,
+      "support_counts": {
+        "bearish_distinct_dates": 168,
+        "bearish_event_instances": 248,
+        "bullish_distinct_dates": 159,
+        "bullish_event_instances": 225,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 184,
+        "event_instances": 473,
+        "events_by_year": {
+          "2021": 23,
+          "2022": 154,
+          "2023": 147,
+          "2024": 149
+        }
+      },
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S1:LONDON:LEVEL_SWEEP_RECLAIM"
+    },
+    {
+      "assigned_event_count": 356,
+      "assigned_event_ids_hash": "8ac1864a6a9c6d120e26629009b45166950cf85e782f8b72171f840eda71c2fc",
+      "bootstrap_seed_uint64": 3687706905626941720,
+      "context": null,
+      "event_family": "ABSORPTION_ONSET",
+      "gc_bootstrap_seed_uint64": 9723761524663491282,
+      "randomization_seed_uint64": 9586755909408468917,
+      "secondary_randomization_seeds": {
+        "30": 11624831279024514591,
+        "5": 8658312932764487732,
+        "60": 18329077743430043576
+      },
+      "session": "NEW_YORK",
+      "stage": 1,
+      "support_counts": {
+        "bearish_distinct_dates": 178,
+        "bearish_event_instances": 178,
+        "bullish_distinct_dates": 178,
+        "bullish_event_instances": 178,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 187,
+        "event_instances": 356,
+        "events_by_year": {
+          "2021": 19,
+          "2022": 115,
+          "2023": 111,
+          "2024": 111
+        }
+      },
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S1:NEW_YORK:ABSORPTION_ONSET"
+    },
+    {
+      "assigned_event_count": 276,
+      "assigned_event_ids_hash": "c01502d64b6a8f960a93cb264f6e091a887255ffb0989439012d916e873767dc",
+      "bootstrap_seed_uint64": 2769019987192150323,
+      "context": null,
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "gc_bootstrap_seed_uint64": 16261174373860574564,
+      "randomization_seed_uint64": 18104536829046951270,
+      "secondary_randomization_seeds": {
+        "30": 7915926856827758294,
+        "5": 7805515085424057455,
+        "60": 14932220558277281214
+      },
+      "session": "NEW_YORK",
+      "stage": 1,
+      "support_counts": {
+        "bearish_distinct_dates": 147,
+        "bearish_event_instances": 147,
+        "bullish_distinct_dates": 129,
+        "bullish_event_instances": 129,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 171,
+        "event_instances": 276,
+        "events_by_year": {
+          "2021": 16,
+          "2022": 95,
+          "2023": 103,
+          "2024": 62
+        }
+      },
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S1:NEW_YORK:FLOW_DEPTH_ALIGNMENT_ONSET"
+    },
+    {
+      "assigned_event_count": 308,
+      "assigned_event_ids_hash": "11377bcc064dfe2d98c2409f2c2d49f300ab8b42d3bc30254da4d837801c432e",
+      "bootstrap_seed_uint64": 5686093786713815857,
+      "context": null,
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "gc_bootstrap_seed_uint64": 14323320722163150696,
+      "randomization_seed_uint64": 4648987248841871866,
+      "secondary_randomization_seeds": {
+        "30": 16573110824059259658,
+        "5": 372935868559488709,
+        "60": 8783658350032355321
+      },
+      "session": "NEW_YORK",
+      "stage": 1,
+      "support_counts": {
+        "bearish_distinct_dates": 154,
+        "bearish_event_instances": 154,
+        "bullish_distinct_dates": 154,
+        "bullish_event_instances": 154,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 181,
+        "event_instances": 308,
+        "events_by_year": {
+          "2021": 19,
+          "2022": 93,
+          "2023": 102,
+          "2024": 94
+        }
+      },
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S1:NEW_YORK:FRAGILITY_FLOW_ONSET"
+    },
+    {
+      "assigned_event_count": 545,
+      "assigned_event_ids_hash": "35e3ec2b745f68724d7222745c0a2d9668ae4a9749d520b329a9be2f3c782f36",
+      "bootstrap_seed_uint64": 11768382862730144946,
+      "context": null,
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 4302701214853016252,
+      "randomization_seed_uint64": 2413216077217918854,
+      "secondary_randomization_seeds": {
+        "30": 6592521583540216221,
+        "5": 3584057519779708639,
+        "60": 7322620572392551496
+      },
+      "session": "NEW_YORK",
+      "stage": 1,
+      "support_counts": {
+        "bearish_distinct_dates": 157,
+        "bearish_event_instances": 246,
+        "bullish_distinct_dates": 163,
+        "bullish_event_instances": 299,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 186,
+        "event_instances": 545,
+        "events_by_year": {
+          "2021": 29,
+          "2022": 175,
+          "2023": 171,
+          "2024": 170
+        }
+      },
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S1:NEW_YORK:LEVEL_BREAK_ACCEPT"
+    },
+    {
+      "assigned_event_count": 498,
+      "assigned_event_ids_hash": "4e1a0c4178c236cab14c330ea8ec33876a2edf4cd5674aea360985c723236f68",
+      "bootstrap_seed_uint64": 9083828030649935585,
+      "context": null,
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 6066376367141357445,
+      "randomization_seed_uint64": 627080289893557746,
+      "secondary_randomization_seeds": {
+        "30": 2935353731688385810,
+        "5": 12303726593090827476,
+        "60": 16209679127172241262
+      },
+      "session": "NEW_YORK",
+      "stage": 1,
+      "support_counts": {
+        "bearish_distinct_dates": 155,
+        "bearish_event_instances": 265,
+        "bullish_distinct_dates": 159,
+        "bullish_event_instances": 233,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 185,
+        "event_instances": 498,
+        "events_by_year": {
+          "2021": 27,
+          "2022": 163,
+          "2023": 157,
+          "2024": 151
+        }
+      },
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S1:NEW_YORK:LEVEL_FAILED_ACCEPTANCE"
+    },
+    {
+      "assigned_event_count": 529,
+      "assigned_event_ids_hash": "4423d46859953caa74d11d368b44e21367a759dd34009d53dd36d1d09ff88ee6",
+      "bootstrap_seed_uint64": 6261183846034513594,
+      "context": null,
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 12912057335190881311,
+      "randomization_seed_uint64": 6644269913685525732,
+      "secondary_randomization_seeds": {
+        "30": 15809223868548567696,
+        "5": 11138720448119114774,
+        "60": 7889657245067710033
+      },
+      "session": "NEW_YORK",
+      "stage": 1,
+      "support_counts": {
+        "bearish_distinct_dates": 166,
+        "bearish_event_instances": 281,
+        "bullish_distinct_dates": 166,
+        "bullish_event_instances": 248,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 185,
+        "event_instances": 529,
+        "events_by_year": {
+          "2021": 28,
+          "2022": 172,
+          "2023": 164,
+          "2024": 165
+        }
+      },
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S1:NEW_YORK:LEVEL_SWEEP_RECLAIM"
+    },
+    {
+      "bootstrap_seed_uint64": 13032156143201941067,
+      "comparison_counts": {
+        "bearish_distinct_dates": 155,
+        "bearish_event_instances": 155,
+        "bullish_distinct_dates": 149,
+        "bullish_event_instances": 149,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 180,
+        "event_instances": 304,
+        "events_by_year": {
+          "2021": 14,
+          "2022": 87,
+          "2023": 101,
+          "2024": 102
+        }
+      },
+      "comparison_event_count": 304,
+      "comparison_event_ids_hash": "234cb22d06ac32040b9c8fbc66db16b378b6951035262fe6d133f30cb3e2b938",
+      "condition_counts": {
+        "bearish_distinct_dates": 24,
+        "bearish_event_instances": 24,
+        "bullish_distinct_dates": 29,
+        "bullish_event_instances": 29,
+        "distinct_month_week_blocks": 26,
+        "distinct_session_dates": 53,
+        "event_instances": 53,
+        "events_by_year": {
+          "2021": 2,
+          "2022": 25,
+          "2023": 15,
+          "2024": 11
+        }
+      },
+      "condition_event_count": 53,
+      "condition_event_ids_hash": "f4dbc56a09d7c8a23a47d393daca42c1b56724d32b80d8f18ebe641a52e89a00",
+      "context": "MACRO_ENGINE_ALIGNMENT",
+      "event_family": "ABSORPTION_ONSET",
+      "gc_bootstrap_seed_uint64": 13474028137302880884,
+      "randomization_seed_uint64": 5468733458668600271,
+      "secondary_randomization_seeds": {
+        "30": 1667336350177592547,
+        "5": 14466016937828937144,
+        "60": 2888509137290635895
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:LONDON:ABSORPTION_ONSET:MACRO_ENGINE_ALIGNMENT",
+      "unknown_context_events": 12,
+      "unknown_event_count": 12,
+      "unknown_event_ids_hash": "e3a38ee6096bd30346c22802ae6711519c070fb8b641d04cf45eac2e6fb06018"
+    },
+    {
+      "bootstrap_seed_uint64": 2658221000825213803,
+      "comparison_counts": {
+        "bearish_distinct_dates": 122,
+        "bearish_event_instances": 122,
+        "bullish_distinct_dates": 130,
+        "bullish_event_instances": 130,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 179,
+        "event_instances": 252,
+        "events_by_year": {
+          "2021": 9,
+          "2022": 81,
+          "2023": 80,
+          "2024": 82
+        }
+      },
+      "comparison_event_count": 252,
+      "comparison_event_ids_hash": "4290c46a2d74986f15d9791a15f46f1a9bfdc66223ea9ebe06e9bdb24c826e15",
+      "condition_counts": {
+        "bearish_distinct_dates": 57,
+        "bearish_event_instances": 57,
+        "bullish_distinct_dates": 48,
+        "bullish_event_instances": 48,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 105,
+        "event_instances": 105,
+        "events_by_year": {
+          "2021": 7,
+          "2022": 31,
+          "2023": 36,
+          "2024": 31
+        }
+      },
+      "condition_event_count": 105,
+      "condition_event_ids_hash": "5ebff8a6d93a751498e76b4237986816a2304561559504a7b12edfb90c54a416",
+      "context": "REAL_YIELD_USD_ALIGNMENT",
+      "event_family": "ABSORPTION_ONSET",
+      "gc_bootstrap_seed_uint64": 281235891659244117,
+      "randomization_seed_uint64": 8964979970326758022,
+      "secondary_randomization_seeds": {
+        "30": 2550581072534036176,
+        "5": 9256388487427893916,
+        "60": 18414299052855549612
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:LONDON:ABSORPTION_ONSET:REAL_YIELD_USD_ALIGNMENT",
+      "unknown_context_events": 12,
+      "unknown_event_count": 12,
+      "unknown_event_ids_hash": "e3a38ee6096bd30346c22802ae6711519c070fb8b641d04cf45eac2e6fb06018"
+    },
+    {
+      "bootstrap_seed_uint64": 4238122771332848444,
+      "comparison_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "comparison_event_count": 0,
+      "comparison_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "condition_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "condition_event_count": 0,
+      "condition_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "context": "RECENT_RELEASE_ALIGNMENT",
+      "event_family": "ABSORPTION_ONSET",
+      "gc_bootstrap_seed_uint64": 10736761500647283427,
+      "randomization_seed_uint64": 8882343563513219874,
+      "secondary_randomization_seeds": {
+        "30": 14293626229193641383,
+        "5": 182135951700379169,
+        "60": 4356352668498903107
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:ABSORPTION_ONSET:RECENT_RELEASE_ALIGNMENT",
+      "unknown_context_events": 369,
+      "unknown_event_count": 369,
+      "unknown_event_ids_hash": "67e3c24f032243338a6269acc566b0ed363e3cbfa7df5f0a06fbdfdf7e6705ac"
+    },
+    {
+      "bootstrap_seed_uint64": 8080023486333667759,
+      "comparison_counts": {
+        "bearish_distinct_dates": 160,
+        "bearish_event_instances": 160,
+        "bullish_distinct_dates": 167,
+        "bullish_event_instances": 167,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 179,
+        "event_instances": 327,
+        "events_by_year": {
+          "2021": 16,
+          "2022": 100,
+          "2023": 104,
+          "2024": 107
+        }
+      },
+      "comparison_event_count": 327,
+      "comparison_event_ids_hash": "e6d3731b17a44c22e73ac1d5ee0f6ec90ad6bea9be14cc9b6f5eb14a59b7cbcf",
+      "condition_counts": {
+        "bearish_distinct_dates": 19,
+        "bearish_event_instances": 19,
+        "bullish_distinct_dates": 11,
+        "bullish_event_instances": 11,
+        "distinct_month_week_blocks": 23,
+        "distinct_session_dates": 30,
+        "event_instances": 30,
+        "events_by_year": {
+          "2022": 12,
+          "2023": 12,
+          "2024": 6
+        }
+      },
+      "condition_event_count": 30,
+      "condition_event_ids_hash": "84121af0527116d57c5a457a56303d9192396cd91a10833678421e3c49a8b34e",
+      "context": "STRUCTURE_15M_1H_ALIGNMENT",
+      "event_family": "ABSORPTION_ONSET",
+      "gc_bootstrap_seed_uint64": 6449401047018026677,
+      "randomization_seed_uint64": 9032439625725986088,
+      "secondary_randomization_seeds": {
+        "30": 3544221964722060069,
+        "5": 4722746187367040804,
+        "60": 8929641491033647482
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:ABSORPTION_ONSET:STRUCTURE_15M_1H_ALIGNMENT",
+      "unknown_context_events": 12,
+      "unknown_event_count": 12,
+      "unknown_event_ids_hash": "e3a38ee6096bd30346c22802ae6711519c070fb8b641d04cf45eac2e6fb06018"
+    },
+    {
+      "bootstrap_seed_uint64": 14282477997754724716,
+      "comparison_counts": {
+        "bearish_distinct_dates": 117,
+        "bearish_event_instances": 117,
+        "bullish_distinct_dates": 133,
+        "bullish_event_instances": 133,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 166,
+        "event_instances": 250,
+        "events_by_year": {
+          "2021": 12,
+          "2022": 81,
+          "2023": 91,
+          "2024": 66
+        }
+      },
+      "comparison_event_count": 250,
+      "comparison_event_ids_hash": "c63b41ae54968acf39ac2a45694a63b6a00fda1c7c3c951b19b11722624838a4",
+      "condition_counts": {
+        "bearish_distinct_dates": 20,
+        "bearish_event_instances": 20,
+        "bullish_distinct_dates": 23,
+        "bullish_event_instances": 23,
+        "distinct_month_week_blocks": 23,
+        "distinct_session_dates": 43,
+        "event_instances": 43,
+        "events_by_year": {
+          "2021": 2,
+          "2022": 22,
+          "2023": 10,
+          "2024": 9
+        }
+      },
+      "condition_event_count": 43,
+      "condition_event_ids_hash": "5b839ef2c05aa6391b7ed8d2be7399e7d1afff05154ad1757287f10af811eefb",
+      "context": "MACRO_ENGINE_ALIGNMENT",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "gc_bootstrap_seed_uint64": 1699717140242694195,
+      "randomization_seed_uint64": 5045982964259203985,
+      "secondary_randomization_seeds": {
+        "30": 16007610292248130157,
+        "5": 11615574196748265268,
+        "60": 13642527834734444471
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:FLOW_DEPTH_ALIGNMENT_ONSET:MACRO_ENGINE_ALIGNMENT",
+      "unknown_context_events": 11,
+      "unknown_event_count": 11,
+      "unknown_event_ids_hash": "a574791c088190f83279f6595fb9f52b40ab8c5c1b3bc7767440ffcd3d328d66"
+    },
+    {
+      "bootstrap_seed_uint64": 2521803305995152589,
+      "comparison_counts": {
+        "bearish_distinct_dates": 92,
+        "bearish_event_instances": 92,
+        "bullish_distinct_dates": 115,
+        "bullish_event_instances": 115,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 155,
+        "event_instances": 207,
+        "events_by_year": {
+          "2021": 7,
+          "2022": 75,
+          "2023": 71,
+          "2024": 54
+        }
+      },
+      "comparison_event_count": 207,
+      "comparison_event_ids_hash": "c1b2d6c52a93e230c5f8f59151300e4f8fd3f0af6a8f803e4535f8158677e899",
+      "condition_counts": {
+        "bearish_distinct_dates": 45,
+        "bearish_event_instances": 45,
+        "bullish_distinct_dates": 41,
+        "bullish_event_instances": 41,
+        "distinct_month_week_blocks": 36,
+        "distinct_session_dates": 86,
+        "event_instances": 86,
+        "events_by_year": {
+          "2021": 7,
+          "2022": 28,
+          "2023": 30,
+          "2024": 21
+        }
+      },
+      "condition_event_count": 86,
+      "condition_event_ids_hash": "4edf6770267ce3799a6396aa1f890846f858844d6f1f30b04b1bc1db78d36d1a",
+      "context": "REAL_YIELD_USD_ALIGNMENT",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "gc_bootstrap_seed_uint64": 1624291876981111266,
+      "randomization_seed_uint64": 16257405940913436334,
+      "secondary_randomization_seeds": {
+        "30": 17536681192167157588,
+        "5": 6587409172235591975,
+        "60": 11290818986032992255
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:LONDON:FLOW_DEPTH_ALIGNMENT_ONSET:REAL_YIELD_USD_ALIGNMENT",
+      "unknown_context_events": 11,
+      "unknown_event_count": 11,
+      "unknown_event_ids_hash": "a574791c088190f83279f6595fb9f52b40ab8c5c1b3bc7767440ffcd3d328d66"
+    },
+    {
+      "bootstrap_seed_uint64": 9318857946256657227,
+      "comparison_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "comparison_event_count": 0,
+      "comparison_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "condition_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "condition_event_count": 0,
+      "condition_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "context": "RECENT_RELEASE_ALIGNMENT",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "gc_bootstrap_seed_uint64": 16391500752371972384,
+      "randomization_seed_uint64": 12349714611025825674,
+      "secondary_randomization_seeds": {
+        "30": 8589157656298153508,
+        "5": 13969226243216810527,
+        "60": 10484544716315164702
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:FLOW_DEPTH_ALIGNMENT_ONSET:RECENT_RELEASE_ALIGNMENT",
+      "unknown_context_events": 304,
+      "unknown_event_count": 304,
+      "unknown_event_ids_hash": "e7c51dbe83792e0ab8930fa2cfd81d419ec9315c83d0bc791f87a7338cb7019e"
+    },
+    {
+      "bootstrap_seed_uint64": 11980162688655016579,
+      "comparison_counts": {
+        "bearish_distinct_dates": 122,
+        "bearish_event_instances": 122,
+        "bullish_distinct_dates": 146,
+        "bullish_event_instances": 146,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 165,
+        "event_instances": 268,
+        "events_by_year": {
+          "2021": 14,
+          "2022": 93,
+          "2023": 90,
+          "2024": 71
+        }
+      },
+      "comparison_event_count": 268,
+      "comparison_event_ids_hash": "a4574f149b4ef746f5903b585a1477aa7fdaacb3f36df1fc9af3fe0c1efe3d49",
+      "condition_counts": {
+        "bearish_distinct_dates": 15,
+        "bearish_event_instances": 15,
+        "bullish_distinct_dates": 10,
+        "bullish_event_instances": 10,
+        "distinct_month_week_blocks": 22,
+        "distinct_session_dates": 25,
+        "event_instances": 25,
+        "events_by_year": {
+          "2022": 10,
+          "2023": 11,
+          "2024": 4
+        }
+      },
+      "condition_event_count": 25,
+      "condition_event_ids_hash": "15882f880739301c73a0a562e486563edf48e0a09b01197a82f9a93805072b79",
+      "context": "STRUCTURE_15M_1H_ALIGNMENT",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "gc_bootstrap_seed_uint64": 5261672829186583981,
+      "randomization_seed_uint64": 11082858913717004739,
+      "secondary_randomization_seeds": {
+        "30": 1333030206161631584,
+        "5": 11433891532072462755,
+        "60": 1127254866268965246
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:FLOW_DEPTH_ALIGNMENT_ONSET:STRUCTURE_15M_1H_ALIGNMENT",
+      "unknown_context_events": 11,
+      "unknown_event_count": 11,
+      "unknown_event_ids_hash": "a574791c088190f83279f6595fb9f52b40ab8c5c1b3bc7767440ffcd3d328d66"
+    },
+    {
+      "bootstrap_seed_uint64": 13658104388061627763,
+      "comparison_counts": {
+        "bearish_distinct_dates": 145,
+        "bearish_event_instances": 145,
+        "bullish_distinct_dates": 139,
+        "bullish_event_instances": 139,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 174,
+        "event_instances": 284,
+        "events_by_year": {
+          "2021": 14,
+          "2022": 82,
+          "2023": 97,
+          "2024": 91
+        }
+      },
+      "comparison_event_count": 284,
+      "comparison_event_ids_hash": "7455a36058556fcab0f478ffbc7ca9872070ab4fa60b12f877325e1d68cc40e5",
+      "condition_counts": {
+        "bearish_distinct_dates": 21,
+        "bearish_event_instances": 21,
+        "bullish_distinct_dates": 26,
+        "bullish_event_instances": 26,
+        "distinct_month_week_blocks": 25,
+        "distinct_session_dates": 47,
+        "event_instances": 47,
+        "events_by_year": {
+          "2021": 2,
+          "2022": 22,
+          "2023": 14,
+          "2024": 9
+        }
+      },
+      "condition_event_count": 47,
+      "condition_event_ids_hash": "7af1c041e9761af1e039cc7db1e862ef01127bdccac64bbb157a82508c7a0b31",
+      "context": "MACRO_ENGINE_ALIGNMENT",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "gc_bootstrap_seed_uint64": 9970865970748157800,
+      "randomization_seed_uint64": 16223970992322819939,
+      "secondary_randomization_seeds": {
+        "30": 13732222664217178781,
+        "5": 2191786184015232609,
+        "60": 16428907833691055934
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:FRAGILITY_FLOW_ONSET:MACRO_ENGINE_ALIGNMENT",
+      "unknown_context_events": 12,
+      "unknown_event_count": 12,
+      "unknown_event_ids_hash": "a79a6e109bf1630bd53b42f6a3258bf162455f1da0ece6999068c0429e899887"
+    },
+    {
+      "bootstrap_seed_uint64": 515575757049431793,
+      "comparison_counts": {
+        "bearish_distinct_dates": 114,
+        "bearish_event_instances": 114,
+        "bullish_distinct_dates": 120,
+        "bullish_event_instances": 120,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 170,
+        "event_instances": 234,
+        "events_by_year": {
+          "2021": 9,
+          "2022": 75,
+          "2023": 78,
+          "2024": 72
+        }
+      },
+      "comparison_event_count": 234,
+      "comparison_event_ids_hash": "168f9019196360c403e468f3eb3d4b633d69e0d3703a7b79547c367b4a33ade2",
+      "condition_counts": {
+        "bearish_distinct_dates": 52,
+        "bearish_event_instances": 52,
+        "bullish_distinct_dates": 45,
+        "bullish_event_instances": 45,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 97,
+        "event_instances": 97,
+        "events_by_year": {
+          "2021": 7,
+          "2022": 29,
+          "2023": 33,
+          "2024": 28
+        }
+      },
+      "condition_event_count": 97,
+      "condition_event_ids_hash": "d2a365f87a44923695de80017e660f0beb2653a65dbe915c87566c42fa008ea1",
+      "context": "REAL_YIELD_USD_ALIGNMENT",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "gc_bootstrap_seed_uint64": 1680900316374314794,
+      "randomization_seed_uint64": 1078068287865922890,
+      "secondary_randomization_seeds": {
+        "30": 1260275364691336590,
+        "5": 12193947943901174841,
+        "60": 16425112791902053313
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:LONDON:FRAGILITY_FLOW_ONSET:REAL_YIELD_USD_ALIGNMENT",
+      "unknown_context_events": 12,
+      "unknown_event_count": 12,
+      "unknown_event_ids_hash": "a79a6e109bf1630bd53b42f6a3258bf162455f1da0ece6999068c0429e899887"
+    },
+    {
+      "bootstrap_seed_uint64": 10360191439333789192,
+      "comparison_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "comparison_event_count": 0,
+      "comparison_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "condition_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "condition_event_count": 0,
+      "condition_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "context": "RECENT_RELEASE_ALIGNMENT",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "gc_bootstrap_seed_uint64": 7255353043348792964,
+      "randomization_seed_uint64": 15047738641236729337,
+      "secondary_randomization_seeds": {
+        "30": 7857841546280253439,
+        "5": 465236160145932535,
+        "60": 11876609427116544192
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:FRAGILITY_FLOW_ONSET:RECENT_RELEASE_ALIGNMENT",
+      "unknown_context_events": 343,
+      "unknown_event_count": 343,
+      "unknown_event_ids_hash": "240c3649af0e99bf7489e8c0df8569fa472c2ca065155c8e1734b1893260adb9"
+    },
+    {
+      "bootstrap_seed_uint64": 2228930082187884759,
+      "comparison_counts": {
+        "bearish_distinct_dates": 149,
+        "bearish_event_instances": 149,
+        "bullish_distinct_dates": 155,
+        "bullish_event_instances": 155,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 178,
+        "event_instances": 304,
+        "events_by_year": {
+          "2021": 16,
+          "2022": 94,
+          "2023": 99,
+          "2024": 95
+        }
+      },
+      "comparison_event_count": 304,
+      "comparison_event_ids_hash": "6682a611ba957e70c1551ac8704f23254d209feb0815ef5eeab223d5cb51df2b",
+      "condition_counts": {
+        "bearish_distinct_dates": 17,
+        "bearish_event_instances": 17,
+        "bullish_distinct_dates": 10,
+        "bullish_event_instances": 10,
+        "distinct_month_week_blocks": 21,
+        "distinct_session_dates": 27,
+        "event_instances": 27,
+        "events_by_year": {
+          "2022": 10,
+          "2023": 12,
+          "2024": 5
+        }
+      },
+      "condition_event_count": 27,
+      "condition_event_ids_hash": "baf65ac47c5c2a75e648e2e2341d28718a985d1d1f7824994ee781b484142289",
+      "context": "STRUCTURE_15M_1H_ALIGNMENT",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "gc_bootstrap_seed_uint64": 6820445499804370062,
+      "randomization_seed_uint64": 1104691768691254756,
+      "secondary_randomization_seeds": {
+        "30": 17622134260392900513,
+        "5": 3127894080598723383,
+        "60": 10467668920518669544
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:FRAGILITY_FLOW_ONSET:STRUCTURE_15M_1H_ALIGNMENT",
+      "unknown_context_events": 12,
+      "unknown_event_count": 12,
+      "unknown_event_ids_hash": "a79a6e109bf1630bd53b42f6a3258bf162455f1da0ece6999068c0429e899887"
+    },
+    {
+      "bootstrap_seed_uint64": 17400863735989361729,
+      "comparison_counts": {
+        "bearish_distinct_dates": 66,
+        "bearish_event_instances": 71,
+        "bullish_distinct_dates": 62,
+        "bullish_event_instances": 73,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 115,
+        "event_instances": 144,
+        "events_by_year": {
+          "2021": 6,
+          "2022": 43,
+          "2023": 50,
+          "2024": 45
+        }
+      },
+      "comparison_event_count": 144,
+      "comparison_event_ids_hash": "042705fc1e664c6c6b7faf7ce10a7546bf71ac13580b9c779bb980e9b245c9dc",
+      "condition_counts": {
+        "bearish_distinct_dates": 13,
+        "bearish_event_instances": 14,
+        "bullish_distinct_dates": 29,
+        "bullish_event_instances": 31,
+        "distinct_month_week_blocks": 24,
+        "distinct_session_dates": 41,
+        "event_instances": 45,
+        "events_by_year": {
+          "2021": 3,
+          "2022": 12,
+          "2023": 23,
+          "2024": 7
+        }
+      },
+      "condition_event_count": 45,
+      "condition_event_ids_hash": "6b413c0386599d71c35a7ab52c46446c7625077b56aabbdaaa24dae59193402c",
+      "context": "FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 10585985919385002482,
+      "randomization_seed_uint64": 11705941452134262802,
+      "secondary_randomization_seeds": {
+        "30": 10426553219380134684,
+        "5": 13888162149655597854,
+        "60": 1501359843723100625
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:LEVEL_BREAK_ACCEPT:FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+      "unknown_context_events": 318,
+      "unknown_event_count": 318,
+      "unknown_event_ids_hash": "5799a8fdc5c354ecd57048aa0b5443a033c27308ae631c830733d233cdce3b61"
+    },
+    {
+      "bootstrap_seed_uint64": 4860992581355290528,
+      "comparison_counts": {
+        "bearish_distinct_dates": 122,
+        "bearish_event_instances": 169,
+        "bullish_distinct_dates": 134,
+        "bullish_event_instances": 181,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 180,
+        "event_instances": 350,
+        "events_by_year": {
+          "2021": 14,
+          "2022": 121,
+          "2023": 105,
+          "2024": 110
+        }
+      },
+      "comparison_event_count": 350,
+      "comparison_event_ids_hash": "25f3f1248d55a872472a9ad7dd09761c2add17c40dd5407880aa29ac0101f832",
+      "condition_counts": {
+        "bearish_distinct_dates": 59,
+        "bearish_event_instances": 67,
+        "bullish_distinct_dates": 80,
+        "bullish_event_instances": 90,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 118,
+        "event_instances": 157,
+        "events_by_year": {
+          "2021": 10,
+          "2022": 47,
+          "2023": 57,
+          "2024": 43
+        }
+      },
+      "condition_event_count": 157,
+      "condition_event_ids_hash": "1b7db3a98548a4545bec515cd247a0e68f16be61c1c7487aa9a7a4460b923103",
+      "context": "LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 509749678670088576,
+      "randomization_seed_uint64": 9594905602075952250,
+      "secondary_randomization_seeds": {
+        "30": 7148057246074972765,
+        "5": 319645952405875566,
+        "60": 1167424742184364296
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:LONDON:LEVEL_BREAK_ACCEPT:LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY",
+      "unknown_context_events": 0,
+      "unknown_event_count": 0,
+      "unknown_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "bootstrap_seed_uint64": 2606961588916256748,
+      "comparison_counts": {
+        "bearish_distinct_dates": 125,
+        "bearish_event_instances": 192,
+        "bullish_distinct_dates": 129,
+        "bullish_event_instances": 217,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 170,
+        "event_instances": 409,
+        "events_by_year": {
+          "2021": 19,
+          "2022": 120,
+          "2023": 132,
+          "2024": 138
+        }
+      },
+      "comparison_event_count": 409,
+      "comparison_event_ids_hash": "e0265c4a3f3307ee6e32e92a65d30cf9e4826fd03a9a4f9bee2b2635596a6160",
+      "condition_counts": {
+        "bearish_distinct_dates": 21,
+        "bearish_event_instances": 39,
+        "bullish_distinct_dates": 28,
+        "bullish_event_instances": 49,
+        "distinct_month_week_blocks": 22,
+        "distinct_session_dates": 49,
+        "event_instances": 88,
+        "events_by_year": {
+          "2021": 1,
+          "2022": 44,
+          "2023": 29,
+          "2024": 14
+        }
+      },
+      "condition_event_count": 88,
+      "condition_event_ids_hash": "b4f76e3594a4cd006cf8111f6a6b193b6fa985081ad71192654a4b84061c0143",
+      "context": "MACRO_ENGINE_ALIGNMENT",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 32902112078757147,
+      "randomization_seed_uint64": 5832196729053753629,
+      "secondary_randomization_seeds": {
+        "30": 4982432282634182051,
+        "5": 7596495269168236791,
+        "60": 6276285909438084465
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:LONDON:LEVEL_BREAK_ACCEPT:MACRO_ENGINE_ALIGNMENT",
+      "unknown_context_events": 10,
+      "unknown_event_count": 10,
+      "unknown_event_ids_hash": "3357fa32a8bacba0ff5fafde23c2e76fa05f4cab5ba6b29cc0fa89ed06f9d70d"
+    },
+    {
+      "bootstrap_seed_uint64": 4429388981436178959,
+      "comparison_counts": {
+        "bearish_distinct_dates": 96,
+        "bearish_event_instances": 152,
+        "bullish_distinct_dates": 113,
+        "bullish_event_instances": 187,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 161,
+        "event_instances": 339,
+        "events_by_year": {
+          "2021": 12,
+          "2022": 116,
+          "2023": 107,
+          "2024": 104
+        }
+      },
+      "comparison_event_count": 339,
+      "comparison_event_ids_hash": "d631c7491ef9132d00692b2deb09df4040ba43f3683ea0b34cb187ca259da5fa",
+      "condition_counts": {
+        "bearish_distinct_dates": 50,
+        "bearish_event_instances": 79,
+        "bullish_distinct_dates": 44,
+        "bullish_event_instances": 79,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 94,
+        "event_instances": 158,
+        "events_by_year": {
+          "2021": 8,
+          "2022": 48,
+          "2023": 54,
+          "2024": 48
+        }
+      },
+      "condition_event_count": 158,
+      "condition_event_ids_hash": "46f5b6670d5592a7cb5fbac708a326bbdf304594e9471e5102c18f54869971db",
+      "context": "REAL_YIELD_USD_ALIGNMENT",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 12241663637082116737,
+      "randomization_seed_uint64": 7628239147071428806,
+      "secondary_randomization_seeds": {
+        "30": 1761863019206080048,
+        "5": 13138869166025418558,
+        "60": 40889481845104627
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:LONDON:LEVEL_BREAK_ACCEPT:REAL_YIELD_USD_ALIGNMENT",
+      "unknown_context_events": 10,
+      "unknown_event_count": 10,
+      "unknown_event_ids_hash": "3357fa32a8bacba0ff5fafde23c2e76fa05f4cab5ba6b29cc0fa89ed06f9d70d"
+    },
+    {
+      "bootstrap_seed_uint64": 17972530466623096707,
+      "comparison_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "comparison_event_count": 0,
+      "comparison_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "condition_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "condition_event_count": 0,
+      "condition_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "context": "RECENT_RELEASE_ALIGNMENT",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 1265041550982031525,
+      "randomization_seed_uint64": 17584379805431946855,
+      "secondary_randomization_seeds": {
+        "30": 13231295734245733771,
+        "5": 871516316837969091,
+        "60": 8976688251492288434
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:LEVEL_BREAK_ACCEPT:RECENT_RELEASE_ALIGNMENT",
+      "unknown_context_events": 507,
+      "unknown_event_count": 507,
+      "unknown_event_ids_hash": "dd95a2e9ef5db0601cecd2b6b947f467821defe498ee5f36ec6d2e6266a19285"
+    },
+    {
+      "bootstrap_seed_uint64": 1974228341876939539,
+      "comparison_counts": {
+        "bearish_distinct_dates": 130,
+        "bearish_event_instances": 205,
+        "bullish_distinct_dates": 146,
+        "bullish_event_instances": 242,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 173,
+        "event_instances": 447,
+        "events_by_year": {
+          "2021": 20,
+          "2022": 142,
+          "2023": 143,
+          "2024": 142
+        }
+      },
+      "comparison_event_count": 447,
+      "comparison_event_ids_hash": "f4ef68813795f0f5b4c1248fc345acaf612c8048b95294af3ac20d4d70f9f01d",
+      "condition_counts": {
+        "bearish_distinct_dates": 16,
+        "bearish_event_instances": 26,
+        "bullish_distinct_dates": 11,
+        "bullish_event_instances": 24,
+        "distinct_month_week_blocks": 22,
+        "distinct_session_dates": 27,
+        "event_instances": 50,
+        "events_by_year": {
+          "2022": 22,
+          "2023": 18,
+          "2024": 10
+        }
+      },
+      "condition_event_count": 50,
+      "condition_event_ids_hash": "1e92cd973102d0c0615c232a76a8cdbaafe0768a95e4ff95b1e1f30c41c624d7",
+      "context": "STRUCTURE_15M_1H_ALIGNMENT",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 7596677911949894367,
+      "randomization_seed_uint64": 15212509814198097585,
+      "secondary_randomization_seeds": {
+        "30": 13165410807815258831,
+        "5": 13600454414905595945,
+        "60": 16244082078560433185
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:LEVEL_BREAK_ACCEPT:STRUCTURE_15M_1H_ALIGNMENT",
+      "unknown_context_events": 10,
+      "unknown_event_count": 10,
+      "unknown_event_ids_hash": "3357fa32a8bacba0ff5fafde23c2e76fa05f4cab5ba6b29cc0fa89ed06f9d70d"
+    },
+    {
+      "bootstrap_seed_uint64": 363273147517135630,
+      "comparison_counts": {
+        "bearish_distinct_dates": 61,
+        "bearish_event_instances": 67,
+        "bullish_distinct_dates": 52,
+        "bullish_event_instances": 57,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 96,
+        "event_instances": 124,
+        "events_by_year": {
+          "2021": 7,
+          "2022": 39,
+          "2023": 42,
+          "2024": 36
+        }
+      },
+      "comparison_event_count": 124,
+      "comparison_event_ids_hash": "bbd5b134523751a8fc68a1cdfde777611a8b286e3d9f23907c0e537f4dc04183",
+      "condition_counts": {
+        "bearish_distinct_dates": 18,
+        "bearish_event_instances": 19,
+        "bullish_distinct_dates": 18,
+        "bullish_event_instances": 18,
+        "distinct_month_week_blocks": 21,
+        "distinct_session_dates": 33,
+        "event_instances": 37,
+        "events_by_year": {
+          "2022": 15,
+          "2023": 13,
+          "2024": 9
+        }
+      },
+      "condition_event_count": 37,
+      "condition_event_ids_hash": "d216cbb126533f3e8f7595854f5351098d7d3451033a68dcf5a3aa58058a8c5e",
+      "context": "FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 7363368368534091536,
+      "randomization_seed_uint64": 7328366336451559997,
+      "secondary_randomization_seeds": {
+        "30": 5294787307663571122,
+        "5": 9171990774922435085,
+        "60": 7616986396078091300
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:LEVEL_FAILED_ACCEPTANCE:FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+      "unknown_context_events": 261,
+      "unknown_event_count": 261,
+      "unknown_event_ids_hash": "f00d05c33012793938d0a6e54e378cf0c7f92ee55e3b2f8dc2b7e05f208969a1"
+    },
+    {
+      "bootstrap_seed_uint64": 16094128438689671317,
+      "comparison_counts": {
+        "bearish_distinct_dates": 126,
+        "bearish_event_instances": 160,
+        "bullish_distinct_dates": 119,
+        "bullish_event_instances": 138,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 165,
+        "event_instances": 298,
+        "events_by_year": {
+          "2021": 16,
+          "2022": 93,
+          "2023": 90,
+          "2024": 99
+        }
+      },
+      "comparison_event_count": 298,
+      "comparison_event_ids_hash": "ea5e474ab685085ddcc850db6e6312b887dbf71eab05ae7027cd69e644d3cae4",
+      "condition_counts": {
+        "bearish_distinct_dates": 58,
+        "bearish_event_instances": 63,
+        "bullish_distinct_dates": 54,
+        "bullish_event_instances": 61,
+        "distinct_month_week_blocks": 36,
+        "distinct_session_dates": 100,
+        "event_instances": 124,
+        "events_by_year": {
+          "2021": 5,
+          "2022": 43,
+          "2023": 39,
+          "2024": 37
+        }
+      },
+      "condition_event_count": 124,
+      "condition_event_ids_hash": "1705c10ff7d77ac34340e666bf0e544a8a19b140879b8ea9af3c4e5b96d633cf",
+      "context": "LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 9703771363901690685,
+      "randomization_seed_uint64": 4557295956466143203,
+      "secondary_randomization_seeds": {
+        "30": 1573917995055958420,
+        "5": 15499507552501820734,
+        "60": 16355211401905317840
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:LONDON:LEVEL_FAILED_ACCEPTANCE:LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY",
+      "unknown_context_events": 0,
+      "unknown_event_count": 0,
+      "unknown_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "bootstrap_seed_uint64": 5409928872787138729,
+      "comparison_counts": {
+        "bearish_distinct_dates": 133,
+        "bearish_event_instances": 188,
+        "bullish_distinct_dates": 121,
+        "bullish_event_instances": 161,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 166,
+        "event_instances": 349,
+        "events_by_year": {
+          "2021": 14,
+          "2022": 101,
+          "2023": 113,
+          "2024": 121
+        }
+      },
+      "comparison_event_count": 349,
+      "comparison_event_ids_hash": "cd68fbb558734f83acb956ba057f02f73bfd8183351bd0d0ed169c263e656235",
+      "condition_counts": {
+        "bearish_distinct_dates": 20,
+        "bearish_event_instances": 31,
+        "bullish_distinct_dates": 24,
+        "bullish_event_instances": 33,
+        "distinct_month_week_blocks": 24,
+        "distinct_session_dates": 44,
+        "event_instances": 64,
+        "events_by_year": {
+          "2021": 3,
+          "2022": 31,
+          "2023": 16,
+          "2024": 14
+        }
+      },
+      "condition_event_count": 64,
+      "condition_event_ids_hash": "c10f17e19989fdc97eb0b44a3f4eb656fcf7f7ac0764b34eafa44cf23351bf51",
+      "context": "MACRO_ENGINE_ALIGNMENT",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 17467976089752513735,
+      "randomization_seed_uint64": 1768027883903525622,
+      "secondary_randomization_seeds": {
+        "30": 17528098959853394918,
+        "5": 2198469552538182123,
+        "60": 1557459475607215247
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:LONDON:LEVEL_FAILED_ACCEPTANCE:MACRO_ENGINE_ALIGNMENT",
+      "unknown_context_events": 9,
+      "unknown_event_count": 9,
+      "unknown_event_ids_hash": "c8f89b8952426b609a2f2d4ee54d179a78eb3e57bbfe057ded82c80e1415ce67"
+    },
+    {
+      "bootstrap_seed_uint64": 17526482090321719773,
+      "comparison_counts": {
+        "bearish_distinct_dates": 109,
+        "bearish_event_instances": 156,
+        "bullish_distinct_dates": 106,
+        "bullish_event_instances": 137,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 166,
+        "event_instances": 293,
+        "events_by_year": {
+          "2021": 9,
+          "2022": 93,
+          "2023": 87,
+          "2024": 104
+        }
+      },
+      "comparison_event_count": 293,
+      "comparison_event_ids_hash": "f3c68f33a8977f4feed417ef43d136e44e01b26cb7167f982e25f4aa9036d07c",
+      "condition_counts": {
+        "bearish_distinct_dates": 44,
+        "bearish_event_instances": 63,
+        "bullish_distinct_dates": 39,
+        "bullish_event_instances": 57,
+        "distinct_month_week_blocks": 36,
+        "distinct_session_dates": 83,
+        "event_instances": 120,
+        "events_by_year": {
+          "2021": 8,
+          "2022": 39,
+          "2023": 42,
+          "2024": 31
+        }
+      },
+      "condition_event_count": 120,
+      "condition_event_ids_hash": "3118a4a4021d5f503c2e4075c4cf009c5451a7b90c166dcb8e788cf866f8982e",
+      "context": "REAL_YIELD_USD_ALIGNMENT",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 5601891850534463626,
+      "randomization_seed_uint64": 6666799557596337147,
+      "secondary_randomization_seeds": {
+        "30": 2489283691139533005,
+        "5": 1236363005730171624,
+        "60": 14653959181920837123
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:LONDON:LEVEL_FAILED_ACCEPTANCE:REAL_YIELD_USD_ALIGNMENT",
+      "unknown_context_events": 9,
+      "unknown_event_count": 9,
+      "unknown_event_ids_hash": "c8f89b8952426b609a2f2d4ee54d179a78eb3e57bbfe057ded82c80e1415ce67"
+    },
+    {
+      "bootstrap_seed_uint64": 3509513911171284365,
+      "comparison_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "comparison_event_count": 0,
+      "comparison_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "condition_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "condition_event_count": 0,
+      "condition_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "context": "RECENT_RELEASE_ALIGNMENT",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 2389199413394900900,
+      "randomization_seed_uint64": 15420471297155701520,
+      "secondary_randomization_seeds": {
+        "30": 1121217677636396053,
+        "5": 5995573394638344912,
+        "60": 15781140368921275570
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:LEVEL_FAILED_ACCEPTANCE:RECENT_RELEASE_ALIGNMENT",
+      "unknown_context_events": 422,
+      "unknown_event_count": 422,
+      "unknown_event_ids_hash": "0f6745d41b401428b6164ebc0e7e65a33990ad637af0f5b5e4b43fcac8c2a7c8"
+    },
+    {
+      "bootstrap_seed_uint64": 11473644698144769811,
+      "comparison_counts": {
+        "bearish_distinct_dates": 140,
+        "bearish_event_instances": 203,
+        "bullish_distinct_dates": 136,
+        "bullish_event_instances": 185,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 171,
+        "event_instances": 388,
+        "events_by_year": {
+          "2021": 17,
+          "2022": 122,
+          "2023": 120,
+          "2024": 129
+        }
+      },
+      "comparison_event_count": 388,
+      "comparison_event_ids_hash": "14a82432ae4d4389e1964c654520c2b63a5d41c0494c0eeb2ec7b1ab2201ed01",
+      "condition_counts": {
+        "bearish_distinct_dates": 13,
+        "bearish_event_instances": 16,
+        "bullish_distinct_dates": 9,
+        "bullish_event_instances": 9,
+        "distinct_month_week_blocks": 19,
+        "distinct_session_dates": 22,
+        "event_instances": 25,
+        "events_by_year": {
+          "2022": 10,
+          "2023": 9,
+          "2024": 6
+        }
+      },
+      "condition_event_count": 25,
+      "condition_event_ids_hash": "2016c4fb933b50803813dc05e80ad5efd26cc32f156da5d0b70d2bf18307b6b9",
+      "context": "STRUCTURE_15M_1H_ALIGNMENT",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 9365317648826581793,
+      "randomization_seed_uint64": 12186045577003273585,
+      "secondary_randomization_seeds": {
+        "30": 17958324129591654023,
+        "5": 1594610948334531703,
+        "60": 6313417185478434764
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:LEVEL_FAILED_ACCEPTANCE:STRUCTURE_15M_1H_ALIGNMENT",
+      "unknown_context_events": 9,
+      "unknown_event_count": 9,
+      "unknown_event_ids_hash": "c8f89b8952426b609a2f2d4ee54d179a78eb3e57bbfe057ded82c80e1415ce67"
+    },
+    {
+      "bootstrap_seed_uint64": 3375037740163380700,
+      "comparison_counts": {
+        "bearish_distinct_dates": 78,
+        "bearish_event_instances": 85,
+        "bullish_distinct_dates": 67,
+        "bullish_event_instances": 73,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 118,
+        "event_instances": 158,
+        "events_by_year": {
+          "2021": 9,
+          "2022": 43,
+          "2023": 55,
+          "2024": 51
+        }
+      },
+      "comparison_event_count": 158,
+      "comparison_event_ids_hash": "5e9b261a7c0f17c2b2347331b24db83ecbc280983e7887b58ee7c43fa850b001",
+      "condition_counts": {
+        "bearish_distinct_dates": 14,
+        "bearish_event_instances": 14,
+        "bullish_distinct_dates": 23,
+        "bullish_event_instances": 24,
+        "distinct_month_week_blocks": 24,
+        "distinct_session_dates": 36,
+        "event_instances": 38,
+        "events_by_year": {
+          "2021": 3,
+          "2022": 12,
+          "2023": 10,
+          "2024": 13
+        }
+      },
+      "condition_event_count": 38,
+      "condition_event_ids_hash": "b21f83c4c2895c7eedfaea3548e672472447d075559509a5ef2dd79f77af4c2c",
+      "context": "FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 7059639086388619271,
+      "randomization_seed_uint64": 6289610015213149396,
+      "secondary_randomization_seeds": {
+        "30": 9489561303910426833,
+        "5": 4563217909377336817,
+        "60": 11420222429267870304
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:LEVEL_SWEEP_RECLAIM:FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+      "unknown_context_events": 277,
+      "unknown_event_count": 277,
+      "unknown_event_ids_hash": "77cf6403a99553b440a3a8ae49fd0b5eccc26aeff87520623806cb2a8da8b054"
+    },
+    {
+      "bootstrap_seed_uint64": 8723123381623704380,
+      "comparison_counts": {
+        "bearish_distinct_dates": 129,
+        "bearish_event_instances": 166,
+        "bullish_distinct_dates": 137,
+        "bullish_event_instances": 165,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 177,
+        "event_instances": 331,
+        "events_by_year": {
+          "2021": 18,
+          "2022": 105,
+          "2023": 103,
+          "2024": 105
+        }
+      },
+      "comparison_event_count": 331,
+      "comparison_event_ids_hash": "e90c3abf7428edd3fac9d53ec511f00ee1c8ae92a535ff5fb2254359fe460c73",
+      "condition_counts": {
+        "bearish_distinct_dates": 71,
+        "bearish_event_instances": 82,
+        "bullish_distinct_dates": 56,
+        "bullish_event_instances": 60,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 104,
+        "event_instances": 142,
+        "events_by_year": {
+          "2021": 5,
+          "2022": 49,
+          "2023": 44,
+          "2024": 44
+        }
+      },
+      "condition_event_count": 142,
+      "condition_event_ids_hash": "ec58c7e5257a902b62f3ad0a531bc37f78fef3e298583f78be020a7d7d66ecb3",
+      "context": "LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 14192196479086440770,
+      "randomization_seed_uint64": 5771236524116922863,
+      "secondary_randomization_seeds": {
+        "30": 11323625350846518699,
+        "5": 15339949454721325305,
+        "60": 3089856173913321485
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:LONDON:LEVEL_SWEEP_RECLAIM:LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY",
+      "unknown_context_events": 0,
+      "unknown_event_count": 0,
+      "unknown_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "bootstrap_seed_uint64": 11875580954329290947,
+      "comparison_counts": {
+        "bearish_distinct_dates": 142,
+        "bearish_event_instances": 210,
+        "bullish_distinct_dates": 128,
+        "bullish_event_instances": 185,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 171,
+        "event_instances": 395,
+        "events_by_year": {
+          "2021": 16,
+          "2022": 117,
+          "2023": 128,
+          "2024": 134
+        }
+      },
+      "comparison_event_count": 395,
+      "comparison_event_ids_hash": "8a2d8fd0215c98d3556fc379b4a1274f8c66d8f23ac8219f65fec76cbfe7c65b",
+      "condition_counts": {
+        "bearish_distinct_dates": 21,
+        "bearish_event_instances": 33,
+        "bullish_distinct_dates": 26,
+        "bullish_event_instances": 35,
+        "distinct_month_week_blocks": 24,
+        "distinct_session_dates": 47,
+        "event_instances": 68,
+        "events_by_year": {
+          "2021": 3,
+          "2022": 33,
+          "2023": 18,
+          "2024": 14
+        }
+      },
+      "condition_event_count": 68,
+      "condition_event_ids_hash": "ddc31e27651dddfb4fa9a4a5bf9e1c498ca834c0b24bb51561ee619e7b570189",
+      "context": "MACRO_ENGINE_ALIGNMENT",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 16717940593493025750,
+      "randomization_seed_uint64": 13694090900172560881,
+      "secondary_randomization_seeds": {
+        "30": 4232994936970899047,
+        "5": 12608250954640794863,
+        "60": 8183335836234544314
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:LONDON:LEVEL_SWEEP_RECLAIM:MACRO_ENGINE_ALIGNMENT",
+      "unknown_context_events": 10,
+      "unknown_event_count": 10,
+      "unknown_event_ids_hash": "f4fa02e088371ba032f39eb375bfe19f6946051d29b0d8946d8a07ef5ac8560d"
+    },
+    {
+      "bootstrap_seed_uint64": 17428837663578842129,
+      "comparison_counts": {
+        "bearish_distinct_dates": 114,
+        "bearish_event_instances": 169,
+        "bullish_distinct_dates": 113,
+        "bullish_event_instances": 158,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 170,
+        "event_instances": 327,
+        "events_by_year": {
+          "2021": 10,
+          "2022": 106,
+          "2023": 97,
+          "2024": 114
+        }
+      },
+      "comparison_event_count": 327,
+      "comparison_event_ids_hash": "847a7f13d784cc51815d317b459e7681f0ba0845d4a7f9b3ca0a20ff1234bbdf",
+      "condition_counts": {
+        "bearish_distinct_dates": 49,
+        "bearish_event_instances": 74,
+        "bullish_distinct_dates": 41,
+        "bullish_event_instances": 62,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 90,
+        "event_instances": 136,
+        "events_by_year": {
+          "2021": 9,
+          "2022": 44,
+          "2023": 49,
+          "2024": 34
+        }
+      },
+      "condition_event_count": 136,
+      "condition_event_ids_hash": "bf63fb9bb92ee8c5b1347094ad8c637a0a81000f748cd82cb700c437e556ee35",
+      "context": "REAL_YIELD_USD_ALIGNMENT",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 15054374648111274829,
+      "randomization_seed_uint64": 17165213989273812043,
+      "secondary_randomization_seeds": {
+        "30": 4048367059015026775,
+        "5": 49286476249726997,
+        "60": 2309321755423776530
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:LONDON:LEVEL_SWEEP_RECLAIM:REAL_YIELD_USD_ALIGNMENT",
+      "unknown_context_events": 10,
+      "unknown_event_count": 10,
+      "unknown_event_ids_hash": "f4fa02e088371ba032f39eb375bfe19f6946051d29b0d8946d8a07ef5ac8560d"
+    },
+    {
+      "bootstrap_seed_uint64": 12807347194412363212,
+      "comparison_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "comparison_event_count": 0,
+      "comparison_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "condition_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "condition_event_count": 0,
+      "condition_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "context": "RECENT_RELEASE_ALIGNMENT",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 12763737576943515716,
+      "randomization_seed_uint64": 16614376374835913223,
+      "secondary_randomization_seeds": {
+        "30": 9176059470468596318,
+        "5": 7011177524164967400,
+        "60": 3192966071055874911
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:LEVEL_SWEEP_RECLAIM:RECENT_RELEASE_ALIGNMENT",
+      "unknown_context_events": 473,
+      "unknown_event_count": 473,
+      "unknown_event_ids_hash": "94c4e1be6e1b73a672c2fb809439e3460e62d9488457a7bf46f6b94e0b3dc8eb"
+    },
+    {
+      "bootstrap_seed_uint64": 12577969520983933422,
+      "comparison_counts": {
+        "bearish_distinct_dates": 147,
+        "bearish_event_instances": 223,
+        "bullish_distinct_dates": 145,
+        "bullish_event_instances": 211,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 174,
+        "event_instances": 434,
+        "events_by_year": {
+          "2021": 19,
+          "2022": 138,
+          "2023": 135,
+          "2024": 142
+        }
+      },
+      "comparison_event_count": 434,
+      "comparison_event_ids_hash": "fc48d54623bd169a255aa258c6e2537742313d73b41df57d30d6bc53042570a9",
+      "condition_counts": {
+        "bearish_distinct_dates": 16,
+        "bearish_event_instances": 20,
+        "bullish_distinct_dates": 9,
+        "bullish_event_instances": 9,
+        "distinct_month_week_blocks": 21,
+        "distinct_session_dates": 25,
+        "event_instances": 29,
+        "events_by_year": {
+          "2022": 12,
+          "2023": 11,
+          "2024": 6
+        }
+      },
+      "condition_event_count": 29,
+      "condition_event_ids_hash": "67bd75b0bd4206a437977c1f2ddb1028adaa402a92e1fa82911b13a63bb4f17d",
+      "context": "STRUCTURE_15M_1H_ALIGNMENT",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 3085514533282317722,
+      "randomization_seed_uint64": 10756323474476255384,
+      "secondary_randomization_seeds": {
+        "30": 2313949646340364402,
+        "5": 12096105467822694581,
+        "60": 4881736245492130870
+      },
+      "session": "LONDON",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:LONDON:LEVEL_SWEEP_RECLAIM:STRUCTURE_15M_1H_ALIGNMENT",
+      "unknown_context_events": 10,
+      "unknown_event_count": 10,
+      "unknown_event_ids_hash": "f4fa02e088371ba032f39eb375bfe19f6946051d29b0d8946d8a07ef5ac8560d"
+    },
+    {
+      "bootstrap_seed_uint64": 1534199283779326280,
+      "comparison_counts": {
+        "bearish_distinct_dates": 148,
+        "bearish_event_instances": 148,
+        "bullish_distinct_dates": 144,
+        "bullish_event_instances": 144,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 176,
+        "event_instances": 292,
+        "events_by_year": {
+          "2021": 14,
+          "2022": 88,
+          "2023": 90,
+          "2024": 100
+        }
+      },
+      "comparison_event_count": 292,
+      "comparison_event_ids_hash": "c1d303aae1383866af2df92295aa60a2b08434a7ecee7c97f3ad502236dab2fb",
+      "condition_counts": {
+        "bearish_distinct_dates": 22,
+        "bearish_event_instances": 22,
+        "bullish_distinct_dates": 26,
+        "bullish_event_instances": 26,
+        "distinct_month_week_blocks": 24,
+        "distinct_session_dates": 48,
+        "event_instances": 48,
+        "events_by_year": {
+          "2021": 2,
+          "2022": 23,
+          "2023": 14,
+          "2024": 9
+        }
+      },
+      "condition_event_count": 48,
+      "condition_event_ids_hash": "59f5b1d70472546e339834c73502cbdbdbac85d9aaf2671288c3f1392a724018",
+      "context": "MACRO_ENGINE_ALIGNMENT",
+      "event_family": "ABSORPTION_ONSET",
+      "gc_bootstrap_seed_uint64": 18436053619607446994,
+      "randomization_seed_uint64": 331634999828502620,
+      "secondary_randomization_seeds": {
+        "30": 10923223235811876783,
+        "5": 14198193093910359702,
+        "60": 15710837965700501215
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:ABSORPTION_ONSET:MACRO_ENGINE_ALIGNMENT",
+      "unknown_context_events": 16,
+      "unknown_event_count": 16,
+      "unknown_event_ids_hash": "a810ca3108a22f513deec054bc3fab429dcbc56ca34b26f2254fc3d721554795"
+    },
+    {
+      "bootstrap_seed_uint64": 16907844520126967028,
+      "comparison_counts": {
+        "bearish_distinct_dates": 116,
+        "bearish_event_instances": 116,
+        "bullish_distinct_dates": 124,
+        "bullish_event_instances": 124,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 169,
+        "event_instances": 240,
+        "events_by_year": {
+          "2021": 9,
+          "2022": 80,
+          "2023": 72,
+          "2024": 79
+        }
+      },
+      "comparison_event_count": 240,
+      "comparison_event_ids_hash": "03fb3f7674b20b4bc4bb6ab4215a9e65502394c523b0dd69adcdb168386b4e50",
+      "condition_counts": {
+        "bearish_distinct_dates": 54,
+        "bearish_event_instances": 54,
+        "bullish_distinct_dates": 46,
+        "bullish_event_instances": 46,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 100,
+        "event_instances": 100,
+        "events_by_year": {
+          "2021": 7,
+          "2022": 31,
+          "2023": 32,
+          "2024": 30
+        }
+      },
+      "condition_event_count": 100,
+      "condition_event_ids_hash": "a9b182abc6a34a4a15d67f8a76b78953134557232c26309af572003d7f45f811",
+      "context": "REAL_YIELD_USD_ALIGNMENT",
+      "event_family": "ABSORPTION_ONSET",
+      "gc_bootstrap_seed_uint64": 11190435115572919151,
+      "randomization_seed_uint64": 6550658586790504984,
+      "secondary_randomization_seeds": {
+        "30": 16687608921859635379,
+        "5": 7940439122213460439,
+        "60": 2163636591018350920
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:NEW_YORK:ABSORPTION_ONSET:REAL_YIELD_USD_ALIGNMENT",
+      "unknown_context_events": 16,
+      "unknown_event_count": 16,
+      "unknown_event_ids_hash": "a810ca3108a22f513deec054bc3fab429dcbc56ca34b26f2254fc3d721554795"
+    },
+    {
+      "bootstrap_seed_uint64": 7932658824964977923,
+      "comparison_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "comparison_event_count": 0,
+      "comparison_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "condition_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "condition_event_count": 0,
+      "condition_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "context": "RECENT_RELEASE_ALIGNMENT",
+      "event_family": "ABSORPTION_ONSET",
+      "gc_bootstrap_seed_uint64": 17667328622958126397,
+      "randomization_seed_uint64": 13540216270225123462,
+      "secondary_randomization_seeds": {
+        "30": 57068799135317290,
+        "5": 16895932228910519432,
+        "60": 2011987619498771904
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:ABSORPTION_ONSET:RECENT_RELEASE_ALIGNMENT",
+      "unknown_context_events": 356,
+      "unknown_event_count": 356,
+      "unknown_event_ids_hash": "8ac1864a6a9c6d120e26629009b45166950cf85e782f8b72171f840eda71c2fc"
+    },
+    {
+      "bootstrap_seed_uint64": 11398209210543982790,
+      "comparison_counts": {
+        "bearish_distinct_dates": 157,
+        "bearish_event_instances": 157,
+        "bullish_distinct_dates": 152,
+        "bullish_event_instances": 152,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 177,
+        "event_instances": 309,
+        "events_by_year": {
+          "2021": 13,
+          "2022": 104,
+          "2023": 99,
+          "2024": 93
+        }
+      },
+      "comparison_event_count": 309,
+      "comparison_event_ids_hash": "aeb7e06d477e3485b74c4e6bb3adc4e597f5b29f68c35b79712a89b84790ccfe",
+      "condition_counts": {
+        "bearish_distinct_dates": 13,
+        "bearish_event_instances": 13,
+        "bullish_distinct_dates": 18,
+        "bullish_event_instances": 18,
+        "distinct_month_week_blocks": 21,
+        "distinct_session_dates": 31,
+        "event_instances": 31,
+        "events_by_year": {
+          "2021": 3,
+          "2022": 7,
+          "2023": 5,
+          "2024": 16
+        }
+      },
+      "condition_event_count": 31,
+      "condition_event_ids_hash": "a68511934d62de9750e9894742be79ee61093a841b016dd95cfac5588767cdee",
+      "context": "STRUCTURE_15M_1H_ALIGNMENT",
+      "event_family": "ABSORPTION_ONSET",
+      "gc_bootstrap_seed_uint64": 7206142752489084773,
+      "randomization_seed_uint64": 14446420846758701664,
+      "secondary_randomization_seeds": {
+        "30": 356219808210422424,
+        "5": 4902771436041077910,
+        "60": 18056759123285277847
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:ABSORPTION_ONSET:STRUCTURE_15M_1H_ALIGNMENT",
+      "unknown_context_events": 16,
+      "unknown_event_count": 16,
+      "unknown_event_ids_hash": "a810ca3108a22f513deec054bc3fab429dcbc56ca34b26f2254fc3d721554795"
+    },
+    {
+      "bootstrap_seed_uint64": 8358087850180608687,
+      "comparison_counts": {
+        "bearish_distinct_dates": 127,
+        "bearish_event_instances": 127,
+        "bullish_distinct_dates": 103,
+        "bullish_event_instances": 103,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 158,
+        "event_instances": 230,
+        "events_by_year": {
+          "2021": 10,
+          "2022": 75,
+          "2023": 87,
+          "2024": 58
+        }
+      },
+      "comparison_event_count": 230,
+      "comparison_event_ids_hash": "4ed8ea6c4b11a7abb3afbcbd0149f045e9878f8c97b98ee51b8959d98f3cbdab",
+      "condition_counts": {
+        "bearish_distinct_dates": 14,
+        "bearish_event_instances": 14,
+        "bullish_distinct_dates": 18,
+        "bullish_event_instances": 18,
+        "distinct_month_week_blocks": 19,
+        "distinct_session_dates": 32,
+        "event_instances": 32,
+        "events_by_year": {
+          "2021": 2,
+          "2022": 16,
+          "2023": 11,
+          "2024": 3
+        }
+      },
+      "condition_event_count": 32,
+      "condition_event_ids_hash": "684b419b4553916bea4e20829bd925ceec5cd2f68c4aee424919e53b4a21a85a",
+      "context": "MACRO_ENGINE_ALIGNMENT",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "gc_bootstrap_seed_uint64": 3069750610712053787,
+      "randomization_seed_uint64": 15989072965055450497,
+      "secondary_randomization_seeds": {
+        "30": 5924307220192259531,
+        "5": 5425367065917992750,
+        "60": 16873069392138037595
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:FLOW_DEPTH_ALIGNMENT_ONSET:MACRO_ENGINE_ALIGNMENT",
+      "unknown_context_events": 14,
+      "unknown_event_count": 14,
+      "unknown_event_ids_hash": "8f126e09ace4f1ff01cb651ef25491f67baaa998ff2a8a0dd9eb3dd24bb93299"
+    },
+    {
+      "bootstrap_seed_uint64": 12035691124115149442,
+      "comparison_counts": {
+        "bearish_distinct_dates": 98,
+        "bearish_event_instances": 98,
+        "bullish_distinct_dates": 88,
+        "bullish_event_instances": 88,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 143,
+        "event_instances": 186,
+        "events_by_year": {
+          "2021": 6,
+          "2022": 65,
+          "2023": 68,
+          "2024": 47
+        }
+      },
+      "comparison_event_count": 186,
+      "comparison_event_ids_hash": "52f8ce080012ba0a5e8b0c41a1aa9b21fcc87d87890306ae1a1ac8feb860f943",
+      "condition_counts": {
+        "bearish_distinct_dates": 43,
+        "bearish_event_instances": 43,
+        "bullish_distinct_dates": 33,
+        "bullish_event_instances": 33,
+        "distinct_month_week_blocks": 33,
+        "distinct_session_dates": 76,
+        "event_instances": 76,
+        "events_by_year": {
+          "2021": 6,
+          "2022": 26,
+          "2023": 30,
+          "2024": 14
+        }
+      },
+      "condition_event_count": 76,
+      "condition_event_ids_hash": "8e8f7197d91df8c49349bc9e69e0128f3a638ea1dec2efafdf06cadc36180d2e",
+      "context": "REAL_YIELD_USD_ALIGNMENT",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "gc_bootstrap_seed_uint64": 1530818902894034183,
+      "randomization_seed_uint64": 11985453318862777926,
+      "secondary_randomization_seeds": {
+        "30": 2062083661059482081,
+        "5": 16540759249514404832,
+        "60": 17549059656098283031
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:NEW_YORK:FLOW_DEPTH_ALIGNMENT_ONSET:REAL_YIELD_USD_ALIGNMENT",
+      "unknown_context_events": 14,
+      "unknown_event_count": 14,
+      "unknown_event_ids_hash": "8f126e09ace4f1ff01cb651ef25491f67baaa998ff2a8a0dd9eb3dd24bb93299"
+    },
+    {
+      "bootstrap_seed_uint64": 7565052137482515506,
+      "comparison_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "comparison_event_count": 0,
+      "comparison_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "condition_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "condition_event_count": 0,
+      "condition_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "context": "RECENT_RELEASE_ALIGNMENT",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "gc_bootstrap_seed_uint64": 3396538286310358433,
+      "randomization_seed_uint64": 2703707156093645847,
+      "secondary_randomization_seeds": {
+        "30": 5464652375188389962,
+        "5": 1628976495963156347,
+        "60": 5390389929985367150
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:FLOW_DEPTH_ALIGNMENT_ONSET:RECENT_RELEASE_ALIGNMENT",
+      "unknown_context_events": 276,
+      "unknown_event_count": 276,
+      "unknown_event_ids_hash": "c01502d64b6a8f960a93cb264f6e091a887255ffb0989439012d916e873767dc"
+    },
+    {
+      "bootstrap_seed_uint64": 139749796386406104,
+      "comparison_counts": {
+        "bearish_distinct_dates": 131,
+        "bearish_event_instances": 131,
+        "bullish_distinct_dates": 113,
+        "bullish_event_instances": 113,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 158,
+        "event_instances": 244,
+        "events_by_year": {
+          "2021": 11,
+          "2022": 85,
+          "2023": 93,
+          "2024": 55
+        }
+      },
+      "comparison_event_count": 244,
+      "comparison_event_ids_hash": "78da136984c27bbe28d99adb17ec0a0cc4356acf62026f9d94b40be37ae33e35",
+      "condition_counts": {
+        "bearish_distinct_dates": 10,
+        "bearish_event_instances": 10,
+        "bullish_distinct_dates": 8,
+        "bullish_event_instances": 8,
+        "distinct_month_week_blocks": 16,
+        "distinct_session_dates": 18,
+        "event_instances": 18,
+        "events_by_year": {
+          "2021": 1,
+          "2022": 6,
+          "2023": 5,
+          "2024": 6
+        }
+      },
+      "condition_event_count": 18,
+      "condition_event_ids_hash": "767ab0f0d881cbb4f121519f54a39ebb2e99f4cab79643476c77e468a3a4e90a",
+      "context": "STRUCTURE_15M_1H_ALIGNMENT",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "gc_bootstrap_seed_uint64": 17386362264254170768,
+      "randomization_seed_uint64": 7785089741084270746,
+      "secondary_randomization_seeds": {
+        "30": 725381276182450462,
+        "5": 156080697650136591,
+        "60": 4241003656985202512
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:FLOW_DEPTH_ALIGNMENT_ONSET:STRUCTURE_15M_1H_ALIGNMENT",
+      "unknown_context_events": 14,
+      "unknown_event_count": 14,
+      "unknown_event_ids_hash": "8f126e09ace4f1ff01cb651ef25491f67baaa998ff2a8a0dd9eb3dd24bb93299"
+    },
+    {
+      "bootstrap_seed_uint64": 16881666981750281668,
+      "comparison_counts": {
+        "bearish_distinct_dates": 129,
+        "bearish_event_instances": 129,
+        "bullish_distinct_dates": 128,
+        "bullish_event_instances": 128,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 165,
+        "event_instances": 257,
+        "events_by_year": {
+          "2021": 13,
+          "2022": 72,
+          "2023": 85,
+          "2024": 87
+        }
+      },
+      "comparison_event_count": 257,
+      "comparison_event_ids_hash": "de03a19e3fb67b5c2acc44a0a1e6ad693ebcae6572cb052b3435a6d5fd9a32fe",
+      "condition_counts": {
+        "bearish_distinct_dates": 17,
+        "bearish_event_instances": 17,
+        "bullish_distinct_dates": 17,
+        "bullish_event_instances": 17,
+        "distinct_month_week_blocks": 20,
+        "distinct_session_dates": 34,
+        "event_instances": 34,
+        "events_by_year": {
+          "2021": 2,
+          "2022": 17,
+          "2023": 10,
+          "2024": 5
+        }
+      },
+      "condition_event_count": 34,
+      "condition_event_ids_hash": "ef67367f0dbf7e7861868d70f5338360b42c1383edabd2dcfbfdeff7a8fb67e7",
+      "context": "MACRO_ENGINE_ALIGNMENT",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "gc_bootstrap_seed_uint64": 7610336243871105560,
+      "randomization_seed_uint64": 10993645383168482842,
+      "secondary_randomization_seeds": {
+        "30": 3501634963259534945,
+        "5": 8633816549844558858,
+        "60": 2332612355994378502
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:FRAGILITY_FLOW_ONSET:MACRO_ENGINE_ALIGNMENT",
+      "unknown_context_events": 17,
+      "unknown_event_count": 17,
+      "unknown_event_ids_hash": "64187b5e0290fac605f2471cefc6e6199b0d545bb258e6265a102c10c54b3c7a"
+    },
+    {
+      "bootstrap_seed_uint64": 16710890452993682067,
+      "comparison_counts": {
+        "bearish_distinct_dates": 100,
+        "bearish_event_instances": 100,
+        "bullish_distinct_dates": 104,
+        "bullish_event_instances": 104,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 161,
+        "event_instances": 204,
+        "events_by_year": {
+          "2021": 8,
+          "2022": 62,
+          "2023": 67,
+          "2024": 67
+        }
+      },
+      "comparison_event_count": 204,
+      "comparison_event_ids_hash": "4404806adfdf83b2e7bec99684917c24b90c74dfe665318eaf116a83d486476e",
+      "condition_counts": {
+        "bearish_distinct_dates": 46,
+        "bearish_event_instances": 46,
+        "bullish_distinct_dates": 41,
+        "bullish_event_instances": 41,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 87,
+        "event_instances": 87,
+        "events_by_year": {
+          "2021": 7,
+          "2022": 27,
+          "2023": 28,
+          "2024": 25
+        }
+      },
+      "condition_event_count": 87,
+      "condition_event_ids_hash": "dc4e626c4a0f060ae87d8a246603c7b3d80783dff4f2ef8225b593e6f218501e",
+      "context": "REAL_YIELD_USD_ALIGNMENT",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "gc_bootstrap_seed_uint64": 11933720019648224827,
+      "randomization_seed_uint64": 9906364407814366996,
+      "secondary_randomization_seeds": {
+        "30": 7956430890392843946,
+        "5": 11911733207241953586,
+        "60": 12086305537223758070
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:NEW_YORK:FRAGILITY_FLOW_ONSET:REAL_YIELD_USD_ALIGNMENT",
+      "unknown_context_events": 17,
+      "unknown_event_count": 17,
+      "unknown_event_ids_hash": "64187b5e0290fac605f2471cefc6e6199b0d545bb258e6265a102c10c54b3c7a"
+    },
+    {
+      "bootstrap_seed_uint64": 7266002080586171312,
+      "comparison_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "comparison_event_count": 0,
+      "comparison_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "condition_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "condition_event_count": 0,
+      "condition_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "context": "RECENT_RELEASE_ALIGNMENT",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "gc_bootstrap_seed_uint64": 5957798207901815621,
+      "randomization_seed_uint64": 6761917220084807037,
+      "secondary_randomization_seeds": {
+        "30": 18245651259046423870,
+        "5": 2879728538341377009,
+        "60": 17970074750907371825
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:FRAGILITY_FLOW_ONSET:RECENT_RELEASE_ALIGNMENT",
+      "unknown_context_events": 308,
+      "unknown_event_count": 308,
+      "unknown_event_ids_hash": "11377bcc064dfe2d98c2409f2c2d49f300ab8b42d3bc30254da4d837801c432e"
+    },
+    {
+      "bootstrap_seed_uint64": 2149790500969557816,
+      "comparison_counts": {
+        "bearish_distinct_dates": 135,
+        "bearish_event_instances": 135,
+        "bullish_distinct_dates": 128,
+        "bullish_event_instances": 128,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 169,
+        "event_instances": 263,
+        "events_by_year": {
+          "2021": 12,
+          "2022": 83,
+          "2023": 90,
+          "2024": 78
+        }
+      },
+      "comparison_event_count": 263,
+      "comparison_event_ids_hash": "71182b6be19497174711c0efffd96e870a9128cf035cef32c2c18a18202179eb",
+      "condition_counts": {
+        "bearish_distinct_dates": 11,
+        "bearish_event_instances": 11,
+        "bullish_distinct_dates": 17,
+        "bullish_event_instances": 17,
+        "distinct_month_week_blocks": 21,
+        "distinct_session_dates": 28,
+        "event_instances": 28,
+        "events_by_year": {
+          "2021": 3,
+          "2022": 6,
+          "2023": 5,
+          "2024": 14
+        }
+      },
+      "condition_event_count": 28,
+      "condition_event_ids_hash": "3c01862c8cedfd5dd6bec58f2c8e3b1e51b48c01a1eb5ca1644eebe7abbbe5c5",
+      "context": "STRUCTURE_15M_1H_ALIGNMENT",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "gc_bootstrap_seed_uint64": 7812978741692083521,
+      "randomization_seed_uint64": 10652506789366337705,
+      "secondary_randomization_seeds": {
+        "30": 15083176944614995497,
+        "5": 11777181504865466297,
+        "60": 3475995644503123630
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:FRAGILITY_FLOW_ONSET:STRUCTURE_15M_1H_ALIGNMENT",
+      "unknown_context_events": 17,
+      "unknown_event_count": 17,
+      "unknown_event_ids_hash": "64187b5e0290fac605f2471cefc6e6199b0d545bb258e6265a102c10c54b3c7a"
+    },
+    {
+      "bootstrap_seed_uint64": 1960487473141660294,
+      "comparison_counts": {
+        "bearish_distinct_dates": 63,
+        "bearish_event_instances": 71,
+        "bullish_distinct_dates": 83,
+        "bullish_event_instances": 94,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 125,
+        "event_instances": 165,
+        "events_by_year": {
+          "2021": 6,
+          "2022": 54,
+          "2023": 51,
+          "2024": 54
+        }
+      },
+      "comparison_event_count": 165,
+      "comparison_event_ids_hash": "87783a3e0dbc70e809803a72892e8e6218e4544454b8ff7c757be41e77310535",
+      "condition_counts": {
+        "bearish_distinct_dates": 20,
+        "bearish_event_instances": 20,
+        "bullish_distinct_dates": 23,
+        "bullish_event_instances": 25,
+        "distinct_month_week_blocks": 29,
+        "distinct_session_dates": 42,
+        "event_instances": 45,
+        "events_by_year": {
+          "2021": 3,
+          "2022": 18,
+          "2023": 14,
+          "2024": 10
+        }
+      },
+      "condition_event_count": 45,
+      "condition_event_ids_hash": "5b9cfb8783ffe55181aab170c0add0a6ec58fba23c8800e6af5a4a07e345000d",
+      "context": "FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 16816277331811763507,
+      "randomization_seed_uint64": 16303781861773843801,
+      "secondary_randomization_seeds": {
+        "30": 6670491857770639706,
+        "5": 6486861080550501892,
+        "60": 5530013357467247596
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:LEVEL_BREAK_ACCEPT:FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+      "unknown_context_events": 335,
+      "unknown_event_count": 335,
+      "unknown_event_ids_hash": "d6691bfd38c7570c91e3be529123c1f3150305c1d7b7af4e8ab3e4dd8343e3b0"
+    },
+    {
+      "bootstrap_seed_uint64": 8409587334220736108,
+      "comparison_counts": {
+        "bearish_distinct_dates": 132,
+        "bearish_event_instances": 182,
+        "bullish_distinct_dates": 147,
+        "bullish_event_instances": 238,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 179,
+        "event_instances": 420,
+        "events_by_year": {
+          "2021": 25,
+          "2022": 131,
+          "2023": 138,
+          "2024": 126
+        }
+      },
+      "comparison_event_count": 420,
+      "comparison_event_ids_hash": "2aafe378d13008980cd46717c1cc92f86eee6ef96c467aec7d7caf4bb62b34b2",
+      "condition_counts": {
+        "bearish_distinct_dates": 51,
+        "bearish_event_instances": 64,
+        "bullish_distinct_dates": 56,
+        "bullish_event_instances": 61,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 94,
+        "event_instances": 125,
+        "events_by_year": {
+          "2021": 4,
+          "2022": 44,
+          "2023": 33,
+          "2024": 44
+        }
+      },
+      "condition_event_count": 125,
+      "condition_event_ids_hash": "e3c532259391a8377a553271cababbf2616a1b82927f420d1d49271550c512e9",
+      "context": "LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 4081445288589825144,
+      "randomization_seed_uint64": 8871344591920155168,
+      "secondary_randomization_seeds": {
+        "30": 1908722470001910063,
+        "5": 8395081367718767373,
+        "60": 1315491798457748012
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:NEW_YORK:LEVEL_BREAK_ACCEPT:LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY",
+      "unknown_context_events": 0,
+      "unknown_event_count": 0,
+      "unknown_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "bootstrap_seed_uint64": 5880520225730936054,
+      "comparison_counts": {
+        "bearish_distinct_dates": 128,
+        "bearish_event_instances": 201,
+        "bullish_distinct_dates": 134,
+        "bullish_event_instances": 251,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 170,
+        "event_instances": 452,
+        "events_by_year": {
+          "2021": 22,
+          "2022": 133,
+          "2023": 140,
+          "2024": 157
+        }
+      },
+      "comparison_event_count": 452,
+      "comparison_event_ids_hash": "f05e310a05938ab9f9304a935cb3920d4378046a596d9d238cc1478609306c0f",
+      "condition_counts": {
+        "bearish_distinct_dates": 21,
+        "bearish_event_instances": 35,
+        "bullish_distinct_dates": 22,
+        "bullish_event_instances": 40,
+        "distinct_month_week_blocks": 22,
+        "distinct_session_dates": 43,
+        "event_instances": 75,
+        "events_by_year": {
+          "2021": 2,
+          "2022": 37,
+          "2023": 26,
+          "2024": 10
+        }
+      },
+      "condition_event_count": 75,
+      "condition_event_ids_hash": "21e0f3bbbdd8897b218e4363fa1c74f69e7b750e151db84dfc503df40718d945",
+      "context": "MACRO_ENGINE_ALIGNMENT",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 13492066721856335305,
+      "randomization_seed_uint64": 13618292368810610499,
+      "secondary_randomization_seeds": {
+        "30": 16946299788303442833,
+        "5": 1297041165211373858,
+        "60": 17514639190354256412
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:NEW_YORK:LEVEL_BREAK_ACCEPT:MACRO_ENGINE_ALIGNMENT",
+      "unknown_context_events": 18,
+      "unknown_event_count": 18,
+      "unknown_event_ids_hash": "5c206cfde4effa6a1564ba0fc37273647e9f8171ca6d3b8e60091abba2eaa07d"
+    },
+    {
+      "bootstrap_seed_uint64": 13808110586523971281,
+      "comparison_counts": {
+        "bearish_distinct_dates": 101,
+        "bearish_event_instances": 161,
+        "bullish_distinct_dates": 114,
+        "bullish_event_instances": 212,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 160,
+        "event_instances": 373,
+        "events_by_year": {
+          "2021": 13,
+          "2022": 120,
+          "2023": 117,
+          "2024": 123
+        }
+      },
+      "comparison_event_count": 373,
+      "comparison_event_ids_hash": "d135789aac55fddc646a47d7b0f47b96d30ad2b2f39f2e3bcc07cf609a8a5437",
+      "condition_counts": {
+        "bearish_distinct_dates": 48,
+        "bearish_event_instances": 75,
+        "bullish_distinct_dates": 42,
+        "bullish_event_instances": 79,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 90,
+        "event_instances": 154,
+        "events_by_year": {
+          "2021": 11,
+          "2022": 50,
+          "2023": 49,
+          "2024": 44
+        }
+      },
+      "condition_event_count": 154,
+      "condition_event_ids_hash": "d237fb741035b68d01f64adb4e0b42158ecfc0aa4a214b3205f6131091b807b8",
+      "context": "REAL_YIELD_USD_ALIGNMENT",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 4550332417801811123,
+      "randomization_seed_uint64": 192187172680567434,
+      "secondary_randomization_seeds": {
+        "30": 13854161754640843247,
+        "5": 2521117875240953081,
+        "60": 5373696964041980254
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:NEW_YORK:LEVEL_BREAK_ACCEPT:REAL_YIELD_USD_ALIGNMENT",
+      "unknown_context_events": 18,
+      "unknown_event_count": 18,
+      "unknown_event_ids_hash": "5c206cfde4effa6a1564ba0fc37273647e9f8171ca6d3b8e60091abba2eaa07d"
+    },
+    {
+      "bootstrap_seed_uint64": 3567712613383728840,
+      "comparison_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "comparison_event_count": 0,
+      "comparison_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "condition_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "condition_event_count": 0,
+      "condition_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "context": "RECENT_RELEASE_ALIGNMENT",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 16030046218454958969,
+      "randomization_seed_uint64": 9084489213471390849,
+      "secondary_randomization_seeds": {
+        "30": 1490464208477049060,
+        "5": 1654130156002209686,
+        "60": 3702941442490633081
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:LEVEL_BREAK_ACCEPT:RECENT_RELEASE_ALIGNMENT",
+      "unknown_context_events": 545,
+      "unknown_event_count": 545,
+      "unknown_event_ids_hash": "35e3ec2b745f68724d7222745c0a2d9668ae4a9749d520b329a9be2f3c782f36"
+    },
+    {
+      "bootstrap_seed_uint64": 17094595720442474338,
+      "comparison_counts": {
+        "bearish_distinct_dates": 136,
+        "bearish_event_instances": 209,
+        "bullish_distinct_dates": 137,
+        "bullish_event_instances": 248,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 166,
+        "event_instances": 457,
+        "events_by_year": {
+          "2021": 17,
+          "2022": 157,
+          "2023": 154,
+          "2024": 129
+        }
+      },
+      "comparison_event_count": 457,
+      "comparison_event_ids_hash": "78d29afe0a7be8f7eb87bd665f3f21bbb6480f81c3d8d3f48bce0dd230a4e493",
+      "condition_counts": {
+        "bearish_distinct_dates": 13,
+        "bearish_event_instances": 27,
+        "bullish_distinct_dates": 19,
+        "bullish_event_instances": 43,
+        "distinct_month_week_blocks": 21,
+        "distinct_session_dates": 32,
+        "event_instances": 70,
+        "events_by_year": {
+          "2021": 7,
+          "2022": 13,
+          "2023": 12,
+          "2024": 38
+        }
+      },
+      "condition_event_count": 70,
+      "condition_event_ids_hash": "7c0d1720d0271afbadff20831b7b46782cd598362c33875e224dce160e2c1a84",
+      "context": "STRUCTURE_15M_1H_ALIGNMENT",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "gc_bootstrap_seed_uint64": 14534733338956945839,
+      "randomization_seed_uint64": 3489470092275873937,
+      "secondary_randomization_seeds": {
+        "30": 10769000806833398952,
+        "5": 7738112425974159367,
+        "60": 16061943359344719813
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:NEW_YORK:LEVEL_BREAK_ACCEPT:STRUCTURE_15M_1H_ALIGNMENT",
+      "unknown_context_events": 18,
+      "unknown_event_count": 18,
+      "unknown_event_ids_hash": "5c206cfde4effa6a1564ba0fc37273647e9f8171ca6d3b8e60091abba2eaa07d"
+    },
+    {
+      "bootstrap_seed_uint64": 17024330206655848856,
+      "comparison_counts": {
+        "bearish_distinct_dates": 56,
+        "bearish_event_instances": 62,
+        "bullish_distinct_dates": 66,
+        "bullish_event_instances": 73,
+        "distinct_month_week_blocks": 36,
+        "distinct_session_dates": 104,
+        "event_instances": 135,
+        "events_by_year": {
+          "2021": 9,
+          "2022": 43,
+          "2023": 44,
+          "2024": 39
+        }
+      },
+      "comparison_event_count": 135,
+      "comparison_event_ids_hash": "9214d4be5547a2b593508423f0900fe13f328d0591731621166712d23d9492ca",
+      "condition_counts": {
+        "bearish_distinct_dates": 16,
+        "bearish_event_instances": 16,
+        "bullish_distinct_dates": 14,
+        "bullish_event_instances": 14,
+        "distinct_month_week_blocks": 21,
+        "distinct_session_dates": 30,
+        "event_instances": 30,
+        "events_by_year": {
+          "2021": 2,
+          "2022": 12,
+          "2023": 11,
+          "2024": 5
+        }
+      },
+      "condition_event_count": 30,
+      "condition_event_ids_hash": "e27c8b3efa09a876fff9679fd0a13009dc6f6f06e6e575ba7a5927337f32726d",
+      "context": "FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 577894908998172022,
+      "randomization_seed_uint64": 13888324539226466376,
+      "secondary_randomization_seeds": {
+        "30": 8706546019468294161,
+        "5": 1027084864991569335,
+        "60": 11171913294474727078
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:LEVEL_FAILED_ACCEPTANCE:FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+      "unknown_context_events": 333,
+      "unknown_event_count": 333,
+      "unknown_event_ids_hash": "e7fe6a244d14c5de15f9557b2fe7c5d8b718fb7d414cd188636082fb8202703d"
+    },
+    {
+      "bootstrap_seed_uint64": 15716884169376390187,
+      "comparison_counts": {
+        "bearish_distinct_dates": 136,
+        "bearish_event_instances": 198,
+        "bullish_distinct_dates": 130,
+        "bullish_event_instances": 169,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 177,
+        "event_instances": 367,
+        "events_by_year": {
+          "2021": 18,
+          "2022": 125,
+          "2023": 109,
+          "2024": 115
+        }
+      },
+      "comparison_event_count": 367,
+      "comparison_event_ids_hash": "9adaeef30d96b72e329b808b6652c43eb1a0b22aea5df00fb0698cbcd15a8e8e",
+      "condition_counts": {
+        "bearish_distinct_dates": 61,
+        "bearish_event_instances": 67,
+        "bullish_distinct_dates": 60,
+        "bullish_event_instances": 64,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 102,
+        "event_instances": 131,
+        "events_by_year": {
+          "2021": 9,
+          "2022": 38,
+          "2023": 48,
+          "2024": 36
+        }
+      },
+      "condition_event_count": 131,
+      "condition_event_ids_hash": "42a3276152d7d98dcaabd91f8085b794757a2a605b80ba13f6f0f84ab9f68206",
+      "context": "LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 1379442690384922078,
+      "randomization_seed_uint64": 10540207240985084916,
+      "secondary_randomization_seeds": {
+        "30": 9419907490304371224,
+        "5": 15338432761838187994,
+        "60": 8969344480081984356
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:NEW_YORK:LEVEL_FAILED_ACCEPTANCE:LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY",
+      "unknown_context_events": 0,
+      "unknown_event_count": 0,
+      "unknown_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "bootstrap_seed_uint64": 1367559845652788543,
+      "comparison_counts": {
+        "bearish_distinct_dates": 129,
+        "bearish_event_instances": 221,
+        "bullish_distinct_dates": 131,
+        "bullish_event_instances": 186,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 169,
+        "event_instances": 407,
+        "events_by_year": {
+          "2021": 19,
+          "2022": 120,
+          "2023": 134,
+          "2024": 134
+        }
+      },
+      "comparison_event_count": 407,
+      "comparison_event_ids_hash": "f763e237c715c239a088f22e886724456486dbce2172e59544c8528da897be85",
+      "condition_counts": {
+        "bearish_distinct_dates": 19,
+        "bearish_event_instances": 36,
+        "bullish_distinct_dates": 21,
+        "bullish_event_instances": 38,
+        "distinct_month_week_blocks": 21,
+        "distinct_session_dates": 40,
+        "event_instances": 74,
+        "events_by_year": {
+          "2021": 4,
+          "2022": 38,
+          "2023": 18,
+          "2024": 14
+        }
+      },
+      "condition_event_count": 74,
+      "condition_event_ids_hash": "18b00a093e9c482c5e7f429b253358b139a40995206ab21a0b9a22dca6d44d33",
+      "context": "MACRO_ENGINE_ALIGNMENT",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 18194293718383108648,
+      "randomization_seed_uint64": 14547665689815145426,
+      "secondary_randomization_seeds": {
+        "30": 11233104269388788617,
+        "5": 1423611916219104714,
+        "60": 11183574746945411490
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:NEW_YORK:LEVEL_FAILED_ACCEPTANCE:MACRO_ENGINE_ALIGNMENT",
+      "unknown_context_events": 17,
+      "unknown_event_count": 17,
+      "unknown_event_ids_hash": "a63e8fe6bbe3c2e06c0e58d040967d5707a561cbe679b39b220e416cf2be9a59"
+    },
+    {
+      "bootstrap_seed_uint64": 7682268280565852874,
+      "comparison_counts": {
+        "bearish_distinct_dates": 103,
+        "bearish_event_instances": 178,
+        "bullish_distinct_dates": 111,
+        "bullish_event_instances": 160,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 160,
+        "event_instances": 338,
+        "events_by_year": {
+          "2021": 13,
+          "2022": 115,
+          "2023": 102,
+          "2024": 108
+        }
+      },
+      "comparison_event_count": 338,
+      "comparison_event_ids_hash": "4f0b6a14ea73f5fe44252c12d60758265513dfd4c572fac1cbc194bff7b9d843",
+      "condition_counts": {
+        "bearish_distinct_dates": 45,
+        "bearish_event_instances": 79,
+        "bullish_distinct_dates": 41,
+        "bullish_event_instances": 64,
+        "distinct_month_week_blocks": 36,
+        "distinct_session_dates": 86,
+        "event_instances": 143,
+        "events_by_year": {
+          "2021": 10,
+          "2022": 43,
+          "2023": 50,
+          "2024": 40
+        }
+      },
+      "condition_event_count": 143,
+      "condition_event_ids_hash": "72d0613641724f2deb14781b3a5379721ef830bf0b9b5e4712b71a6d4552b10c",
+      "context": "REAL_YIELD_USD_ALIGNMENT",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 1507595331485007035,
+      "randomization_seed_uint64": 15868707973825787002,
+      "secondary_randomization_seeds": {
+        "30": 9150376027153141076,
+        "5": 1507078365166962222,
+        "60": 17062252786125701494
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:NEW_YORK:LEVEL_FAILED_ACCEPTANCE:REAL_YIELD_USD_ALIGNMENT",
+      "unknown_context_events": 17,
+      "unknown_event_count": 17,
+      "unknown_event_ids_hash": "a63e8fe6bbe3c2e06c0e58d040967d5707a561cbe679b39b220e416cf2be9a59"
+    },
+    {
+      "bootstrap_seed_uint64": 7724035844420974848,
+      "comparison_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "comparison_event_count": 0,
+      "comparison_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "condition_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "condition_event_count": 0,
+      "condition_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "context": "RECENT_RELEASE_ALIGNMENT",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 3128548665692230453,
+      "randomization_seed_uint64": 11857683292689837112,
+      "secondary_randomization_seeds": {
+        "30": 3091402060836328571,
+        "5": 3397971943669738738,
+        "60": 14236790575539068846
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:LEVEL_FAILED_ACCEPTANCE:RECENT_RELEASE_ALIGNMENT",
+      "unknown_context_events": 498,
+      "unknown_event_count": 498,
+      "unknown_event_ids_hash": "4e1a0c4178c236cab14c330ea8ec33876a2edf4cd5674aea360985c723236f68"
+    },
+    {
+      "bootstrap_seed_uint64": 8050274758924201914,
+      "comparison_counts": {
+        "bearish_distinct_dates": 142,
+        "bearish_event_instances": 251,
+        "bullish_distinct_dates": 133,
+        "bullish_event_instances": 203,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 176,
+        "event_instances": 454,
+        "events_by_year": {
+          "2021": 20,
+          "2022": 152,
+          "2023": 147,
+          "2024": 135
+        }
+      },
+      "comparison_event_count": 454,
+      "comparison_event_ids_hash": "9f254263a33f0cb67c8a1620a4a5396976710a02548cf14086fabb1cc76bcc53",
+      "condition_counts": {
+        "bearish_distinct_dates": 6,
+        "bearish_event_instances": 6,
+        "bullish_distinct_dates": 19,
+        "bullish_event_instances": 21,
+        "distinct_month_week_blocks": 17,
+        "distinct_session_dates": 25,
+        "event_instances": 27,
+        "events_by_year": {
+          "2021": 3,
+          "2022": 6,
+          "2023": 5,
+          "2024": 13
+        }
+      },
+      "condition_event_count": 27,
+      "condition_event_ids_hash": "ccb0b704762a9262c638e7715aa19e3a208123b562afe18a8cf20e309137f338",
+      "context": "STRUCTURE_15M_1H_ALIGNMENT",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "gc_bootstrap_seed_uint64": 14308375509169102030,
+      "randomization_seed_uint64": 15086214275323765901,
+      "secondary_randomization_seeds": {
+        "30": 15826550186924443627,
+        "5": 11268313483680929990,
+        "60": 4330046304486423314
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:LEVEL_FAILED_ACCEPTANCE:STRUCTURE_15M_1H_ALIGNMENT",
+      "unknown_context_events": 17,
+      "unknown_event_count": 17,
+      "unknown_event_ids_hash": "a63e8fe6bbe3c2e06c0e58d040967d5707a561cbe679b39b220e416cf2be9a59"
+    },
+    {
+      "bootstrap_seed_uint64": 89748533251676221,
+      "comparison_counts": {
+        "bearish_distinct_dates": 62,
+        "bearish_event_instances": 69,
+        "bullish_distinct_dates": 74,
+        "bullish_event_instances": 81,
+        "distinct_month_week_blocks": 37,
+        "distinct_session_dates": 113,
+        "event_instances": 150,
+        "events_by_year": {
+          "2021": 7,
+          "2022": 46,
+          "2023": 45,
+          "2024": 52
+        }
+      },
+      "comparison_event_count": 150,
+      "comparison_event_ids_hash": "df12f5010fe8fc6d553dd364a726e2e70226425d5528c4ee12d7a99f30501ede",
+      "condition_counts": {
+        "bearish_distinct_dates": 19,
+        "bearish_event_instances": 19,
+        "bullish_distinct_dates": 15,
+        "bullish_event_instances": 15,
+        "distinct_month_week_blocks": 23,
+        "distinct_session_dates": 34,
+        "event_instances": 34,
+        "events_by_year": {
+          "2021": 2,
+          "2022": 12,
+          "2023": 9,
+          "2024": 11
+        }
+      },
+      "condition_event_count": 34,
+      "condition_event_ids_hash": "c29cf0b673d84a161a857e490b628a48227d7400d566ec19acf4959e71ed8da0",
+      "context": "FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 1280616996063676384,
+      "randomization_seed_uint64": 14881179503577213623,
+      "secondary_randomization_seeds": {
+        "30": 16012134565884659761,
+        "5": 5896949213757461521,
+        "60": 5340374394506295537
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:LEVEL_SWEEP_RECLAIM:FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+      "unknown_context_events": 345,
+      "unknown_event_count": 345,
+      "unknown_event_ids_hash": "851438965c08816338cd8c47193cd0b0b80ecb29c2fbcaae76c85d92d9077157"
+    },
+    {
+      "bootstrap_seed_uint64": 4723930460839357289,
+      "comparison_counts": {
+        "bearish_distinct_dates": 143,
+        "bearish_event_instances": 210,
+        "bullish_distinct_dates": 134,
+        "bullish_event_instances": 173,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 176,
+        "event_instances": 383,
+        "events_by_year": {
+          "2021": 22,
+          "2022": 122,
+          "2023": 120,
+          "2024": 119
+        }
+      },
+      "comparison_event_count": 383,
+      "comparison_event_ids_hash": "5525a2951b367102acd91be32550991ec20d455ee9fb7fd2cb9730fe03d15d76",
+      "condition_counts": {
+        "bearish_distinct_dates": 59,
+        "bearish_event_instances": 71,
+        "bullish_distinct_dates": 66,
+        "bullish_event_instances": 75,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 106,
+        "event_instances": 146,
+        "events_by_year": {
+          "2021": 6,
+          "2022": 50,
+          "2023": 44,
+          "2024": 46
+        }
+      },
+      "condition_event_count": 146,
+      "condition_event_ids_hash": "f089e80a3ee6d852017cccf7c89aa9407b60c0db6b8f758a9262e3157159ef62",
+      "context": "LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 16690562966295722170,
+      "randomization_seed_uint64": 11007818611051442679,
+      "secondary_randomization_seeds": {
+        "30": 4773996222802898449,
+        "5": 2921441177565388207,
+        "60": 16711715838751666494
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:NEW_YORK:LEVEL_SWEEP_RECLAIM:LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY",
+      "unknown_context_events": 0,
+      "unknown_event_count": 0,
+      "unknown_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "bootstrap_seed_uint64": 7480017050295119500,
+      "comparison_counts": {
+        "bearish_distinct_dates": 140,
+        "bearish_event_instances": 236,
+        "bullish_distinct_dates": 137,
+        "bullish_event_instances": 201,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 170,
+        "event_instances": 437,
+        "events_by_year": {
+          "2021": 18,
+          "2022": 129,
+          "2023": 143,
+          "2024": 147
+        }
+      },
+      "comparison_event_count": 437,
+      "comparison_event_ids_hash": "8402790efa0fe2f8c37648676b44fd95963adc9d89ed6aea1b6fad6fcd35ab50",
+      "condition_counts": {
+        "bearish_distinct_dates": 19,
+        "bearish_event_instances": 36,
+        "bullish_distinct_dates": 22,
+        "bullish_event_instances": 38,
+        "distinct_month_week_blocks": 22,
+        "distinct_session_dates": 41,
+        "event_instances": 74,
+        "events_by_year": {
+          "2021": 6,
+          "2022": 37,
+          "2023": 16,
+          "2024": 15
+        }
+      },
+      "condition_event_count": 74,
+      "condition_event_ids_hash": "12104c7e164d09afb3718a59ef41114807a993d957afb29c63973cf25b0d50ec",
+      "context": "MACRO_ENGINE_ALIGNMENT",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 12191534690401516242,
+      "randomization_seed_uint64": 16130553071528536916,
+      "secondary_randomization_seeds": {
+        "30": 14718671902113313361,
+        "5": 9738407150177520687,
+        "60": 14049360425449429593
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:NEW_YORK:LEVEL_SWEEP_RECLAIM:MACRO_ENGINE_ALIGNMENT",
+      "unknown_context_events": 18,
+      "unknown_event_count": 18,
+      "unknown_event_ids_hash": "3d19495471a779b3f793bc99f17c2032b0197edb7bc083c36a47f5b7c2c43409"
+    },
+    {
+      "bootstrap_seed_uint64": 1934570922318384714,
+      "comparison_counts": {
+        "bearish_distinct_dates": 111,
+        "bearish_event_instances": 188,
+        "bullish_distinct_dates": 114,
+        "bullish_event_instances": 169,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 165,
+        "event_instances": 357,
+        "events_by_year": {
+          "2021": 12,
+          "2022": 120,
+          "2023": 107,
+          "2024": 118
+        }
+      },
+      "comparison_event_count": 357,
+      "comparison_event_ids_hash": "9f7032024422b5c9aeef52b1f1238e67fb4b3442883cf73c06065ad8b1ef1194",
+      "condition_counts": {
+        "bearish_distinct_dates": 48,
+        "bearish_event_instances": 84,
+        "bullish_distinct_dates": 45,
+        "bullish_event_instances": 70,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 93,
+        "event_instances": 154,
+        "events_by_year": {
+          "2021": 12,
+          "2022": 46,
+          "2023": 52,
+          "2024": 44
+        }
+      },
+      "condition_event_count": 154,
+      "condition_event_ids_hash": "2e891721272df35fd8d7aef003aba7543ce25066dc6fc0098393bcbb090d8a9b",
+      "context": "REAL_YIELD_USD_ALIGNMENT",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 8395384715311234164,
+      "randomization_seed_uint64": 3960584285162363479,
+      "secondary_randomization_seeds": {
+        "30": 9177347792516537133,
+        "5": 6704096709410762239,
+        "60": 10221061048590045291
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_ELIGIBLE",
+      "test_id": "S2:NEW_YORK:LEVEL_SWEEP_RECLAIM:REAL_YIELD_USD_ALIGNMENT",
+      "unknown_context_events": 18,
+      "unknown_event_count": 18,
+      "unknown_event_ids_hash": "3d19495471a779b3f793bc99f17c2032b0197edb7bc083c36a47f5b7c2c43409"
+    },
+    {
+      "bootstrap_seed_uint64": 14542237600012028010,
+      "comparison_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "comparison_event_count": 0,
+      "comparison_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "condition_counts": {
+        "bearish_distinct_dates": 0,
+        "bearish_event_instances": 0,
+        "bullish_distinct_dates": 0,
+        "bullish_event_instances": 0,
+        "distinct_month_week_blocks": 0,
+        "distinct_session_dates": 0,
+        "event_instances": 0,
+        "events_by_year": {}
+      },
+      "condition_event_count": 0,
+      "condition_event_ids_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "context": "RECENT_RELEASE_ALIGNMENT",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 8376504534837244438,
+      "randomization_seed_uint64": 11985165708100650901,
+      "secondary_randomization_seeds": {
+        "30": 14963354461551713948,
+        "5": 14635407222270229957,
+        "60": 2291536356368510162
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:LEVEL_SWEEP_RECLAIM:RECENT_RELEASE_ALIGNMENT",
+      "unknown_context_events": 529,
+      "unknown_event_count": 529,
+      "unknown_event_ids_hash": "4423d46859953caa74d11d368b44e21367a759dd34009d53dd36d1d09ff88ee6"
+    },
+    {
+      "bootstrap_seed_uint64": 3521379701673493119,
+      "comparison_counts": {
+        "bearish_distinct_dates": 148,
+        "bearish_event_instances": 261,
+        "bullish_distinct_dates": 141,
+        "bullish_event_instances": 218,
+        "distinct_month_week_blocks": 38,
+        "distinct_session_dates": 176,
+        "event_instances": 479,
+        "events_by_year": {
+          "2021": 22,
+          "2022": 157,
+          "2023": 154,
+          "2024": 146
+        }
+      },
+      "comparison_event_count": 479,
+      "comparison_event_ids_hash": "b471d22180778b551e099af4a32ca7c5b2c18b29dfcdaee1a5d579b123abb6c0",
+      "condition_counts": {
+        "bearish_distinct_dates": 11,
+        "bearish_event_instances": 11,
+        "bullish_distinct_dates": 18,
+        "bullish_event_instances": 21,
+        "distinct_month_week_blocks": 19,
+        "distinct_session_dates": 29,
+        "event_instances": 32,
+        "events_by_year": {
+          "2021": 2,
+          "2022": 9,
+          "2023": 5,
+          "2024": 16
+        }
+      },
+      "condition_event_count": 32,
+      "condition_event_ids_hash": "df1541afbba995a803d1fe51c396e2203de560c10a28a13037e58d662d7311d5",
+      "context": "STRUCTURE_15M_1H_ALIGNMENT",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "gc_bootstrap_seed_uint64": 1604149922141989014,
+      "randomization_seed_uint64": 11046701203467739767,
+      "secondary_randomization_seeds": {
+        "30": 745968544805462924,
+        "5": 454753337163653265,
+        "60": 11241986021150156433
+      },
+      "session": "NEW_YORK",
+      "stage": 2,
+      "support_status": "SUPPORT_FAIL",
+      "test_id": "S2:NEW_YORK:LEVEL_SWEEP_RECLAIM:STRUCTURE_15M_1H_ALIGNMENT",
+      "unknown_context_events": 18,
+      "unknown_event_count": 18,
+      "unknown_event_ids_hash": "3d19495471a779b3f793bc99f17c2032b0197edb7bc083c36a47f5b7c2c43409"
+    }
+  ],
+  "version": "GC_SESSION_TRIGGER_EDGE_V2_M3_TEST_REGISTRY_V1_0",
+  "year_2025_or_2026_values_accessed": false
+}

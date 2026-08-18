@@ -1,0 +1,53 @@
+{
+  "version": "MSBAM_V1_M1_R1_PREACCESS_ENGINEERING_AMENDMENT_A_1_0",
+  "status": "SEALED_PRE_TIMESTAMP_ACCESS_ENGINEERING_AMENDMENT_A",
+  "created_at_utc": "2026-08-12T11:12:00Z",
+  "preserved_preaccess_freeze": {
+    "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1_preaccess_freeze.json",
+    "bytes": 3806,
+    "sha256": "4a1e06abc4f112fac48af1a3a986e393075b82ec998c7b8a096ba80e5299dfdc"
+  },
+  "frozen_implementation": {
+    "path": "tools/diagnose_multi_asset_session_behaviour_archetype_monetization_v1_m1_r1.py",
+    "bytes": 43740,
+    "sha256": "148d6b3a31144dbd0d913e5003f7cbed2f02c352ea7ad067a88e43c7116c9689"
+  },
+  "amended_runner": {
+    "path": "tools/run_multi_asset_session_behaviour_archetype_monetization_v1_m1_r1_amendment_a.py",
+    "bytes": 5831,
+    "sha256": "99b23b6661ec8bbabf22a8e8dec572c49a3192b28d1281b25ba24ffbea3f959b"
+  },
+  "failure": "THE_FROZEN_PROTOCOL_LISTS_THE_CORRECT_FIVE_TARGET_UNITS_IN_CONTRACT_ORDER_WHILE_A_VALUE_BLIND_ASSERTION_EXPECTS_ALPHABETIC_ORDER",
+  "scope": "ORDER_NORMALIZATION_FOR_ONE_PREACCESS_MEMBERSHIP_GUARD_ONLY",
+  "change": "SORT_BOTH_TARGET_UNIT_LISTS_IN_MEMORY_FOR_THE_GUARD; DO_NOT_CHANGE_THE_SEALED_PROTOCOL_FILE_OR_ANY_DOWNSTREAM_DEFINITION",
+  "proof": {
+    "proof": "TARGET_UNIT_ORDER_ONLY",
+    "frozen_count": 5,
+    "implementation_count": 5,
+    "semantic_membership_equal": true,
+    "original_order_assertion_equal": false,
+    "normalization": "SORT_BOTH_SIDES_FOR_GUARD_ONLY",
+    "normalized_assertion_equal": true
+  },
+  "unchanged": [
+    "TARGET_UNIT_MEMBERSHIP",
+    "CONTROL_UNIT_MEMBERSHIP",
+    "IDENTITIES",
+    "TIMESTAMPS",
+    "DIAGNOSTIC_TESTS",
+    "CLASSIFICATION_RULES",
+    "THRESHOLDS",
+    "SCHEDULE_EVIDENCE",
+    "RECOMMENDATION_LIMIT",
+    "REPRODUCTION_REQUIREMENTS",
+    "FORWARD_LOCKS"
+  ],
+  "research_definition_changed": false,
+  "timestamp_rows_accessed_before_amendment_seal": false,
+  "market_values_accessed": false,
+  "outcomes_accessed": false,
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "paid_acquisition_usd": 0.0,
+  "attempt_limit": 1
+}

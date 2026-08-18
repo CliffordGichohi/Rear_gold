@@ -16,6 +16,7 @@ const navigation = [
   ["Structure", "/structure"],
   ["Cross-market", "/cross-market"],
   ["Backtest Lab", "/backtests"],
+  ["Blind Replay", "/replay"],
   ["Coverage & Health", "/data-health"],
 ];
 

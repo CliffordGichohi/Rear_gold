@@ -1,0 +1,24 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_3B2_FREEZE_V0_1",
+  "status": "AMENDMENT_A_SEALED_BEFORE_MBP10_VALUE_ACCESS",
+  "sealed_at_utc": "2026-07-31T06:18:15.4272393Z",
+  "amendment": {
+    "path": "research_manifests/gc_microstructure_step_3b2_amendment_a_v01.json",
+    "bytes": 8326,
+    "sha256": "dc437c6f8a6f01c9c6c04a28133d9dfed5b9eeff9f87b8f62e87f113651a2709"
+  },
+  "predecessor_state": {
+    "step_3a_formal_verdict": "FAIL",
+    "step_3a1_formal_verdict": "PASS",
+    "step_3b1_formal_verdict": "FAIL_PRE_ACQUISITION_READINESS",
+    "all_predecessor_hashes_verified": true
+  },
+  "acquisition_state_at_seal": {
+    "fresh_quote_after_amendment": false,
+    "batch_job_submitted": false,
+    "data_downloaded": false,
+    "mbp10_values_accessed": false,
+    "market_outcomes_accessed": false
+  },
+  "immutability_rule": "Amendment A and this receipt must remain byte-for-byte unchanged after the fresh quote and all later Step 3B.2 work."
+}

@@ -1,0 +1,19 @@
+{
+  "version": "GOLD_PULLBACK_ARCHETYPE_SETUP_ROUTING_V1_FORWARD_RECOVERY_A_1_0",
+  "status": "FROZEN_BEFORE_OPERATIONAL_RESTART",
+  "frozen_at_utc": "2026-08-10T11:38:15.2611574Z",
+  "scope": "OPERATIONAL_RESTART_ONLY",
+  "preserved_failure": {
+    "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_forward/forward_attempt_1_failure.json"
+  },
+  "permitted_change": "Run the identical sealed forward implementation with a command timeout long enough for completion.",
+  "analytical_changes_permitted": false,
+  "rule_changes_permitted": false,
+  "parameter_changes_permitted": false,
+  "source_changes_permitted": false,
+  "retuning_permitted": false,
+  "additional_source_openings_permitted": 1,
+  "required_cumulative_source_opening_count": 2,
+  "paid_acquisition_authorized": false,
+  "charge_cap_usd": 0.0
+}

@@ -1,0 +1,65 @@
+{
+  "version": "GOLD_PULLBACK_BEHAVIOURAL_ARCHETYPES_V1_PROTOCOL_1_0",
+  "status": "FROZEN_BEFORE_ARCHETYPE_ASSIGNMENT",
+  "development": [
+    "2021-08-01T00:00:00Z",
+    "2025-01-01T00:00:00Z"
+  ],
+  "primary_scale": "STANDARD_SPAN_2",
+  "required_resolutions": [
+    "CONTINUED",
+    "FAILED_STRUCTURE_SWITCH"
+  ],
+  "technical_unavailable_label": "UNAVAILABLE_TECHNICAL",
+  "required_triggers": [
+    "CONFIRMATION_EXTREME_BREAK",
+    "RESPONSE_HALF_RETRACE_LIMIT",
+    "BREAK_RETEST_CONFIRM"
+  ],
+  "archetype_precedence": {
+    "CONTINUED": [
+      {
+        "label": "DEEP_RETRACE_CONTINUATION",
+        "rule": "HALF_RETRACE_FORMED_AND_RETEST_ABSENT_OR_HALF_TIMESTAMP_LTE_RETEST_TIMESTAMP"
+      },
+      {
+        "label": "BREAK_RETEST_CONTINUATION",
+        "rule": "BREAK_RETEST_FORMED"
+      },
+      {
+        "label": "RUNAWAY_CONTINUATION",
+        "rule": "CONFIRMATION_BREAK_FORMED_AND_HALF_RETRACE_NOT_FORMED"
+      },
+      {
+        "label": "TWO_SIDED_CHOPPY",
+        "rule": "RESIDUAL_COMPLETED_CONTINUED_PATH"
+      }
+    ],
+    "FAILED_STRUCTURE_SWITCH": [
+      {
+        "label": "FALSE_CONTINUATION",
+        "rule": "CONFIRMATION_BREAK_FORMED"
+      },
+      {
+        "label": "IMMEDIATE_FAILURE",
+        "rule": "NO_CONFIRMATION_BREAK_AND_ADVERSE_0P50_ATR_FIRST"
+      },
+      {
+        "label": "TWO_SIDED_CHOPPY",
+        "rule": "RESIDUAL_COMPLETED_FAILED_PATH"
+      }
+    ]
+  },
+  "oracle_ceiling": {
+    "risk_usd": 50.0,
+    "risk_unit": "ONE_ATR",
+    "continued_payoff": "VISUAL_PIVOT_TO_MAXIMUM_ATR",
+    "failed_payoff_r": -1.0,
+    "costs_included": false,
+    "overlap_control": false,
+    "compounding": false
+  },
+  "calendar_2025_values_authorized": false,
+  "calendar_2026_values_authorized": false,
+  "execution_optimization_authorized": false
+}

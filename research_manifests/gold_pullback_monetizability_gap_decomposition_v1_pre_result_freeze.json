@@ -1,0 +1,158 @@
+{
+  "controls": {
+    "contract": {
+      "bytes": 7153,
+      "path": "GOLD_PULLBACK_MONETIZABILITY_GAP_DECOMPOSITION_CONTRACT_V1.md",
+      "sha256": "e40ed4e9471a07f8a6df5136be11b668726589ba29680436c960332b85ece392"
+    },
+    "protocol": {
+      "bytes": 2156,
+      "path": "research_manifests/gold_pullback_monetizability_gap_decomposition_v1_protocol.json",
+      "sha256": "7343b23b91c12ed83ed2ec037e777ee4f30fd1f976df1967f47f2a307e929eae"
+    }
+  },
+  "development_price": {
+    "bytes": 258834096,
+    "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+    "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+  },
+  "expected": {
+    "calendar_2025_values_accessed": false,
+    "calendar_2026_values_accessed": false,
+    "equal_risk_oof_decision_rows": 16240,
+    "model_case_rows": 51918,
+    "models": 6,
+    "oof_prediction_rows": 16240,
+    "pullback_cases": 8653,
+    "variable_risk_oof_decision_rows": 497
+  },
+  "frozen_at_utc": "2026-08-10T12:04:11.665180Z",
+  "paid_acquisition_usd": 0.0,
+  "predecessor_seals": {
+    "anatomy": {
+      "bytes": 2713,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/movement_anatomy_certification.json",
+      "sha256": "8e3bb5eed7d8a31bb6812dc3cb0e9d58e07f56cfe24a572afca5aef52b452041"
+    },
+    "atlas": {
+      "bytes": 1313,
+      "path": "research_artifacts/gold_pullback_behavioural_archetypes_v1/final_seal.json",
+      "sha256": "189f574a3d68e6cff279d9efd684e643a9942c300d8fe187c8fe9d209d89bcd9"
+    },
+    "routing": {
+      "bytes": 5257,
+      "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_r1/development_seal.json",
+      "sha256": "b2920f9520dd061cfe9c647661b735fff8ef97a14b89ee1740a64620aa64414d"
+    }
+  },
+  "source_pairs": {
+    "archetypes": {
+      "columns": 55,
+      "primary": {
+        "bytes": 1906259,
+        "path": "research_artifacts/gold_pullback_behavioural_archetypes_v1/primary_archetypes.parquet",
+        "sha256": "1b48075bbaa4c14873a84cd66f570259eca044813a008e768f9d1ecca41ba856"
+      },
+      "primary_reference_byte_identical": true,
+      "reference": {
+        "bytes": 1906259,
+        "path": "research_artifacts/gold_pullback_behavioural_archetypes_v1/reference_archetypes.parquet",
+        "sha256": "1b48075bbaa4c14873a84cd66f570259eca044813a008e768f9d1ecca41ba856"
+      },
+      "rows": 8653
+    },
+    "equal_risk_oof_decisions": {
+      "columns": 52,
+      "primary": {
+        "bytes": 3155145,
+        "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_r1/primary_equal_risk_oof_decisions.parquet",
+        "sha256": "852d16b8ee40d8919d2671ac26973389c20d146f6bf8bb849db2db563b01f192"
+      },
+      "primary_reference_byte_identical": true,
+      "reference": {
+        "bytes": 3155145,
+        "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_r1/reference_equal_risk_oof_decisions.parquet",
+        "sha256": "852d16b8ee40d8919d2671ac26973389c20d146f6bf8bb849db2db563b01f192"
+      },
+      "rows": 16240
+    },
+    "model_trades": {
+      "columns": 37,
+      "primary": {
+        "bytes": 4883986,
+        "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_r1/primary_model_trades.parquet",
+        "sha256": "9406c756235272b73a209d7386534433126068fc7f35ce6c43916798e3ae86ab"
+      },
+      "primary_reference_byte_identical": true,
+      "reference": {
+        "bytes": 4883986,
+        "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_r1/reference_model_trades.parquet",
+        "sha256": "9406c756235272b73a209d7386534433126068fc7f35ce6c43916798e3ae86ab"
+      },
+      "rows": 51918
+    },
+    "movement_anatomy": {
+      "columns": 102,
+      "primary": {
+        "bytes": 3631617,
+        "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/primary_movement_anatomy.parquet",
+        "sha256": "69a4e80c224de859cb80a2ea0c35094eaae25e6bd86abfddd4d29de3ff753281"
+      },
+      "primary_reference_byte_identical": true,
+      "reference": {
+        "bytes": 3631617,
+        "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/reference_movement_anatomy.parquet",
+        "sha256": "69a4e80c224de859cb80a2ea0c35094eaae25e6bd86abfddd4d29de3ff753281"
+      },
+      "rows": 8653
+    },
+    "oof_predictions": {
+      "columns": 35,
+      "primary": {
+        "bytes": 1485440,
+        "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_r1/primary_oof_predictions.parquet",
+        "sha256": "0e9ea3c0aac4ee8fd03cb30ca0ab4f399f73b3e7e751f240a9b488b5ddc647c3"
+      },
+      "primary_reference_byte_identical": true,
+      "reference": {
+        "bytes": 1485440,
+        "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_r1/reference_oof_predictions.parquet",
+        "sha256": "0e9ea3c0aac4ee8fd03cb30ca0ab4f399f73b3e7e751f240a9b488b5ddc647c3"
+      },
+      "rows": 16240
+    },
+    "trigger_facts": {
+      "columns": 19,
+      "primary": {
+        "bytes": 2198130,
+        "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/primary_trigger_facts.parquet",
+        "sha256": "d6c2e8e8d5115bf0cf6a0e4b3bae8eded76d143ff573ffe4de7ab4b627775a4a"
+      },
+      "primary_reference_byte_identical": true,
+      "reference": {
+        "bytes": 2198130,
+        "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/reference_trigger_facts.parquet",
+        "sha256": "d6c2e8e8d5115bf0cf6a0e4b3bae8eded76d143ff573ffe4de7ab4b627775a4a"
+      },
+      "rows": 42085
+    },
+    "variable_risk_oof_decisions": {
+      "columns": 52,
+      "primary": {
+        "bytes": 121230,
+        "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_r1/primary_variable_risk_oof_decisions.parquet",
+        "sha256": "8dd267e827da1b7c6c1a2037bad02ea76657db08aacaa913af117aaed15fdf24"
+      },
+      "primary_reference_byte_identical": true,
+      "reference": {
+        "bytes": 121230,
+        "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_r1/reference_variable_risk_oof_decisions.parquet",
+        "sha256": "8dd267e827da1b7c6c1a2037bad02ea76657db08aacaa913af117aaed15fdf24"
+      },
+      "rows": 497
+    }
+  },
+  "status": "FROZEN_AND_READY_FOR_DECOMPOSITION",
+  "value_rows_accessed_before_freeze": false,
+  "version": "GOLD_PULLBACK_MONETIZABILITY_GAP_DECOMPOSITION_V1_PRE_RESULT_FREEZE_1_0"
+}

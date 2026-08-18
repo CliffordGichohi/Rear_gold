@@ -1,0 +1,51 @@
+{
+  "version": "GOLD_MACRO_ACCEPTANCE_EDGE_DISCOVERY_FREEZE_V0_1",
+  "status": "FROZEN_BEFORE_OUTCOME_ACCESS",
+  "frozen_at_utc": "2026-08-06T13:45:00Z",
+  "contract_path": "GOLD_MACRO_ACCEPTANCE_EDGE_DISCOVERY_CONTRACT_V1.md",
+  "contract_sha256": "04f1cff4d4ea05710262f512a750c857d7aa990f06b9073afcc10ae433324075",
+  "population": {
+    "start_inclusive": "2021-08-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "event_cases": 408,
+    "unique_release_timestamps": 346,
+    "coincident_release_policy": "ONE_ANCHOR_PER_EXACT_RELEASE_TIMESTAMP"
+  },
+  "decision_lag_minutes": 5,
+  "primary_endpoint_minutes_from_release": 15,
+  "consistency_endpoint_minutes_from_release": 60,
+  "stage1_test_count": 12,
+  "stage2_test_count": 14,
+  "support": {
+    "stage1_total": 40,
+    "stage1_each_direction": 12,
+    "stage2_total": 18,
+    "stage2_each_direction": 5
+  },
+  "statistics": {
+    "bootstrap_resamples": 10000,
+    "permutations": 20000,
+    "random_seed": 20260806,
+    "multiplicity": "BENJAMINI_HOCHBERG_ALL_SUPPORT_ELIGIBLE_PRIMARY_TESTS",
+    "q_threshold": 0.10
+  },
+  "candidate_limit": 3,
+  "source_bindings": {
+    "source_inventory_sha256": "a50f016a3b2a723bc710f9b35d1f60aab7fec6c9f81056ca9a2232d65abe07c0",
+    "events_sha256": "c7875e09d9ed831ece0f223b8be5efb75550af5bf1996a2dfea9d6119b24e35f",
+    "fundamentals_sha256": "d2b776f60c4535978bbfb28706b4700e6d054a10f8d57cfee171c83b212b7235",
+    "positioning_sha256": "e6d1aabf0d4401f3af4e54dc8ef4c0e4074772ec3f2199cfe9009b5a0b267228",
+    "price_bars_sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+    "raw_xau_file_inventory_sha256": "470a967e087130d749e12d13ec7014f9ed6b171edaa8244b183cf97d62da7744"
+  },
+  "prohibitions": {
+    "open_2025": true,
+    "open_2026": true,
+    "retune_after_results": true,
+    "add_tests_after_results": true,
+    "optimize_execution": true,
+    "calculate_pnl": true,
+    "acquire_data": true,
+    "incur_charge": true
+  }
+}

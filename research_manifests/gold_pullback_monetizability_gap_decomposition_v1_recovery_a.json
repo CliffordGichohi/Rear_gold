@@ -1,0 +1,14 @@
+{
+  "version": "GOLD_PULLBACK_MONETIZABILITY_GAP_DECOMPOSITION_V1_RECOVERY_A_1_0",
+  "status": "FROZEN_BEFORE_RECOVERY_RERUN",
+  "frozen_at_utc": "2026-08-10T12:10:29.2000304Z",
+  "scope": "AGGREGATION_LOCAL_VARIABLE_RENAME_ONLY",
+  "sole_permitted_correction": "Rename the atlas-reconciliation loop variable from timeframe to timeframe_name so it cannot overwrite the previously constructed timeframe result mapping.",
+  "analytical_changes_permitted": false,
+  "stage_definition_changes_permitted": false,
+  "source_changes_permitted": false,
+  "retuning_permitted": false,
+  "additional_complete_attempts_permitted": 1,
+  "paid_acquisition_authorized": false,
+  "charge_cap_usd": 0.0
+}

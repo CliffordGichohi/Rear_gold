@@ -1,0 +1,23 @@
+{
+  "version": "GOLD_BLIND_SYNCHRONIZED_SETUP_REPLAY_V2_EDITABLE_DRAWING_ORDER_LIFECYCLE_AMENDMENT_D_SEAL_1_0",
+  "verdict": "PASS_V2_EDITABLE_DRAWING_ORDER_LIFECYCLE_AMENDMENT_D",
+  "sealed_at": "2026-08-14T12:47:48.6343911+00:00",
+  "predecessor_manifest_sha256": "59ebfdaf366ab967316a38e6a0e6825f5f2c771d41201eabcfd5df6182c761e8",
+  "amendment_sha256": "703e906b0f700681dbdc6d36ab81b5f79f2293d6f48ab10d22de5459bd676181",
+  "sealed_outputs": [
+    {
+      "path": "research_artifacts/gold_blind_synchronized_setup_replay_v2/editable_drawing_order_lifecycle_amendment_d_certification.json",
+      "bytes": 3422,
+      "sha256": "37ea3661d0e4e640a9ed572adf9246d8132ff4945b989a59031a65cde50dd99a"
+    }
+  ],
+  "practice_cursor": {
+    "case_alias": "P-001",
+    "cursor_minute": 180,
+    "total_locked": 0,
+    "setup_ledger_head_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "scored_labeling": "CLOSED_V2_PRACTICE_ONLY_CERTIFIED",
+  "charge_usd": 0.0,
+  "status": "SEALED_READY_FOR_V2_PRACTICE_HUMAN_LABELING_SCORED_CLOSED"
+}

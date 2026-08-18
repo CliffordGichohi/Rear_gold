@@ -1,0 +1,52 @@
+{
+  "a1_implementation": {
+    "bytes": 30254,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\tools\\run_gc_session_trigger_edge_m2r1a1.py",
+    "sha256": "6217d0c9e5e137c9163849b9f2ca8d9d539308bb88d6ac5a807e0bc69aa6bd8c"
+  },
+  "freeze_receipt": "afc3284a1803a22c5b2d63b53e0483e54fae4362697c40bd3096e55e8f9e8835",
+  "implementation": {
+    "bytes": 69962,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\tools\\run_gc_session_trigger_edge_m2r2.py",
+    "sha256": "1accb44bc85ed559c3264890a94de021441f3e87f0e07b3d7c61d8bdca7fc85e"
+  },
+  "m2_final": {
+    "bytes": 699,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_session_trigger_edge_m2_v01\\final_seal.json",
+    "sha256": "c6b86602eceb927db71f56e35bce3bd8778f350f7853429cebbbf281d94c7e85"
+  },
+  "m2_implementation": {
+    "bytes": 90204,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\tools\\materialize_gc_session_trigger_edge_m2.py",
+    "sha256": "acc7af0c5196cc943ad129560f736b31fda03727979fe43b58a7bcf0188d5479"
+  },
+  "m2r1_final": {
+    "bytes": 694,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_session_trigger_edge_m2r1_v01\\final_seal.json",
+    "sha256": "07a4ee79e8bf75a699bf4fb34a546da7ccde8e1992d8d0d9123f24ed575db80f"
+  },
+  "m2r1_primary": {
+    "bytes": 41698,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_session_trigger_edge_m2r1_v01\\primary_diagnostic.json",
+    "sha256": "82444ce02a05de75d276eb2e773b68b6f8dfd97a659277c557ecd51a672cd91d"
+  },
+  "m2r1a1_final": {
+    "bytes": 810,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_session_trigger_edge_m2r1a1_v01\\final_seal.json",
+    "sha256": "0cf047b3c3d9aa01e5ee44876635192dad90b83be47886f8ce65f96904bd2c01"
+  },
+  "pre_freeze_proof": {
+    "bytes": 3342,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_session_trigger_edge_m2r2_v01\\pre_freeze_policy_proof.json",
+    "sha256": "cfba124ba6c7be8d6fb1c9f4d71eb9f7761bcdde27516884b783357851d1a7c6"
+  },
+  "protocol": {
+    "bytes": 3294,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_manifests\\gc_session_trigger_edge_m2r2_protocol_v01.json",
+    "sha256": "4d8861663fabc59cede753ab662f1bc5544dfb4219b2468dae5617fae7f88bc2"
+  },
+  "recertification_attempt_limit": 1,
+  "sealed_at_utc": "2026-08-05T08:34:22.287787Z",
+  "status": "SEALED_BEFORE_DEVELOPMENT_METADATA_REOPEN",
+  "version": "GC_SESSION_TRIGGER_EDGE_M2_R2_FREEZE_V1_0"
+}

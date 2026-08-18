@@ -1,0 +1,34 @@
+{
+  "version": "GOLD_TRIPLE_MACRO_ACCEPTANCE_FADE_VALIDATION_FREEZE_V0_1",
+  "status": "FROZEN_BEFORE_2025_2026_RELATIONSHIP_ACCESS",
+  "frozen_at_utc": "2026-08-07T00:00:00Z",
+  "contract_sha256": "68554b9a1169ad50d8f89d63a65db3d9c87a390020ba1d2e1b7868c4c36bddd9",
+  "candidate": "TRIPLE_MACRO_ACCEPTANCE_FADE_V0_1",
+  "candidate_origin": "POST_HOC_2021_2024_ZERO_VALIDATION_CREDIT",
+  "decision_lag_minutes": 5,
+  "primary_endpoint_minutes": 15,
+  "consistency_endpoint_minutes": 60,
+  "segments": [
+    {
+      "code": "EXPOSED_2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z",
+      "independent_validation_credit": false
+    },
+    {
+      "code": "INDEPENDENT_2026_YTD",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-07-30T00:00:00Z",
+      "independent_validation_credit": true
+    }
+  ],
+  "required_instruments": ["XAUUSD", "EURUSD", "ZT.v.0", "ZN.v.0"],
+  "random_seed": 20260807,
+  "bootstrap_resamples": 20000,
+  "permutations": 50000,
+  "candidate_count": 1,
+  "execution_optimization_permitted": false,
+  "pnl_permitted": false,
+  "paid_acquisition_authorized": false,
+  "relationship_accessed": false
+}

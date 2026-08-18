@@ -1,0 +1,107 @@
+{
+  "artifacts": [
+    {
+      "bytes": 7919,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_m3_protocol.json",
+      "sha256": "7a08d92b2471c1ac33aadc94cf5500a438d5224362c03d1978211d228e3c96fa"
+    },
+    {
+      "bytes": 2434,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_m3_feature_registry.json",
+      "sha256": "d93d126fc9e8f14540a174b2f0d370832d6d57e5eb48fe7f5a2640e92132067a"
+    },
+    {
+      "bytes": 86014,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_m3_test_registry.json",
+      "sha256": "15c8c71444d68e56b622738e50560bb3fe026527028cc050e19769864731b0a1"
+    },
+    {
+      "bytes": 44048,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_m3_preoutcome_freeze.json",
+      "sha256": "a375a3e46adb028605d02b370c2e5251f799759f26649fda513b505ecd7a3bf7"
+    },
+    {
+      "bytes": 1121,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/materialization_attempt1_failure.json",
+      "sha256": "3aa22eadf8d579b5f74cca560802434833c63e5ef722ef56fa8518ac36630f94"
+    },
+    {
+      "bytes": 1247,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/materialization_attempt2_failure.json",
+      "sha256": "f4453deee1e560fab0e16f545b9d40358e8fd92758d18d01e0336846b692eaa8"
+    },
+    {
+      "bytes": 1751,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_m3_engineering_amendment_a.json",
+      "sha256": "5f3446da44e149c6451152ba498734126fa7329a29c46c632855f571b0f95819"
+    },
+    {
+      "bytes": 1750,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_m3_engineering_amendment_b.json",
+      "sha256": "18066a896e7cd218628a6f4794e1882292c56b5dc380f48abffb0ea78164fc74"
+    },
+    {
+      "bytes": 20216,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/materialization_certification.json",
+      "sha256": "127d398dfc94011c11fa297793d16f6cffaf61e476cb2105d959f94049e94a0d"
+    },
+    {
+      "bytes": 2318169,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/primary_signals.parquet",
+      "sha256": "ba73f3ba5eaca66e77dfb8cd515bfd1233705f8cdc29961ac2e30cd8a89e0db1"
+    },
+    {
+      "bytes": 2318169,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/reference_signals.parquet",
+      "sha256": "ba73f3ba5eaca66e77dfb8cd515bfd1233705f8cdc29961ac2e30cd8a89e0db1"
+    },
+    {
+      "bytes": 901,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/development_outcome_opening.json",
+      "sha256": "c018ed5a0e0ecdfdd4f1f2aa5f3d65e0bdedf49ba50ff82e396f4efab6cba762"
+    },
+    {
+      "bytes": 2962192,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/primary_trades.parquet",
+      "sha256": "e72bce3c1a3749410f90d3cd5a32bd53dda735f0eab6f721b3c79e12e4f094f1"
+    },
+    {
+      "bytes": 2962192,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/reference_trades.parquet",
+      "sha256": "e72bce3c1a3749410f90d3cd5a32bd53dda735f0eab6f721b3c79e12e4f094f1"
+    },
+    {
+      "bytes": 137247,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/stage1_results.json",
+      "sha256": "187d75c6294eb40e99633bd0e0222fb7e10fdd476f19294701415a42e75c55c8"
+    },
+    {
+      "bytes": 919453,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/stage2_results.json",
+      "sha256": "c3b42280ada2d10c65dc658b05cfe36fef186193e256af3205e5b28affddcd72"
+    },
+    {
+      "bytes": 11499,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/final_results.json",
+      "sha256": "426d8dab59bd6f9eba9720a3efce76f9495e13ff673ef196c9742de2cae87929"
+    },
+    {
+      "bytes": 1956,
+      "path": "MULTI_ASSET_MACRO_AND_SESSION_PORTFOLIO_EDGE_DISCOVERY_V1_MILESTONE_3_REPORT.md",
+      "sha256": "4db1d83b5e94f5b9116b1d0613cf00afa7e0c66484b437be55aaa1944804e675"
+    }
+  ],
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "complete_artifact_set_hash": "9a0673749ffb34ba5177ae4f9cc923e09b0e97289543cd058d6073b48dadbc38",
+  "paid_acquisition_usd": 0.0,
+  "predecessor_milestone2_seal": {
+    "bytes": 3116,
+    "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_milestone2_seal.json",
+    "sha256": "acb07c44b816958f01e86d64334d940c5e1ad988649085b781b190846314fdca"
+  },
+  "sealed_at_utc": "2026-08-12T09:49:02.591188Z",
+  "status": "SEALED_MILESTONE_3_COMPLETE",
+  "verdict": "REJECT_NO_MULTI_ASSET_PORTFOLIO_EDGE",
+  "version": "MULTI_ASSET_MACRO_SESSION_PORTFOLIO_EDGE_V1_MILESTONE3_SEAL_1_0"
+}

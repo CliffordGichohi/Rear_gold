@@ -1,0 +1,51 @@
+{
+  "analytical_definitions_changed": false,
+  "contract": {
+    "bytes": 6472,
+    "path": "/home/wapi/rear_gold_step5b_v01/control/repo/GC_SESSION_TRIGGER_EDGE_DISCOVERY_CONTRACT_V2_R1.md",
+    "sha256": "da1d6c8460e875d916351f7c81bb6e50cacb40b4a3cf488913c494c3ba283d74"
+  },
+  "engineering_proof": {
+    "bytes": 7627,
+    "path": "/home/wapi/rear_gold_step5b_v01/artifacts/gc_session_trigger_edge_v2r1_engineering_v01/engineering_proof.json",
+    "sha256": "1a53908233cb0620b3de335b49fe7534a53453635613e363893f2144a8f5f436"
+  },
+  "freeze_receipt": "cd552d25afdd262cd7a985eb2074a419eb2300f955c8643444aa45eca04f201a",
+  "implementation": {
+    "bytes": 64503,
+    "path": "/home/wapi/rear_gold_step5b_v01/control/repo/tools/run_gc_session_trigger_edge_v2r1.py",
+    "sha256": "934c5f86130c2166a1b3f9b60ac7a8b69d717e654bffb67a6531dc098e27fafa"
+  },
+  "outcomes_opened": false,
+  "pre_value_freeze": {
+    "bytes": 2159,
+    "path": "/home/wapi/rear_gold_step5b_v01/control/repo/research_manifests/gc_session_trigger_edge_v2r1_pre_value_freeze_v01.json",
+    "sha256": "30959c95ca18cc75b30095fed2af58af26cd11198b9d0d7b71cec57e41182425"
+  },
+  "predecessor": {
+    "sealed_commit_count": 293,
+    "sealed_commit_index_receipt": "e110390459d2bc68179db4d60e68ef5452a7db81644fba6c5666c90431728c45",
+    "v2_failure": {
+      "committed_sessions": 293,
+      "error_sha256": "aae1f803e04cf98bf1040e644932b7892cd7226e19283c0d7824cb96aaa392ea",
+      "error_type": "ResourceCapExceeded",
+      "failed_at_utc": "2026-08-05T14:21:35.345152Z",
+      "logical_attempts": 1,
+      "outcomes_or_market_values_reported": false,
+      "status": "FAIL_GC_SESSION_TRIGGER_EDGE_V2_EXECUTION",
+      "version": "GC_SESSION_TRIGGER_EDGE_V2_EXECUTION_FAILURE_V1_0"
+    },
+    "v2_final_seal_receipt": "0f64374ad742ce60d00d0c381f3034b5170e028fc37391a44ad96e4d7c5831d3",
+    "v2_final_seal_sha256": "4184e39cc0cd2aaae34ee5c84ec64e8c469f45c0204bc3389048e0fa935a3a07",
+    "v2_status": "FAIL_GC_SESSION_TRIGGER_EDGE_V2_EXECUTION",
+    "v2_verdict_sha256": "f38520305ac0c6e81df726effca8e7f83cdfe434c2bd3efc841bef4c0dbcea15"
+  },
+  "protocol": {
+    "bytes": 2992,
+    "path": "/home/wapi/rear_gold_step5b_v01/control/repo/research_manifests/gc_session_trigger_edge_v2r1_protocol_v01.json",
+    "sha256": "9d8ad558fcdd3a6a9fc3c583465aa3c3024253ce82369d5bd4afc62c7315f32d"
+  },
+  "sealed_at_utc": "2026-08-05T14:55:22.033649Z",
+  "status": "SEALED_AFTER_V2R1_PROOF_BEFORE_FULL_DEVELOPMENT_CONTINUATION",
+  "version": "GC_SESSION_TRIGGER_EDGE_V2R1_FREEZE_V1_0"
+}

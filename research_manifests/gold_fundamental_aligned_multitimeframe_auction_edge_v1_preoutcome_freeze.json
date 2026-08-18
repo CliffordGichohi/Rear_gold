@@ -1,0 +1,112 @@
+{
+  "branch_rules_hash": "7cc278ec113ca4b618f1b321928d03bc4dc593acba1e7c0849bb8e0e20c589c8",
+  "controls": {
+    "contract": {
+      "bytes": 12358,
+      "path": "GOLD_FUNDAMENTAL_ALIGNED_MULTITIMEFRAME_AUCTION_EDGE_CONTRACT_V1.md",
+      "sha256": "405253fda1cda53d404436bf57d455d24f623093260677980ff4caa18d0f90f7"
+    },
+    "protocol": {
+      "bytes": 5759,
+      "path": "research_manifests/gold_fundamental_aligned_multitimeframe_auction_edge_v1_protocol.json",
+      "sha256": "b71af60f628c1a61ed09ce23852e54c96eb8937b96d0929794b282d41e00a541"
+    },
+    "test_registry": {
+      "bytes": 2063,
+      "path": "research_manifests/gold_fundamental_aligned_multitimeframe_auction_edge_v1_test_registry.json",
+      "sha256": "6edda0ceef2fa7c1447d1af9d2be784034620b918fd112ade09675c81460075c"
+    },
+    "traceability": {
+      "bytes": 3817,
+      "path": "research_manifests/gold_fundamental_aligned_multitimeframe_auction_edge_v1_traceability.json",
+      "sha256": "913884484ea7000dd0db1c2a5f676cf5855a6bb87cd776188e8190046ed31568"
+    }
+  },
+  "forward_xauusd_inventory_hash": "50d155c900e9f6e4d1569a33b7ea147b81d59e2eee06850bf46390453ad9b70c",
+  "new_branch_outcomes_accessed": false,
+  "preflight": {
+    "bytes": 11910,
+    "path": "research_artifacts/gold_fundamental_aligned_multitimeframe_auction_edge_v1_v01/preflight.json",
+    "sha256": "bf5b23c718b30ce7ca27383333ea644dd43c2124616ae6d6236d68036466c453"
+  },
+  "sealed_at_utc": "2026-08-07T10:55:06.547849Z",
+  "source_bindings": {
+    "book_alignment": {
+      "bytes": 8925,
+      "path": "BOOK_ALIGNMENT.md",
+      "sha256": "1ca1f8485dcd18c965f4d3cde4ad024c7f849b38bb339c3831979156daf52df2"
+    },
+    "case_matrix_manifest": {
+      "bytes": 4086,
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/manifest.json",
+      "sha256": "dddbe125d11afef2094b7843f5521b7bbfcc95178e3fa376b60af8bdd2efc3b5"
+    },
+    "case_matrix_semantic_validation": {
+      "bytes": 3353,
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/semantic_validation.json",
+      "sha256": "f098d0208d341a6995867781ba2529f90efe5622fe4a58efc8b56230b28be1fa"
+    },
+    "casebook_manifest": {
+      "bytes": 5372,
+      "path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6"
+    },
+    "casebook_semantic_validation": {
+      "bytes": 1828,
+      "path": "research_artifacts/gold_casebook_v01/semantic_validation.json",
+      "sha256": "4c12d7307d0799775e4b9da0c84c893f352afbeecc3b4a76847020d9fcb1c9bd"
+    },
+    "forward_source_snapshot_manifest": {
+      "bytes": 1342,
+      "path": "research_artifacts/gold_session_behaviour_v3_m6b_source_snapshot_v01/manifest.json",
+      "sha256": "a0e460839eb3db9b6d4f483128697a55048c258e854b7c4c97fdc0ac88b359f4"
+    },
+    "gc_source_recertification_manifest": {
+      "bytes": 2409,
+      "path": "research_artifacts/gc_microstructure_step_5b2_v01/step5b2_final/manifest.json",
+      "sha256": "3fedb586ce4f9621721575b748b82043f47a4f6630488c29e0b2f8e73b4c86f1"
+    },
+    "gc_source_recertification_verdict": {
+      "bytes": 3172,
+      "path": "research_artifacts/gc_microstructure_step_5b2_v01/step5b2_final/verdict.json",
+      "sha256": "5f3bd13cc2336a50c09ecfcc44c7d63b226a4d212f9d08666d6a50e93e09a6cb"
+    },
+    "macro_source_inventory_final_seal": {
+      "bytes": 2780,
+      "path": "research_artifacts/gold_macro_acceptance_source_inventory_v01/final_seal.json",
+      "sha256": "ed90573690d1d7b96ea52e5b75e43419ae540e22ee94e310a70749e0be4dd9fa"
+    },
+    "prior_state_transition_contract": {
+      "bytes": 10912,
+      "path": "GC_SESSION_STATE_TRANSITION_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "b499e3fc7f80ff6fc288f689eb6a6e3823ceeb19f51d482b56c59304725ccf9a"
+    },
+    "prior_state_transition_report": {
+      "bytes": 6660,
+      "path": "GC_SESSION_STATE_TRANSITION_EDGE_DISCOVERY_V1_REPORT.md",
+      "sha256": "149a7aa3498a94464f0aa8bb06b728af9d70e026c2a98828c727cdf115267576"
+    },
+    "reference_book": {
+      "bytes": 971812,
+      "path": "Gold_USD_Market_Intelligence_Reference_Book.pdf",
+      "sha256": "3e7ddc561932a859a4c9043a38ff71b7003907963fb52247e41edaeefc8ac42a"
+    },
+    "session_trigger_v2r1_manifest": {
+      "bytes": 5411,
+      "path": "research_artifacts/gc_session_trigger_edge_v2r1_v01/manifest.json",
+      "sha256": "f8b9805ffab9d86d4e695eef82e5e9c4fa22c3764eed1059b7638d91bd81264e"
+    },
+    "session_trigger_v2r1_verdict": {
+      "bytes": 1910,
+      "path": "research_artifacts/gc_session_trigger_edge_v2r1_v01/verdict.json",
+      "sha256": "d14ae9674659093e6fe070e084f320978651a551ee758276f9d13182986d0a41"
+    },
+    "state_transition_final_seal": {
+      "bytes": 1487,
+      "path": "research_artifacts/gc_session_state_transition_v1_v01/final_seal.json",
+      "sha256": "433c01e27a5c41604b9bc1f83a0585dff99e99ecfc396862734e2c62f4877cb4"
+    }
+  },
+  "status": "SEALED_BEFORE_NEW_BRANCH_OUTCOME_COMPUTATION",
+  "version": "GOLD_FAMAE_V1_PREOUTCOME_FREEZE_1_0"
+}

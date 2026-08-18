@@ -1,0 +1,35 @@
+{
+  "version": "MULTI_ASSET_MACRO_SESSION_PORTFOLIO_EDGE_V1_M3_ENGINEERING_AMENDMENT_B_1_0",
+  "status": "SEALED_VALUE_BLIND_ENGINEERING_CORRECTION_B",
+  "sealed_at_utc": "2026-08-12T09:45:00Z",
+  "preoutcome_freeze_sha256": "a375a3e46adb028605d02b370c2e5251f799759f26649fda513b505ecd7a3bf7",
+  "engineering_amendment_a_sha256": "5f3446da44e149c6451152ba498734126fa7329a29c46c632855f571b0f95819",
+  "original_amended_implementation_sha256": "55dc641bc65b42afa9eac27e4decaa34c98fa4765acf77fb68281c368fe981ad",
+  "corrected_implementation_sha256": "91ce21662b89b8ef888648f243bc77ff8921d6dc23a66c9b932e6cf93e4bdea2",
+  "corrected_implementation_bytes": 117793,
+  "preserved_failure_artifact": {
+    "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/materialization_attempt2_failure.json",
+    "bytes": 1247,
+    "sha256": "f4453deee1e560fab0e16f545b9d40358e8fd92758d18d01e0336846b692eaa8"
+  },
+  "correction": {
+    "scope": "CACHE_IDENTICAL_TRUE_RANGE_VECTOR_PER_AGGREGATED_SERIES",
+    "old": "RECALCULATE_COMPLETE_TRUE_RANGE_VECTOR_AT_EVERY_ATR_QUERY",
+    "new": "CALCULATE_TRUE_RANGE_VECTOR_ONCE_AND_REUSE_IT_FOR_IDENTICAL_ATR_WINDOWS",
+    "formula_changed": false,
+    "timestamp_or_window_changed": false,
+    "trigger_or_threshold_changed": false
+  },
+  "proof": {
+    "synthetic_cached_vector_equals_uncached_formula_exactly": "PASS",
+    "object_identity_reuse": "PASS",
+    "all_prior_synthetic_integrity_tests": "PASS",
+    "test_count": 7
+  },
+  "research_definitions_changed": false,
+  "features_thresholds_tests_folds_costs_risk_or_gates_changed": false,
+  "outcomes_or_relationships_accessed": false,
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "charge_incurred_usd": 0.0
+}

@@ -1,0 +1,29 @@
+{
+  "calendar_2025": "LOCKED",
+  "calendar_2026": "LOCKED",
+  "human_practice_events_at_seal": 0,
+  "one_year_collection": "CLOSED",
+  "sealed_at": "2026-08-17T08:47:45.353677+00:00",
+  "sealed_outputs": [
+    {
+      "bytes": 12284,
+      "path": "research_artifacts/gold_annotated_replay_v3/browser_regression_certification.json",
+      "sha256": "be41b4f232d04930515d223af820ba731f2b1ccc8b6550d34b2100e4d0c148ac"
+    },
+    {
+      "bytes": 3387,
+      "path": "GOLD_ANNOTATED_REPLAY_V3_IMPLEMENTATION_REPORT.md",
+      "sha256": "84ab599911669abee9b3627a3a2f30fbe9869906c61a80d0060fbc2e5edfeda6"
+    },
+    {
+      "bytes": 4280,
+      "path": "GOLD_ANNOTATED_REPLAY_V3_USER_GUIDE.md",
+      "sha256": "0bc0f6bbff74963fd2d44215d6be16422e96a963f8b0053f17ed73a83cf1e89d"
+    }
+  ],
+  "sealed_outputs_sha256": "c50038c3e78c6b28e5e5dff837e14f4d27c5458168e8b4c0dddc6734be0708c4",
+  "source_set_sha256": "9356e8823ca8fce71f9e6b16bc3618ebfa3fa7e1a1dd79d336f7da7db8329b6e",
+  "status": "SEALED_READY_FOR_TWENTY_ZERO_CREDIT_PRACTICE_SCORED_COLLECTION_CLOSED",
+  "verdict": "PASS_V3_APPLICATION_AND_BROWSER_CERTIFICATION",
+  "version": "GOLD_ANNOTATED_REPLAY_V3_PRACTICE_CERTIFICATION_SEAL_1_0"
+}

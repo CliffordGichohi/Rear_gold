@@ -1,0 +1,21 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4B3_FREEZE_V0_1",
+  "status": "SEALED_BEFORE_FEATURE_VALUE_ACCESS",
+  "sealed_at_utc": "2026-08-03T07:02:22.6918341Z",
+  "classification": "ENGINEERING_ONLY_MULTI_DAY_FEATURE_ROBUSTNESS",
+  "research_or_validation_credit": "NONE",
+  "protocol": {
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_manifests\\gc_microstructure_step_4b3_protocol_v01.json",
+    "bytes": 21355,
+    "sha256": "8a67158b943add18bdeaea5b8b87a8c41fd1427ef6aa45248a38eb03293539cd"
+  },
+  "frozen_before_feature_value_access": true,
+  "exact_parameterization_and_gates_frozen": true,
+  "source_set_frozen_to_ten_step_4b2_normalized_payloads": true,
+  "all_85_step_4a_features_retained_unchanged": true,
+  "two_independent_implementations_required": true,
+  "five_date_and_overall_verdicts_required": true,
+  "additional_data_acquisition_permitted": false,
+  "market_or_feature_value_inspection_permitted": false,
+  "outcome_signal_execution_or_pnl_work_permitted": false
+}

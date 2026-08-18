@@ -1,0 +1,25 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_3C_FREEZE_V0_1",
+  "status": "DIAGNOSTIC_PROTOCOL_SEALED_BEFORE_ROW_LEVEL_ACCESS",
+  "sealed_at_utc": "2026-07-31T08:30:43.3711363Z",
+  "protocol": {
+    "path": "research_manifests/gc_microstructure_step_3c_protocol_v01.json",
+    "bytes": 13422,
+    "sha256": "b77cd541e9a0cb020561aa4eb243ebdfe65e678f0c74ca200530eb2db9dfc869"
+  },
+  "source_state": {
+    "mbo_source_sha256": "43a8a3bb2be9a4a36ab324e3fe0ca0e29ccb4529f445013a87156d3bad4c0ba3",
+    "mbp10_source_sha256": "4ead358f538d7c383a14f39bbde35b8ccfa21e38e58205edbc51bedfb2ed80d4",
+    "sources_verified": true,
+    "additional_data_acquired": false,
+    "row_level_diagnosis_started": false
+  },
+  "predecessor_state": {
+    "step_3a_formal_verdict": "FAIL",
+    "step_3a1_formal_verdict": "PASS",
+    "step_3b1_formal_verdict": "FAIL_PRE_ACQUISITION_READINESS",
+    "step_3b2_formal_verdict": "FAIL",
+    "all_predecessor_seals_verified": true
+  },
+  "immutability_rule": "The protocol and this freeze receipt must remain byte-for-byte unchanged throughout Step 3C."
+}

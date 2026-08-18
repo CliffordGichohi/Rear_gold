@@ -127,6 +127,8 @@ async def execute_backtest(
             "at or before that individual decision close. Event schedules, "
             "forecasts, original releases, and calculated surprises are filtered "
             "by their own point-in-time availability at the same decision clock. "
+            "Unknown catalyst risk blocks a book-aligned entry unless the run "
+            "explicitly records the research-only allow_unknown_event_risk override. "
             "Quarterly SOFR distributions are eligible only after their conservative "
             "next-US-business-day availability timestamp. Synthetic evidence is "
             "never loaded for a FUNDAMENTAL_ALIGNED run."
@@ -135,7 +137,7 @@ async def execute_backtest(
     now = datetime.now(UTC)
     run = BacktestRun(
         strategy_name=result.strategy,
-        strategy_version="1.4.0",
+        strategy_version="1.5.0",
         instrument_code=instrument,
         provider_code=provider_code,
         start_time=start,

@@ -1,0 +1,91 @@
+{
+  "control_units": [
+    "EURUSD|LONDON_SESSION",
+    "EURUSD|NEW_YORK_SESSION",
+    "USDJPY|LONDON_SESSION",
+    "USDJPY|NEW_YORK_SESSION",
+    "XAGUSD|LONDON_SESSION",
+    "XAGUSD|NEW_YORK_SESSION",
+    "USTEC|LONDON_SESSION",
+    "USTEC|US_CASH_SESSION",
+    "US500|US_CASH_SESSION",
+    "XTIUSD|US_ENERGY_SESSION"
+  ],
+  "controls": {
+    "calendar_2025_values_accessed": false,
+    "calendar_2026_values_accessed": false,
+    "market_values_accessed": false,
+    "outcomes_accessed": false,
+    "paid_acquisition_usd": 0.0,
+    "timestamp_rows_accessed_before_freeze": false
+  },
+  "diagnostic_implementation": {
+    "bytes": 43740,
+    "path": "tools/diagnose_multi_asset_session_behaviour_archetype_monetization_v1_m1_r1.py",
+    "sha256": "148d6b3a31144dbd0d913e5003f7cbed2f02c352ea7ad067a88e43c7116c9689"
+  },
+  "freeze_hash": "2cc82aa7de2deefe5f49ad0d1d6f9bb6d9e053d1a290229ed82dbdffb030d93b",
+  "frozen_identity_registry": {
+    "bytes": 7352763,
+    "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1/session_identity_registry.json",
+    "sha256": "6a87dd55531371038db9d57824285549bf41f4a67d6c14d0db617ed5d595c796"
+  },
+  "frozen_recovery_source_inventory": [],
+  "m1_protocol": {
+    "bytes": 7543,
+    "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_protocol.json",
+    "sha256": "182967631ef05f2060e9d49b74b0028be85c9d8b62cee5f8cba3341cae7c71a7"
+  },
+  "predecessor": {
+    "bytes": 5139,
+    "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_milestone1_seal.json",
+    "sha256": "b8c73f02677322ab18ac502a9f9367e9e22d2114e5d5b8b158eb2f2152917da7"
+  },
+  "predecessor_artifact_set_hash": "8f129ee15f01d10464a5776117e226a065d6a07b45663be4922911577f62f516",
+  "preparation_implementation": {
+    "bytes": 19899,
+    "path": "tools/prepare_multi_asset_session_behaviour_archetype_monetization_v1_m1_r1.py",
+    "sha256": "9f1243614a0a7ef8db717b9ddcb18673207fa60fcd776ffae913eb68f44fb528"
+  },
+  "preserved_verdict": "FAIL_MILESTONE_1_COVERAGE_STOP",
+  "protocol_markdown": {
+    "bytes": 2848,
+    "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_V1_MILESTONE_1_R1_PROTOCOL.md",
+    "sha256": "cdd62d331f4d95340305dfccc42b4287628ebd11f22646d2b39ecb7b7e6cd17e"
+  },
+  "r1_protocol": {
+    "bytes": 7144,
+    "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1_protocol.json",
+    "sha256": "b594d2d08a281fc56b2062372485411d0f61ecef3aa95cca16c9b44917f316a5"
+  },
+  "schedule_evidence": {
+    "bytes": 3854,
+    "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1_schedule_evidence.json",
+    "sha256": "c2b697858da122a367fd3852d52105c7281692a26bfc55ed3576944df111e609"
+  },
+  "sealed_at_utc": "2026-08-12T12:19:06.513271Z",
+  "source_acquisition_manifest": {
+    "bytes": 66584,
+    "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m2/acquisition_manifest.json",
+    "sha256": "3b865aaaad2dce30751c0085633b8ffd3566b5bb60dbd4913010d51072aecbcf"
+  },
+  "source_certification": {
+    "bytes": 121686,
+    "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m2/certification.json",
+    "sha256": "ff59bae973835c6384c0ec8ef1ae416dec9312e29412d399b81b1ace382e4e87"
+  },
+  "status": "SEALED_BEFORE_TIMESTAMP_LEVEL_METADATA_ACCESS",
+  "target_units": [
+    "EURUSD|ASIA_SESSION",
+    "USDJPY|ASIA_SESSION",
+    "XAGUSD|ASIA_SESSION",
+    "US500|LONDON_SESSION",
+    "XTIUSD|LONDON_SESSION"
+  ],
+  "test_implementation": {
+    "bytes": 4011,
+    "path": "tests/test_multi_asset_session_behaviour_archetype_monetization_v1_m1_r1.py",
+    "sha256": "492f5962c1c2dd4eb45cb8cb1a32b2d782624cdea48770a0d14df97430a0ccf5"
+  },
+  "version": "MSBAM_V1_M1_R1_PREACCESS_FREEZE_1_0"
+}

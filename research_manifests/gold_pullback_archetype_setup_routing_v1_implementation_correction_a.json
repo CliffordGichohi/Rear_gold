@@ -1,0 +1,16 @@
+{
+  "version": "GOLD_PULLBACK_ARCHETYPE_SETUP_ROUTING_V1_IMPLEMENTATION_CORRECTION_A_1_0",
+  "status": "FROZEN_BEFORE_FIRST_PERFORMANCE_RESULT",
+  "failed_attempt_disposition": "NO_RESULT_ARTIFACTS_WRITTEN",
+  "failed_assertion": "Expected predecessor diagnostic key forward_rows_deserialized",
+  "actual_predecessor_semantics": "forward_rows_not_deserialized counts raw forward rows rejected before JSON deserialization",
+  "sole_correction": "Require presence of forward_rows_not_deserialized rather than require a nonexistent zero-valued key",
+  "entry_models_changed": false,
+  "predictors_changed": false,
+  "classifier_changed": false,
+  "execution_changed": false,
+  "risk_changed": false,
+  "outcomes_measured_before_correction": false,
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false
+}

@@ -1,0 +1,121 @@
+{
+  "archetype_precedence": [
+    "DATA_UNAVAILABLE",
+    "SWEEP_REVERSAL",
+    "FAILED_BREAK",
+    "BREAKOUT_HOLD",
+    "ONE_SIDED",
+    "TWO_SIDED_EXPANSION",
+    "TREND",
+    "BALANCED_COMPRESSION",
+    "ROTATIONAL",
+    "MIXED_UNCLASSIFIED"
+  ],
+  "archetype_thresholds_ATR": {
+    "compression_close_abs_max": 0.25,
+    "compression_range_max": 0.75,
+    "one_sided_adverse_max": 0.25,
+    "one_sided_favourable": 1.0,
+    "rotational_efficiency_max": 0.2,
+    "trend_close": 0.5,
+    "trend_efficiency_min": 0.35,
+    "two_sided_each": 0.75
+  },
+  "development": {
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "months": 41,
+    "start_inclusive": "2021-08-01T00:00:00Z"
+  },
+  "forbidden": [
+    "ENTRY_OPTIMIZATION",
+    "STRATEGY_SELECTION",
+    "CANDIDATE",
+    "EDGE_CLAIM",
+    "2025_VALUE_ACCESS",
+    "2026_VALUE_ACCESS",
+    "PAID_ACQUISITION"
+  ],
+  "frozen_at_utc": "2026-08-12T12:57:56.716318Z",
+  "level_interactions": {
+    "acceptance": "THREE_CONSECUTIVE_COMPLETED_M5_CLOSES_BEYOND_LEVEL",
+    "break": "0.10_ATR_BEYOND_PREEXISTING_LEVEL",
+    "reclaim": "COMPLETED_M5_CLOSE_BACK_INSIDE_WITHIN_THREE_M5_BARS",
+    "sweep": "0.05_ATR_BEYOND_PREEXISTING_LEVEL"
+  },
+  "neutral_path": {
+    "ATR": "MEAN_TRUE_RANGE_OF_14_COMPLETED_M15_BARS_AVAILABLE_AT_DECISION",
+    "MFE_MAE": "SYMMETRIC_FROM_NEUTRAL_REFERENCE_WITH_NO_ENTRY_OR_TRADE_CLAIM",
+    "first_passage_ATR": [
+      0.25,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "fixed_horizons_minutes": [
+      5,
+      15,
+      30,
+      60,
+      120
+    ],
+    "reference": "EXACT_M1_OPEN_AT_OBSERVATION_START",
+    "same_M1_two_sided": "AMBIGUOUS_SAME_BAR",
+    "session_path": "OBSERVED_M1_BARS_FROM_START_INCLUSIVE_TO_END_EXCLUSIVE"
+  },
+  "point_in_time_context": {
+    "completed_candles": [
+      "W1",
+      "D1",
+      "H4",
+      "H1",
+      "M15",
+      "M5"
+    ],
+    "confirmed_swings": "STRICT_2_LEFT_2_RIGHT_KNOWN_AFTER_SECOND_RIGHT_CLOSE",
+    "events": "SCHEDULED_TIER1_EVENT_METADATA_AVAILABLE_AT_LTE_DECISION",
+    "macro": "SEALED_POINT_IN_TIME_MACROBOOK_AVAILABLE_AT_LTE_DECISION",
+    "missing_or_unlicensed": "UNKNOWN_NEVER_ZERO_OR_NEUTRAL",
+    "preexisting_levels": [
+      "PRIOR_DAY",
+      "PRIOR_WEEK",
+      "PRIOR_SAME_SESSION",
+      "M15_SWINGS",
+      "H1_SWINGS",
+      "H4_SWINGS",
+      "ROUND_NUMBER"
+    ]
+  },
+  "population": {
+    "XAUUSD": "EXCLUDED_HELD_POLICY_UNCHANGED",
+    "expected_case_count": 10388,
+    "failed_units_retained_as": "TECHNICALLY_UNAVAILABLE_NOT_SELECTED_FOR_M2",
+    "passing_units": [
+      "EURUSD|LONDON_SESSION",
+      "EURUSD|NEW_YORK_SESSION",
+      "US500|LONDON_SESSION",
+      "US500|US_CASH_SESSION",
+      "USDJPY|LONDON_SESSION",
+      "USDJPY|NEW_YORK_SESSION",
+      "USTEC|LONDON_SESSION",
+      "USTEC|US_CASH_SESSION",
+      "XAGUSD|LONDON_SESSION",
+      "XAGUSD|NEW_YORK_SESSION",
+      "XTIUSD|LONDON_SESSION",
+      "XTIUSD|US_ENERGY_SESSION"
+    ],
+    "selection": "R2_ELIGIBLE_FOR_MILESTONE_2_TRUE_AND_UNIT_IN_12_PASSING_UNITS"
+  },
+  "reproduction": "PRIMARY_AND_REFERENCE_EXACT_ROW_IDENTITIES_SEMANTICS_AND_BYTE_IDENTICAL_JSON",
+  "status": "FROZEN_BEFORE_M2_MARKET_VALUE_ACCESS",
+  "timing": [
+    "SESSION_HIGH_MINUTE",
+    "SESSION_LOW_MINUTE",
+    "HIGH_LOW_ORDER",
+    "FIXED_HORIZON_DISPLACEMENTS",
+    "TURNING_POINT_COUNT",
+    "PATH_EFFICIENCY"
+  ],
+  "version": "MSBAM_V1_M2_PROTOCOL_1_0"
+}

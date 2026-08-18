@@ -1,0 +1,51 @@
+{
+  "forward_values_accessed": false,
+  "frozen_at_utc": "2026-08-10T07:54:50.652816Z",
+  "paid_acquisition_authorized": false,
+  "registered_policy_count": 12,
+  "retuning_permitted": false,
+  "sources": {
+    "contract": {
+      "bytes": 4515,
+      "path": "GOLD_CONDITIONAL_MOVEMENT_POLICY_EDGE_CONTRACT_V1.md",
+      "sha256": "7372f4dea1f5ec3174a245e14d8bf2b3af85770ce71b84780c6e548531337c0c"
+    },
+    "development_seal": {
+      "bytes": 3903,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/development_discovery_seal.json",
+      "sha256": "06e20d5f78d50bdea1e86a877a1b59410a57471322d634f145e5999f106a1332"
+    },
+    "features_primary": {
+      "bytes": 7804461,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/primary_features.parquet",
+      "sha256": "972706fcf161bb8d3c84677bedea45d9a8e2b6fd463a2c7853bb624e0acf2cac"
+    },
+    "features_reference": {
+      "bytes": 7804461,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/reference_features.parquet",
+      "sha256": "972706fcf161bb8d3c84677bedea45d9a8e2b6fd463a2c7853bb624e0acf2cac"
+    },
+    "matrix_h1": {
+      "bytes": 9294102,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/trade_matrix_checkpoint_h1.npz",
+      "sha256": "eca95de3f79226b16f6894d5ce74f6496dd48f00497063a2f4933074b7ee7619"
+    },
+    "matrix_h4": {
+      "bytes": 2619830,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/trade_matrix_checkpoint_h4.npz",
+      "sha256": "512c2c94ffdcb71be7f4e16e93f35c18720736b51001dee4d08d215f71ef456f"
+    },
+    "matrix_m15": {
+      "bytes": 39110178,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/trade_matrix_checkpoint_m15.npz",
+      "sha256": "75ecb3b6750ee97562c1f9f35fd333136ecbd4602cc83ca52f7a491e56c6debf"
+    },
+    "protocol": {
+      "bytes": 1613,
+      "path": "research_manifests/gold_conditional_movement_policy_edge_v1_protocol.json",
+      "sha256": "395d59421a5e991698cd98d18c4a3dcae4baaa1093d11d0ac06db5ce8cfc91df"
+    }
+  },
+  "status": "FROZEN_BEFORE_CONDITIONAL_MODEL_OUTCOMES",
+  "version": "GOLD_CMP_EDGE_V1_DESIGN_FREEZE_1_0"
+}

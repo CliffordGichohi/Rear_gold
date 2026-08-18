@@ -1,0 +1,98 @@
+{
+  "descriptive_near_miss_order": [
+    "fewest formal failed gates",
+    "lowest BH q",
+    "largest effect_pp",
+    "lexical test_id"
+  ],
+  "dominance_tie_priority": [
+    "NO_MEASURABLE_RELATIONSHIP",
+    "UNSTABLE_RELATIONSHIP",
+    "POTENTIALLY_MEANINGFUL_BUT_UNDERPOWERED",
+    "STATISTICALLY_CREDIBLE_REJECTED_OTHER_ROBUSTNESS"
+  ],
+  "formal_gate_order": [
+    "frozen_effect_threshold",
+    "bootstrap_effect_lower_bound",
+    "bootstrap_median_lower_bound_gt_zero",
+    "bootstrap_finite_effect_gte_19000",
+    "bootstrap_finite_median_gte_19000",
+    "bh_q_lte_0_05",
+    "directional_symmetry",
+    "annual_stability",
+    "block_stability",
+    "first_event_sensitivity",
+    "gc_not_statistically_opposite"
+  ],
+  "horizon_diagnostic": {
+    "consistent": "all three known, at least two effects > 0pp, and no effect <= -5pp",
+    "formal_m3_gate": false,
+    "horizons_minutes": [
+      5,
+      30,
+      60
+    ]
+  },
+  "independent_reproduction": {
+    "primary_source": "complete_results.json",
+    "reference_source": "reference_stage1_results.json + reference_stage2_results.json",
+    "require_exact_payload_and_csv_checksums": true
+  },
+  "population": {
+    "audited_support_eligible_rejections": 38,
+    "by_session": {
+      "LONDON": 19,
+      "NEW_YORK": 19
+    },
+    "registered": 72,
+    "support_fail_preserved": 34
+  },
+  "prohibited": [
+    "market-source reopening",
+    "outcome reconstruction",
+    "retuning",
+    "inversion",
+    "candidate creation",
+    "2025/2026 access",
+    "execution",
+    "trades",
+    "PnL",
+    "R multiples",
+    "returns"
+  ],
+  "protocol_receipt": "d361119da0c9ed02f1af8677f931ae919e1fc078802d656e2ad63cc6a9527ca6",
+  "scope": "negative-result attribution from sealed M3-R1 result artifacts only",
+  "stability_gates": [
+    "directional_symmetry",
+    "annual_stability",
+    "block_stability",
+    "first_event_sensitivity"
+  ],
+  "statistical_credibility_gates": [
+    "frozen_effect_threshold",
+    "bootstrap_effect_lower_bound",
+    "bootstrap_median_lower_bound_gt_zero",
+    "bootstrap_finite_effect_gte_19000",
+    "bootstrap_finite_median_gte_19000",
+    "bh_q_lte_0_05"
+  ],
+  "taxonomy_order": [
+    "STATISTICALLY_CREDIBLE_REJECTED_OTHER_ROBUSTNESS",
+    "NO_MEASURABLE_RELATIONSHIP",
+    "UNSTABLE_RELATIONSHIP",
+    "POTENTIALLY_MEANINGFUL_BUT_UNDERPOWERED"
+  ],
+  "taxonomy_rules": {
+    "NO_MEASURABLE_RELATIONSHIP": "frozen_effect_threshold fails",
+    "POTENTIALLY_MEANINGFUL_BUT_UNDERPOWERED": "effect threshold and stability diagnostics pass but one or more statistical uncertainty/multiplicity gates fail",
+    "STATISTICALLY_CREDIBLE_REJECTED_OTHER_ROBUSTNESS": "all six statistical credibility gates pass and at least one other formal gate fails",
+    "UNSTABLE_RELATIONSHIP": "effect threshold passes and any frozen stability gate fails or horizon diagnostic is not CONSISTENT"
+  },
+  "v3_design_map": {
+    "NO_MEASURABLE_RELATIONSHIP": "V3_CONTINUOUS_STATE_RESPONSE_DISCOVERY",
+    "POTENTIALLY_MEANINGFUL_BUT_UNDERPOWERED": "V3_OUTCOME_BLIND_DEVELOPMENT_SAMPLE_EXPANSION",
+    "STATISTICALLY_CREDIBLE_REJECTED_OTHER_ROBUSTNESS": "V3_TARGETED_UNCHANGED_ROBUSTNESS_REPLICATION",
+    "UNSTABLE_RELATIONSHIP": "V3_PRE_REGISTERED_TIME_REGIME_STABILITY_DISCOVERY"
+  },
+  "version": "GC_SESSION_TRIGGER_EDGE_V2_M4_PROTOCOL_V1_0"
+}

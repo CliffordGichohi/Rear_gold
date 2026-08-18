@@ -208,6 +208,12 @@ class PublicDataProvider:
             if not raw_value or raw_value == ".":
                 continue
             observation_date = date.fromisoformat(str(row["observation_date"]))
+            # The graph endpoint can ignore cosd/coed for a discontinued or
+            # lagged series and return its complete archive. Enforce the
+            # provider contract locally so an ingestion batch never claims a
+            # narrower source range than the records it contains.
+            if observation_date < start or observation_date > end:
+                continue
             observed_at = datetime.combine(
                 observation_date, time(16, 0), tzinfo=NEW_YORK
             ).astimezone(UTC)

@@ -1,0 +1,59 @@
+{
+  "calendar_2025": "LOCKED",
+  "calendar_2026": "LOCKED",
+  "market_values_opened": false,
+  "outcomes_opened": false,
+  "population_sha256": "d352b295673898b4297df81bd75aba946ce658e2303d174ede84110dc553f563",
+  "public_population_sha256": "d91a75d7850fadd6ea9b7a1a07e846a5e2840199d5bbef390712b7b69de76b2b",
+  "sealed_at": "2026-08-13T09:17:40.763774+00:00",
+  "sealed_files": [
+    {
+      "bytes": 12243,
+      "path": "GOLD_BLIND_POINT_IN_TIME_DISCRETIONARY_REPLAY_EDGE_AUDIT_CONTRACT_V1.md",
+      "sha256": "f1c42d601e09eda0d22b6de49277b24458c4968ff99566e33d03e9bb1dba1bc2"
+    },
+    {
+      "bytes": 3305,
+      "path": "research_manifests/gold_blind_discretionary_replay_v1_protocol.json",
+      "sha256": "4907764e1a2e8bb122e8ab7dec28dc36272ccefeff28bc847ec081ec8772b6de"
+    },
+    {
+      "bytes": 15707,
+      "path": "tools/freeze_gold_blind_discretionary_replay_v1_population.py",
+      "sha256": "6f08fe1522310a98a0fe0f4aa44d6cc5977e204af49665b482a6f728cf37719d"
+    },
+    {
+      "bytes": 5372,
+      "path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6"
+    },
+    {
+      "bytes": 151347,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/population_registry.private.json",
+      "sha256": "240e5bf1e6290e890879779387d2ea83af90774a6359023800c97d9b8128668b"
+    },
+    {
+      "bytes": 55694,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/population_registry.public.json",
+      "sha256": "1037b3cc0fef0e277db3ab400936e8971d18cf29c26a6a3ac84e132bc09c986e"
+    },
+    {
+      "bytes": 3510,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/population_readiness.json",
+      "sha256": "102f783535020e23693a9b4266df7ccac89850dc300062b75dbe601f80bd2df2"
+    },
+    {
+      "bytes": 193741,
+      "path": "research_artifacts/gc_microstructure_step5c_v01/primary_decision_features.parquet",
+      "sha256": "277993e0cd2d5bff2e8f49c6aaf519ac024a1f7ac1ed8bbd0808f5d3213b5d98"
+    },
+    {
+      "bytes": 193741,
+      "path": "research_artifacts/gc_microstructure_step5c_v01/reference_decision_features.parquet",
+      "sha256": "277993e0cd2d5bff2e8f49c6aaf519ac024a1f7ac1ed8bbd0808f5d3213b5d98"
+    }
+  ],
+  "sealed_files_sha256": "09379b7aa854f0f4735a4a45f42b306feb98b0b5c473e774ac88d4d8cb43c883",
+  "status": "SEALED_BEFORE_CASE_VALUE_MATERIALIZATION",
+  "version": "GOLD_BLIND_DISCRETIONARY_REPLAY_V1_POPULATION_FREEZE_1_0"
+}

@@ -1,0 +1,80 @@
+{
+  "anchor": {
+    "availability": "The confirming bar must be complete and available by decision_at.",
+    "not_a_fill": true,
+    "price": "Close of the complete XAUUSD one-minute bar that confirms the event.",
+    "timestamp": "event decision_at"
+  },
+  "descriptive_path_measurements": [
+    "maximum upward and downward XAUUSD displacement from the anchor at completed one-minute timestamps",
+    "elapsed minutes to each maximum",
+    "first completed-minute direction and whether it reversed by each registered horizon",
+    "GC midpoint sign agreement at fifteen minutes"
+  ],
+  "execution_semantics_forbidden": [
+    "entry",
+    "fill",
+    "stop",
+    "target",
+    "slippage",
+    "commission",
+    "position size",
+    "trade",
+    "PnL",
+    "R multiple",
+    "account return"
+  ],
+  "frozen_at_utc": "2026-08-04T12:55:54.699888Z",
+  "horizons_minutes": [
+    5,
+    15,
+    30,
+    60
+  ],
+  "instrument": "IC_MARKETS_MT5_XAUUSD",
+  "outcome_join_authority": "No outcome join is authorized in Milestone 1 or Milestone 2. A later sealed test registry and explicit instruction are required.",
+  "outcome_registry_receipt": "c01d81854a4c422da7f8d4c4fea7fcf67e8e5f713c4365bd4ac7fa683c01c21b",
+  "outcome_values_accessed": false,
+  "path_measurement_semantics": "Descriptive market behaviour only; never call an excursion MFE or MAE and never infer a fill, stop, or target.",
+  "primary_endpoint": {
+    "binary_policy": "UP and DOWN enter directional hit-rate inference; retain and report FLAT but exclude it from binary hit rate.",
+    "direction_states": {
+      "DOWN": "signed displacement < -0.01",
+      "FLAT": "absolute signed displacement <= 0.01",
+      "UNKNOWN": "Any required timestamp, completeness, availability, uniqueness, or lineage gate fails.",
+      "UP": "signed displacement > +0.01"
+    },
+    "favorable_transform": "Multiply signed displacement by +1 for an UP prior and -1 for a DOWN prior.",
+    "formula": "XAUUSD close at decision_at+15 minutes minus anchor close, in USD per troy ounce.",
+    "outcome_id": "XAUUSD_FWD_15M_SIGNED_DISPLACEMENT"
+  },
+  "role": "NEUTRAL_FORWARD_BEHAVIOUR_MEASUREMENT_NOT_EXECUTION",
+  "secondary_endpoints": [
+    {
+      "outcome_id": "XAUUSD_FWD_5M_SIGNED_DISPLACEMENT",
+      "role": "CONSISTENCY_ONLY"
+    },
+    {
+      "outcome_id": "XAUUSD_FWD_30M_SIGNED_DISPLACEMENT",
+      "role": "CONSISTENCY_ONLY"
+    },
+    {
+      "outcome_id": "XAUUSD_FWD_60M_SIGNED_DISPLACEMENT",
+      "role": "CONSISTENCY_ONLY"
+    },
+    {
+      "outcome_id": "GC_MID_FWD_15M_SIGNED_TICKS",
+      "role": "CROSS_VENUE_CONSISTENCY_ONLY"
+    }
+  ],
+  "status": "FROZEN_BEFORE_EVENT_OR_OUTCOME_VALUE_MATERIALIZATION",
+  "temporal_integrity": {
+    "complete_path": "Path measurements require every expected complete one-minute timestamp through the horizon; endpoint-only interpolation is forbidden.",
+    "feature_boundary": "No feature or event predicate may use a source fact available after decision_at.",
+    "outcome_boundary": "Every outcome fact must be strictly after decision_at except the frozen anchor.",
+    "overlap": "Overlapping forward windows remain recorded and are handled through date/week clustering; they are never treated as independent.",
+    "roll": "GC consistency outcomes must remain on the point-in-time mapped GC.v.0 instrument for the event date; a roll ambiguity makes GC consistency UNKNOWN, never the XAUUSD primary endpoint."
+  },
+  "version": "GC_SESSION_TRIGGER_EDGE_OUTCOME_REGISTRY_V1_0",
+  "year_2025_or_2026_values_accessed": false
+}

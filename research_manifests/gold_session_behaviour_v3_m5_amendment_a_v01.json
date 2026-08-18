@@ -1,0 +1,325 @@
+{
+  "amendment_a": {
+    "file_sha256": "cb8e33fb4c0bfa383fe74ea53a923d82806ea2261f86c0f5e0e77c8adcc125c0",
+    "path": "GOLD_SESSION_BEHAVIOUR_V3_AMENDMENT_A.md",
+    "post_hoc_development_validation_credit": false,
+    "preserves_m4_zero_candidate_verdict": true
+  },
+  "authorization": {
+    "authorized_on": "2026-07-30",
+    "scope": "Complete only V3 Milestone 5 and stop.",
+    "verbatim": "Proceed to V3 Milestone 5 under Amendment A. Preserve Milestone 4\u2019s zero-candidate verdict. Permit exactly four post-hoc hypothesis families with no development-validation credit: LONDON_ASIA_DIRECTION_REVERSAL_V0_1, LONDON_VOLATILITY_DIRECTION_V0_1, NEW_YORK_FINANCIAL_STRESS_DIRECTION_V0_1, and NEW_YORK_SOFR_CUT_2Y_FALLING_V0_1. Before calculating chronology-aware results, freeze and seal their exact definitions, complementary states, support floors, annual and rolling-block stability gates, multiplicity method, ranking order, and rejection rules. Use only 2021-08-01 through 2024-12-31. Do not add candidates, repair failed candidates, optimize execution, use COT as a pass gate, inspect 2025 or 2026, or reopen rejected ZN rules. Freeze zero to two internally stable candidates per session, record all negative results, complete only Milestone 5, and stop."
+  },
+  "candidate_registry": [
+    {
+      "candidate_code": "LONDON_ASIA_DIRECTION_REVERSAL_V0_1",
+      "complement": {
+        "conditions": [
+          {
+            "feature_id": "SESSION_ASIA_DIRECTION",
+            "state": "UP"
+          }
+        ],
+        "excluded_known_states": [
+          "FLAT"
+        ],
+        "type": "EXACT_CONDITION"
+      },
+      "condition": [
+        {
+          "feature_id": "SESSION_ASIA_DIRECTION",
+          "state": "DOWN"
+        }
+      ],
+      "expected_effect_direction": "POSITIVE",
+      "interpretation": "An Asian DOWN state is associated with a more bullish London session close than the exact Asian UP complement.",
+      "joint_known_feature_ids": [
+        "SESSION_ASIA_DIRECTION"
+      ],
+      "m4_relationship_ids": [
+        "SINGLE__SESSION_ASIA_DIRECTION__DOWN",
+        "SINGLE__SESSION_ASIA_DIRECTION__UP"
+      ],
+      "minimum_full_effect_pp": 7.5,
+      "post_hoc_status": "POST_HOC_NO_DEVELOPMENT_VALIDATION_CREDIT",
+      "require_complement_median_opposite": true,
+      "session_code": "LONDON",
+      "stage": "SINGLE_FEATURE_COMPLEMENTARY_STATES"
+    },
+    {
+      "candidate_code": "LONDON_VOLATILITY_DIRECTION_V0_1",
+      "complement": {
+        "conditions": [
+          {
+            "feature_id": "MACRO_VOLATILITY_CHANGE",
+            "state": "RISING"
+          }
+        ],
+        "excluded_known_states": [
+          "UNCHANGED"
+        ],
+        "type": "EXACT_CONDITION"
+      },
+      "condition": [
+        {
+          "feature_id": "MACRO_VOLATILITY_CHANGE",
+          "state": "FALLING"
+        }
+      ],
+      "expected_effect_direction": "POSITIVE",
+      "interpretation": "Falling volatility is associated with a more bullish London session close than the exact rising-volatility complement.",
+      "joint_known_feature_ids": [
+        "MACRO_VOLATILITY_CHANGE"
+      ],
+      "m4_relationship_ids": [
+        "SINGLE__MACRO_VOLATILITY_CHANGE__FALLING",
+        "SINGLE__MACRO_VOLATILITY_CHANGE__RISING"
+      ],
+      "minimum_full_effect_pp": 7.5,
+      "post_hoc_status": "POST_HOC_NO_DEVELOPMENT_VALIDATION_CREDIT",
+      "require_complement_median_opposite": true,
+      "session_code": "LONDON",
+      "stage": "SINGLE_FEATURE_COMPLEMENTARY_STATES"
+    },
+    {
+      "candidate_code": "NEW_YORK_FINANCIAL_STRESS_DIRECTION_V0_1",
+      "complement": {
+        "conditions": [
+          {
+            "feature_id": "MACRO_FINANCIAL_STRESS_CHANGE",
+            "state": "RISING"
+          }
+        ],
+        "excluded_known_states": [
+          "UNCHANGED"
+        ],
+        "type": "EXACT_CONDITION"
+      },
+      "condition": [
+        {
+          "feature_id": "MACRO_FINANCIAL_STRESS_CHANGE",
+          "state": "FALLING"
+        }
+      ],
+      "expected_effect_direction": "POSITIVE",
+      "interpretation": "Falling financial stress is associated with a more bullish New York session close than the exact rising-stress complement.",
+      "joint_known_feature_ids": [
+        "MACRO_FINANCIAL_STRESS_CHANGE"
+      ],
+      "m4_relationship_ids": [
+        "SINGLE__MACRO_FINANCIAL_STRESS_CHANGE__FALLING",
+        "SINGLE__MACRO_FINANCIAL_STRESS_CHANGE__RISING"
+      ],
+      "minimum_full_effect_pp": 7.5,
+      "post_hoc_status": "POST_HOC_NO_DEVELOPMENT_VALIDATION_CREDIT",
+      "require_complement_median_opposite": true,
+      "session_code": "NEW_YORK",
+      "stage": "SINGLE_FEATURE_COMPLEMENTARY_STATES"
+    },
+    {
+      "candidate_code": "NEW_YORK_SOFR_CUT_2Y_FALLING_V0_1",
+      "complement": {
+        "conditions": [],
+        "excluded_known_states": [],
+        "type": "ALL_OTHER_JOINT_KNOWN_CASES"
+      },
+      "condition": [
+        {
+          "feature_id": "EXPECT_SOFR_WINDOW_CUT_HIKE_BALANCE",
+          "state": "CUT_DOMINANT"
+        },
+        {
+          "feature_id": "MACRO_TREASURY_2Y_CHANGE",
+          "state": "FALLING"
+        }
+      ],
+      "expected_effect_direction": "POSITIVE",
+      "interpretation": "Cut-dominant SOFR expectations together with a falling 2-year yield are associated with a more bullish New York session close than all other jointly known combinations.",
+      "joint_known_feature_ids": [
+        "EXPECT_SOFR_WINDOW_CUT_HIKE_BALANCE",
+        "MACRO_TREASURY_2Y_CHANGE"
+      ],
+      "m4_relationship_ids": [
+        "INT_SOFR_CUT_2Y_FALLING"
+      ],
+      "minimum_full_effect_pp": 10.0,
+      "post_hoc_status": "POST_HOC_NO_DEVELOPMENT_VALIDATION_CREDIT",
+      "require_complement_median_opposite": false,
+      "session_code": "NEW_YORK",
+      "stage": "EXACT_TWO_CONDITION_INTERACTION"
+    }
+  ],
+  "frozen_inputs": {
+    "case_matrix": {
+      "artifact_bytes": 103763781,
+      "artifact_path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/cases.jsonl.gz",
+      "artifact_sha256": "d0f5120713b5f9ce641c6285941bfc23d3aac3b83b561c8fc1138e33a5ede9b9",
+      "case_counts": {
+        "LONDON": 833,
+        "NEW_YORK": 826,
+        "total": 1659
+      },
+      "manifest_hash": "d6aad4b861d98899d6fdcc92ea53a20221434af5038a3bcb86a8b9faa1d8e7b7"
+    },
+    "contract_manifest_hash": "79a74f81bce0b80ca6c5da6b420400479013484a4bb759684402546672fa140b",
+    "m4_discovery_hash": "c8d011c69446df3f287dae9e77a4d0e78057c8850e811299302b689ff09d6b70",
+    "m4_independent_validation_hash": "f34f1910fc4d18a5a41d00928c8baf1954f62404abe90e5939834677f280014a",
+    "m4_pre_result_manifest_hash": "e024ceba35a6d3af1c384f8c66eec299aab8cdcd23b666eb9f33ac672a24fbf4",
+    "m4_result_manifest_hash": "c12a71ac9decf0d2cd3f6866528809c937edab8cd6fc3e42072a5bbf8187c40c",
+    "m4_state": {
+      "file_sha256": "cf059d9a0e37d0d5f6273171d7059776782eab4046b9fce01a43d342c00c30b2",
+      "path": "research_artifacts/gold_session_behaviour_v3_state_v04.json",
+      "state_hash": "72c1956d7276d8c3987936104212468fe7411bf432b402feeb222a0cfd928977"
+    }
+  },
+  "implementation_freeze": {
+    "engine_version": "GOLD_SESSION_BEHAVIOUR_V3_M5_STABILITY_V0_1",
+    "module_path": "backend/src/gold_intel/analytics/session_behaviour_v3_m5.py",
+    "module_sha256": "85068a4cf67116846f9461842a680a5d2fab3199c49719c8b7aaf75d767648a1",
+    "preresult_tests": {
+      "failed": 0,
+      "passed": 4
+    },
+    "test_path": "backend/tests/unit/test_session_behaviour_v3_m5.py",
+    "test_sha256": "9c5f76f691868012b8ed7b1dfda6c32e77406c16e8b7f078285d4d8d9a2b1b05"
+  },
+  "mandatory_stop_after_m5": true,
+  "manifest_hash": "adbeed7d029fab23ec72c3866f58bc041d48fe9f8607f65508246f6240917dab",
+  "manifest_version": "GOLD_SESSION_BEHAVIOUR_V3_M5_CANDIDATES_V0_1",
+  "milestone": "V3_M5_INTERNAL_STABILITY_AND_SHORTLIST_FREEZE",
+  "next_milestone": {
+    "authorized": false,
+    "code": "V3_M6_FORWARD_EVALUATION",
+    "started": false
+  },
+  "recorded_at": "2026-07-30T11:52:00Z",
+  "registry_fingerprint": "8be5f55d427958e68a70350f59357522ef802fa802e3e456455120f7383cc45f",
+  "research_boundary_at_freeze": {
+    "calendar_2025_values_opened": false,
+    "calendar_2026_values_opened": false,
+    "cot_used_as_pass_gate": false,
+    "development_validation_credit": false,
+    "execution_variants": 0,
+    "rejected_zn_rules_reopened": false,
+    "trades_or_returns": 0
+  },
+  "stability_protocol": {
+    "calendar_year_blocks": {
+      "block_support": {
+        "combined_binary_cases_minimum": 50,
+        "complement_binary_cases_minimum": 20,
+        "condition_binary_cases_minimum": 12,
+        "joint_known_coverage_pct_minimum": 35.0
+      },
+      "blocks": [
+        {
+          "block_id": "CALENDAR_2021_PARTIAL",
+          "end": "2021-12-31",
+          "start": "2021-08-01"
+        },
+        {
+          "block_id": "CALENDAR_2022",
+          "end": "2022-12-31",
+          "start": "2022-01-01"
+        },
+        {
+          "block_id": "CALENDAR_2023",
+          "end": "2023-12-31",
+          "start": "2023-01-01"
+        },
+        {
+          "block_id": "CALENDAR_2024",
+          "end": "2024-12-31",
+          "start": "2024-01-01"
+        }
+      ],
+      "gates": {
+        "catastrophic_reversal_threshold": "No eligible annual effect may be at or below the negative of the candidate's full-development minimum effect.",
+        "eligible_blocks_minimum": 3,
+        "latest_eligible_block_effect_must_be_positive": true,
+        "median_effect_pp_minimum": 3.0,
+        "positive_effect_fraction_minimum": 0.75
+      }
+    },
+    "full_development_gates": {
+      "condition_median_signed_close_positive": true,
+      "minimum_effect_pp": "Candidate-specific: 7.5 for complementary-state singles and 10.0 for the SOFR/2Y interaction.",
+      "newcombe_wilson_95pct_interval_excludes_zero": true,
+      "paired_candidate_complement_median_signed_close_negative": true
+    },
+    "full_development_support": {
+      "complement_binary_cases_minimum": 80,
+      "complement_distinct_source_signatures_minimum": 8,
+      "complement_state_episodes_minimum": 8,
+      "condition_binary_cases_minimum_interaction": 60,
+      "condition_binary_cases_minimum_single": 80,
+      "condition_distinct_source_signatures_minimum": 8,
+      "condition_state_episodes_minimum": 8,
+      "joint_known_coverage_pct_minimum": 50.0
+    },
+    "multiplicity": {
+      "alpha": 0.1,
+      "family": "ALL_FOUR_AUTHORIZED_POST_HOC_CANDIDATE_FAMILIES",
+      "family_size_fixed": 4,
+      "method": "HOLM_BONFERRONI_STEP_DOWN",
+      "raw_p_value": "Two-sided Fisher exact test on the full development condition versus complement UP/DOWN table.",
+      "unsupported_candidate_p_value_for_family": 1.0,
+      "validation_credit": false
+    },
+    "primary_effect": "Condition UP rate minus frozen complement UP rate among non-flat SESSION_CLOSE outcomes, in percentage points.",
+    "prohibited": {
+      "candidate_addition_or_substitution": true,
+      "candidate_definition_or_direction_change": true,
+      "cot_as_pass_gate": true,
+      "execution_optimization": true,
+      "holdout_2025_or_2026_access": true,
+      "rejected_zn_rule_reopen": true
+    },
+    "ranking_order": [
+      "all frozen gates pass descending",
+      "Holm-adjusted p-value ascending",
+      "rolling positive-effect fraction descending",
+      "annual positive-effect fraction descending",
+      "full-development effect descending",
+      "condition binary support descending",
+      "candidate_code lexicographically ascending"
+    ],
+    "rolling_blocks": {
+      "append_terminal_window": true,
+      "block_support": {
+        "combined_binary_cases_minimum": 60,
+        "complement_binary_cases_minimum": 30,
+        "condition_binary_cases_minimum_interaction": 12,
+        "condition_binary_cases_minimum_single": 20,
+        "joint_known_coverage_pct_minimum": 35.0
+      },
+      "gates": {
+        "eligible_blocks_minimum": 6,
+        "latest_eligible_block_effect_must_be_positive": true,
+        "maximum_consecutive_opposite_effect_blocks": 2,
+        "median_effect_pp_minimum": 3.0,
+        "positive_effect_fraction_minimum": 0.7
+      },
+      "step_session_rows": 63,
+      "warning": "Overlapping rolling blocks are stability diagnostics, not independent observations or a source of p-values.",
+      "window_session_rows": 126
+    },
+    "shortlist": {
+      "label": "INTERNALLY_STABLE_POST_HOC_NO_FORWARD_VALIDATION_CREDIT",
+      "maximum_per_session": 2,
+      "zero_acceptable": true
+    }
+  },
+  "validation_gates": [
+    "M4 state and all M4 result seals match before chronology access.",
+    "Exactly four authorized candidate families are present.",
+    "Exactly two candidates are assigned to each session.",
+    "Every candidate links only to its exact M4 relationship IDs.",
+    "No COT feature, ZN feature, execution field, 2025 value, or 2026 value is present.",
+    "The Holm family size is fixed at four even when support fails.",
+    "Calendar and rolling blocks, support floors, gates, ranking, and rejection rules are frozen.",
+    "The engine and tests pass and their hashes are sealed.",
+    "No development case chronology or outcome is deserialized by this freeze operation."
+  ],
+  "verdict": "PASS_V3_MILESTONE_5_PRE_RESULT_FREEZE"
+}

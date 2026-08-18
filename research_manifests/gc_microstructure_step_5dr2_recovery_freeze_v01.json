@@ -1,0 +1,37 @@
+{
+  "all_16_key_hash": "57aae70f54e808326ce8b7a1923ece9e5483bbd96b87b4c2f1dcc1840699e281",
+  "freeze_receipt": "d4589591ce02a859f5ec66acadf924c3078880a7e139a329fecfc339b9dbd6ec",
+  "frozen_at_utc": "2026-08-04T11:37:55.606217Z",
+  "implementation": {
+    "modification_after_freeze_prohibited": true,
+    "path": "tools/recover_gc_microstructure_step5dr2.py",
+    "sha256": "c6b80372062d75aef3e6edf8f2294d0f5fa0e05d8a5573b5b63f930986d1ed24",
+    "synthetic_self_test_required_before_freeze": true
+  },
+  "mt5_initialized_or_queried_before_freeze": false,
+  "next_action": "Run the frozen implementation once, seal PASS or FAIL, and stop.",
+  "outcome_values_accessed": false,
+  "predecessor_hashes": {
+    "existing_casebook_price_source": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+    "step5d_failure": "44f32d8da4e58d19f1f4e2d2a9fccace63457f75fa58370e119d0b5273090805",
+    "step5d_verdict": "3ec082a95bd48cb412b9771eaae8cffd1641593c7ad60b033da3c9a95a6994ef",
+    "step5dr1_corrected_final_seal": "885d292f604669011a76b28bb649baf8389d7a2ecd59ff43d42abce08e9ae578",
+    "step5dr1_corrected_manifest": "fe53160bd36f3d073b4250d65a23fbafb8f2beb48a580681f84c21049498af85",
+    "step5dr1_corrected_primary": "f7e3460e32df145a15b24696bd5db8d78c15069b85e002310c6685c47b37421c",
+    "step5dr1_corrected_reference": "3e81ae8e8d925f266c2a98c18061368ef534055ea0f52bfe5bd806776cbf7cb9",
+    "step5dr1_corrected_verdict": "7737aeac938bb26d33391409d72c25c56f230582a9483c95e614c13e28145686",
+    "step5dr1_freeze": "3d2602f6c2efb8c2146835c8b877727d7a0a4bc82aa66d5617e08be18fc5b34d",
+    "step5dr1_original_final_seal": "d163c989e9c1008163c36732db026955c0a325ee57d2096adeaa5053e4848bf9",
+    "step5dr1_protocol": "18c4637970505d6b2f58e74e7cc4f8bb862bf50e1336aa6fd62057eaac3536ac"
+  },
+  "protocol": {
+    "path": "research_manifests/gc_microstructure_step_5dr2_recovery_protocol_v01.json",
+    "protocol_hash": "6b7676bb9ce4bd5685fec1ce951e9bf7bc2a437b0e7f0f963629cce295e1d15d",
+    "sha256": "fdd48b9bf9c70070cbc876612956dd9cc4dcb6097cddf3229febea2e64ef9590"
+  },
+  "request_registry_hash": "fa80cda11e09c1f32104fa1756dbf9f3c8f8712c1b379d789a4a4b1753af6491",
+  "row_level_market_data_accessed_before_freeze": false,
+  "status": "SEALED_BEFORE_MT5_ACCESS",
+  "terminal_executable_sha256": "c4d4434b243d08e49d2c33bc952f6edcd18cacf8989a5342692951690391af95",
+  "version": "GC_MICROSTRUCTURE_STEP_5D_R2_RECOVERY_FREEZE_V0_1"
+}

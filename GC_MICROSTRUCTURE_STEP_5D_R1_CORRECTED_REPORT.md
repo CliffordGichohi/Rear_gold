@@ -1,0 +1,41 @@
+# GC Microstructure Step 5D-R1 Corrected Report
+
+Formal status: `PASS_STEP_5D_R1_DIAGNOSTIC_REPRODUCTION_AFTER_IMPLEMENTATION_CORRECTION`
+
+The original sealed R1 run is preserved. Its two metadata parsers agreed, but its shared evaluator failed to apply the V3 builder's `fact.complete` pre-filter. This corrected disposition was derived independently from the two sealed metadata projections; no source row, outcome, or market value was reopened.
+
+## Verdict
+
+- Independent corrected reproduction: `PASS`
+- Existing sealed source can construct: `370 / 374` required non-holiday outcomes
+- All 374 constructible now: `FALSE`
+- Classifications: `{"RECOVERABLE_EXISTING_SEALED_SOURCE": 12, "RECOVERABLE_TARGETED_MT5_REFRESH": 4}`
+- Corrected complete-result checksum: `461dd90a7c9e37547cce4b2c515122ecef2896b1d24729c306284080f0382348`
+- Step 5D remains `FAIL_STEP_5D_OUTCOME_JOIN_COVERAGE`; Stage 1 and Stage 2 remain unexecuted.
+
+## Missing-key audit
+
+| Date | Session | Valid 1m / 239 | Missing 1m | V3 exclusion | Classification |
+|---|---|---:|---:|---|---|
+| 2021-12-13 | LONDON | 239 | 0 | ASIA (0 missing, 1 ineligible; COMPLETE,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_EXISTING_SEALED_SOURCE |
+| 2021-12-13 | NEW_YORK | 237 | 2 | ASIA (0 missing, 1 ineligible; COMPLETE,MISSING_SOURCE_MINUTES,SOURCE_COUNT), NEW_YORK (0 missing, 1 ineligible; COMPLETE,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_TARGETED_MT5_REFRESH |
+| 2021-12-15 | LONDON | 239 | 0 | ASIA (0 missing, 3 ineligible; COMPLETE,FIRST_SOURCE_OPEN,LAST_SOURCE_OPEN,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_EXISTING_SEALED_SOURCE |
+| 2021-12-15 | NEW_YORK | 239 | 0 | ASIA (0 missing, 3 ineligible; COMPLETE,FIRST_SOURCE_OPEN,LAST_SOURCE_OPEN,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_EXISTING_SEALED_SOURCE |
+| 2022-07-12 | LONDON | 239 | 0 | ASIA (0 missing, 1 ineligible; COMPLETE,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_EXISTING_SEALED_SOURCE |
+| 2022-07-12 | NEW_YORK | 239 | 0 | ASIA (0 missing, 1 ineligible; COMPLETE,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_EXISTING_SEALED_SOURCE |
+| 2022-10-11 | LONDON | 239 | 0 | ASIA (0 missing, 1 ineligible; COMPLETE,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_EXISTING_SEALED_SOURCE |
+| 2022-10-11 | NEW_YORK | 239 | 0 | ASIA (0 missing, 1 ineligible; COMPLETE,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_EXISTING_SEALED_SOURCE |
+| 2023-03-15 | NEW_YORK | 230 | 9 | NEW_YORK (1 missing, 2 ineligible; COMPLETE,FIRST_SOURCE_OPEN,LAST_SOURCE_OPEN,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_TARGETED_MT5_REFRESH |
+| 2023-08-15 | LONDON | 196 | 43 | LONDON (7 missing, 3 ineligible; COMPLETE,FIRST_SOURCE_OPEN,LAST_SOURCE_OPEN,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_TARGETED_MT5_REFRESH |
+| 2023-08-15 | NEW_YORK | 239 | 0 | LONDON (7 missing, 3 ineligible; COMPLETE,FIRST_SOURCE_OPEN,LAST_SOURCE_OPEN,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_EXISTING_SEALED_SOURCE |
+| 2023-09-11 | LONDON | 239 | 0 | ASIA (0 missing, 3 ineligible; COMPLETE,FIRST_SOURCE_OPEN,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_EXISTING_SEALED_SOURCE |
+| 2023-09-11 | NEW_YORK | 239 | 0 | ASIA (0 missing, 3 ineligible; COMPLETE,FIRST_SOURCE_OPEN,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_EXISTING_SEALED_SOURCE |
+| 2023-09-13 | NEW_YORK | 236 | 3 | NEW_YORK (0 missing, 2 ineligible; COMPLETE,FIRST_SOURCE_OPEN,LAST_SOURCE_OPEN,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_TARGETED_MT5_REFRESH |
+| 2024-05-13 | LONDON | 239 | 0 | ASIA (0 missing, 1 ineligible; COMPLETE,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_EXISTING_SEALED_SOURCE |
+| 2024-05-13 | NEW_YORK | 239 | 0 | ASIA (0 missing, 1 ineligible; COMPLETE,MISSING_SOURCE_MINUTES,SOURCE_COUNT) | RECOVERABLE_EXISTING_SEALED_SOURCE |
+
+## One bounded recommendation
+
+`TARGETED_IC_MARKETS_MT5_REFRESH_ONLY` — Refresh only the deficient one-minute IC Markets MT5 windows, seal the refreshed source, and repeat coverage certification before any outcome join.
+
+This recommendation was not implemented. No data was refreshed, repaired, acquired, or charged.

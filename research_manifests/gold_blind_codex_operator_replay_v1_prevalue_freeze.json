@@ -1,0 +1,141 @@
+{
+  "acquisition_performed": false,
+  "calendar_2025": "LOCKED",
+  "calendar_2026": "LOCKED",
+  "case_count": 249,
+  "charge_usd": 0.0,
+  "human_decisions": "HIDDEN",
+  "outcomes": "LOCKED",
+  "population_sha256": "edcef9b7ee40b593c84a6b00450cad86b6e09d295018383c8b679f30766893e7",
+  "predecessor_records": [
+    {
+      "bytes": 12284,
+      "path": "research_artifacts/gold_annotated_replay_v3/browser_regression_certification.json",
+      "sha256": "be41b4f232d04930515d223af820ba731f2b1ccc8b6550d34b2100e4d0c148ac"
+    },
+    {
+      "bytes": 3387,
+      "path": "GOLD_ANNOTATED_REPLAY_V3_IMPLEMENTATION_REPORT.md",
+      "sha256": "84ab599911669abee9b3627a3a2f30fbe9869906c61a80d0060fbc2e5edfeda6"
+    },
+    {
+      "bytes": 4280,
+      "path": "GOLD_ANNOTATED_REPLAY_V3_USER_GUIDE.md",
+      "sha256": "0bc0f6bbff74963fd2d44215d6be16422e96a963f8b0053f17ed73a83cf1e89d"
+    },
+    {
+      "bytes": 82413,
+      "path": "research_artifacts/gold_annotated_replay_v3/post_practice_diagnostic.json",
+      "sha256": "98d088ab7973d5bc64899d0690794107112a083667ec294d14e4752827b57bf1"
+    },
+    {
+      "bytes": 1525,
+      "path": "research_manifests/gold_annotated_replay_v3_post_practice_diagnostic_seal.json",
+      "sha256": "2b4de7dfa710a19c3e10414647860f359683594cf8a63de54e660ba852da2414"
+    },
+    {
+      "bytes": 9581,
+      "path": "GOLD_ANNOTATED_REPLAY_V3_POST_PRACTICE_INTERPRETATION.md",
+      "sha256": "1bbe25b0d777dde1e0bfbc3ed3bb2827eee3ad960108fa64dcb0eb00c10687a1"
+    },
+    {
+      "bytes": 1547433,
+      "path": "research_artifacts/gold_annotated_replay_v3/ledgers/practice_event_ledger_v3.jsonl",
+      "sha256": "7639d3609b904a2bd7f92c6df5a596cecf148a91d4853282a6d5a17e68d193d6"
+    }
+  ],
+  "sealed_at": "2026-08-18T08:15:43.223611+00:00",
+  "sealed_outputs": [
+    {
+      "bytes": 12396,
+      "path": "GOLD_BLIND_CODEX_OPERATOR_REPLAY_AUDIT_CONTRACT_V1.md",
+      "sha256": "496f1fbad681458a3931a64d0156fb6f638a55ce3dbc0f8dfb5523c2c40ed192"
+    },
+    {
+      "bytes": 136075,
+      "path": "research_artifacts/gold_blind_codex_operator_replay_v1/population_registry.private.json",
+      "sha256": "73d18debc87f6ee2b17ab612ffa5d2a36a2a7aa73f15de0673a321be7889f92c"
+    },
+    {
+      "bytes": 45287,
+      "path": "research_artifacts/gold_blind_codex_operator_replay_v1/population_registry.public.json",
+      "sha256": "ebb8ea786deb7402e148f1ae4403692ddc21c13417af3c5483edc9953861696e"
+    },
+    {
+      "bytes": 2561,
+      "path": "research_artifacts/gold_blind_codex_operator_replay_v1/metadata_coverage_audit.json",
+      "sha256": "bc354adebfec032edd5d96de2ca435ea8696ad17613b9056100ce4779a66034f"
+    },
+    {
+      "bytes": 1215,
+      "path": "research_artifacts/gold_blind_codex_operator_replay_v1/decision_policy.json",
+      "sha256": "ae55c72dd080dfb84a235afe8d6b686232e0161c0a60ad142a8e276be0daa47a"
+    },
+    {
+      "bytes": 1037,
+      "path": "research_artifacts/gold_blind_codex_operator_replay_v1/execution_policy.json",
+      "sha256": "8e639a42d9846562d6ec50b5fd3203d09253649386ed7fd8f4db92a885c73d4b"
+    },
+    {
+      "bytes": 825,
+      "path": "research_artifacts/gold_blind_codex_operator_replay_v1/evidence_policy.json",
+      "sha256": "b28420b4c234ea8e681ca6eeef1586fbe1c8db93de19c89a89f54cf898252354"
+    },
+    {
+      "bytes": 754,
+      "path": "research_artifacts/gold_blind_codex_operator_replay_v1/ledger_policy.json",
+      "sha256": "fa7a1d37778ede4290e068d974800580f46e78cf2529573b80ae9b73922ccdda"
+    },
+    {
+      "bytes": 657,
+      "path": "research_artifacts/gold_blind_codex_operator_replay_v1/evaluation_policy.json",
+      "sha256": "ad6accb8b5d63e1373c58ea033cc3b69ce7b10c51c76d24ed23d7bc8793c83a7"
+    },
+    {
+      "bytes": 20466,
+      "path": "tools/prepare_gold_blind_codex_operator_replay_v1.py",
+      "sha256": "66473de564dc03befe126d0c161df08a62796c115999b334edc0aca2c93c420d"
+    }
+  ],
+  "sealed_outputs_sha256": "ee10e9a27a017621b89a6f6807186824cc47ce8be74224061879e7cd08d5ab15",
+  "source_records": [
+    {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    {
+      "bytes": 41815377,
+      "path": "research_artifacts/gold_casebook_v01/structure_snapshots.jsonl.gz",
+      "sha256": "31eea2decc8ed3f8d3e498a9339e7f59ee101e7c787da47a831e63bfb97c1064"
+    },
+    {
+      "bytes": 6229504,
+      "path": "research_artifacts/gold_casebook_v01/cross_market_snapshots.jsonl.gz",
+      "sha256": "470a2e1c020cd2f97f2ad5b0d7f9c5220aff4f644689c4d680c24373964eb285"
+    },
+    {
+      "bytes": 92793,
+      "path": "research_artifacts/gold_casebook_v01/positioning.jsonl.gz",
+      "sha256": "e6d1aabf0d4401f3af4e54dc8ef4c0e4074772ec3f2199cfe9009b5a0b267228"
+    },
+    {
+      "bytes": 890158,
+      "path": "research_artifacts/gold_casebook_v01/events.jsonl.gz",
+      "sha256": "c7875e09d9ed831ece0f223b8be5efb75550af5bf1996a2dfea9d6119b24e35f"
+    },
+    {
+      "bytes": 8511617,
+      "path": "research_artifacts/gold_casebook_v01/fundamentals.jsonl.gz",
+      "sha256": "d2b776f60c4535978bbfb28706b4700e6d054a10f8d57cfee171c83b212b7235"
+    },
+    {
+      "bytes": 8571382,
+      "path": "research_artifacts/gold_casebook_v01/sessions.jsonl.gz",
+      "sha256": "2695a2c0b9e8f41fcbf64c9f388e8883ebf7e1f0b3b09b90fb3a60ba7e64966a"
+    }
+  ],
+  "status": "SEALED_BEFORE_CALENDAR_2022_VALUE_MATERIALIZATION",
+  "verdict": "PASS_CONTRACT_COVERAGE_POPULATION_POLICY_FREEZE",
+  "version": "GOLD_BLIND_CODEX_OPERATOR_REPLAY_V1_PREVALUE_FREEZE_1_0"
+}

@@ -1,0 +1,44 @@
+{
+  "development_outcomes_accessed_before_freeze": false,
+  "files": {
+    "protocol": {
+      "canonical_hash": "0f2b9aa73efb0b765bbf938f3f107bb73b2d18521b116b2a1ca21d231755d5da",
+      "path": "research_manifests/gc_microstructure_step_5d_protocol_v01.json",
+      "sha256": "835361070b3955912938b5519ec0b7b32542d6774c895f43bde11a93fb268b64"
+    },
+    "test_registry": {
+      "canonical_hash": "76af433e1a1f50634c90259684e4cb337172abc92e0f65b59aa9537901c075eb",
+      "path": "research_manifests/gc_microstructure_step_5d_test_registry_v01.json",
+      "sha256": "e3b7a132f03cebaff4c05cc646e00f0b1867881d0109c65b71f1076e74ab2d4a"
+    }
+  },
+  "freeze_receipt": "7eafca4f3d9f0402911b5a82bdbd9bd9c0fd0732cc30e7106e5ea1c00a2df47c",
+  "frozen_at_utc": "2026-08-04T10:54:55.039606Z",
+  "frozen_test_counts": {
+    "london_stage_1": 12,
+    "london_stage_2": 60,
+    "new_york_stage_1": 12,
+    "new_york_stage_2": 64,
+    "stage_1": 24,
+    "stage_2": 124,
+    "total": 148
+  },
+  "market_outcome_values_accessed_before_freeze": false,
+  "next_action": "Only the sealed Step 5D outcome opening, Stage 1, Stage 2, reproduction, and final seal are authorized.",
+  "predecessor_file_hashes": {
+    "case_manifest_file": "dddbe125d11afef2094b7843f5521b7bbfcc95178e3fa376b60af8bdd2efc3b5",
+    "case_payload_file": "d0f5120713b5f9ce641c6285941bfc23d3aac3b83b561c8fc1138e33a5ede9b9",
+    "contract_file": "da9048f497c853ef3b1f2a4debe6c80f8c650217004bfe6df05e045751554fcb",
+    "feature_registry_file": "4b207a1dec5aa78a904c86cf8c6a14bf0a517dd918f24c5270c254400c865f01",
+    "step5c_manifest_file": "f7150f861f4883e3f7c100822af527ba497b8343225c24ebe16ffe11107e31fb",
+    "step5c_verdict_file": "f98702e5260f60fa258a8f5ed43adc944724075bf442f958677fdf8fe3dee2ad"
+  },
+  "predecessor_semantic_hashes": {
+    "case_manifest_hash": "d6aad4b861d98899d6fdcc92ea53a20221434af5038a3bcb86a8b9faa1d8e7b7",
+    "step5c_manifest_hash": "37ba904c257499a5247696fbae24461c994b765dfbc44b3bbeaa59cb9d58fb75",
+    "step5c_verdict_hash": "d4c632a9fb9b33bb1e4385e0116d082fffcbe14b15385677c0dc55978fb124f6"
+  },
+  "status": "SEALED_BEFORE_DEVELOPMENT_OUTCOME_ACCESS",
+  "version": "GC_MICROSTRUCTURE_STEP_5D_FREEZE_V0_1",
+  "year_2025_or_2026_values_accessed": false
+}

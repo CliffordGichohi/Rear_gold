@@ -1,0 +1,52 @@
+{
+  "controls": {
+    "contract": {
+      "bytes": 7896,
+      "path": "GOLD_TREND_PULLBACK_CONTINUATION_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "cdcc428d5a7423bfa1ea9c598f8aa17c903206465a524acbcee45e0b91692bb3"
+    },
+    "feature_registry": {
+      "bytes": 2866,
+      "path": "research_manifests/gold_trend_pullback_continuation_edge_v1_feature_registry.json",
+      "sha256": "face5d96956d2d498137c7c2672b858a2381de13b3321b570f37382bd02980f6"
+    },
+    "protocol": {
+      "bytes": 1356,
+      "path": "research_manifests/gold_trend_pullback_continuation_edge_v1_protocol.json",
+      "sha256": "8673fe1ebcc67458c4b1cb74d3c114ec86dbb876e56e7960b8e2da26b0d6e08d"
+    },
+    "test_registry": {
+      "bytes": 3286,
+      "path": "research_manifests/gold_trend_pullback_continuation_edge_v1_test_registry.json",
+      "sha256": "cb55bdf6655a3b79c6a2c42492a3262f7fb1682d6d90fc95b584a9d197b35723"
+    }
+  },
+  "design_freeze": {
+    "bytes": 4531,
+    "path": "research_manifests/gold_trend_pullback_continuation_edge_v1_design_freeze.json",
+    "sha256": "06bea5b6fc2d1d45c405269f9c8da4ac4204c315467a251470785b16e871e19d"
+  },
+  "development_outcomes_accessed": false,
+  "execution_or_pnl_permitted": false,
+  "feature_matrix_primary": {
+    "bytes": 7804461,
+    "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/primary_features.parquet",
+    "sha256": "972706fcf161bb8d3c84677bedea45d9a8e2b6fd463a2c7853bb624e0acf2cac"
+  },
+  "feature_matrix_reference": {
+    "bytes": 7804461,
+    "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/reference_features.parquet",
+    "sha256": "972706fcf161bb8d3c84677bedea45d9a8e2b6fd463a2c7853bb624e0acf2cac"
+  },
+  "feature_rows_hash": "9a1dea6135a3d8393b47f1246b66641f3ae34f7bc27899de5497ea28d4094523",
+  "forward_values_accessed": false,
+  "materialization_certification": {
+    "bytes": 8967,
+    "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/materialization_certification.json",
+    "sha256": "4dc96b37fa188722cfaa324aab42a41c2fd6dd5c28783465fd0ec1b0d27dc132"
+  },
+  "rows": 37191,
+  "sealed_at_utc": "2026-08-07T12:54:55.917726Z",
+  "status": "SEALED_AFTER_FEATURES_BEFORE_OUTCOME_JOIN",
+  "version": "GOLD_TPCE_V1_PREOUTCOME_FREEZE_1_0"
+}

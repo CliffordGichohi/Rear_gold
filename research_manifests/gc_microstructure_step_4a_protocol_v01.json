@@ -1,0 +1,381 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4A_PROTOCOL_V0_1",
+  "status": "FROZEN_BEFORE_IMPLEMENTATION_AND_BOOK_VALUE_ACCESS",
+  "frozen_at_utc": "2026-07-31T11:24:40.3912584Z",
+  "classification": "ENGINEERING_ONLY_FEATURE_PIPELINE",
+  "research_or_validation_credit": "NONE",
+  "purpose": "Build and reproduce deterministic neutral microstructure features without testing direction, outcomes, execution, or PnL.",
+  "predecessor_preservation": {
+    "required_step_3f_status": "FAIL_BOOK_MISMATCH",
+    "required_step_3f_manifest_hash": "aed3bbff4aaba27dfa574812a2f311b9aee06371e1da9eec84c8da9319072a81",
+    "required_step_3f_verdict_hash": "d8d8b6283117c570d71aeafbaf3370713596b66f75845cf33cb16f9c13c89213",
+    "all_earlier_verdicts_and_artifacts_immutable": true,
+    "comparator_correction_permitted": false,
+    "mbo_to_mbp_row_alignment_permitted": false
+  },
+  "sealed_sources": {
+    "calendar_date": "2024-01-09",
+    "research_and_validation_exclusion": "PERMANENT",
+    "mbo": {
+      "path": "data/raw/databento_gc_mbo_engineering_pilot/GLBX-20260730-WB9AXCVFET/normalized/gc_v_0_2024_01_09_mbo.parquet",
+      "schema": "mbo",
+      "records": 2322905,
+      "bytes": 31661220,
+      "sha256": "43a8a3bb2be9a4a36ab324e3fe0ca0e29ccb4529f445013a87156d3bad4c0ba3"
+    },
+    "mbp10": {
+      "path": "data/raw/databento_gc_mbp10_engineering_benchmark/GLBX-20260731-UJHWEDQUSX/normalized/gc_v_0_2024_01_09_mbp10.parquet",
+      "schema": "mbp-10",
+      "records": 1924786,
+      "bytes": 81164829,
+      "sha256": "4ead358f538d7c383a14f39bbde35b8ccfa21e38e58205edbc51bedfb2ed80d4"
+    },
+    "publisher_id": 1,
+    "instrument_id": 41512,
+    "continuous_symbol": "GC.v.0",
+    "raw_symbol": "GCG4",
+    "additional_data_acquisition_permitted": false,
+    "source_substitution_permitted": false,
+    "another_date_may_be_inspected": false
+  },
+  "temporal_contract": {
+    "availability_timestamp": "ts_recv",
+    "timestamp_unit": "nanoseconds_since_unix_epoch_utc",
+    "day_start_inclusive_ns": 1704758400000000000,
+    "day_end_exclusive_ns": 1704844800000000000,
+    "bucket_width_ns": 1000000000,
+    "bucket_count": 86400,
+    "bucket_interval": "[bucket_start_ns,bucket_end_ns)",
+    "bucket_index_formula": "floor((ts_recv-day_start_inclusive_ns)/bucket_width_ns)",
+    "row_order": [
+      "ts_recv",
+      "source_row_ordinal"
+    ],
+    "eligibility_rule": "A source row may affect only the bucket containing ts_recv and book as-of state for later buckets in the same market-state segment; ts_event is never used for availability.",
+    "future_row_access_permitted": false,
+    "output_order": "strictly increasing bucket_index from 0 through 86399",
+    "market_state_segments": [
+      {
+        "segment_id": "CONTINUOUS_00_22",
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive_ns": 1704758400000000000,
+        "end_exclusive_ns": 1704837600000000000
+      },
+      {
+        "segment_id": "MAINTENANCE_22_2245",
+        "state": "MAINTENANCE",
+        "start_inclusive_ns": 1704837600000000000,
+        "end_exclusive_ns": 1704840300000000000
+      },
+      {
+        "segment_id": "PRE_OPEN_2245_23",
+        "state": "PRE_OPEN",
+        "start_inclusive_ns": 1704840300000000000,
+        "end_exclusive_ns": 1704841200000000000
+      },
+      {
+        "segment_id": "CONTINUOUS_23_24",
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive_ns": 1704841200000000000,
+        "end_exclusive_ns": 1704844800000000000
+      }
+    ],
+    "state_boundary_rule": "Clear persisted MBP state and quote-OFI transition baseline at every segment start; never carry a book state or transition across segment boundaries."
+  },
+  "constants": {
+    "undefined_price_fixed_1e9": 9223372036854775807,
+    "ratio_scale_ppb": 1000000000,
+    "flag_snapshot": 32,
+    "flag_top_of_book": 64,
+    "flag_last": 128,
+    "flag_bad_ts_recv": 8,
+    "flag_maybe_bad_book": 4,
+    "ratio_rounding": "nearest_integer_with_half_away_from_zero",
+    "null_encoding_for_hash": "single_byte_0x00",
+    "non_null_encoding_for_hash": "single_byte_0x01_followed_by_type_specific_big_endian_value"
+  },
+  "input_fields": {
+    "mbo": [
+      "source_row_ordinal",
+      "ts_recv",
+      "ts_event",
+      "publisher_id",
+      "instrument_id",
+      "action",
+      "side",
+      "price_fixed_1e9",
+      "size",
+      "order_id",
+      "flags",
+      "sequence"
+    ],
+    "mbp10_metadata": [
+      "source_row_ordinal",
+      "ts_recv",
+      "ts_event",
+      "publisher_id",
+      "instrument_id",
+      "sequence",
+      "action",
+      "side",
+      "depth",
+      "flags"
+    ],
+    "mbp10_book_fields": "For each level 00 through 09 and each side bid and ask: px, sz, ct, in level-major then side-major then field-major canonical order."
+  },
+  "mbp10_authoritative_state_policy": {
+    "authority": "Vendor MBP-10 is the sole authority for top-ten book-state features.",
+    "mbo_reconstruction_used_for_book_state": false,
+    "mbo_mbp_row_join_used": false,
+    "bucket_close_state": "The last MBP-10 row in frozen row order with ts_recv less than bucket_end_ns and in the same market-state segment.",
+    "persistence": "If a segment has an earlier MBP-10 row but none in the current bucket, persist that exact authoritative row as the bucket-close state.",
+    "missing_state": "If no MBP-10 row has occurred since the segment start, state_available is false and every nullable book-derived feature is null.",
+    "snapshot_and_reset_state": "The vendor row remains authoritative. Snapshot and reset rows are never reconstructed or replaced.",
+    "two_sided_definition": "Level-00 bid and ask prices are not undefined and their size and count values are positive.",
+    "empty_level_canonical_form": {
+      "px": 9223372036854775807,
+      "sz": 0,
+      "ct": 0
+    },
+    "continuous_book_gate": "When two-sided during CONTINUOUS_MATCHING, best ask must be greater than or equal to best bid. Locked books are reported; crossed books fail integrity.",
+    "quote_ofi": {
+      "allocation": "Assign a transition to the bucket containing the current MBP-10 row's ts_recv.",
+      "eligible_transition": "Previous and current rows are in the same segment, neither is a snapshot or reset, and both are two-sided.",
+      "formula": "I(curr_bid_px>=prev_bid_px)*curr_bid_sz-I(curr_bid_px<=prev_bid_px)*prev_bid_sz-I(curr_ask_px<=prev_ask_px)*curr_ask_sz+I(curr_ask_px>=prev_ask_px)*prev_ask_sz",
+      "skipped_transition": "Every current MBP-10 row that is not an eligible transition, including the first row in a segment, increments quote_ofi_skipped_count.",
+      "no_transition_search_or_repair": true
+    }
+  },
+  "mbo_event_flow_policy": {
+    "authority": "MBO contributes only raw receive-time event-flow measurements; it never supplies a top-ten book state.",
+    "snapshot_definition": "flags bit 32 is set",
+    "live_definition": "flags bit 32 is not set",
+    "snapshot_exclusion": "Snapshot rows contribute only to total and snapshot counts and never to live quantity or pressure features.",
+    "actions": {
+      "A": "ADD",
+      "C": "CANCEL",
+      "M": "MODIFY",
+      "T": "TRADE",
+      "F": "FILL",
+      "R": "CLEAR_RESET",
+      "N": "NONE"
+    },
+    "side_semantics": {
+      "A": "ask resting side or sell aggressor for action T",
+      "B": "bid resting side or buy aggressor for action T",
+      "N": "source supplied no side"
+    },
+    "regular_add": "Live action A with side A or B, positive size, defined price, and flag 64 not set.",
+    "top_of_book_add": "Live action A with flag 64 set; count separately and exclude from add quantities and pressure ratios.",
+    "cancel": "Live action C with side A or B and positive size; the row size is aggregated as cancelled quantity.",
+    "modify": "Live action M with side A or B, positive size, and defined price; aggregate row size only as modify_new_size_qty and never reinterpret it as a size delta.",
+    "trade": "Live action T with positive size; side B is buy-aggressor quantity, side A is sell-aggressor quantity, and side N is unknown-aggressor quantity.",
+    "fill": "Live action F with positive size; keep bid, ask, and unknown resting-side quantities separate and never combine them with trade quantity.",
+    "reset": "Action R increments reset count only and contributes no economic quantity.",
+    "none": "Action N increments none count only and contributes no economic quantity.",
+    "no_lifecycle_repair": true,
+    "no_alignment_to_mbp10": true
+  },
+  "feature_registry": {
+    "identity_and_time": [
+      "bucket_index",
+      "bucket_start_ns",
+      "bucket_end_ns",
+      "market_segment",
+      "market_state"
+    ],
+    "mbo_counts": [
+      "mbo_total_records",
+      "mbo_live_records",
+      "mbo_snapshot_records",
+      "mbo_reset_count",
+      "mbo_none_count",
+      "mbo_unknown_action_count",
+      "mbo_invalid_side_count",
+      "mbo_nonpositive_size_count",
+      "mbo_undefined_price_count",
+      "mbo_bad_ts_recv_flag_count",
+      "mbo_maybe_bad_book_flag_count",
+      "mbo_top_of_book_add_count"
+    ],
+    "mbo_side_flow": [
+      "add_count_bid",
+      "add_count_ask",
+      "add_qty_bid",
+      "add_qty_ask",
+      "cancel_count_bid",
+      "cancel_count_ask",
+      "cancel_qty_bid",
+      "cancel_qty_ask",
+      "modify_count_bid",
+      "modify_count_ask",
+      "modify_new_size_qty_bid",
+      "modify_new_size_qty_ask",
+      "trade_count_buy",
+      "trade_count_sell",
+      "trade_count_unknown",
+      "trade_qty_buy",
+      "trade_qty_sell",
+      "trade_qty_unknown",
+      "fill_count_bid",
+      "fill_count_ask",
+      "fill_count_unknown",
+      "fill_qty_bid",
+      "fill_qty_ask",
+      "fill_qty_unknown"
+    ],
+    "mbo_ratios_ppb": {
+      "add_imbalance_ppb": "scaled_ratio(add_qty_bid-add_qty_ask,add_qty_bid+add_qty_ask)",
+      "cancel_pressure_imbalance_ppb": "scaled_ratio(cancel_qty_ask-cancel_qty_bid,cancel_qty_ask+cancel_qty_bid)",
+      "displayed_pressure_ppb": "scaled_ratio((add_qty_bid+cancel_qty_ask)-(add_qty_ask+cancel_qty_bid),add_qty_bid+cancel_qty_ask+add_qty_ask+cancel_qty_bid)",
+      "trade_imbalance_ppb": "scaled_ratio(trade_qty_buy-trade_qty_sell,trade_qty_buy+trade_qty_sell)",
+      "null_rule": "null when denominator is zero"
+    },
+    "mbp_counts_and_state": [
+      "mbp_update_count",
+      "mbp_snapshot_count",
+      "mbp_reset_count",
+      "mbp_unknown_action_count",
+      "mbp_bad_ts_recv_flag_count",
+      "mbp_maybe_bad_book_flag_count",
+      "quote_ofi_transition_count",
+      "quote_ofi_skipped_count",
+      "quote_ofi_raw",
+      "state_available",
+      "book_two_sided",
+      "state_source_row_ordinal",
+      "state_ts_recv_ns",
+      "book_age_ns",
+      "book_locked",
+      "book_crossed"
+    ],
+    "mbp_price_features_fixed_1e9": {
+      "best_bid_px_fixed_1e9": "level-00 bid price when two-sided, else null",
+      "best_ask_px_fixed_1e9": "level-00 ask price when two-sided, else null",
+      "spread_fixed_1e9": "best_ask-best_bid when two-sided, else null",
+      "midpoint_fixed_1e9": "round_half_away((best_bid+best_ask)/2) when two-sided, else null",
+      "microprice_fixed_1e9": "round_half_away((best_ask*bid_sz_00+best_bid*ask_sz_00)/(bid_sz_00+ask_sz_00)) when two-sided and denominator positive, else null"
+    },
+    "mbp_depth_features": [
+      "bid_depth_l1",
+      "ask_depth_l1",
+      "bid_depth_l5",
+      "ask_depth_l5",
+      "bid_depth_l10",
+      "ask_depth_l10",
+      "bid_order_count_l1",
+      "ask_order_count_l1",
+      "bid_order_count_l5",
+      "ask_order_count_l5",
+      "bid_order_count_l10",
+      "ask_order_count_l10",
+      "depth_imbalance_l1_ppb",
+      "depth_imbalance_l5_ppb",
+      "depth_imbalance_l10_ppb",
+      "order_count_imbalance_l1_ppb",
+      "order_count_imbalance_l5_ppb",
+      "order_count_imbalance_l10_ppb",
+      "depth_concentration_l1_ppb"
+    ],
+    "depth_formulas": {
+      "depth_lN": "Sum authoritative sz for levels 00 through N-1 on the named side; null when state is unavailable.",
+      "order_count_lN": "Sum authoritative ct for levels 00 through N-1 on the named side; null when state is unavailable.",
+      "depth_imbalance_lN_ppb": "scaled_ratio(bid_depth_lN-ask_depth_lN,bid_depth_lN+ask_depth_lN)",
+      "order_count_imbalance_lN_ppb": "scaled_ratio(bid_order_count_lN-ask_order_count_lN,bid_order_count_lN+ask_order_count_lN)",
+      "depth_concentration_l1_ppb": "scaled_ratio(bid_depth_l1+ask_depth_l1,bid_depth_l10+ask_depth_l10)",
+      "ratio_null_rule": "null when state is unavailable or denominator is zero"
+    },
+    "classification": "Every output is OBSERVED or CALCULATED. No signal, target, label, expected direction, or inference is produced."
+  },
+  "missing_data_policy": {
+    "complete_bucket_grid": true,
+    "mbo_no_record_bucket": "All event counts and quantities are zero; ratio features with zero denominator are null.",
+    "mbp_no_update_bucket_within_segment": "Persist the most recent authoritative MBP-10 row from that segment and report its increasing book_age_ns.",
+    "mbp_no_state_since_segment_start": "state_available false; state identifiers, age, prices, depths, counts, and derived book features null; booleans book_two_sided, book_locked, and book_crossed false.",
+    "cross_segment_forward_fill": false,
+    "interpolation": false,
+    "backfill": false,
+    "row_drop": false,
+    "malformed_levels": "Count as an integrity violation; do not repair or substitute a level.",
+    "unknown_actions_or_sides": "Count explicitly; never infer or repair."
+  },
+  "implementation_independence": {
+    "primary": "Streaming fixed-length arrays indexed directly by integer bucket index; sequential MBP as-of state machine.",
+    "reference": "Streaming dictionary accumulators keyed by bucket start followed by an independently coded ordered-grid materialization; independent MBP segment state machine.",
+    "complete_source_passes": "Each implementation independently reads every MBO and every MBP-10 source row.",
+    "shared_code_allowed": [
+      "frozen constants",
+      "source seal verification",
+      "canonical serialization and file writing"
+    ],
+    "shared_feature_aggregation_or_formula_code_permitted": false,
+    "comparison": "Compare source input checksums, output row counts, null counts, per-column canonical checksums, complete-row checksum, technical diagnostics, and output parquet SHA-256.",
+    "identical_results_required": true
+  },
+  "integrity_gates": {
+    "predecessor_and_source_seals_valid": true,
+    "required_input_columns_present": true,
+    "source_record_counts_exact": true,
+    "publisher_and_instrument_exact": true,
+    "all_receive_timestamps_in_frozen_day": true,
+    "receive_timestamp_and_source_ordinal_order_nondecreasing": true,
+    "every_source_row_allocated_exactly_once": true,
+    "output_bucket_rows": 86400,
+    "output_bucket_grid_complete_unique_and_ordered": true,
+    "no_cross_segment_state_carry": true,
+    "empty_levels_canonical": true,
+    "book_sizes_and_counts_nonnegative": true,
+    "continuous_crossed_book_rows": 0,
+    "bad_ts_recv_flag_rows": 0,
+    "maybe_bad_book_flag_rows": 0,
+    "unknown_action_rows": 0,
+    "no_mbo_to_mbp_alignment": true,
+    "no_outcome_signal_execution_or_pnl_work": true,
+    "primary_and_reference_counts_identical": true,
+    "primary_and_reference_null_counts_identical": true,
+    "primary_and_reference_column_checksums_identical": true,
+    "primary_and_reference_complete_row_checksum_identical": true,
+    "primary_and_reference_parquet_sha256_identical": true
+  },
+  "verdict_precedence": [
+    "FAIL_PREDECESSOR_OR_SOURCE_INTEGRITY",
+    "FAIL_FEATURE_INTEGRITY",
+    "FAIL_REPRODUCTION",
+    "PASS"
+  ],
+  "verdict_rules": {
+    "FAIL_PREDECESSOR_OR_SOURCE_INTEGRITY": "Any required predecessor, source hash, source schema, source count, date, publisher, instrument, or completeness gate fails.",
+    "FAIL_FEATURE_INTEGRITY": "A single implementation violates allocation, timestamp, bucket-grid, segment-boundary, book-integrity, flag, action, or prohibited-work gates.",
+    "FAIL_REPRODUCTION": "Both implementations pass independently but differ on any frozen count, null count, checksum, diagnostic, or output payload hash.",
+    "PASS": "Every frozen integrity and reproduction gate passes exactly.",
+    "partial_pass_label_permitted": false
+  },
+  "reporting_policy": {
+    "human_or_model_market_value_inspection": false,
+    "report_only": [
+      "formal status",
+      "source and output row counts",
+      "feature and null counts",
+      "technical integrity counts",
+      "checksums and hashes",
+      "reproduction result"
+    ],
+    "report_market_prices_or_feature_values": false,
+    "feature_payload_sealed_without_value_inspection": true
+  },
+  "prohibited": [
+    "modifying any predecessor verdict or sealed artifact",
+    "any further MBO-to-MBP comparator correction",
+    "aligning MBO rows to MBP-10 rows or book boundaries",
+    "using book equality to choose or repair any event",
+    "acquiring or substituting data",
+    "inspecting another date",
+    "inspecting future returns or directional outcomes",
+    "creating targets, labels, signals, candidates, or directional relationships",
+    "feature selection or ranking",
+    "execution optimization",
+    "trades, PnL, R multiples, or account returns",
+    "human or model inspection of emitted market values"
+  ],
+  "completion_policy": "Apply the frozen gates once, preserve the honest result, document and seal Step 4A, and stop without correction or research."
+}

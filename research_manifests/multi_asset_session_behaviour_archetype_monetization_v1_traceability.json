@@ -1,0 +1,1210 @@
+{
+  "catalog_hash": "93094dff2c9e504a53001655cc6bc0c7209294c14fed0089bb57d61fc459bc9c",
+  "contract": {
+    "bytes": 6164,
+    "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_DISCOVERY_CONTRACT_V1.md",
+    "sha256": "f1f8d2591e4ca51d433ca9dfd8592d5e12306a694e3478ed09a571dbd9eda457"
+  },
+  "decision_coverage_counts": {
+    "DERIVABLE_NOT_MATERIALIZED": 40,
+    "MISSING": 8,
+    "PRESENT_AND_ADEQUATE": 18,
+    "PRESENT_BUT_PARTIAL": 7
+  },
+  "decision_field_count": 73,
+  "decision_fields": [
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "INFERRED",
+      "field_id": "bos_mss_H1",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_CLOSE_VS_CONFIRMED_SWING"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "INFERRED",
+      "field_id": "bos_mss_H4",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_CLOSE_VS_CONFIRMED_SWING"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "INFERRED",
+      "field_id": "bos_mss_M15",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_CLOSE_VS_CONFIRMED_SWING"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "breakeven_inflation_state",
+      "group": "cross_market",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "FRED_BREAKEVEN"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "OBSERVED",
+      "field_id": "broker_spread",
+      "group": "mechanics",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "IC_MARKETS_M1_SPREAD_POINTS"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "OBSERVED",
+      "field_id": "broker_tick_volume",
+      "group": "mechanics",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "IC_MARKETS_M1_TICK_VOLUME"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "MISSING",
+      "epistemic_classification": "OBSERVED",
+      "field_id": "centralized_futures_volume",
+      "group": "mechanics",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "EXCHANGE_DATA_NOT_PRESENT_FOR_ALL_ASSETS"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "confirmed_H4_H1_M15_swing_levels",
+      "group": "levels",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_PRE_DECISION_PRICE_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "confirmed_swings_H1",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "STRICT_2_LEFT_2_RIGHT_KNOWN_AFTER_SECOND_RIGHT_CLOSE"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "confirmed_swings_H4",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "STRICT_2_LEFT_2_RIGHT_KNOWN_AFTER_SECOND_RIGHT_CLOSE"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "confirmed_swings_M15",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "STRICT_2_LEFT_2_RIGHT_KNOWN_AFTER_SECOND_RIGHT_CLOSE"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "INFERRED",
+      "field_id": "contradicting_evidence",
+      "group": "synthesis",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "TRANSPARENT_BOOK_TRACEABLE_RULES"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "credit_risk_state",
+      "group": "cross_market",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "US_HIGH_YIELD_SPREAD"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_BUT_PARTIAL",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "economic_surprise_and_revision",
+      "group": "expectations",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "POINT_IN_TIME_ACTUAL_FORECAST_PREVIOUS_REVISION"
+    },
+    {
+      "applicability": [
+        "XTIUSD"
+      ],
+      "branch": "decision_state",
+      "development_coverage": "MISSING",
+      "epistemic_classification": "OBSERVED",
+      "field_id": "energy_inventory_context",
+      "group": "catalysts",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "VERIFIED_EIA_HISTORY_NOT_PRESENT"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "equity_risk_state",
+      "group": "cross_market",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "US500_USTEC_AND_PUBLIC_EQUITY_SERIES"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "MISSING",
+      "epistemic_classification": "OBSERVED",
+      "field_id": "etf_and_central_bank_flows",
+      "group": "positioning",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "VERSIONED_POINT_IN_TIME_SOURCE_NOT_PRESENT"
+    },
+    {
+      "applicability": [
+        "EURUSD"
+      ],
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_BUT_PARTIAL",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "euro_rate_differential",
+      "group": "cross_market",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "US_RATES_PRESENT_EURO_CURVE_INCOMPLETE"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "MISSING",
+      "epistemic_classification": "OBSERVED",
+      "field_id": "exact_meeting_probabilities",
+      "group": "expectations",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "LICENSED_HISTORICAL_CURVE_NOT_PRESENT"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_BUT_PARTIAL",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "fed_policy_path_proxy",
+      "group": "expectations",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "ZQ_SR3_AND_FRED_ALFRED"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "fed_rate_state",
+      "group": "macro",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "FED_POLICY_RATE_VINTAGES"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "financial_stress_state",
+      "group": "cross_market",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "US_FINANCIAL_STRESS"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "INFERRED",
+      "field_id": "fundamental_direction_context",
+      "group": "synthesis",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "TRANSPARENT_BOOK_TRACEABLE_RULES"
+    },
+    {
+      "applicability": [
+        "XAGUSD"
+      ],
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_BUT_PARTIAL",
+      "epistemic_classification": "OBSERVED_CALCULATED",
+      "field_id": "gold_cot_context_for_silver",
+      "group": "positioning",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "SEALED_GOLD_COT_FRIDAY_PUBLICATION"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "INFERRED",
+      "field_id": "growth_state",
+      "group": "macro",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "GDP_RETAIL_SALES"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "INFERRED",
+      "field_id": "highest_risk_assumption",
+      "group": "synthesis",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "TRANSPARENT_BOOK_TRACEABLE_RULES"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "MISSING",
+      "epistemic_classification": "OBSERVED",
+      "field_id": "historical_pre_release_consensus",
+      "group": "expectations",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "VERIFIED_VINTAGE_FORECAST_SOURCE"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "INFERRED",
+      "field_id": "inflation_state",
+      "group": "macro",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "CPI_CORE_CPI_PCE_CORE_PCE_VINTAGES"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "OBSERVED",
+      "field_id": "instrument_identity",
+      "group": "mechanics",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "IC_MARKETS_SYMBOL_METADATA"
+    },
+    {
+      "applicability": [
+        "USDJPY"
+      ],
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_BUT_PARTIAL",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "japanese_rate_differential",
+      "group": "cross_market",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "US_RATES_PRESENT_JAPANESE_CURVE_MISSING"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "INFERRED",
+      "field_id": "known_liquidity_level_registry",
+      "group": "levels",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_PRE_DECISION_PRICE_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_BUT_PARTIAL",
+      "epistemic_classification": "INFERRED",
+      "field_id": "labour_state",
+      "group": "macro",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "NFP_UNEMPLOYMENT_CLAIMS_WAGES_WHERE_AVAILABLE"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "m1_timestamp_quality",
+      "group": "mechanics",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "SEALED_MT5_OPEN_TIME"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "INFERRED",
+      "field_id": "macro_confidence",
+      "group": "synthesis",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "TRANSPARENT_BOOK_TRACEABLE_RULES"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "INFERRED",
+      "field_id": "macro_regime_synthesis",
+      "group": "synthesis",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "TRANSPARENT_BOOK_TRACEABLE_RULES"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_BUT_PARTIAL",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "minutes_to_from_tier1_event",
+      "group": "catalysts",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "SEALED_MT5_EVENT_METADATA"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "nearest_known_support_resistance",
+      "group": "levels",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_PRE_DECISION_PRICE_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "MISSING",
+      "epistemic_classification": "OBSERVED",
+      "field_id": "options_iv_strikes_gamma",
+      "group": "positioning",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "HISTORICAL_OPTIONS_SOURCE_NOT_PRESENT"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "MISSING",
+      "epistemic_classification": "OBSERVED",
+      "field_id": "order_book_depth_resilience_impact",
+      "group": "mechanics",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "MBO_MBP_NOT_PRESENT_FOR_SIX_ASSET_UNIVERSE"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "prior_day_high_low",
+      "group": "levels",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_PRE_DECISION_PRICE_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "prior_eligible_session_high_low",
+      "group": "levels",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_PRE_DECISION_PRICE_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "prior_week_high_low",
+      "group": "levels",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_PRE_DECISION_PRICE_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "round_number_levels",
+      "group": "levels",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_PRE_DECISION_PRICE_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "session_calendar_and_phase",
+      "group": "sessions",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "IANA_DST_SESSION_REGISTRY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "session_open_gap",
+      "group": "levels",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_PRE_DECISION_PRICE_ONLY"
+    },
+    {
+      "applicability": [
+        "XAGUSD"
+      ],
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "silver_gold_relative_state",
+      "group": "cross_market",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "XAGUSD_AND_XAUUSD_POINT_IN_TIME"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_D1_atr_and_displacement",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_D1_completed_candle_state",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_D1_range_compression_expansion",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_H1_atr_and_displacement",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_H1_completed_candle_state",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_H1_range_compression_expansion",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_H4_atr_and_displacement",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_H4_completed_candle_state",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_H4_range_compression_expansion",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_M15_atr_and_displacement",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_M15_completed_candle_state",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_M15_range_compression_expansion",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_M5_atr_and_displacement",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_M5_completed_candle_state",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_M5_range_compression_expansion",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_W1_atr_and_displacement",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_W1_completed_candle_state",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "structure_W1_range_compression_expansion",
+      "group": "structure",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "COMPLETED_MT5_BARS_ONLY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "INFERRED",
+      "field_id": "supporting_evidence",
+      "group": "synthesis",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "TRANSPARENT_BOOK_TRACEABLE_RULES"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "INFERRED",
+      "field_id": "unknown_driver_registry",
+      "group": "synthesis",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "TRANSPARENT_BOOK_TRACEABLE_RULES"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "MISSING",
+      "epistemic_classification": "OBSERVED",
+      "field_id": "unscheduled_news_state",
+      "group": "catalysts",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "LICENSED_POINT_IN_TIME_NEWS_NOT_PRESENT"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "us_10y_real_yield_state",
+      "group": "cross_market",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "FRED_REAL_10Y"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "us_10y_yield_state",
+      "group": "cross_market",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "FRED_10Y_AND_ZN_PROXY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "us_2y_yield_state",
+      "group": "cross_market",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "FRED_2Y_AND_ZT_PROXY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "usd_proxy_state",
+      "group": "cross_market",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "FRED_BROAD_USD_AND_EURUSD_PROXY_NOT_DXY"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "PRESENT_AND_ADEQUATE",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "volatility_state",
+      "group": "cross_market",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "US_VOLATILITY_INDEX"
+    },
+    {
+      "applicability": "ALL",
+      "branch": "decision_state",
+      "development_coverage": "DERIVABLE_NOT_MATERIALIZED",
+      "epistemic_classification": "CALCULATED",
+      "field_id": "yield_curve_state",
+      "group": "cross_market",
+      "materialized_in_milestone_1": false,
+      "point_in_time_gate": "available_at_lte_decision_at",
+      "source_or_method": "2Y_10Y_POINT_IN_TIME_DIFFERENCE"
+    }
+  ],
+  "epistemic_states": [
+    "OBSERVED",
+    "CALCULATED",
+    "INFERRED",
+    "UNKNOWN"
+  ],
+  "field_count": 112,
+  "outcome_field_count": 39,
+  "protocol": {
+    "bytes": 7543,
+    "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_protocol.json",
+    "sha256": "182967631ef05f2060e9d49b74b0028be85c9d8b62cee5f8cba3341cae7c71a7"
+  },
+  "reference_book": {
+    "bytes": 971812,
+    "path": "Gold_USD_Market_Intelligence_Reference_Book.pdf",
+    "sha256": "3e7ddc561932a859a4c9043a38ff71b7003907963fb52247e41edaeefc8ac42a"
+  },
+  "rules": {
+    "XAUUSD_as_target_instrument": false,
+    "execution_fields_included": false,
+    "institutional_motive_never_observed_without_direct_source": true,
+    "missing_is_unknown_not_neutral": true,
+    "outcome_branch_decision_eligible": false
+  },
+  "status": "FROZEN_BEFORE_CASE_OR_BEHAVIOUR_MATERIALIZATION",
+  "subsequent_behaviour_fields": [
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "absolute_displacement_120m",
+      "group": "fixed_horizons",
+      "materialized_in_milestone_1": false,
+      "method": "absolute_signed_displacement_120m"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "absolute_displacement_15m",
+      "group": "fixed_horizons",
+      "materialized_in_milestone_1": false,
+      "method": "absolute_signed_displacement_15m"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "absolute_displacement_30m",
+      "group": "fixed_horizons",
+      "materialized_in_milestone_1": false,
+      "method": "absolute_signed_displacement_30m"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "absolute_displacement_5m",
+      "group": "fixed_horizons",
+      "materialized_in_milestone_1": false,
+      "method": "absolute_signed_displacement_5m"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "absolute_displacement_60m",
+      "group": "fixed_horizons",
+      "materialized_in_milestone_1": false,
+      "method": "absolute_signed_displacement_60m"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "close_location",
+      "group": "path",
+      "materialized_in_milestone_1": false,
+      "method": "close_minus_low_divided_by_high_minus_low"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "decision_known_level_interactions",
+      "group": "levels",
+      "materialized_in_milestone_1": false,
+      "method": "touch_breach_accept_reject_failed_break_retest_only_for_preexisting_levels"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "descriptive_archetype",
+      "group": "archetype",
+      "materialized_in_milestone_1": false,
+      "method": "frozen_precedence_and_threshold_taxonomy"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "first_passage_down_0P25_ATR",
+      "group": "first_passage",
+      "materialized_in_milestone_1": false,
+      "method": "first_M1_low_at_or_below_reference_minus_0P25_predecision_ATR"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "first_passage_down_0P50_ATR",
+      "group": "first_passage",
+      "materialized_in_milestone_1": false,
+      "method": "first_M1_low_at_or_below_reference_minus_0P50_predecision_ATR"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "first_passage_down_1P00_ATR",
+      "group": "first_passage",
+      "materialized_in_milestone_1": false,
+      "method": "first_M1_low_at_or_below_reference_minus_1P00_predecision_ATR"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "first_passage_down_1P50_ATR",
+      "group": "first_passage",
+      "materialized_in_milestone_1": false,
+      "method": "first_M1_low_at_or_below_reference_minus_1P50_predecision_ATR"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "first_passage_down_2P00_ATR",
+      "group": "first_passage",
+      "materialized_in_milestone_1": false,
+      "method": "first_M1_low_at_or_below_reference_minus_2P00_predecision_ATR"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "first_passage_down_3P00_ATR",
+      "group": "first_passage",
+      "materialized_in_milestone_1": false,
+      "method": "first_M1_low_at_or_below_reference_minus_3P00_predecision_ATR"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "first_passage_up_0P25_ATR",
+      "group": "first_passage",
+      "materialized_in_milestone_1": false,
+      "method": "first_M1_high_at_or_above_reference_plus_0P25_predecision_ATR"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "first_passage_up_0P50_ATR",
+      "group": "first_passage",
+      "materialized_in_milestone_1": false,
+      "method": "first_M1_high_at_or_above_reference_plus_0P50_predecision_ATR"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "first_passage_up_1P00_ATR",
+      "group": "first_passage",
+      "materialized_in_milestone_1": false,
+      "method": "first_M1_high_at_or_above_reference_plus_1P00_predecision_ATR"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "first_passage_up_1P50_ATR",
+      "group": "first_passage",
+      "materialized_in_milestone_1": false,
+      "method": "first_M1_high_at_or_above_reference_plus_1P50_predecision_ATR"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "first_passage_up_2P00_ATR",
+      "group": "first_passage",
+      "materialized_in_milestone_1": false,
+      "method": "first_M1_high_at_or_above_reference_plus_2P00_predecision_ATR"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "first_passage_up_3P00_ATR",
+      "group": "first_passage",
+      "materialized_in_milestone_1": false,
+      "method": "first_M1_high_at_or_above_reference_plus_3P00_predecision_ATR"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "high_low_order",
+      "group": "timing",
+      "materialized_in_milestone_1": false,
+      "method": "HIGH_FIRST_LOW_FIRST_OR_SAME_M1_AMBIGUOUS"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "long_mae",
+      "group": "excursions",
+      "materialized_in_milestone_1": false,
+      "method": "max_0_reference_open_minus_minimum_low"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "long_mfe",
+      "group": "excursions",
+      "materialized_in_milestone_1": false,
+      "method": "max_0_maximum_high_minus_reference_open"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "maximum_downward_excursion",
+      "group": "excursions",
+      "materialized_in_milestone_1": false,
+      "method": "reference_open_minus_minimum_low"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "maximum_upward_excursion",
+      "group": "excursions",
+      "materialized_in_milestone_1": false,
+      "method": "maximum_high_minus_reference_open"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "path_efficiency",
+      "group": "path",
+      "materialized_in_milestone_1": false,
+      "method": "absolute_close_displacement_divided_by_sum_absolute_completed_M5_close_changes"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "realized_path_volatility",
+      "group": "path",
+      "materialized_in_milestone_1": false,
+      "method": "root_sum_squared_M1_log_changes"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "session_close_displacement",
+      "group": "fixed_horizons",
+      "materialized_in_milestone_1": false,
+      "method": "last_complete_M1_close_before_observation_end_minus_reference_open"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "session_high_timestamp",
+      "group": "timing",
+      "materialized_in_milestone_1": false,
+      "method": "first_timestamp_of_session_maximum_high"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "session_low_timestamp",
+      "group": "timing",
+      "materialized_in_milestone_1": false,
+      "method": "first_timestamp_of_session_minimum_low"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "session_range",
+      "group": "path",
+      "materialized_in_milestone_1": false,
+      "method": "maximum_high_minus_minimum_low"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "short_mae",
+      "group": "excursions",
+      "materialized_in_milestone_1": false,
+      "method": "long_mfe_by_symmetric_fixed_reference_definition"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "short_mfe",
+      "group": "excursions",
+      "materialized_in_milestone_1": false,
+      "method": "long_mae_by_symmetric_fixed_reference_definition"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "signed_displacement_120m",
+      "group": "fixed_horizons",
+      "materialized_in_milestone_1": false,
+      "method": "close_at_or_before_reference_plus_120m_minus_reference_open"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "signed_displacement_15m",
+      "group": "fixed_horizons",
+      "materialized_in_milestone_1": false,
+      "method": "close_at_or_before_reference_plus_15m_minus_reference_open"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "signed_displacement_30m",
+      "group": "fixed_horizons",
+      "materialized_in_milestone_1": false,
+      "method": "close_at_or_before_reference_plus_30m_minus_reference_open"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "signed_displacement_5m",
+      "group": "fixed_horizons",
+      "materialized_in_milestone_1": false,
+      "method": "close_at_or_before_reference_plus_5m_minus_reference_open"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "signed_displacement_60m",
+      "group": "fixed_horizons",
+      "materialized_in_milestone_1": false,
+      "method": "close_at_or_before_reference_plus_60m_minus_reference_open"
+    },
+    {
+      "branch": "subsequent_behaviour",
+      "decision_eligible": false,
+      "epistemic_classification": "CALCULATED",
+      "field_id": "turning_point_count",
+      "group": "path",
+      "materialized_in_milestone_1": false,
+      "method": "strict_completed_M5_2L2R_turns"
+    }
+  ],
+  "version": "MULTI_ASSET_SESSION_BEHAVIOUR_V1_TRACEABILITY_1_0"
+}

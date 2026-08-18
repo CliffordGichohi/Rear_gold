@@ -1,0 +1,86 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_5B_RESUME_AMENDMENT_A_V0_1",
+  "status": "FROZEN_BEFORE_RESUMED_PROVIDER_METADATA_CALLS",
+  "frozen_at_utc": "2026-08-03T12:41:19.1958710Z",
+  "classification": "STORAGE_DESTINATION_AND_EXECUTION_ENVIRONMENT_REMEDIATION_ONLY",
+  "preserved_formal_result": {
+    "status": "STOP_STEP_5B_PRE_SUBMISSION_STORAGE_GATE",
+    "manifest_hash": "27f9826516160ef7e60a42d444158b5a62bf8d666acf7adde454783b9ec54402",
+    "verdict_hash": "e40d073d23192b1a2a3091d97b3c11f90f05905ab5e56aeea3181d28e7ddb53c",
+    "disposition": "PRESERVED_UNCHANGED_AS_ATTEMPT_01"
+  },
+  "remediation": {
+    "reason": "The original Windows destination had 184.958 GiB free and failed the frozen 350 GiB gate. The user supplied an Ubuntu server specifically to remediate that recoverable storage stop.",
+    "changes_only": [
+      "execution host",
+      "usable storage destination",
+      "isolated pinned Python environment",
+      "attempt identifier and destination-local artifact paths"
+    ],
+    "research_or_request_semantics_changed": false
+  },
+  "destination": {
+    "ssh_target": "wapi@192.168.13.195",
+    "hostname": "wapi-ProLiant-ML30-Gen10",
+    "ssh_host_ed25519_fingerprint": "SHA256:vdg1HmQssuMcHrx0KVVFkqFy4M5iR2D1AO5s/ko1f8Q",
+    "machine_id_sha256": "785074ce41e9793743f3e1b033715265df8ce31de34e56bcf585318e03da9983",
+    "root_path": "/home/wapi/rear_gold_step5b_v01",
+    "data_path": "/home/wapi/rear_gold_step5b_v01/data",
+    "filesystem_total_bytes_at_audit": 982240026624,
+    "filesystem_used_bytes_at_audit": 41614745600,
+    "filesystem_available_bytes_at_audit": 890654765056,
+    "minimum_required_available_bytes": 375809638400,
+    "storage_gate_at_amendment_freeze": "PASS"
+  },
+  "execution_environment": {
+    "operating_system": "Ubuntu 24.04.4 LTS",
+    "kernel": "Linux 6.14.0-37-generic x86_64",
+    "python": "3.12.3",
+    "virtual_environment": "/home/wapi/rear_gold_step5b_v01/.venv",
+    "virtualenv_bootstrap_sha256": "d63ac10e610738c3dcfa51ee0799e6b69ce2964d76cab734542684baf0ed3a5f",
+    "frozen_packages": {
+      "databento": "0.82.0",
+      "databento-dbn": "0.63.0",
+      "numpy": "2.5.1",
+      "pandas": "3.0.5",
+      "pyarrow": "25.0.0",
+      "zstandard": "0.25.0"
+    }
+  },
+  "unchanged_authority": {
+    "authorization_path": "research_manifests/gc_microstructure_step_5b_authorization_v01.json",
+    "authorization_sha256": "653c37f265ab055ff42928d1fb60853593a8556e0d744d6b671630a5e933e76a",
+    "maximum_combined_charge_usd": 120.0,
+    "minimum_usable_destination_bytes": 375809638400,
+    "dataset": "GLBX.MDP3",
+    "symbol": "GC.v.0",
+    "stype_in": "continuous",
+    "schemas": [
+      "mbo",
+      "mbp-10"
+    ],
+    "request_count": 86,
+    "selected_date_count": 203,
+    "request_registry_sha256": "f56467c32b5708bc1cb902e51f034243408b7a6f967f2ce2b652777cf2d00477"
+  },
+  "credential_policy": {
+    "source": "Existing local DATABENTO_API_KEY supplied by the user",
+    "remote_file": "/home/wapi/.config/rear_gold/databento.env",
+    "remote_mode": "0600",
+    "secret_must_never_be_logged_hashed_or_embedded_in_artifacts": true
+  },
+  "remaining_fail_fast_gates": [
+    "all predecessor and resume seals verify",
+    "destination remains at or above 350 GiB usable",
+    "all 86 frozen metadata estimates are rerun",
+    "combined estimate is at most USD 120.00",
+    "current usable Databento credits are confirmed sufficient from portal evidence",
+    "symbology and every frozen request remain unchanged"
+  ],
+  "submission_is_not_authorized_by_this_amendment_alone": true,
+  "batch_jobs_submitted": 0,
+  "data_acquired": false,
+  "charge_incurred": false,
+  "market_values_or_outcomes_accessed": false,
+  "relationships_signals_execution_trades_pnl_or_r_calculated": false
+}

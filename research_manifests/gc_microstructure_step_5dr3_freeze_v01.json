@@ -1,0 +1,68 @@
+{
+  "amendment": {
+    "path": "research_manifests/gc_microstructure_step_5dr3_amendment_v01.json",
+    "receipt": "bf891687f7784cf61480de8803cff20cee6fe4173f697af5e9a268de0fa37f0f",
+    "sha256": "335c39cf4ad459da85553ed698f5b926b50c1c0f208b7ecb79edc8b8ec233b60"
+  },
+  "development_outcome_sources_opened_by_r3_before_freeze": 0,
+  "freeze_receipt": "aa4011025f2f10be582af592337241bcf078e9ee5c073492dcdf0f853adb0213",
+  "frozen_at_utc": "2026-08-04T12:24:49.632226Z",
+  "implementation": {
+    "modification_after_freeze_prohibited": true,
+    "original_frozen_step5d_runner_sha256": "b129b18d6f62ba8338c81b05163b9ee8e4cff0fd79d8f3fd89a50b7ecef6e44a",
+    "path": "tools/run_gc_microstructure_step5dr3.py",
+    "sha256": "de3cb40e895d8d7ce28557f5c6dfec917ed7d722723375c5f22df8cb2bf09aab"
+  },
+  "next_action": "Run preflight, then exactly one controlled R3 recovery construction and join, Stage 1, Stage 2, independent reproduction, final seal, and stop.",
+  "outcome_values_accessed_before_freeze": false,
+  "population": {
+    "path": "research_manifests/gc_microstructure_step_5dr3_population_v01.json",
+    "population_hash": "f9b18ec511a862633335195de698af8912eeeee8a31cdc60f895988de4eb71a1",
+    "receipt": "37eab49a623f2fcfc00642ca3ba67445198c24bcfa69a7ba9574a699232d5fb7",
+    "sha256": "67b31a1ddaa47c13f24d402a86b1f666e0d6bfe20ca1c3af86538d165f798667"
+  },
+  "predecessor_hashes": {
+    "casebook_price_bars": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+    "discovery_contract": "da9048f497c853ef3b1f2a4debe6c80f8c650217004bfe6df05e045751554fcb",
+    "feature_hypothesis_registry": "4b207a1dec5aa78a904c86cf8c6a14bf0a517dd918f24c5270c254400c865f01",
+    "step5b2_amendment": "1a6dd3372f40b52d219b38e35504b9a96046ffc284117ed1ac6cc703d009f9d7",
+    "step5b2_freeze": "0c1e7b8db099ea4489c201dda9893da184a55f8159f89a4ce946e78a1485f918",
+    "step5b2_manifest": "3fedb586ce4f9621721575b748b82043f47a4f6630488c29e0b2f8e73b4c86f1",
+    "step5b2_verdict": "5f3bd13cc2336a50c09ecfcc44c7d63b226a4d212f9d08666d6a50e93e09a6cb",
+    "step5c_freeze": "5ad5d57af1fdab6a80e90cb872408f1f6df99d2d7a4a892a5f380c49aee9f82d",
+    "step5c_manifest": "f7150f861f4883e3f7c100822af527ba497b8343225c24ebe16ffe11107e31fb",
+    "step5c_primary_features": "277993e0cd2d5bff2e8f49c6aaf519ac024a1f7ac1ed8bbd0808f5d3213b5d98",
+    "step5c_protocol": "25e087ae505bd2b304b5d9533c9fb8dd8042b47e8e498ed82242ad48365e272d",
+    "step5c_reference_features": "277993e0cd2d5bff2e8f49c6aaf519ac024a1f7ac1ed8bbd0808f5d3213b5d98",
+    "step5c_row_registry": "a0c2b6dff0dd6c57e25b5f194342c69202e02f2e642f6fe8ae75ac2ea1bbe225",
+    "step5c_verdict": "f98702e5260f60fa258a8f5ed43adc944724075bf442f958677fdf8fe3dee2ad",
+    "step5d_final_seal": "17f2a97487c72cf447eed34b6dabda558af7f88671fc845316139c2a1c71c2db",
+    "step5d_freeze": "982464e185fabaab57b5871506fc3f75b9f577267eb3bcd52ebd83a4fbf2725d",
+    "step5d_frozen_runner": "b129b18d6f62ba8338c81b05163b9ee8e4cff0fd79d8f3fd89a50b7ecef6e44a",
+    "step5d_implementation_amendment_a": "436300bc285914a9151c3fe74ec25a8b6c7651716a2e94c0e0c86f39537332fe",
+    "step5d_implementation_v02": "ffebe445bb2732a2e29105c148b702bf800fb211a9d47a545722597ae2fa38c3",
+    "step5d_outcome_join_failure": "44f32d8da4e58d19f1f4e2d2a9fccace63457f75fa58370e119d0b5273090805",
+    "step5d_protocol": "835361070b3955912938b5519ec0b7b32542d6774c895f43bde11a93fb268b64",
+    "step5d_test_registry": "e3b7a132f03cebaff4c05cc646e00f0b1867881d0109c65b71f1076e74ab2d4a",
+    "step5d_verdict": "3ec082a95bd48cb412b9771eaae8cffd1641593c7ad60b033da3c9a95a6994ef",
+    "step5dr1_corrected_final_seal": "885d292f604669011a76b28bb649baf8389d7a2ecd59ff43d42abce08e9ae578",
+    "step5dr1_freeze": "3d2602f6c2efb8c2146835c8b877727d7a0a4bc82aa66d5617e08be18fc5b34d",
+    "step5dr1_primary_corrected": "f7e3460e32df145a15b24696bd5db8d78c15069b85e002310c6685c47b37421c",
+    "step5dr1_protocol": "18c4637970505d6b2f58e74e7cc4f8bb862bf50e1336aa6fd62057eaac3536ac",
+    "step5dr1_reference_corrected": "3e81ae8e8d925f266c2a98c18061368ef534055ea0f52bfe5bd806776cbf7cb9",
+    "step5dr2_certification": "454638ff5b011c75f94ba690114c0552bb333902986b7fa24dbaf4b707292e67",
+    "step5dr2_final_seal": "65a7b19971eae1d434720f79d0dcd39d4c05d4fbb41ab995ac4632f49d80ad24",
+    "step5dr2_freeze": "6cc8d3c91351068d303e1e4e49804fb5ef5fc32e1b2002adfde8bb1059414334",
+    "step5dr2_protocol": "fdd48b9bf9c70070cbc876612956dd9cc4dcb6097cddf3229febea2e64ef9590",
+    "step5dr2_verdict": "af596de71061eca5f18706bd62dea2f90b81b5799642bc03ba4f5f9b87592533",
+    "v3_case_payload": "d0f5120713b5f9ce641c6285941bfc23d3aac3b83b561c8fc1138e33a5ede9b9"
+  },
+  "runtime": {
+    "numpy": "2.4.3",
+    "pyarrow": "23.0.1",
+    "python": "3.11.9"
+  },
+  "status": "SEALED_BEFORE_R3_OUTCOME_VALUE_ACCESS",
+  "version": "GC_MICROSTRUCTURE_STEP_5D_R3_FREEZE_V0_1",
+  "year_2025_or_2026_values_accessed": false
+}

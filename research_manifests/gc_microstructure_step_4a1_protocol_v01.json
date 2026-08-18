@@ -1,0 +1,248 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4A1_PROTOCOL_V0_1",
+  "status": "FROZEN_BEFORE_IMPLEMENTATION_AND_ROW_LEVEL_ACCESS",
+  "frozen_at_utc": "2026-07-31T12:01:47.2401614Z",
+  "classification": "ENGINEERING_FAILURE_DIAGNOSTIC_ONLY",
+  "research_or_validation_credit": "NONE",
+  "purpose": "Reproduce and classify only the two frozen Step 4A feature-integrity failures without modifying the feature pipeline or reporting market values.",
+  "predecessor_preservation": {
+    "required_step_4a_status": "FAIL_FEATURE_INTEGRITY",
+    "required_step_4a_manifest_hash": "4960f1ee7f03e21cc490ea81b8e15554ed6c879527d8a02c3956b849cab2bf0f",
+    "required_step_4a_verdict_hash": "853c99ea3c8655869ead48c15b09409952789cd8cb964df06c53aa84583c2c07",
+    "required_step_4a_complete_row_checksum": "10e9282feaedd99bf13ad4e77415c49c3a6b193bf87a4fc184abce57da96fd30",
+    "required_step_4a_bad_ts_recv_flag_rows": 2745,
+    "required_step_4a_continuous_crossed_book_rows": 1,
+    "required_step_4a_crossed_feature_buckets": 60,
+    "all_step_4a_and_earlier_artifacts_immutable": true,
+    "feature_pipeline_modification_permitted": false,
+    "data_repair_or_filtering_permitted": false
+  },
+  "sealed_sources": {
+    "calendar_date": "2024-01-09",
+    "research_and_validation_exclusion": "PERMANENT",
+    "mbo": {
+      "path": "data/raw/databento_gc_mbo_engineering_pilot/GLBX-20260730-WB9AXCVFET/normalized/gc_v_0_2024_01_09_mbo.parquet",
+      "records": 2322905,
+      "sha256": "43a8a3bb2be9a4a36ab324e3fe0ca0e29ccb4529f445013a87156d3bad4c0ba3",
+      "sealed_snapshot_quality_path": "data/raw/databento_gc_mbo_engineering_pilot/GLBX-20260730-WB9AXCVFET/normalized/data_quality_amendment_v02.json",
+      "sealed_snapshot_quality_sha256": "e9cec68c3d78e3f54638dad9e05e172ca44e1bac15bffee2329eb8aa29e37185",
+      "previously_sealed_snapshot_records": 2744,
+      "previously_sealed_snapshot_actions": {
+        "A": 2743,
+        "R": 1
+      }
+    },
+    "mbp10": {
+      "path": "data/raw/databento_gc_mbp10_engineering_benchmark/GLBX-20260731-UJHWEDQUSX/normalized/gc_v_0_2024_01_09_mbp10.parquet",
+      "records": 1924786,
+      "sha256": "4ead358f538d7c383a14f39bbde35b8ccfa21e38e58205edbc51bedfb2ed80d4",
+      "sealed_quality_path": "data/raw/databento_gc_mbp10_engineering_benchmark/GLBX-20260731-UJHWEDQUSX/normalized/data_quality.json",
+      "sealed_quality_sha256": "2782aeface4c16001195c4a7b4b4cf095f40e5e7adc5e28da4b46760baecb7ec",
+      "previously_sealed_pre_start_snapshot_records": 1
+    },
+    "additional_data_acquisition_permitted": false,
+    "source_substitution_permitted": false,
+    "another_date_may_be_inspected": false
+  },
+  "constants": {
+    "day_start_inclusive_ns": 1704758400000000000,
+    "day_end_exclusive_ns": 1704844800000000000,
+    "bucket_width_ns": 1000000000,
+    "undefined_price_fixed_1e9": 9223372036854775807,
+    "flag_maybe_bad_book": 4,
+    "flag_bad_ts_recv": 8,
+    "flag_snapshot": 32,
+    "flag_last": 128
+  },
+  "market_state_policy": {
+    "classification_timestamp": "ts_recv",
+    "timezone": "UTC",
+    "segments": [
+      {
+        "segment_id": "CONTINUOUS_00_22",
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive_ns": 1704758400000000000,
+        "end_exclusive_ns": 1704837600000000000
+      },
+      {
+        "segment_id": "MAINTENANCE_22_2245",
+        "state": "MAINTENANCE",
+        "start_inclusive_ns": 1704837600000000000,
+        "end_exclusive_ns": 1704840300000000000
+      },
+      {
+        "segment_id": "PRE_OPEN_2245_23",
+        "state": "PRE_OPEN",
+        "start_inclusive_ns": 1704840300000000000,
+        "end_exclusive_ns": 1704841200000000000
+      },
+      {
+        "segment_id": "CONTINUOUS_23_24",
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive_ns": 1704841200000000000,
+        "end_exclusive_ns": 1704844800000000000
+      }
+    ]
+  },
+  "bad_ts_recv_diagnostic": {
+    "scope": "Every MBO and MBP-10 row with flags bit 8 set, plus all snapshot rows for bidirectional coverage reporting.",
+    "tests_per_bad_flag_row": [
+      "flags bit 32 snapshot is set",
+      "ts_recv equals 2024-01-09T00:00:00Z exactly",
+      "ts_recv is inside the frozen request interval",
+      "ts_event is strictly before the frozen request start",
+      "ts_event is less than or equal to ts_recv",
+      "action is A or R"
+    ],
+    "source_tests": {
+      "mbo": "Snapshot structure must reproduce the previously sealed 2,744 rows, containing exactly 2,743 A rows and one R row.",
+      "mbp10": "Pre-start snapshot coverage must reproduce the previously sealed one row; its action must be A or R.",
+      "non_snapshot_bad_flag_rows": 0,
+      "bad_flag_rows_outside_request_by_receive_time": 0,
+      "bad_flag_rows_with_event_after_receive": 0
+    },
+    "cross_tabs": [
+      "source",
+      "snapshot_boolean",
+      "action",
+      "receive_at_day_start_boolean",
+      "event_pre_start_boolean",
+      "event_after_receive_boolean"
+    ],
+    "finding_rules": {
+      "CONFIRMED": "At least one BAD_TS_RECV row exists and every such row passes every frozen per-row and source test.",
+      "NOT_CONFIRMED": "One or more BAD_TS_RECV rows is non-snapshot or violates receive-time, event-time, or action semantics, or sealed snapshot coverage is not reproduced.",
+      "UNRESOLVED": "A source, schema, completeness, or reproduction failure prevents exact classification."
+    },
+    "no_flag_clearing_or_data_repair": true
+  },
+  "crossed_book_diagnostic": {
+    "scope": "Every authoritative MBP-10 row classified CONTINUOUS_MATCHING with defined positive level-00 sizes and counts on both sides and best ask strictly below best bid.",
+    "two_sided_definition": "Level-00 bid and ask prices are not undefined and both level-00 size and count values are positive.",
+    "crossed_definition": "Two-sided and ask_px_00 is strictly less than bid_px_00.",
+    "uncrossed_definition": "Two-sided and ask_px_00 is greater than or equal to bid_px_00.",
+    "native_event_group_key": [
+      "publisher_id",
+      "instrument_id",
+      "sequence"
+    ],
+    "group_order": "source_row_ordinal ascending; groups must be contiguous in the normalized source.",
+    "completed_boundary": "The unique row in the native-event group with flags bit 128 set, and it must be the final source-order row of that group.",
+    "tests_per_crossed_row": [
+      "snapshot boolean",
+      "F_LAST boolean",
+      "one-based position in native-event group",
+      "native-event group row count",
+      "number of F_LAST rows in the group",
+      "whether the unique terminal F_LAST row occurs after the crossed row",
+      "terminal F_LAST state classification as TWO_SIDED_UNCROSSED, CROSSED, or ONE_SIDED",
+      "receive-time delay to the terminal F_LAST row",
+      "whether completion occurs in the same one-second bucket",
+      "number of Step-4A bucket closes for which the crossed row remains the latest authoritative state before the next MBP-10 row or segment end"
+    ],
+    "exclusive_taxonomy": [
+      "CROSSED_AT_TERMINAL_F_LAST",
+      "CROSSED_PRE_TERMINAL_F_LAST_COMPLETES_TWO_SIDED_UNCROSSED",
+      "CROSSED_PRE_TERMINAL_F_LAST_COMPLETES_CROSSED",
+      "CROSSED_PRE_TERMINAL_F_LAST_COMPLETES_ONE_SIDED",
+      "CROSSED_GROUP_NO_UNIQUE_TERMINAL_F_LAST",
+      "CROSSED_SNAPSHOT_OR_NONCONTIGUOUS_GROUP"
+    ],
+    "persistence_formula": "Let t be crossed-row ts_recv and u be min(next MBP-10 row ts_recv, current market-segment end). Count one-second bucket ends e satisfying t < e <= u; never inspect or use a future price value in this calculation.",
+    "finding_rules": {
+      "CONFIRMED": "The sealed count of exactly one continuous crossed row is reproduced; every crossed row is non-snapshot, is not F_LAST, belongs to a contiguous group with one terminal F_LAST row after it, and that terminal state is TWO_SIDED_UNCROSSED; zero continuous terminal F_LAST rows are crossed.",
+      "NOT_CONFIRMED": "A crossed row is snapshot, is terminal F_LAST, lacks a unique later terminal F_LAST, completes crossed or one-sided, or any continuous terminal F_LAST row is crossed.",
+      "UNRESOLVED": "A source, schema, grouping, completeness, or reproduction failure prevents exact classification."
+    },
+    "book_values_may_select_or_repair_nothing": true,
+    "market_prices_may_not_be_emitted": true
+  },
+  "technical_output_policy": {
+    "permitted": [
+      "counts",
+      "boolean classifications",
+      "action classes",
+      "group sizes and positions",
+      "timestamp relation classes and elapsed nanoseconds",
+      "bucket-persistence counts",
+      "hashed row and group identities",
+      "checksums"
+    ],
+    "prohibited": [
+      "bid or ask prices",
+      "sizes or order counts",
+      "spreads, midpoints, microprices, imbalances, or other feature values",
+      "directional outcomes or future returns"
+    ],
+    "row_identity_hash": "SHA-256 of source name, source_row_ordinal, publisher_id, instrument_id, sequence, ts_event, and ts_recv in canonical big-endian form.",
+    "no_raw_market_value_output": true
+  },
+  "independent_reproduction": {
+    "primary": "Sequential fixed-state scan with contiguous native-event-group finalization and pending-next-row persistence resolution.",
+    "reference": "Independent dictionary and occurrence-index scan with separately coded row tests, group classification, and persistence calculation.",
+    "complete_source_passes": "Each implementation independently reads every MBO and MBP-10 row.",
+    "identical_required": [
+      "source record counts and complete-pass checksums",
+      "BAD_TS_RECV cross-tabs and violation counts",
+      "snapshot coverage counts",
+      "continuous crossed-row count and exclusive taxonomy",
+      "F_LAST completion classifications",
+      "persistence counts and elapsed-time classes",
+      "hashed row and group identities",
+      "hypothesis findings",
+      "recommended correction or NONE"
+    ],
+    "any_difference": "FAIL_DIAGNOSTIC_REPRODUCTION"
+  },
+  "recommendation_rule": {
+    "maximum_recommendations": 1,
+    "both_findings_confirmed": {
+      "recommendation_id": "SNAPSHOT_EXCEPTION_AND_COMPLETED_MBP_STATE_V0_1",
+      "bounded_text": "In a future separately authorized amendment only, permit BAD_TS_RECV rows solely when they satisfy the frozen snapshot semantics, and construct authoritative MBP state only from the valid snapshot baseline or unique terminal F_LAST native-event boundaries. Keep every other Step 4A definition and gate unchanged."
+    },
+    "otherwise": "NONE",
+    "implementation_in_step_4a1_permitted": false
+  },
+  "formal_gates": {
+    "step_4a_and_all_source_seals_valid": true,
+    "required_columns_present": true,
+    "all_mbo_and_mbp10_rows_processed": true,
+    "source_record_counts_and_input_checksums_reproduced": true,
+    "receive_order_and_native_group_contiguity_valid": true,
+    "sealed_step_4a_failure_counts_reproduced": true,
+    "every_bad_flag_row_classified": true,
+    "every_continuous_crossed_row_classified_exactly_once": true,
+    "no_market_values_emitted": true,
+    "primary_and_reference_results_identical": true,
+    "at_most_one_recommendation": true,
+    "no_feature_modification_repair_acquisition_other_date_outcome_signal_execution_or_pnl": true
+  },
+  "diagnostic_status_precedence": [
+    "FAIL_PREDECESSOR_OR_SOURCE_INTEGRITY",
+    "FAIL_DIAGNOSTIC_INTEGRITY",
+    "FAIL_DIAGNOSTIC_REPRODUCTION",
+    "PASS_DIAGNOSTIC_REPRODUCTION"
+  ],
+  "diagnostic_status_rules": {
+    "FAIL_PREDECESSOR_OR_SOURCE_INTEGRITY": "A Step 4A artifact, source, schema, record count, or required quality seal differs.",
+    "FAIL_DIAGNOSTIC_INTEGRITY": "A complete-pass, ordering, grouping, classification-exhaustiveness, scope, value-reporting, or prohibited-work gate fails.",
+    "FAIL_DIAGNOSTIC_REPRODUCTION": "The two independent diagnostics differ on any frozen required output.",
+    "PASS_DIAGNOSTIC_REPRODUCTION": "Every diagnostic integrity and independent-reproduction gate passes; hypothesis findings may honestly be CONFIRMED, NOT_CONFIRMED, or UNRESOLVED."
+  },
+  "prohibited": [
+    "modifying Step 4A or any predecessor artifact or verdict",
+    "altering or rerunning the Step 4A feature pipeline",
+    "repairing, filtering, dropping, or relabeling source rows",
+    "using book values to choose a group, boundary, or alternate completion",
+    "aligning MBO rows to MBP-10 rows",
+    "acquiring or substituting data",
+    "inspecting another date",
+    "reporting market values",
+    "testing targets, signals, candidates, relationships, or outcomes",
+    "feature selection or ranking",
+    "execution optimization",
+    "trades, PnL, R multiples, or account returns",
+    "implementing the recommended correction"
+  ],
+  "completion_policy": "Record both findings and at most one recommendation, independently reproduce them, document and seal Step 4A.1, and stop without correction or research."
+}

@@ -1,0 +1,259 @@
+{
+  "authorization": {
+    "authorized_on": "2026-07-29",
+    "scope": "Complete only V2 Milestone 5 by freezing the eligible shortlist and exact one-time calendar-2025 gates without opening holdout values.",
+    "verbatim": "ok, if everything looks great lets go to milestone 5"
+  },
+  "candidate_budget": {
+    "london_frozen": 1,
+    "london_maximum": 2,
+    "new_york_frozen": 0,
+    "new_york_maximum": 2,
+    "total_frozen": 1
+  },
+  "candidates": [
+    {
+      "candidate_code": "LONDON_ZN_4H_POSTHOC_V0_1",
+      "conditions": 1,
+      "data_lineage": {
+        "development_feature_artifact_sha256": "bc11401075c160dad03c967146644b18576e43d29c4b8c0604db16993d41896c",
+        "development_feature_id": "cross_zn_v_0_4_hours",
+        "development_feature_source": "Validated V2 M3 point-in-time feature ledger",
+        "development_outcome_artifact_sha256": "ed2d4c85de8bdebe6d3c020710a5af8607034c8d6790202c4606fc3e76fc01f8",
+        "holdout_execution_provider": "IC_MARKETS_MT5",
+        "holdout_execution_symbol": "XAUUSD",
+        "holdout_feature_availability_rule": "A one-minute ZN bar becomes available at interval start plus one minute; every bar used by the four-hour change must be available no later than the 08:00 Europe/London decision.",
+        "holdout_feature_expected_provider": "DATABENTO_GLBX_MDP3",
+        "holdout_feature_expected_schema": "OHLCV_1M",
+        "holdout_feature_expected_symbol": "ZN.v.0",
+        "holdout_feature_normalization": "Licensed continuous one-minute series with explicit underlying-contract and roll-boundary lineage.",
+        "holdout_feature_status": "MISSING_NOT_YET_SEALED"
+      },
+      "epistemic_chain": {
+        "bias": "INFERRED",
+        "raw_zn_bars": "OBSERVED",
+        "rule_explanation": "A positive ZN futures-price change normally corresponds to lower nominal Treasury yields and is mapped to gold support; a negative change is mapped to gold pressure. The mapping is an inference, not observed institutional intent.",
+        "zn_four_hour_change": "CALCULATED"
+      },
+      "execution": {
+        "commission_usd_per_lot_round_turn": 7.0,
+        "decision_clock_local": "08:00",
+        "entry_clock_local": "08:01",
+        "exit_clock_local": "12:00",
+        "fixed_notional_ounces": 1.0,
+        "observed_entry_and_exit_spread": true,
+        "slippage_usd_per_ounce_per_side": 0.05,
+        "timezone": "Europe/London"
+      },
+      "highest_risk_assumption": "The recent four-hour direction of a correctly roll-normalized ZN continuous futures series continues to carry causal or reliably persistent information about the subsequent London gold session, rather than reflecting development-period selection, shared trend, or a continuous-contract construction artifact.",
+      "holdout_controls": {
+        "comparison_population": "Exactly the same calendar-2025 cases on which the candidate produces LONG or SHORT.",
+        "controls": [
+          "ALWAYS_LONG",
+          "ALWAYS_SHORT"
+        ],
+        "selection": "Use the control with the larger mean net return after the same frozen 1.0x costs."
+      },
+      "invalidation_evidence": [
+        "Any point-in-time, timestamp, DST, record-hash, provider, or roll-lineage failure.",
+        "Failure of either POSITIVE-to-LONG or NEGATIVE-to-SHORT to retain a positive mean after frozen costs.",
+        "Failure to beat the better matched always-long or always-short control.",
+        "A non-positive mean in either frozen chronological half.",
+        "A non-positive aggregate mean, profit factor at or below one, non-positive cluster-bootstrap lower bound, or q-value above 0.10.",
+        "A non-positive mean or profit factor at or below one under 1.5x frozen costs."
+      ],
+      "missing_data_policy": {
+        "continuous_contract_roll_crossing": "NO_BIAS",
+        "flat_change": "NO_BIAS",
+        "missing_or_nonfinite_change": "NO_BIAS",
+        "non_ready_source": "NO_BIAS",
+        "proxy_substitution": "PROHIBITED",
+        "stale_or_unavailable_input": "NO_BIAS",
+        "unresolved_lineage_error": "BLOCK_HOLDOUT_BEFORE_OPEN"
+      },
+      "origin": "CONTRACT_RECOGNIZED_POST_HOC_CANDIDATE",
+      "rule_table": {
+        "FLAT": "NO_BIAS",
+        "NEGATIVE": "SHORT",
+        "POSITIVE": "LONG",
+        "UNKNOWN": "NO_BIAS"
+      },
+      "session": "LONDON",
+      "shortlist_slot": 1,
+      "threshold": null,
+      "tuning_permitted": false
+    }
+  ],
+  "contract": {
+    "governing_document": "GOLD_CASEBOOK_DISCOVERY_CONTRACT_V2.md",
+    "manifest_hash": "81e39b469111bb92a46c0d2c70f863cba438b647345104d4b8e8bc1a9e4d8188",
+    "manifest_path": "research_manifests/gold_casebook_discovery_contract_v02.json"
+  },
+  "holdout_2025": {
+    "calendar_halves": {
+      "assignment": "Within London, sort every timestamp-complete calendar-2025 session case by decision_at and case_id before removing NO_BIAS cases. The first floor(N/2) cases are EARLY and the remainder are LATE.",
+      "labels": [
+        "EARLY",
+        "LATE"
+      ],
+      "minimum_directional_cases_per_half": 70
+    },
+    "candidate_family_size": 1,
+    "cost_stress": {
+      "base_cost_multiplier": 1.0,
+      "stress_cost_multiplier": 1.5,
+      "stressed_formula": "direction-adjusted gross XAUUSD move per ounce - 1.5 * (observed spread + frozen slippage + frozen commission)"
+    },
+    "evaluation_gates": [
+      {
+        "gate_id": "G01_POINT_IN_TIME_AND_LINEAGE_INTEGRITY",
+        "pass_condition": "Every XAUUSD execution bar and ZN feature input satisfies sealed hashes, provider identity, IANA DST, decision availability, continuous-roll lineage, and calendar boundaries with zero unresolved issue."
+      },
+      {
+        "gate_id": "G02_DIRECTIONAL_CASE_SUPPORT",
+        "pass_condition": "At least 180 calendar-2025 London cases produce LONG or SHORT."
+      },
+      {
+        "gate_id": "G03_DIRECTIONAL_STATE_SUPPORT",
+        "pass_condition": "At least 80 POSITIVE-to-LONG cases and at least 80 NEGATIVE-to-SHORT cases."
+      },
+      {
+        "gate_id": "G04_DIRECTIONAL_STATE_WEEK_SUPPORT",
+        "pass_condition": "Each directional state spans at least 35 distinct ISO-week clusters."
+      },
+      {
+        "gate_id": "G05_MEAN_NET_RETURN_POSITIVE",
+        "pass_condition": "Candidate mean net return after frozen 1.0x costs is strictly above zero."
+      },
+      {
+        "gate_id": "G06_PROFIT_FACTOR_ABOVE_ONE",
+        "pass_condition": "Candidate profit factor after frozen 1.0x costs is strictly above one."
+      },
+      {
+        "gate_id": "G07_BEATS_BEST_MATCHED_CONTROL",
+        "pass_condition": "Candidate mean net return is strictly above the larger mean of ALWAYS_LONG and ALWAYS_SHORT on exactly the same directional cases and costs."
+      },
+      {
+        "gate_id": "G08_DIRECTION_MAPPING_CONSISTENCY",
+        "pass_condition": "POSITIVE-to-LONG and NEGATIVE-to-SHORT cells each have mean net return strictly above zero after frozen costs."
+      },
+      {
+        "gate_id": "G09_CHRONOLOGICAL_HALF_STABILITY",
+        "pass_condition": "EARLY and LATE halves each contain at least 70 directional cases and each has mean net return strictly above zero."
+      },
+      {
+        "gate_id": "G10_COST_STRESS",
+        "pass_condition": "At 1.5x frozen costs, aggregate mean net P&L remains strictly above zero and profit factor remains strictly above one."
+      },
+      {
+        "gate_id": "G11_CLUSTER_BOOTSTRAP_LOWER_BOUND",
+        "pass_condition": "The ISO-week cluster-bootstrap lower 95% bound for mean net return is strictly above zero."
+      },
+      {
+        "gate_id": "G12_MULTIPLICITY_AWARE_Q_VALUE",
+        "pass_condition": "The one-candidate cluster sign-flip Benjamini-Hochberg q-value is at or below 0.10."
+      }
+    ],
+    "evaluation_policy": {
+      "all_gates_required": true,
+      "candidate_replacement_after_open": false,
+      "open_once_for_entire_shortlist": true,
+      "repair_or_retuning_after_open": false,
+      "rejection_is_final_for_v2": true,
+      "verdicts": [
+        "PASS_CALENDAR_2025_HOLDOUT",
+        "REJECT_CALENDAR_2025_HOLDOUT"
+      ]
+    },
+    "multiplicity": {
+      "family": "All frozen V2 shortlist candidates; exactly one candidate.",
+      "method": "BENJAMINI_HOCHBERG",
+      "number_of_candidates": 1,
+      "q_threshold": 0.1
+    },
+    "readiness_gates_before_value_access": [
+      {
+        "gate_id": "R01_XAUUSD_TIMESTAMP_COVERAGE",
+        "pass_condition": "At least 95% of calendar-2025 London weekdays are timestamp-complete for the frozen XAUUSD decision, entry, and exit clocks, with observed spread and no synthetic bars."
+      },
+      {
+        "gate_id": "R02_ZN_LICENSED_ARCHIVE_SEALED",
+        "pass_condition": "Licensed Databento GLBX.MDP3 ZN.v.0 one-minute calendar-2025 source is present, immutable, hashed, and covers the full requested interval."
+      },
+      {
+        "gate_id": "R03_ZN_ROLL_LINEAGE_SEALED",
+        "pass_condition": "Normalization records source record identifiers, underlying contracts, roll boundaries, availability timestamps, duplicate policy, and marks roll-crossing changes unavailable."
+      },
+      {
+        "gate_id": "R04_ZN_TIMESTAMP_ONLY_CASE_COVERAGE",
+        "pass_condition": "Without deserializing price values, at least 95% of timestamp-complete XAUUSD London cases have the timestamps required for a four-hour ZN change at the 08:00 decision."
+      },
+      {
+        "gate_id": "R05_PREOPEN_AUDIT_CLEAN",
+        "pass_condition": "All source hashes, metadata counts, timestamp ordering, provider identities, and synthetic flags pass; no 2025 OHLC value, feature value, direction, return, P&L, or chart has been inspected."
+      }
+    ],
+    "readiness_policy": {
+      "all_readiness_gates_required": true,
+      "blocked_action": "Stop before holdout value access. Do not approximate, proxy, repair, or replace the candidate.",
+      "current_status": "BLOCKED_MISSING_ZN_2025"
+    },
+    "uncertainty": {
+      "cluster": "ISO week of session_date",
+      "cluster_bootstrap": {
+        "confidence_interval": "Type-7 2.5 and 97.5 percent quantiles of bootstrapped mean net return.",
+        "replications": 5000,
+        "seed": "First eight bytes of SHA-256(M6 manifest hash | candidate code | BOOTSTRAP)"
+      },
+      "cluster_sign_flip": {
+        "alternative": "Mean selected return is greater than zero.",
+        "replications": 20000,
+        "seed": "First eight bytes of SHA-256(M6 manifest hash | candidate code | SIGN_FLIP)"
+      }
+    }
+  },
+  "holdout_source_readiness": {
+    "coverage_data_hash": "d5b84416bc75fa1cf9f3ddb35dc04af630b0fcf41a6b2ba8b731aebd12606eb6",
+    "coverage_path": "research_artifacts/gold_casebook_discovery_v2_coverage.json",
+    "required_action": "Acquire licensed Databento GLBX.MDP3 ZN.v.0 one-minute calendar-2025 history, normalize with roll-aware lineage, hash and seal it, then complete a metadata-only candidate-specific audit before any value or outcome access.",
+    "status": "BLOCKED_MISSING_ZN_2025",
+    "xauusd_metadata_status": "READY",
+    "zn_v_0_metadata_status": "MISSING"
+  },
+  "manifest_hash": "fd35254501f5ec15c5078c2defeb3953e007a2e4fa7e1ed983fe73a32a0a5b57",
+  "manifest_version": "GOLD_CASEBOOK_DISCOVERY_V2_SHORTLIST_MANIFEST_V0_1",
+  "milestone": "V2_M5_SHORTLIST_FREEZE",
+  "output": {
+    "bundle_path": "research_artifacts/gold_casebook_discovery_v2_shortlist_v01",
+    "required_artifacts": [
+      "shortlist.json",
+      "manifest.json",
+      "semantic_validation.json"
+    ]
+  },
+  "prohibited": {
+    "account_scaling_or_return_target_evaluation": true,
+    "calendar_2025_feature_value_access": true,
+    "calendar_2025_ohlc_value_access": true,
+    "calendar_2025_outcome_access": true,
+    "calendar_2026_access": true,
+    "candidate_addition_after_freeze": true,
+    "candidate_replacement_after_holdout_open": true,
+    "entry_exit_stop_target_or_reward_to_risk_optimization": true,
+    "milestone_3_q_failed_relationship_promotion": true,
+    "new_york_candidate_invention": true,
+    "proxy_substitution_for_zn": true,
+    "rule_threshold_or_session_retuning": true
+  },
+  "source": {
+    "execution_manifest_hash": "724a4fef0fa4b526b4d30b9743c2dfa013c53f87b19262a36b05f3fd07c87d76",
+    "execution_manifest_path": "research_manifests/gold_casebook_constant_execution_v01.json",
+    "milestone_3_bundle_hash": "0ffc6d7b5f243d21490b23fa5af649cc94b921bd8223f188b5e81004427591b2",
+    "milestone_3_discovery_leads": 0,
+    "milestone_4_bundle_hash": "8609875313770bbcb947d1e785633471c1a706ee775abf132b87cd49529ba7b5",
+    "milestone_4_results_hash": "057a53e8fb992c2a947f826b7af7dc8fd18a9bb8147fccd370af1a035b2725a0",
+    "milestone_4_semantic_validation_hash": "5fba52ab9e2dfbbf2c0a111b815f45fab74b12955f78e9b3b82d3525ae6fd991",
+    "milestone_4_verdict": "PASS_INTERNAL_WALK_FORWARD_STABILITY"
+  },
+  "status": "FROZEN_BEFORE_CALENDAR_2025_VALUE_ACCESS"
+}

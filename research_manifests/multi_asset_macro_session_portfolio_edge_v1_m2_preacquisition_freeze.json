@@ -1,0 +1,39 @@
+{
+  "version": "MULTI_ASSET_MACRO_SESSION_PORTFOLIO_EDGE_V1_M2_PREACQUISITION_FREEZE_1_0",
+  "frozen_at_utc": "2026-08-12T08:29:50.0552183Z",
+  "status": "SEALED_BEFORE_M2_HISTORY_ACCESS",
+  "protocol": {
+    "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_m2_protocol.json",
+    "bytes": 4203,
+    "sha256": "510f605040fae6c4407d7b8d5cbe3ad106b51ba9f18e44522f44444a4aff76c3"
+  },
+  "implementation": {
+    "path": "tools/acquire_multi_asset_macro_session_portfolio_v1_m2_mt5.py",
+    "sha256": "abe99a2afc8a16aa44cc7ad997a970dde3ff4f1b9bf70d9ffd90fb4d92fbe9f5"
+  },
+  "predecessor": {
+    "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_milestone1_seal.json",
+    "sha256": "a8f8c7d257354f03a2782a20965f0524cfae6a9f8402c5c0e4bf70179ece94a0",
+    "verified": true
+  },
+  "preflight": {
+    "free_bytes": 176385667072,
+    "minimum_free_bytes": 5368709120,
+    "target_history_files_existing": 0,
+    "symbols": [
+      "XAGUSD",
+      "USDJPY",
+      "USTEC",
+      "US500",
+      "XTIUSD"
+    ],
+    "chunks_per_symbol": 21,
+    "maximum_total_requests": 105,
+    "maximum_charge_usd": 0.0,
+    "passed": true
+  },
+  "forward_values_2025_opened": false,
+  "forward_values_2026_opened": false,
+  "relationship_trade_or_pnl_calculation_permitted": false,
+  "stop_after_certification": true
+}

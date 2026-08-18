@@ -1,0 +1,38 @@
+{
+  "bound_predecessors": {
+    "base_engine": "c5589914a1acae6a3a1e9079c302821477866bba3741317392c567bb590c2369",
+    "m2_engine": "acc7af0c5196cc943ad129560f736b31fda03727979fe43b58a7bcf0188d5479",
+    "m2_final_seal": "c6b86602eceb927db71f56e35bce3bd8778f350f7853429cebbbf281d94c7e85",
+    "m2_freeze": "0705d12b25fb79ef5a74ea2ce1842d60265cf45deca177be9f904c0db47c0037",
+    "m2_manifest": "adffdc302f103c8eac307d30193ee06f83e5dafd2fa0e597c9601dbf78a67760",
+    "m2_protocol": "d4490ac0311e0a6a6b40595b6c97ee7e8eba357db14f11ccdbbb0c5b32c8d509",
+    "m2_row_registry": "a7a36ae82d92ce91a25e36fcb7f1c95807de67c996d01198648246daa345dc5d",
+    "m2_technical_diagnostics": "d08bf542afd77e09c44830d0a198300513dfeeb74cb94d8b0605e03fd04c223a",
+    "m2_verdict": "03b1bbae4f56caa9b1586ec381805040d24f8e0764da40ad3a3ceaeb8dc85267",
+    "step5c_engine": "81e2aa4c620aa2bf4e151c727af6827d7743a4e8e452a85d3f78dc1ac7188e92"
+  },
+  "charge_incurred_usd": 0.0,
+  "data_acquired": false,
+  "expected_findings": {
+    "crossed_bucket_close": 15,
+    "total": 18,
+    "xau_timestamp": 3
+  },
+  "freeze_receipt": "8247c6b29a9b40512c1346b049673984ac0ef5351564231beb2c959783ee6c7d",
+  "frozen_at_utc": "2026-08-05T06:51:05.525581Z",
+  "implementation": {
+    "bytes": 67663,
+    "path": "tools/diagnose_gc_session_trigger_edge_m2r1.py",
+    "sha256": "43302e6952fc4bd8924e4ce1b86861def9bbc90b38f78f33475907384713ef8b"
+  },
+  "market_book_feature_or_outcome_values_accessed_before_freeze": false,
+  "protocol": {
+    "bytes": 12834,
+    "path": "research_manifests/gc_session_trigger_edge_m2r1_protocol_v01.json",
+    "sha256": "2b0e1118701142aae9ce86234b0185e8e5bcabfdd632e3551fab968f6da34762"
+  },
+  "row_level_metadata_accessed_before_freeze": false,
+  "status": "SEALED_BEFORE_ROW_LEVEL_METADATA_ACCESS",
+  "version": "GC_SESSION_TRIGGER_EDGE_M2_R1_FREEZE_V1_0",
+  "year_2025_or_2026_values_accessed": false
+}

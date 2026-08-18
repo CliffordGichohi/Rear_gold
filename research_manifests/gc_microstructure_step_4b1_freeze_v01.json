@@ -1,0 +1,43 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4B1_FREEZE_V0_1",
+  "status": "PROTOCOL_AND_SAMPLE_SEALED_BEFORE_METADATA_ESTIMATE_REQUESTS",
+  "sealed_at_utc": "2026-07-31T13:56:45.6949533Z",
+  "classification": "METADATA_ONLY_MULTI_DAY_ENGINEERING_READINESS",
+  "research_or_validation_credit": "NONE",
+  "protocol": {
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_manifests\\gc_microstructure_step_4b1_protocol_v01.json",
+    "bytes": 11908,
+    "sha256": "a3945d747d0a20aa0143ab03fb65e3bb5bdf8d750c2018a3e2fd6de6090c1be9"
+  },
+  "step_4a3_manifest": {
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_microstructure_step_4a3_v01\\manifest.json",
+    "bytes": 4791,
+    "sha256": "633a5cee430cbb785f7d84c96af519127406d177427ae439c4886abc6ad6368d",
+    "canonical_manifest_hash": "879a4321c535a02ad89905a3a4d926e052a8c611b36af9774d5ba403485e610e"
+  },
+  "calendar_source": {
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\data\\mt5\\calendar\\us_gold_macro_calendar_2024_p1.json",
+    "bytes": 518063,
+    "sha256": "cd8bf6a3e83bf29389136e6fd596acd788779980fbcba12f517fca4fd467df0c"
+  },
+  "selected_dates_chronological": [
+    "2024-01-05",
+    "2024-01-11",
+    "2024-01-30",
+    "2024-01-31",
+    "2024-03-20"
+  ],
+  "selected_date_count": 5,
+  "quote_request_count": 10,
+  "schemas": [
+    "mbo",
+    "mbp-10"
+  ],
+  "all_dates_permanently_engineering_only": true,
+  "selection_used_market_values_or_outcomes": false,
+  "metadata_estimate_requested_before_this_receipt": false,
+  "batch_job_submitted_before_this_receipt": false,
+  "data_downloaded_before_this_receipt": false,
+  "charge_incurred_before_this_receipt": false,
+  "post_freeze_date_change_permitted": false
+}

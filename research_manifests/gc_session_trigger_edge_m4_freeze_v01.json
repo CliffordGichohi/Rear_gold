@@ -1,0 +1,41 @@
+{
+  "amendment_sha256": "eb4ff1c906f52f7508d6c57e157fa1ebbd92093de515478ad7d5eee1ac0189ed",
+  "freeze_receipt": "177120710f02dca57125f08c1ae1ec76a423128075cc0095ff26e677f521f480",
+  "frozen_at_utc": "2026-08-06T07:57:54.854421Z",
+  "implementation_sha256": "070c5ae2bd3ff91c26feb98ef6bb0f7c71a0b3d58b75f6f90ddb6b6b49bd0ebf",
+  "market_sources_opened": false,
+  "predecessor": {
+    "complete_results_hash": "114fa8f8511ec591c78a7110313758eb009475dde52e7ed56bd9a7ea28cff582",
+    "complete_results_sha256": "3b9c61551159e54545385cc78f6389994cdee1d1d385fe1b226a88ed07952a64",
+    "inner_final_seal_receipt": "a63feec369243857ee0741509d832d9d1844e87ddaf7a0d0d04d5e649e86b854",
+    "market_sources_opened": false,
+    "outer_final_seal_receipt": "35f34d03b7d9e003c882fb7ca557b02a78f804b1e5e4170bad6129010b57e159",
+    "registered_tests": 72,
+    "required_result_artifact_hashes": {
+      "GC_SESSION_TRIGGER_EDGE_MILESTONE_3_REPORT.md": "7d9d394a465ae898f6bebbce0a3e1a713bf37d43ac66ba868583224c4fafdb6d",
+      "complete_results.json": "3b9c61551159e54545385cc78f6389994cdee1d1d385fe1b226a88ed07952a64",
+      "final_seal.json": "91ac70a184bcd779d65a3e9867d603e33eebbc91a94bf05be6991f639e7877aa",
+      "manifest.json": "d3cc43763b48aefca90959daa6a1af0c810d358a039eca98aee9ef2cd52e1f1b",
+      "primary_stage1_results.json": "70b1f659dda7c8c2227864218ac342344ea7b5e8e990abc128c39c768f13ac79",
+      "primary_stage2_results.json": "56cb02d821152279df561cc3aecfdb5f3d057723724bbf6e7131b78ca4f70424",
+      "r1_final_seal.json": "5f9829eb3309fdf714fdc2cfdd980738e7a45e3af979ef121b4b789127fb7035",
+      "r1_manifest.json": "32191b04a116e8c885d85978a258b85c16cb8ff253bcc5b641d30d54f56963ab",
+      "r1_verdict.json": "866030964240629943f8aee37d644e68c148b9cb3f456b3358487d4757091244",
+      "reference_stage1_results.json": "ff20e8d262df069e17d9e518d8f1fa3c16c53b436817ed7be94b053bcaea7193",
+      "reference_stage2_results.json": "e8138c1d8bcf45fa5dda2f83bcc388f79d840e6a61d3d8807239cd0699d349f4",
+      "verdict.json": "4525499aa10a3613b4a4d7873441c4c6f4fc0a11fcba831dc5ca99dce1339287"
+    },
+    "stage1_payload_hash": "647143cb1b759bcb12c52f3d5f575c33accf08ed210e1d3692b9b8800e457a90",
+    "stage2_payload_hash": "b96aa021b5636f0303fb2da5138e2160fc81f13b3dd06a1021f6b9aeda79d9d4",
+    "status": "PASS_M4_PREDECESSOR_RESULT_CLOSURE",
+    "support_eligible_rejected": 38,
+    "support_fail": 34,
+    "year_2025_or_2026_values_accessed": false
+  },
+  "protocol_path": "research_manifests/gc_session_trigger_edge_m4_protocol_v01.json",
+  "protocol_receipt": "d361119da0c9ed02f1af8677f931ae919e1fc078802d656e2ad63cc6a9527ca6",
+  "protocol_sha256": "4a8d442f3eb49e9a84260d0ec998671b5b723e88015ba77d6b9570dc0c89c329",
+  "rules_frozen_before_aggregate_attribution": true,
+  "test_sha256": "f09237b1e57932f1a2b56a91e15c6f73484f741a84d018c7f69c7d8a1a08d846",
+  "version": "GC_SESSION_TRIGGER_EDGE_V2_M4_FREEZE_V1_0"
+}

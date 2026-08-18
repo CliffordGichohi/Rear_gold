@@ -1,0 +1,36 @@
+{
+  "version": "GOLD_FAMAE_V1_TEST_REGISTRY_1_0",
+  "status": "FROZEN_BEFORE_NEW_BRANCH_OUTCOME_COMPUTATION",
+  "base_tests": [
+    {"test_id": "LONDON|FAMAE_ALIGNED_SWEEP_RECLAIM", "session": "LONDON", "setup": "FAMAE_ALIGNED_SWEEP_RECLAIM"},
+    {"test_id": "LONDON|FAMAE_ALIGNED_BREAK_RETEST", "session": "LONDON", "setup": "FAMAE_ALIGNED_BREAK_RETEST"},
+    {"test_id": "LONDON|FAMAE_ALIGNED_FAILED_ACCEPTANCE", "session": "LONDON", "setup": "FAMAE_ALIGNED_FAILED_ACCEPTANCE"},
+    {"test_id": "NEW_YORK|FAMAE_ALIGNED_SWEEP_RECLAIM", "session": "NEW_YORK", "setup": "FAMAE_ALIGNED_SWEEP_RECLAIM"},
+    {"test_id": "NEW_YORK|FAMAE_ALIGNED_BREAK_RETEST", "session": "NEW_YORK", "setup": "FAMAE_ALIGNED_BREAK_RETEST"},
+    {"test_id": "NEW_YORK|FAMAE_ALIGNED_FAILED_ACCEPTANCE", "session": "NEW_YORK", "setup": "FAMAE_ALIGNED_FAILED_ACCEPTANCE"}
+  ],
+  "gc_incremental_tests": [
+    {"test_id": "LONDON|FAMAE_ALIGNED_SWEEP_RECLAIM|GC_CONFIRMATION", "base_test": "LONDON|FAMAE_ALIGNED_SWEEP_RECLAIM"},
+    {"test_id": "LONDON|FAMAE_ALIGNED_BREAK_RETEST|GC_CONFIRMATION", "base_test": "LONDON|FAMAE_ALIGNED_BREAK_RETEST"},
+    {"test_id": "LONDON|FAMAE_ALIGNED_FAILED_ACCEPTANCE|GC_CONFIRMATION", "base_test": "LONDON|FAMAE_ALIGNED_FAILED_ACCEPTANCE"},
+    {"test_id": "NEW_YORK|FAMAE_ALIGNED_SWEEP_RECLAIM|GC_CONFIRMATION", "base_test": "NEW_YORK|FAMAE_ALIGNED_SWEEP_RECLAIM"},
+    {"test_id": "NEW_YORK|FAMAE_ALIGNED_BREAK_RETEST|GC_CONFIRMATION", "base_test": "NEW_YORK|FAMAE_ALIGNED_BREAK_RETEST"},
+    {"test_id": "NEW_YORK|FAMAE_ALIGNED_FAILED_ACCEPTANCE|GC_CONFIRMATION", "base_test": "NEW_YORK|FAMAE_ALIGNED_FAILED_ACCEPTANCE"}
+  ],
+  "portfolio_diagnostics": [
+    "LONDON|EARLIEST_FROZEN_SETUP",
+    "NEW_YORK|EARLIEST_FROZEN_SETUP"
+  ],
+  "counts": {"base": 6, "gc_incremental": 6, "portfolio_diagnostic": 2},
+  "ranking": [
+    "verdict",
+    "holm_adjusted_p",
+    "bootstrap_ci_lower",
+    "net_profit_factor",
+    "net_expectancy_r",
+    "trade_support",
+    "test_id"
+  ],
+  "candidate_limit_per_session": 3,
+  "zero_candidates_acceptable": true
+}

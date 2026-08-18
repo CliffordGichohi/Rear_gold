@@ -1,0 +1,73 @@
+{
+  "artifact_set_hash": "ca3148b60d22a631e8b614f1ddfe4779aee0f4fd63f3e546324e41b2a5e37806",
+  "artifacts": [
+    {
+      "bytes": 3806,
+      "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1_preaccess_freeze.json",
+      "sha256": "4a1e06abc4f112fac48af1a3a986e393075b82ec998c7b8a096ba80e5299dfdc"
+    },
+    {
+      "bytes": 7144,
+      "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1_protocol.json",
+      "sha256": "b594d2d08a281fc56b2062372485411d0f61ecef3aa95cca16c9b44917f316a5"
+    },
+    {
+      "bytes": 3854,
+      "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1_schedule_evidence.json",
+      "sha256": "c2b697858da122a367fd3852d52105c7281692a26bfc55ed3576944df111e609"
+    },
+    {
+      "bytes": 19876985,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1/diagnostic_primary.json",
+      "sha256": "95a341b34a76be2644f89f91fb3b4fcd649a2435f3baf70d655581a3212cddcd"
+    },
+    {
+      "bytes": 19876987,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1/diagnostic_reference.json",
+      "sha256": "b109a78498d4c548b25ee54d60fd869a801822b1e895725da0a71ba63fdb5c13"
+    },
+    {
+      "bytes": 300419,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1/diagnostic.json",
+      "sha256": "33be0eefdcbee6f4c8fbbca87e4b2b452809489761b2ff88cf7f6bfd6a2fa8a6"
+    },
+    {
+      "bytes": 2143,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1/recommendation.json",
+      "sha256": "9c5e2d2d6c55619750b4ea5118edfc4610f69cf54a4296d6d79a43712660e22e"
+    },
+    {
+      "bytes": 886,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1/validation.json",
+      "sha256": "df6046577700527b229078322b829e87f8dcc871c0c95d86e5b06201edcb9655"
+    },
+    {
+      "bytes": 1415,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1/state.json",
+      "sha256": "3be85e100a091ad834c615ec5be88a1a40bf03fed656f3f1030ec521daf8815b"
+    },
+    {
+      "bytes": 2610,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_V1_MILESTONE_1_R1.md",
+      "sha256": "12a0a95cbf223a75317966e5690ba1155c098de07f403748dc3e7475819a8a95"
+    },
+    {
+      "bytes": 43740,
+      "path": "tools/diagnose_multi_asset_session_behaviour_archetype_monetization_v1_m1_r1.py",
+      "sha256": "148d6b3a31144dbd0d913e5003f7cbed2f02c352ea7ad067a88e43c7116c9689"
+    }
+  ],
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "diagnostic_hash": "4ee962881e3a707ad22ebb4ac91336035d9c2c92121d6edfdcf4f9328ffa3046",
+  "next_milestone_authorized": false,
+  "paid_acquisition_usd": 0.0,
+  "preserved_m1_verdict": "FAIL_MILESTONE_1_COVERAGE_STOP",
+  "recommendation_hash": "d42bdaee703db41b13aa9c2ce0d3e361352a08e5b74f64c03bf6d932fd6b5520",
+  "recommendation_implemented": false,
+  "sealed_at_utc": "2026-08-12T12:23:31.225165Z",
+  "status": "SEALED_MILESTONE_1_R1_COMPLETE_MANDATORY_STOP",
+  "validation_hash": "cd2ea4876a9d560c13308359aeb496d7cefd838251cb0b4b2b6b85483923b8ea",
+  "verdict": "PASS_MILESTONE_1_R1_DIAGNOSTIC_REPRODUCTION",
+  "version": "MSBAM_V1_M1_R1_SEAL_1_0"
+}

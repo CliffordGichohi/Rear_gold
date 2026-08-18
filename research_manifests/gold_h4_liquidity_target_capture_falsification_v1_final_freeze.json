@@ -1,0 +1,69 @@
+{
+  "amendment_a": {
+    "bytes": 1329,
+    "path": "research_manifests/gold_h4_liquidity_target_capture_falsification_v1_amendment_a.json",
+    "sha256": "cf27ea04b8158d0446342ed2b4fc7bebef236eb409780427ba59b8c239686fc0"
+  },
+  "attempt_1_failure": {
+    "bytes": 915,
+    "path": "research_artifacts/gold_h4_liquidity_target_capture_falsification_v1/attempt_1_failure.json",
+    "sha256": "867a9bec186c82a37ef69677b2ce43039cbb61cea702dc29dfb8eb83d27ad97d"
+  },
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "certification": {
+    "bytes": 3798,
+    "path": "research_artifacts/gold_h4_liquidity_target_capture_falsification_v1/reproduction_certification.json",
+    "sha256": "d3ea0e89eb59b26f2d60d374e6e43fc0018a05447a1ef468cb760d9981c27822"
+  },
+  "contract": {
+    "bytes": 9275,
+    "path": "GOLD_H4_LIQUIDITY_TARGET_CAPTURE_FALSIFICATION_CONTRACT_V1.md",
+    "sha256": "305c8e985b5ec814c486a679770221fe70eb61f0593ccd5681822f96b797a127"
+  },
+  "final_result": {
+    "bytes": 17098,
+    "path": "research_artifacts/gold_h4_liquidity_target_capture_falsification_v1/final_result.json",
+    "sha256": "64a250affd1d781db10de1231170b415e688309f39e81212eeff2cb26c82a246"
+  },
+  "original_path_opening": {
+    "bytes": 543,
+    "path": "research_artifacts/gold_h4_liquidity_target_capture_falsification_v1/post_target_path_opening.json",
+    "sha256": "fee8a5a9b3faf27276d7d79b398e8f8c58a394fae5891df7406c53fd17b13312"
+  },
+  "original_prepath_freeze": {
+    "bytes": 3648,
+    "path": "research_manifests/gold_h4_liquidity_target_capture_falsification_v1_prepath_freeze.json",
+    "sha256": "076911ebb718b9689aac8df8a069970c9256ec9c6f3c919e87d21e7fcb82d671"
+  },
+  "paid_acquisition_usd": 0.0,
+  "predecessor_final_seal": {
+    "bytes": 2340,
+    "path": "research_manifests/gold_h4_continuation_tradable_ceiling_v1_final_freeze.json",
+    "sha256": "7739599c718d3bf91e27983d6ee05b39428af09fa5e56acb47fb1f9d94f88365"
+  },
+  "protocol": {
+    "bytes": 5208,
+    "path": "research_manifests/gold_h4_liquidity_target_capture_falsification_v1_protocol.json",
+    "sha256": "1fc74fa94c68526536861b5d1e109f0e8c25764d113138e1da16716f7ac943ea"
+  },
+  "recovery_freeze": {
+    "bytes": 2561,
+    "path": "research_manifests/gold_h4_liquidity_target_capture_falsification_v1_recovery_freeze_a.json",
+    "sha256": "680f85a62a6bc1abdc77424fb8a600010e07738d61263bbc76f580ad679f1784"
+  },
+  "recovery_path_opening": {
+    "bytes": 596,
+    "path": "research_artifacts/gold_h4_liquidity_target_capture_falsification_v1/recovery_path_opening_a.json",
+    "sha256": "5592830c73815d138436beacbc70b143a70c292dc31e0e3624b36f5d72d3f281"
+  },
+  "report": {
+    "bytes": 2248,
+    "path": "GOLD_H4_LIQUIDITY_TARGET_CAPTURE_FALSIFICATION_V1_REPORT.md",
+    "sha256": "237a899644119951034bfffeba5dde5b80e167d51cc95c82f6283ae7e958711c"
+  },
+  "sealed_at_utc": "2026-08-12T07:28:55.196393Z",
+  "status": "SEALED_FINAL_FALSIFICATION_UNDER_AMENDMENT_A",
+  "verdict": "TERMINATE_GOLD_ONLY_10R_BRANCH",
+  "version": "GOLD_H4_LIQUIDITY_TARGET_CAPTURE_FALSIFICATION_V1_FINAL_FREEZE_R1_1_0"
+}

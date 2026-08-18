@@ -1,0 +1,313 @@
+{
+  "authorization": {
+    "authorized_on": "2026-07-30",
+    "scope": "Complete only V3 Milestone 1: contract, Reference-Book-to-field traceability catalog, metadata-only coverage audit, comprehensive case-matrix schema, and V3 state file.",
+    "verbatim": "Create Gold Session Behaviour and Conditional Bias Discovery Contract V3. Preserve all prior results and rejections. Use 2021-08-01 through 2024-12-31 for development, treat 2025 as an exposed historical forward test, and keep 2026 values locked as the independent year-to-date holdout followed by prospective tracking. Permit descriptive neutral session-path measurements but no execution optimization. Complete only the contract, Reference-Book-to-field traceability catalog, metadata-only coverage audit, comprehensive case-matrix schema, and V3 state file. Do not inspect 2025 or 2026 values, calculate relationships, or begin candidate discovery. Stop after Milestone 1."
+  },
+  "candidate_governance": {
+    "candidate_discovery_authorized_in_milestone_1": false,
+    "candidate_maximum_conditions": 2,
+    "london_maximum_candidates": 2,
+    "machine_learning_selector_permitted": false,
+    "new_york_maximum_candidates": 2,
+    "rules_and_gates_must_be_frozen_before_forward_evaluation": true,
+    "session_specific_candidates_required": true,
+    "threshold_or_sign_repair_after_forward_evaluation": false,
+    "zero_candidates_per_session_permitted": true
+  },
+  "case_matrix_policy": {
+    "decision_state_cutoff": "No fact may enter decision_state unless available_at is less than or equal to decision_at.",
+    "epistemic_states": [
+      "OBSERVED",
+      "CALCULATED",
+      "INFERRED",
+      "UNKNOWN"
+    ],
+    "grain": "One immutable row per session_code and session_date.",
+    "institutional_motive_policy": "Institutional motive is never OBSERVED unless a licensed source directly states it; price/open-interest and similar interpretations are INFERRED.",
+    "missing_data_policy": "UNKNOWN; never zero, neutral confirmation, no-event, or safe.",
+    "outcome_separation": "subsequent_behaviour is decision_eligible=false and cannot be joined to decision_state during Milestone 1.",
+    "schema_path": "research_schemas/gold_session_behaviour_v3_case_matrix.schema.json",
+    "source_lineage_required": true
+  },
+  "data_policy": {
+    "append_only_or_versioned": true,
+    "book_role": "Primary business vocabulary, market-logic, epistemic, point-in-time, and explanation specification; not a predetermined empirical answer.",
+    "book_sha256": "3e7ddc561932a859a4c9043a38ff71b7003907963fb52247e41edaeefc8ac42a",
+    "book_path": "Gold_USD_Market_Intelligence_Reference_Book.pdf",
+    "licensed_or_official_sources_only": true,
+    "no_lookahead": true,
+    "no_pseudo_market_data": true,
+    "provider_independent_lineage": true,
+    "raw_records_never_overwritten": true,
+    "revision_vintages_preserved": true,
+    "timestamp_fields_required": [
+      "observation_time_or_period",
+      "release_or_publication_time",
+      "available_at",
+      "ingested_at",
+      "vintage_or_source_version"
+    ]
+  },
+  "descriptive_measurement_policy": {
+    "allowed": [
+      "fixed-clock signed price displacement from a neutral reference",
+      "absolute fixed-clock displacement",
+      "session high-low range",
+      "maximum upward displacement from the neutral reference",
+      "maximum downward displacement from the neutral reference",
+      "timestamps and ordering of session high and low",
+      "fixed 5-minute, 15-minute, 30-minute, 60-minute, and session-close path states",
+      "level touch, breach, acceptance, rejection, failed-break, and close-location facts",
+      "session path completeness and data-quality facts"
+    ],
+    "directional_trade_semantics_prohibited": true,
+    "neutral_reference": {
+      "description": "The open of the first complete observed XAUUSD one-minute bar whose open_time is 08:01 local. It is an outcome coordinate, not an executable entry or assumed fill.",
+      "london_timezone": "Europe/London",
+      "new_york_timezone": "America/New_York"
+    },
+    "not_allowed": [
+      "trade direction assignment",
+      "entry optimization",
+      "stop or target optimization",
+      "reward-to-risk calculation",
+      "position sizing, leverage, or account-return scaling",
+      "side-conditioned MFE or MAE",
+      "profitability ranking",
+      "feature-outcome relationships in Milestone 1"
+    ],
+    "observation_end": "12:00 local session clock",
+    "purpose": "Describe what gold did after the decision clock without presuming a long, short, entry, exit, or profitable execution."
+  },
+  "governing_document": "GOLD_SESSION_BEHAVIOUR_DISCOVERY_CONTRACT_V3.md",
+  "manifest_hash": "79a74f81bce0b80ca6c5da6b420400479013484a4bb759684402546672fa140b",
+  "manifest_version": "GOLD_SESSION_BEHAVIOUR_DISCOVERY_CONTRACT_V0_3",
+  "milestones": [
+    {
+      "authorized": true,
+      "code": "V3_M1_CONTRACT_TRACEABILITY_METADATA_SCHEMA_STATE",
+      "outcome_access": "METADATA_ONLY",
+      "stop_after_completion": true
+    },
+    {
+      "authorized": false,
+      "code": "V3_M2_DEVELOPMENT_CASE_MATRIX",
+      "scope": "Materialize point-in-time decision state and neutral subsequent behaviour for 2021-08-01 through 2024-12-31 only."
+    },
+    {
+      "authorized": false,
+      "code": "V3_M3_DEVELOPMENT_BEHAVIOUR_ATLAS",
+      "scope": "Describe London and New York paths, level interactions, and calendar stability without explanatory relationship testing."
+    },
+    {
+      "authorized": false,
+      "code": "V3_M4_BOUNDED_CONDITIONAL_BIAS_DISCOVERY",
+      "scope": "Freeze an eligible feature registry and then test simple point-in-time conditional-bias relationships on development data only."
+    },
+    {
+      "authorized": false,
+      "code": "V3_M5_INTERNAL_STABILITY_AND_SHORTLIST_FREEZE",
+      "scope": "Apply chronology-aware stability and multiplicity controls; freeze zero to two candidates per session before forward evaluation."
+    },
+    {
+      "authorized": false,
+      "code": "V3_M6_FORWARD_EVALUATION",
+      "scope": "Evaluate frozen candidates unchanged on exposed 2025, locked 2026 YTD, and prospective 2026 segments, reported separately."
+    },
+    {
+      "authorized": false,
+      "code": "V3_M7_PROSPECTIVE_TRACKING",
+      "scope": "Append sealed live decisions before outcomes and report prospective evidence without repair."
+    },
+    {
+      "authorized": false,
+      "code": "SEPARATE_EXECUTION_RESEARCH_CONTRACT",
+      "scope": "Only after a conditional-bias candidate earns independent or prospective evidence; requires new explicit authorization."
+    }
+  ],
+  "operating_protocol": {
+    "artifact_first": true,
+    "claim_evidence_requirement": "Every empirical claim must cite an immutable artifact hash, case count, interval, and measurement definition.",
+    "conversation_is_not_source_of_truth": true,
+    "current_state_path": "research_artifacts/gold_session_behaviour_v3_state_v01.json",
+    "do_not_continue_automatically": true,
+    "negative_results_must_be_recorded": true,
+    "one_authorized_milestone_at_a_time": true,
+    "research_pivot_requires_contract_amendment": true,
+    "unknowns_must_be_reported_not_guessed": true
+  },
+  "preserved_research_history": {
+    "immutable": true,
+    "original_casebook": {
+      "manifest_hash": "d1241633b073cd7307f1da00a13a2d76c132f3dccefc52a076be2c641f06b85f",
+      "manifest_path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "status": "PRESERVED"
+    },
+    "original_universal_candidate": {
+      "candidate_code": "UNIVERSAL_ZN_4H_SIGN_V0_1",
+      "manifest_hash": "e508b049961c622d09b8474815e0a4d3c8e3c814f03ce1f72b0154116594d3c4",
+      "manifest_path": "research_artifacts/gold_casebook_chronological_validation_v01/manifest.json",
+      "verdict": "REJECT_CHRONOLOGICAL_VALIDATION"
+    },
+    "v2_artifact_chain": [
+      {
+        "manifest_hash": "e1493d2734109a07b83da1f60768def696201c9a67df1cd75e3d11bec5a484fc",
+        "manifest_path": "research_artifacts/gold_casebook_discovery_v2_outcome_atlas_v01/manifest.json",
+        "milestone": "V2_M2_DESCRIPTIVE_OUTCOME_ATLAS"
+      },
+      {
+        "manifest_hash": "0ffc6d7b5f243d21490b23fa5af649cc94b921bd8223f188b5e81004427591b2",
+        "manifest_path": "research_artifacts/gold_casebook_discovery_v2_relationships_v01/manifest.json",
+        "milestone": "V2_M3_BOUNDED_RELATIONSHIP_DISCOVERY"
+      },
+      {
+        "candidate_code": "LONDON_ZN_4H_POSTHOC_V0_1",
+        "manifest_hash": "8609875313770bbcb947d1e785633471c1a706ee775abf132b87cd49529ba7b5",
+        "manifest_path": "research_artifacts/gold_casebook_discovery_v2_walk_forward_v01/manifest.json",
+        "milestone": "V2_M4_INTERNAL_EXPANDING_WALK_FORWARD",
+        "verdict": "PASS_INTERNAL_WALK_FORWARD_STABILITY"
+      },
+      {
+        "frozen_candidate_count": 1,
+        "manifest_hash": "774655f1dcfb0ebd95b6ec3e50fd480e2c5d5ea75abd4221dd5e7e79986f22ac",
+        "manifest_path": "research_artifacts/gold_casebook_discovery_v2_shortlist_v01/manifest.json",
+        "milestone": "V2_M5_SHORTLIST_FREEZE"
+      },
+      {
+        "candidate_code": "LONDON_ZN_4H_POSTHOC_V0_1",
+        "manifest_hash": "110018f6997b7b96c55398696f68a70b1935f9a488dfe39bcc204e9ea5bb6d68",
+        "manifest_path": "research_artifacts/gold_casebook_discovery_v2_holdout_v01/manifest.json",
+        "milestone": "V2_M6_CALENDAR_2025_HOLDOUT",
+        "verdict": "REJECT_CALENDAR_2025_HOLDOUT"
+      }
+    ],
+    "v2_contract": {
+      "manifest_hash": "81e39b469111bb92a46c0d2c70f863cba438b647345104d4b8e8bc1a9e4d8188",
+      "manifest_path": "research_manifests/gold_casebook_discovery_contract_v02.json",
+      "status": "COMPLETED_AND_PRESERVED"
+    }
+  },
+  "prohibited": {
+    "calendar_2025_discovery_or_tuning": true,
+    "calendar_2025_value_or_outcome_access_in_milestone_1": true,
+    "calendar_2026_value_or_outcome_access_before_milestone_6": true,
+    "candidate_discovery_in_milestone_1": true,
+    "execution_optimization": true,
+    "feature_outcome_relationship_calculation_in_milestone_1": true,
+    "inverting_filtering_or_renaming_rejected_zn_rules_as_new_edge": true,
+    "opaque_machine_learning": true,
+    "pseudo_or_synthetic_replacement_for_missing_market_history": true,
+    "requested_return_target_optimization": true,
+    "retroactive_prospective_label": true,
+    "using_2025_as_independent_validation": true
+  },
+  "rejected_rule_policy": {
+    "LONDON_ZN_4H_POSTHOC_V0_1": "Rejected on calendar-2025 forward data; cannot be repaired, inverted, filtered, thresholded, renamed, or presented as an active candidate.",
+    "UNIVERSAL_ZN_4H_SIGN_V0_1": "Rejected in chronological validation; cannot be repaired, inverted, filtered, thresholded, renamed, or presented as an active candidate.",
+    "zn_future_role": "ZN may remain a descriptive rates-context field. Any future use must arise from a separately preregistered, genuinely different hypothesis and cannot claim continuity with either rejected rule."
+  },
+  "research_objective": {
+    "primary_question": "Which point-in-time conditions, if any, provide a stable and explainable conditional bias for the direction and path of gold during London and New York sessions?",
+    "sequence": [
+      "record comprehensive point-in-time conditions",
+      "record neutral subsequent session behaviour",
+      "describe the behaviour without explanatory tests",
+      "freeze a bounded feature universe",
+      "discover simple conditional relationships on development only",
+      "freeze candidates and gates",
+      "evaluate forward segments without retuning",
+      "consider execution only under a separate contract"
+    ],
+    "success_is_not_defined_as_requested_return": true
+  },
+  "research_units": {
+    "combined_statistics_role": "DESCRIPTIVE_ONLY",
+    "sessions": {
+      "LONDON": {
+        "decision_clock_local": "08:00",
+        "observation_end_local": "12:00",
+        "timezone": "Europe/London"
+      },
+      "NEW_YORK": {
+        "decision_clock_local": "08:00",
+        "observation_end_local": "12:00",
+        "timezone": "America/New_York"
+      }
+    },
+    "verdict_scope": "INDEPENDENT_BY_SESSION_AND_CANDIDATE"
+  },
+  "status": "FROZEN_AT_V3_MILESTONE_1",
+  "time_partitions": {
+    "development": {
+      "end_exclusive": "2025-01-01T00:00:00+00:00",
+      "independent_validation_credit": false,
+      "label": "DEVELOPMENT_ALREADY_OBSERVED",
+      "session_date_end_inclusive": "2024-12-31",
+      "session_date_start_inclusive": "2021-08-01",
+      "start_inclusive": "2021-08-01T00:00:00+00:00"
+    },
+    "exposed_historical_forward_test": {
+      "discovery_permitted": false,
+      "end_exclusive": "2026-01-01T00:00:00+00:00",
+      "independent_validation_credit": false,
+      "label": "EXPOSED_2025_FORWARD_TEST",
+      "reason_exposed": "Calendar 2025 was opened once under V2 and used to reject LONDON_ZN_4H_POSTHOC_V0_1.",
+      "session_date_end_inclusive": "2025-12-31",
+      "session_date_start_inclusive": "2025-01-01",
+      "start_inclusive": "2025-01-01T00:00:00+00:00",
+      "v3_use": "Evaluate only rules frozen without 2025; report separately as historical forward evidence with no independent-validation claim."
+    },
+    "independent_2026_ytd_holdout": {
+      "discovery_permitted": false,
+      "label": "LOCKED_2026_YTD_INDEPENDENT_HOLDOUT",
+      "metadata_audit_permitted": true,
+      "session_date_end_inclusive": "2026-07-29",
+      "session_date_start_inclusive": "2026-01-01",
+      "values_loaded_for_v3": false,
+      "values_may_open_only_after_m5_freeze": true
+    },
+    "prospective_2026": {
+      "earliest_session_date": "2026-07-30",
+      "label": "PROSPECTIVE_AFTER_FREEZE",
+      "prospective_start_rule": "The first complete eligible session strictly after the immutable V3 shortlist freeze timestamp; never retroactively earlier than 2026-07-30.",
+      "record_decision_before_outcome": true,
+      "retuning_permitted": false
+    }
+  },
+  "v3_milestone_1": {
+    "allowed": [
+      "contract creation and hashing",
+      "Reference-Book-to-field traceability catalog creation",
+      "metadata-only source coverage and timestamp-completeness audit",
+      "comprehensive empty case-matrix schema creation",
+      "V3 state creation",
+      "source and artifact hashing",
+      "schema and governance validation"
+    ],
+    "authorized": true,
+    "code": "V3_M1_CONTRACT_TRACEABILITY_METADATA_SCHEMA_STATE",
+    "prohibited": [
+      "opening 2025 or 2026 value payloads",
+      "calculating 2025 or 2026 outcomes",
+      "materializing development case rows",
+      "calculating descriptive outcome distributions",
+      "calculating any feature-outcome relationship",
+      "candidate generation, ranking, selection, or retuning",
+      "execution research or optimization"
+    ],
+    "required_outputs": [
+      "GOLD_SESSION_BEHAVIOUR_DISCOVERY_CONTRACT_V3.md",
+      "research_manifests/gold_session_behaviour_discovery_contract_v03.json",
+      "GOLD_SESSION_BEHAVIOUR_V3_TRACEABILITY.md",
+      "research_manifests/gold_session_behaviour_v3_traceability_v01.json",
+      "GOLD_SESSION_BEHAVIOUR_V3_COVERAGE.md",
+      "research_artifacts/gold_session_behaviour_v3_coverage_v01.json",
+      "GOLD_SESSION_BEHAVIOUR_V3_CASE_MATRIX.md",
+      "research_schemas/gold_session_behaviour_v3_case_matrix.schema.json",
+      "research_artifacts/gold_session_behaviour_v3_state_v01.json",
+      "GOLD_SESSION_BEHAVIOUR_V3_MILESTONE_1.md"
+    ],
+    "stop_after_completion": true
+  }
+}

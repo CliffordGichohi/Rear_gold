@@ -1,0 +1,348 @@
+{
+  "version": "GC_MICROSTRUCTURE_CONDITIONAL_EDGE_DISCOVERY_CONTRACT_V1_0",
+  "status": "FROZEN_BEFORE_METADATA_QUOTE_OR_RESEARCH_VALUE_ACCESS",
+  "classification": "RESEARCH_DESIGN_AND_METADATA_ONLY_COST_AUDIT",
+  "research_or_validation_credit": "NONE_AT_STEP_5A",
+  "design_recorded_at_utc": "2026-08-03T08:13:34Z",
+  "authority": {
+    "authorized_step": "STEP_5A",
+    "authorized_outputs": [
+      "contract",
+      "feature_to_hypothesis_registry",
+      "support_and_multiplicity_gates",
+      "outcome_blind_development_sample_registry",
+      "source_coverage_audit",
+      "metadata_only_Databento_cost_estimate"
+    ],
+    "mandatory_stop": "Stop after Step 5A is documented and sealed. A later explicit instruction is required before acquisition or research-value access.",
+    "reference_book_role": "Primary business vocabulary, point-in-time, market-logic, epistemic, and explanation specification; not a predetermined empirical answer."
+  },
+  "research_question": "At the separately defined London and New York decision cutoffs, do preregistered GC order-flow and top-ten book states, alone or in a bounded two-condition interaction with point-in-time fundamental bias and price/session context, change the subsequent neutral XAUUSD session direction frequency in a stable and explainable way?",
+  "source_bindings": {
+    "reference_book": {
+      "path": "Gold_USD_Market_Intelligence_Reference_Book.pdf",
+      "bytes": 971812,
+      "sha256": "3e7ddc561932a859a4c9043a38ff71b7003907963fb52247e41edaeefc8ac42a"
+    },
+    "step_4a_protocol": {
+      "path": "research_manifests/gc_microstructure_step_4a_protocol_v01.json",
+      "sha256": "8f1ba7230919b7422344253d4f3e55fea1e86495551cbbbf53f3e1bdcb9ec3a2",
+      "feature_schema_sha256": "dfaf74cdc55b37469966857fc1ed2279b3d18c98f90454ced65859cb32494232"
+    },
+    "step_4b3_protocol": {
+      "path": "research_manifests/gc_microstructure_step_4b3_protocol_v01.json",
+      "sha256": "8a67158b943add18bdeaea5b8b87a8c41fd1427ef6aa45248a38eb03293539cd"
+    },
+    "step_4b3_result": {
+      "path": "research_artifacts/gc_microstructure_step_4b3_v01/manifest.json",
+      "file_sha256": "54ba09d63c6c791bfdcd2047112b15a431c686a12f6e1f7a82beae9e5a3e6249",
+      "manifest_hash": "6252b239c4962fd8dcf3bce1a712b416e67af8303bbea7cd40de2ab6a3522bbe",
+      "status": "PASS_MULTIDAY_FEATURE_ROBUSTNESS"
+    },
+    "v3_contract": {
+      "path": "research_manifests/gold_session_behaviour_discovery_contract_v03.json",
+      "file_sha256": "993e91610992c62fd97c3c9aeb81b8a46ed422f025fac441b629ce35985ca591",
+      "manifest_hash": "79a74f81bce0b80ca6c5da6b420400479013484a4bb759684402546672fa140b"
+    },
+    "v3_traceability": {
+      "path": "research_manifests/gold_session_behaviour_v3_traceability_v01.json",
+      "file_sha256": "9690360ed1c9eceac1b26428460e54ec4326b7ffb0ef94c73dd1574589a2bd92",
+      "catalog_hash": "8707c39eb75bf3c74ce33908b0a3f4b0a1f679ee68848f1d10dce25e4bdf6bb4"
+    },
+    "v3_case_matrix": {
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/manifest.json",
+      "file_sha256": "dddbe125d11afef2094b7843f5521b7bbfcc95178e3fa376b60af8bdd2efc3b5",
+      "manifest_hash": "d6aad4b861d98899d6fdcc92ea53a20221434af5038a3bcb86a8b9faa1d8e7b7",
+      "case_count": 1659,
+      "development_values_may_not_be_opened_in_step_5a": true
+    },
+    "v3_m4_feature_registry": {
+      "path": "research_manifests/gold_session_behaviour_v3_m4_discovery_v01.json",
+      "file_sha256": "e11b86385c1d7594a48ef1d11fc04b65ac979c952251078528ed727f0fd91127"
+    },
+    "step_5a_feature_hypothesis_registry": {
+      "path": "research_manifests/gc_microstructure_step_5a_feature_hypothesis_registry_v01.json",
+      "hash_bound_by_freeze_receipt": true
+    }
+  },
+  "preserved_history": {
+    "all_prior_verdicts_and_artifacts_immutable": true,
+    "engineering_findings": [
+      "STEP_3A:FAIL",
+      "STEP_3A_1:PASS",
+      "STEP_3B_1:FAIL_READINESS",
+      "STEP_3B_2:FAIL",
+      "STEP_3D:FAIL_UNALIGNED_RESIDUAL",
+      "STEP_3F:FAIL_BOOK_MISMATCH",
+      "STEP_4A:FAIL_FEATURE_INTEGRITY",
+      "STEP_4A_1:FAIL_DIAGNOSTIC_INTEGRITY",
+      "STEP_4A_2:PASS_DISPOSITION_REPRODUCTION",
+      "STEP_4A_3:PASS_FEATURE_INTEGRITY_RECERTIFICATION",
+      "STEP_4B_2:PASS_ENGINEERING_SOURCE_ACQUISITION",
+      "STEP_4B_3:PASS_MULTIDAY_FEATURE_ROBUSTNESS"
+    ],
+    "rejected_research_rules": [
+      {
+        "candidate_id": "UNIVERSAL_ZN_4H_SIGN_V0_1",
+        "verdict": "REJECT_CHRONOLOGICAL_VALIDATION",
+        "reopen_repair_invert_or_rename_permitted": false
+      },
+      {
+        "candidate_id": "LONDON_ZN_4H_POSTHOC_V0_1",
+        "verdict": "REJECT_CALENDAR_2025_HOLDOUT",
+        "reopen_repair_invert_or_rename_permitted": false
+      }
+    ],
+    "v3_milestone_4_zero_candidate_verdict_preserved": true,
+    "v3_milestone_6b_both_candidates_inconclusive_preserved": true,
+    "step_5a_is_a_new_microstructure_hypothesis_branch": true
+  },
+  "permanent_engineering_exclusions": {
+    "dates": [
+      "2024-01-05",
+      "2024-01-09",
+      "2024-01-11",
+      "2024-01-30",
+      "2024-01-31",
+      "2024-03-20"
+    ],
+    "exclusion_applies_to": [
+      "development",
+      "internal_stability",
+      "historical_forward evidence",
+      "independent validation",
+      "candidate support"
+    ],
+    "research_or_validation_credit": "ZERO_PERMANENTLY",
+    "replacement_dates_permitted": false
+  },
+  "time_partitions": {
+    "development": {
+      "start_inclusive": "2021-08-01",
+      "end_inclusive": "2024-12-31",
+      "access_in_step_5a": "METADATA_ONLY",
+      "independent_validation_credit": false
+    },
+    "exposed_historical_forward": {
+      "start_inclusive": "2025-01-01",
+      "end_inclusive": "2025-12-31",
+      "access_in_step_5a": "LOCKED_VALUES_AND_OUTCOMES",
+      "future_label": "EXPOSED_HISTORICAL_FORWARD_NO_INDEPENDENT_VALIDATION_CREDIT"
+    },
+    "locked_independent_and_prospective": {
+      "start_inclusive": "2026-01-01",
+      "access_in_step_5a": "LOCKED_VALUES_AND_OUTCOMES",
+      "unlock_requires": "A later candidate-specific sealed protocol and explicit user authorization"
+    }
+  },
+  "outcome_blind_development_sample": {
+    "selection_basis": "CALENDAR_AND_INSTRUMENT_METADATA_ONLY",
+    "month_range_inclusive": ["2021-08", "2024-12"],
+    "monthly_rule": "For each calendar month, enumerate Mondays whose Monday-through-Friday block lies wholly within that month, sort ascending, and select the second such block.",
+    "selected_trade_dates": "All five Monday-through-Friday calendar dates in the selected block, then remove permanent engineering exclusions without replacement.",
+    "holiday_policy": "Do not replace a holiday, early close, missing date, or incomplete prediction window. Record it as unavailable under the frozen missing-data policy.",
+    "expected_month_count": 41,
+    "expected_pre_exclusion_date_count": 205,
+    "expected_engineering_exclusions_intersecting_sample": ["2024-01-09", "2024-01-11"],
+    "expected_post_exclusion_date_count": 203,
+    "request_grouping": "Combine only consecutive selected UTC calendar dates belonging to the same selected sample week; never bridge an excluded or unselected date.",
+    "date_list_and_request_intervals_bound_by": "research_manifests/gc_microstructure_step_5a_request_registry_v01.json",
+    "selection_used_market_values_outcomes_or_known_performance": false
+  },
+  "session_contract": {
+    "separation": "London and New York are independent research units; pooled statistics are descriptive only.",
+    "LONDON": {
+      "session_date_timezone": "Europe/London",
+      "decision_cutoff_local": "08:00:00",
+      "observation_end_local": "12:00:00",
+      "utc_conversion": "Use Python IANA zoneinfo at the local session date. This is normally 08:00Z in GMT and 07:00Z in BST; no hard-coded DST dates.",
+      "microstructure_terminal_bucket": "[decision_cutoff-1 second, decision_cutoff)",
+      "microstructure_windows": ["[decision_cutoff-60 seconds,decision_cutoff)", "[decision_cutoff-900 seconds,decision_cutoff)"],
+      "post_cutoff_feature_record_permitted": false
+    },
+    "NEW_YORK": {
+      "session_date_timezone": "America/New_York",
+      "decision_cutoff_local": "08:00:00",
+      "observation_end_local": "12:00:00",
+      "utc_conversion": "Use Python IANA zoneinfo at the local session date. This is normally 13:00Z in EST and 12:00Z in EDT; no hard-coded DST dates.",
+      "microstructure_terminal_bucket": "[decision_cutoff-1 second, decision_cutoff)",
+      "microstructure_windows": ["[decision_cutoff-60 seconds,decision_cutoff)", "[decision_cutoff-900 seconds,decision_cutoff)"],
+      "post_cutoff_feature_record_permitted": false
+    },
+    "dst_mismatch_weeks": "Each session is converted independently. US/UK transition-date mismatch is expected and is not repaired.",
+    "decision_availability_gate": "Every feature source record must have available_at <= decision_cutoff; equality is allowed only for a record fully published by that instant.",
+    "cme_market_state_schedule": {
+      "timezone": "America/Chicago",
+      "continuous_matching": "17:00 previous local date through 16:00 current local date",
+      "maintenance": "16:00 through 16:45 local",
+      "pre_open": "16:45 through 17:00 local",
+      "special_schedule_policy": "An exchange holiday or special schedule must be verified from metadata before feature construction; unresolved status makes the affected feature window UNKNOWN."
+    }
+  },
+  "neutral_session_outcomes": {
+    "instrument": "IC_MARKETS_MT5_XAUUSD",
+    "role": "DESCRIPTIVE_OUTCOME_ONLY_NOT_AN_ENTRY_OR_FILL",
+    "reference": "The open of the first complete one-minute XAUUSD bar with local open timestamp exactly 08:01:00 and available_at no earlier than its close.",
+    "observation_interval": "From the 08:01 local reference through the final complete one-minute bar whose close timestamp is no later than 12:00 local.",
+    "primary_outcome": {
+      "id": "NEUTRAL_SESSION_CLOSE_DIRECTION",
+      "signed_displacement": "final_close minus reference_open in USD per troy ounce",
+      "states": {
+        "UP": "signed_displacement > +0.01",
+        "DOWN": "signed_displacement < -0.01",
+        "FLAT": "absolute signed_displacement <= 0.01",
+        "UNKNOWN": "reference or final bar missing/incomplete, timestamp rule fails, or lineage is invalid"
+      },
+      "binary_discovery_policy": "UP and DOWN only; retain and report FLAT but exclude it from binary direction inference. Never relabel FLAT after results."
+    },
+    "secondary_descriptive_outcomes": [
+      "signed displacement at fixed 5, 15, 30, and 60 elapsed-minute horizons",
+      "session-close signed displacement",
+      "maximum upward excursion from the neutral reference",
+      "maximum downward excursion from the neutral reference",
+      "dominant excursion direction and absolute magnitude",
+      "time in elapsed minutes to first maximum upward and downward excursion",
+      "completed interactions with frozen Asia and prior-day levels",
+      "first directional move and whether it held or reversed by session close"
+    ],
+    "secondary_outcome_role": "DESCRIPTIVE_AND_CONSISTENCY_ONLY; never select, rank, rescue, or reject a candidate in this contract version",
+    "trade_semantics_forbidden": ["entry", "fill", "stop", "target", "MFE as a trade metric", "MAE as a trade metric", "PnL", "R multiple", "position size"]
+  },
+  "eligible_decision_state": {
+    "fundamental_bias_contexts": "Exactly the eight entries in the frozen Step 5A feature-hypothesis registry.",
+    "price_level_and_session_contexts": "Exactly the seven entries in the frozen Step 5A feature-hypothesis registry.",
+    "microstructure_columns": "Exactly all 85 sealed Step 4A columns, each assigned exactly one governance, quality, derivation, or registered-transform role.",
+    "microstructure_derived_states": "Exactly the eight state definitions and only the W60/W900 windows in the frozen Step 5A feature-hypothesis registry.",
+    "epistemic_classes": ["OBSERVED", "CALCULATED", "INFERRED", "UNKNOWN"],
+    "unknown_policy": "UNKNOWN is never zero, flat, normal, no-event, balanced, confirmation, or safety. Exclude pairwise from a test and report missingness.",
+    "institutional_claim_policy": "Anonymous order flow and COT interpretations may be INFERRED; they never identify an institution or prove motive.",
+    "raw_feature_search_permitted": false,
+    "threshold_search_permitted": false
+  },
+  "hypothesis_search_space": {
+    "registry_path": "research_manifests/gc_microstructure_step_5a_feature_hypothesis_registry_v01.json",
+    "stage_1": "Test each registered standalone directional microstructure state once per session. Fundamental, level, liquidity-condition, calendar-risk, and COT contexts have no standalone directional pass gate.",
+    "stage_2": "Test only the explicitly listed two-condition interactions once per eligible session and only after the complete Stage-1 result table is sealed.",
+    "maximum_conditions_per_test": 2,
+    "three_way_or_higher_interactions_permitted": false,
+    "data_driven_subgroup_creation_permitted": false,
+    "zero_candidates_acceptable": true
+  },
+  "support_gates": {
+    "analysis_unit": "one selected session-date row",
+    "dependence_cluster": "selected_month_week_id; the five dates in one selected week are one resampling/permutation cluster",
+    "known_coverage_minimum_fraction": 0.70,
+    "standalone": {
+      "minimum_condition_up_or_down_rows": 40,
+      "minimum_complement_up_or_down_rows": 80,
+      "minimum_condition_distinct_sample_weeks": 12,
+      "minimum_complement_distinct_sample_weeks": 20,
+      "minimum_calendar_years_with_at_least_five_condition_rows": 3
+    },
+    "two_condition_interaction": {
+      "minimum_condition_up_or_down_rows": 30,
+      "minimum_complement_up_or_down_rows": 100,
+      "minimum_condition_distinct_sample_weeks": 10,
+      "minimum_complement_distinct_sample_weeks": 24,
+      "minimum_calendar_years_with_at_least_four_condition_rows": 3,
+      "both_constituent_single_fields_must_meet_known_coverage_gate": true
+    },
+    "flat_rows": "Retained in descriptive totals but do not satisfy UP-or-DOWN support.",
+    "duplicate_rows": "Duplicate session_code plus session_date is an integrity failure, not extra support.",
+    "support_failure": "Record SUPPORT_FAIL and calculate descriptive counts only; it cannot advance."
+  },
+  "uncertainty_and_multiplicity": {
+    "effect": "Pr(frozen favorable direction | condition) minus Pr(frozen favorable direction | known complement), in percentage points.",
+    "complement": "All rows in the same session for which every constituent is known and the exact registered condition is false; never only the opposite state unless the registry explicitly makes the variable binary.",
+    "confidence_interval": {
+      "method": "calendar-year-stratified selected-week cluster bootstrap percentile interval",
+      "confidence_level": 0.95,
+      "replicates": 20000,
+      "seed": "unsigned first 64 bits of SHA-256('GC_MICRO_STEP5_V1|' + session + '|' + test_id + '|BOOTSTRAP')"
+    },
+    "p_value": {
+      "method": "two-sided calendar-year-stratified selected-week block-label permutation test",
+      "monte_carlo_replicates": 100000,
+      "plus_one_correction": true,
+      "seed": "unsigned first 64 bits of SHA-256('GC_MICRO_STEP5_V1|' + session + '|' + test_id + '|PERMUTATION')"
+    },
+    "multiple_testing": {
+      "method": "Benjamini-Hochberg",
+      "fdr_q": 0.05,
+      "families": "Separate complete families by session and stage: LONDON_STAGE_1, NEW_YORK_STAGE_1, LONDON_STAGE_2, NEW_YORK_STAGE_2.",
+      "included_tests": "Every support-eligible preregistered test, including negative and contrary-sign results; unsupported tests are reported but receive no p or q value."
+    },
+    "no_optional_stopping": true
+  },
+  "advancement_gates": {
+    "standalone_minimum_effect_percentage_points": 10.0,
+    "interaction_minimum_effect_percentage_points": 15.0,
+    "lower_95_percent_cluster_ci_must_exceed_zero": true,
+    "bh_adjusted_q_must_be_at_most": 0.05,
+    "median_signed_displacement_must_match_preregistered_direction": true,
+    "calendar_stability": {
+      "positive_effect_in_at_least_three_of_four_calendar_year_blocks": true,
+      "no_supported_calendar_year_effect_at_or_below_negative_percentage_points": -10.0,
+      "all_four_leave_one-calendar-year-out_effects_must_be_positive": true,
+      "rolling_window": "Twelve consecutive selected monthly weeks, advanced one selected month at a time",
+      "minimum_evaluable_rolling_windows": 10,
+      "minimum_fraction_evaluable_rolling_windows_with_positive_effect": 0.70
+    },
+    "maximum_provisional_candidates_per_session": 2,
+    "ranking_order": [
+      "lowest BH-adjusted q",
+      "highest lower 95 percent cluster confidence bound",
+      "largest favorable effect",
+      "largest condition distinct-week support",
+      "lexicographically smallest immutable test_id"
+    ],
+    "failed_candidate_repair_or_inversion_permitted": false,
+    "passing_development_result_label": "PROVISIONAL_DEVELOPMENT_CANDIDATE_NOT_VALIDATED"
+  },
+  "source_request_contract": {
+    "provider": "Databento",
+    "dataset": "GLBX.MDP3",
+    "symbols": ["GC.v.0"],
+    "stype_in": "continuous",
+    "schemas_in_fixed_order": ["mbo", "mbp-10"],
+    "request_time_basis": "UTC",
+    "request_span": "Full selected UTC calendar dates, grouped only as allowed by the frozen sample registry.",
+    "metadata_methods_permitted": [
+      "symbology.resolve",
+      "metadata.get_cost",
+      "metadata.get_record_count",
+      "metadata.get_billable_size"
+    ],
+    "batch_submit_permitted": false,
+    "timeseries_get_range_permitted": false,
+    "download_permitted": false,
+    "charge_permitted": false,
+    "quote_is_purchase_authorization": false,
+    "future_acquisition_requires_new_explicit_cap": true
+  },
+  "step_5a_readiness_rules": {
+    "contract_and_registry_hashes_must_be_frozen_before_provider_metadata_calls": true,
+    "predecessor_file_and_canonical_hashes_must_verify": true,
+    "sample_algorithm_counts_and_exclusions_must_verify": true,
+    "all_85_columns_must_match_the_sealed_step_4a_schema_exactly": true,
+    "every_selected_date_must_resolve_to_exactly_one_front_instrument_id": true,
+    "both_schemas_must_have_positive_metadata_record_counts_for_every_selected_date": true,
+    "all_metadata_costs_must_be_finite_and_nonnegative": true,
+    "primary_and_reference_metadata_runs_must_match_exactly": true,
+    "window_level_data_completeness_can_be_certified_from_daily_metadata_counts": false,
+    "research_ready_at_step_5a": "Only if design and metadata coverage gates pass; actual prediction-window completeness remains conditional until a separately authorized acquisition and value-blind source-integrity audit."
+  },
+  "prohibited": [
+    "acquiring, submitting, downloading, or incurring a charge",
+    "opening GC MBO or MBP-10 market values",
+    "opening development, 2025, or 2026 outcomes",
+    "calculating relationships, effect estimates, p-values, candidates, signals, trades, PnL, R multiples, or account returns",
+    "adding a feature, window, transform, state, interaction, threshold, support gate, multiplicity method, or ranking rule after outcome access",
+    "trade construction, entry/exit logic, stop/target logic, sizing, slippage modeling, or execution optimization",
+    "opaque machine learning, automated feature selection, and unregistered data mining",
+    "treating inferred institutional activity as observed fact",
+    "granting research or validation credit to any engineering-only date",
+    "using 2025 to design or retune and inspecting any 2026 value"
+  ],
+  "completion_policy": "Step 5A ends after the contract, feature-hypothesis registry, sample/request registry, coverage audit, two independently reproduced metadata quotes, report, verdict, and manifest are sealed."
+}

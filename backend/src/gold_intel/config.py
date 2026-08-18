@@ -22,6 +22,34 @@ class Settings(BaseSettings):
     database_url: str = "postgresql+asyncpg://gold_intel:gold_intel_dev@localhost:5432/gold_intel"
     redis_url: str = "redis://localhost:6379/0"
     raw_store_path: Path = Path("data/raw")
+    blind_replay_artifact_path: Path = Path(
+        "../research_artifacts/gold_blind_discretionary_replay_v1"
+    )
+    blind_replay_v2_artifact_path: Path = Path(
+        "../research_artifacts/gold_blind_synchronized_setup_replay_v2"
+    )
+    blind_replay_v3_artifact_path: Path = Path("../research_artifacts/gold_annotated_replay_v3")
+    blind_replay_v3_ledger_path: Path = Path(
+        "../research_artifacts/gold_annotated_replay_v3/ledgers/practice_event_ledger_v3.jsonl"
+    )
+    codex_operator_replay_artifact_path: Path = Path(
+        "../research_artifacts/gold_blind_codex_operator_replay_v1"
+    )
+    codex_operator_replay_visible_ledger_path: Path = Path(
+        "../research_artifacts/gold_blind_codex_operator_replay_v1/ledgers/codex_blind_visible_ledger.jsonl"
+    )
+    codex_operator_replay_outcome_ledger_path: Path = Path(
+        "../research_artifacts/gold_blind_codex_operator_replay_v1/outcome_vault/codex_blind_outcome_ledger.jsonl"
+    )
+    matched_human_replay_artifact_path: Path = Path(
+        "../research_artifacts/gold_matched_human_replay_v1"
+    )
+    matched_human_replay_visible_ledger_path: Path = Path(
+        "../research_artifacts/gold_matched_human_replay_v1/ledgers/matched_human_visible_ledger.jsonl"
+    )
+    matched_human_replay_outcome_ledger_path: Path = Path(
+        "../research_artifacts/gold_matched_human_replay_v1/outcome_vault/matched_human_outcome_ledger.jsonl"
+    )
 
     ctrader_client_id: SecretStr | None = None
     ctrader_client_secret: SecretStr | None = None

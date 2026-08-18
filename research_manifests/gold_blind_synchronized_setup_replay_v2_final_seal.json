@@ -1,0 +1,22 @@
+{
+  "human_decisions_at_seal": 0,
+  "scored_labeling": "CLOSED",
+  "sealed_at": "2026-08-14T11:07:46.677440+00:00",
+  "sealed_outputs": [
+    {
+      "bytes": 11684,
+      "path": "research_artifacts/gold_blind_synchronized_setup_replay_v2/v2_application_certification.json",
+      "sha256": "e2e3ad18734c37d3ef0d440753c2541fac0408debefa195fcf0b5d426e2f51b4"
+    },
+    {
+      "bytes": 1087,
+      "path": "GOLD_BLIND_SYNCHRONIZED_SETUP_REPLAY_V2_CERTIFICATION.md",
+      "sha256": "012d5adb070aed71ce4767022f1d1590b1f838a5554d052ce45002525cc6d2de"
+    }
+  ],
+  "sealed_outputs_sha256": "6575c49104da4e05515e2f4dded806a0b103c028506e576a8579238ac7266fd6",
+  "source_set_sha256": "4592fffaed2585df0de50928a42c523813bb49a946872f182c668225173fc2fa",
+  "status": "SEALED_READY_FOR_V2_PRACTICE_HUMAN_LABELING_SCORED_CLOSED",
+  "verdict": "PASS_V2_APPLICATION_CERTIFICATION",
+  "version": "GOLD_BLIND_SYNCHRONIZED_SETUP_REPLAY_V2_FINAL_SEAL_1_0"
+}

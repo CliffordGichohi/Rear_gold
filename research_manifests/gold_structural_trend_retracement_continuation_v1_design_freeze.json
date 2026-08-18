@@ -1,0 +1,90 @@
+{
+  "controls": {
+    "contract": {
+      "bytes": 10024,
+      "path": "GOLD_STRUCTURAL_TREND_RETRACEMENT_CONTINUATION_EDGE_CONTRACT_V1.md",
+      "sha256": "781cbd3536e16309a9b7102732ec7aee21c08f69217b2966c5898dbd9449c01b"
+    },
+    "protocol": {
+      "bytes": 2691,
+      "path": "research_manifests/gold_structural_trend_retracement_continuation_v1_protocol.json",
+      "sha256": "08838e7dbd348fd6925f4917caa1d9577cff687b30b75f4e69811f1282cbd587"
+    },
+    "test_registry": {
+      "bytes": 845,
+      "path": "research_manifests/gold_structural_trend_retracement_continuation_v1_test_registry.json",
+      "sha256": "a378dc7b3dcb1e9753e23b9463838b041d40e55c46c31cbd47caa0848655d3a5"
+    }
+  },
+  "development_outcomes_accessed": false,
+  "forward_values_accessed": false,
+  "paid_acquisition_authorized": false,
+  "preflight": {
+    "bytes": 3784,
+    "path": "research_artifacts/gold_structural_trend_retracement_continuation_v1_v01/preflight.json",
+    "sha256": "f2d21065aef475549fc4b73fe07319b9e72bba1685cb85de1b83cc2667fd35bf"
+  },
+  "rules_hash": "65ce9847cbf8846c4a332e51e57212d988aa5786f8a57106e0fd5fe97594524a",
+  "sealed_at_utc": "2026-08-07T11:48:14.390424Z",
+  "sources": {
+    "case_matrix": {
+      "bytes": 103763781,
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/cases.jsonl.gz",
+      "sha256": "d0f5120713b5f9ce641c6285941bfc23d3aac3b83b561c8fc1138e33a5ede9b9",
+      "verification": "INHERITED_FROM_EXISTING_SEALED_PREDECESSOR"
+    },
+    "case_matrix_manifest": {
+      "bytes": 4086,
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/manifest.json",
+      "sha256": "dddbe125d11afef2094b7843f5521b7bbfcc95178e3fa376b60af8bdd2efc3b5",
+      "verification": "INHERITED_FROM_EXISTING_SEALED_PREDECESSOR"
+    },
+    "casebook_manifest": {
+      "bytes": 5372,
+      "path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6",
+      "verification": "INHERITED_FROM_EXISTING_SEALED_PREDECESSOR"
+    },
+    "casebook_price": {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+      "verification": "INHERITED_FROM_EXISTING_SEALED_PREDECESSOR"
+    },
+    "gc_final_manifest": {
+      "bytes": 5411,
+      "path": "research_artifacts/gc_session_trigger_edge_v2r1_v01/manifest.json",
+      "sha256": "f8b9805ffab9d86d4e695eef82e5e9c4fa22c3764eed1059b7638d91bd81264e"
+    },
+    "gc_primary_events": {
+      "bytes": 1968576,
+      "path": "research_artifacts/gc_session_trigger_edge_v2r1_v01/primary_events.parquet",
+      "sha256": "9557731bbc45d985d06227b3b15451f69e31f069697ab7cc5fae66293965a87b",
+      "verification": "INHERITED_FROM_EXISTING_SEALED_PREDECESSOR"
+    },
+    "gc_reference_events": {
+      "bytes": 1968576,
+      "path": "research_artifacts/gc_session_trigger_edge_v2r1_v01/reference_events.parquet",
+      "sha256": "9557731bbc45d985d06227b3b15451f69e31f069697ab7cc5fae66293965a87b",
+      "verification": "INHERITED_FROM_EXISTING_SEALED_PREDECESSOR"
+    },
+    "prior_branch_final_seal": {
+      "bytes": 2898,
+      "path": "research_artifacts/gold_fundamental_aligned_multitimeframe_auction_edge_v1_v02/final_seal.json",
+      "sha256": "a6458ee953ed265b92df3c68e3f51f51c09717e13b101a12e55cbf007a202ecf"
+    },
+    "prior_branch_results": {
+      "bytes": 45949,
+      "path": "research_artifacts/gold_fundamental_aligned_multitimeframe_auction_edge_v1_v02/development_results.json",
+      "sha256": "571c55f6e7104604e73b43d48266af7acfb5f10bf7c2a76ff837ce85c4039c05"
+    },
+    "reference_book": {
+      "bytes": 971812,
+      "path": "Gold_USD_Market_Intelligence_Reference_Book.pdf",
+      "sha256": "3e7ddc561932a859a4c9043a38ff71b7003907963fb52247e41edaeefc8ac42a",
+      "verification": "INHERITED_FROM_EXISTING_SEALED_PREDECESSOR"
+    }
+  },
+  "status": "SEALED_BEFORE_ANY_BRANCH_OUTCOME_ACCESS",
+  "version": "GOLD_STRC_V1_DESIGN_FREEZE_1_0"
+}

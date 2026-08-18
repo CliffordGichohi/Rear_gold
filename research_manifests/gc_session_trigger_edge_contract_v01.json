@@ -1,0 +1,246 @@
+{
+  "amendment_policy": {
+    "development_sample_expansion": "May be requested only outcome-blindly after M2 support audit; requires metadata cost/storage audit and explicit authorization before acquisition.",
+    "failed_candidate": "May not be repaired, inverted, renamed, or selectively filtered.",
+    "new_event_family_threshold_context_or_outcome": "Requires a pre-value amendment and receives no retrospective validation credit."
+  },
+  "book_role": "Primary business vocabulary and market-logic specification, not a predetermined empirical answer.",
+  "classification": "EVENT_TRIGGERED_POINT_IN_TIME_CONDITIONAL_EDGE_RESEARCH",
+  "contract_receipt": "35cc633761b1b71fb9583ff09bc81b70bb8128c8b3d2118b19985ac3e5e42bb5",
+  "event_values_accessed": false,
+  "frozen_at_utc": "2026-08-04T12:55:54.699888Z",
+  "milestone_1_mandatory_stop": true,
+  "milestones": [
+    {
+      "authorized": true,
+      "milestone": 1,
+      "name": "CONTRACT_AND_METADATA_READINESS",
+      "outputs": [
+        "contract",
+        "event taxonomy",
+        "outcomes",
+        "feature traceability",
+        "statistics",
+        "coverage/power audit",
+        "freeze"
+      ],
+      "stop": "MANDATORY_AFTER_SEAL",
+      "value_access": "METADATA_AND_SCHEMAS_ONLY"
+    },
+    {
+      "authorized": false,
+      "milestone": 2,
+      "name": "OUTCOME_BLIND_TRIGGER_AND_SUPPORT_MATERIALIZATION",
+      "permitted_only_if_later_authorized": "Full-session technical coverage, event timestamps, feature/context availability, and support counts; forward outcomes remain unjoined and unopened."
+    },
+    {
+      "authorized": false,
+      "milestone": 3,
+      "name": "FROZEN_TEST_REGISTRY_AND_DEVELOPMENT_DISCOVERY",
+      "precondition": "M2 passes and exact support-qualified tests are sealed before the one development outcome join."
+    },
+    {
+      "authorized": false,
+      "milestone": 4,
+      "name": "CALENDAR_2025_FORWARD_PROTOCOL_AND_EVALUATION",
+      "precondition": "At least one unchanged provisional development candidate and explicit authorization."
+    },
+    {
+      "authorized": false,
+      "milestone": 5,
+      "name": "CALENDAR_2026_INDEPENDENT_AND_PROSPECTIVE",
+      "precondition": "Frozen surviving candidate, exact 2026 protocol, and explicit authorization."
+    }
+  ],
+  "outcome_values_accessed": false,
+  "predecessor_bindings": {
+    "budget_c_freeze": {
+      "path": "research_manifests/gc_microstructure_step_5b_budget_c_freeze_v01.json",
+      "sha256": "ddfe58d2a366410f649de89bc7081b0081d16717a7245fec83f5d2bfa9efa916"
+    },
+    "budget_c_request_registry": {
+      "path": "research_manifests/gc_microstructure_step_5b_budget_c_request_registry_v01.json",
+      "sha256": "d8dfe8a04e0f824c98ec4e88b6c75b7e56214616e56124b76bdbfe0b20b0dd99"
+    },
+    "gold_casebook_manifest": {
+      "path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6"
+    },
+    "gold_casebook_price_bars": {
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    "microstructure_contract_v1": {
+      "path": "research_manifests/gc_microstructure_conditional_edge_discovery_contract_v01.json",
+      "sha256": "da9048f497c853ef3b1f2a4debe6c80f8c650217004bfe6df05e045751554fcb"
+    },
+    "reference_book": {
+      "path": "Gold_USD_Market_Intelligence_Reference_Book.pdf",
+      "sha256": "3e7ddc561932a859a4c9043a38ff71b7003907963fb52247e41edaeefc8ac42a"
+    },
+    "step4a3_feature_freeze": {
+      "path": "research_manifests/gc_microstructure_step_4a3_freeze_v01.json",
+      "sha256": "b4968106e21ffd7836ccca4438b826f63237ffd2cd0dca17c1ad9ef45973b1bb"
+    },
+    "step4a_feature_protocol": {
+      "path": "research_manifests/gc_microstructure_step_4a_protocol_v01.json",
+      "sha256": "8f1ba7230919b7422344253d4f3e55fea1e86495551cbbbf53f3e1bdcb9ec3a2"
+    },
+    "step5a_feature_registry": {
+      "path": "research_manifests/gc_microstructure_step_5a_feature_hypothesis_registry_v01.json",
+      "sha256": "4b207a1dec5aa78a904c86cf8c6a14bf0a517dd918f24c5270c254400c865f01"
+    },
+    "step5b2_amendment": {
+      "path": "research_manifests/gc_microstructure_step_5b2_amendment_v01.json",
+      "sha256": "1a6dd3372f40b52d219b38e35504b9a96046ffc284117ed1ac6cc703d009f9d7"
+    },
+    "step5b2_freeze": {
+      "path": "research_manifests/gc_microstructure_step_5b2_freeze_v01.json",
+      "sha256": "0c1e7b8db099ea4489c201dda9893da184a55f8159f89a4ce946e78a1485f918"
+    },
+    "step5b2_manifest": {
+      "path": "research_artifacts/gc_microstructure_step_5b2_v01/step5b2_final/manifest.json",
+      "sha256": "3fedb586ce4f9621721575b748b82043f47a4f6630488c29e0b2f8e73b4c86f1"
+    },
+    "step5b2_source_verification": {
+      "path": "research_artifacts/gc_microstructure_step_5b2_v01/step5b2_runs/source_verification.json",
+      "sha256": "f36180c5adcbf12f0c0d518ea6f3511593a6cb120a33a74f8fafe2a6f163e657"
+    },
+    "step5b2_verdict": {
+      "path": "research_artifacts/gc_microstructure_step_5b2_v01/step5b2_final/verdict.json",
+      "sha256": "5f3bd13cc2336a50c09ecfcc44c7d63b226a4d212f9d08666d6a50e93e09a6cb"
+    },
+    "step5c_freeze": {
+      "path": "research_manifests/gc_microstructure_step_5c_freeze_v01.json",
+      "sha256": "5ad5d57af1fdab6a80e90cb872408f1f6df99d2d7a4a892a5f380c49aee9f82d"
+    },
+    "step5c_manifest": {
+      "path": "research_artifacts/gc_microstructure_step5c_v01/manifest.json",
+      "sha256": "f7150f861f4883e3f7c100822af527ba497b8343225c24ebe16ffe11107e31fb"
+    },
+    "step5c_preflight": {
+      "path": "research_artifacts/gc_microstructure_step5c_v01/preflight.json",
+      "sha256": "9ff6e27e17c84dbd9e99e09eaccea376c84acd4fae6795caa1ba3f3a8309d78b"
+    },
+    "step5c_protocol": {
+      "path": "research_manifests/gc_microstructure_step_5c_protocol_v01.json",
+      "sha256": "25e087ae505bd2b304b5d9533c9fb8dd8042b47e8e498ed82242ad48365e272d"
+    },
+    "step5c_row_registry": {
+      "path": "research_manifests/gc_microstructure_step_5c_row_registry_v01.json",
+      "sha256": "a0c2b6dff0dd6c57e25b5f194342c69202e02f2e642f6fe8ae75ac2ea1bbe225"
+    },
+    "step5c_verdict": {
+      "path": "research_artifacts/gc_microstructure_step5c_v01/verdict.json",
+      "sha256": "f98702e5260f60fa258a8f5ed43adc944724075bf442f958677fdf8fe3dee2ad"
+    },
+    "step5dr2_certification": {
+      "path": "research_artifacts/gc_microstructure_step5dr2_v01/certification.json",
+      "sha256": "454638ff5b011c75f94ba690114c0552bb333902986b7fa24dbaf4b707292e67"
+    },
+    "step5dr2_final_seal": {
+      "path": "research_artifacts/gc_microstructure_step5dr2_v01/final_seal.json",
+      "sha256": "65a7b19971eae1d434720f79d0dcd39d4c05d4fbb41ab995ac4632f49d80ad24"
+    },
+    "step5dr3_amendment": {
+      "path": "research_manifests/gc_microstructure_step_5dr3_amendment_v01.json",
+      "sha256": "335c39cf4ad459da85553ed698f5b926b50c1c0f208b7ecb79edc8b8ec233b60"
+    },
+    "step5dr3_final_seal": {
+      "path": "research_artifacts/gc_microstructure_step5dr3_v01/final_seal.json",
+      "sha256": "5f72949acefe21f2a0d387bd72ec458808ed075a6c89ffbfa5f8780e79263ddc"
+    },
+    "step5dr3_freeze": {
+      "path": "research_manifests/gc_microstructure_step_5dr3_freeze_v01.json",
+      "sha256": "4d9673a803b330758e320fb4094c168912459acba6c6d807f6fbf67f07c1f4f3"
+    },
+    "step5dr3_manifest": {
+      "path": "research_artifacts/gc_microstructure_step5dr3_v01/manifest.json",
+      "sha256": "662629be8586bc5182bacec22e327116adb487a99edab2431590b4ab7cd7bcc0"
+    },
+    "step5dr3_population": {
+      "path": "research_manifests/gc_microstructure_step_5dr3_population_v01.json",
+      "sha256": "67b31a1ddaa47c13f24d402a86b1f666e0d6bfe20ca1c3af86538d165f798667"
+    },
+    "step5dr3_report": {
+      "path": "GC_MICROSTRUCTURE_STEP_5D_R3_REPORT.md",
+      "sha256": "83567fd7591631b5705f2808716c74e8c45c2c7c2f0bbdf4f1a5c4a388fa8e18"
+    },
+    "step5dr3_verdict": {
+      "path": "research_artifacts/gc_microstructure_step5dr3_v01/verdict.json",
+      "sha256": "6df80389517ff1056250f42d5e4da904460bdd0c9f66c26c7c459f3c48b94257"
+    },
+    "v3_traceability": {
+      "path": "research_manifests/gold_session_behaviour_v3_traceability_v01.json",
+      "sha256": "9690360ed1c9eceac1b26428460e54ec4326b7ffb0ef94c73dd1574589a2bd92"
+    }
+  },
+  "preserved_history": {
+    "all_prior_verdicts_artifacts_and_seals_immutable": true,
+    "rejected_zn_and_v3_candidates_remain_rejected_or_inconclusive": true,
+    "step5dr3_candidates": 0,
+    "step5dr3_interpretation": "Fixed pre-session snapshots did not establish a whole-session directional candidate. They are not repaired, inverted, renamed, or credited here.",
+    "step5dr3_registered_tests": 148,
+    "step5dr3_status": "PASS_STEP_5D_R3_DISCOVERY_ZERO_CANDIDATES"
+  },
+  "prohibited": [
+    "event or outcome value access in Milestone 1",
+    "candidate discovery or ranking in Milestone 1",
+    "2025 or 2026 value access",
+    "execution optimization",
+    "trades, PnL, R multiples, or account returns",
+    "paid acquisition or charge",
+    "opaque machine-learning selection",
+    "unsupported institutional attribution"
+  ],
+  "registry_bindings": {
+    "event_taxonomy": {
+      "path": "research_manifests/gc_session_trigger_edge_taxonomy_v01.json",
+      "receipt": "5d21f9d8f7ddc04f46cbb51e5985a8864ec42c98d9e86b5e74b0073e2f5c613f",
+      "sha256": "7f26a02a1760b466b44d66ac70fb0d856890e0233c599960267c9bb32a076263"
+    },
+    "features": {
+      "path": "research_manifests/gc_session_trigger_edge_feature_traceability_v01.json",
+      "receipt": "af57c5780584866b3a40d60e3f8dd9bad4758695b9dfbee1ed78072e04ef15fb",
+      "sha256": "16e583fc8914388ea0cbb0555f2960c4032855d5f554c8db80e37e04b50ecee5"
+    },
+    "outcomes": {
+      "path": "research_manifests/gc_session_trigger_edge_outcomes_v01.json",
+      "receipt": "c01d81854a4c422da7f8d4c4fea7fcf67e8e5f713c4365bd4ac7fa683c01c21b",
+      "sha256": "5c1ecb0db0b9af80ca163bc1e85a0deccf72ae3db2e9541a6ce9bfa34b5273c8"
+    },
+    "statistics": {
+      "path": "research_manifests/gc_session_trigger_edge_statistics_v01.json",
+      "receipt": "fcbc10fbbcd2b812460bede4931b7bca7b157c3610bc0cc414a8eee64d2c2a12",
+      "sha256": "08fa00873058572b2df4a94e49eb6f85708c71cb60657b8d63d2f4a33dd3a7c2"
+    }
+  },
+  "research_boundary": {
+    "bias": "Fundamental and cross-market states are context and alignment variables.",
+    "causal_claims": false,
+    "execution": "Entirely out of scope for V1 discovery.",
+    "outcome": "Neutral forward market behaviour, never a fill or trade.",
+    "trigger": "A completed price-level or microstructure event defined in the sealed taxonomy."
+  },
+  "research_question": "After a preregistered London or New York price-level or liquidity/order-flow event is fully observable, does its preregistered direction predict the next fifteen minutes of XAUUSD more often and by more than chance, and does point-in-time macro or structure alignment materially strengthen that relationship?",
+  "status": "FROZEN_MILESTONE_1_BEFORE_EVENT_OR_OUTCOME_VALUE_ACCESS",
+  "time_partitions": {
+    "calendar_2025": {
+      "classification_if_later_opened": "EXPOSED_HISTORICAL_FORWARD_NO_INDEPENDENT_VALIDATION_CREDIT",
+      "status": "LOCKED",
+      "unlock": "Candidate-specific sealed protocol plus explicit user authorization after development candidates exist."
+    },
+    "calendar_2026": {
+      "status": "LOCKED_INDEPENDENT_YEAR_AND_PROSPECTIVE",
+      "unlock": "Candidate-specific sealed protocol plus explicit user authorization after 2025 disposition."
+    },
+    "development": {
+      "calendar_boundary": "2021-01-01 through 2024-12-31 only",
+      "effective_microstructure_sample": "188 outcome-blind calendar-selected dates from 2021-11-08 through 2024-12-13",
+      "independent_month_week_blocks": 38,
+      "independent_validation_credit": false
+    }
+  },
+  "version": "GC_SESSION_TRIGGER_EDGE_DISCOVERY_CONTRACT_V1_0",
+  "year_2025_or_2026_values_accessed": false
+}

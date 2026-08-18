@@ -1,0 +1,58 @@
+{
+  "certification": {
+    "bytes": 3950,
+    "path": "research_artifacts/gold_structural_trend_retracement_continuation_v1_v01/materialization_certification.json",
+    "sha256": "87f00d1d4db74c3d770b918b3c3df14696752a35e2d4fb02cd432bb79d1a683e"
+  },
+  "controls": {
+    "amendment_a": {
+      "bytes": 1234,
+      "path": "research_manifests/gold_structural_trend_retracement_continuation_v1_design_amendment_a.json",
+      "sha256": "10fd5fbb399415460a40c61e96fa5a217d656e1bd7b5052c308770f467d17c83"
+    },
+    "contract": {
+      "bytes": 10024,
+      "path": "GOLD_STRUCTURAL_TREND_RETRACEMENT_CONTINUATION_EDGE_CONTRACT_V1.md",
+      "sha256": "781cbd3536e16309a9b7102732ec7aee21c08f69217b2966c5898dbd9449c01b"
+    },
+    "design_freeze": {
+      "bytes": 4073,
+      "path": "research_manifests/gold_structural_trend_retracement_continuation_v1_design_freeze.json",
+      "sha256": "773cfbe59498ee52a09e77f1ea5420196dc2f4f8272dfda92e8730a192b33ef4"
+    },
+    "protocol": {
+      "bytes": 2691,
+      "path": "research_manifests/gold_structural_trend_retracement_continuation_v1_protocol.json",
+      "sha256": "08838e7dbd348fd6925f4917caa1d9577cff687b30b75f4e69811f1282cbd587"
+    },
+    "test_registry": {
+      "bytes": 845,
+      "path": "research_manifests/gold_structural_trend_retracement_continuation_v1_test_registry.json",
+      "sha256": "a378dc7b3dcb1e9753e23b9463838b041d40e55c46c31cbd47caa0848655d3a5"
+    }
+  },
+  "design_rules_hash": "65ce9847cbf8846c4a332e51e57212d988aa5786f8a57106e0fd5fe97594524a",
+  "development_outcomes_accessed": false,
+  "forward_values_accessed": false,
+  "implementation": {
+    "bytes": 31670,
+    "path": "tools/materialize_gold_structural_trend_retracement_continuation_v1.py",
+    "sha256": "e3e1ae8c2e191f6080b2a9cdabfcdc79f7fce1199107adfe71f2fb7a606c0348"
+  },
+  "paid_acquisition_authorized": false,
+  "primary_signals": {
+    "bytes": 58241,
+    "path": "research_artifacts/gold_structural_trend_retracement_continuation_v1_v01/primary_signals.parquet",
+    "sha256": "499f9714c36e9324570ced7592097a5fe57b80a82854af3680908b5ebc7a87b6"
+  },
+  "reference_signals": {
+    "bytes": 58241,
+    "path": "research_artifacts/gold_structural_trend_retracement_continuation_v1_v01/reference_signals.parquet",
+    "sha256": "499f9714c36e9324570ced7592097a5fe57b80a82854af3680908b5ebc7a87b6"
+  },
+  "sealed_at_utc": "2026-08-07T11:54:15.519580Z",
+  "signal_count": 59,
+  "signal_rows_hash": "ff03dcc51f4a2ea4a6fbb077e567f69bddcb9d44a50be870d793eda574c2e234",
+  "status": "SEALED_EXACT_SIGNAL_POPULATION_BEFORE_OUTCOMES",
+  "version": "GOLD_STRC_V1_PREOUTCOME_FREEZE_1_0"
+}

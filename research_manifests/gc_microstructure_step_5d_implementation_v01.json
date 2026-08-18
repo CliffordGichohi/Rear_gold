@@ -1,0 +1,18 @@
+{
+  "algorithms": {
+    "primary": "vectorized week-block accumulation",
+    "reference": "independent indexed week-block accumulation",
+    "shared_random_schedule": "NumPy PCG64 with exact per-test uint64 seeds"
+  },
+  "development_outcomes_accessed": false,
+  "freeze_sha256": "982464e185fabaab57b5871506fc3f75b9f577267eb3bcd52ebd83a4fbf2725d",
+  "implementation_receipt": "1ab19b37eb5fb00e7ee16856be6e7ab95637b856e4d15ddc933e4130fecc7d87",
+  "protocol_sha256": "835361070b3955912938b5519ec0b7b32542d6774c895f43bde11a93fb268b64",
+  "sealed_at_utc": "2026-08-04T11:01:11.935028Z",
+  "status": "SEALED_BEFORE_DEVELOPMENT_OUTCOME_ACCESS",
+  "test_registry_sha256": "e3b7a132f03cebaff4c05cc646e00f0b1867881d0109c65b71f1076e74ab2d4a",
+  "tool_path": "tools/run_gc_microstructure_step5d.py",
+  "tool_sha256": "ced71822f28ba4efcc9fa2078e5a06a58d2ab35136a4a7847add23f6b1014303",
+  "version": "GC_MICROSTRUCTURE_STEP_5D_IMPLEMENTATION_V0_1",
+  "year_2025_or_2026_values_accessed": false
+}

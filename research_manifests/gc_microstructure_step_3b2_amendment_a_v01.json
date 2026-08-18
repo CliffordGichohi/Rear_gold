@@ -1,0 +1,215 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_3B2_AMENDMENT_A_V0_1",
+  "status": "FROZEN_BEFORE_MBP10_VALUE_ACCESS",
+  "frozen_at_utc": "2026-07-31T06:17:19.6550371Z",
+  "classification": "PRE_VALUE_ENGINEERING_CARDINALITY_AMENDMENT",
+  "research_or_validation_credit": "NONE",
+  "authorization": {
+    "maximum_charge_usd": 0.4,
+    "fresh_quote_required_immediately_before_submission": true,
+    "stop_before_submission_if_fresh_quote_exceeds_cap": true,
+    "acquisition_permitted_only_for_exact_frozen_request": true
+  },
+  "predecessor_preservation": {
+    "step_3a": {
+      "formal_verdict": "FAIL",
+      "verdict_preserved": true,
+      "declared_manifest_hash": "0897e33856c5329ee59040ff5a6c15f48cb65fc17dcf3e63ec1f8c5bf3c6c59c"
+    },
+    "step_3a1": {
+      "formal_verdict": "PASS",
+      "verdict_preserved": true,
+      "research_or_validation_credit": "NONE",
+      "declared_manifest_hash": "334b67560ee5912ed1939305715078b3f9460d389feb8cc17723a062543d657c"
+    },
+    "step_3b1": {
+      "formal_verdict": "FAIL_PRE_ACQUISITION_READINESS",
+      "verdict_preserved": true,
+      "quote_compliance_status": "PASS",
+      "declared_manifest_hash": "e4ddc27c8916df1d22e69a63d9b67f52ce0c81c55ccd172310a51cfe7d0533ac"
+    },
+    "frozen_files": [
+      {
+        "path": "research_manifests/gc_microstructure_step_3b1_protocol_v01.json",
+        "bytes": 12576,
+        "sha256": "07860e02cf4f76487a0f334faa2987e0a0cf97f8977ca61f995c533f617022c5"
+      },
+      {
+        "path": "research_manifests/gc_microstructure_step_3b1_freeze_v01.json",
+        "bytes": 1165,
+        "sha256": "b418883b2c94ff3b7efcf3e8bc4bf3bd121760cd036aeef0adae7806a099f681"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3b1_v01/metadata_quote.json",
+        "bytes": 1609,
+        "sha256": "9dc78a5a9aa3cf2646eab455d15cde16bd690df0377954944458f59b8a2ddba9"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3b1_v01/readiness.json",
+        "bytes": 4150,
+        "sha256": "4df6af6b928a2b81fbe7f7e43770a42d51a9aa74bb55e29850a5d2e3f0138552"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3b1_v01/manifest.json",
+        "bytes": 2492,
+        "sha256": "879def7c3b5b4a7bfcc047a15f5eb734dbab40c8bed2dd6a3847e7eed0066680"
+      },
+      {
+        "path": "GC_MICROSTRUCTURE_STEP_3B1_REPORT.md",
+        "bytes": 4453,
+        "sha256": "32d948ec03c60aed7219b5abb8cae7b2164eb10cc175dbe95f8f3818d93e9601"
+      }
+    ]
+  },
+  "exact_request": {
+    "dataset": "GLBX.MDP3",
+    "symbols": [
+      "GC.v.0"
+    ],
+    "schema": "mbp-10",
+    "stype_in": "continuous",
+    "stype_out": "instrument_id",
+    "start": "2024-01-09T00:00:00Z",
+    "end": "2024-01-10T00:00:00Z",
+    "encoding": "dbn",
+    "compression": "zstd",
+    "pretty_px": false,
+    "pretty_ts": false,
+    "map_symbols": false,
+    "split_duration": "day",
+    "split_symbols": false,
+    "delivery": "download"
+  },
+  "sole_amendment": {
+    "removed_rule": "Exactly one vendor MBP-10 record per every sealed MBO F_LAST boundary.",
+    "replacement_population": "Every vendor MBP-10 record in the exact frozen request.",
+    "replacement_alignment_rule": "Every vendor MBP-10 record must align exactly and uniquely to one sealed MBO F_LAST boundary using the unchanged five-field key.",
+    "unrepresented_mbo_boundary_policy": "A sealed MBO F_LAST boundary without a vendor MBP-10 record is counted and reported separately by frozen market state but is not missing benchmark data and is not rejected.",
+    "unmatched_vendor_record_policy": "FAIL",
+    "duplicate_vendor_key_policy": "FAIL",
+    "duplicate_matched_mbo_key_policy": "FAIL",
+    "silent_vendor_row_filtering_permitted": false,
+    "reason": "Step 3B.1 metadata showed that the vendor MBP-10 population and the complete MBO F_LAST population have unequal cardinality before any MBP-10 value access."
+  },
+  "unchanged_from_step_3b1": {
+    "alignment_key": [
+      "publisher_id",
+      "instrument_id",
+      "sequence",
+      "ts_event",
+      "ts_recv"
+    ],
+    "mbo_sampling_boundary": "F_LAST after application",
+    "book_fields_per_aligned_record": 60,
+    "bid_and_ask_levels": 10,
+    "price_tolerance_fixed_1e9_units": 0,
+    "size_tolerance": 0,
+    "order_count_tolerance": 0,
+    "undefined_level_canonicalization": {
+      "price_fixed_1e9": 9223372036854775807,
+      "aggregate_size": 0,
+      "order_count": 0
+    },
+    "nearest_timestamp_matching_permitted": false,
+    "timestamp_tolerance_ns": 0,
+    "sequence_tolerance": 0,
+    "resampling_permitted": false,
+    "forward_fill_permitted": false,
+    "interpolation_permitted": false,
+    "market_state_policy_unchanged": true,
+    "two_independent_implementations_required": true,
+    "separate_source_passes_required": true,
+    "all_other_step_3b1_gates_unchanged": true
+  },
+  "market_state_policy": {
+    "timezone": "UTC",
+    "classification_timestamp": "ts_recv",
+    "intervals": [
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive": "2024-01-09T00:00:00Z",
+        "end_exclusive": "2024-01-09T22:00:00Z"
+      },
+      {
+        "state": "MAINTENANCE",
+        "start_inclusive": "2024-01-09T22:00:00Z",
+        "end_exclusive": "2024-01-09T22:45:00Z"
+      },
+      {
+        "state": "PRE_OPEN",
+        "start_inclusive": "2024-01-09T22:45:00Z",
+        "end_exclusive": "2024-01-09T23:00:00Z"
+      },
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive": "2024-01-09T23:00:00Z",
+        "end_exclusive": "2024-01-10T00:00:00Z"
+      }
+    ],
+    "coverage_must_be_complete_and_nonoverlapping": true,
+    "exact_book_comparison_applies_in_all_states": true,
+    "uncrossed_gate_applies_only_to_continuous_matching": true,
+    "maintenance_and_pre_open_locked_or_crossed_reported_not_rejected": true
+  },
+  "amended_future_pass_gates": {
+    "all_predecessor_seals_valid": true,
+    "mbo_source_seal_unchanged": true,
+    "fresh_quote_at_or_below_0_40_usd": true,
+    "mbp10_request_identity_exact": true,
+    "mbp10_raw_and_normalized_sources_hashed_and_sealed": true,
+    "normalized_mbp10_record_count_matches_fresh_provider_metadata": true,
+    "full_requested_interval_covered_under_provider_snapshot_semantics": true,
+    "symbol_and_instrument_lineage_consistent": true,
+    "market_state_classification_complete_and_nonoverlapping": true,
+    "mbp10_alignment_keys_unique": true,
+    "every_mbp10_record_has_exactly_one_mbo_f_last_match": true,
+    "unmatched_mbp10_records": 0,
+    "duplicate_matched_mbo_keys": 0,
+    "all_mbp10_records_compared": true,
+    "book_field_mismatches": 0,
+    "continuous_matching_relation_mismatches": 0,
+    "continuous_matching_locked_or_crossed_rows": 0,
+    "unrepresented_mbo_boundaries_reported": true,
+    "primary_and_reference_alignment_counts_match": true,
+    "primary_and_reference_mismatch_counts_match": true,
+    "primary_and_reference_comparison_checksums_match": true,
+    "deterministic_repeat_checksum_matches": true
+  },
+  "verdict_rule": {
+    "PASS": "Every amended future pass gate is satisfied exactly.",
+    "FAIL": "One or more amended future pass gates is not satisfied.",
+    "retuning_after_value_access_permitted": false,
+    "repairing_failed_alignment_permitted": false,
+    "earlier_verdicts_overwritten": false
+  },
+  "data_policy": {
+    "classification": "ENGINEERING_ONLY",
+    "calendar_date": "2024-01-09",
+    "research_and_validation_exclusion": "PERMANENT",
+    "human_market_value_inspection_permitted": false,
+    "machine_book_comparison_permitted": true,
+    "market_outcome_analysis_permitted": false,
+    "edge_discovery_permitted": false,
+    "signal_testing_permitted": false,
+    "execution_optimization_permitted": false,
+    "trades_or_pnl_permitted": false
+  },
+  "prohibited": [
+    "modifying predecessor artifacts",
+    "changing any rule other than population cardinality and treatment of unrepresented MBO boundaries",
+    "submitting above the 0.40 USD cap",
+    "human inspection of MBP-10 market values",
+    "nearest-time or tolerant alignment",
+    "dropping vendor records",
+    "post-result repair",
+    "outcome inspection",
+    "directional analysis",
+    "features",
+    "signals",
+    "execution optimization",
+    "trades",
+    "PnL",
+    "R multiples",
+    "account returns"
+  ]
+}

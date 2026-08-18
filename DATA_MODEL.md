@@ -248,10 +248,17 @@ timeframe, and bar-open time; versions remain append-only through their facts.
 
 The current Phase 1 projection stores the IC Markets MT5 spread as
 `spread_points` and `spread_price`. The conversion is provider-contract specific:
-the validated XAUUSD symbol uses `SYMBOL_POINT=0.01`; unversioned providers cannot
-submit point spreads. Historical normalized rows are enriched from immutable
+the validated contracts use `XAUUSD=0.01`, `EURUSD=0.00001`, `XAGUSD=0.001`,
+`US500=0.01`, and `TLT.NAS=0.01`. Unversioned providers cannot submit point
+spreads. Historical normalized rows are enriched from immutable
 `raw.raw_records`, so the original payload remains unchanged. MT5 `tick_volume`
 continues to carry `volume_type=TICK` and is never promoted to exchange volume.
+
+Exact file retries are idempotent by provider, dataset, and content hash.
+Differently chunked overlapping price files retain their raw batches but use
+`ON CONFLICT DO NOTHING` on the immutable normalized fact key
+`(provider, instrument, timeframe, open_time, available_at)`. No existing price
+fact is overwritten.
 
 #### `market.observations`
 
@@ -582,3 +589,69 @@ This table is intentionally separate from `market.policy_path_points`.
 `policy_expectation_windows` means quarterly average SOFR distributions. Keeping
 the entities separate prevents a quarterly estimate from being presented as an
 observed FedWatch meeting probability.
+
+## 13. Canonical seven-layer decisions (migration `0008`)
+
+`analytics.decision_snapshots` is the persisted, dashboard-facing aggregate of the
+reference-book engine. Each immutable row stores:
+
+- instrument, point-in-time `as_of`, creation time, and epistemic status;
+- directional, bullish, bearish, and connected-evidence conflict scores;
+- directional and execution confidence;
+- directional-component, Phase 1, stable full-book, and live usable coverage;
+- bias, regime, reaction function, dominant driver, main contradiction, catalyst,
+  session, liquidity, price/macro alignment, and execution state;
+- the seven layer assessments and scored component payload;
+- separate bias, trigger, invalidation, and risk objects;
+- the deterministic reasoning graph; and
+- fundamental, structure, registry, aggregate data, and ruleset hashes.
+
+The uniqueness contract is `(instrument_code, as_of, ruleset_version, data_hash)`.
+Recalculation with different evidence or rules creates another auditable record;
+it never overwrites a prior decision. Foreign evidence is retained through hashes
+and the nested evidence IDs while normalized source rows remain immutable in their
+own tables.
+
+## 14. Session edge research ledger (migration `0009`)
+
+`analytics.session_edge_study_runs` stores the immutable experiment envelope:
+instrument/provider, requested period, detector version, complete configuration,
+source-bar count, session/trigger counts, matched-cohort results, point-in-time
+provenance, and combined evidence hash.
+
+`analytics.session_opportunities` stores exactly one row per requested London
+session and run. Queryable columns include:
+
+- fundamental and level freeze clocks plus DST-resolved London clocks;
+- completion/trigger status and explicit no-trigger reason;
+- setup side, signal, hypothetical next-bar entry, and bias alignment;
+- point-in-time fundamental score, confidence, coverage, regime, dominant driver,
+  and catalyst risk;
+- Asian high, low, range, prior-range percentile, and compression state; and
+- structural entry reference, invalidation, and normalized risk distance.
+
+The `facts` JSON contains the Asian range, prior-day/week level map, fundamental
+fact bundle, and every sweep/reclaim/displacement attempt. `outcomes` contains
+the 30/60/120/240-minute MFE, MAE, terminal return, and conservative
+target-before-stop calculations. `evidence` contains completeness counts, ATR,
+confluence, epistemic classification, and ruleset identity.
+
+The unique key `(run_id, session_date)` prevents denominator duplication inside a
+run. Re-running a period creates a new parent run rather than overwriting the
+earlier ledger. Sweep language is stored as `INFERRED`; bar highs/lows and level
+values remain `OBSERVED` or `CALCULATED`.
+
+## 15. Session-edge executable runs
+
+Candidate C1 execution reuses `analytics.backtest_runs` and
+`analytics.backtest_trades`; no parallel trade ledger is introduced. A run stores
+the frozen execution configuration, source session-study IDs and hashes,
+one-minute execution-bar hash, cost/parameter robustness report, exclusion funnel,
+development-gate result, and combined SHA-256 manifest.
+
+Each trade stores its actual entry/exit reference and cost-adjusted prices,
+structural stop, target, rounded lot quantity, exit reason, gross PnL, spread,
+slippage, commission, net PnL/R, MFE/MAE, and holding period. Evidence links the
+immutable source opportunity/run/hash and exact entry/exit price record keys.
+Re-running the same configuration creates a new audit row with the same
+deterministic data hash rather than overwriting prior evidence.

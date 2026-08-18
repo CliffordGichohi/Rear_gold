@@ -1,0 +1,159 @@
+{
+  "annual_stability": {
+    "gate": "favorable effect in every supported required year and all three required years supported",
+    "required_years": [
+      2022,
+      2023,
+      2024
+    ],
+    "stage1_year_support": "at least 8 assigned events",
+    "stage2_year_support": "at least 5 distinct condition dates",
+    "year_2021": "descriptive only"
+  },
+  "block_stability": {
+    "gate": "at least three supported segments, favorable effect in at least three, and no supported segment effect below -5 percentage points",
+    "segments": [
+      [
+        1,
+        10
+      ],
+      [
+        11,
+        20
+      ],
+      [
+        21,
+        29
+      ],
+      [
+        30,
+        38
+      ]
+    ],
+    "stage1_segment_support": {
+      "distinct_dates": 13,
+      "down_events": 8,
+      "events": 20,
+      "up_events": 8
+    },
+    "stage2_segment_support": {
+      "comparison_dates": 10,
+      "comparison_down_dates": 4,
+      "comparison_events": 18,
+      "comparison_up_dates": 4,
+      "condition_dates": 8,
+      "condition_down_dates": 3,
+      "condition_events": 13,
+      "condition_up_dates": 3
+    }
+  },
+  "candidate_cap_per_session": 2,
+  "cross_venue": "not failed unless >=20 known GC observations and the 95% block-bootstrap upper confidence bound for median sign-normalized GC displacement is below zero",
+  "development_boundary": [
+    "2021-11-08",
+    "2024-12-13"
+  ],
+  "directional_symmetry": "both UP-prior and DOWN-prior subgroup effects must be favorable; one-sided pooled effects cannot advance",
+  "first_event_sensitivity": "earliest event per session_date and event_family; effect must be favorable and at least 50% of the complete canonical-event effect",
+  "frozen_at_utc": "2026-08-06T06:58:38.385665Z",
+  "multiplicity": {
+    "primary": "Benjamini-Hochberg separately by session and stage across all outcome-blind support-eligible tests",
+    "q_threshold": 0.05,
+    "secondary": "Holm across 5m, 30m, 60m within each test; descriptive only"
+  },
+  "outcome": {
+    "anchor": "close of complete XAUUSD one-minute bar ending at decision_at",
+    "availability": "complete unique IC Markets MT5 XAUUSD 1m records with available_at <= close_time",
+    "complete_path_required": true,
+    "endpoint": "close of complete XAUUSD one-minute bar ending at decision_at+horizon",
+    "flat_binary_policy": "exclude from binary hit rates; retain in continuous displacement",
+    "gc_consistency": "authoritative continuous-matching uncrossed two-sided bucket states at decision_at and +15m; 0.1 USD GC tick",
+    "horizons_minutes": [
+      5,
+      15,
+      30,
+      60
+    ],
+    "scale": "integer 1e-8 USD per troy ounce",
+    "source_opening": "one sequential source stream opening; matching rows parsed twice in memory for independent arithmetic",
+    "states": {
+      "DOWN": "<-0.01",
+      "FLAT": "inclusive [-0.01,+0.01]",
+      "UNKNOWN": "any gate failure",
+      "UP": ">+0.01"
+    },
+    "unknown_policy": "retain identity; exclude only from the affected endpoint; never impute or drop a test from multiplicity"
+  },
+  "outcome_values_accessed": false,
+  "primary_endpoint": "XAUUSD_FWD_15M_SIGNED_DISPLACEMENT",
+  "prohibited": [
+    "retuning",
+    "inversion",
+    "repair",
+    "selective filtering",
+    "2025 or 2026 access",
+    "execution optimization",
+    "trades",
+    "PnL",
+    "R multiples",
+    "account returns"
+  ],
+  "protocol_receipt": "8e3d72f8c73710084e186b37b537c33b1efbc234c480b329cfe7834601cbf37a",
+  "ranking": [
+    "lowest BH q-value",
+    "highest lower confidence bound on favorable hit-rate lift",
+    "highest minimum bullish/bearish distinct-date support",
+    "largest favorable effect",
+    "largest distinct-date support",
+    "lexicographically smallest test_id"
+  ],
+  "secondary_horizons_minutes": [
+    5,
+    30,
+    60
+  ],
+  "sessions_separate": [
+    "LONDON",
+    "NEW_YORK"
+  ],
+  "stage_1": {
+    "bootstrap_lower_hit_rate": ">0.50",
+    "bootstrap_lower_median_signed_displacement": ">0",
+    "effect": "sign-normalized favorable hit rate minus 0.50",
+    "minimum_hit_rate": 0.56,
+    "null": 0.5,
+    "tests_per_session": 6
+  },
+  "stage_2": {
+    "bootstrap_lower_lift": ">0",
+    "bootstrap_lower_median_difference": ">0",
+    "effect": "condition favorable hit rate minus comparison favorable hit rate",
+    "evaluate": "only frozen SUPPORT_ELIGIBLE tests; SUPPORT_FAIL tests retain null p-values",
+    "minimum_condition_hit_rate": 0.56,
+    "minimum_lift_percentage_points": 10.0,
+    "registered_per_session": 30
+  },
+  "status": "FROZEN_BEFORE_DEVELOPMENT_OUTCOME_VALUE_ACCESS",
+  "uncertainty": {
+    "bootstrap": {
+      "blocks": 38,
+      "method": "linear",
+      "minimum_finite": 19000,
+      "quantiles": [
+        0.025,
+        0.975
+      ],
+      "resamples": 20000,
+      "unit": "selected_month_week_id"
+    },
+    "randomization": {
+      "repetitions": 100000,
+      "rule": "all binary event outcomes on a date flip together",
+      "two_sided": true,
+      "unit": "session_date"
+    },
+    "seed": "uint64 from first 16 hex SHA256(contract_version|session|stage|test_id|method)"
+  },
+  "version": "GC_SESSION_TRIGGER_EDGE_V2_M3_PROTOCOL_V1_0",
+  "year_2025_or_2026_values_accessed": false
+}

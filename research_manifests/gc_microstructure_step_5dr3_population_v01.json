@@ -1,0 +1,4536 @@
+{
+  "all_feature_keys": [
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-04-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-04-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-04-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-04-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-04-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-08-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-08-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-08-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-08-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-08-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-01-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-01-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-01-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-01-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-01-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-01-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-13"
+    }
+  ],
+  "counts": {
+    "feature_rows": 376,
+    "outcome_bearing": 370,
+    "per_session": {
+      "LONDON": {
+        "feature_rows": 188,
+        "known_outcomes": 186,
+        "recovered_price_bar_outcomes": 6,
+        "unknown_rows": 2,
+        "v3_payload_outcomes": 180
+      },
+      "NEW_YORK": {
+        "feature_rows": 188,
+        "known_outcomes": 184,
+        "recovered_price_bar_outcomes": 6,
+        "unknown_rows": 4,
+        "v3_payload_outcomes": 178
+      }
+    },
+    "recovered_price_bars": 12,
+    "unknown": 6,
+    "v3_payload": 358
+  },
+  "outcome_bearing_keys": [
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-04-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-04-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-04-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-04-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-08-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-08-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-08-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-08-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-01-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-01-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-01-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-01-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-01-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-01-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-13"
+    }
+  ],
+  "outcome_values_accessed_to_construct_registry": false,
+  "population_hash": "f9b18ec511a862633335195de698af8912eeeee8a31cdc60f895988de4eb71a1",
+  "population_receipt": "37eab49a623f2fcfc00642ca3ba67445198c24bcfa69a7ba9574a699232d5fb7",
+  "recovered_price_bar_keys": [
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-13"
+    }
+  ],
+  "sealed_at_utc": "2026-08-04T12:24:49.632226Z",
+  "source_allocation_is_disjoint_and_exhaustive": true,
+  "status": "SEALED_EXACT_370_OUTCOME_KEY_POPULATION",
+  "unknown_keys": [
+    {
+      "disposition": "DOCUMENTED_SOURCE_UNAVAILABLE_FOR_THIS_STUDY",
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-13"
+    },
+    {
+      "disposition": "UNAVAILABLE_DOCUMENTED_CME_GOOD_FRIDAY",
+      "session_code": "LONDON",
+      "session_date": "2022-04-15"
+    },
+    {
+      "disposition": "UNAVAILABLE_DOCUMENTED_CME_GOOD_FRIDAY",
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-15"
+    },
+    {
+      "disposition": "DOCUMENTED_SOURCE_UNAVAILABLE_FOR_THIS_STUDY",
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-15"
+    },
+    {
+      "disposition": "DOCUMENTED_SOURCE_UNAVAILABLE_FOR_THIS_STUDY",
+      "session_code": "LONDON",
+      "session_date": "2023-08-15"
+    },
+    {
+      "disposition": "DOCUMENTED_SOURCE_UNAVAILABLE_FOR_THIS_STUDY",
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-13"
+    }
+  ],
+  "v3_payload_keys": [
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-11-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-11-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2021-12-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2021-12-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-01-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-01-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-02-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-02-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-03-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-03-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-04-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-04-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-04-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-04-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-04-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-05-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-05-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-06-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-06-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-07-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-07-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-08-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-08-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-09-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-09-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-10-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-10-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-11-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-11-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2022-12-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2022-12-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-01-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-01-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-02-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-02-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-03-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-03-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-04-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-04-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-05-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-05-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-06-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-06-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-07-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-07-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-08-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-08-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-08-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-08-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-08-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-09-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-09-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-10-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-10-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-11-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-11-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2023-12-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2023-12-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-01-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-01-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-01-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-01-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-01-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-01-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-02-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-02-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-03-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-03-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-04-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-04-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-05-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-05-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-06-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-06-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-08"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-08"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-07-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-07-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-08-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-08-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-09-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-09-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-16"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-16"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-17"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-17"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-10-18"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-10-18"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-13"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-14"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-14"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-11-15"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-11-15"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-09"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-09"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-10"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-10"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-11"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-11"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-12"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-12"
+    },
+    {
+      "session_code": "LONDON",
+      "session_date": "2024-12-13"
+    },
+    {
+      "session_code": "NEW_YORK",
+      "session_date": "2024-12-13"
+    }
+  ],
+  "version": "GC_MICROSTRUCTURE_STEP_5D_R3_EXACT_POPULATION_V0_1"
+}

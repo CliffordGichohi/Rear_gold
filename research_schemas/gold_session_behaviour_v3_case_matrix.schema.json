@@ -1,0 +1,1694 @@
+{
+  "$id": "https://gold-intel.local/schemas/gold_session_behaviour_v3_case_matrix.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "One immutable, point-in-time-correct London or New York gold session case. Decision-known conditions and neutral subsequent behaviour are strictly separated. This schema contains no trade direction, entry, stop, target, MFE, MAE, P&L, reward-to-risk, or position sizing.",
+  "properties": {
+    "case_metadata": {
+      "$ref": "#/$defs/case_metadata"
+    },
+    "decision_state": {
+      "$ref": "#/$defs/decision_state"
+    },
+    "lineage": {
+      "$ref": "#/$defs/lineage"
+    },
+    "quality": {
+      "$ref": "#/$defs/case_quality"
+    },
+    "research_policy": {
+      "$ref": "#/$defs/research_policy"
+    },
+    "subsequent_behaviour": {
+      "$ref": "#/$defs/subsequent_behaviour"
+    }
+  },
+  "required": [
+    "case_metadata",
+    "lineage",
+    "decision_state",
+    "subsequent_behaviour",
+    "quality",
+    "research_policy"
+  ],
+  "title": "Gold Session Behaviour V3 Case Matrix Row",
+  "type": "object",
+  "$defs": {
+    "case_metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "access_class": {
+          "enum": [
+            "DEVELOPMENT",
+            "EXPOSED_HISTORICAL_FORWARD_TEST",
+            "LOCKED_INDEPENDENT_HOLDOUT",
+            "PROSPECTIVE"
+          ]
+        },
+        "case_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "case_revision": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "created_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "data_partition": {
+          "enum": [
+            "DEVELOPMENT_2021_2024",
+            "EXPOSED_2025",
+            "LOCKED_2026_YTD",
+            "PROSPECTIVE_2026"
+          ]
+        },
+        "decision_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "observation_end": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "observation_start": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "record_hash": {
+          "$ref": "#/$defs/sha256"
+        },
+        "schema_version": {
+          "const": "gold-session-behaviour-v3-case-matrix-0.1.0"
+        },
+        "sealed_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "session_code": {
+          "enum": [
+            "LONDON",
+            "NEW_YORK"
+          ]
+        },
+        "session_date": {
+          "format": "date",
+          "type": "string"
+        },
+        "session_timezone": {
+          "enum": [
+            "Europe/London",
+            "America/New_York"
+          ]
+        }
+      },
+      "required": [
+        "case_id",
+        "schema_version",
+        "case_revision",
+        "session_code",
+        "session_date",
+        "session_timezone",
+        "decision_at",
+        "observation_start",
+        "observation_end",
+        "data_partition",
+        "access_class",
+        "created_at",
+        "sealed_at",
+        "record_hash"
+      ],
+      "type": "object"
+    },
+    "case_quality": {
+      "additionalProperties": false,
+      "properties": {
+        "decision_state_point_in_time_valid": {
+          "type": "boolean"
+        },
+        "duplicate_key_check_passed": {
+          "type": "boolean"
+        },
+        "dst_check_passed": {
+          "type": "boolean"
+        },
+        "issue_codes": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "one_minute_source_complete": {
+          "type": "boolean"
+        },
+        "outcome_separation_check_passed": {
+          "type": "boolean"
+        },
+        "overall_state": {
+          "enum": [
+            "VALID",
+            "PARTIAL",
+            "INVALID"
+          ]
+        },
+        "session_path_complete": {
+          "type": "boolean"
+        },
+        "unknown_field_count": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "overall_state",
+        "decision_state_point_in_time_valid",
+        "outcome_separation_check_passed",
+        "dst_check_passed",
+        "duplicate_key_check_passed",
+        "one_minute_source_complete",
+        "session_path_complete",
+        "unknown_field_count",
+        "issue_codes"
+      ],
+      "type": "object"
+    },
+    "decision_state": {
+      "additionalProperties": false,
+      "properties": {
+        "as_of": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "decision_eligible": {
+          "const": true
+        },
+        "layers": {
+          "$ref": "#/$defs/layers"
+        },
+        "levels": {
+          "items": {
+            "$ref": "#/$defs/level"
+          },
+          "type": "array"
+        },
+        "market_mechanics": {
+          "$ref": "#/$defs/market_mechanics"
+        },
+        "market_structure": {
+          "$ref": "#/$defs/market_structure"
+        },
+        "synthesis": {
+          "$ref": "#/$defs/synthesis"
+        },
+        "unknowns": {
+          "items": {
+            "$ref": "#/$defs/unknown"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "decision_eligible",
+        "as_of",
+        "market_mechanics",
+        "market_structure",
+        "levels",
+        "layers",
+        "synthesis",
+        "unknowns"
+      ],
+      "type": "object"
+    },
+    "event_state": {
+      "additionalProperties": false,
+      "properties": {
+        "event_code": {
+          "type": "string"
+        },
+        "event_id": {
+          "type": "string"
+        },
+        "event_type": {
+          "type": "string"
+        },
+        "importance": {
+          "$ref": "#/$defs/fact"
+        },
+        "path_summary": {
+          "$ref": "#/$defs/fact"
+        },
+        "reaction_snapshots": {
+          "items": {
+            "$ref": "#/$defs/fact"
+          },
+          "type": "array"
+        },
+        "release_components": {
+          "items": {
+            "$ref": "#/$defs/release_state"
+          },
+          "type": "array"
+        },
+        "scheduled_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "schedule_known_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "UPCOMING",
+            "RELEASED",
+            "CANCELLED",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "required": [
+        "event_id",
+        "event_code",
+        "event_type",
+        "scheduled_at",
+        "schedule_known_at",
+        "importance",
+        "status",
+        "release_components",
+        "reaction_snapshots",
+        "path_summary"
+      ],
+      "type": "object"
+    },
+    "fact": {
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "UNKNOWN"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "INFERRED"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "explanation": {
+                "minLength": 1
+              }
+            }
+          }
+        }
+      ],
+      "properties": {
+        "as_of": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "available_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "epistemic_status": {
+          "$ref": "#/$defs/epistemic_status"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "invalidation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "quality": {
+          "enum": [
+            "VALID",
+            "PARTIAL",
+            "STALE",
+            "ROLL_CROSSING",
+            "UNVERIFIED_AVAILABILITY",
+            "MISSING",
+            "NOT_LICENSED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "source_refs": {
+          "items": {
+            "$ref": "#/$defs/source_ref"
+          },
+          "type": "array"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "value": {}
+      },
+      "required": [
+        "value",
+        "unit",
+        "epistemic_status",
+        "as_of",
+        "available_at",
+        "quality",
+        "method",
+        "explanation",
+        "evidence",
+        "source_refs",
+        "invalidation"
+      ],
+      "type": "object"
+    },
+    "epistemic_status": {
+      "enum": [
+        "OBSERVED",
+        "CALCULATED",
+        "INFERRED",
+        "UNKNOWN"
+      ]
+    },
+    "layers": {
+      "additionalProperties": false,
+      "properties": {
+        "catalysts": {
+          "$ref": "#/$defs/layer_catalysts"
+        },
+        "cross_market": {
+          "$ref": "#/$defs/layer_cross_market"
+        },
+        "expectations": {
+          "$ref": "#/$defs/layer_expectations"
+        },
+        "market_regime": {
+          "$ref": "#/$defs/layer_market_regime"
+        },
+        "positioning": {
+          "$ref": "#/$defs/layer_positioning"
+        },
+        "sessions_and_liquidity": {
+          "$ref": "#/$defs/layer_sessions"
+        }
+      },
+      "required": [
+        "market_regime",
+        "expectations",
+        "positioning",
+        "catalysts",
+        "sessions_and_liquidity",
+        "cross_market"
+      ],
+      "type": "object"
+    },
+    "layer_catalysts": {
+      "additionalProperties": false,
+      "properties": {
+        "event_impact_state": {
+          "$ref": "#/$defs/fact"
+        },
+        "proximity_state": {
+          "$ref": "#/$defs/fact"
+        },
+        "recent_events": {
+          "items": {
+            "$ref": "#/$defs/event_state"
+          },
+          "type": "array"
+        },
+        "unscheduled_event_context": {
+          "$ref": "#/$defs/fact"
+        },
+        "upcoming_events": {
+          "items": {
+            "$ref": "#/$defs/event_state"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "upcoming_events",
+        "recent_events",
+        "proximity_state",
+        "unscheduled_event_context",
+        "event_impact_state"
+      ],
+      "type": "object"
+    },
+    "layer_cross_market": {
+      "additionalProperties": false,
+      "properties": {
+        "breakeven_10y": {
+          "$ref": "#/$defs/fact"
+        },
+        "equities": {
+          "$ref": "#/$defs/fact"
+        },
+        "gold": {
+          "$ref": "#/$defs/fact"
+        },
+        "policy_expectations": {
+          "$ref": "#/$defs/fact"
+        },
+        "rates_driver_state": {
+          "$ref": "#/$defs/fact"
+        },
+        "real_yield_10y": {
+          "$ref": "#/$defs/fact"
+        },
+        "relationship_states": {
+          "items": {
+            "$ref": "#/$defs/relationship_state"
+          },
+          "type": "array"
+        },
+        "silver": {
+          "$ref": "#/$defs/fact"
+        },
+        "treasury_10y": {
+          "$ref": "#/$defs/fact"
+        },
+        "treasury_2y": {
+          "$ref": "#/$defs/fact"
+        },
+        "usd": {
+          "$ref": "#/$defs/fact"
+        },
+        "volatility": {
+          "$ref": "#/$defs/fact"
+        }
+      },
+      "required": [
+        "gold",
+        "treasury_2y",
+        "treasury_10y",
+        "real_yield_10y",
+        "breakeven_10y",
+        "usd",
+        "equities",
+        "volatility",
+        "silver",
+        "policy_expectations",
+        "relationship_states",
+        "rates_driver_state"
+      ],
+      "type": "object"
+    },
+    "layer_expectations": {
+      "additionalProperties": false,
+      "properties": {
+        "policy_path": {
+          "additionalProperties": false,
+          "properties": {
+            "destination_rate": {
+              "$ref": "#/$defs/fact"
+            },
+            "first_move": {
+              "$ref": "#/$defs/fact"
+            },
+            "meeting_probabilities": {
+              "$ref": "#/$defs/fact"
+            },
+            "repricing": {
+              "$ref": "#/$defs/fact"
+            },
+            "total_change": {
+              "$ref": "#/$defs/fact"
+            }
+          },
+          "required": [
+            "meeting_probabilities",
+            "first_move",
+            "total_change",
+            "destination_rate",
+            "repricing"
+          ],
+          "type": "object"
+        },
+        "recent_releases": {
+          "items": {
+            "$ref": "#/$defs/release_state"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "recent_releases",
+        "policy_path"
+      ],
+      "type": "object"
+    },
+    "layer_market_regime": {
+      "additionalProperties": false,
+      "properties": {
+        "growth": {
+          "additionalProperties": false,
+          "properties": {
+            "gdp": {
+              "$ref": "#/$defs/fact"
+            },
+            "retail_sales": {
+              "$ref": "#/$defs/fact"
+            }
+          },
+          "required": [
+            "gdp",
+            "retail_sales"
+          ],
+          "type": "object"
+        },
+        "inflation": {
+          "additionalProperties": false,
+          "properties": {
+            "cpi_core": {
+              "$ref": "#/$defs/fact"
+            },
+            "cpi_headline": {
+              "$ref": "#/$defs/fact"
+            },
+            "pce_core": {
+              "$ref": "#/$defs/fact"
+            },
+            "pce_headline": {
+              "$ref": "#/$defs/fact"
+            }
+          },
+          "required": [
+            "cpi_headline",
+            "cpi_core",
+            "pce_headline",
+            "pce_core"
+          ],
+          "type": "object"
+        },
+        "labour": {
+          "additionalProperties": false,
+          "properties": {
+            "claims": {
+              "$ref": "#/$defs/fact"
+            },
+            "payrolls": {
+              "$ref": "#/$defs/fact"
+            },
+            "unemployment": {
+              "$ref": "#/$defs/fact"
+            },
+            "wages": {
+              "$ref": "#/$defs/fact"
+            }
+          },
+          "required": [
+            "payrolls",
+            "unemployment",
+            "wages",
+            "claims"
+          ],
+          "type": "object"
+        },
+        "rates": {
+          "additionalProperties": false,
+          "properties": {
+            "breakeven_10y": {
+              "$ref": "#/$defs/fact"
+            },
+            "fed_policy_rate": {
+              "$ref": "#/$defs/fact"
+            },
+            "real_yield_10y": {
+              "$ref": "#/$defs/fact"
+            },
+            "treasury_10y": {
+              "$ref": "#/$defs/fact"
+            },
+            "treasury_2y": {
+              "$ref": "#/$defs/fact"
+            },
+            "yield_curve_2s10s": {
+              "$ref": "#/$defs/fact"
+            }
+          },
+          "required": [
+            "fed_policy_rate",
+            "treasury_2y",
+            "treasury_10y",
+            "real_yield_10y",
+            "breakeven_10y",
+            "yield_curve_2s10s"
+          ],
+          "type": "object"
+        },
+        "reaction_function": {
+          "$ref": "#/$defs/fact"
+        },
+        "regime_state": {
+          "$ref": "#/$defs/fact"
+        },
+        "risk": {
+          "additionalProperties": false,
+          "properties": {
+            "equities": {
+              "$ref": "#/$defs/fact"
+            },
+            "financial_stress": {
+              "$ref": "#/$defs/fact"
+            },
+            "high_yield_spread": {
+              "$ref": "#/$defs/fact"
+            },
+            "volatility": {
+              "$ref": "#/$defs/fact"
+            }
+          },
+          "required": [
+            "equities",
+            "volatility",
+            "high_yield_spread",
+            "financial_stress"
+          ],
+          "type": "object"
+        },
+        "series_states": {
+          "additionalProperties": {
+            "$ref": "#/$defs/fact"
+          },
+          "type": "object"
+        },
+        "usd": {
+          "$ref": "#/$defs/fact"
+        }
+      },
+      "required": [
+        "inflation",
+        "labour",
+        "growth",
+        "rates",
+        "usd",
+        "risk",
+        "series_states",
+        "regime_state",
+        "reaction_function"
+      ],
+      "type": "object"
+    },
+    "layer_positioning": {
+      "additionalProperties": false,
+      "properties": {
+        "central_bank_demand": {
+          "$ref": "#/$defs/fact"
+        },
+        "etf_holdings_flows": {
+          "$ref": "#/$defs/fact"
+        },
+        "fast_slow_divergence": {
+          "$ref": "#/$defs/fact"
+        },
+        "inferred_states": {
+          "items": {
+            "$ref": "#/$defs/fact"
+          },
+          "type": "array"
+        },
+        "managed_money": {
+          "$ref": "#/$defs/fact"
+        },
+        "open_interest": {
+          "$ref": "#/$defs/fact"
+        },
+        "options": {
+          "$ref": "#/$defs/fact"
+        },
+        "other_reportable": {
+          "$ref": "#/$defs/fact"
+        },
+        "price_open_interest_state": {
+          "$ref": "#/$defs/fact"
+        },
+        "producer_merchant": {
+          "$ref": "#/$defs/fact"
+        },
+        "swap_dealer": {
+          "$ref": "#/$defs/fact"
+        }
+      },
+      "required": [
+        "managed_money",
+        "producer_merchant",
+        "swap_dealer",
+        "other_reportable",
+        "open_interest",
+        "price_open_interest_state",
+        "inferred_states",
+        "etf_holdings_flows",
+        "central_bank_demand",
+        "options",
+        "fast_slow_divergence"
+      ],
+      "type": "object"
+    },
+    "layer_sessions": {
+      "additionalProperties": false,
+      "properties": {
+        "asia_state": {
+          "$ref": "#/$defs/fact"
+        },
+        "benchmark_windows": {
+          "$ref": "#/$defs/fact"
+        },
+        "clock_context": {
+          "$ref": "#/$defs/fact"
+        },
+        "handover_overlap_state": {
+          "$ref": "#/$defs/fact"
+        },
+        "liquidity_quality": {
+          "$ref": "#/$defs/fact"
+        },
+        "london_state": {
+          "$ref": "#/$defs/fact"
+        },
+        "rollover_close_state": {
+          "$ref": "#/$defs/fact"
+        }
+      },
+      "required": [
+        "clock_context",
+        "asia_state",
+        "london_state",
+        "handover_overlap_state",
+        "benchmark_windows",
+        "rollover_close_state",
+        "liquidity_quality"
+      ],
+      "type": "object"
+    },
+    "level": {
+      "additionalProperties": false,
+      "properties": {
+        "available_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "confidence": {
+          "maximum": 100,
+          "minimum": 0,
+          "type": "number"
+        },
+        "detected_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "epistemic_status": {
+          "$ref": "#/$defs/epistemic_status"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "invalidation": {
+          "type": "string"
+        },
+        "level_id": {
+          "type": "string"
+        },
+        "level_type": {
+          "enum": [
+            "SWING_HIGH",
+            "SWING_LOW",
+            "SUPPORT",
+            "RESISTANCE",
+            "ASIA_HIGH",
+            "ASIA_LOW",
+            "PRIOR_SESSION_HIGH",
+            "PRIOR_SESSION_LOW",
+            "PRIOR_DAY_HIGH",
+            "PRIOR_DAY_LOW",
+            "PRIOR_WEEK_HIGH",
+            "PRIOR_WEEK_LOW",
+            "RANGE_HIGH",
+            "RANGE_LOW",
+            "ROUND_NUMBER",
+            "OTHER"
+          ]
+        },
+        "liquidity_zone_interpretation": {
+          "$ref": "#/$defs/fact"
+        },
+        "method": {
+          "type": "string"
+        },
+        "price": {
+          "$ref": "#/$defs/fact"
+        },
+        "timeframe": {
+          "$ref": "#/$defs/timeframe"
+        }
+      },
+      "required": [
+        "level_id",
+        "level_type",
+        "timeframe",
+        "price",
+        "detected_at",
+        "available_at",
+        "method",
+        "confidence",
+        "epistemic_status",
+        "evidence",
+        "invalidation",
+        "liquidity_zone_interpretation"
+      ],
+      "type": "object"
+    },
+    "level_interaction": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted": {
+          "$ref": "#/$defs/fact"
+        },
+        "breached": {
+          "$ref": "#/$defs/fact"
+        },
+        "decision_known_level": {
+          "const": true
+        },
+        "failed_break": {
+          "$ref": "#/$defs/fact"
+        },
+        "first_interaction_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "level_id": {
+          "type": "string"
+        },
+        "rejected": {
+          "$ref": "#/$defs/fact"
+        },
+        "retested": {
+          "$ref": "#/$defs/fact"
+        },
+        "touched": {
+          "$ref": "#/$defs/fact"
+        }
+      },
+      "required": [
+        "level_id",
+        "decision_known_level",
+        "first_interaction_at",
+        "touched",
+        "breached",
+        "accepted",
+        "rejected",
+        "failed_break",
+        "retested"
+      ],
+      "type": "object"
+    },
+    "lineage": {
+      "additionalProperties": false,
+      "properties": {
+        "case_transform_versions": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "contract_manifest_hash": {
+          "const": "79a74f81bce0b80ca6c5da6b420400479013484a4bb759684402546672fa140b"
+        },
+        "source_bundle_refs": {
+          "items": {
+            "$ref": "#/$defs/source_bundle_ref"
+          },
+          "type": "array"
+        },
+        "source_record_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "source_record_ids_hash": {
+          "$ref": "#/$defs/sha256"
+        },
+        "source_record_refs": {
+          "items": {
+            "$ref": "#/$defs/source_ref"
+          },
+          "type": "array"
+        },
+        "traceability_catalog_hash": {
+          "const": "8707c39eb75bf3c74ce33908b0a3f4b0a1f679ee68848f1d10dce25e4bdf6bb4"
+        }
+      },
+      "required": [
+        "contract_manifest_hash",
+        "traceability_catalog_hash",
+        "source_bundle_refs",
+        "source_record_count",
+        "source_record_ids_hash",
+        "source_record_refs",
+        "case_transform_versions"
+      ],
+      "type": "object"
+    },
+    "market_mechanics": {
+      "additionalProperties": false,
+      "properties": {
+        "comex_volume": {
+          "$ref": "#/$defs/fact"
+        },
+        "depth": {
+          "$ref": "#/$defs/fact"
+        },
+        "instrument_identity": {
+          "$ref": "#/$defs/fact"
+        },
+        "participant_activity_inferences": {
+          "items": {
+            "$ref": "#/$defs/fact"
+          },
+          "type": "array"
+        },
+        "price_impact": {
+          "$ref": "#/$defs/fact"
+        },
+        "resilience": {
+          "$ref": "#/$defs/fact"
+        },
+        "spread": {
+          "$ref": "#/$defs/fact"
+        },
+        "tick_volume": {
+          "$ref": "#/$defs/fact"
+        },
+        "xauusd_price": {
+          "$ref": "#/$defs/fact"
+        }
+      },
+      "required": [
+        "instrument_identity",
+        "xauusd_price",
+        "spread",
+        "tick_volume",
+        "comex_volume",
+        "depth",
+        "resilience",
+        "price_impact",
+        "participant_activity_inferences"
+      ],
+      "type": "object"
+    },
+    "market_structure": {
+      "additionalProperties": false,
+      "properties": {
+        "ruleset_version": {
+          "type": "string"
+        },
+        "snapshot_available_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "timeframes": {
+          "items": {
+            "$ref": "#/$defs/timeframe_structure"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "type": "array"
+        }
+      },
+      "required": [
+        "ruleset_version",
+        "snapshot_available_at",
+        "timeframes"
+      ],
+      "type": "object"
+    },
+    "path_point": {
+      "additionalProperties": false,
+      "properties": {
+        "available_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "offset_minutes": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "source_bar_id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "xauusd": {
+          "$ref": "#/$defs/fact"
+        }
+      },
+      "required": [
+        "offset_minutes",
+        "timestamp",
+        "available_at",
+        "xauusd",
+        "complete",
+        "source_bar_id"
+      ],
+      "type": "object"
+    },
+    "relationship_state": {
+      "additionalProperties": false,
+      "properties": {
+        "epistemic_status": {
+          "enum": [
+            "CALCULATED",
+            "INFERRED",
+            "UNKNOWN"
+          ]
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "relationship_code": {
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "CONVENTIONAL_CONFIRMATION",
+            "DIVERGENCE",
+            "SAFE_HAVEN",
+            "INFLATION_DRIVEN_NOMINAL_YIELD",
+            "REAL_YIELD_PRESSURE",
+            "GOLD_AND_USD_RISING",
+            "DEFENSIVE_GOLD_DEMAND",
+            "MIXED",
+            "UNKNOWN"
+          ]
+        },
+        "source_refs": {
+          "items": {
+            "$ref": "#/$defs/source_ref"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "relationship_code",
+        "state",
+        "epistemic_status",
+        "explanation",
+        "evidence",
+        "source_refs"
+      ],
+      "type": "object"
+    },
+    "release_state": {
+      "additionalProperties": false,
+      "properties": {
+        "actual": {
+          "$ref": "#/$defs/fact"
+        },
+        "component_code": {
+          "type": "string"
+        },
+        "forecast": {
+          "$ref": "#/$defs/fact"
+        },
+        "observation_period": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "previous": {
+          "$ref": "#/$defs/fact"
+        },
+        "released_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "revision": {
+          "$ref": "#/$defs/fact"
+        },
+        "surprise": {
+          "$ref": "#/$defs/fact"
+        },
+        "vintage": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "component_code",
+        "observation_period",
+        "released_at",
+        "vintage",
+        "forecast",
+        "actual",
+        "previous",
+        "revision",
+        "surprise"
+      ],
+      "type": "object"
+    },
+    "research_policy": {
+      "additionalProperties": false,
+      "properties": {
+        "account_return_calculated": {
+          "const": false
+        },
+        "candidate_or_relationship_label_present": {
+          "const": false
+        },
+        "decision_outcome_separated": {
+          "const": true
+        },
+        "entry_or_exit_assumed": {
+          "const": false
+        },
+        "execution_optimized": {
+          "const": false
+        },
+        "mfe_or_mae_calculated": {
+          "const": false
+        },
+        "pnl_or_r_multiple_calculated": {
+          "const": false
+        },
+        "position_size_assigned": {
+          "const": false
+        },
+        "schema_purpose": {
+          "const": "DESCRIPTIVE_SESSION_BEHAVIOUR_AND_POINT_IN_TIME_CONDITIONS"
+        },
+        "stop_or_target_assigned": {
+          "const": false
+        },
+        "trade_direction_assigned": {
+          "const": false
+        }
+      },
+      "required": [
+        "schema_purpose",
+        "decision_outcome_separated",
+        "trade_direction_assigned",
+        "candidate_or_relationship_label_present",
+        "entry_or_exit_assumed",
+        "stop_or_target_assigned",
+        "position_size_assigned",
+        "execution_optimized",
+        "mfe_or_mae_calculated",
+        "pnl_or_r_multiple_calculated",
+        "account_return_calculated"
+      ],
+      "type": "object"
+    },
+    "sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "source_bundle_ref": {
+      "additionalProperties": false,
+      "properties": {
+        "manifest_hash": {
+          "$ref": "#/$defs/sha256"
+        },
+        "manifest_path": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "manifest_path",
+        "manifest_hash",
+        "role"
+      ],
+      "type": "object"
+    },
+    "source_ref": {
+      "additionalProperties": false,
+      "properties": {
+        "available_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "provider_code": {
+          "type": "string"
+        },
+        "record_hash": {
+          "$ref": "#/$defs/sha256"
+        },
+        "record_id": {
+          "type": "string"
+        },
+        "source_key": {
+          "type": "string"
+        },
+        "vintage": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "record_id",
+        "record_hash",
+        "provider_code",
+        "source_key",
+        "available_at",
+        "vintage"
+      ],
+      "type": "object"
+    },
+    "subsequent_behaviour": {
+      "additionalProperties": false,
+      "properties": {
+        "close_location": {
+          "$ref": "#/$defs/fact"
+        },
+        "decision_eligible": {
+          "const": false
+        },
+        "extremes": {
+          "additionalProperties": false,
+          "properties": {
+            "extreme_order": {
+              "$ref": "#/$defs/fact"
+            },
+            "session_high": {
+              "$ref": "#/$defs/fact"
+            },
+            "session_high_at": {
+              "$ref": "#/$defs/fact"
+            },
+            "session_low": {
+              "$ref": "#/$defs/fact"
+            },
+            "session_low_at": {
+              "$ref": "#/$defs/fact"
+            }
+          },
+          "required": [
+            "session_high",
+            "session_low",
+            "session_high_at",
+            "session_low_at",
+            "extreme_order"
+          ],
+          "type": "object"
+        },
+        "fixed_horizons": {
+          "items": {
+            "$ref": "#/$defs/fixed_horizon"
+          },
+          "type": "array"
+        },
+        "level_interactions": {
+          "items": {
+            "$ref": "#/$defs/level_interaction"
+          },
+          "type": "array"
+        },
+        "neutral_excursions": {
+          "additionalProperties": false,
+          "properties": {
+            "absolute_close_displacement": {
+              "$ref": "#/$defs/fact"
+            },
+            "maximum_downward_displacement": {
+              "$ref": "#/$defs/fact"
+            },
+            "maximum_upward_displacement": {
+              "$ref": "#/$defs/fact"
+            },
+            "session_range": {
+              "$ref": "#/$defs/fact"
+            },
+            "signed_close_displacement": {
+              "$ref": "#/$defs/fact"
+            }
+          },
+          "required": [
+            "signed_close_displacement",
+            "absolute_close_displacement",
+            "maximum_upward_displacement",
+            "maximum_downward_displacement",
+            "session_range"
+          ],
+          "type": "object"
+        },
+        "neutral_reference": {
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "OPEN_OF_FIRST_COMPLETE_1M_BAR_AT_08_01_LOCAL"
+            },
+            "price": {
+              "$ref": "#/$defs/fact"
+            },
+            "source_bar_id": {
+              "type": "string"
+            },
+            "timestamp": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "trade_entry_assumed": {
+              "const": false
+            }
+          },
+          "required": [
+            "method",
+            "timestamp",
+            "price",
+            "source_bar_id",
+            "trade_entry_assumed"
+          ],
+          "type": "object"
+        },
+        "observation_end": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "path": {
+          "additionalProperties": false,
+          "properties": {
+            "complete": {
+              "type": "boolean"
+            },
+            "five_minute_points": {
+              "items": {
+                "$ref": "#/$defs/path_point"
+              },
+              "type": "array"
+            },
+            "missing_one_minute_bars": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "one_minute_source_count": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "one_minute_source_ids_hash": {
+              "$ref": "#/$defs/sha256"
+            },
+            "resolution": {
+              "const": "5m"
+            }
+          },
+          "required": [
+            "resolution",
+            "complete",
+            "five_minute_points",
+            "one_minute_source_count",
+            "one_minute_source_ids_hash",
+            "missing_one_minute_bars"
+          ],
+          "type": "object"
+        },
+        "path_classification": {
+          "$ref": "#/$defs/fact"
+        }
+      },
+      "required": [
+        "decision_eligible",
+        "observation_end",
+        "neutral_reference",
+        "fixed_horizons",
+        "neutral_excursions",
+        "extremes",
+        "level_interactions",
+        "path",
+        "close_location",
+        "path_classification"
+      ],
+      "type": "object"
+    },
+    "synthesis": {
+      "additionalProperties": false,
+      "properties": {
+        "contradicting_evidence": {
+          "items": {
+            "$ref": "#/$defs/fact"
+          },
+          "type": "array"
+        },
+        "highest_risk_assumption": {
+          "$ref": "#/$defs/fact"
+        },
+        "supporting_evidence": {
+          "items": {
+            "$ref": "#/$defs/fact"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "supporting_evidence",
+        "contradicting_evidence",
+        "highest_risk_assumption"
+      ],
+      "type": "object"
+    },
+    "timeframe": {
+      "enum": [
+        "1m",
+        "5m",
+        "15m",
+        "1h",
+        "4h",
+        "1d"
+      ]
+    },
+    "timeframe_structure": {
+      "additionalProperties": false,
+      "properties": {
+        "break_of_structure": {
+          "$ref": "#/$defs/fact"
+        },
+        "break_state": {
+          "$ref": "#/$defs/fact"
+        },
+        "compression": {
+          "$ref": "#/$defs/fact"
+        },
+        "detections": {
+          "items": {
+            "$ref": "#/$defs/fact"
+          },
+          "type": "array"
+        },
+        "displacement": {
+          "$ref": "#/$defs/fact"
+        },
+        "expansion": {
+          "$ref": "#/$defs/fact"
+        },
+        "market_structure_shift": {
+          "$ref": "#/$defs/fact"
+        },
+        "momentum": {
+          "$ref": "#/$defs/fact"
+        },
+        "range_state": {
+          "$ref": "#/$defs/fact"
+        },
+        "resistance": {
+          "$ref": "#/$defs/fact"
+        },
+        "source_bar_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "source_bar_ids_hash": {
+          "$ref": "#/$defs/sha256"
+        },
+        "support": {
+          "$ref": "#/$defs/fact"
+        },
+        "swing_state": {
+          "$ref": "#/$defs/fact"
+        },
+        "timeframe": {
+          "$ref": "#/$defs/timeframe"
+        },
+        "trend_state": {
+          "$ref": "#/$defs/fact"
+        }
+      },
+      "required": [
+        "timeframe",
+        "source_bar_count",
+        "source_bar_ids_hash",
+        "swing_state",
+        "trend_state",
+        "range_state",
+        "support",
+        "resistance",
+        "break_of_structure",
+        "market_structure_shift",
+        "break_state",
+        "compression",
+        "expansion",
+        "displacement",
+        "momentum",
+        "detections"
+      ],
+      "type": "object"
+    },
+    "timestamp": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "unknown": {
+      "additionalProperties": false,
+      "properties": {
+        "field_path": {
+          "type": "string"
+        },
+        "reason_code": {
+          "enum": [
+            "MISSING",
+            "STALE",
+            "NOT_LICENSED",
+            "UNVERIFIED_AVAILABILITY",
+            "ROLL_CROSSING",
+            "INSUFFICIENT_HISTORY",
+            "NOT_APPLICABLE",
+            "SOURCE_ERROR"
+          ]
+        },
+        "required_action": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "field_path",
+        "reason_code",
+        "required_action"
+      ],
+      "type": "object"
+    },
+    "fixed_horizon": {
+      "additionalProperties": false,
+      "properties": {
+        "absolute_displacement": {
+          "$ref": "#/$defs/fact"
+        },
+        "horizon": {
+          "enum": [
+            "5m",
+            "15m",
+            "30m",
+            "60m",
+            "SESSION_CLOSE"
+          ]
+        },
+        "horizon_end": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "signed_displacement": {
+          "$ref": "#/$defs/fact"
+        },
+        "source_bar_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "horizon",
+        "horizon_end",
+        "signed_displacement",
+        "absolute_displacement",
+        "source_bar_id"
+      ],
+      "type": "object"
+    }
+  }
+}

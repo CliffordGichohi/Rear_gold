@@ -1,0 +1,63 @@
+{
+  "artifacts": [
+    {
+      "bytes": 16369,
+      "path": "MULTI_ASSET_MACRO_AND_SESSION_PORTFOLIO_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "e7bf723cb8c161bd7ae1bd7e4ffba55ebae9e868437e6929de13f6102c09b6f2"
+    },
+    {
+      "bytes": 6724,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_protocol.json",
+      "sha256": "199beb495ea74452cfc20768ef2d166dc9afdf41315c4ed61717f77489985109"
+    },
+    {
+      "bytes": 3461,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m1/mt5_symbol_catalog_snapshot.json",
+      "sha256": "f79f9b6ebb7d5b3ef82246b100b2173ef9c20c71ebd23fe44004af2883a36bb8"
+    },
+    {
+      "bytes": 44378,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m1/coverage_primary.json",
+      "sha256": "390a51e29cf495fe4caa9bf892634d496842c84ae7725173904d701dc2d0a01a"
+    },
+    {
+      "bytes": 44379,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m1/coverage_reference.json",
+      "sha256": "029b186d2a3ccf6828ad65534447f3637d5407d387b37f8162516fd1b51886c1"
+    },
+    {
+      "bytes": 65755,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m1/coverage_audit.json",
+      "sha256": "e37bef5942f1edc6530d1b8bfb8015900d3228c7d7f3b79c07165554fab15d13"
+    },
+    {
+      "bytes": 4286,
+      "path": "MULTI_ASSET_MACRO_AND_SESSION_PORTFOLIO_EDGE_DISCOVERY_V1_COVERAGE.md",
+      "sha256": "687e5dee4b09ea1beeb7dfdf802b257d9da9a164aa4b73efb9fae9d5ed494c48"
+    }
+  ],
+  "controls": {
+    "OHLC_values_parsed_or_reported": false,
+    "calendar_2025_market_values_accessed": false,
+    "calendar_2026_market_values_accessed": false,
+    "cases_signals_or_candidates_constructed": false,
+    "charge_incurred_usd": 0.0,
+    "cryptographic_source_hashing_is_nonsemantic": true,
+    "existing_sources_modified": false,
+    "paid_data_acquired": false,
+    "returns_or_relationships_calculated": false,
+    "trades_or_PnL_calculated": false
+  },
+  "gold_only_10r_branch": "TERMINATED_AND_NOT_REOPENED",
+  "independent_reproduction": {
+    "passed": true,
+    "primary_semantic_sha256": "59f4dbc3ebbe5689c1ad9fddd0a19a53e9f25f285dfacd781f3ff42e36c2ea56",
+    "reference_semantic_sha256": "59f4dbc3ebbe5689c1ad9fddd0a19a53e9f25f285dfacd781f3ff42e36c2ea56"
+  },
+  "next_action_authorized": false,
+  "sealed_at_utc": "2026-08-12T08:16:51.065184Z",
+  "seven_instrument_discovery_ready": false,
+  "stop_required": true,
+  "verdict": "PASS_MILESTONE_1_CONTRACT_AND_AUDIT__SOURCE_BACKFILL_REQUIRED_BEFORE_DISCOVERY",
+  "version": "MULTI_ASSET_MACRO_SESSION_PORTFOLIO_EDGE_V1_MILESTONE_1_SEAL_1_0"
+}

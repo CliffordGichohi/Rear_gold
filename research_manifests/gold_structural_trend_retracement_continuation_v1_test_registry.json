@@ -1,0 +1,18 @@
+{
+  "version": "GOLD_STRC_V1_TEST_REGISTRY_1_0",
+  "status": "SEALED_BEFORE_ANY_BRANCH_OUTCOME_ACCESS",
+  "base_tests": [
+    "LONDON|STRC_BREAK_LEVEL_RETEST_REJECTION",
+    "LONDON|STRC_IMPULSE_ZONE_INTERNAL_BOS",
+    "LONDON|STRC_ASIA_SWEEP_CONTINUATION",
+    "NEW_YORK|STRC_BREAK_LEVEL_RETEST_REJECTION",
+    "NEW_YORK|STRC_IMPULSE_ZONE_INTERNAL_BOS",
+    "NEW_YORK|STRC_ASIA_SWEEP_CONTINUATION"
+  ],
+  "portfolio_diagnostics": ["LONDON|EARLIEST_FROZEN_SETUP", "NEW_YORK|EARLIEST_FROZEN_SETUP"],
+  "gc_incremental_tests": "BASE_TESTS_X_GC_CONFIRMATION",
+  "sensitivity": {"stop_buffer_atr": [0.10, 0.15, 0.20], "candidate_specification": 0.15},
+  "ranking": ["verdict", "holm_adjusted_p", "bootstrap_ci_lower", "profit_factor", "expectancy_r", "support", "test_id"],
+  "candidate_limit_per_session": 3,
+  "zero_candidates_acceptable": true
+}

@@ -1,0 +1,61 @@
+{
+  "version": "GOLD_TPCE_V1_TEST_REGISTRY_1_0",
+  "status": "FROZEN_BEFORE_OUTCOME_ACCESS",
+  "stage_1_conditions": {
+    "RET_236_382": "retracement_zone == 'RET_236_382'",
+    "RET_382_500": "retracement_zone == 'RET_382_500'",
+    "RET_500_618": "retracement_zone == 'RET_500_618'",
+    "RET_618_786": "retracement_zone == 'RET_618_786'",
+    "PIVOT_REJECTION_STRONG": "pivot_rejection_strong == true",
+    "PIVOT_ENGULFING_ALIGNED": "pivot_engulfing_aligned == true",
+    "CONFIRMATION_DISPLACEMENT": "confirmation_displacement == true",
+    "CONFIRMATION_ENGULFING_ALIGNED": "confirmation_engulfing_aligned == true",
+    "REFERENCE_SWEEP_RECLAIM": "reference_sweep_reclaim == true",
+    "PRIOR_DAY_SWEEP_RECLAIM": "prior_day_sweep_reclaim == true",
+    "ASIA_SWEEP_RECLAIM": "asia_sweep_reclaim == true",
+    "HTF_FULL_ALIGNMENT": "higher_timeframe_known_count >= 2 and higher_timeframe_alignment_count == higher_timeframe_known_count",
+    "FUNDAMENTAL_ALIGNED": "fundamental_alignment_state == 'ALIGNED'",
+    "IMPULSE_EFFICIENT": "impulse_efficiency >= 0.60",
+    "PULLBACK_ORDERLY": "pullback_efficiency >= 0.60 and compression_ratio <= 0.80",
+    "RESPONSE_DISPLACEMENT_HALF_ATR": "response_displacement_atr >= 0.50"
+  },
+  "stage_2_conditions": {
+    "RET_236_382__CONFIRMATION_DISPLACEMENT": ["RET_236_382", "CONFIRMATION_DISPLACEMENT"],
+    "RET_382_500__CONFIRMATION_DISPLACEMENT": ["RET_382_500", "CONFIRMATION_DISPLACEMENT"],
+    "RET_500_618__CONFIRMATION_DISPLACEMENT": ["RET_500_618", "CONFIRMATION_DISPLACEMENT"],
+    "RET_618_786__CONFIRMATION_DISPLACEMENT": ["RET_618_786", "CONFIRMATION_DISPLACEMENT"],
+    "RET_236_382__PIVOT_REJECTION_STRONG": ["RET_236_382", "PIVOT_REJECTION_STRONG"],
+    "RET_382_500__PIVOT_REJECTION_STRONG": ["RET_382_500", "PIVOT_REJECTION_STRONG"],
+    "RET_500_618__PIVOT_REJECTION_STRONG": ["RET_500_618", "PIVOT_REJECTION_STRONG"],
+    "RET_618_786__PIVOT_REJECTION_STRONG": ["RET_618_786", "PIVOT_REJECTION_STRONG"],
+    "REFERENCE_SWEEP_RECLAIM__CONFIRMATION_DISPLACEMENT": ["REFERENCE_SWEEP_RECLAIM", "CONFIRMATION_DISPLACEMENT"],
+    "HTF_FULL_ALIGNMENT__CONFIRMATION_DISPLACEMENT": ["HTF_FULL_ALIGNMENT", "CONFIRMATION_DISPLACEMENT"],
+    "FUNDAMENTAL_ALIGNED__CONFIRMATION_DISPLACEMENT": ["FUNDAMENTAL_ALIGNED", "CONFIRMATION_DISPLACEMENT"],
+    "FUNDAMENTAL_ALIGNED__REFERENCE_SWEEP_RECLAIM": ["FUNDAMENTAL_ALIGNED", "REFERENCE_SWEEP_RECLAIM"],
+    "PULLBACK_ORDERLY__CONFIRMATION_DISPLACEMENT": ["PULLBACK_ORDERLY", "CONFIRMATION_DISPLACEMENT"]
+  },
+  "support_floors": {
+    "M15": {"cases": 200, "dates": 100},
+    "H1": {"cases": 75, "dates": 50},
+    "H4": {"cases": 30, "dates": 25},
+    "continued": 15,
+    "failed": 15
+  },
+  "chronological_blocks": [
+    ["2021-08-01", "2022-06-30"],
+    ["2022-07-01", "2023-03-31"],
+    ["2023-04-01", "2023-12-31"],
+    ["2024-01-01", "2024-12-31"]
+  ],
+  "pass_rules": {
+    "minimum_lift_percentage_points": 5.0,
+    "bootstrap_90_lower_strictly_positive": true,
+    "bh_q_max": 0.10,
+    "nonnegative_blocks_min": 3,
+    "worst_block_lift_min_percentage_points": -10.0,
+    "first_case_per_segment_lift_strictly_positive": true
+  },
+  "candidate_limit_per_timeframe": 3,
+  "candidate_status": "PROVISIONAL_DEVELOPMENT_RELATIONSHIP",
+  "economic_edge_claim_permitted": false
+}

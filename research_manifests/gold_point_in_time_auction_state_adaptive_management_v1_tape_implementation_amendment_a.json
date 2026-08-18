@@ -1,0 +1,24 @@
+{
+  "version": "GOLD_PIT_AUCTION_STATE_V1_TAPE_IMPLEMENTATION_AMENDMENT_A_1_0",
+  "status": "FROZEN_BEFORE_AMENDED_IMPLEMENTATION_OR_RERUN",
+  "frozen_at_utc": "2026-08-11T06:57:47Z",
+  "predecessor_failure": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_tape/attempt_1_failure.json",
+  "preserved_original_implementation_freeze": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_tape_implementation_freeze.json",
+  "permitted_change": "When regenerating a case's checkpoint indexes, require both an exact next signal-frame open timestamp and an exact next M1 open timestamp, exactly matching the sealed readiness registry.",
+  "recovery_change": "Permit the existing audit-only output directory containing attempt_1_failure.json; continue refusing any existing primary, reference, certification, final-freeze, or temporary feature payload.",
+  "forbidden_changes": [
+    "CASE_IDENTITIES",
+    "CHECKPOINT_TIMESTAMPS",
+    "FEATURE_DEFINITIONS",
+    "FEATURE_VALUES",
+    "MODEL_OR_POLICY_RULES",
+    "OUTCOME_ACCESS",
+    "2025_OR_2026_ACCESS"
+  ],
+  "required_proof": "All regenerated per-case checkpoint counts and checkpoint timestamp hashes equal the already-sealed readiness registry before writing feature rows.",
+  "attempt_limit": 1,
+  "market_outcomes_accessed": false,
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "paid_acquisition_usd": 0.0
+}

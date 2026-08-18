@@ -1,0 +1,45 @@
+{
+  "version": "GOLD_ANNOTATED_REPLAY_V3_PRACTICE_STREAM_COVERAGE_AMENDMENT_A_FREEZE_1_0",
+  "status": "SEALED_BEFORE_CORRECTED_MATERIALIZATION",
+  "scope": "DAILY_AND_WEEKLY_DISPLAY_COVERAGE_ONLY",
+  "amendment": {
+    "path": "GOLD_ANNOTATED_REPLAY_V3_PRACTICE_STREAM_COVERAGE_AMENDMENT_A.md",
+    "bytes": 1867,
+    "sha256": "3f76a3af6dabe12ce91355a82189946045a9128ee516bbe846b9a39a202883e4"
+  },
+  "preserved_original_artifacts": [
+    {
+      "path": "research_artifacts/gold_annotated_replay_v3/practice_streams.primary.jsonl.gz",
+      "bytes": 12183079,
+      "sha256": "c000fd8a5a6af1fb9170a8ddb0087898e2f02c313d1319ebbec7894038c3adbd"
+    },
+    {
+      "path": "research_artifacts/gold_annotated_replay_v3/practice_streams.reference.jsonl.gz",
+      "bytes": 12183079,
+      "sha256": "c000fd8a5a6af1fb9170a8ddb0087898e2f02c313d1319ebbec7894038c3adbd"
+    },
+    {
+      "path": "research_artifacts/gold_annotated_replay_v3/practice_stream_materialization_certification.json",
+      "bytes": 1780,
+      "sha256": "1c2e05ab2d62710e0feb9afebdd475965259e6137d903ac5af2df9ba16ac0230"
+    }
+  ],
+  "reused_predecessor_rule": {
+    "path": "research_manifests/gold_blind_discretionary_replay_v1_population_freeze_v1_1.json",
+    "bytes": 2150,
+    "sha256": "15ad0d131ba3cd13ca7aef1753358d9d0d28edb826008742b429e56f520808c2",
+    "daily_source_count_minimum": 1000,
+    "daily_observed_quote_path_minimum": 0.95,
+    "weekly_eligible_daily_bars_minimum": 4
+  },
+  "unchanged": [
+    "practice_population",
+    "timestamps",
+    "intraday_bars",
+    "prices",
+    "contexts",
+    "execution_policy",
+    "ledger_policy",
+    "collection_and_holdout_locks"
+  ]
+}

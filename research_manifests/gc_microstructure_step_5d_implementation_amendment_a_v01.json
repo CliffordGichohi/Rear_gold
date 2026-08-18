@@ -1,0 +1,28 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_5D_IMPLEMENTATION_AMENDMENT_A_V0_1",
+  "status": "FROZEN_BEFORE_DEVELOPMENT_OUTCOME_ACCESS",
+  "frozen_at_utc": "2026-08-04T11:01:43.1729408Z",
+  "scope": "NARROW_METADATA_FIELD_LOCATION_CORRECTION_ONLY",
+  "preserved": {
+    "protocol_sha256": "835361070b3955912938b5519ec0b7b32542d6774c895f43bde11a93fb268b64",
+    "test_registry_sha256": "e3b7a132f03cebaff4c05cc646e00f0b1867881d0109c65b71f1076e74ab2d4a",
+    "freeze_sha256": "982464e185fabaab57b5871506fc3f75b9f577267eb3bcd52ebd83a4fbf2725d",
+    "original_implementation_tool_sha256": "ced71822f28ba4efcc9fa2078e5a06a58d2ab35136a4a7847add23f6b1014303",
+    "original_implementation_seal_sha256": "dce2e997e6c95fa2bf2eb0759595bb3ad80dd298b7d30897f63ca65d8f2fac7a",
+    "attempt_1_verdict": "FAIL_PRE_OUTCOME_METADATA_CHECK_IMPLEMENTATION",
+    "attempt_1_outcomes_opened": false,
+    "all_test_definitions_seeds_gates_and_analysis_algorithms": "UNCHANGED"
+  },
+  "authorized_change": {
+    "old_check": "not step5c_manifest.development_outcomes_opened_or_joined",
+    "new_check": "step5c_manifest.development_outcomes_accessed is false AND step5c_verdict.development_outcomes_opened_or_joined is false",
+    "reason": "The two sealed controls record the outcome-blind boundary under different exact field names.",
+    "value_access_or_research_effect": "NONE_METADATA_ONLY"
+  },
+  "prohibited": [
+    "any change to tests, states, transforms, seeds, support, statistics, stability, multiplicity, ranking, or verdict rules",
+    "development outcome access before amended implementation reseal",
+    "2025 or 2026 value access",
+    "execution or PnL calculation"
+  ]
+}

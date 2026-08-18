@@ -1,0 +1,108 @@
+{
+  "charge_incurred_usd": 0.0,
+  "checks": {
+    "binary_event_branch_final_seal_seal": true,
+    "case_end_2024": true,
+    "case_matrix_manifest_seal": true,
+    "case_matrix_seal": true,
+    "case_population_1659": true,
+    "case_values_not_read": true,
+    "continuous_branch_final_seal_seal": true,
+    "gc_primary_events_seal": true,
+    "gc_primary_rows_4950": true,
+    "gc_reference_events_seal": true,
+    "gc_reference_rows_4950": true,
+    "gc_schema_exact": true,
+    "gc_v2r1_manifest_seal": true,
+    "gc_v2r1_technical_pass": true,
+    "gc_values_not_read": true,
+    "gold_casebook_manifest_seal": true,
+    "locked_years_2025_2026": true,
+    "no_acquisition": true,
+    "protocol_frozen": true,
+    "reference_book_seal": true,
+    "xauusd_price_bars_seal": true
+  },
+  "controls": {
+    "contract": {
+      "bytes": 10912,
+      "path": "GC_SESSION_STATE_TRANSITION_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "b499e3fc7f80ff6fc288f689eb6a6e3823ceeb19f51d482b56c59304725ccf9a"
+    },
+    "prepare_implementation": {
+      "bytes": 9831,
+      "path": "tools/prepare_gc_session_state_transition_v1.py",
+      "sha256": "6ebc72f97bb70c15ca85518e9ef559ece848c0c87d46af9749165979a56b15ff"
+    },
+    "protocol": {
+      "bytes": 4203,
+      "path": "research_manifests/gc_session_state_transition_v1_protocol_v01.json",
+      "sha256": "ea25bc471f5d45cd8cc5e8621a599dae4f8da43d2a7aa74b403d339bad5f03a8"
+    },
+    "test_registry": {
+      "bytes": 27724,
+      "path": "research_manifests/gc_session_state_transition_v1_test_registry_v01.json",
+      "sha256": "c3dd5e78bf313f0df424c8009aeea741257963e632d52dc0b85bd3e92fed3c65"
+    }
+  },
+  "data_acquired": false,
+  "development_relationships_calculated": false,
+  "freeze_receipt": "0242f56164fc2948c67cbe9288b70f25737ff3060114e3b7fd4b3e5ca6a232ff",
+  "outcome_values_accessed": false,
+  "sealed_at_utc": "2026-08-06T11:57:01.815304Z",
+  "sources": {
+    "binary_event_branch_final_seal": {
+      "bytes": 796,
+      "path": "research_artifacts/gc_session_trigger_edge_m4_v01/final_seal.json",
+      "sha256": "0ec0695f558dea29dbd3ba331a6173847e1bda3553de76b22dc3bd14646363dd"
+    },
+    "case_matrix": {
+      "bytes": 103763781,
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/cases.jsonl.gz",
+      "sha256": "d0f5120713b5f9ce641c6285941bfc23d3aac3b83b561c8fc1138e33a5ede9b9"
+    },
+    "case_matrix_manifest": {
+      "bytes": 4086,
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/manifest.json",
+      "sha256": "dddbe125d11afef2094b7843f5521b7bbfcc95178e3fa376b60af8bdd2efc3b5"
+    },
+    "continuous_branch_final_seal": {
+      "bytes": 748,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m3_v01/final_seal.json",
+      "sha256": "8dd3b8d97fc14c1374361bdd5a4a0f61c783844ddf76a56096a78739c6ab8286"
+    },
+    "gc_primary_events": {
+      "bytes": 1968576,
+      "path": "research_artifacts/gc_session_trigger_edge_v2r1_v01/primary_events.parquet",
+      "sha256": "9557731bbc45d985d06227b3b15451f69e31f069697ab7cc5fae66293965a87b"
+    },
+    "gc_reference_events": {
+      "bytes": 1968576,
+      "path": "research_artifacts/gc_session_trigger_edge_v2r1_v01/reference_events.parquet",
+      "sha256": "9557731bbc45d985d06227b3b15451f69e31f069697ab7cc5fae66293965a87b"
+    },
+    "gc_v2r1_manifest": {
+      "bytes": 5411,
+      "path": "research_artifacts/gc_session_trigger_edge_v2r1_v01/manifest.json",
+      "sha256": "f8b9805ffab9d86d4e695eef82e5e9c4fa22c3764eed1059b7638d91bd81264e"
+    },
+    "gold_casebook_manifest": {
+      "bytes": 5372,
+      "path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6"
+    },
+    "reference_book": {
+      "bytes": 971812,
+      "path": "Gold_USD_Market_Intelligence_Reference_Book.pdf",
+      "sha256": "3e7ddc561932a859a4c9043a38ff71b7003907963fb52247e41edaeefc8ac42a"
+    },
+    "xauusd_price_bars": {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    }
+  },
+  "status": "SEALED_BEFORE_ANY_V1_OUTCOME_ACCESS",
+  "version": "GC_SESSION_STATE_TRANSITION_V1_DESIGN_FREEZE_1_0",
+  "year_2025_or_2026_accessed": false
+}

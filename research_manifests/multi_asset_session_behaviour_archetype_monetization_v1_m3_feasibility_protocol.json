@@ -1,0 +1,95 @@
+{
+  "combined_portfolio": "EARLIEST_OF_M15_H1_H4_PER_CASE_THEN_CLUSTER_OVERLAP_POLICY",
+  "constant_resolution": {
+    "ambiguous_bar": "STOP_FIRST",
+    "deadline": "FROZEN_SESSION_END",
+    "gap": "NEXT_M1_OPEN",
+    "stop_ATR": 1.0,
+    "target_ATR": 1.0
+  },
+  "constant_trigger": {
+    "close_location_bearish_max": 0.25,
+    "close_location_bullish_min": 0.75,
+    "completed_relative_bars_only": true,
+    "entry_latency_minutes": 1,
+    "first_qualifying_bar_only": true,
+    "maximum_no_tick_entry_delay_minutes": 2,
+    "optimization": false,
+    "threshold_ATR": 0.25
+  },
+  "costs": {
+    "commission_slippage_latency_R": 0.03,
+    "formula": "MAX(SPREAD_R_PLUS_0.03,0.05)",
+    "minimum_total_cost_R": 0.05,
+    "spread": "MAX_ENTRY_OR_EXIT_BROKER_SPREAD_POINTS_CONVERTED_TO_PRICE_DIVIDED_BY_ATR"
+  },
+  "decision_rule": {
+    "FAIL_CAPACITY": "COMBINED_STAGE4_NET_R_PER_MONTH_LT_10",
+    "PASS_CAPACITY": "COMBINED_STAGE4_NET_R_PER_MONTH_GTE_10",
+    "edge_claim": false
+  },
+  "forbidden": [
+    "OPTIMIZE_ENTRY",
+    "SELECT_STRATEGY",
+    "CREATE_CANDIDATE",
+    "CLAIM_EDGE",
+    "REMOVE_LOSSES",
+    "2025_VALUE_ACCESS",
+    "2026_VALUE_ACCESS",
+    "PAID_ACQUISITION"
+  ],
+  "four_stage_waterfall": {
+    "stage_1": "MAX_OF_UP_AND_DOWN_SESSION_EXCURSION_DIVIDED_BY_PREDECISION_ATR; DIRECTION_CHOSEN_WITH HINDSIGHT; NONTRADABLE_CEILING",
+    "stage_2": "FIRST_COMPLETED_TRACK_BAR_CLOSING_AT_LEAST_0.25_ATR_FROM_REFERENCE_AND_IN_OUTER_QUARTER; DIRECTION_FIXED_THEN SUBSEQUENT_MFE",
+    "stage_3": "NEXT_OBSERVED_M1_OPEN_AFTER_ONE_MINUTE_LATENCY; FIXED_1_ATR_STOP_AND_1_ATR_TARGET; SESSION_TIME_EXIT; STOP_FIRST_ON_AMBIGUOUS_M1",
+    "stage_4": "STAGE_3_AFTER_COSTS_POSITION_FEASIBILITY_AND_ONE_CONCURRENT_POSITION_PER_CORRELATION_CLUSTER"
+  },
+  "frozen_at_utc": "2026-08-12T12:57:56.720916Z",
+  "purpose": "TARGET_CAPACITY_FALSIFICATION_NOT_EDGE_OR_STRATEGY_DISCOVERY",
+  "reporting": [
+    "INSTRUMENT",
+    "SESSION",
+    "TIMEFRAME",
+    "ARCHETYPE",
+    "OCCURRENCES_PER_MONTH",
+    "DIRECTION_FREQUENCIES",
+    "MFE_MAE",
+    "FIRST_PASSAGE",
+    "STAGE1_R_PER_MONTH",
+    "STAGE2_R_PER_MONTH",
+    "STAGE3_R_PER_MONTH",
+    "STAGE4_NET_R_PER_MONTH",
+    "DOLLARS_PER_MONTH",
+    "EXACT_RETENTION_LOSS"
+  ],
+  "reproduction": "PRIMARY_AND_REFERENCE_EXACT_BYTE_IDENTICAL_FEASIBILITY_PAYLOADS",
+  "risk": {
+    "account_usd": 10000.0,
+    "clusters": {
+      "ENERGY": [
+        "XTIUSD"
+      ],
+      "PRECIOUS_METALS": [
+        "XAGUSD"
+      ],
+      "USD_FX": [
+        "EURUSD",
+        "USDJPY"
+      ],
+      "US_EQUITY_INDICES": [
+        "USTEC",
+        "US500"
+      ]
+    },
+    "maximum_planned_risk_usd_per_cluster": 100.0,
+    "overlap_priority": "EARLIEST_ENTRY_THEN_INSTRUMENT_CASE_TIMEFRAME_LEXICOGRAPHIC",
+    "sizing": "FLOOR_TO_FROZEN_BROKER_VOLUME_STEP_NEVER_ABOVE_100_USD"
+  },
+  "status": "FROZEN_BEFORE_M3_HYPOTHETICAL_CAPTURE_CALCULATION",
+  "timeframes_separate": {
+    "H1": 60,
+    "H4": 240,
+    "M15": 15
+  },
+  "version": "MSBAM_V1_M3_FEASIBILITY_PROTOCOL_1_0"
+}

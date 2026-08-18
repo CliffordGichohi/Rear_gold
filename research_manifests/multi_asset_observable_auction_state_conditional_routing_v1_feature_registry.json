@@ -1,0 +1,182 @@
+{
+  "categorical_features": [
+    "instrument",
+    "session",
+    "timeframe",
+    "trigger_direction"
+  ],
+  "category_registry": {
+    "instrument": [
+      "XAGUSD",
+      "EURUSD",
+      "USDJPY",
+      "USTEC",
+      "US500",
+      "XTIUSD"
+    ],
+    "session": [
+      "LONDON_SESSION",
+      "NEW_YORK_SESSION",
+      "US_CASH_SESSION",
+      "US_ENERGY_SESSION"
+    ],
+    "timeframe": [
+      "M15",
+      "H1",
+      "H4"
+    ],
+    "trigger_direction": [
+      "SHORT",
+      "LONG"
+    ]
+  },
+  "forbidden": [
+    "FINALISED_ARCHETYPE",
+    "MFE",
+    "MAE",
+    "FUTURE_EXTREMA",
+    "EVENTUAL_DIRECTION",
+    "TARGET_STOP_RESULT",
+    "REALISED_RETURN"
+  ],
+  "frozen_at_utc": "2026-08-12T13:36:45.176511Z",
+  "missing_policy": "TRAINING_ONLY_MEDIAN_NUMERIC; SEALED_UNKNOWN_CATEGORY; NEVER_ZERO_AS_ECONOMIC_NEUTRAL",
+  "numeric_feature_count": 22,
+  "numeric_features": [
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "TRIGGER_DIRECTION_X_POINT_IN_TIME_MACRO_SCORE_DIVIDED_BY_100",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "macro_alignment"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "POINT_IN_TIME_MACRO_AVAILABLE_WEIGHT_FRACTION",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "macro_confidence"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "MEAN_TRIGGER_ALIGNED_COMPLETED_W1_D1_H4_H1_PRESSURE_STATE",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "htf_pressure_alignment"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "MEAN_TRIGGER_ALIGNED_CONFIRMED_M15_H1_H4_STRUCTURE_STATE",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "structure_alignment"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "MEAN_TRIGGER_ALIGNED_COMPLETED_CLOSE_BREAK_VS_CONFIRMED_SWING",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "bos_alignment"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "TRIGGER_ALIGNED_CHECKPOINT_CLOSE_MINUS_SESSION_REFERENCE_DIVIDED_BY_ATR",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "early_displacement_r"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "COMPLETED_TRIGGER_BAR_RANGE_DIVIDED_BY_PRESESSION_ATR",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "trigger_bar_range_r"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "TRIGGER_ALIGNED_COMPLETED_BAR_BODY_DIVIDED_BY_BAR_RANGE",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "trigger_bar_body_alignment"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "OBSERVED_SESSION_RANGE_THROUGH_CHECKPOINT_DIVIDED_BY_ATR",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "early_range_r"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "MAX_EXCURSION_AGAINST_TRIGGER_DIRECTION_BEFORE_CHECKPOINT_DIVIDED_BY_ATR",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "pretrigger_adverse_r"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "ABS_NET_COMPLETED_M5_DISPLACEMENT_DIVIDED_BY_SUM_ABS_M5_CHANGES",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "early_path_efficiency"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "CHECKPOINT_ELAPSED_MINUTES_DIVIDED_BY_FROZEN_SESSION_DURATION",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "elapsed_fraction"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "PRESESSION_14_COMPLETED_M15_ATR_DIVIDED_BY_REFERENCE_PRICE",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "atr_fraction_of_price"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "LAST_OBSERVED_PRECHECKPOINT_BROKER_SPREAD_PRICE_DIVIDED_BY_ATR",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "checkpoint_spread_r"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "LAST_OBSERVED_PRECHECKPOINT_LOG_TICK_VOLUME_ROBUST_Z_VS_PRIOR_60_M1",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "tick_volume_robust_z60"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "OBSERVED_M1_COUNT_DIVIDED_BY_WALL_CLOCK_MINUTES_THROUGH_CHECKPOINT",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "quote_density"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "TRIGGER_DIRECTION_DISTANCE_TO_NEAREST_PREEXISTING_LEVEL_CAPPED_5_ATR",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "nearest_ahead_level_r"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "OPPOSITE_DIRECTION_DISTANCE_TO_NEAREST_PREEXISTING_LEVEL_CAPPED_5_ATR",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "nearest_behind_level_r"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "COUNT_PREEXISTING_LEVELS_WITHIN_0P5_ATR_OF_CHECKPOINT_CLOSE",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "levels_within_0p5atr"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "ANY_THREE_COMPLETED_M5_CLOSE_ACCEPTANCE_BEYOND_LEVEL_IN_TRIGGER_DIRECTION_BY_CHECKPOINT",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "aligned_level_acceptance"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "ANY_OPPOSITE_LEVEL_0P05_ATR_SWEEP_AND_COMPLETED_M5_RECLAIM_BY_CHECKPOINT",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "opposite_sweep_reclaim"
+    },
+    {
+      "available_at": "LTE_CHECKPOINT",
+      "definition": "SCHEDULED_TIER1_EVENT_WITH_POINT_IN_TIME_METADATA_ZERO_TO_240_MINUTES_AHEAD",
+      "epistemic_class": "CALCULATED_OR_INFERRED",
+      "feature_id": "event_within_240m"
+    }
+  ],
+  "status": "FROZEN_OUTCOME_BLIND",
+  "transformation": "TRAINING_ONLY_1PCT_99PCT_CLIP_MEDIAN_CENTER_STD_SCALE",
+  "version": "MAOASCR_V1_FEATURE_REGISTRY_1_0"
+}

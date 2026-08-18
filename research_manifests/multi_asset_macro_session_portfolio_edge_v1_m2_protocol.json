@@ -1,0 +1,107 @@
+{
+  "version": "MULTI_ASSET_MACRO_SESSION_PORTFOLIO_EDGE_V1_M2_PROTOCOL_1_0",
+  "status": "FROZEN_BEFORE_M2_HISTORY_ACCESS",
+  "branch": "MULTI_ASSET_MACRO_SESSION_PORTFOLIO_EDGE_V1",
+  "milestone": "2_FREE_MT5_SOURCE_ACQUISITION_AND_CERTIFICATION",
+  "predecessor": {
+    "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_milestone1_seal.json",
+    "sha256": "a8f8c7d257354f03a2782a20965f0524cfae6a9f8402c5c0e4bf70179ece94a0",
+    "required_verdict": "PASS_MILESTONE_1_CONTRACT_AND_AUDIT__SOURCE_BACKFILL_REQUIRED_BEFORE_DISCOVERY"
+  },
+  "preserved_verdicts": {
+    "gold_only_10r_branch": "TERMINATED_AND_NOT_REOPENED",
+    "milestone_1": "PRESERVED_UNCHANGED"
+  },
+  "acquisition": {
+    "provider": "EXISTING_CONNECTED_IC_MARKETS_MT5",
+    "mt5_symbols": [
+      "XAGUSD",
+      "USDJPY",
+      "USTEC",
+      "US500",
+      "XTIUSD"
+    ],
+    "research_aliases": {
+      "XAGUSD": "XAGUSD",
+      "USDJPY": "USDJPY",
+      "USTEC": "NAS100",
+      "US500": "US500",
+      "XTIUSD": "WTI"
+    },
+    "excluded_reacquisition_symbols": [
+      "XAUUSD",
+      "EURUSD"
+    ],
+    "timeframe": "M1",
+    "start_inclusive": "2021-08-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "chunk_days": 60,
+    "chunks_per_symbol": 21,
+    "maximum_total_mt5_requests": 105,
+    "output_directory": "data/mt5",
+    "upload": false,
+    "paid_api": false,
+    "existing_source_policy": "STOP_ON_ANY_PREEXISTING_TARGET_HISTORY_BEFORE_ACQUISITION",
+    "write_policy": "WRITE_ONCE_ATOMIC_AND_REJECT_DIFFERENT_EXISTING_BYTES"
+  },
+  "implementation": {
+    "path": "tools/acquire_multi_asset_macro_session_portfolio_v1_m2_mt5.py",
+    "sha256": "abe99a2afc8a16aa44cc7ad997a970dde3ff4f1b9bf70d9ffd90fb4d92fbe9f5",
+    "terminal_path": "C:/Program Files/MetaTrader 5/terminal64.exe",
+    "orders_permitted": false,
+    "current_tick_or_current_rate_request_permitted": false
+  },
+  "normalization": {
+    "schema": "open_time,close_time,available_at,open,high,low,close,volume,volume_type,spread_points,real_volume",
+    "timestamp_authority": "MT5_RATE_TIME_INTERPRETED_AS_UTC_OPEN_TIME",
+    "close_time": "OPEN_TIME_PLUS_EXACTLY_ONE_MINUTE",
+    "available_at": "CLOSE_TIME",
+    "canonical_identity": [
+      "mt5_symbol",
+      "open_time"
+    ],
+    "deduplication": "EARLIEST_LEXICOGRAPHIC_SOURCE_FILENAME_THEN_SOURCE_ROW",
+    "raw_source_files_modified_or_deleted": false,
+    "missing_bars": "REMAIN_MISSING_NEVER_INTERPOLATED",
+    "out_of_interval_rows": "EXCLUDED_BEFORE_WRITE"
+  },
+  "certification": {
+    "independent_implementations": 2,
+    "primary_reader": "SPLIT_METADATA_READER",
+    "reference_reader": "DICT_METADATA_READER",
+    "required_resolution": "M1",
+    "required_months": 41,
+    "first_usable_session_lte": "2021-08-02",
+    "last_usable_session_gte": "2024-12-31",
+    "active_weekday_presence_gte": 0.9,
+    "primary_session_complete_fraction_gte": 0.9,
+    "complete_session_expected_minute_fraction_gte": 0.9,
+    "spread_metadata_fraction_gte": 0.95,
+    "minute_alignment_errors_eq": 0,
+    "close_time_errors_eq": 0,
+    "availability_errors_eq": 0,
+    "in_file_order_errors_eq": 0,
+    "source_file_hashes_required": true,
+    "primary_reference_semantic_equality_required": true,
+    "all_seven_instruments_must_pass": true
+  },
+  "session_policy": "UNCHANGED_FROM_SEALED_MILESTONE_1_PROTOCOL",
+  "forward_locks": {
+    "calendar_2025": "LOCKED_NO_MARKET_VALUE_ACCESS",
+    "calendar_2026": "LOCKED_NO_MARKET_VALUE_ACCESS"
+  },
+  "controls": {
+    "maximum_paid_charge_usd": 0.0,
+    "stop_before_any_possible_charge": true,
+    "relationships_calculated": false,
+    "trades_calculated": false,
+    "PnL_calculated": false,
+    "market_values_humanly_inspected_or_reported": false,
+    "XAUUSD_or_EURUSD_reacquisition_permitted": false,
+    "source_files_may_be_repaired_filtered_or_deleted": false
+  },
+  "pass_rule": "ALL_PREDECESSOR_ACQUISITION_LINEAGE_COVERAGE_DEDUPLICATION_SESSION_SPREAD_AND_REPRODUCTION_GATES_PASS_FOR_ALL_SEVEN_INSTRUMENTS",
+  "failure_rule": "ANY_GATE_FAILURE_RECORDS_AN_HONEST_M2_FAILURE_AND_RELATIONSHIP_DISCOVERY_REMAINS_LOCKED",
+  "next_action_authorized": false,
+  "stop_after_certification": true
+}

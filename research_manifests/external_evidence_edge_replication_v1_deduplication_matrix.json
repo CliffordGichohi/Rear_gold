@@ -1,0 +1,29 @@
+{
+  "version": "EXTERNAL_EVIDENCE_EDGE_REPLICATION_V1_DEDUPLICATION_MATRIX_1_0",
+  "method": "Repository contracts, reports, final verdicts, and sealed manifests were inventoried before external candidates were selected. Similarity is assessed on signal information, decision time, holding horizon, execution family, and economic mechanism; a renamed rule is not considered novel.",
+  "outcome_values_accessed": false,
+  "prior_strategy_families": [
+    {"family": "gold_macro_surprise_and_acceptance", "repository_evidence": ["GOLD_MACRO_ACCEPTANCE_EDGE_DISCOVERY_V1_RESULT.md", "GOLD_FUNDAMENTAL_ALIGNED_MULTITIMEFRAME_AUCTION_EDGE_V1_REPORT.md"], "external_overlap": ["EER_S06", "EER_S07", "EER_S08"], "disposition": "DUPLICATE_REJECTED_BRANCH"},
+    {"family": "gold_session_direction_and_asia_london_new_york_paths", "repository_evidence": ["GOLD_CASEBOOK_MILESTONE_6.md", "GOLD_SESSION_BEHAVIOUR_V3_MILESTONE_6B.md"], "external_overlap": ["EER_S17"], "disposition": "DUPLICATE_REJECTED_BRANCH"},
+    {"family": "gold_rates_and_zn_direction", "repository_evidence": ["GOLD_CASEBOOK_DISCOVERY_V2_MILESTONE_6.md"], "external_overlap": [], "disposition": "PRESERVED_REJECTION"},
+    {"family": "gold_cot_positioning_conditional_bias", "repository_evidence": ["GOLD_SESSION_BEHAVIOUR_V3_MILESTONE_4.md", "GOLD_SESSION_BEHAVIOUR_V3_MILESTONE_5.md"], "external_overlap": [], "disposition": "PRESERVED_REJECTION"},
+    {"family": "gc_order_flow_imbalance_and_book_state", "repository_evidence": ["GC_MICROSTRUCTURE_STEP_5D_R3_REPORT.md", "GC_CONTINUOUS_STATE_RESPONSE_EDGE_DISCOVERY_V3_MILESTONE_3.md"], "external_overlap": ["EER_S09"], "disposition": "DUPLICATE_REJECTED_BRANCH"},
+    {"family": "gc_binary_session_triggers_and_state_transitions", "repository_evidence": ["GC_SESSION_TRIGGER_EDGE_DISCOVERY_V2_MILESTONE_3_R1.md", "GC_SESSION_STATE_TRANSITION_EDGE_DISCOVERY_V1_REPORT.md"], "external_overlap": ["EER_S17"], "disposition": "DUPLICATE_REJECTED_BRANCH"},
+    {"family": "gold_multitimeframe_trend_pullback_continuation", "repository_evidence": ["GOLD_TREND_PULLBACK_CONTINUATION_ECONOMIC_EDGE_VALIDATION_V1_FINAL.md", "GOLD_STRUCTURAL_TREND_RETRACEMENT_CONTINUATION_EDGE_V1_REPORT.md"], "external_overlap": ["EER_S01", "EER_S02"], "disposition": "PARTIAL_MECHANISM_OVERLAP_SOURCE_MISMATCH"},
+    {"family": "gold_pullback_archetype_routing_and_adaptive_management", "repository_evidence": ["GOLD_PULLBACK_ARCHETYPE_SETUP_ROUTING_AND_RISK_ALLOCATION_V1_FINAL.md", "GOLD_POINT_IN_TIME_AUCTION_STATE_AND_ADAPTIVE_MANAGEMENT_V1_FINAL_VERDICT.md"], "external_overlap": ["EER_S13"], "disposition": "DUPLICATE_RISK_CONDITIONING_FAMILY"},
+    {"family": "gold_sequential_confirmation_and_stop_geometry", "repository_evidence": ["GOLD_SEQUENTIAL_AUCTION_CONFIRMATION_ENTRY_RESEARCH_V1_FINAL.md", "GOLD_STRUCTURAL_STOP_GEOMETRY_ECONOMIC_RESEARCH_V1_FINAL.md"], "external_overlap": ["EER_S17"], "disposition": "DUPLICATE_REJECTED_BRANCH"},
+    {"family": "gold_bidirectional_auction_resolution", "repository_evidence": ["GOLD_BIDIRECTIONAL_AUCTION_RESOLUTION_EDGE_DISCOVERY_V1_REPORT.md"], "external_overlap": [], "disposition": "PRESERVED_REJECTION"},
+    {"family": "gold_h4_liquidity_target_and_ceiling", "repository_evidence": ["GOLD_H4_CONTINUATION_TRADABLE_CEILING_AND_MONETIZATION_AUDIT_V1_REPORT.md", "GOLD_H4_LIQUIDITY_TARGET_CAPTURE_FALSIFICATION_V1_REPORT.md"], "external_overlap": [], "disposition": "PRESERVED_TERMINATION"},
+    {"family": "multi_asset_macro_session_predefined_triggers", "repository_evidence": ["MULTI_ASSET_MACRO_AND_SESSION_PORTFOLIO_EDGE_DISCOVERY_V1_MILESTONE_3_REPORT.md"], "external_overlap": ["EER_S17"], "disposition": "DUPLICATE_REJECTED_BRANCH"},
+    {"family": "multi_asset_session_archetype_and_constant_trigger_ceiling", "repository_evidence": ["MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_V1_MILESTONE_3.md"], "external_overlap": ["EER_S17"], "disposition": "DUPLICATE_REJECTED_BRANCH"},
+    {"family": "multi_asset_observable_state_router", "repository_evidence": ["MULTI_ASSET_OBSERVABLE_AUCTION_STATE_CONDITIONAL_ROUTING_EDGE_DISCOVERY_V1_REPORT.md"], "external_overlap": ["EER_S13", "EER_S17"], "disposition": "DUPLICATE_REJECTED_BRANCH"},
+    {"family": "fomc_preannouncement_drift", "repository_evidence": ["research_manifests/gold_fundamental_aligned_multitimeframe_auction_edge_v1_protocol.json"], "external_overlap": ["EER_S05"], "disposition": "NOT_SELECTED_DUE_PREPERIOD_DECAY_EVIDENCE"},
+    {"family": "currency_carry", "repository_evidence": [], "external_overlap": ["EER_S10"], "disposition": "NOVEL_BUT_SOURCE_INCOMPATIBLE"},
+    {"family": "turn_of_month", "repository_evidence": [], "external_overlap": ["EER_S11", "EER_S12"], "disposition": "NOVEL_BUT_UNDERPOWERED_AND_COST_SOURCE_INCOMPATIBLE"},
+    {"family": "volatility_managed_factor_portfolio", "repository_evidence": ["GOLD_PULLBACK_ARCHETYPE_SETUP_ROUTING_AND_RISK_ALLOCATION_V1_FINAL.md"], "external_overlap": ["EER_S13"], "disposition": "NOT_STANDALONE_AND_PARTIAL_OVERLAP"},
+    {"family": "us_equity_first_and_penultimate_to_last_half_hour_momentum", "repository_evidence": [], "external_overlap": ["EER_S03", "EER_S15", "EER_S16"], "disposition": "NOVEL_SELECTED_EER_F01"},
+    {"family": "crude_first_to_last_half_hour_momentum", "repository_evidence": [], "external_overlap": ["EER_S04", "EER_S14"], "disposition": "NOVEL_SELECTED_EER_F02"}
+  ],
+  "artifact_inventory_policy": "At pre-outcome freeze, every repository Markdown or JSON pathname containing CONTRACT, REPORT, RESULT, FINAL, VERDICT, or MILESTONE is hashed into the strategy-artifact inventory. This matrix is the semantic family-level deduplication view over that complete pathname inventory.",
+  "selected_rules_reopen_rejected_rule": false
+}

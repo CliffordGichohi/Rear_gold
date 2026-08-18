@@ -1,0 +1,216 @@
+{
+  "candidate_policy": {
+    "development_pass_is_validated_edge": false,
+    "maximum_per_session": 2,
+    "ranking": [
+      "lowest BH q",
+      "highest bootstrap lower rho",
+      "highest accuracy",
+      "highest minimum fold rho",
+      "greatest date support",
+      "lexical test_id"
+    ],
+    "zero_acceptable": true
+  },
+  "chronological_folds": [
+    {
+      "fold": 1,
+      "train_blocks": [
+        1,
+        10
+      ],
+      "validate_blocks": [
+        11,
+        19
+      ]
+    },
+    {
+      "fold": 2,
+      "train_blocks": [
+        1,
+        19
+      ],
+      "validate_blocks": [
+        20,
+        28
+      ]
+    },
+    {
+      "fold": 3,
+      "train_blocks": [
+        1,
+        28
+      ],
+      "validate_blocks": [
+        29,
+        38
+      ]
+    }
+  ],
+  "endpoint": {
+    "diagnostic_only": [
+      "5M",
+      "30M",
+      "60M"
+    ],
+    "primary": "SIGNED_XAUUSD_DISPLACEMENT_15M"
+  },
+  "multiplicity": {
+    "secondary_horizons": "Holm within test; diagnostic only",
+    "stage1": "BH separately for 10 tests within each session",
+    "stage2": "BH separately for 6 tests within each session"
+  },
+  "prohibited": [
+    "retuning",
+    "inversion",
+    "feature repair",
+    "selective filtering",
+    "opaque model",
+    "execution",
+    "trades",
+    "PnL",
+    "R multiples",
+    "returns"
+  ],
+  "registry_receipt": "b1642c2872731b45aaaa6469f4291a835c1e43d5d0fb8ca993354a1be4b04790",
+  "sampling": {
+    "anchors_per_session_date": 16,
+    "binary_event_conditioning": false,
+    "offset_minutes": [
+      0,
+      15,
+      30,
+      45,
+      60,
+      75,
+      90,
+      105,
+      120,
+      135,
+      150,
+      165,
+      180,
+      195,
+      210,
+      225
+    ]
+  },
+  "stage1": {
+    "features": [
+      "CSR_FLOW_QUOTE_OFI_W60",
+      "CSR_FLOW_TRADE_IMBALANCE_W60",
+      "CSR_FLOW_DISPLAYED_IMBALANCE_W60",
+      "CSR_BOOK_DEPTH_IMBALANCE_L5_W60",
+      "CSR_BOOK_MICROPRICE_DISLOCATION_T0",
+      "CSR_STRUCTURE_MOMENTUM_15M",
+      "CSR_MACRO_ENGINE_SCORE",
+      "CSR_MACRO_REAL_YIELD_SUPPORT",
+      "CSR_MACRO_USD_SUPPORT",
+      "CSR_MACRO_2Y_SUPPORT"
+    ],
+    "model": {
+      "alpha": 0.0001,
+      "epsilon": 1.35,
+      "fit_intercept": true,
+      "max_iter": 1000,
+      "type": "HUBER_LINEAR"
+    },
+    "tests_per_session": 10,
+    "training_only_transform": {
+      "center": "median",
+      "scale": "MAD_THEN_SD_IF_ZERO",
+      "winsor_quantiles": [
+        0.01,
+        0.99
+      ]
+    }
+  },
+  "stage1_pass_gates": {
+    "all_fold_rho_gt": 0.0,
+    "bh_q_max": 0.05,
+    "bootstrap_lower_accuracy_lift_gt": 0.0,
+    "bootstrap_lower_rho_gt": 0.0,
+    "bootstrap_repetitions": 20000,
+    "cluster_permutations": 100000,
+    "expected_coefficient_sign_every_fold": true,
+    "folds_rho_gte_0_05_min": 2,
+    "oof_direction_accuracy_min": 0.54,
+    "required_years_positive": [
+      2022,
+      2023,
+      2024
+    ],
+    "signed_oof_spearman_min": 0.08
+  },
+  "stage2": {
+    "evaluate_all_support_eligible_registered_interactions": true,
+    "interactions": [
+      {
+        "expected_sign": "POSITIVE",
+        "interaction_id": "CSR_INT_OFI_MACRO_CONCORDANCE",
+        "left": "CSR_FLOW_QUOTE_OFI_W60",
+        "right": "CSR_MACRO_ENGINE_SCORE",
+        "score": "sign(left)*min(abs(z(left)),abs(z(right))) when signs agree, otherwise 0"
+      },
+      {
+        "expected_sign": "POSITIVE",
+        "interaction_id": "CSR_INT_TRADE_MACRO_CONCORDANCE",
+        "left": "CSR_FLOW_TRADE_IMBALANCE_W60",
+        "right": "CSR_MACRO_ENGINE_SCORE",
+        "score": "sign(left)*min(abs(z(left)),abs(z(right))) when signs agree, otherwise 0"
+      },
+      {
+        "expected_sign": "POSITIVE",
+        "interaction_id": "CSR_INT_DEPTH_REAL_YIELD_CONCORDANCE",
+        "left": "CSR_BOOK_DEPTH_IMBALANCE_L5_W60",
+        "right": "CSR_MACRO_REAL_YIELD_SUPPORT",
+        "score": "sign(left)*min(abs(z(left)),abs(z(right))) when signs agree, otherwise 0"
+      },
+      {
+        "expected_sign": "POSITIVE",
+        "interaction_id": "CSR_INT_MICROPRICE_USD_CONCORDANCE",
+        "left": "CSR_BOOK_MICROPRICE_DISLOCATION_T0",
+        "right": "CSR_MACRO_USD_SUPPORT",
+        "score": "sign(left)*min(abs(z(left)),abs(z(right))) when signs agree, otherwise 0"
+      },
+      {
+        "expected_sign": "POSITIVE",
+        "interaction_id": "CSR_INT_OFI_SPREAD_FRAGILITY",
+        "left": "CSR_FLOW_QUOTE_OFI_W60",
+        "right": "CSR_LIQ_SPREAD_FRAGILITY_60_900",
+        "score": "z(left)*max(z(right),0)"
+      },
+      {
+        "expected_sign": "POSITIVE",
+        "interaction_id": "CSR_INT_OFI_SESSION_LEVEL_TENSION",
+        "left": "CSR_FLOW_QUOTE_OFI_W60",
+        "right": "CSR_SESSION_LEVEL_TENSION",
+        "score": "z(left)*right"
+      }
+    ],
+    "model": {
+      "alpha": 1.0,
+      "fit_intercept": true,
+      "type": "HIERARCHICAL_RIDGE_MAIN_EFFECTS_PLUS_INTERACTION"
+    },
+    "stage1_must_be_sealed_first": true,
+    "tests_per_session": 6
+  },
+  "stage2_additional_pass_gates": {
+    "incremental_oof_spearman_min": 0.03,
+    "oof_mae_reduction_min_fraction": 0.01
+  },
+  "status": "FROZEN_PRE_OUTCOME_MODEL_REGISTRY",
+  "support_floors": {
+    "distinct_blocks": 30,
+    "distinct_dates": 150,
+    "negative_predictor_dates": 40,
+    "positive_predictor_dates": 40,
+    "required_year_dates": 35,
+    "stage1_completeness": 0.8,
+    "stage2_joint_completeness": 0.7,
+    "validation_fold_anchors": 480,
+    "validation_fold_dates": 35
+  },
+  "version": "GC_CSR_EDGE_DISCOVERY_V3_MODEL_REGISTRY_V1_0"
+}

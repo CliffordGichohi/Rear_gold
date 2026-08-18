@@ -1,0 +1,162 @@
+{
+  "version": "GOLD_POINT_IN_TIME_AUCTION_STATE_ADAPTIVE_MANAGEMENT_V1_PROTOCOL_1_0",
+  "status": "FROZEN_BEFORE_DECISION_TAPE_MARKET_VALUES_OR_OUTCOMES",
+  "development": ["2021-08-01T00:00:00Z", "2025-01-01T00:00:00Z"],
+  "population": {
+    "unique_pullbacks": 8653,
+    "identity_hash": "0b65a09313de7df5e01d3212234083d9240f83a056a8384e3e442d579aad5525",
+    "timeframes": {"M15": 6633, "H1": 1576, "H4": 444},
+    "duplicate_source_models": false
+  },
+  "tape": {
+    "checkpoint_minutes": {"M15": 1, "H1": 5, "H4": 15},
+    "deadline_parent_bars": 16,
+    "action_fill": "NEXT_CHECKPOINT_BAR_OPEN_EXACT_M1_TIMESTAMP",
+    "intervals": "HALF_OPEN",
+    "complete_contiguous_components_required": true,
+    "training_checkpoint_sample_per_case_max": 32,
+    "training_checkpoint_selection": "FIRST_LAST_PLUS_UNIFORMLY_SPACED_INDICES"
+  },
+  "numeric_predictors": [
+    "setup_retracement_depth_atr", "setup_compression_ratio", "setup_pullback_efficiency",
+    "setup_impulse_efficiency", "setup_impulse_extension_atr", "setup_trend_age_log1p",
+    "setup_prior_continuations_log1p", "setup_pivot_rejection_wick", "setup_confirmation_range_atr",
+    "setup_confirmation_body_fraction", "setup_confirmation_close_location", "setup_response_displacement_atr",
+    "setup_response_efficiency", "setup_confirmation_volume_ratio", "fundamental_score_aligned",
+    "fundamental_confidence_01", "fundamental_coverage_01", "real_yield_contribution_aligned",
+    "fed_path_contribution_aligned", "usd_contribution_aligned", "two_year_contribution_aligned",
+    "positioning_contribution_aligned", "financial_stress_contribution_aligned", "cot_percentile_01",
+    "cot_net_change_aligned_signed_log", "higher_timeframe_alignment_fraction", "elapsed_fraction",
+    "time_remaining_fraction", "current_displacement_atr", "pivot_distance_atr", "reference_distance_atr",
+    "running_favourable_atr", "running_adverse_atr", "recent_3_displacement_atr",
+    "recent_5_efficiency", "current_range_atr", "current_body_fraction", "current_close_location",
+    "current_rejection_wick", "volume_ratio_20", "spread_atr", "rolling_volatility_ratio",
+    "acceptance_state", "sweep_reclaim_state", "local_structure_score", "liquidity_target_r"
+  ],
+  "categorical_predictors": [
+    "fundamental_alignment_state", "fundamental_regime", "reaction_function", "event_risk",
+    "session_state", "h1_relative_state", "h4_relative_state"
+  ],
+  "forbidden_predictors": [
+    "resolution", "archetype", "assignment_reason", "future_mfe", "future_mae", "future_extrema",
+    "future_direction", "outcome_class", "target_result", "stop_result", "terminal_net_r"
+  ],
+  "point_in_time": {
+    "fundamental_max_age_hours": 96,
+    "cot_max_age_days": 14,
+    "numeric_missing": "TRAINING_MEDIAN_PLUS_MISSING_INDICATOR",
+    "numeric_clip": "TRAINING_1ST_99TH_PERCENTILE",
+    "categorical_missing": "UNKNOWN",
+    "categorical_unseen": "OTHER"
+  },
+  "geometry": {
+    "base_stop_pivot_buffer_atr": 0.15,
+    "local_fractal_left_bars": 2,
+    "local_fractal_right_bars": 2,
+    "local_fractal_buffer_atr": 0.10,
+    "stop_may_widen": false,
+    "target": "NEAREST_KNOWN_UNBROKEN_TREND_SIDE_STANDARD_SWING",
+    "minimum_target_r": 1.0
+  },
+  "outcomes": {
+    "primary_class": ["CONTINUATION_1R_FIRST", "FAILURE_STOP_FIRST", "UNRESOLVED"],
+    "secondary": ["TWO_R_BEFORE_STOP", "MFE_R", "MAE_R", "TIME_TO_FIRST_PASSAGE_MINUTES", "TERMINAL_NET_R"],
+    "same_bar": "STOP_FIRST",
+    "gap_stop": true,
+    "censoring": "FROZEN_CASE_DEADLINE"
+  },
+  "models": {
+    "families": ["LINEAR_COMPETING_RISK_V1", "ADDITIVE_BINNED_COMPETING_RISK_V1"],
+    "logistic_c_grid": [0.1, 1.0, 10.0],
+    "ridge_alpha_grid": [1.0, 10.0, 100.0],
+    "temperature_grid": [0.75, 1.0, 1.25, 1.5],
+    "additive_quantiles": [0.2, 0.4, 0.6, 0.8],
+    "interactions": [
+      ["fundamental_score_aligned", "higher_timeframe_alignment_fraction"],
+      ["reference_distance_atr", "acceptance_state"],
+      ["current_displacement_atr", "rolling_volatility_ratio"],
+      ["session_state", "elapsed_fraction"]
+    ]
+  },
+  "folds": [
+    {"fold": 1, "validate": ["2021-10-01", "2021-12-31"]},
+    {"fold": 2, "validate": ["2022-01-01", "2022-06-30"]},
+    {"fold": 3, "validate": ["2022-07-01", "2022-12-31"]},
+    {"fold": 4, "validate": ["2023-01-01", "2023-06-30"]},
+    {"fold": 5, "validate": ["2023-07-01", "2023-12-31"]},
+    {"fold": 6, "validate": ["2024-01-01", "2024-06-30"]},
+    {"fold": 7, "validate": ["2024-07-01", "2024-12-31"]}
+  ],
+  "training": {
+    "warmup": ["2021-08-01", "2021-09-30"],
+    "fit_fraction_of_outer_training_dates": 0.8,
+    "calibration_fraction": 0.2,
+    "case_balanced_sample_weight": true,
+    "minimum_fit_cases": {"M15": 200, "H1": 60, "H4": 20},
+    "minimum_calibration_cases": {"M15": 50, "H1": 20, "H4": 8},
+    "random_seed": 621907
+  },
+  "policy_grid": {
+    "enter_continuation_probability_gte": [0.50, 0.575, 0.65],
+    "enter_failure_probability_lte": [0.35, 0.45],
+    "enter_two_r_probability_gte": [0.20, 0.35],
+    "enter_expected_net_r_gt": [0.0, 0.10],
+    "add_probability_improvement_gte": [0.05, 0.10],
+    "scratch_continuation_probability_lt": [0.40, 0.475],
+    "scratch_consecutive_checkpoints": 2,
+    "selection_minimum_pf": 1.05,
+    "selection_cost_1p5x_expectancy_gt": 0.0
+  },
+  "tracks": ["CONSTANT_50", "ADAPTIVE_12P5_PLUS_37P5"],
+  "economics": {
+    "account_usd": 10000.0,
+    "maximum_planned_risk_usd": 50.0,
+    "probe_planned_risk_usd": 12.5,
+    "add_planned_risk_usd": 37.5,
+    "whole_ounce_sizing": true,
+    "spread": "OBSERVED_OR_0P30_FALLBACK",
+    "commission_usd_oz": 0.07,
+    "slippage_usd_oz": 0.10,
+    "cost_stress": [1.0, 1.5, 2.0],
+    "one_open_xauusd_position": true,
+    "compounding": false
+  },
+  "support_floors": {
+    "M15": {"trades": 150, "dates": 100},
+    "H1": {"trades": 60, "dates": 50},
+    "H4": {"trades": 30, "dates": 25}
+  },
+  "pass_gates": {
+    "net_expectancy_gt": 0.0,
+    "profit_factor_gte": 1.10,
+    "cluster_ci95_low_gt": 0.0,
+    "holm_p_lte": 0.10,
+    "cost_1p5x_expectancy_gt": 0.0,
+    "positive_validation_folds_gte": 3,
+    "positive_calendar_years_gte": 2,
+    "maximum_positive_year_share_lte": 0.70,
+    "maximum_positive_session_share_lte": 0.70,
+    "brier_skill_gt": 0.0,
+    "expected_calibration_error_lte": 0.10,
+    "positive_policy_neighbour_fraction_gte": 0.60,
+    "maximum_normalized_drawdown_pct_lte": 15.0
+  },
+  "bootstrap": {"resamples": 5000, "cluster": "TRADING_DATE", "base_seed": 621907},
+  "multiplicity": "HOLM_WITHIN_TIMEFRAME_ACROSS_FOUR_CANDIDATES",
+  "maximum_candidates_per_timeframe": 2,
+  "gc_incremental": {
+    "covered_dates": 188,
+    "window_seconds": 60,
+    "fields": ["AGGRESSION", "QUOTE_OFI", "DEPTH_IMBALANCE", "MICROPRICE_PRESSURE", "ABSORPTION", "LIQUIDITY_FRAGILITY"],
+    "standalone_candidate_credit": false
+  },
+  "forward_if_development_passes": {
+    "2025": ["2025-01-01T00:00:00Z", "2026-01-01T00:00:00Z"],
+    "2026_YTD": ["2026-01-01T00:00:00Z", "2026-07-30T00:00:00Z"],
+    "credit": "EXPOSED_HISTORICAL_ROBUSTNESS_ONLY"
+  },
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "paid_acquisition_authorized": false,
+  "retuning_after_outer_results": false
+}

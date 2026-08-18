@@ -1,0 +1,50 @@
+{
+  "calendar_2025": "LOCKED",
+  "calendar_2026": "LOCKED",
+  "human_decisions_collected": 0,
+  "market_outcomes_opened": false,
+  "population_sha256": "1ee0c611b82b4a967c866f02e03a3f20f408b35c8ff6473ed81e5db8c5e1ffed",
+  "public_population_sha256": "d91a75d7850fadd6ea9b7a1a07e846a5e2840199d5bbef390712b7b69de76b2b",
+  "replacement_count": 76,
+  "sealed_at": "2026-08-13T09:42:11.211336+00:00",
+  "sealed_files": [
+    {
+      "bytes": 2039,
+      "path": "GOLD_BLIND_DISCRETIONARY_REPLAY_V1_COVERAGE_AMENDMENT_A.md",
+      "sha256": "86a97ad46e51fd9f85a8272fdd4e461ea07c3da535862fa5fc862f9125b3d083"
+    },
+    {
+      "bytes": 754,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/materialization_attempt1_coverage_failure.json",
+      "sha256": "84d35dc4be0131de8ebf09bf2569c0710de49187c27bff5dfe06947cb92db84b"
+    },
+    {
+      "bytes": 13429,
+      "path": "tools/amend_gold_blind_discretionary_replay_v1_coverage.py",
+      "sha256": "b82eae71750f745de9e904a4b6f6ff3eb5bbc81c9d20edc50a8cf548f5b52556"
+    },
+    {
+      "bytes": 2495,
+      "path": "research_manifests/gold_blind_discretionary_replay_v1_population_freeze.json",
+      "sha256": "a7eb2b1967407b5e8503094a5190ea4f962ae06b33cb266e96a90ec68be397e6"
+    },
+    {
+      "bytes": 200216,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/population_registry_v1_1.private.json",
+      "sha256": "5e089cf9eaccf7703a182e0d715f7c8912dfb8b01865999f7a7a394e85621b1f"
+    },
+    {
+      "bytes": 55694,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/population_registry_v1_1.public.json",
+      "sha256": "26b1805fb23cafc0a7f76025982503f59cdfcc6228b352a7f2769d39e34750ad"
+    },
+    {
+      "bytes": 13303,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/coverage_amendment_a_audit.json",
+      "sha256": "69934a7d533abb831c30b9b2590c672046ea4dd8b55c5acc5c616ad4873567f6"
+    }
+  ],
+  "sealed_files_sha256": "2da0b585aecde8e7aa9c6723cfa015e88796d081384ed37592a61180ae9cf75f",
+  "status": "SEALED_AMENDMENT_A_BEFORE_HUMAN_LABELING",
+  "version": "GOLD_BLIND_DISCRETIONARY_REPLAY_V1_POPULATION_FREEZE_1_1"
+}

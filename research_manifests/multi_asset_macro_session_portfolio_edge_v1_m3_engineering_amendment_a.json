@@ -1,0 +1,35 @@
+{
+  "version": "MULTI_ASSET_MACRO_SESSION_PORTFOLIO_EDGE_V1_M3_ENGINEERING_AMENDMENT_A_1_0",
+  "status": "SEALED_VALUE_BLIND_ENGINEERING_CORRECTION_A",
+  "sealed_at_utc": "2026-08-12T10:05:00Z",
+  "preoutcome_freeze_sha256": "a375a3e46adb028605d02b370c2e5251f799759f26649fda513b505ecd7a3bf7",
+  "original_frozen_implementation_sha256": "6cd9a84bc5b334fd8e739cba4d58b557401ffa15b8f7db827ceacf2c9c1d2b4f",
+  "corrected_implementation_sha256": "55dc641bc65b42afa9eac27e4decaa34c98fa4765acf77fb68281c368fe981ad",
+  "corrected_implementation_bytes": 116329,
+  "preserved_failure_artifact": {
+    "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/materialization_attempt1_failure.json",
+    "bytes": 1121,
+    "sha256": "3aa22eadf8d579b5f74cca560802434833c63e5ef722ef56fa8518ac36630f94"
+  },
+  "correction": {
+    "scope": "REFERENCE_AND_PRIMARY_CSV_TIMESTAMP_CONVERSION_ONLY",
+    "old": "PARSED_DATETIME_INTEGER_DIVIDED_DIRECTLY_BY_NANOSECONDS_PER_MINUTE",
+    "new": "EXPLICITLY_CONVERT_PARSED_DATETIME_TO_NANOSECONDS_THEN_DIVIDE_BY_NANOSECONDS_PER_MINUTE",
+    "reason": "PANDAS_PRESERVED_DATETIME64_MICROSECOND_UNIT",
+    "attempt_limit": "ONE_BOUNDED_RECERTIFICATION"
+  },
+  "proof": {
+    "synthetic_microsecond_to_nanosecond_boundary_test": "PASS",
+    "synthetic_primary_reference_aggregation": "PASS",
+    "synthetic_half_open_timestamp_test": "PASS",
+    "synthetic_DST_test": "PASS",
+    "synthetic_stop_first_test": "PASS",
+    "test_count": 6
+  },
+  "research_definitions_changed": false,
+  "features_thresholds_tests_folds_costs_risk_or_gates_changed": false,
+  "outcomes_or_relationships_accessed": false,
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "charge_incurred_usd": 0.0
+}

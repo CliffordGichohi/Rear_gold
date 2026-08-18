@@ -76,6 +76,7 @@ class StrategyConfig:
     fundamental_min_coverage: float = 35.0
     fundamental_min_confidence: float = 25.0
     block_high_impact_events: bool = True
+    allow_unknown_event_risk: bool = False
     block_elevated_or_abnormal_liquidity: bool = True
     allow_unknown_liquidity: bool = False
 
@@ -255,7 +256,12 @@ def run_asia_range_acceptance(
                 bar.close_time,
                 provider_code="BACKTEST_SOURCE",
             )
-            if config.block_high_impact_events and fundamental_state.event_risk in {
+            if (
+                fundamental_state.event_risk == "UNKNOWN"
+                and not config.allow_unknown_event_risk
+            ):
+                permitted, reason = False, "CATALYST_RISK_UNKNOWN_GATE"
+            elif config.block_high_impact_events and fundamental_state.event_risk in {
                 "HIGH",
                 "EXTREME",
             }:
@@ -434,6 +440,7 @@ def run_asia_range_acceptance(
                 "minimum_coverage": config.fundamental_min_coverage,
                 "minimum_confidence": config.fundamental_min_confidence,
                 "block_high_impact_events": config.block_high_impact_events,
+                "allow_unknown_event_risk": config.allow_unknown_event_risk,
                 "block_elevated_or_abnormal_liquidity": (
                     config.block_elevated_or_abnormal_liquidity
                 ),
@@ -446,6 +453,7 @@ def run_asia_range_acceptance(
                 "implemented_in_this_strategy": [
                     "point-in-time fundamental permission",
                     "event blackout",
+                    "unknown-catalyst fail-closed gate",
                     "session window",
                     "broker-spread liquidity gate",
                     "two-close price acceptance",

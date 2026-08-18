@@ -1,0 +1,17 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4B2_PRE_SUBMISSION_AMENDMENT_A_FREEZE_V0_1",
+  "status": "AMENDMENT_A_SEALED_BEFORE_FRESH_ESTIMATE_AND_BATCH_SUBMISSION",
+  "sealed_at_utc": "2026-07-31T14:18:30Z",
+  "classification": "NARROW_NORMALIZATION_FIELD_ORDER_CLARIFICATION",
+  "research_or_validation_credit": "NONE",
+  "amendment": {
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_manifests\\gc_microstructure_step_4b2_pre_submission_amendment_a_v01.json",
+    "bytes": 2071,
+    "sha256": "c0e9bd9422c8687439f99155c6c3c31dd8fe5d85350c7e46c2ed0f3969dd5006"
+  },
+  "original_authorization_and_freeze_preserved": true,
+  "fresh_estimate_requested_before_this_receipt": false,
+  "batch_job_submitted_before_this_receipt": false,
+  "data_downloaded_before_this_receipt": false,
+  "charge_incurred_before_this_receipt": false
+}

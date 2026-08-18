@@ -1,0 +1,42 @@
+{
+  "amendment": {
+    "bytes": 7962,
+    "path": "research_manifests/gc_microstructure_step_5b2_amendment_v01.json",
+    "sha256": "1a6dd3372f40b52d219b38e35504b9a96046ffc284117ed1ac6cc703d009f9d7"
+  },
+  "charge_incurred_usd": 0.0,
+  "classification": "VALUE_BLIND_SOURCE_INTEGRITY_RECERTIFICATION_ONLY",
+  "frozen_scope": {
+    "all_other_checks_unchanged": true,
+    "authorized_changed_check_keys": [
+      "receive_does_not_precede_event",
+      "bad_ts_recv_rows_follow_snapshot_semantics",
+      "all_prediction_windows_complete_or_documented_unknown"
+    ],
+    "independent_recertification_gates_frozen": true,
+    "no_recategorization_or_repair_permitted": true,
+    "pass_rule_frozen": true,
+    "source_verification_gates_frozen": true
+  },
+  "market_values_or_outcomes_accessed_or_reported": false,
+  "pre_freeze_verification": {
+    "implementation_correction_preserved": true,
+    "market_values_or_outcomes_accessed_or_reported": false,
+    "provider_requests_bound": 80,
+    "source_inventory_records_bound": 936,
+    "source_rows_accessed": false,
+    "step5b1_diagnostic_pass_preserved": true,
+    "step5b1_independent_payloads_identical": true,
+    "step5b_historical_failure_preserved": true
+  },
+  "preparation_tool": {
+    "bytes": 17148,
+    "path": "tools/prepare_gc_microstructure_step5b2.py",
+    "sha256": "f79afb834cb69f616c7a47c08c7013092773d565816f6a2e370c7b6b52529af0"
+  },
+  "recertification_started": false,
+  "research_or_validation_credit": "NONE",
+  "sealed_at_utc": "2026-08-04T07:51:19.320374Z",
+  "status": "BOUNDED_AMENDMENT_SEALED_BEFORE_RECERTIFICATION",
+  "version": "GC_MICROSTRUCTURE_STEP_5B2_FREEZE_V0_1"
+}

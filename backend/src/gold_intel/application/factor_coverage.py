@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Any
 
 from sqlalchemy import func, or_, select
@@ -71,6 +71,7 @@ class CoverageReport:
 
 
 async def build_coverage_report(session: AsyncSession, *, as_of: datetime) -> CoverageReport:
+    observation_cutoff = as_of - timedelta(days=3653)
     series_rows = (
         await session.execute(
             select(
@@ -79,6 +80,7 @@ async def build_coverage_report(session: AsyncSession, *, as_of: datetime) -> Co
                 func.max(Observation.available_at),
             )
             .where(
+                Observation.observation_time >= observation_cutoff,
                 Observation.available_at <= as_of,
                 Observation.is_synthetic.is_(False),
             )
@@ -86,38 +88,36 @@ async def build_coverage_report(session: AsyncSession, *, as_of: datetime) -> Co
         )
     ).all()
     series_stats = {str(code): (int(count), latest) for code, count, latest in series_rows}
-    price_count, price_latest = (
-        await session.execute(
-            select(func.count(PriceBar.id), func.max(PriceBar.available_at)).where(
-                PriceBar.instrument_code == "XAUUSD",
-                PriceBar.available_at <= as_of,
-                PriceBar.is_synthetic.is_(False),
-            )
-        )
-    ).one()
-    spread_count, spread_latest = (
+    (
+        price_count,
+        price_latest,
+        spread_count,
+        spread_latest,
+        tick_volume_count,
+        tick_volume_latest,
+    ) = (
         await session.execute(
             select(
                 func.count(PriceBar.id),
                 func.max(PriceBar.available_at),
+                func.count(PriceBar.id).filter(
+                    PriceBar.spread_points.is_not(None)
+                ),
+                func.max(PriceBar.available_at).filter(
+                    PriceBar.spread_points.is_not(None)
+                ),
+                func.count(PriceBar.id).filter(
+                    PriceBar.volume.is_not(None),
+                    PriceBar.volume_type == "TICK",
+                ),
+                func.max(PriceBar.available_at).filter(
+                    PriceBar.volume.is_not(None),
+                    PriceBar.volume_type == "TICK",
+                ),
             ).where(
                 PriceBar.instrument_code == "XAUUSD",
+                PriceBar.timeframe == "1m",
                 PriceBar.available_at <= as_of,
-                PriceBar.spread_points.is_not(None),
-                PriceBar.is_synthetic.is_(False),
-            )
-        )
-    ).one()
-    tick_volume_count, tick_volume_latest = (
-        await session.execute(
-            select(
-                func.count(PriceBar.id),
-                func.max(PriceBar.available_at),
-            ).where(
-                PriceBar.instrument_code == "XAUUSD",
-                PriceBar.available_at <= as_of,
-                PriceBar.volume.is_not(None),
-                PriceBar.volume_type == "TICK",
                 PriceBar.is_synthetic.is_(False),
             )
         )

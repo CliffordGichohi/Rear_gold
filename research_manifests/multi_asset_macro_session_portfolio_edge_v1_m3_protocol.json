@@ -1,0 +1,236 @@
+{
+  "aggregation": {
+    "D1_required_minutes": "AT_LEAST_5_OF_6_EXPECTED_TRADING_FRACTION",
+    "H1_H4_required_minutes": "AT_LEAST_75_PERCENT",
+    "M5_M15_required_minutes": "100_PERCENT",
+    "W1_required_days": 4,
+    "all_intervals": "LEFT_CLOSED_RIGHT_OPEN",
+    "canonical_deduplication": "EARLIEST_SEALED_SOURCE_THEN_SOURCE_ROW",
+    "completed_candles_only": true,
+    "timestamp_authority": "MT5_UTC_OPEN_TIME"
+  },
+  "candidate_gates": {
+    "PF_gte": 1.15,
+    "adjusted_p_lte": 0.05,
+    "candidate_max_drawdown_pct_lte": 10.0,
+    "clustered_CI95_low_gt": 0.0,
+    "cost_1p5_expectancy_gt": 0.0,
+    "expectancy_gt": 0.0,
+    "fixed_session_candidate_session_concentration": "NOT_APPLICABLE_UNTIL_COMBINED_PORTFOLIO",
+    "positive_folds_gte": 4,
+    "positive_stop_neighbors_gte": 2,
+    "positive_years_gte": 2,
+    "stage2_incremental_lift_CI95_low_gt": 0.0
+  },
+  "candidate_limits": {
+    "per_instrument": 2,
+    "per_instrument_family": 1,
+    "portfolio": 8
+  },
+  "charges_authorized": false,
+  "edge_family_exact_definitions": {
+    "E1": "tier1 event; cross-market story from event-1m to event+4m excluding target; >=60% component coverage and abs mean sign >=0.25; first M5 through minute30 accepting >=0.10 ATR outside pre-event30m range or rejecting a >=0.05 ATR sweep by closing inside; NY/primary-US assignment",
+    "E2": "first prior Asia/London extreme sweep >=0.05 M15_ATR and completed-M5 reclaim within 3 bars; same-time two-sided conflict is no signal; OPPOSED macro is no trade",
+    "E3": "first M15 break >=0.10 ATR beyond opening-or-prior boundary; body fraction>=0.60; close location>=0.70; first held retest within 4 completed M5 and tolerance 0.05 ATR",
+    "E4": "two latest same-direction H4 swing breaks; 0.35-0.75 impulse retrace at known H1/H4 swing or prior-day level within 0.15 ATR; aligned M15 displacement range>=0.80 ATR and body>=0.60 plus known minor M15 swing break; OPPOSED macro is no trade",
+    "one_signal_per_family_session_date": true,
+    "symmetry": "LONG_AND_SHORT_ONE_SIGNED_HYPOTHESIS"
+  },
+  "independent_reproduction": "ALTERNATE_DEDUP_AGGREGATION_ENUMERATION_EXECUTION_AND_COMPLETE_RESULT_PASS",
+  "macro_score": {
+    "COT": "METALS_CONTEXT_ONLY_NOT_PASS_GATE",
+    "USDJPY_confidence_cap": 60.0,
+    "WTI_EIA_state": "UNKNOWN_NOT_AVAILABLE",
+    "component_change": "SIGN_LATEST_POINT_IN_TIME_VALUE_MINUS_PREVIOUS_POINT_IN_TIME_OBSERVATION",
+    "component_multi_series": "MEAN_SIGN_WITH_UNEMPLOYMENT_AND_CLAIMS_INVERTED",
+    "direction_threshold_absolute_score": 20.0,
+    "minimum_available_absolute_weight_fraction": 0.6,
+    "score": "100_TIMES_WEIGHTED_COMPONENT_SIGN_SUM_DIVIDED_BY_AVAILABLE_ABSOLUTE_WEIGHT",
+    "states": [
+      "ALIGNED",
+      "OPPOSED",
+      "NEUTRAL",
+      "UNKNOWN"
+    ],
+    "weights": {
+      "EURUSD": {
+        "GROWTH": -0.15,
+        "USD": -0.45,
+        "VIX": -0.15,
+        "Y2": -0.25
+      },
+      "USDJPY": {
+        "GROWTH": 0.15,
+        "VIX": -0.2,
+        "Y10": 0.2,
+        "Y2": 0.45
+      },
+      "USTEC_US500": {
+        "GROWTH": 0.3,
+        "STRESS": -0.1,
+        "VIX": -0.2,
+        "Y10": -0.15,
+        "Y2": -0.25
+      },
+      "XAGUSD": {
+        "GROWTH": 0.15,
+        "INFLATION": 0.1,
+        "REAL10": -0.25,
+        "USD": -0.3,
+        "Y2": -0.2
+      },
+      "XAUUSD": {
+        "GROWTH": -0.1,
+        "INFLATION": 0.1,
+        "REAL10": -0.3,
+        "USD": -0.3,
+        "Y2": -0.2
+      },
+      "XTIUSD": {
+        "EQUITY": 0.2,
+        "GROWTH": 0.35,
+        "STRESS": -0.1,
+        "USD": -0.25,
+        "VIX": -0.1
+      }
+    }
+  },
+  "missing_data": "UNKNOWN_OR_NO_TRADE_NEVER_IMPUTED",
+  "outcome_and_execution": {
+    "account_usd": 10000.0,
+    "ambiguous_bar": "STOP_FIRST",
+    "base_cost_r": "MAX(MAX_ENTRY_EXIT_SPREAD_PRICE_DIVIDED_BY_STOP_DISTANCE_PLUS_0P03,0P05)",
+    "cost_stress": [
+      1.0,
+      1.5,
+      2.0
+    ],
+    "deadline": "FROZEN_SESSION_END_OR_EVENT_PLUS_120_MINUTES",
+    "entry": "NEXT_M1_OPEN_AFTER_TRIGGER_WITH_ONE_MINUTE_LATENCY",
+    "gap": "WORSE_M1_OPEN",
+    "no_interpolation": true,
+    "no_reentry_same_family_session_date": true,
+    "one_open_position_per_instrument": true,
+    "outcome_join_key": "INSTRUMENT_PLUS_EXACT_MT5_UTC_MINUTE",
+    "path": "EXACT_CONTIGUOUS_M1",
+    "planned_risk_usd": 25.0,
+    "stop": "TRIGGER_EXTREME_PLUS_0P10_M15_ATR",
+    "stop_neighbors": [
+      0.08,
+      0.1,
+      0.12
+    ],
+    "target": "NEAREST_KNOWN_DIRECTIONAL_LIQUIDITY_1P25R_TO_3R_ELSE_2R",
+    "valid_stop_distance_atr": [
+      0.25,
+      1.5
+    ],
+    "whole_broker_volume_steps": true
+  },
+  "period": {
+    "calendar_2025": "LOCKED",
+    "calendar_2026": "LOCKED",
+    "source_end_exclusive": "2025-01-01T00:00:00Z",
+    "source_start_inclusive": "2021-08-01T00:00:00Z",
+    "strict_oof_credit": "2022-01-01/2024-12-31",
+    "warmup_and_training_only": "2021-08-01/2021-12-31"
+  },
+  "point_in_time": {
+    "event_actual_policy": "usable_only_at_sealed_event_available_at",
+    "forecast_policy": "historical_MT5_forecasts_not_used_pre_release",
+    "level": "known_minute_lte_decision",
+    "macro_observation": "latest_vintage_with_available_at_and_observation_time_lte_decision",
+    "no_forward_fill_over_release_or_session": true,
+    "swing": "STRICT_TWO_LEFT_TWO_RIGHT_KNOWN_AT_SECOND_RIGHT_CLOSE"
+  },
+  "portfolio": {
+    "US_macro_supercluster_R_lte": 1.0,
+    "US_macro_window_minutes": [
+      -15,
+      120
+    ],
+    "capacity_priority": [
+      "ENTRY_TIMESTAMP",
+      "INSTRUMENT_ID",
+      "CANDIDATE_ID"
+    ],
+    "cluster_concurrent_R_lte": 1.0,
+    "gates": {
+      "CI95_low_gt": 0,
+      "PF_gte": 1.15,
+      "cluster_positive_share_lte": 0.5,
+      "cost_1p5_gt": 0,
+      "drawdown_pct_lte": 15,
+      "expectancy_gt": 0,
+      "instrument_positive_share_lte": 0.5,
+      "positive_folds_gte": 4,
+      "positive_years_gte": 2
+    },
+    "portfolio_concurrent_R_lte": 2.0,
+    "risk_per_trade_portfolio_R": 0.25,
+    "risk_per_trade_usd": 25.0,
+    "same_signal_deduplicated": true,
+    "ten_R_per_month": "REPORT_ONLY_NOT_SELECTION_INPUT"
+  },
+  "predecessor": "PASS_MILESTONE_2_ALL_SEVEN_INSTRUMENTS_SOURCE_CERTIFIED",
+  "ranking": [
+    "ADJUSTED_P_ASC",
+    "MEDIAN_FOLD_EXPECTANCY_DESC",
+    "PF_DESC",
+    "SUPPORT_DESC",
+    "TEST_ID_ASC"
+  ],
+  "sessions": {
+    "LONDON_DECISION": {
+      "opening_range_minutes": 15,
+      "timezone": "Europe/London",
+      "window": "07:00/12:00"
+    },
+    "NEW_YORK_DECISION": {
+      "opening_range_minutes": 15,
+      "timezone": "America/New_York",
+      "window": "08:00/12:00"
+    },
+    "US_CASH_OPEN": {
+      "opening_range_minutes": 30,
+      "timezone": "America/New_York",
+      "window": "09:30/12:00"
+    },
+    "US_ENERGY": {
+      "opening_range_minutes": 30,
+      "timezone": "America/New_York",
+      "window": "08:00/14:30"
+    }
+  },
+  "statistics": {
+    "bootstrap_resamples": 5000,
+    "cluster": "SESSION_DATE",
+    "seed": 731947,
+    "stage1_multiplicity": "BH_FDR_Q_0P05_OVER_ALL_41_SUPPORT_FAIL_P_EQUALS_1",
+    "stage1_raw_test": "ONE_SIDED_CLUSTER_BOOTSTRAP_NET_EXPECTANCY_GT_ZERO",
+    "stage2_multiplicity": "HOLM_FWER_0P05_OVER_ALL_164_SUPPORT_FAIL_P_EQUALS_1",
+    "stage2_raw_test": "ONE_SIDED_CLUSTER_BOOTSTRAP_CONDITION_MINUS_COMPLEMENT_EXPECTANCY_GT_ZERO",
+    "stage_order": "STAGE1_COMPLETE_ARTIFACT_SEALED_BEFORE_STAGE2_CALCULATION"
+  },
+  "status": "FROZEN_BEFORE_ANY_M3_PREDICTOR_OR_OUTCOME_VALUE_ACCESS",
+  "support": {
+    "stage1": {
+      "dates": 60,
+      "each_direction": 30,
+      "each_fold": 15,
+      "executed_after_frozen_rules": 60,
+      "signals": 90
+    },
+    "stage2": {
+      "complement": 20,
+      "complement_executed": 30,
+      "condition": 20,
+      "condition_executed": 30,
+      "condition_folds": 4,
+      "dates": 40,
+      "each_fold": 10,
+      "signals": 60
+    }
+  },
+  "version": "MULTI_ASSET_MACRO_SESSION_PORTFOLIO_EDGE_V1_M3_PROTOCOL_1_0"
+}

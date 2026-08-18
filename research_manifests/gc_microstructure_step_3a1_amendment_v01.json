@@ -1,0 +1,120 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_3A1_AMENDMENT_V0_1",
+  "status": "FROZEN_BEFORE_AMENDED_REPLAY",
+  "frozen_on": "2026-07-30",
+  "classification": "POST_RESULT_ENGINEERING_SEMANTICS_CORRECTION",
+  "research_or_validation_credit": "NONE",
+  "predecessor": {
+    "formal_verdict": "FAIL",
+    "verdict_preserved": true,
+    "manifest_hash": "0897e33856c5329ee59040ff5a6c15f48cb65fc17dcf3e63ec1f8c5bf3c6c59c",
+    "files": [
+      {
+        "path": "research_manifests/gc_microstructure_step_3a_protocol_v01.json",
+        "bytes": 4100,
+        "sha256": "5fc160917e92ee266a74993944f40b7266adcd697bd7a2416e23d85601f0d0b7"
+      },
+      {
+        "path": "tools/reconstruct_gc_mbo_engineering_book.py",
+        "bytes": 46742,
+        "sha256": "e3b2672cac36a03aa52e0d228fb876d2e7df0c0d4cf496189c9c91406c0e24d9"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3a_v01/primary_replay.json",
+        "bytes": 6284,
+        "sha256": "62c6a25517dd8fefb03432e647e36c183df79ebb9ceea99ba482cbbf28578bca"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3a_v01/reference_replay.json",
+        "bytes": 6218,
+        "sha256": "f9075a9da91e3aea9a0e24ef73616244060d7922cca9905e47ea68bd503ff13d"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3a_v01/comparison.json",
+        "bytes": 5834,
+        "sha256": "7dc8b046cdef0cbb8ebcecd8d19a969edc5e546bf42ddb7b2625ba370b4c8932"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3a_v01/manifest.json",
+        "bytes": 1902,
+        "sha256": "636db8296c32ec779fd4bca68a1d57467820d1e6098dc0d0dbaff4cc039ee5e3"
+      },
+      {
+        "path": "research_artifacts/gc_microstructure_step_3a_boundary_diagnostic_v01.json",
+        "bytes": 1810,
+        "sha256": "59bc3db7dfe22fa8e50648100765203fe48d6e474a8d94319601cafc165d75a5"
+      }
+    ]
+  },
+  "unchanged": {
+    "source_seal": true,
+    "source_records": true,
+    "primary_implementation": true,
+    "reference_implementation": true,
+    "action_semantics": true,
+    "queue_priority_semantics": true,
+    "checkpoint_order": true,
+    "all_non_market_state_gates": true
+  },
+  "market_state_policy": {
+    "timezone": "UTC",
+    "calendar_date": "2024-01-09",
+    "intervals": [
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive": "2024-01-09T00:00:00Z",
+        "end_exclusive": "2024-01-09T22:00:00Z"
+      },
+      {
+        "state": "MAINTENANCE",
+        "start_inclusive": "2024-01-09T22:00:00Z",
+        "end_exclusive": "2024-01-09T22:45:00Z"
+      },
+      {
+        "state": "PRE_OPEN",
+        "start_inclusive": "2024-01-09T22:45:00Z",
+        "end_exclusive": "2024-01-09T23:00:00Z"
+      },
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive": "2024-01-09T23:00:00Z",
+        "end_exclusive": "2024-01-10T00:00:00Z"
+      }
+    ],
+    "coverage_must_be_complete_and_nonoverlapping": true,
+    "documentation": "https://www.cmegroup.com/content/dam/cmegroup/notices/ser/2026/06/ser-9766.pdf"
+  },
+  "sole_gate_amendment": {
+    "prior_gate": "crossed_or_locked_book_boundaries equals zero across every F_LAST boundary",
+    "amended_gate": "crossed_or_locked_book_boundaries equals zero at F_LAST boundaries classified CONTINUOUS_MATCHING",
+    "maintenance_states_reported_not_rejected": true,
+    "pre_open_states_reported_not_rejected": true
+  },
+  "required_replay": {
+    "rerun_primary_from_source": true,
+    "rerun_reference_from_source": true,
+    "require_same_input_stream_hash_as_predecessor": true,
+    "require_same_checkpoint_hashes_as_predecessor": true,
+    "require_same_final_hashes_as_predecessor": true,
+    "require_every_unchanged_gate_to_equal_predecessor": true,
+    "classify_every_f_last_boundary": true,
+    "seal_in_new_artifact_directory": true
+  },
+  "prohibited": [
+    "modifying predecessor artifacts",
+    "additional data acquisition",
+    "changing reconstruction logic",
+    "changing action semantics",
+    "changing any other gate",
+    "price-direction analysis",
+    "features",
+    "signals",
+    "outcomes",
+    "candidate creation",
+    "execution optimization",
+    "trades",
+    "PnL",
+    "R multiples",
+    "account returns"
+  ]
+}

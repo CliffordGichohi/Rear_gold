@@ -1,0 +1,90 @@
+{
+  "version": "GC_CSR_EDGE_DISCOVERY_V3_M2_R1_PROTOCOL_V1_0",
+  "status": "READY_TO_FREEZE_PRE_R1_ROW_ACCESS",
+  "amendment_scope": {
+    "type": "NARROW_PRE_OUTCOME_SUPPORT_FEASIBILITY_AND_SOURCE_COVERAGE_DISPOSITION",
+    "preserve_m2_status": "PASS_V3_M2_OUTCOME_BLIND_PREDICTOR_MATERIALIZATION",
+    "preserve_m2_final_seal": "cd90cda29077067a84613559abec866bab17d88665384ab81a836efadd663a62",
+    "anchors_total": 5984,
+    "predictors_total": 12,
+    "sessions": ["LONDON", "NEW_YORK"]
+  },
+  "sole_support_gate_replacement": {
+    "remove": "each_required_year_oof_dates_gte_35",
+    "add": "each_required_year_oof_coverage_gte_80pct",
+    "years": [2022, 2023, 2024],
+    "denominator": "all frozen OOF session dates in the year under the unchanged blocked-fold registry, independent of predictor availability",
+    "numerator_stage1": "frozen OOF dates with the registered predictor available",
+    "numerator_stage2": "frozen OOF dates with both registered interaction inputs available",
+    "minimum": "ceil(0.80 * denominator)",
+    "coverage_fraction": 0.8
+  },
+  "unchanged_support_gates": {
+    "distinct_dates": 150,
+    "distinct_blocks": 30,
+    "validation_fold_dates": 35,
+    "validation_fold_anchors": 480,
+    "stage1_completeness": 0.8,
+    "stage2_joint_completeness": 0.7,
+    "positive_predictor_dates": 40,
+    "negative_predictor_dates": 40,
+    "stage2_sign_support": "unchanged frozen training-fold robust center/scale and registered formula"
+  },
+  "metadata_diagnostic": {
+    "target_features": [
+      "CSR_STRUCTURE_MOMENTUM_15M",
+      "CSR_SESSION_LEVEL_TENSION"
+    ],
+    "registered_interactions": [
+      "CSR_INT_OFI_SESSION_LEVEL_TENSION"
+    ],
+    "permitted_fields": [
+      "anchor identity",
+      "session and calendar date",
+      "chronological block",
+      "decision timestamp",
+      "availability classification",
+      "available-at timestamp",
+      "lineage hash",
+      "XAUUSD one-minute open/close/available-at timestamps",
+      "XAUUSD timeframe/instrument/complete metadata",
+      "DST and frozen session-window metadata",
+      "source and coverage hashes"
+    ],
+    "dispositions": [
+      "RECOVERABLE_EXISTING_SEALED_SOURCE",
+      "REQUIRES_ADDITIONAL_SOURCE",
+      "DEFINITION_INDUCED_UNAVAILABLE",
+      "GENUINE_SOURCE_GAP",
+      "UNRESOLVED"
+    ],
+    "required_price_windows": {
+      "CSR_STRUCTURE_MOMENTUM_15M": "union of the latest fifteen complete UTC one-hour buckets and five contiguous complete UTC fifteen-minute buckets ending no later than decision_at",
+      "CSR_SESSION_LEVEL_TENSION": "union of the latest fifteen complete UTC one-hour buckets and the exact complete one-minute bar ending at decision_at"
+    },
+    "local_source_envelope": "minimum through maximum valid open timestamp independently for each UTC calendar date",
+    "maximum_recovery_recommendations": 1,
+    "implementation_permitted": false
+  },
+  "reproduction": {
+    "primary_reader": "whole-table selected-column reader plus text-regex timestamp metadata scanner",
+    "reference_reader": "row-group batch selected-column reader plus binary-regex timestamp metadata scanner",
+    "exact_agreement_required": [
+      "annual OOF universes",
+      "support counts and gate dispositions",
+      "eligible-test registry",
+      "unavailability row identities and dispositions",
+      "diagnostics and checksums"
+    ]
+  },
+  "locked": {
+    "development_outcomes": true,
+    "calendar_2025": true,
+    "calendar_2026": true,
+    "relationships_and_effects": true,
+    "candidates": true,
+    "data_acquisition_and_charges": true,
+    "execution_trades_and_pnl": true
+  },
+  "pass_rule": "All predecessor, pre-access freeze, exact-reproduction, disposition-completeness, forbidden-access, artifact, and seal gates pass. Unsupported registered tests remain SUPPORT_FAIL."
+}

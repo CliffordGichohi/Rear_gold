@@ -1,0 +1,60 @@
+{
+  "2025_values_accessed": false,
+  "2026_values_accessed": false,
+  "artifact_set_hash": "e4b243eb0283257d9509903e2f74a2e66e833c0ec3320a72002823f90d465112",
+  "artifacts": [
+    {
+      "bytes": 1287,
+      "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_coverage_amendment_a.json",
+      "sha256": "9e73236df30834584009f3780bee7e10488beeb178bed5b4319c41defecb1055"
+    },
+    {
+      "bytes": 2249,
+      "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_m1_r2_preaccess_freeze.json",
+      "sha256": "cb98e1d12014c9e026f0b776abc7b7e0ec14150ed5e9d0683479029d085393e3"
+    },
+    {
+      "bytes": 7287160,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r2/recertification_primary.json",
+      "sha256": "68876c11c45a7cc8f56aa43c7f36a700d297cc7e84f36d24007feedd8c9912c5"
+    },
+    {
+      "bytes": 7287162,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r2/recertification_reference.json",
+      "sha256": "b5f2e84905d821a86fd211fbc1bc29f896a7645354a9b4b9c5c2a6963f6bc2a0"
+    },
+    {
+      "bytes": 5498,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r2/recertification.json",
+      "sha256": "d1723ff87cb03e7a923fa944fd534ea7b75906536eab90e90422c941e67dec66"
+    },
+    {
+      "bytes": 443,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r2/validation.json",
+      "sha256": "eead571b28281671282f08cdac2b18b5ab778e44d1ca00b45ae682f8bdddfacd"
+    },
+    {
+      "bytes": 438,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r2/state.json",
+      "sha256": "f932dcfa18fa4f26c666dbe61ab375974798ac25d23d3e81a7af56bce91536a1"
+    },
+    {
+      "bytes": 1326,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_V1_MILESTONE_1_R2.md",
+      "sha256": "66a4af462323940dc37f67de96e9db2db20e46b1d29db019323d1e7dfb42d07a"
+    },
+    {
+      "bytes": 16880,
+      "path": "tools/run_multi_asset_session_behaviour_archetype_monetization_v1_m1_r2.py",
+      "sha256": "6c73700dee379125c5a3d18ad900261ef7dc0535fd61ec14919b5892164b9af8"
+    }
+  ],
+  "branch_ready": true,
+  "charge_usd": 0.0,
+  "next_milestone_authorized": true,
+  "result_hash": "7119ddb84a824827ec18f5da3621c1ff1ae7f87316c2b572b7adef37c7fa4598",
+  "sealed_at_utc": "2026-08-12T12:44:06.089939Z",
+  "status": "SEALED_M1_R2_COMPLETE",
+  "verdict": "PASS_M1_R2_BRANCH_READY",
+  "version": "MSBAM_V1_M1_R2_SEAL_1_0"
+}

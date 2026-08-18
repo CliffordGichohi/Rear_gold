@@ -1,0 +1,35 @@
+{
+  "analysis_implementation": {
+    "bytes": 47909,
+    "path": "tools/analyze_gold_annotated_replay_v3_post_practice.py",
+    "sha256": "7d75da904d6b9888e21a83a8c63d0c578b0a7e3cfb65ce998a356dea0f06e9ae"
+  },
+  "calendar_2025": "LOCKED",
+  "calendar_2026": "LOCKED",
+  "edge_verdict": "NOT_EVALUABLE_FROM_TWENTY_PRACTICE_DAYS",
+  "formal_evidence_status": "ZERO_CREDIT_DESCRIPTIVE",
+  "one_year_collection": "CLOSED",
+  "sample_description": "DESCRIPTIVELY_POSITIVE_BUT_INCONCLUSIVE",
+  "sealed_at": "2026-08-17T14:30:23.715850+00:00",
+  "sealed_outputs": [
+    {
+      "bytes": 82413,
+      "path": "research_artifacts/gold_annotated_replay_v3/post_practice_diagnostic.json",
+      "sha256": "98d088ab7973d5bc64899d0690794107112a083667ec294d14e4752827b57bf1"
+    },
+    {
+      "bytes": 8729,
+      "path": "research_artifacts/gold_annotated_replay_v3/post_practice_trade_table.csv",
+      "sha256": "2e1255e26d1870449023352757fd365e230c745ba55f5b8d7d943bb349ac166a"
+    },
+    {
+      "bytes": 5799,
+      "path": "GOLD_ANNOTATED_REPLAY_V3_POST_PRACTICE_DIAGNOSTIC_REPORT.md",
+      "sha256": "99e41e8e76eebcf14353c2d6f4a11c927cd0f9323aa01bd3d7450e9efb8d9386"
+    }
+  ],
+  "sealed_outputs_sha256": "3c8a564c762bbf4f1fea8e98700d2b79bd57287379397d4cabb5ecb1cf7cc053",
+  "summary_sha256": "44dbc927ce24cedca0921601956c415441b1bb6978b1991cc434b3d013fcfeb3",
+  "trade_table_sha256": "ff2bec8522929a166f248ecdd01d43dd287f52c2aaf8dfbc4889261972d7d860",
+  "version": "GOLD_ANNOTATED_REPLAY_V3_POST_PRACTICE_DIAGNOSTIC_SEAL_1_0"
+}

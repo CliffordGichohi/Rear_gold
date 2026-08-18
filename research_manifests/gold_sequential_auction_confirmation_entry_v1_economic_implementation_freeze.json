@@ -1,0 +1,51 @@
+{
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "economics": {
+    "actual_stop_plus_cost_risk_cap_usd": 50.0,
+    "compounding": false,
+    "gross_r_denominator": "ABS_ENTRY_MINUS_STOP_PRICE",
+    "net_r": "GROSS_R_MINUS_ROUNDTRIP_COST_DIVIDED_BY_STOP_DISTANCE",
+    "normalized_pnl_usd": "50_TIMES_NET_R_FOR_PRIOR_STUDY_COMPARABILITY",
+    "whole_ounce_pnl_usd": "FLOORED_OUNCES_TIMES_SIGNED_PRICE_CHANGE_MINUS_ROUNDTRIP_COST"
+  },
+  "frozen_at_utc": "2026-08-10T13:25:03.133946Z",
+  "implementation": {
+    "bytes": 32085,
+    "path": "tools/run_gold_sequential_auction_confirmation_entry_v1_development.py",
+    "sha256": "a6baa0f118ea7fb762e7b01019f558322c9373fb578271f9c789d4c5ccab4046"
+  },
+  "independence": {
+    "primary": "NUMPY_SEARCH_AND_VECTOR_SCAN",
+    "reference": "BISECT_AND_RECORD_LOOP_SCAN",
+    "required": "ALL_ROWS_AND_BYTE_IDENTICAL_PARQUET"
+  },
+  "paid_acquisition_usd": 0.0,
+  "path": {
+    "gap_stop": true,
+    "interval": "DELAYED_ENTRY_INCLUSIVE_ORIGINAL_DEADLINE_EXCLUSIVE",
+    "mfe_mae": "FROM_DELAYED_ENTRY_THROUGH_REALIZED_EXIT_AND_COMPLETE_DEADLINE_PATH",
+    "requires_complete_contiguous_m1": true,
+    "same_bar": "STOP_FIRST",
+    "stopped_then_later_target": "STRICTLY_LATER_M1_OFFSET_WITHIN_ORIGINAL_DEADLINE",
+    "target_fill": "FROZEN_ABSOLUTE_TARGET",
+    "time_fill": "LAST_M1_CLOSE_BEFORE_DEADLINE"
+  },
+  "status": "FROZEN_BEFORE_DEVELOPMENT_OUTCOME_PATHS",
+  "synthetic_proof": {
+    "bootstrap_hash": "9e58f91ee799b32f0839a679810527eff68c27f0df382743e3e506351ea372c1",
+    "economic": {
+      "cost_r": 0.2,
+      "gross_r": 2.0,
+      "net_r": 1.8,
+      "net_r_cost_1p5x": 1.7,
+      "net_r_cost_2x": 1.6,
+      "normalized_pnl_usd": 90.0,
+      "target_r": 2.0,
+      "whole_ounce_pnl_usd": 18.0
+    },
+    "path_hash": "531cbeefbc38ffc9a4f41f8bdbbf64fccdadaa4629797a9792fd3158a81bde71",
+    "status": "PASS_SYNTHETIC_ECONOMIC_PROOF"
+  },
+  "version": "GOLD_SEQUENTIAL_AUCTION_CONFIRMATION_ENTRY_V1_ECONOMIC_IMPLEMENTATION_FREEZE_1_0"
+}

@@ -1,0 +1,24 @@
+{
+  "advanced_candidates": [],
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "development_results": {
+    "bytes": 69962,
+    "path": "research_artifacts/gold_bidirectional_auction_resolution_v1/development_results.json",
+    "sha256": "1720c4718954c0c3e9ffa5335e96fb9af35e0b41a5962e65f1f558002249c3cc"
+  },
+  "materialization": {
+    "bytes": 1076,
+    "path": "research_manifests/gold_bidirectional_auction_resolution_v1_materialization_freeze.json",
+    "sha256": "42c06cf834f9fbfbc3ead6f606f859691b42ea40053a512b02b7ea0025c2d1db"
+  },
+  "paid_acquisition_usd": 0.0,
+  "preoutcome": {
+    "bytes": 3489,
+    "path": "research_manifests/gold_bidirectional_auction_resolution_v1_preoutcome_freeze.json",
+    "sha256": "433e09990e550f7a596c870f9bcd7edcdead1a4d32c6881a9b117010742a1021"
+  },
+  "sealed_at_utc": "2026-08-11T12:46:27.007589Z",
+  "status": "REJECT_NO_DEVELOPMENT_ECONOMIC_EDGE",
+  "version": "GOLD_BIDIRECTIONAL_AUCTION_RESOLUTION_V1_DEVELOPMENT_FREEZE_1_0"
+}

@@ -1,0 +1,260 @@
+{
+  "acquisition": {
+    "api_key_storage": "DATABENTO_API_KEY in the gitignored .env file; never copy it into an artifact.",
+    "expected_sdk_version": "0.82.0",
+    "fresh_quote_required_immediately_before_submission": true,
+    "maximum_cost_usd": 1.25,
+    "normalization": {
+      "availability_rule": "available_at equals OHLCV interval start plus one minute",
+      "duplicate_policy": "ZN.v.0 plus open_time must be unique; any duplicate blocks the holdout.",
+      "human_or_model_market_value_inspection_permitted_before_readiness": false,
+      "ordering_policy": "Rows must be strictly increasing by open_time.",
+      "roll_crossing_policy": "If the current and four-hour reference instrument IDs differ, the feature is UNKNOWN and the candidate produces NO_BIAS.",
+      "underlying_contract_lineage": "Seal Databento continuous-to-instrument and instrument-to-raw-symbol point-in-time mappings, every source row identifier, and every observed roll transition."
+    },
+    "output_directory": "data/raw/databento_cme_2025_zn",
+    "paid_submission_authorized": true,
+    "request": {
+      "compression": "zstd",
+      "dataset": "GLBX.MDP3",
+      "delivery": "download",
+      "encoding": "dbn",
+      "end": "2026-01-01T00:00:00Z",
+      "schema": "ohlcv-1m",
+      "split_duration": "year",
+      "split_symbols": false,
+      "start": "2025-01-01T00:00:00Z",
+      "stype_in": "continuous",
+      "stype_out": "instrument_id",
+      "symbols": [
+        "ZN.v.0"
+      ]
+    },
+    "submission_policy": {
+      "fresh_quote_above_cap": "STOP_WITHOUT_SUBMISSION",
+      "idempotency": "Persist submission intent before the API call; recover an exact matching post-intent job before permitting any new submission.",
+      "paid_batch_jobs_per_request": 1,
+      "repeated_download_cost_policy": "Use the one batch job and its no-additional-charge download window; never submit a duplicate request."
+    }
+  },
+  "authorization": {
+    "authorized_on": "2026-07-29",
+    "scope": "Complete V2 Milestone 6 under the existing contract: acquire and seal the missing 2025 ZN source under a $1.25 cap, pass every metadata-only readiness gate, open the holdout once, apply the frozen candidate unchanged, record pass or rejection, and stop.",
+    "verbatim": "Continue V2 Milestone 6. Authorize acquisition of the frozen calendar-2025 Databento GLBX.MDP3 ZN.v.0 one-minute request with a maximum charge of $1.25. Re-check the estimate before submission and stop if it exceeds the cap. Acquire, normalize, hash, and seal the source without human inspection of market values or outcomes; complete all metadata-only readiness gates; then open the 2025 holdout once, apply the frozen candidate unchanged, record pass or rejection, and stop."
+  },
+  "candidate": {
+    "candidate_code": "LONDON_ZN_4H_POSTHOC_V0_1",
+    "feature_calculation": {
+      "change": "current_close minus reference_close",
+      "current_sample": "Latest ZN one-minute bar with available_at no later than the 08:00 Europe/London decision.",
+      "current_staleness_maximum": "8 hours, inherited unchanged from the development feature builder",
+      "flat_definition": "Exactly zero change",
+      "negative_definition": "Change below zero",
+      "positive_definition": "Change above zero",
+      "reference_sample": "Latest ZN one-minute bar with available_at no later than decision_at minus four hours.",
+      "reference_staleness_maximum": "3 days, inherited unchanged from the development feature builder",
+      "roll_check": "Current and reference instrument_id must be identical."
+    },
+    "missing_data_policy": {
+      "continuous_contract_roll_crossing": "NO_BIAS",
+      "flat_change": "NO_BIAS",
+      "missing_or_nonfinite_change": "NO_BIAS",
+      "stale_or_unavailable_input": "NO_BIAS",
+      "unresolved_lineage_error": "BLOCK_HOLDOUT_BEFORE_OPEN"
+    },
+    "origin": "CONTRACT_RECOGNIZED_POST_HOC_CANDIDATE",
+    "rule_table": {
+      "FLAT": "NO_BIAS",
+      "NEGATIVE": "SHORT",
+      "POSITIVE": "LONG",
+      "UNKNOWN": "NO_BIAS"
+    },
+    "session": "LONDON",
+    "threshold": null,
+    "tuning_permitted": false
+  },
+  "contract": {
+    "governing_document": "GOLD_CASEBOOK_DISCOVERY_CONTRACT_V2.md",
+    "manifest_hash": "81e39b469111bb92a46c0d2c70f863cba438b647345104d4b8e8bc1a9e4d8188",
+    "milestone_rule": "Acquire and seal missing candidate-specific 2025 inputs without examining outcomes, verify hashes and completeness, then open the holdout once. Record a pass or rejection for every frozen candidate and stop."
+  },
+  "evaluation": {
+    "all_gates_required": true,
+    "calendar_halves": {
+      "assignment": "Sort every timestamp-complete London case by decision_at and case_id before removing NO_BIAS cases. Assign the first floor(N/2) cases EARLY and the remainder LATE.",
+      "minimum_directional_cases_per_half": 70
+    },
+    "candidate_family_size": 1,
+    "gate_ids": [
+      "G01_POINT_IN_TIME_AND_LINEAGE_INTEGRITY",
+      "G02_DIRECTIONAL_CASE_SUPPORT",
+      "G03_DIRECTIONAL_STATE_SUPPORT",
+      "G04_DIRECTIONAL_STATE_WEEK_SUPPORT",
+      "G05_MEAN_NET_RETURN_POSITIVE",
+      "G06_PROFIT_FACTOR_ABOVE_ONE",
+      "G07_BEATS_BEST_MATCHED_CONTROL",
+      "G08_DIRECTION_MAPPING_CONSISTENCY",
+      "G09_CHRONOLOGICAL_HALF_STABILITY",
+      "G10_COST_STRESS",
+      "G11_CLUSTER_BOOTSTRAP_LOWER_BOUND",
+      "G12_MULTIPLICITY_AWARE_Q_VALUE"
+    ],
+    "matched_controls": {
+      "comparison_population": "Exactly the same cases on which the candidate produces LONG or SHORT.",
+      "controls": [
+        "ALWAYS_LONG",
+        "ALWAYS_SHORT"
+      ],
+      "selection": "The control with the larger mean net return after the same frozen costs."
+    },
+    "multiplicity": {
+      "method": "BENJAMINI_HOCHBERG",
+      "q_threshold": 0.1
+    },
+    "thresholds": {
+      "maximum_q_value": 0.1,
+      "minimum_directional_cases": 180,
+      "minimum_directional_cases_per_half": 70,
+      "minimum_state_cases": 80,
+      "minimum_state_iso_week_clusters": 35
+    },
+    "uncertainty": {
+      "bootstrap_replications": 5000,
+      "bootstrap_seed": "First eight bytes of SHA-256(M6 manifest hash | candidate code | BOOTSTRAP)",
+      "cluster": "ISO week of session_date",
+      "confidence_interval": "Type-7 2.5 and 97.5 percent quantiles of bootstrapped mean net return.",
+      "sign_flip_alternative": "Mean selected return is greater than zero.",
+      "sign_flip_replications": 20000,
+      "sign_flip_seed": "First eight bytes of SHA-256(M6 manifest hash | candidate code | SIGN_FLIP)"
+    },
+    "verdict_policy": {
+      "candidate_replacement_after_open": false,
+      "open_once": true,
+      "repair_or_retuning_after_open": false,
+      "verdicts": [
+        "PASS_CALENDAR_2025_HOLDOUT",
+        "REJECT_CALENDAR_2025_HOLDOUT"
+      ]
+    }
+  },
+  "execution": {
+    "commission_usd_per_lot_round_turn": 7.0,
+    "contract_size_ounces_per_lot": 100.0,
+    "cost_stress_multiplier": 1.5,
+    "decision_clock_local": "08:00",
+    "entry_bar_rule": "Open of the exact 08:01 Europe/London one-minute XAUUSD bar.",
+    "entry_clock_local": "08:01",
+    "exit_bar_rule": "Close of the exact 11:59-to-12:00 Europe/London one-minute XAUUSD bar.",
+    "exit_clock_local": "12:00",
+    "notional_ounces": 1.0,
+    "observed_spread_treatment": "Pay half the observed entry spread and half the observed exit spread adversely.",
+    "provider": "IC_MARKETS_MT5",
+    "slippage_usd_per_ounce_per_side": 0.05,
+    "symbol": "XAUUSD",
+    "timeframe": "1m",
+    "timezone": "Europe/London"
+  },
+  "holdout": {
+    "end_exclusive": "2026-01-01T00:00:00Z",
+    "session_case_population": "Calendar-2025 London weekdays with exact complete, non-synthetic, spread-bearing frozen entry and exit XAUUSD bars.",
+    "start_inclusive": "2025-01-01T00:00:00Z"
+  },
+  "manifest_hash": "e7d6abefd921c2a0ce690556c43a9d7640b3091a4b5bbec7400a3ceabb549c66",
+  "manifest_version": "GOLD_CASEBOOK_DISCOVERY_V2_M6_HOLDOUT_MANIFEST_V0_1",
+  "milestone": "V2_M6_CALENDAR_2025_HOLDOUT",
+  "outputs": {
+    "holdout_bundle": "research_artifacts/gold_casebook_discovery_v2_holdout_v01",
+    "readiness_bundle": "research_artifacts/gold_casebook_discovery_v2_m6_readiness_v01",
+    "required_holdout_artifacts": [
+      "decisions.jsonl.gz",
+      "holdout_results.json",
+      "manifest.json",
+      "semantic_validation.json"
+    ],
+    "required_readiness_artifacts": [
+      "readiness.json",
+      "manifest.json"
+    ]
+  },
+  "prohibited": {
+    "account_scaling_or_return_target_evaluation": true,
+    "calendar_2026_market_value_access": true,
+    "candidate_addition_replacement_or_retuning": true,
+    "execution_stop_target_or_reward_to_risk_optimization": true,
+    "holdout_access_before_all_readiness_gates_pass": true,
+    "human_or_model_market_value_inspection_before_readiness": true,
+    "new_york_evaluation": true,
+    "proxy_substitution": true,
+    "second_holdout_hypothesis_attempt": true
+  },
+  "readiness": {
+    "all_gates_required": true,
+    "gate_ids": [
+      "R01_XAUUSD_TIMESTAMP_COVERAGE",
+      "R02_ZN_LICENSED_ARCHIVE_SEALED",
+      "R03_ZN_ROLL_LINEAGE_SEALED",
+      "R04_ZN_TIMESTAMP_ONLY_CASE_COVERAGE",
+      "R05_PREOPEN_AUDIT_CLEAN"
+    ],
+    "minimum_case_coverage_pct": 95.0,
+    "required_status": "READY_FOR_ONE_TIME_HOLDOUT_OPEN"
+  },
+  "source": {
+    "coverage_data_hash": "d5b84416bc75fa1cf9f3ddb35dc04af630b0fcf41a6b2ba8b731aebd12606eb6",
+    "execution_manifest_hash": "724a4fef0fa4b526b4d30b9743c2dfa013c53f87b19262a36b05f3fd07c87d76",
+    "quote_bundle_hash": "c67518d0507fcf01da39f0b943bcaa0259b698fe22a55def61b61023529a51b4",
+    "quote_estimated_cost_usd": 1.185062900186,
+    "quote_hash": "6e7303f94adcd4930cc7ee93c28230c50bdee39db7b6a16bc9235b848144e122",
+    "quote_validation_hash": "ad6902ce61009ce82f4bd31b3aac31c900bdccb7d057038d886e852eec36497b",
+    "shortlist_bundle_hash": "774655f1dcfb0ebd95b6ec3e50fd480e2c5d5ea75abd4221dd5e7e79986f22ac",
+    "shortlist_hash": "25e3f9632fa8b661ad556522836c74474c5e874174a824d727b4fa43cff94686",
+    "shortlist_validation_hash": "0c38632109ca64ee4ecd88e97a61feac3f877c554707f2a8760d80449751996a"
+  },
+  "status": "FROZEN_BEFORE_PAID_SUBMISSION_AND_HOLDOUT_ACCESS",
+  "verified_sources": [
+    {
+      "path": "research_manifests/gold_casebook_discovery_contract_v02.json",
+      "sha256": "bf46840cdc9f0274cf454a22ff366f6ec4ee8c52b04d46a5258e7de5602e416e"
+    },
+    {
+      "path": "research_manifests/gold_casebook_constant_execution_v01.json",
+      "sha256": "16544b13a345968da25f591d06a47a01d51dd1a9130e50647e2d626825a4d0ab"
+    },
+    {
+      "path": "research_manifests/gold_casebook_discovery_v2_shortlist_v01.json",
+      "sha256": "2728b2d1c0974b90c45f9eabc36ce8b0b2bd4986bd94bcc69a69236459a79373"
+    },
+    {
+      "path": "research_artifacts/gold_casebook_discovery_v2_shortlist_v01/manifest.json",
+      "sha256": "caf6c5147fb35dc428bdbd9b0245ef725bbcd72e6cb98de9740345353a55db95"
+    },
+    {
+      "path": "research_artifacts/gold_casebook_discovery_v2_shortlist_v01/shortlist.json",
+      "sha256": "6e87e7e9532cb378f2451a4e6a837608c732500941b0390b4e7d9979077da822"
+    },
+    {
+      "path": "research_artifacts/gold_casebook_discovery_v2_shortlist_v01/semantic_validation.json",
+      "sha256": "d0f0727366a45499e817feb6f91fb704af2a29dd444554ed82596cb6fa30a18e"
+    },
+    {
+      "path": "research_manifests/gold_casebook_discovery_v2_m6_zn_quote_v01.json",
+      "sha256": "ffde722357590f8620ee721259a2da4cfa4ce999bfe8c976a6f01874273e2c98"
+    },
+    {
+      "path": "research_artifacts/gold_casebook_discovery_v2_m6_zn_quote_v01/manifest.json",
+      "sha256": "49183920de02544036f9f135808c30c5744a8e7bb224ad162fa372f23ce5c563"
+    },
+    {
+      "path": "research_artifacts/gold_casebook_discovery_v2_m6_zn_quote_v01/quote.json",
+      "sha256": "71f1bd08d073f9c88da637d73d08cc20be78d10d3850be69936173024cfde832"
+    },
+    {
+      "path": "research_artifacts/gold_casebook_discovery_v2_m6_zn_quote_v01/semantic_validation.json",
+      "sha256": "49a0aec33ea4a92f3a9834bfccc4a41ed3829da14df1d455a448f76537bc85c7"
+    },
+    {
+      "path": "research_artifacts/gold_casebook_discovery_v2_coverage.json",
+      "sha256": "61f1eb4c2c402722bfb6df2b7249f1bce40ec6d1b7bfae173ccab4c620d31491"
+    }
+  ]
+}

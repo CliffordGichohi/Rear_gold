@@ -1,0 +1,32 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_3D_FREEZE_V0_1",
+  "status": "AMENDMENT_SEALED_BEFORE_IMPLEMENTATION_AND_ROW_ACCESS",
+  "sealed_at_utc": "2026-07-31T09:33:08.4664228Z",
+  "amendment": {
+    "path": "research_manifests/gc_microstructure_step_3d_amendment_v01.json",
+    "bytes": 9754,
+    "sha256": "15ff635e299888421fc8c37b11dc7632c13c21cae0aec65972bb18386771299d"
+  },
+  "predecessor_state": {
+    "step_3a_formal_verdict": "FAIL",
+    "step_3a1_formal_verdict": "PASS",
+    "step_3b1_formal_verdict": "FAIL_PRE_ACQUISITION_READINESS",
+    "step_3b2_formal_verdict": "FAIL",
+    "step_3c_formal_status": "PASS_DIAGNOSTIC_REPRODUCTION",
+    "step_3c_manifest_hash": "e14afa4de4e487f2a8db9b6e044de4aba6c7d9fcaeef10f6b0ca8ee337bcb749",
+    "all_predecessor_hashes_verified": true
+  },
+  "source_state": {
+    "mbo_sha256": "43a8a3bb2be9a4a36ab324e3fe0ca0e29ccb4529f445013a87156d3bad4c0ba3",
+    "mbp10_sha256": "4ead358f538d7c383a14f39bbde35b8ccfa21e38e58205edbc51bedfb2ed80d4",
+    "sources_verified": true,
+    "additional_data_acquired": false
+  },
+  "step_3d_state_at_seal": {
+    "comparator_implemented": false,
+    "row_level_access_started": false,
+    "book_values_accessed": false,
+    "results_calculated": false
+  },
+  "immutability_rule": "The amendment and this freeze receipt remain byte-for-byte unchanged throughout Step 3D."
+}

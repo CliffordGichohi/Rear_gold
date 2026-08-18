@@ -1,0 +1,60 @@
+{
+  "version": "GOLD_TPMA_EDGE_V1_PROTOCOL_1_0",
+  "status": "FROZEN_BEFORE_NEW_MOVEMENT_ANATOMY_ACCESS",
+  "development": ["2021-08-01T00:00:00Z", "2025-01-01T00:00:00Z"],
+  "population": {
+    "timeframes": ["M15", "H1", "H4"],
+    "scale": "STANDARD",
+    "required_resolutions": ["CONTINUED", "FAILED_STRUCTURE_SWITCH"]
+  },
+  "path": {
+    "entry_delay_max_minutes": 5,
+    "trigger_wait_parent_bars": 4,
+    "maximum_parent_bars": 16,
+    "minute_horizons": [1, 5, 15, 30, 60],
+    "parent_horizons": [1, 2, 4, 8, 16],
+    "atr_barriers": [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0]
+  },
+  "triggers": [
+    "IMMEDIATE",
+    "CONFIRMATION_EXTREME_BREAK",
+    "RESPONSE_HALF_RETRACE_LIMIT",
+    "REFERENCE_LEVEL_RETEST_LIMIT",
+    "BREAK_RETEST_CONFIRM"
+  ],
+  "stops": ["PIVOT_BUFFER_0P05_ATR", "PIVOT_BUFFER_0P15_ATR", "CONFIRMATION_EXTREME_BUFFER_0P05_ATR"],
+  "targets": ["FIXED_1P0_R", "FIXED_1P5_R", "FIXED_2P0_R", "NEAREST_KNOWN_SWING"],
+  "time_exits_parent_bars": [4, 8, 16],
+  "execution_specifications_per_condition": 180,
+  "costs_usd_per_ounce_roundtrip": {
+    "spread": "OBSERVED_ENTRY_SPREAD_PRICE",
+    "missing_spread_fallback": 0.3,
+    "commission": 0.07,
+    "slippage": 0.1,
+    "stress_multipliers": [1.0, 1.5, 2.0]
+  },
+  "risk": {
+    "initial_account_usd": 10000.0,
+    "planned_risk_usd": 50.0,
+    "ounces_per_standard_lot": 100,
+    "minimum_ounces": 1,
+    "compounding": false
+  },
+  "walk_forward": [
+    {"fold": 1, "train": ["2021-08-01", "2022-06-30"], "validate": ["2022-07-01", "2023-03-31"]},
+    {"fold": 2, "train": ["2021-08-01", "2023-03-31"], "validate": ["2023-04-01", "2023-12-31"]},
+    {"fold": 3, "train": ["2021-08-01", "2023-12-31"], "validate": ["2024-01-01", "2024-12-31"]}
+  ],
+  "training_selections_per_condition": 3,
+  "minimum_fold_selections": 2,
+  "bootstrap": {"resamples": 5000, "seed": 410817, "cluster": "NEW_YORK_TRADING_DATE"},
+  "multiplicity": "HOLM_ACROSS_SHORTLISTED_EXACT_SPECIFICATIONS",
+  "candidate_limit_per_timeframe": 3,
+  "forward_segments": {
+    "2025": ["2025-01-01T00:00:00Z", "2026-01-01T00:00:00Z"],
+    "2026_YTD": ["2026-01-01T00:00:00Z", "2026-07-30T00:00:00Z"]
+  },
+  "paid_acquisition_authorized": false,
+  "live_trading_authorized": false,
+  "retuning_after_outcomes": false
+}

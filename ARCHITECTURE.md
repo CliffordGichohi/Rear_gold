@@ -51,6 +51,16 @@ votes. They have different roles:
 Price-plus-open-interest combinations such as “price up and open interest down” are
 stored as `INFERRED` probable short covering, not as an observed trader action.
 
+### Implemented canonical decision
+
+The runtime ruleset is `gold-reference-book-7-layer-v1`; its persisted aggregate is
+`gold-reference-book-7-layer-v1-decision-v1`. Layers 1–4 and 6 supply signed
+directional evidence. Layer 5 supplies session, liquidity, and price-acceptance
+gates. Layer 7 separates bias, trigger, invalidation, and risk and can force
+`WAIT`, but cannot turn a macro view into a trade. Stable factor coverage, live
+usable coverage, and directional-component coverage are distinct measurements.
+See `BOOK_ALIGNMENT.md` for the factor-by-factor implementation boundary.
+
 ## 3. Goals and boundaries
 
 ### Phase 1 goals
@@ -70,7 +80,8 @@ stored as `INFERRED` probable short covering, not as an observed trader action.
 
 ### Explicit Phase 1 non-goals
 
-- Automated order placement, broker connectivity, or live portfolio management.
+- Automated order placement, trading-account mutation, or live portfolio
+  management. Read-only broker market-data access is permitted.
 - Claims of observed institutional intent from anonymous market data.
 - Unlicensed real-time COMEX, options, DXY, LBMA benchmark, ETF, or consensus data.
 - Dealer-gamma estimation without sufficient options data.
@@ -81,16 +92,18 @@ stored as `INFERRED` probable short covering, not as an observed trader action.
 
 ## 4. Main assumptions
 
-1. **Primary Phase 1 instrument:** `XAUUSD` via user-supplied or demo one-minute CSV.
-   This avoids pretending that one spot feed represents the entire OTC market and
-   avoids continuous-futures roll artefacts in the first slice.
+1. **Primary Phase 1 instrument:** `XAUUSD` via user-supplied/demo one-minute CSV or
+   the read-only IC Markets MT5 bridge. This avoids pretending that one spot feed
+   represents the entire OTC market and avoids continuous-futures roll artefacts in
+   the first slice.
 2. **Dollar proxy:** the Federal Reserve nominal broad dollar index is the public
    default. DXY remains an optional licensed provider implementation.
 3. **Forecasts:** consensus forecasts are manually uploaded with an explicit
    `available_at` timestamp. A future licensed forecast adapter can replace manual
    entry without changing the domain model.
-4. **Fed expectations:** Phase 1 accepts manual JSON/CSV snapshots and a mock
-   adapter. It does not scrape CME FedWatch.
+4. **Fed expectations:** Phase 1 accepts manual JSON/CSV snapshots and real Atlanta
+   Fed quarterly SOFR distributions. It does not scrape or relabel CME FedWatch;
+   exact meeting probabilities require the licensed adapter.
 5. **Sessions:** initial conventions are configurable local-time templates:
    `08:00-17:00 Asia/Tokyo`, `08:00-17:00 Europe/London`, and
    `08:00-17:00 America/New_York`. Overlap is calculated from actual UTC intervals.
@@ -317,6 +330,7 @@ configuration is copied into an immutable database version with a content hash.
 ```text
 .
 |-- README.md
+|-- BOOK_ALIGNMENT.md
 |-- ARCHITECTURE.md
 |-- DATA_MODEL.md
 |-- DATA_SOURCES.md
@@ -438,4 +452,3 @@ live production launch:
 
 No architecture rewrite is required for those choices because each is represented by
 a provider, configuration, or policy interface.
-

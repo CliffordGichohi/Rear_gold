@@ -1,0 +1,273 @@
+{
+  "acquisition_performed": false,
+  "calendar_2025": "LOCKED_NOT_INSPECTED",
+  "calendar_2026": "LOCKED_NOT_INSPECTED",
+  "charge_usd": 0.0,
+  "human_decisions_collected": 0,
+  "next_case_alias": "P-001",
+  "predecessor_freeze_sha256": "f50c9d4125639cd3441f81a72c21ecccc400197d87768ad967bad2b2e993b137",
+  "research_status": "HUMAN_LABELING_REQUIRED_EDGE_NOT_EVALUATED",
+  "scope": "INTERACTION_AND_DISPLAY_ONLY",
+  "sealed_at": "2026-08-13T11:59:04.437352+00:00",
+  "sealed_files": [
+    {
+      "bytes": 12243,
+      "path": "GOLD_BLIND_POINT_IN_TIME_DISCRETIONARY_REPLAY_EDGE_AUDIT_CONTRACT_V1.md",
+      "sha256": "f1c42d601e09eda0d22b6de49277b24458c4968ff99566e33d03e9bb1dba1bc2"
+    },
+    {
+      "bytes": 2039,
+      "path": "GOLD_BLIND_DISCRETIONARY_REPLAY_V1_COVERAGE_AMENDMENT_A.md",
+      "sha256": "86a97ad46e51fd9f85a8272fdd4e461ea07c3da535862fa5fc862f9125b3d083"
+    },
+    {
+      "bytes": 3595,
+      "path": "GOLD_BLIND_DISCRETIONARY_REPLAY_V1_PRELABEL_REPORT.md",
+      "sha256": "d643899bf537104baafa8d5844ad46c366adecb4f9cbba27b9017c191c872a2e"
+    },
+    {
+      "bytes": 3305,
+      "path": "research_manifests/gold_blind_discretionary_replay_v1_protocol.json",
+      "sha256": "4907764e1a2e8bb122e8ab7dec28dc36272ccefeff28bc847ec081ec8772b6de"
+    },
+    {
+      "bytes": 2495,
+      "path": "research_manifests/gold_blind_discretionary_replay_v1_population_freeze.json",
+      "sha256": "a7eb2b1967407b5e8503094a5190ea4f962ae06b33cb266e96a90ec68be397e6"
+    },
+    {
+      "bytes": 2150,
+      "path": "research_manifests/gold_blind_discretionary_replay_v1_population_freeze_v1_1.json",
+      "sha256": "15ad0d131ba3cd13ca7aef1753358d9d0d28edb826008742b429e56f520808c2"
+    },
+    {
+      "bytes": 200216,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/population_registry_v1_1.private.json",
+      "sha256": "5e089cf9eaccf7703a182e0d715f7c8912dfb8b01865999f7a7a394e85621b1f"
+    },
+    {
+      "bytes": 55694,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/population_registry_v1_1.public.json",
+      "sha256": "26b1805fb23cafc0a7f76025982503f59cdfcc6228b352a7f2769d39e34750ad"
+    },
+    {
+      "bytes": 13303,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/coverage_amendment_a_audit.json",
+      "sha256": "69934a7d533abb831c30b9b2590c672046ea4dd8b55c5acc5c616ad4873567f6"
+    },
+    {
+      "bytes": 754,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/materialization_attempt1_coverage_failure.json",
+      "sha256": "84d35dc4be0131de8ebf09bf2569c0710de49187c27bff5dfe06947cb92db84b"
+    },
+    {
+      "bytes": 2364,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/materialization_certification_v1_1.json",
+      "sha256": "d2d9736a791a9f5eb614b6229c00ca686ec891ead63cb6a41497f5d2477e071e"
+    },
+    {
+      "bytes": 7055455,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/display_payloads_v1_1.primary.jsonl.gz",
+      "sha256": "92e5d936b59d53b200981ea017cb436a472c1b314ac20e3ee7d2cf47a9808ea9"
+    },
+    {
+      "bytes": 7055455,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/display_payloads_v1_1.reference.jsonl.gz",
+      "sha256": "92e5d936b59d53b200981ea017cb436a472c1b314ac20e3ee7d2cf47a9808ea9"
+    },
+    {
+      "bytes": 67971,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/practice_future_paths_v1_1.primary.jsonl.gz",
+      "sha256": "7028f710690695aded64df6087c53865ac23242a77ddc27792a79721b15071d0"
+    },
+    {
+      "bytes": 67971,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/practice_future_paths_v1_1.reference.jsonl.gz",
+      "sha256": "7028f710690695aded64df6087c53865ac23242a77ddc27792a79721b15071d0"
+    },
+    {
+      "bytes": 15707,
+      "path": "tools/freeze_gold_blind_discretionary_replay_v1_population.py",
+      "sha256": "6f08fe1522310a98a0fe0f4aa44d6cc5977e204af49665b482a6f728cf37719d"
+    },
+    {
+      "bytes": 13429,
+      "path": "tools/amend_gold_blind_discretionary_replay_v1_coverage.py",
+      "sha256": "b82eae71750f745de9e904a4b6f6ff3eb5bbc81c9d20edc50a8cf548f5b52556"
+    },
+    {
+      "bytes": 36493,
+      "path": "tools/materialize_gold_blind_discretionary_replay_v1.py",
+      "sha256": "77a5f817e59164bf706cfc33fcafd67314bb28a15dc6e0ffc255ccca6efdd651"
+    },
+    {
+      "bytes": 13663,
+      "path": "tools/materialize_gold_blind_discretionary_replay_v1_1.py",
+      "sha256": "d6cc1fa319f019e2e66f3265f85de903c1a8abd7b6cf9ecdb68d36897c0231e5"
+    },
+    {
+      "bytes": 12888,
+      "path": "tools/seal_gold_blind_discretionary_replay_v1_prelabel.py",
+      "sha256": "9e7db2112412e13a2c288ad5e6f8fa82bf9aebc4ac2a1a2be0b04b1fc31e38a3"
+    },
+    {
+      "bytes": 4263,
+      "path": "backend/src/gold_intel/api/blind_replay_schemas.py",
+      "sha256": "eee2fba157628377bcd41fa4e443a6f0172457349a96973a0f9dcf768e9aaa1e"
+    },
+    {
+      "bytes": 2498,
+      "path": "backend/src/gold_intel/api/routes/blind_replay.py",
+      "sha256": "f7741ebdf3b80a0a68de4bfadacd809778976bc36983db8e73e70ee9aede40ca"
+    },
+    {
+      "bytes": 13034,
+      "path": "backend/src/gold_intel/application/blind_replay.py",
+      "sha256": "10c4fa703ad7d79195206503f49cd7f9066c9f2554b98747220b2d58efc5e16d"
+    },
+    {
+      "bytes": 3138,
+      "path": "backend/src/gold_intel/config.py",
+      "sha256": "e5cb5529237ea486dff0820f31c1f37f2717698d8e34cc2905c7ee9b5a4eef34"
+    },
+    {
+      "bytes": 3292,
+      "path": "backend/src/gold_intel/main.py",
+      "sha256": "db6493852dbe86da1d567a92e9f8d8ccf5dd15c22098d8135cc9fb70621bac75"
+    },
+    {
+      "bytes": 7471,
+      "path": "backend/tests/unit/test_blind_replay.py",
+      "sha256": "cc35b3eddbab4fa930217dc914095bb5df135a7893057e5068d60a1ae62239f8"
+    },
+    {
+      "bytes": 1629,
+      "path": "frontend/src/app/replay/page.tsx",
+      "sha256": "f8544085706fdd349da9e56c9a2a7eca379a1e6ab7ef4c5433061a61fabc799f"
+    },
+    {
+      "bytes": 1834,
+      "path": "frontend/src/app/layout.tsx",
+      "sha256": "b3f2244e43130c5c036f76db6a82a0d811c760f831ffe093674428b68dbbacc1"
+    },
+    {
+      "bytes": 33491,
+      "path": "frontend/src/components/blind-replay-lab.tsx",
+      "sha256": "678f2a009c5ffb5a1bf4d0f6f2dfe0e7ef376dc590bc7fa4047f9f602754a9a9"
+    },
+    {
+      "bytes": 4582,
+      "path": "frontend/src/components/blind-replay-lab.test.tsx",
+      "sha256": "83a44f3055b2b24a6ff4dcbd1ce8f62ab55bf4ad67f3154c573520f5ee05fdcf"
+    },
+    {
+      "bytes": 26681,
+      "path": "frontend/src/lib/api.ts",
+      "sha256": "076b0bd5c363c3c9f4fa2873714bdf3083548684a271bd8f13f27f6a27a1e059"
+    },
+    {
+      "bytes": 44,
+      "path": "frontend/src/test/setup.ts",
+      "sha256": "d494b5796f05a8593031aaac07417cfc85d53778b63681fd0cdb7be136448aff"
+    },
+    {
+      "bytes": 378,
+      "path": "frontend/vitest.config.mjs",
+      "sha256": "cf512f0ecb8feb0bf144749c0925c2b09d813c1380d99b68d3758bcf3e1c7526"
+    },
+    {
+      "bytes": 934,
+      "path": "frontend/package.json",
+      "sha256": "b2f369c184e64b7e4271f31f3c7f953b142e413bacdb62613ff9c973eeec8439"
+    },
+    {
+      "bytes": 329569,
+      "path": "frontend/package-lock.json",
+      "sha256": "31e31f6893960d820d633decfdda0295958a812d8c1735c94b52d70c266c710c"
+    },
+    {
+      "bytes": 704,
+      "path": "frontend/tsconfig.json",
+      "sha256": "16ddfc75d988707736ac50588933ab3e63c1fd30c9836ecfa68a3ab46851d1cd"
+    },
+    {
+      "bytes": 4255,
+      "path": "docker-compose.yml",
+      "sha256": "901fc1ddb76fe3a87880cc702116fb43f3524df464b5d8d54fafb61f116e6991"
+    },
+    {
+      "bytes": 1667,
+      "path": ".env.example",
+      "sha256": "6bf5fd094c20a9a820f37e0f51da02bc59e2e7022fd57ac59f2c335930d48068"
+    },
+    {
+      "bytes": 1194,
+      "path": ".gitignore",
+      "sha256": "7d9081e74a1651f253a720e051a2ae2bfa865e60559c4c2deab08f4bf0f4cbfe"
+    },
+    {
+      "bytes": 27033,
+      "path": "README.md",
+      "sha256": "059d19c65f9412ed4b7358d05ac1859425af94ac1fd67a565a2ebe5749012efc"
+    },
+    {
+      "bytes": 1732,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/prelabel_state_v1.json",
+      "sha256": "aaa9ff72ea4157cd1c85b043f6930b2749d5d081b3c2c67f33210ed89f958019"
+    },
+    {
+      "bytes": 2286,
+      "path": "GOLD_BLIND_DISCRETIONARY_REPLAY_V1_UI_AMENDMENT_A.md",
+      "sha256": "eebc77db56f804581e2c64f0131976723aa8f73821bb67a68e39f0b5a3a8f8d5"
+    },
+    {
+      "bytes": 4923,
+      "path": "GOLD_BLIND_DISCRETIONARY_REPLAY_V1_USER_GUIDE.md",
+      "sha256": "d20b2a4c0b872eb001587c6ce3a738f669c5faaaa4f54559bc933a7e34726e9c"
+    },
+    {
+      "bytes": 8241,
+      "path": "tools/seal_gold_blind_discretionary_replay_v1_ui_amendment_a.py",
+      "sha256": "3ac6db57f381ebc365c3c293efbbb9cc6dd4771f64a3c07bb8cfa201cb3340d7"
+    },
+    {
+      "bytes": 2541,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/prelabel_ui_amendment_a_state.json",
+      "sha256": "893899b47c28fadef0221db53ccdd0e425ddbaf4eca9056a6bc23d54395c3849"
+    },
+    {
+      "bytes": 3183,
+      "path": "GOLD_BLIND_DISCRETIONARY_REPLAY_V1_UI_AMENDMENT_B.md",
+      "sha256": "10f824f364652f7fe308afdaa739192e4bd77ac844978f6f3665ddfa1df21785"
+    },
+    {
+      "bytes": 21738,
+      "path": "frontend/src/components/replay-chart-workspace.tsx",
+      "sha256": "425dd9619ef4873d6c0d037069b07f0eacc865f6a3743fa9a24c6841f4429ace"
+    },
+    {
+      "bytes": 2951,
+      "path": "frontend/src/components/replay-chart-workspace.test.tsx",
+      "sha256": "57798be7efcc960aa7f61d30957e26d1081d77ff7374ea9422f26d546544f706"
+    },
+    {
+      "bytes": 1200,
+      "path": "frontend/src/app/globals.css",
+      "sha256": "979c6462b777a1a38d2872ca5e219f3ce2c05701fc836045f59222328afad618"
+    },
+    {
+      "bytes": 9754,
+      "path": "tools/seal_gold_blind_discretionary_replay_v1_ui_amendment_b.py",
+      "sha256": "5e613e6a980b6e91e7f6b920531e4fc02656487b950e6a28b16498133659f805"
+    },
+    {
+      "bytes": 3965,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/prelabel_ui_amendment_b_state.json",
+      "sha256": "f444feb88722f60823ee0d7b0cdacb3fae1e6b1a60994a30b8d047d08fff2b76"
+    }
+  ],
+  "sealed_files_sha256": "cc9f5b36e1275b8cc640e11e7572101df06b915f8f8d98380ebc5a243b53717f",
+  "status": "SEALED_READY_FOR_HUMAN_LABELING_UI_AMENDMENT_B",
+  "verdict": "PASS_PRELABEL_UI_AMENDMENT_B",
+  "version": "GOLD_BLIND_DISCRETIONARY_REPLAY_V1_PRELABEL_UI_AMENDMENT_B_FREEZE_1_0"
+}

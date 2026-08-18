@@ -1,0 +1,102 @@
+{
+  "version": "GOLD_FAMAE_V1_TRACEABILITY_1_0",
+  "status": "FROZEN_BEFORE_NEW_BRANCH_OUTCOME_COMPUTATION",
+  "reference_book": {
+    "path": "Gold_USD_Market_Intelligence_Reference_Book.pdf",
+    "sha256": "3e7ddc561932a859a4c9043a38ff71b7003907963fb52247e41edaeefc8ac42a"
+  },
+  "principle": "Layers 1-4 and 6 provide direction; Layer 5 provides session/location/acceptance; Layer 7 provides trigger/invalidation/risk.",
+  "fields": [
+    {
+      "field": "fundamental_score",
+      "book_layers": [1, 2, 3, 4, 6],
+      "classification": "INFERRED",
+      "source": "existing transparent gold-reference-book fundamental engine",
+      "role": "directional permission only"
+    },
+    {
+      "field": "fundamental_coverage_confidence",
+      "book_layers": [1, 2, 3, 4, 6],
+      "classification": "CALCULATED",
+      "source": "point-in-time component availability and certainty",
+      "role": "fail-closed data-quality gate"
+    },
+    {
+      "field": "cot_crowding",
+      "book_layers": [3],
+      "classification": "INFERRED",
+      "source": "CFTC managed-money reports available after Friday publication",
+      "role": "risk/contradiction diagnostic, never standalone entry"
+    },
+    {
+      "field": "weekly_daily_h4_h1_ohlc",
+      "book_layers": [5, 7],
+      "classification": "OBSERVED",
+      "source": "completed IC Markets MT5 XAUUSD M1 bars deterministically aggregated",
+      "role": "auction context"
+    },
+    {
+      "field": "timeframe_candle_pressure",
+      "book_layers": [5, 7],
+      "classification": "INFERRED",
+      "source": "completed candle body and close location",
+      "role": "higher-timeframe non-contradiction/alignment; never direct order flow"
+    },
+    {
+      "field": "timeframe_displacement",
+      "book_layers": [5, 7],
+      "classification": "CALCULATED",
+      "source": "completed true range, ATR14, and body/range fraction",
+      "role": "strong opposing-auction veto"
+    },
+    {
+      "field": "prior_week_prior_day_asia_london_or15_levels",
+      "book_layers": [5, 7],
+      "classification": "CALCULATED",
+      "source": "completed XAUUSD periods available before decision",
+      "role": "location, target, and invalidation evidence"
+    },
+    {
+      "field": "confirmed_h1_swings",
+      "book_layers": [5, 7],
+      "classification": "CALCULATED",
+      "source": "strict two-left/two-right pivots known after the second right H1 close",
+      "role": "pre-existing support/resistance"
+    },
+    {
+      "field": "sweep_reclaim_break_retest_failed_acceptance",
+      "book_layers": [5, 7],
+      "classification": "CALCULATED",
+      "source": "completed M1/M5 XAUUSD paths",
+      "role": "entry trigger"
+    },
+    {
+      "field": "gc_aggression_ofi_depth_absorption_fragility",
+      "book_layers": [3, 5, 7],
+      "classification": "INFERRED",
+      "source": "sealed GC MBO event flow and authoritative MBP-10 top-ten book states",
+      "role": "incremental confirmation on the existing 188-date subset"
+    },
+    {
+      "field": "structural_stop_and_liquidity_target",
+      "book_layers": [7],
+      "classification": "CALCULATED",
+      "source": "trigger extremes, ATR20(M5), and opposing levels known at entry",
+      "role": "separate invalidation and target"
+    },
+    {
+      "field": "net_r_and_account_diagnostics",
+      "book_layers": [7],
+      "classification": "CALCULATED",
+      "source": "next-bar entry, conservative same-bar ordering, fixed costs, and fixed risk sizing",
+      "role": "economic edge test"
+    }
+  ],
+  "explicit_unknowns": [
+    "OTC-wide XAUUSD order book",
+    "named institutional identity or motive",
+    "full-period GC microstructure outside the 188 covered dates",
+    "exact DXY unless already sealed",
+    "licensed ETF, options/dealer gamma, and central-bank flow history"
+  ]
+}

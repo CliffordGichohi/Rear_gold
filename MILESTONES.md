@@ -4,7 +4,21 @@ Each milestone ends with a runnable application, migrations, tests, and updated
 documentation. A later milestone may add capability but may not bypass or weaken the
 point-in-time contract established earlier.
 
-## M0 — Architecture checkpoint (current)
+## Implementation checkpoint — 27 July 2026
+
+M0–M7 are implemented as a runnable Docker Compose system. M8 includes real-data
+event studies, the transparent strategy runner, transaction costs, confidence
+intervals, sensitivity output, and trade-order Monte Carlo; full scheduled
+walk-forward orchestration remains a later research increment. M9 is partially
+implemented: Data Health, structured logging, validation, tests, and documentation
+are present, while production OIDC/RBAC, backup drills, and the optional AI narrator
+remain outside the local MVP.
+
+The authoritative current capability and missing-data boundary is
+`BOOK_ALIGNMENT.md`. Unknown catalyst risk and unknown liquidity fail closed in
+strict backtests. Candidate A has been rejected; no strategy edge is claimed.
+
+## M0 — Architecture checkpoint (complete)
 
 Deliver:
 
@@ -354,3 +368,35 @@ Infrastructure/quality:
 - Docker Compose, PostgreSQL/TimescaleDB, Redis, GitHub Actions, and pre-commit;
 - pinned dependency lock files, container health checks, JSON logs, and coverage
   thresholds established after the first slice rather than gamed with empty code.
+
+## Session-edge research increment
+
+The post-MVP strategy-research sequence is now:
+
+| Milestone | Deliverable | Completion evidence |
+|---|---|---|
+| SE1 (complete) | Frozen C1 hypothesis and all-session opportunity contract | `SESSION_EDGE_RESEARCH.md`, versioned defaults, no hidden exclusions |
+| SE2 (complete) | Point-in-time opportunity kernel | Deterministic aggregation, DST clocks, level map, sweep/reclaim/displacement, outcomes |
+| SE3 (complete) | Persistence and API | Migration `0009`, append-only run/session rows, run and ledger endpoints |
+| SE4 (complete) | Backtest Lab research view | Funnel, cohort comparison, opportunity evidence, explicit research status |
+| SE5 (complete) | Observed-data discovery | 457 requested 2023-2024 sessions, 97 triggers, exact combined hash, edge not established |
+| SE6 (complete) | Frozen executable C1 strategy | Price control: 19 trades, +0.164 R net, development PASS; fundamental primary: 8 trades, -0.044 R, development FAIL |
+| SE7 (locked, not consumed) | One-shot validation | 2025 remains unopened because the primary failed the predeclared continuation gate |
+| SE8 | New York extension | Intraday Treasury/USD confirmation and exact historical event clocks |
+
+SE1-SE3 form the first vertical slice:
+
+```text
+observed IC Markets 1m bars + point-in-time fundamentals
+-> immutable five-minute/session facts
+-> London liquidity interaction
+-> normalized outcome paths
+-> persisted cohort study
+-> API and Backtest Lab
+```
+
+The application remains runnable after each milestone. SE6 confirms a cost-robust
+mechanical lead but rejects the current fundamental-aligned primary. The price
+control is retained as a benchmark; it is not promoted as the intended
+book-aligned strategy. SE7 remains locked until a materially improved causal-bias
+contract passes development without consulting 2025.

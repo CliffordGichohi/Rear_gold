@@ -1,0 +1,72 @@
+{
+  "artifacts": [
+    {
+      "bytes": 4203,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_m2_protocol.json",
+      "sha256": "510f605040fae6c4407d7b8d5cbe3ad106b51ba9f18e44522f44444a4aff76c3"
+    },
+    {
+      "bytes": 1339,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_m2_preacquisition_freeze.json",
+      "sha256": "95a935fe3c514c4e62a3dcb5a65370bdf9cb5f4955243007426d5b7b08fb121b"
+    },
+    {
+      "bytes": 2397,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m2/attempt_1_failure.json",
+      "sha256": "d96c00195bc28512790e7c2fe44ae823d81b9b5ec558e58bcae6253ce05f9524"
+    },
+    {
+      "bytes": 1971,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_m2_timeout_recovery_amendment_a.json",
+      "sha256": "55dc4a360cad959b5ba72f799656d829356d5d82db44875305459f16de5555cb"
+    },
+    {
+      "bytes": 66584,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m2/acquisition_manifest.json",
+      "sha256": "3b865aaaad2dce30751c0085633b8ffd3566b5bb60dbd4913010d51072aecbcf"
+    },
+    {
+      "bytes": 70193,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m2/certification_primary.json",
+      "sha256": "3b94166d3c8cbcce95977c4afd24e28487bc654f845c891adc7cae33cbeef5f1"
+    },
+    {
+      "bytes": 70194,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m2/certification_reference.json",
+      "sha256": "d6157b8c0ca21a9cd5818866a985c6f496f50a2a847bc4160f8b9cbd8288b15c"
+    },
+    {
+      "bytes": 121686,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m2/certification.json",
+      "sha256": "ff59bae973835c6384c0ec8ef1ae416dec9312e29412d399b81b1ace382e4e87"
+    },
+    {
+      "bytes": 2550,
+      "path": "MULTI_ASSET_MACRO_AND_SESSION_PORTFOLIO_EDGE_DISCOVERY_V1_MILESTONE_2_REPORT.md",
+      "sha256": "db85d0de0c931ce5ece3ba8f7514ec1970c0e78c5661c9f6594383b56b4707ec"
+    }
+  ],
+  "controls": {
+    "XAUUSD_or_EURUSD_reacquired": false,
+    "calendar_2025_market_values_accessed": false,
+    "calendar_2026_market_values_accessed": false,
+    "charge_incurred_usd": 0.0,
+    "market_values_humanly_inspected_or_reported": false,
+    "paid_data_acquired": false,
+    "raw_source_files_modified_filtered_or_deleted": false,
+    "relationships_calculated": false,
+    "trades_or_PnL_calculated": false
+  },
+  "gold_only_10r_branch": "TERMINATED_AND_NOT_REOPENED",
+  "independent_reproduction": {
+    "passed": true,
+    "primary_sha256": "cd472656fc9bc967f595da2b8fb2b2e818a2188e51bbed68e0ac54ed54811ff3",
+    "reference_sha256": "cd472656fc9bc967f595da2b8fb2b2e818a2188e51bbed68e0ac54ed54811ff3"
+  },
+  "next_action_authorized": false,
+  "sealed_at_utc": "2026-08-12T08:48:01.165471Z",
+  "seven_instrument_discovery_ready": true,
+  "stop_required": true,
+  "verdict": "PASS_MILESTONE_2_ALL_SEVEN_INSTRUMENTS_SOURCE_CERTIFIED",
+  "version": "MULTI_ASSET_MACRO_SESSION_PORTFOLIO_EDGE_V1_MILESTONE_2_SEAL_1_0"
+}

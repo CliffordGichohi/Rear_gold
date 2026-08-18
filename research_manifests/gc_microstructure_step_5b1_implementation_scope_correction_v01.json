@@ -1,0 +1,30 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_5B1_IMPLEMENTATION_SCOPE_CORRECTION_V0_1",
+  "status": "RECORDED_BEFORE_FORMAL_INDEPENDENT_RUNS",
+  "recorded_at_utc": "2026-08-04T07:16:49.3283004Z",
+  "classification": "PROTOCOL_COMPLIANCE_IMPLEMENTATION_CORRECTION_ONLY",
+  "research_or_validation_credit": "NONE",
+  "protocol_changed": false,
+  "protocol_sha256": "62eaf586944d720ccab584e7ebfb1ce40d7eaabfe9e9508f542680873cfd5f87",
+  "freeze_changed": false,
+  "freeze_sha256": "a6b9d1ceabb286836f279dc275e4427f8dd4871b1058abfa70e5e869e6a7e29a",
+  "preserved_attempt": {
+    "implementation": "primary",
+    "path": "/home/wapi/rear_gold_step5b_v01/artifacts/step5b1_runs/primary_diagnostic.json",
+    "sha256": "5c05f3b9c70eee63ad6b211f92415d4d45a7db078b5e111be0442f50b95965db",
+    "tool_sha256": "a2c0e98f736d4558ff2647e9b4872659e0acfc3486958f8b3fa85638248cf2e3",
+    "formal_integrity_pass": false,
+    "observed_receive_before_event_rows": 720226,
+    "frozen_scoped_receive_before_event_rows": 719524,
+    "out_of_scope_rows": 702,
+    "out_of_scope_source": "Q008:mbp-10"
+  },
+  "cause": "The implementation applied the receive-before-event predicate to MBP-10 Q008 even though the frozen protocol scopes that diagnostic family to the ten MBO requests whose Step 5B receive_does_not_precede_event gate failed.",
+  "bounded_correction": "Apply the already frozen receive-before-event predicate and taxonomy only when schema equals mbo. Leave the predicate, taxonomy, thresholds, source set, BAD_TS_RECV diagnostic, calendar diagnostic, and every classification rule unchanged.",
+  "corrected_tool_sha256": "d93ce480efe9abdcd810857d03c5877bd57a693e677205cdc441c37c9ee2383d",
+  "formal_run_output_directory": "/home/wapi/rear_gold_step5b_v01/artifacts/step5b1_runs_v02",
+  "attempt_overwritten_or_deleted": false,
+  "market_values_or_outcomes_accessed_or_reported": false,
+  "data_filtered_repaired_replaced_or_reacquired": false,
+  "charge_incurred_usd": 0.0
+}

@@ -1,0 +1,399 @@
+{
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "control_set_hash": "fc06787c4b315a2fd8c7379712e73562494d3c4f525b062486e698fe6638e77f",
+  "controls": {
+    "contract": {
+      "bytes": 8492,
+      "path": "GOLD_TREND_PULLBACK_CONTINUATION_ECONOMIC_EDGE_VALIDATION_CONTRACT_V1.md",
+      "sha256": "7696311376223181b9d68241bf4541277c2fb4162ef968e641990243df4eee34"
+    },
+    "protocol": {
+      "bytes": 1635,
+      "path": "research_manifests/gold_trend_pullback_continuation_economic_v1_protocol.json",
+      "sha256": "8aa977eeb97083a32cbacb5c1c2f8094c8c8a55194f8fd62565e0547d3dbb447"
+    }
+  },
+  "development_post_decision_paths_accessed": false,
+  "forward_batch_set_hash": "5fc85b0078b90d3439ae51d8952541382f303b189b928047a5b2d1b6144f695e",
+  "forward_xauusd_batches": [
+    {
+      "batch_id": "4ca7644d-fc42-415d-ad14-d25951fd36d2",
+      "bytes": 3707364,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 29966,
+      "declared_status": "COMPLETED_WITH_ISSUES",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260623T0815_20260723T0814.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "c9713a90c0f9efc71e38b51072a298a80cf70605a67f0a4960174b35ea08ca2f"
+    },
+    {
+      "batch_id": "346ef59e-306b-4ad6-a870-48a03791e5cf",
+      "bytes": 1489835,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 12043,
+      "declared_status": "COMPLETED_WITH_ISSUES",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260413T1405_20260424T0814.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "dd703915500ba8c486ea564ca11ce142da52cbc4495df40419bc445df7c83a40"
+    },
+    {
+      "batch_id": "77ea9c16-2d60-492f-87c4-8a696c1cc94c",
+      "bytes": 3526359,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 28514,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260424T0815_20260522T2356.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "c06597a8551079bc1a2365b8828de066ceb384416e1b443a9c3d4d72fe1e6b2e"
+    },
+    {
+      "batch_id": "19a49a1a-d9f3-4962-b114-be4fede0817e",
+      "bytes": 3586171,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 28966,
+      "declared_status": "COMPLETED_WITH_ISSUES",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260525T0100_20260623T0814.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "939875dd2fc6165ef6503be08679ba584de11bd5c2fc0eb494b344e85a7bb00f"
+    },
+    {
+      "batch_id": "01174d4d-54ba-4907-8658-8b53027c43da",
+      "bytes": 3628376,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 29394,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260212T1405_20260313T2356.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "b706ccd6790c632d688adee49a1ef5539a414dbd4d9a47caa52cc3fef6ae3e4a"
+    },
+    {
+      "batch_id": "51bdbcdb-8baf-4d97-bea5-21addce8dab3",
+      "bytes": 3314607,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 26833,
+      "declared_status": "COMPLETED_WITH_ISSUES",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260316T0100_20260413T1404.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "9d7494a8fd3e58ee3bbb86cfd0211c30b3a120fe79b3df5d0ec95cfd9f01f75a"
+    },
+    {
+      "batch_id": "ed05cbed-1e3b-4aad-af17-5b337ed7006c",
+      "bytes": 3747498,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 30330,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20251015T1405_20251114T1404.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "eb66be564d6dd273b638b01e6c35069da092514a3e339474c8dc91564bedc2bc"
+    },
+    {
+      "batch_id": "e1592d96-8a9c-4c1e-ba5d-be04d3988a2f",
+      "bytes": 3435371,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 27821,
+      "declared_status": "COMPLETED_WITH_ISSUES",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20251114T1405_20251212T2356.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "16c7716a25f5d760b2370ec1930bcc0f2cd569b63d6eecbbd1506ee2e6f1b2bc"
+    },
+    {
+      "batch_id": "e6693096-6d3b-412d-9398-86098a834cb5",
+      "bytes": 3308857,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 26783,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20251215T0100_20260113T1404.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "fd3b6bf93be20e0fd99fb002b1a57ba28ddabee6b7deff8a507c27f0f506dd6a"
+    },
+    {
+      "batch_id": "7a60f98e-f87a-473f-850c-655ebb02e9c5",
+      "bytes": 3731081,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 30181,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260113T1405_20260212T1404.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "fdfb55a55b3dc1e692132368b7d04fbfe43430e59fad8057b56d7aaec8bd95af"
+    },
+    {
+      "batch_id": "d8196fe8-9b65-4128-bc39-d8126c51b7e2",
+      "bytes": 3388467,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 27378,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20241204T1405_20250103T1404.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "629cb1b2048ac303264477d2bbc950b0156d725a077067e7003f4e929fed9c4f"
+    },
+    {
+      "batch_id": "9193c6e7-dde1-47d5-9f22-8aeef7d5abbd",
+      "bytes": 3460680,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 28015,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20250103T1405_20250131T2356.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "57cb9d7c54b1dadf78ca145fafb0f74ce430eca4218ea5c6a428ef17434f10fe"
+    },
+    {
+      "batch_id": "c7301b3c-2a00-4736-90dc-8e5244918ba8",
+      "bytes": 3651035,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 29587,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20250203T0100_20250304T1404.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "2d7a4c5d2aa434baa93dad10e1ee76340b29769ede6a7c530049a7e6f6248352"
+    },
+    {
+      "batch_id": "eec33858-6522-4ca1-b8d9-84212d9ca62e",
+      "bytes": 3743300,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 30330,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20250304T1405_20250403T1404.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "5bd8a1f02aa028179236acd566968cb7af7bebf6df93782f90529d8047ba064e"
+    },
+    {
+      "batch_id": "bb2648ec-4ce1-46b3-a421-d3890028e0fe",
+      "bytes": 3480221,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 28166,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20250403T1405_20250502T2356.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "2477e0503ff52d09cca4cc4742a29602c8a4feba37d0b5372bc8fafeec053a87"
+    },
+    {
+      "batch_id": "93e00075-ef85-468d-941c-7db6aa6ee966",
+      "bytes": 3482706,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 28208,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20250505T0100_20250602T1404.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "5ad98105f93813068a4595732aaf9642f6bfb2c7f1e4b33c834b21ae820cef87"
+    },
+    {
+      "batch_id": "6e05d9f4-3d87-465c-b805-db10d9423831",
+      "bytes": 3721414,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 30181,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20250602T1405_20250702T1404.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "e18d5303ad33328394a44a9b06d32d7c7c42712f1e6e52c8f8bc8e2037922d12"
+    },
+    {
+      "batch_id": "63726620-189d-4ace-b42c-0e7ecfbab3a4",
+      "bytes": 3704535,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 30093,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20250702T1405_20250801T1404.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "a43016015f8e94eb640a925aa4bc3ef69d2a65525c860f1818c26f4231102023"
+    },
+    {
+      "batch_id": "a3a1a1c1-6adc-4993-b747-6702260f54de",
+      "bytes": 3466860,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 28164,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20250801T1405_20250829T2356.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "4a59f09b6411a955c5607e445984575e21e946b4b7cad2c17553d0892b4c9281"
+    },
+    {
+      "batch_id": "8a5088a6-5a15-4492-9591-dca8edd7ce6c",
+      "bytes": 3650105,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 29587,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20250901T0100_20250930T1404.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "e92ee3c944f176b44df174dda663aa61efd3a45a2047dc9662e300b0b1bb48cd"
+    },
+    {
+      "batch_id": "2bad64bb-91cf-4b87-801e-2672eb02b5fc",
+      "bytes": 1873091,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 15165,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20250930T1405_20251015T1404.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "64e383bef132ff8f0b46898dcd2307737cf028f53fbb773b55055f9c33377a77"
+    },
+    {
+      "batch_id": "8a120790-7a05-43f2-8cf4-313855fa819b",
+      "bytes": 183728,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 1484,
+      "declared_status": "COMPLETED_WITH_ISSUES",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260723T0815_20260724T1000.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "a885c5f3b5f27aca63a43b9088d4523fee044aef4830f17b2fd22eff04697755"
+    },
+    {
+      "batch_id": "d5fd70e1-a82b-48c7-9bbb-bb33f931f9bd",
+      "bytes": 22978,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 185,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260724T1001_20260724T1305.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "9797e86d9eec9fa51a0254eef91058f640a4633552402a94903c9f3ff311ae66"
+    },
+    {
+      "batch_id": "cbff2d86-11d9-4edd-9aa8-5a0663a77a25",
+      "bytes": 3561,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 28,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260724T1306_20260724T1333.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "d0e2c7e4870802a336ca478dbbf0a09724e82954d332b6374dd65f45a631333f"
+    },
+    {
+      "batch_id": "cee4bea3-470a-4655-bdb6-b0072127c2cc",
+      "bytes": 119621,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 966,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260724T1334_20260727T0642.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "ac47e3c82c989103614758de3e88d9841b19584d382471d1e34ae056d11e11dd"
+    },
+    {
+      "batch_id": "e73724c8-8627-473f-b458-9bb4260c7365",
+      "bytes": 4801,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 38,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260727T0643_20260727T0720.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "9f7a7c525ec1b18c0ee50d9ffb03de0c4a8dffffdf934e0afc3a9e84bc8268ad"
+    },
+    {
+      "batch_id": "50b5d474-3f06-4e5b-872c-4b83b646efe2",
+      "bytes": 170670,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 1379,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260727T0721_20260728T0720.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "0f4de757614069fe75d8e6534e7b46723352195c033b397f6e30f81834152c37"
+    },
+    {
+      "batch_id": "44b4941f-e6db-44b4-bb6c-e57dadbebd60",
+      "bytes": 170744,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 1379,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260728T0721_20260729T0720.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "ef99f40bd082406e64961b4b789f41ce8da73ce40821cc99ec836da383830da5"
+    },
+    {
+      "batch_id": "5792e3a7-15b4-46c3-9cdc-8eeb8bab6cf5",
+      "bytes": 123750,
+      "dataset_code": "XAUUSD_1M",
+      "declared_record_count": 998,
+      "declared_status": "COMPLETED",
+      "path": "data/mt5/xauusd_1m_ic_markets_mt5_20260729T0721_20260729T2358.csv",
+      "provider_code": "IC_MARKETS_MT5",
+      "sha256": "526e25c061b0c9f75b018ee02e9fb3dc9f7b591d5bb354552fe8d7fb1da936ba"
+    }
+  ],
+  "live_trading_authorized": false,
+  "paid_acquisition_authorized": false,
+  "predecessor": {
+    "candidate_ids": [
+      "M15|S1|RESPONSE_DISPLACEMENT_HALF_ATR",
+      "M15|S1|CONFIRMATION_DISPLACEMENT",
+      "M15|S2|REFERENCE_SWEEP_RECLAIM__CONFIRMATION_DISPLACEMENT",
+      "H1|S1|RESPONSE_DISPLACEMENT_HALF_ATR",
+      "H1|S1|CONFIRMATION_DISPLACEMENT",
+      "H1|S1|REFERENCE_SWEEP_RECLAIM",
+      "H4|S1|RESPONSE_DISPLACEMENT_HALF_ATR",
+      "H4|S1|REFERENCE_SWEEP_RECLAIM",
+      "H4|S1|HTF_FULL_ALIGNMENT"
+    ],
+    "candidate_source": {
+      "bytes": 31767,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/frozen_provisional_candidates.json",
+      "sha256": "c7cb4014dd5e1a9cfbcc104561ade60219a75b559c90c291238751d5e7c5e7de"
+    },
+    "final_seal": {
+      "bytes": 2881,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/final_seal.json",
+      "sha256": "bee62baee614908884a54f4a318c93823707e74dd7ab99f90eb712eba8122472"
+    },
+    "predecessor_artifact_set_hash": "ee2ac465f66b3ad902fbdb5234aa05dbbf02a6f3fa84e6840a627fc3c86a2f87",
+    "status": "PASS_PROVISIONAL_DEVELOPMENT_RELATIONSHIP"
+  },
+  "sealed_at_utc": "2026-08-10T06:23:19.935017Z",
+  "source_set_hash": "e8f85902496d05c6ed03b91d6c72b2ff58ec3e4604eec09290b0007759b68b01",
+  "sources": {
+    "candidate_source": {
+      "bytes": 31767,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/frozen_provisional_candidates.json",
+      "sha256": "c7cb4014dd5e1a9cfbcc104561ade60219a75b559c90c291238751d5e7c5e7de"
+    },
+    "census_events": {
+      "bytes": 4933833,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_structure_events.parquet",
+      "sha256": "05fcf2e1cfb4d4fde7bec65f14d0fcd26157ac498e620b9fe0210a63bdaf589d"
+    },
+    "census_pullbacks": {
+      "bytes": 4976288,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_pullback_cases.parquet",
+      "sha256": "067fc581ffcbaadb589ac0ea428d82bc26b3546b549a4dfd1a6afbc512af35ee"
+    },
+    "census_swings": {
+      "bytes": 5514276,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_swings.parquet",
+      "sha256": "81966751e033cfbcbc7c291c42acca78289ec01a728c9d06d77024a5ec1d35a6"
+    },
+    "development_casebook_manifest": {
+      "bytes": 5372,
+      "path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6"
+    },
+    "development_price_bars": {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    "feature_matrix": {
+      "bytes": 7804461,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/primary_features.parquet",
+      "sha256": "972706fcf161bb8d3c84677bedea45d9a8e2b6fd463a2c7853bb624e0acf2cac"
+    },
+    "forward_metadata_readiness_audit": {
+      "bytes": 40364,
+      "path": "research_artifacts/gold_session_behaviour_v3_m6b_source_snapshot_v01/metadata_readiness_audit.json",
+      "sha256": "6afbc6a347ff1fb5ffbaacaa2aa1ac534560d02d06856b6c5677f7c0144b2fe6"
+    },
+    "forward_source_snapshot": {
+      "bytes": 23033,
+      "path": "research_artifacts/gold_session_behaviour_v3_m6b_source_snapshot_v01/source_snapshot.json",
+      "sha256": "8b9699b568fca23ea81ba31288ba6e0bc2c021d7394011c26899d1e738e12840"
+    },
+    "forward_source_snapshot_manifest": {
+      "bytes": 1342,
+      "path": "research_artifacts/gold_session_behaviour_v3_m6b_source_snapshot_v01/manifest.json",
+      "sha256": "a0e460839eb3db9b6d4f483128697a55048c258e854b7c4c97fdc0ac88b359f4"
+    },
+    "relationship_final_seal": {
+      "bytes": 2881,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/final_seal.json",
+      "sha256": "bee62baee614908884a54f4a318c93823707e74dd7ab99f90eb712eba8122472"
+    }
+  },
+  "status": "FROZEN_BEFORE_POST_DECISION_PRICE_PATH_ACCESS",
+  "version": "GOLD_TPCE_ECONOMIC_V1_DESIGN_FREEZE_1_0"
+}

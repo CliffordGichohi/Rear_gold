@@ -1,0 +1,41 @@
+{
+  "version": "GOLD_TPCE_ECONOMIC_V1_PROTOCOL_1_0",
+  "status": "FROZEN_BEFORE_POST_DECISION_PRICE_PATH_ACCESS",
+  "candidate_source": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/frozen_provisional_candidates.json",
+  "development": ["2021-08-01T00:00:00Z", "2025-01-01T00:00:00Z"],
+  "forward_segments": {
+    "2025": ["2025-01-01T00:00:00Z", "2026-01-01T00:00:00Z"],
+    "2026_YTD": ["2026-01-01T00:00:00Z", "2026-07-30T00:00:00Z"]
+  },
+  "entry": {"source": "NEXT_AVAILABLE_M1_OPEN", "max_delay_minutes": 5},
+  "stop": {"source": "CONFIRMED_PULLBACK_PIVOT", "atr14_buffer": 0.15},
+  "target": {"source": "NEAREST_KNOWN_UNBROKEN_TREND_SIDE_SWING", "minimum_r_filter": null},
+  "time_exit_parent_bars": 16,
+  "intrabar_ambiguity": "STOP_FIRST",
+  "costs_usd_per_ounce_roundtrip": {
+    "spread": "OBSERVED_ENTRY_SPREAD_PRICE",
+    "missing_spread_fallback": 0.30,
+    "commission": 0.07,
+    "slippage": 0.10,
+    "stress_multipliers": [1.0, 1.5, 2.0]
+  },
+  "risk": {
+    "initial_account_usd": 10000.0,
+    "risk_fraction": 0.005,
+    "planned_risk_usd": 50.0,
+    "ounces_per_standard_lot": 100,
+    "lot_step": 0.01,
+    "compounding": false
+  },
+  "portfolio": {
+    "timeframe_priority": ["H4", "H1", "M15"],
+    "candidate_order": "INHERIT_FROZEN_SOURCE_ORDER",
+    "one_open_xauusd_position": true,
+    "opposite_signal_closes_position": false
+  },
+  "bootstrap": {"resamples": 5000, "seed": 984113, "cluster": "NEW_YORK_TRADING_DATE"},
+  "multiplicity": "HOLM_ACROSS_NINE_CANDIDATES",
+  "execution_retuning_permitted": false,
+  "paid_acquisition_authorized": false,
+  "live_trading_authorized": false
+}

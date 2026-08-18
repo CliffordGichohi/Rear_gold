@@ -40,6 +40,8 @@ export default async function DataHealthPage() {
         <p className="mt-3 max-w-3xl text-sm leading-6 text-[var(--muted)]">
           Coverage is computed from non-synthetic records available at the report clock.
           Contract and licensed factors remain visible until a valid provider is connected.
+          Observation counts use a bounded ten-year operational window; this does not
+          delete or hide older immutable source history.
         </p>
       </header>
 
@@ -86,7 +88,7 @@ export default async function DataHealthPage() {
           <table className="w-full min-w-[1260px] text-left text-sm">
             <thead className="border-y border-[var(--border)] bg-black/15 text-[10px] uppercase tracking-wider text-[var(--muted)]">
               <tr>
-                {["Layer", "Factor", "MVP scope", "Domain", "Evidence", "Build", "Source", "Records", "Latest available", "Missing dependency"].map(
+                {["Layer", "Factor", "MVP scope", "Domain", "Evidence", "Build", "Source", "Records (10y)", "Latest available", "Missing dependency"].map(
                   (heading) => (
                     <th className="px-4 py-3 font-medium" key={heading}>
                       {heading}

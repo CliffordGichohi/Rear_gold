@@ -1,0 +1,221 @@
+{
+  "catalog_receipt": "e0f3e473737d633667c1be318a12887bc43a6bef98d0df7cd59685b31af3e1bc",
+  "domain_logic": {
+    "MACRO_AND_CROSS_MARKET": "Real yields, the 2-year yield, the broad dollar and the transparent macro score establish directional context, not automatic entries.",
+    "MARKET_MECHANICS_AND_LIQUIDITY": "Aggressive flow consumes available liquidity; depth, spread, microprice and quote flow describe how readily price can move.",
+    "MARKET_STRUCTURE": "Momentum and proximity to fully formed levels describe accepted price progression without claiming hidden orders are observed.",
+    "POSITIONING_AND_CATALYSTS": "These remain visible in the catalog but are deferred when point-in-time development coverage is not certified.",
+    "SESSIONS": "Asia-range compression and known levels condition the information content and impact of London/New York flow."
+  },
+  "epistemic_policy": [
+    "OBSERVED source facts retain lineage",
+    "CALCULATED formulas are explicit",
+    "INFERRED macro score remains labelled INFERRED",
+    "UNKNOWN is never neutral"
+  ],
+  "feature_traceability": [
+    {
+      "book_factor_ids": [
+        "MECH_DEPTH_RESILIENCE_IMPACT",
+        "MECH_VOLUME"
+      ],
+      "domain": "MICROSTRUCTURE",
+      "epistemic_class": "CALCULATED",
+      "feature_id": "CSR_FLOW_QUOTE_OFI_W60",
+      "limitation": "A calculated or inferred feature is never presented as directly observed institutional activity.",
+      "source_inputs": [
+        "quote_ofi_raw",
+        "quote_ofi_transition_count"
+      ]
+    },
+    {
+      "book_factor_ids": [
+        "MECH_VOLUME",
+        "MECH_DEPTH_RESILIENCE_IMPACT"
+      ],
+      "domain": "MICROSTRUCTURE",
+      "epistemic_class": "CALCULATED",
+      "feature_id": "CSR_FLOW_TRADE_IMBALANCE_W60",
+      "limitation": "A calculated or inferred feature is never presented as directly observed institutional activity.",
+      "source_inputs": [
+        "trade_qty_buy",
+        "trade_qty_sell"
+      ]
+    },
+    {
+      "book_factor_ids": [
+        "MECH_DEPTH_RESILIENCE_IMPACT"
+      ],
+      "domain": "MICROSTRUCTURE",
+      "epistemic_class": "CALCULATED",
+      "feature_id": "CSR_FLOW_DISPLAYED_IMBALANCE_W60",
+      "limitation": "A calculated or inferred feature is never presented as directly observed institutional activity.",
+      "source_inputs": [
+        "add_qty_bid",
+        "add_qty_ask",
+        "cancel_qty_bid",
+        "cancel_qty_ask"
+      ]
+    },
+    {
+      "book_factor_ids": [
+        "MECH_DEPTH_RESILIENCE_IMPACT",
+        "STRUCT_LIQUIDITY_STOP_ZONES"
+      ],
+      "domain": "MICROSTRUCTURE",
+      "epistemic_class": "CALCULATED",
+      "feature_id": "CSR_BOOK_DEPTH_IMBALANCE_L5_W60",
+      "limitation": "A calculated or inferred feature is never presented as directly observed institutional activity.",
+      "source_inputs": [
+        "depth_imbalance_l5_ppb",
+        "state_available",
+        "book_crossed"
+      ]
+    },
+    {
+      "book_factor_ids": [
+        "MECH_SPREAD",
+        "MECH_DEPTH_RESILIENCE_IMPACT"
+      ],
+      "domain": "MICROSTRUCTURE",
+      "epistemic_class": "CALCULATED",
+      "feature_id": "CSR_BOOK_MICROPRICE_DISLOCATION_T0",
+      "limitation": "A calculated or inferred feature is never presented as directly observed institutional activity.",
+      "source_inputs": [
+        "microprice_fixed_1e9",
+        "midpoint_fixed_1e9",
+        "spread_fixed_1e9",
+        "state_available",
+        "book_crossed"
+      ]
+    },
+    {
+      "book_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM",
+        "STRUCT_TREND_RANGE"
+      ],
+      "domain": "MARKET_STRUCTURE",
+      "epistemic_class": "CALCULATED",
+      "feature_id": "CSR_STRUCTURE_MOMENTUM_15M",
+      "limitation": "A calculated or inferred feature is never presented as directly observed institutional activity.",
+      "source_inputs": [
+        "XAUUSD_1M",
+        "STRUCTURE_15M",
+        "ATR_1H"
+      ]
+    },
+    {
+      "book_factor_ids": [
+        "SYNTHESIS_EVIDENCE_CHAIN",
+        "REGIME_REACTION_FUNCTION"
+      ],
+      "domain": "FUNDAMENTAL",
+      "epistemic_class": "INFERRED",
+      "feature_id": "CSR_MACRO_ENGINE_SCORE",
+      "limitation": "A calculated or inferred feature is never presented as directly observed institutional activity.",
+      "source_inputs": [
+        "V3_M4:MACRO_ENGINE_SCORE"
+      ]
+    },
+    {
+      "book_factor_ids": [
+        "RATES_REAL_YIELD_10Y",
+        "CROSS_RATES_DRIVER"
+      ],
+      "domain": "FUNDAMENTAL_CROSS_MARKET",
+      "epistemic_class": "CALCULATED",
+      "feature_id": "CSR_MACRO_REAL_YIELD_SUPPORT",
+      "limitation": "A calculated or inferred feature is never presented as directly observed institutional activity.",
+      "source_inputs": [
+        "V3_M4:MACRO_REAL_YIELD_10Y_CHANGE"
+      ]
+    },
+    {
+      "book_factor_ids": [
+        "USD_CONTEXT",
+        "CROSS_CONFIRMATION_DIVERGENCE"
+      ],
+      "domain": "FUNDAMENTAL_CROSS_MARKET",
+      "epistemic_class": "CALCULATED",
+      "feature_id": "CSR_MACRO_USD_SUPPORT",
+      "limitation": "A calculated or inferred feature is never presented as directly observed institutional activity.",
+      "source_inputs": [
+        "V3_M4:MACRO_USD_BROAD_CHANGE"
+      ]
+    },
+    {
+      "book_factor_ids": [
+        "RATES_TREASURY_2Y",
+        "EXPECT_POLICY_REPRICING"
+      ],
+      "domain": "FUNDAMENTAL_EXPECTATIONS",
+      "epistemic_class": "CALCULATED",
+      "feature_id": "CSR_MACRO_2Y_SUPPORT",
+      "limitation": "A calculated or inferred feature is never presented as directly observed institutional activity.",
+      "source_inputs": [
+        "V3_M4:MACRO_TREASURY_2Y_CHANGE"
+      ]
+    },
+    {
+      "book_factor_ids": [
+        "MECH_SPREAD",
+        "SESSION_ROLLOVER_LIQUIDITY"
+      ],
+      "domain": "LIQUIDITY",
+      "epistemic_class": "CALCULATED",
+      "feature_id": "CSR_LIQ_SPREAD_FRAGILITY_60_900",
+      "limitation": "A calculated or inferred feature is never presented as directly observed institutional activity.",
+      "source_inputs": [
+        "spread_fixed_1e9",
+        "state_available",
+        "book_crossed"
+      ]
+    },
+    {
+      "book_factor_ids": [
+        "SESSION_ASIA_STATE",
+        "STRUCT_SUPPORT_RESISTANCE_LEVELS",
+        "STRUCT_LIQUIDITY_STOP_ZONES"
+      ],
+      "domain": "SESSION_PRICE_LEVEL",
+      "epistemic_class": "CALCULATED",
+      "feature_id": "CSR_SESSION_LEVEL_TENSION",
+      "limitation": "A calculated or inferred feature is never presented as directly observed institutional activity.",
+      "source_inputs": [
+        "V3_M4:SESSION_ASIA_RANGE_TO_1H_ATR",
+        "V3_M4:LEVEL_NEAREST_KNOWN_TO_1H_ATR"
+      ]
+    }
+  ],
+  "reference_book": {
+    "path": "Gold_USD_Market_Intelligence_Reference_Book.pdf",
+    "sha256": "3e7ddc561932a859a4c9043a38ff71b7003907963fb52247e41edaeefc8ac42a"
+  },
+  "seven_layer_scope": {
+    "L1_REGIME": [
+      "CSR_MACRO_ENGINE_SCORE"
+    ],
+    "L2_EXPECTATIONS": [
+      "CSR_MACRO_2Y_SUPPORT"
+    ],
+    "L3_POSITIONING": [
+      "DEFERRED_COT_COVERAGE_FAIL"
+    ],
+    "L4_CATALYSTS": [
+      "DEFERRED_PRE_EVENT_AVAILABILITY_FAIL"
+    ],
+    "L5_SESSIONS_LIQUIDITY": [
+      "CSR_LIQ_SPREAD_FRAGILITY_60_900",
+      "CSR_SESSION_LEVEL_TENSION"
+    ],
+    "L6_CROSS_MARKET": [
+      "CSR_MACRO_REAL_YIELD_SUPPORT",
+      "CSR_MACRO_USD_SUPPORT"
+    ],
+    "L7_EXECUTION_RISK": [
+      "OUT_OF_SCOPE_NO_TRADE_CONSTRUCTION"
+    ]
+  },
+  "status": "REFERENCE_BOOK_TRACEABILITY_FROZEN",
+  "version": "GC_CSR_EDGE_DISCOVERY_V3_TRACEABILITY_V1_0"
+}

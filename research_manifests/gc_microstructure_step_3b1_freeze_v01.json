@@ -1,0 +1,27 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_3B1_FREEZE_V0_1",
+  "status": "SEALED_BEFORE_METADATA_QUOTE",
+  "sealed_at_utc": "2026-07-30T14:27:36.9705744Z",
+  "protocol": {
+    "path": "research_manifests/gc_microstructure_step_3b1_protocol_v01.json",
+    "bytes": 12576,
+    "sha256": "07860e02cf4f76487a0f334faa2987e0a0cf97f8977ca61f995c533f617022c5"
+  },
+  "predecessor_verification": {
+    "performed_before_protocol_freeze": true,
+    "step_3a_status": "FAIL",
+    "step_3a_declared_manifest_hash": "0897e33856c5329ee59040ff5a6c15f48cb65fc17dcf3e63ec1f8c5bf3c6c59c",
+    "step_3a1_status": "PASS",
+    "step_3a1_declared_manifest_hash": "334b67560ee5912ed1939305715078b3f9460d389feb8cc17723a062543d657c",
+    "all_frozen_file_bytes_and_sha256_match": true
+  },
+  "quote_state_at_seal": {
+    "metadata_api_called": false,
+    "batch_job_submitted": false,
+    "data_downloaded": false,
+    "charge_incurred": false,
+    "mbp10_values_accessed": false,
+    "market_outcomes_accessed": false
+  },
+  "immutability_rule": "Any later change to the protocol invalidates Step 3B.1 and requires a newly named pre-result protocol; this receipt must never be overwritten."
+}

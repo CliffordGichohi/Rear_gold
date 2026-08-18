@@ -1,0 +1,125 @@
+{
+  "version": "GOLD_SEQUENTIAL_AUCTION_CONFIRMATION_ENTRY_V1_PROTOCOL_1_0",
+  "status": "FROZEN_BEFORE_DELAYED_ENTRY_MATERIALIZATION_OR_OUTCOMES",
+  "development": ["2021-08-01T00:00:00Z", "2025-01-01T00:00:00Z"],
+  "population": {
+    "executed_setup_rows": 22193,
+    "timeframes": ["M15", "H1", "H4"],
+    "signal_timeframe_minutes": {"M15": 1, "H1": 5, "H4": 15}
+  },
+  "family_mapping": {
+    "RUNAWAY_BREAKOUT": "BREAKOUT_ACCEPTANCE_FIRST_RETEST",
+    "BREAK_RETEST_CONTINUATION": "BREAKOUT_ACCEPTANCE_FIRST_RETEST",
+    "DEEP_RETRACE_CONTINUATION": "DEEP_PULLBACK_DISPLACEMENT_FIRST_RETEST",
+    "FALSE_CONTINUATION_REVERSAL": "SWEEP_RECLAIM_STRUCTURE_FIRST_RETEST",
+    "IMMEDIATE_FAILURE_REVERSAL": "SWEEP_RECLAIM_STRUCTURE_FIRST_RETEST",
+    "TWO_SIDED_REFERENCE_RETEST": "SWEEP_RECLAIM_STRUCTURE_FIRST_RETEST"
+  },
+  "fundamental_gate": {
+    "score_threshold": 20.0,
+    "coverage_gte": 50.0,
+    "confidence_gte": 35.0,
+    "eligible": ["ALIGNED", "NEUTRAL_OR_WEAK"],
+    "no_trade": ["OPPOSED", "UNKNOWN"]
+  },
+  "higher_timeframe_gate": {"actual_direction_aligned_components_gte": 1},
+  "primary_parameters": {
+    "clearance_parent_atr": 0.05,
+    "sweep_parent_atr": 0.05,
+    "reclaim_parent_atr": 0.02,
+    "retest_tolerance_parent_atr": 0.10,
+    "retest_close_parent_atr": 0.05,
+    "initial_window_signal_bars": 12,
+    "transition_window_signal_bars": 8,
+    "retest_window_signal_bars": 8,
+    "displacement_range_signal_atr": 1.25,
+    "displacement_body_fraction": 0.60,
+    "directional_close_location": 0.80,
+    "micro_lookback_signal_bars": 3,
+    "track_b_stop_buffer_parent_atr": 0.05,
+    "minimum_gross_target_r": 1.0
+  },
+  "sensitivity_bundles": {
+    "LENIENT": {
+      "clearance_parent_atr": 0.0,
+      "sweep_parent_atr": 0.025,
+      "reclaim_parent_atr": 0.0,
+      "retest_tolerance_parent_atr": 0.15,
+      "retest_close_parent_atr": 0.0,
+      "displacement_range_signal_atr": 1.0,
+      "displacement_body_fraction": 0.5,
+      "directional_close_location": 0.6666666666666666,
+      "track_b_stop_buffer_parent_atr": 0.0
+    },
+    "STRICT": {
+      "clearance_parent_atr": 0.10,
+      "sweep_parent_atr": 0.075,
+      "reclaim_parent_atr": 0.05,
+      "retest_tolerance_parent_atr": 0.05,
+      "retest_close_parent_atr": 0.10,
+      "displacement_range_signal_atr": 1.5,
+      "displacement_body_fraction": 0.6666666666666666,
+      "directional_close_location": 0.85,
+      "track_b_stop_buffer_parent_atr": 0.10
+    }
+  },
+  "tracks": ["TRACK_A_ORIGINAL_STOP", "TRACK_B_CONFIRMED_RETEST_STOP"],
+  "candidate_tests": 36,
+  "oof_folds": [
+    {"fold": 1, "validate": ["2022-07-01", "2023-03-31"]},
+    {"fold": 2, "validate": ["2023-04-01", "2023-12-31"]},
+    {"fold": 3, "validate": ["2024-01-01", "2024-12-31"]}
+  ],
+  "support_floors": {
+    "M15": {"trades": 100, "dates": 75, "weeks": 40},
+    "H1": {"trades": 50, "dates": 40, "weeks": 25},
+    "H4": {"trades": 30, "dates": 25, "weeks": 15}
+  },
+  "economics": {
+    "planned_risk_usd": 50.0,
+    "account_usd": 10000.0,
+    "whole_ounce_sizing": true,
+    "spread": "OBSERVED_AT_DELAYED_ENTRY_OR_0P30_FALLBACK",
+    "commission_usd_oz": 0.07,
+    "slippage_usd_oz": 0.10,
+    "cost_stress": [1.0, 1.5, 2.0],
+    "same_bar": "STOP_FIRST",
+    "gap_stop": true,
+    "maximum_open_positions_per_candidate": 1,
+    "compounding": false
+  },
+  "bootstrap": {"clusters": "TRADING_DATE", "resamples": 5000, "base_seed": 970331},
+  "multiplicity": {"method": "BENJAMINI_HOCHBERG", "family": "TIMEFRAME_ALL_12_PRIMARY_TESTS", "q_lte": 0.10},
+  "pass_gates": {
+    "net_expectancy_gt": 0.0,
+    "profit_factor_gte": 1.05,
+    "cluster_ci95_low_gt": 0.0,
+    "bh_q_lte": 0.10,
+    "cost_1p5x_expectancy_gt": 0.0,
+    "positive_validation_folds_gte": 2,
+    "positive_calendar_years_gte": 2,
+    "maximum_positive_year_share_lte": 0.70,
+    "positive_sessions_gte": 2,
+    "maximum_positive_session_share_lte": 0.70,
+    "both_sensitivity_bundle_expectancies_gt": 0.0
+  },
+  "ranking": ["CI95_LOW_DESC", "COST_1P5X_EXPECTANCY_DESC", "PROFIT_FACTOR_DESC", "TRADES_DESC", "MAX_DRAWDOWN_ASC", "CANDIDATE_ID_ASC"],
+  "maximum_candidates_per_timeframe": 2,
+  "gc_incremental": {
+    "covered_dates": 188,
+    "window_seconds": 60,
+    "required_components": 2,
+    "candidate_credit": false,
+    "may_resurrect_base_rejection": false
+  },
+  "forward_if_development_passes": {
+    "2025": ["2025-01-01T00:00:00Z", "2026-01-01T00:00:00Z"],
+    "2026_YTD": ["2026-01-01T00:00:00Z", "2026-07-30T00:00:00Z"],
+    "classification": "EXPOSED_HISTORICAL_ROBUSTNESS_NO_INDEPENDENT_VALIDATION_CREDIT"
+  },
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "paid_acquisition_authorized": false,
+  "retuning_permitted": false,
+  "live_trading_authorized": false
+}

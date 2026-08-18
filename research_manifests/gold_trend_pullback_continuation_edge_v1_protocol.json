@@ -1,0 +1,41 @@
+{
+  "version": "GOLD_TPCE_V1_PROTOCOL_1_0",
+  "status": "FROZEN_BEFORE_CONDITIONAL_FEATURE_OR_OUTCOME_ACCESS",
+  "development": {
+    "start_inclusive": "2021-08-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z"
+  },
+  "forward_locked": ["2025", "2026"],
+  "timeframes_separate": ["M15", "H1", "H4"],
+  "primary_scale": "STANDARD",
+  "replication_scales": ["MICRO", "MAJOR"],
+  "decision_clock": "pullback.known_at_utc",
+  "primary_endpoint": "CONTINUED_VS_FAILED_STRUCTURE_SWITCH",
+  "feature_outcome_physical_separation": true,
+  "candles_completed_only": true,
+  "fundamental_max_age_hours": 96,
+  "cot_max_age_days": 14,
+  "asia_window": {
+    "timezone": "Asia/Tokyo",
+    "start_local": "10:00:00",
+    "end_local": "16:00:00"
+  },
+  "london_window": {
+    "timezone": "Europe/London",
+    "start_local": "08:00:00",
+    "end_local": "12:00:00"
+  },
+  "new_york_window": {
+    "timezone": "America/New_York",
+    "start_local": "08:00:00",
+    "end_local": "12:00:00"
+  },
+  "new_york_trading_day_boundary_local": "17:00:00",
+  "retracement_boundaries": [0.236, 0.382, 0.5, 0.618, 0.786],
+  "cluster_bootstrap_resamples": 5000,
+  "bootstrap_seed": 731209,
+  "multiplicity": "BENJAMINI_HOCHBERG_WITHIN_TIMEFRAME_AND_STAGE",
+  "candidate_limit_per_timeframe": 3,
+  "execution_or_pnl_permitted": false,
+  "paid_acquisition_authorized": false
+}

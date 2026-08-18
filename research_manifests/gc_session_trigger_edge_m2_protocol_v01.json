@@ -1,0 +1,956 @@
+{
+  "authorization_sha256": "f9c8105361f6c6b1801f2e04444822f806e6ae3c8a7abf5b3854094af9bb822a",
+  "canonicalization": {
+    "first_event_sensitivity": "Every candidate must retain the same favorable sign when restricted to the first family event per date.",
+    "microstructure": "Retain only the first event for each session_date, session, event_family, and direction.",
+    "missing_minute": "A missing, duplicate, incomplete, late, or lineage-invalid bar makes any event whose detection window intersects it UNKNOWN; never bridge the gap.",
+    "no_rearming": "A retained key cannot rearm later in the same session date.",
+    "per_level": "Retain only the first event for each session_date, session, event_family, direction, and level_family.",
+    "pooled_family_analysis": "At most three earliest canonical events per family and date may enter the primary analysis; simultaneous level events form one event with a sorted level-family list."
+  },
+  "charge_incurred_usd": 0.0,
+  "classification": "OUTCOME_BLIND_TRIGGER_SUPPORT_AND_TECHNICAL_MATERIALIZATION",
+  "data_acquired": false,
+  "derived_states": [
+    {
+      "definition": "Recompute displayed and trade pressure over W60 and sum quote_ofi_raw. BULLISH when at least two of the three directional components are positive and none is negative by more than zero; BEARISH symmetrically; CONFLICTED otherwise; UNKNOWN if fewer than two components are known.",
+      "family": "MICRO_FLOW_PRESSURE",
+      "inputs": [
+        "displayed_pressure_ppb",
+        "trade_imbalance_ppb",
+        "quote_ofi_raw",
+        "quote_ofi_transition_count"
+      ],
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "state_id": "FLOW_PRESSURE_W60",
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "CONFLICTED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ]
+    },
+    {
+      "definition": "The FLOW_PRESSURE_W60 rule applied unchanged to W900.",
+      "family": "MICRO_FLOW_PRESSURE",
+      "inputs": [
+        "displayed_pressure_ppb",
+        "trade_imbalance_ppb",
+        "quote_ofi_raw",
+        "quote_ofi_transition_count"
+      ],
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "state_id": "FLOW_PRESSURE_W900",
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "CONFLICTED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ]
+    },
+    {
+      "definition": "Take the deterministic W60 median of L1, L5, and L10 depth imbalance plus terminal microprice-minus-midpoint sign. BULLISH when at least three of four known components are positive, BEARISH when at least three are negative, CONFLICTED otherwise; UNKNOWN with fewer than three known components.",
+      "family": "MICRO_DEPTH_PRESSURE",
+      "inputs": [
+        "depth_imbalance_l1_ppb",
+        "depth_imbalance_l5_ppb",
+        "depth_imbalance_l10_ppb",
+        "order_count_imbalance_l5_ppb",
+        "midpoint_fixed_1e9",
+        "microprice_fixed_1e9"
+      ],
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "state_id": "DEPTH_PRESSURE_W60",
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "CONFLICTED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ]
+    },
+    {
+      "definition": "The DEPTH_PRESSURE_W60 rule applied to W900 medians while retaining the terminal microprice-minus-midpoint sign.",
+      "family": "MICRO_DEPTH_PRESSURE",
+      "inputs": [
+        "depth_imbalance_l1_ppb",
+        "depth_imbalance_l5_ppb",
+        "depth_imbalance_l10_ppb",
+        "order_count_imbalance_l5_ppb",
+        "midpoint_fixed_1e9",
+        "microprice_fixed_1e9"
+      ],
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "state_id": "DEPTH_PRESSURE_W900",
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "CONFLICTED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ]
+    },
+    {
+      "definition": "HIGH when at least two of three W60 per-second rates exceed their W900 rates, LOW when at least two are lower, STABLE otherwise; UNKNOWN if fewer than two comparisons are known.",
+      "family": "MICRO_LIQUIDITY_CONDITION",
+      "inputs": [
+        "mbo_live_records",
+        "mbp_update_count",
+        "quote_ofi_transition_count"
+      ],
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "state_id": "LIQUIDITY_ACTIVITY_SHIFT",
+      "states": [
+        "HIGH",
+        "LOW",
+        "STABLE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "HIGH",
+        "LOW"
+      ]
+    },
+    {
+      "definition": "FRAGILE when at least two hold: W60 median spread exceeds W900 median, terminal book age exceeds the W900 median, or W60 median total L10 depth is below W900 median total L10 depth. RESILIENT when at least two reverse; MIXED otherwise; UNKNOWN with fewer than two comparisons.",
+      "family": "MICRO_LIQUIDITY_CONDITION",
+      "inputs": [
+        "spread_fixed_1e9",
+        "book_age_ns",
+        "bid_depth_l10",
+        "ask_depth_l10",
+        "depth_concentration_l1_ppb"
+      ],
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "state_id": "LIQUIDITY_FRAGILITY",
+      "states": [
+        "FRAGILE",
+        "RESILIENT",
+        "MIXED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "FRAGILE",
+        "RESILIENT"
+      ]
+    },
+    {
+      "definition": "BEARISH_ABSORPTION when aggregate buy-aggressor quantity exceeds sell-aggressor quantity while W60 midpoint progress is non-positive and quote OFI or median L5 depth imbalance is negative. BULLISH_ABSORPTION is the exact mirror. NONE otherwise; UNKNOWN if trade direction, price progress, and at least one confirmation input are not known.",
+      "family": "MICRO_ABSORPTION",
+      "inputs": [
+        "trade_qty_buy",
+        "trade_qty_sell",
+        "midpoint_fixed_1e9",
+        "quote_ofi_raw",
+        "depth_imbalance_l5_ppb"
+      ],
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "state_id": "ABSORPTION_STATE_W60",
+      "states": [
+        "BULLISH_ABSORPTION",
+        "BEARISH_ABSORPTION",
+        "NONE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH_ABSORPTION",
+        "BEARISH_ABSORPTION"
+      ]
+    },
+    {
+      "definition": "BULLISH when both component states are BULLISH, BEARISH when both are BEARISH, CONFLICTED when they oppose, otherwise NEUTRAL_OR_UNKNOWN.",
+      "family": "MICRO_CONFIRMATION",
+      "inputs": [
+        "FLOW_PRESSURE_W60",
+        "DEPTH_PRESSURE_W60"
+      ],
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "state_id": "FLOW_DEPTH_ALIGNMENT",
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "CONFLICTED",
+        "NEUTRAL_OR_UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ]
+    }
+  ],
+  "development_boundary": {
+    "available_session_dates_per_session": 187,
+    "calendar_2025": "LOCKED_NO_FILE_OR_ROW_ACCESS",
+    "calendar_2026": "LOCKED_NO_FILE_OR_ROW_ACCESS",
+    "end": "2024-12-13",
+    "month_week_blocks": 38,
+    "selected_dates": 188,
+    "start": "2021-11-08"
+  },
+  "event_detection_clarifications": {
+    "adjacency": "Two-close acceptance and next-bar reclaim require exact adjacent complete one-minute timestamps; a gap resets adjacency and pending acceptance state.",
+    "failed_acceptance_clock": "Bars 1 through 5 after the acceptance-confirming close are eligible; the first return is retained; a later return is not the frozen event.",
+    "micro_onset": "The same qualifying state/pair must exist at the current and immediately prior completed-minute boundary and be absent at the boundary before that.",
+    "opening_range_availability": "SESSION_OPENING_RANGE_15 is usable at and after the 08:15 local close only when all first fifteen bars are unique, complete, and timely.",
+    "pooled_cap": "After per-level and per-direction canonicalization, retain at most the three earliest canonical events per family/date; exact simultaneous level confirmations merge into a sorted level-family list.",
+    "strict_level_comparisons": true
+  },
+  "event_families": [
+    {
+      "applicable_level_families": [
+        "ASIA_RANGE",
+        "PRIOR_DAY_RANGE",
+        "LONDON_PRE_NEW_YORK_RANGE",
+        "SESSION_OPENING_RANGE_15"
+      ],
+      "causal_claim": false,
+      "confirmation_time": "Close time of the earliest reclaim-confirming bar.",
+      "directional_prior": {
+        "LOWER": "UP",
+        "UPPER": "DOWN"
+      },
+      "epistemic_class": "CALCULATED",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "lower_definition": "Exact mirror: a complete bar trades strictly below the lower level and that bar or the immediately following complete bar closes at or above the level before acceptance.",
+      "source_domain": "XAUUSD_PRICE_LEVEL",
+      "upper_definition": "A complete one-minute bar trades strictly above the upper level and either that bar or the immediately following complete bar closes at or below the level, before any two-close acceptance is completed."
+    },
+    {
+      "applicable_level_families": [
+        "ASIA_RANGE",
+        "PRIOR_DAY_RANGE",
+        "LONDON_PRE_NEW_YORK_RANGE",
+        "SESSION_OPENING_RANGE_15"
+      ],
+      "causal_claim": false,
+      "confirmation_time": "Close time of the second qualifying bar.",
+      "directional_prior": {
+        "LOWER": "DOWN",
+        "UPPER": "UP"
+      },
+      "epistemic_class": "CALCULATED",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "lower_definition": "Two consecutive complete one-minute closes are strictly below the lower level.",
+      "source_domain": "XAUUSD_PRICE_LEVEL",
+      "upper_definition": "Two consecutive complete one-minute closes are strictly above the upper level."
+    },
+    {
+      "applicable_level_families": [
+        "ASIA_RANGE",
+        "PRIOR_DAY_RANGE",
+        "LONDON_PRE_NEW_YORK_RANGE",
+        "SESSION_OPENING_RANGE_15"
+      ],
+      "causal_claim": false,
+      "confirmation_time": "Close time of the first return bar; a return after five bars is not this event.",
+      "directional_prior": {
+        "LOWER": "UP",
+        "UPPER": "DOWN"
+      },
+      "epistemic_class": "CALCULATED",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "lower_definition": "After a confirmed lower LEVEL_BREAK_ACCEPT, the first complete close at or above the level occurs within the next five complete one-minute bars.",
+      "source_domain": "XAUUSD_PRICE_LEVEL",
+      "upper_definition": "After a confirmed upper LEVEL_BREAK_ACCEPT, the first complete close at or below the level occurs within the next five complete one-minute bars."
+    },
+    {
+      "confirmation_time": "Second consecutive aligned minute decision.",
+      "definition": "FLOW_PRESSURE_W60 and DEPTH_PRESSURE_W60 have the same directional state at two consecutive completed minute decisions and did not have that same joint direction at the immediately preceding minute decision.",
+      "directional_prior": {
+        "BEARISH": "DOWN",
+        "BULLISH": "UP"
+      },
+      "epistemic_class": "INFERRED",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "institution_or_motive_claim_permitted": false,
+      "source_domain": "GC_MICROSTRUCTURE"
+    },
+    {
+      "confirmation_time": "Second consecutive absorption minute decision.",
+      "definition": "The unchanged ABSORPTION_STATE_W60 is the same directional absorption state at two consecutive completed minute decisions and was not that state at the immediately preceding minute.",
+      "directional_prior": {
+        "BEARISH_ABSORPTION": "DOWN",
+        "BULLISH_ABSORPTION": "UP"
+      },
+      "epistemic_class": "INFERRED",
+      "event_family": "ABSORPTION_ONSET",
+      "institution_or_motive_claim_permitted": false,
+      "source_domain": "GC_MICROSTRUCTURE"
+    },
+    {
+      "confirmation_time": "Second consecutive qualifying minute decision.",
+      "definition": "LIQUIDITY_FRAGILITY is FRAGILE and FLOW_PRESSURE_W60 has the same directional state at two consecutive completed minute decisions; the exact pair was absent at the immediately preceding minute.",
+      "directional_prior": {
+        "BEARISH_FLOW": "DOWN",
+        "BULLISH_FLOW": "UP"
+      },
+      "epistemic_class": "INFERRED",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "institution_or_motive_claim_permitted": false,
+      "source_domain": "GC_MICROSTRUCTURE"
+    }
+  ],
+  "feature_materialization": {
+    "bad_timestamp_and_snapshot_semantics": "Unchanged sealed Step 5B.2 and Step 4A.3 dispositions.",
+    "bucket_boundary": "left-closed right-open source allocation; state as of bucket end",
+    "columns": [
+      "bucket_index",
+      "bucket_start_ns",
+      "bucket_end_ns",
+      "market_segment",
+      "market_state",
+      "mbo_total_records",
+      "mbo_live_records",
+      "mbo_snapshot_records",
+      "mbo_reset_count",
+      "mbo_none_count",
+      "mbo_unknown_action_count",
+      "mbo_invalid_side_count",
+      "mbo_nonpositive_size_count",
+      "mbo_undefined_price_count",
+      "mbo_bad_ts_recv_flag_count",
+      "mbo_maybe_bad_book_flag_count",
+      "mbo_top_of_book_add_count",
+      "add_count_bid",
+      "add_count_ask",
+      "add_qty_bid",
+      "add_qty_ask",
+      "cancel_count_bid",
+      "cancel_count_ask",
+      "cancel_qty_bid",
+      "cancel_qty_ask",
+      "modify_count_bid",
+      "modify_count_ask",
+      "modify_new_size_qty_bid",
+      "modify_new_size_qty_ask",
+      "trade_count_buy",
+      "trade_count_sell",
+      "trade_count_unknown",
+      "trade_qty_buy",
+      "trade_qty_sell",
+      "trade_qty_unknown",
+      "fill_count_bid",
+      "fill_count_ask",
+      "fill_count_unknown",
+      "fill_qty_bid",
+      "fill_qty_ask",
+      "fill_qty_unknown",
+      "add_imbalance_ppb",
+      "cancel_pressure_imbalance_ppb",
+      "displayed_pressure_ppb",
+      "trade_imbalance_ppb",
+      "mbp_update_count",
+      "mbp_snapshot_count",
+      "mbp_reset_count",
+      "mbp_unknown_action_count",
+      "mbp_bad_ts_recv_flag_count",
+      "mbp_maybe_bad_book_flag_count",
+      "quote_ofi_transition_count",
+      "quote_ofi_skipped_count",
+      "quote_ofi_raw",
+      "state_available",
+      "book_two_sided",
+      "state_source_row_ordinal",
+      "state_ts_recv_ns",
+      "book_age_ns",
+      "book_locked",
+      "book_crossed",
+      "best_bid_px_fixed_1e9",
+      "best_ask_px_fixed_1e9",
+      "spread_fixed_1e9",
+      "midpoint_fixed_1e9",
+      "microprice_fixed_1e9",
+      "bid_depth_l1",
+      "ask_depth_l1",
+      "bid_depth_l5",
+      "ask_depth_l5",
+      "bid_depth_l10",
+      "ask_depth_l10",
+      "bid_order_count_l1",
+      "ask_order_count_l1",
+      "bid_order_count_l5",
+      "ask_order_count_l5",
+      "bid_order_count_l10",
+      "ask_order_count_l10",
+      "depth_imbalance_l1_ppb",
+      "depth_imbalance_l5_ppb",
+      "depth_imbalance_l10_ppb",
+      "order_count_imbalance_l1_ppb",
+      "order_count_imbalance_l5_ppb",
+      "order_count_imbalance_l10_ppb",
+      "depth_concentration_l1_ppb"
+    ],
+    "count": 85,
+    "formulas_binding": "8f1ba7230919b7422344253d4f3e55fea1e86495551cbbbf53f3e1bdcb9ec3a2",
+    "market_state": "All frozen spans are daytime continuous matching; only two-sided uncrossed authoritative bucket-close states are eligible for GC state predicates.",
+    "missing_updates": "A zero-update second is retained. MBP-10 state may carry only from the latest eligible prior authoritative row; MBO event flow is zero for that bucket.",
+    "overlap_policy": "London and New York are independent research units. A sealed source row in their UTC overlap is allocated exactly once inside each applicable session window and reported as intentional cross-session reuse.",
+    "source_roles": {
+      "MBO": "deterministic one-second event flow",
+      "MBP10": "authoritative top-ten as-of state"
+    },
+    "state_reset": "Clear all feature, rolling-state, event, and level-event state at every session-date/session boundary.",
+    "timestamp_authority": "ts_recv"
+  },
+  "frozen_at_utc": "2026-08-04T13:21:27.153166Z",
+  "integrity_gates": {
+    "available_session_rows": 374,
+    "continuous_crossed_bucket_closes": 0,
+    "feature_rows": 7068600,
+    "feature_schema_columns": 85,
+    "minute_decision_rows": 89760,
+    "predecessor_seals": "all pass",
+    "primary_reference": "identical schemas, identities, null/UNKNOWN classifications, per-column checksums, complete-row checksums, event rows, support counts, diagnostics, and byte-identical Parquet outputs",
+    "session_rows": 376,
+    "sources": "all 80 existing sealed requests verified; no acquisition or substitution",
+    "unexpected_xau_missing_or_duplicate_timestamps": 0,
+    "xau_allowed_missing_timestamps": 57,
+    "xau_expected_timestamps": 112200
+  },
+  "level_families": [
+    {
+      "definition": "Frozen high and low of the completed casebook Asia session; both must be available before the event session opens.",
+      "epistemic_class": "CALCULATED",
+      "level_family": "ASIA_RANGE",
+      "lower": "ASIA_LOW",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "upper": "ASIA_HIGH"
+    },
+    {
+      "definition": "High and low of the preceding completed casebook gold day; neither may use a current-session bar.",
+      "epistemic_class": "CALCULATED",
+      "level_family": "PRIOR_DAY_RANGE",
+      "lower": "PRIOR_DAY_LOW",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "upper": "PRIOR_DAY_HIGH"
+    },
+    {
+      "definition": "XAUUSD high and low from London 08:00 local through the final complete one-minute bar ending no later than New York 08:00 local; freeze once at the New York session open.",
+      "epistemic_class": "CALCULATED",
+      "level_family": "LONDON_PRE_NEW_YORK_RANGE",
+      "lower": "LONDON_PRE_NEW_YORK_LOW",
+      "sessions": [
+        "NEW_YORK"
+      ],
+      "upper": "LONDON_PRE_NEW_YORK_HIGH"
+    },
+    {
+      "definition": "XAUUSD high and low of the first fifteen complete session minutes [08:00,08:15) local; usable only from 08:15 local onward.",
+      "epistemic_class": "CALCULATED",
+      "level_family": "SESSION_OPENING_RANGE_15",
+      "lower": "SESSION_OR15_LOW",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "upper": "SESSION_OR15_HIGH"
+    }
+  ],
+  "outcomes_opened_or_joined": false,
+  "point_in_time_contexts": {
+    "event_attachment": "Materialize at every eligible minute decision and attach the exact decision row to each event.",
+    "fundamental": {
+      "availability_rule": "Recompute as of each event decision using only facts with available_at no later than decision_at; a session-open state may be carried only when its source facts remain the latest eligible vintage.",
+      "candidate_alignment_roles": {
+        "MACRO_ENGINE_BIAS_STATE": "ALIGNMENT_CONTEXT_IF_M2_COVERAGE_PASSES",
+        "REAL_YIELD_USD_CONFIRMATION": "ALIGNMENT_CONTEXT_IF_M2_COVERAGE_PASSES",
+        "RECENT_RELEASE_SURPRISE_DIRECTION": "ALIGNMENT_CONTEXT_IF_FORECAST_AND_RELEASE_AVAILABILITY_PASS"
+      },
+      "definitions": [
+        {
+          "context_id": "MACRO_ENGINE_BIAS_STATE",
+          "definition": "BULLISH when the pre-existing transparent score is at least +20, BEARISH when at most -20, NEUTRAL otherwise; UNKNOWN when unavailable. The score is not recalibrated in this contract.",
+          "source_feature_binding": "V3_M4:MACRO_ENGINE_SCORE",
+          "source_paths": [
+            "decision_state.layers.market_regime.regime_state.value.directional_score"
+          ],
+          "standalone_validation_credit": false,
+          "states": [
+            "BULLISH",
+            "BEARISH",
+            "NEUTRAL",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "context_id": "REAL_YIELD_USD_CONFIRMATION",
+          "definition": "GOLD_BULLISH when the latest eligible observation-to-observation changes in both 10Y real yield and broad USD are negative; GOLD_BEARISH when both are positive; CONFLICTED otherwise; UNKNOWN unless both facts are point-in-time eligible and not stale. No calendar-duration claim is made about the source observation interval.",
+          "rejected_zn_rule_reopened": false,
+          "source_feature_bindings": [
+            "V3_M4:MACRO_REAL_YIELD_10Y_CHANGE",
+            "V3_M4:MACRO_USD_BROAD_CHANGE"
+          ],
+          "source_paths": [
+            "decision_state.layers.market_regime.rates.real_yield_10y",
+            "decision_state.layers.market_regime.usd",
+            "decision_state.layers.cross_market.real_yield_10y",
+            "decision_state.layers.cross_market.usd"
+          ],
+          "states": [
+            "GOLD_BULLISH",
+            "GOLD_BEARISH",
+            "CONFLICTED",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "context_id": "REGIME_REACTION_FUNCTION_STATE",
+          "definition": "Retain the already point-in-time regime label and reaction-function category without relabeling after outcomes. This context may stratify a registered directional microstructure state but has no standalone directional sign.",
+          "source_feature_bindings": [
+            "V3_M4:MACRO_REGIME_LABEL",
+            "V3_M4:MACRO_REACTION_FUNCTION"
+          ],
+          "source_paths": [
+            "decision_state.layers.market_regime.regime_state",
+            "decision_state.layers.market_regime.reaction_function"
+          ],
+          "standalone_directional_pass_gate": false,
+          "states": [
+            "INFLATION_FOCUS",
+            "GROWTH_LABOUR_FOCUS",
+            "FINANCIAL_STRESS_FOCUS",
+            "EVENT_SURPRISE_WITH_PARTIAL_MACRO",
+            "UNKNOWN_WITHOUT_EVENT_AND_REGIME_CORE",
+            "BALANCED_REACTION_FUNCTION",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "context_id": "RECENT_RELEASE_SURPRISE_DIRECTION",
+          "definition": "Use the most recent importance-5 release in the prior 24 hours only when forecast availability is independently verified before release. Preserve the existing gold-direction mapping as BULLISH, BEARISH, NEUTRAL, or UNKNOWN.",
+          "source_feature_bindings": [
+            "V3_M4:CATALYST_IMPACT_DIRECTION",
+            "V3_M4:SYNTH_CATALYST_SURPRISE_DIRECTION"
+          ],
+          "source_paths": [
+            "decision_state.layers.expectations.recent_releases",
+            "decision_state.layers.catalysts.event_impact_state"
+          ],
+          "states": [
+            "BULLISH",
+            "BEARISH",
+            "NEUTRAL",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "context_id": "UPCOMING_CATALYST_RISK",
+          "definition": "HIGH when a scheduled importance-5 US macro or FOMC event falls after decision_at and no later than observation_end, NONE otherwise; UNKNOWN when calendar coverage is not verified. This is a confidence modifier, not a directional state.",
+          "directional_test_permitted": false,
+          "source_paths": [
+            "decision_state.layers.catalysts.upcoming_events",
+            "decision_state.layers.catalysts.proximity_state"
+          ],
+          "states": [
+            "HIGH",
+            "NONE",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "context_id": "FINANCIAL_STRESS_STATE",
+          "definition": "STRESS when the eligible financial-stress observation is strictly above zero, NORMAL when it is at or below zero, and UNKNOWN otherwise. Volatility/equity facts are supporting context only; no threshold may be selected from session outcomes.",
+          "source_feature_bindings": [
+            "V3_M4:MACRO_FINANCIAL_STRESS_LEVEL",
+            "V3_M4:SYNTH_FINANCIAL_STRESS_DIRECTION"
+          ],
+          "source_paths": [
+            "decision_state.layers.market_regime.risk.financial_stress",
+            "decision_state.layers.market_regime.risk.volatility",
+            "decision_state.layers.market_regime.risk.equities"
+          ],
+          "states": [
+            "STRESS",
+            "NORMAL",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "context_id": "COT_MANAGED_MONEY_CROWDING",
+          "definition": "Use the existing point-in-time crowding_state inference unchanged: CROWDED_LONGS, CROWDED_SHORTS, or BALANCED. Respect the report publication/available_at timestamp, not Tuesday observation; age above 10 calendar days or unverified availability is UNKNOWN.",
+          "epistemic_status": "INFERRED",
+          "source_feature_binding": "V3_M4:POSITION_CROWDING_STATE",
+          "source_paths": [
+            "decision_state.layers.positioning.managed_money",
+            "decision_state.layers.positioning.inferred_states"
+          ],
+          "standalone_directional_pass_gate": false,
+          "states": [
+            "CROWDED_LONGS",
+            "CROWDED_SHORTS",
+            "BALANCED",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "context_id": "COT_WEEKLY_CHANGE_SIGN",
+          "definition": "UP, DOWN, or FLAT from the latest two reports both published by decision_at; UNKNOWN if either report is stale or unavailable.",
+          "source_feature_binding": "V3_M4:POSITION_MANAGED_MONEY_NET",
+          "source_paths": [
+            "decision_state.layers.positioning.managed_money"
+          ],
+          "standalone_directional_pass_gate": false,
+          "states": [
+            "UP",
+            "DOWN",
+            "FLAT",
+            "UNKNOWN"
+          ]
+        }
+      ],
+      "descriptive_or_risk_roles": {
+        "COT_MANAGED_MONEY_CROWDING": "INFERRED_RISK_CONTEXT_NOT_A_PASS_GATE",
+        "COT_WEEKLY_CHANGE_SIGN": "POSITIONING_CONTEXT_NOT_A_PASS_GATE",
+        "FINANCIAL_STRESS_STATE": "REPORTING_AND_STABILITY_ONLY",
+        "REGIME_REACTION_FUNCTION_STATE": "REPORTING_AND_STABILITY_ONLY",
+        "UPCOMING_CATALYST_RISK": "DESCRIPTIVE_ONLY_CURRENT_HISTORICAL_CALENDAR_LIMIT"
+      }
+    },
+    "latest_fact_policy": "Carry a session-open fact only while its available_at remains no later than the event decision and no later eligible vintage exists in the sealed inputs.",
+    "price_session_structure": {
+      "new_event_time_fields": [
+        {
+          "definition": "OPENING [08:00,09:00), MID [09:00,10:30), LATE [10:30,12:00) local",
+          "field": "SESSION_PHASE",
+          "role": "STABILITY_REPORTING_ONLY"
+        },
+        {
+          "definition": "First fifteen complete local session minutes",
+          "field": "SESSION_OR15_HIGH_LOW",
+          "role": "ELIGIBLE_LEVEL"
+        },
+        {
+          "definition": "Unchanged frozen structure alignment recomputed with detected_at no later than event decision",
+          "field": "EVENT_STRUCTURE_15M_1H_ALIGNMENT",
+          "role": "STAGE_2_ALIGNMENT_IF_M2_COVERAGE_PASSES"
+        }
+      ],
+      "prior_context_definitions": [
+        {
+          "context_id": "ASIA_RANGE_LOCATION",
+          "definition": "Decision-known XAUUSD price ABOVE_ASIA_HIGH, INSIDE_ASIA_RANGE, or BELOW_ASIA_LOW using the frozen casebook Asia levels; UNKNOWN if either level is absent.",
+          "sessions": [
+            "LONDON",
+            "NEW_YORK"
+          ],
+          "source_feature_binding": "V3_M4:SESSION_DECISION_POSITION_VS_ASIA",
+          "states": [
+            "ABOVE_ASIA_HIGH",
+            "INSIDE_ASIA_RANGE",
+            "BELOW_ASIA_LOW",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "context_id": "ASIA_PREDECISION_BREAK_STATE",
+          "definition": "Use only breach, acceptance, rejection, failed-break, or no-break detections completed by decision_at under the frozen structure rules.",
+          "sessions": [
+            "LONDON",
+            "NEW_YORK"
+          ],
+          "states": [
+            "ACCEPTED_ABOVE",
+            "REJECTED_ABOVE",
+            "ACCEPTED_BELOW",
+            "REJECTED_BELOW",
+            "NO_BREAK",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "context_id": "PRIOR_DAY_RANGE_LOCATION",
+          "definition": "Decision-known XAUUSD price ABOVE_PRIOR_HIGH, INSIDE_PRIOR_RANGE, or BELOW_PRIOR_LOW; UNKNOWN when either prior-day level is not fully formed and available.",
+          "sessions": [
+            "LONDON",
+            "NEW_YORK"
+          ],
+          "states": [
+            "ABOVE_PRIOR_HIGH",
+            "INSIDE_PRIOR_RANGE",
+            "BELOW_PRIOR_LOW",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "context_id": "STRUCTURE_15M_1H_ALIGNMENT",
+          "definition": "BULLISH when both frozen 15-minute and one-hour trend states are bullish, BEARISH when both are bearish, MIXED otherwise; detected_at must be no later than decision_at.",
+          "sessions": [
+            "LONDON",
+            "NEW_YORK"
+          ],
+          "source_feature_bindings": [
+            "V3_M4:STRUCT_15M_TREND",
+            "V3_M4:STRUCT_1H_TREND"
+          ],
+          "states": [
+            "BULLISH",
+            "BEARISH",
+            "MIXED",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "context_id": "ASIA_RANGE_COMPRESSION",
+          "definition": "LOW when the Asia range is at or below the 25th percentile of the prior 20 eligible Asia ranges, HIGH at or above the 75th percentile, NORMAL otherwise. The expanding trailing calculation uses no current or future outcome.",
+          "sessions": [
+            "LONDON",
+            "NEW_YORK"
+          ],
+          "states": [
+            "LOW",
+            "NORMAL",
+            "HIGH",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "context_id": "LONDON_PRE_NEW_YORK_DIRECTION",
+          "definition": "Direction from the London 08:01 neutral reference to the last complete XAUUSD minute bar ending no later than the New York decision cutoff. Record elapsed minutes; never use a London bar completing after the cutoff.",
+          "sessions": [
+            "NEW_YORK"
+          ],
+          "source_feature_binding": "V3_M4:SESSION_LONDON_DIRECTION",
+          "states": [
+            "UP",
+            "DOWN",
+            "FLAT",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "context_id": "LONDON_ASIA_INTERACTION_PRE_NEW_YORK",
+          "definition": "London acceptance above, rejection above, acceptance below, rejection below, or no completed interaction with the Asia range, using only detections available by the New York decision cutoff.",
+          "sessions": [
+            "NEW_YORK"
+          ],
+          "source_feature_binding": "V3_M4:SESSION_LONDON_INTERACTION_WITH_ASIA",
+          "states": [
+            "ACCEPTED_ABOVE",
+            "REJECTED_ABOVE",
+            "ACCEPTED_BELOW",
+            "REJECTED_BELOW",
+            "NO_COMPLETED_INTERACTION",
+            "UNKNOWN"
+          ]
+        }
+      ]
+    },
+    "recent_release_policy": "Use only a release already represented by the sealed point-in-time event state with a verified pre-release forecast; do not reconstruct or infer an absent intraday surprise.",
+    "structure_policy": "No new structure algorithm is introduced. Re-evaluate the frozen 15m/1h facts at event time and require detected_at/available_at no later than decision_at; otherwise UNKNOWN.",
+    "unknown_policy": "UNKNOWN is never converted to zero, flat, normal, no-event, balance, confirmation, or safety."
+  },
+  "prohibited": [
+    "development forward-outcome construction or join",
+    "relationship, hit-rate, effect, p-value, candidate, or directional-edge calculation",
+    "execution, trades, PnL, R multiples, account returns, or optimization",
+    "2025 or 2026 file or row access",
+    "data acquisition, provider request, paid API call, or charge",
+    "feature, threshold, context, event, support, or multiplicity retuning",
+    "raw feature values in the human report"
+  ],
+  "protocol_receipt": "396c8d3a09cb4e1c0ae131327724c13def80e0606a2e59251ef390c9f7381770",
+  "row_registry": {
+    "path": "research_manifests/gc_session_trigger_edge_m2_row_registry_v01.json",
+    "registry_receipt": "cbce7848d04d36bad2add1280088c36a0bc8342cf00f57ad3c95bc95522f27ec"
+  },
+  "status": "FROZEN_BEFORE_M2_DEVELOPMENT_MARKET_VALUE_ACCESS",
+  "support_only_registry": {
+    "counts_only": [
+      "instances",
+      "distinct_dates",
+      "distinct_month_week_blocks",
+      "directional instances and dates",
+      "year counts",
+      "UNKNOWN exclusions"
+    ],
+    "permitted_stage2_contexts": [
+      "MACRO_ENGINE_ALIGNMENT",
+      "REAL_YIELD_USD_ALIGNMENT",
+      "RECENT_RELEASE_ALIGNMENT",
+      "STRUCTURE_15M_1H_ALIGNMENT",
+      "FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+      "LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY"
+    ],
+    "prohibited": [
+      "market direction",
+      "hit rate",
+      "effect",
+      "p-value",
+      "candidate",
+      "ranking by outcome"
+    ],
+    "stage1": {
+      "benchmark": "Favorable direction probability 0.50 after multiplying each outcome by its preregistered event sign.",
+      "directional_balance_rule": "A one-sided family is ASYMMETRIC_DESCRIPTIVE_ONLY and cannot advance in V1.",
+      "maximum_tests_per_session": 6,
+      "support_floors": {
+        "bearish_distinct_dates": 20,
+        "bearish_event_instances": 30,
+        "bullish_distinct_dates": 20,
+        "bullish_event_instances": 30,
+        "calendar_years": 3,
+        "distinct_month_week_blocks": 20,
+        "distinct_session_dates": 50,
+        "event_instances": 80,
+        "minimum_total_events_in_each_eligible_year": 8
+      },
+      "unit": "One pooled sign-normalized test per event family and session; bullish and bearish variants are not separate candidates."
+    },
+    "stage2": {
+      "comparison": "Same event family and session when the registered context is not aligned; UNKNOWN context rows are excluded and reported.",
+      "maximum_tests_per_session": 33,
+      "support_floors": {
+        "calendar_years": 3,
+        "comparison_bearish_distinct_dates": 15,
+        "comparison_bullish_distinct_dates": 15,
+        "comparison_distinct_dates": 40,
+        "comparison_distinct_month_week_blocks": 18,
+        "comparison_event_instances": 70,
+        "condition_bearish_distinct_dates": 12,
+        "condition_bullish_distinct_dates": 12,
+        "condition_distinct_dates": 30,
+        "condition_distinct_month_week_blocks": 15,
+        "condition_event_instances": 50,
+        "minimum_condition_dates_per_eligible_year": 5
+      },
+      "unit": "One event family crossed with exactly one permitted context; no three-way interaction."
+    },
+    "stage2_mapping": {
+      "all_six_event_families": [
+        "MACRO_ENGINE_ALIGNMENT",
+        "REAL_YIELD_USD_ALIGNMENT",
+        "RECENT_RELEASE_ALIGNMENT",
+        "STRUCTURE_15M_1H_ALIGNMENT"
+      ],
+      "comparison": "Same event/session with a known nonaligned state; UNKNOWN excluded and reported.",
+      "three_level_event_families_only": [
+        "FLOW_DEPTH_CONFIRMATION_FOR_LEVEL_EVENTS_ONLY",
+        "LIQUIDITY_FRAGILITY_FOR_LEVEL_EVENTS_ONLY"
+      ]
+    },
+    "stage2_test_count_per_session": 30
+  },
+  "time_grid": {
+    "coverage_tail_seconds": 3600,
+    "dst_authority": "IANA zoneinfo independently for Europe/London and America/New_York",
+    "feature_warmup_seconds": 900,
+    "micro_antecedent_boundaries": "08:00 and 08:01 are calculated; 08:00 is antecedent-only",
+    "micro_onset_first_eligible_local_close": "08:02:00",
+    "minute_decisions_per_available_session": 240,
+    "one_second_buckets_per_available_session": 18900,
+    "sessions": {
+      "LONDON": {
+        "timezone": "Europe/London",
+        "trigger_scan_local": "[08:00:00,12:00:00)"
+      },
+      "NEW_YORK": {
+        "timezone": "America/New_York",
+        "trigger_scan_local": "[08:00:00,12:00:00)"
+      }
+    },
+    "trigger_scan_seconds": 14400,
+    "xau_coverage_bars_per_available_session": 300
+  },
+  "verdict_order": [
+    "FAIL_PREDECESSOR_OR_SOURCE_SEAL",
+    "FAIL_FULL_SESSION_TIMESTAMP_COVERAGE",
+    "FAIL_FEATURE_INTEGRITY",
+    "FAIL_EVENT_OR_CONTEXT_INTEGRITY",
+    "FAIL_REPRODUCTION",
+    "PASS_MILESTONE_2_OUTCOME_BLIND_SUPPORT_MATERIALIZATION"
+  ],
+  "version": "GC_SESSION_TRIGGER_EDGE_M2_PROTOCOL_V1_0",
+  "xau_timestamp_coverage": {
+    "allowed_known_gaps": [
+      {
+        "session": "NEW_YORK",
+        "session_date": "2021-12-13",
+        "utc_open_times": [
+          "16:32",
+          "16:33"
+        ]
+      },
+      {
+        "session": "NEW_YORK",
+        "session_date": "2023-03-15",
+        "utc_open_ranges": [
+          "13:19-13:27"
+        ]
+      },
+      {
+        "session": "LONDON",
+        "session_date": "2023-08-15",
+        "utc_open_ranges": [
+          "08:05-08:40",
+          "09:37-09:39",
+          "10:05-10:08"
+        ]
+      },
+      {
+        "session": "NEW_YORK",
+        "session_date": "2023-09-13",
+        "utc_open_ranges": [
+          "14:48-14:50"
+        ]
+      }
+    ],
+    "documented_unavailable": [
+      {
+        "reason": "CME_GOOD_FRIDAY",
+        "session_date": "2022-04-15",
+        "sessions": [
+          "LONDON",
+          "NEW_YORK"
+        ]
+      }
+    ],
+    "event_gap_disposition": "Emit a detected trigger as UNKNOWN_FORWARD_COVERAGE and exclude it from support admission when its detection, anchor, or any registered path through +60 minutes intersects a missing timestamp. Never bridge or impute.",
+    "required_interval": "Every one-minute bar open in [session open, session open+5h), exactly 300 timestamps.",
+    "trigger_value_boundary": "OHLC may be used only for bars completing no later than the current event decision. Bars after a decision are never joined or transformed into outcomes in M2."
+  },
+  "year_2025_or_2026_values_accessed": false
+}

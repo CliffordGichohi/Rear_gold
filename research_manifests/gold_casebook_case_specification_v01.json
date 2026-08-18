@@ -1,0 +1,143 @@
+{
+  "authorization": {
+    "authorized_on": "2026-07-29",
+    "contract_amendment": "AUTHORIZED_AMENDMENT_1_EXPLORATORY_UNIVERSAL_ZN_CASE",
+    "scope": "Permit only the universal four-hour ZN-direction rule as an exploratory Milestone 5 candidate while retaining every other restriction.",
+    "verbatim": "Approved. Amend the research contract only to permit the universal four-hour ZN-direction rule as an exploratory Milestone 5 candidate. Retain every other restriction, freeze the rule without retuning, keep 2024 untouched until Milestone 6, and keep 2025 locked."
+  },
+  "candidate": {
+    "candidate_code": "UNIVERSAL_ZN_4H_SIGN_V0_1",
+    "epistemic_status": "INFERRED",
+    "feature": {
+      "family_code": "INTRADAY_CROSS_MARKET",
+      "feature_id": "cross_zn_v_0_4_hours",
+      "horizon": "4_HOURS",
+      "instrument": "ZN.v.0",
+      "instrument_semantics": "Continuous CME 10-year Treasury-note futures price proxy. It is not an observed nominal or real Treasury yield.",
+      "required_source_status": "READY",
+      "transform": "SIGN_3"
+    },
+    "interpretation": {
+      "negative_price_change": "Upward nominal-yield pressure proxy; bearish gold bias.",
+      "positive_price_change": "Downward nominal-yield pressure proxy; bullish gold bias."
+    },
+    "no_bias_conditions": [
+      "feature state is FLAT",
+      "feature state is UNKNOWN",
+      "raw percent change is absent or non-finite",
+      "source state or four-hour change is not READY",
+      "current or reference observation is stale",
+      "four-hour comparison crosses a continuous-contract roll",
+      "source key is absent",
+      "feature was not available by the decision timestamp"
+    ],
+    "prohibited_substitutions": [
+      "ZT fallback",
+      "ZT and ZN confirmation rule",
+      "session-specific Treasury proxy",
+      "another horizon",
+      "non-zero movement threshold",
+      "macro, positioning, event, session, liquidity, or structure gate"
+    ],
+    "rule_table": {
+      "FLAT": "NO_BIAS",
+      "NEGATIVE": "SHORT",
+      "POSITIVE": "LONG",
+      "UNKNOWN": "NO_BIAS"
+    },
+    "sessions": [
+      "LONDON",
+      "NEW_YORK"
+    ],
+    "status": "EXPLORATORY_NOT_VALIDATED_EDGE",
+    "universal_session_rule": true
+  },
+  "chronological_validation_gate": {
+    "comparison": "Evaluate the frozen selector separately for London and New York against the better of the same-session ALWAYS_LONG and ALWAYS_SHORT controls over calendar 2024.",
+    "cost_robustness": "At 1.5 times every frozen spread, slippage, and commission cost, each session selector must retain positive mean net P&L.",
+    "decision_support": {
+      "minimum_directional_cases_per_session": 100,
+      "minimum_directional_cases_per_session_and_state": 40,
+      "minimum_iso_week_clusters_per_session_and_state": 20
+    },
+    "mapping_consistency": "For each session, both POSITIVE-to-LONG and NEGATIVE-to-SHORT validation cells must have positive mean net return after frozen costs.",
+    "primary_pass_condition": "For each session, mean net return must be above zero, profit factor must exceed one, and mean net return must exceed the better same-period unconditional directional control.",
+    "temporal_stability": "Each session selector must have positive mean net return in both chronological halves of calendar 2024.",
+    "uncertainty": "Report deterministic ISO-week cluster bootstrap 95 percent intervals; the interval is diagnostic and is not an independently adjustable threshold.",
+    "verdict_policy": "Every gate must pass. Failure rejects this frozen candidate; 2024 may not be used to rename, retune, or replace it."
+  },
+  "development_reporting": {
+    "bootstrap_replications": 5000,
+    "bootstrap_seed": "SHA-256 of case-specification manifest hash, session code, and selector code",
+    "cluster": "ISO week of session date",
+    "metrics": [
+      "directional case count",
+      "no-bias case count",
+      "long and short counts",
+      "net win rate",
+      "mean and median net P&L per ounce",
+      "mean net return in basis points",
+      "ISO-week cluster bootstrap 95 percent interval",
+      "profit factor",
+      "maximum drawdown",
+      "same-session unconditional control comparison",
+      "results by year and chronological half"
+    ],
+    "purpose": "Describe the already frozen selector on development data only. These results cannot change the rule and do not validate an edge."
+  },
+  "execution": {
+    "changes_permitted": false,
+    "execution_manifest_hash": "724a4fef0fa4b526b4d30b9743c2dfa013c53f87b19262a36b05f3fd07c87d76",
+    "execution_manifest_path": "research_manifests/gold_casebook_constant_execution_v01.json",
+    "fixed_exit_clock_local": "12:00",
+    "fixed_notional_ounces": 1.0,
+    "next_bar_entry_clock_local": "08:01",
+    "session_decision_clock_local": "08:00"
+  },
+  "governing_contract": "GOLD_CASEBOOK_RESEARCH_CONTRACT.md",
+  "manifest_hash": "a4696482f0db166fab9dd36a6d6742fb5589a1e5f2b6beeb705747a3d059c8de",
+  "manifest_version": "GOLD_CASEBOOK_CASE_SPECIFICATION_V0_1",
+  "milestone": "5_CASE_SPECIFICATION",
+  "prohibited": {
+    "account_scaling_or_leverage_search": true,
+    "calendar_2024_conditional_feature_or_return_access": true,
+    "calendar_2025_access": true,
+    "entry_exit_stop_target_or_reward_to_risk_optimization": true,
+    "feature_or_interaction_addition": true,
+    "machine_learning_model": true,
+    "rule_or_threshold_retuning_after_freeze": true,
+    "session_specific_rule": true
+  },
+  "source": {
+    "baseline_bundle_manifest_hash": "dff92e13105b0b6fd6c9a71a5d9f7668384361d37475fac5fc8b2a33521ea032",
+    "baseline_bundle_manifest_path": "research_artifacts/gold_casebook_baseline_v01/manifest.json",
+    "baseline_trades_sha256": "afbe8f78cadb27ed5b3178573d7d74e1d6ae069a8543cebcf4cab3ef5f99fa85",
+    "casebook_manifest_hash": "d1241633b073cd7307f1da00a13a2d76c132f3dccefc52a076be2c641f06b85f",
+    "casebook_manifest_path": "research_artifacts/gold_casebook_v01/manifest.json",
+    "development_features_sha256": "66b98af507ce484089bad2af2f0d20e3a2dccaaeb88d5b2d8d6d6a6c96d0d691",
+    "discovery_bundle_manifest_hash": "a89429d80b589ba3cc5eb64f5d9635f5468768a190900fadbbe95ad75ba75b80",
+    "discovery_bundle_manifest_path": "research_artifacts/gold_casebook_relationships_v01/manifest.json",
+    "discovery_rankings_hash": "a6b487de6fd13ff4bbfe0b2ff082a46b4838ca77faf7d7bfe5b6c6333a4291f2",
+    "discovery_research_manifest_hash": "044b0d1ca776a052b17e18068363f72d5a0edd61408bb94080a413219180b426",
+    "discovery_research_manifest_path": "research_manifests/gold_casebook_relationship_discovery_v01.json"
+  },
+  "status": "FROZEN_BEFORE_COMBINED_SELECTOR_RESULT",
+  "time_partitions": {
+    "chronological_validation_reserve": {
+      "conditional_data_loaded": false,
+      "end_exclusive": "2025-01-01T00:00:00+00:00",
+      "purpose": "Milestone 6 only",
+      "start_inclusive": "2024-01-01T00:00:00+00:00"
+    },
+    "development": {
+      "end_exclusive": "2024-01-01T00:00:00+00:00",
+      "start_inclusive": "2021-08-01T00:00:00+00:00"
+    },
+    "locked_holdout": {
+      "data_loaded": false,
+      "end_exclusive": "2026-01-01T00:00:00+00:00",
+      "purpose": "Milestone 7 one-time holdout only",
+      "start_inclusive": "2025-01-01T00:00:00+00:00"
+    }
+  }
+}

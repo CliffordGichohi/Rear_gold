@@ -14,6 +14,8 @@ import {
   licensedProviderHealthSchema,
   marketObservationSchema,
   marketStructureSnapshotSchema,
+  sessionEdgeStrategyRunSchema,
+  sessionEdgeStudyRunSchema,
   type BacktestDataRange,
   type BacktestRun,
   type DataHealth,
@@ -27,6 +29,8 @@ import {
   type LicensedProviderHealth,
   type MarketObservation,
   type MarketStructureSnapshot,
+  type SessionEdgeStrategyRun,
+  type SessionEdgeStudyRun,
 } from "@/lib/api";
 
 const internalApiUrl =
@@ -79,7 +83,27 @@ export async function getBacktestDataRange(): Promise<BacktestDataRange> {
 }
 
 export async function getRecentBacktests(): Promise<BacktestRun[]> {
-  return backtestRunSchema.array().parse(await getJson("/backtests/runs?limit=5"));
+  return backtestRunSchema.array().parse(
+    await getJson(
+      "/backtests/runs?limit=5&detail_limit=1&strategy_version=1.5.0",
+    ),
+  );
+}
+
+export async function getRecentSessionEdgeStudies(): Promise<
+  SessionEdgeStudyRun[]
+> {
+  return sessionEdgeStudyRunSchema.array().parse(
+    await getJson("/session-edge-studies/runs?limit=5&detail_limit=20"),
+  );
+}
+
+export async function getRecentSessionEdgeStrategies(): Promise<
+  SessionEdgeStrategyRun[]
+> {
+  return sessionEdgeStrategyRunSchema.array().parse(
+    await getJson("/session-edge-strategies/runs?limit=5&detail_limit=1"),
+  );
 }
 
 export async function getEconomicEvents(): Promise<EconomicEvent[]> {
@@ -121,7 +145,7 @@ export async function getAtlantaFedMptHealth(): Promise<LicensedProviderHealth> 
 export async function getMarketStructure(): Promise<MarketStructureSnapshot> {
   return marketStructureSnapshotSchema.parse(
     await getJson(
-      "/market-structure/snapshot?instrument=XAUUSD&data_mode=AUTO&chart_timeframe=5m",
+      "/market-structure/snapshot?instrument=XAUUSD&data_mode=AUTO&chart_timeframe=5m&max_source_bars=20000",
     ),
   );
 }

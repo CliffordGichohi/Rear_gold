@@ -1,0 +1,2915 @@
+{
+  "classification": "SOURCE_INTEGRITY_DIAGNOSTIC_ONLY",
+  "created_at_utc": "2026-08-04T06:55:38.371192Z",
+  "failed_request_count": 13,
+  "market_values_or_outcomes_accessed_or_reported": false,
+  "parquet_footer_access_only": true,
+  "predecessor_step5b_status_preserved": "FAIL_STEP_5B_BUDGET_C_SOURCE_INTEGRITY",
+  "research_or_validation_credit": "NONE",
+  "schema_failure_counts": {
+    "mbo": 11,
+    "mbp-10": 2
+  },
+  "sealed_expected_bad_ts_recv_old_snapshot_rule_violations": 174,
+  "sealed_expected_incomplete_prediction_windows": 4,
+  "sealed_expected_receive_before_event_rows": 719524,
+  "source_rows_accessed": false,
+  "sources": [
+    {
+      "expected_instrument_id_by_date": {
+        "2021-11-08": 51659,
+        "2021-11-09": 51659,
+        "2021-11-10": 51659,
+        "2021-11-11": 51659,
+        "2021-11-12": 51659
+      },
+      "failed_checks": [
+        "bad_ts_recv_rows_follow_snapshot_semantics",
+        "receive_does_not_precede_event"
+      ],
+      "footer_record_count": 10052227,
+      "job_id": "GLBX-20260803-7WKC93JQ8A",
+      "lineage": {
+        "bytes": 3810,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q007_mbo/normalized/lineage.json",
+        "sha256": "4a4eafe16cdf3c6d88ac86c2b36dedbeb29bc8987b2b628d93bc87493540cce9"
+      },
+      "market_values_accessed_or_reported": false,
+      "normalized_payload": {
+        "bytes": 138644549,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q007_mbo/normalized/gc_v_0_2021-11_SECOND_COMPLETE_CME_WEEK_RUN_01_mbo.parquet",
+        "sha256": "46252540251a93582fad72933a378eb7c43744fbea2e37fbff4acf1309334740"
+      },
+      "parquet_schema_names": [
+        "source_file_index",
+        "source_row_ordinal",
+        "ts_recv",
+        "ts_event",
+        "rtype",
+        "publisher_id",
+        "instrument_id",
+        "action",
+        "side",
+        "price_fixed_1e9",
+        "size",
+        "channel_id",
+        "order_id",
+        "flags",
+        "ts_in_delta",
+        "sequence"
+      ],
+      "quality": {
+        "bytes": 9526,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q007_mbo/normalized/data_quality.json",
+        "sha256": "1ce83563fc0064ec4486bfa9e717561bdf16b17bff312db5fc340aa0f9686aae"
+      },
+      "request": {
+        "compression": "zstd",
+        "dataset": "GLBX.MDP3",
+        "delivery": "download",
+        "encoding": "dbn",
+        "end": "2021-11-13T00:00:00Z",
+        "map_symbols": false,
+        "pretty_px": false,
+        "pretty_ts": false,
+        "schema": "mbo",
+        "split_duration": "day",
+        "split_symbols": false,
+        "start": "2021-11-08T00:00:00Z",
+        "stype_in": "continuous",
+        "stype_out": "instrument_id",
+        "symbols": [
+          "GC.v.0"
+        ]
+      },
+      "request_id": "Q007:mbo",
+      "schema": "mbo",
+      "sealed_expected_counts": {
+        "bad_ts_recv_old_snapshot_rule_violations": 100,
+        "incomplete_prediction_windows": 0,
+        "receive_before_event_rows": 949
+      },
+      "sealed_prediction_window_coverage": [
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-08T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2021-11-08"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-08T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2021-11-08"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-09T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2021-11-09"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-09T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2021-11-09"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-10T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2021-11-10"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-10T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2021-11-10"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-11T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2021-11-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-11T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2021-11-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-12T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2021-11-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-12T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2021-11-12"
+        }
+      ],
+      "selected_date_rows": [
+        {
+          "london_decision_at_utc": "2021-11-08T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2021-11-08T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2021-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2021-11-08",
+          "weekday": "MONDAY"
+        },
+        {
+          "london_decision_at_utc": "2021-11-09T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2021-11-09T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2021-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2021-11-09",
+          "weekday": "TUESDAY"
+        },
+        {
+          "london_decision_at_utc": "2021-11-10T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2021-11-10T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2021-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2021-11-10",
+          "weekday": "WEDNESDAY"
+        },
+        {
+          "london_decision_at_utc": "2021-11-11T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2021-11-11T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2021-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2021-11-11",
+          "weekday": "THURSDAY"
+        },
+        {
+          "london_decision_at_utc": "2021-11-12T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2021-11-12T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2021-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2021-11-12",
+          "weekday": "FRIDAY"
+        }
+      ],
+      "selected_dates": [
+        "2021-11-08",
+        "2021-11-09",
+        "2021-11-10",
+        "2021-11-11",
+        "2021-11-12"
+      ],
+      "source_rows_accessed_during_preparation": false,
+      "source_seal": {
+        "bytes": 2581,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q007_mbo/normalized/seal.json",
+        "sha256": "9401951e670d2464bc37d42876ba97380184c94b806eb7f8149deace35670f41"
+      },
+      "source_seal_hash": "7bf8fc3242d895d8480c1e2f3af6aff37857f68dbc6c6dc34ec06531fd667367"
+    },
+    {
+      "expected_instrument_id_by_date": {
+        "2021-11-08": 51659,
+        "2021-11-09": 51659,
+        "2021-11-10": 51659,
+        "2021-11-11": 51659,
+        "2021-11-12": 51659
+      },
+      "failed_checks": [
+        "bad_ts_recv_rows_follow_snapshot_semantics"
+      ],
+      "footer_record_count": 8056430,
+      "job_id": "GLBX-20260803-WUE6DWJ9LQ",
+      "lineage": {
+        "bytes": 3853,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q008_mbp-10/normalized/lineage.json",
+        "sha256": "e1572dc4500c0a0e50cbe1b5ad58a228756595fb0e3482a1365397040a9caf4a"
+      },
+      "market_values_accessed_or_reported": false,
+      "normalized_payload": {
+        "bytes": 355195339,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q008_mbp-10/normalized/gc_v_0_2021-11_SECOND_COMPLETE_CME_WEEK_RUN_01_mbp10.parquet",
+        "sha256": "1b1366b3cc0e182aa98d6091257034870eec4da56b73f49bacf3bdaaac9d044f"
+      },
+      "parquet_schema_names": [
+        "source_file_index",
+        "source_row_ordinal",
+        "ts_recv",
+        "ts_event",
+        "rtype",
+        "publisher_id",
+        "instrument_id",
+        "action",
+        "side",
+        "depth",
+        "price_fixed_1e9",
+        "size",
+        "flags",
+        "ts_in_delta",
+        "sequence",
+        "bid_px_00",
+        "bid_sz_00",
+        "bid_ct_00",
+        "ask_px_00",
+        "ask_sz_00",
+        "ask_ct_00",
+        "bid_px_01",
+        "bid_sz_01",
+        "bid_ct_01",
+        "ask_px_01",
+        "ask_sz_01",
+        "ask_ct_01",
+        "bid_px_02",
+        "bid_sz_02",
+        "bid_ct_02",
+        "ask_px_02",
+        "ask_sz_02",
+        "ask_ct_02",
+        "bid_px_03",
+        "bid_sz_03",
+        "bid_ct_03",
+        "ask_px_03",
+        "ask_sz_03",
+        "ask_ct_03",
+        "bid_px_04",
+        "bid_sz_04",
+        "bid_ct_04",
+        "ask_px_04",
+        "ask_sz_04",
+        "ask_ct_04",
+        "bid_px_05",
+        "bid_sz_05",
+        "bid_ct_05",
+        "ask_px_05",
+        "ask_sz_05",
+        "ask_ct_05",
+        "bid_px_06",
+        "bid_sz_06",
+        "bid_ct_06",
+        "ask_px_06",
+        "ask_sz_06",
+        "ask_ct_06",
+        "bid_px_07",
+        "bid_sz_07",
+        "bid_ct_07",
+        "ask_px_07",
+        "ask_sz_07",
+        "ask_ct_07",
+        "bid_px_08",
+        "bid_sz_08",
+        "bid_ct_08",
+        "ask_px_08",
+        "ask_sz_08",
+        "ask_ct_08",
+        "bid_px_09",
+        "bid_sz_09",
+        "bid_ct_09",
+        "ask_px_09",
+        "ask_sz_09",
+        "ask_ct_09"
+      ],
+      "quality": {
+        "bytes": 10280,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q008_mbp-10/normalized/data_quality.json",
+        "sha256": "54c9eb69262a07f57dab06ad5b9c8afb13d434678b76c9390c0542fb8b2a23fc"
+      },
+      "request": {
+        "compression": "zstd",
+        "dataset": "GLBX.MDP3",
+        "delivery": "download",
+        "encoding": "dbn",
+        "end": "2021-11-13T00:00:00Z",
+        "map_symbols": false,
+        "pretty_px": false,
+        "pretty_ts": false,
+        "schema": "mbp-10",
+        "split_duration": "day",
+        "split_symbols": false,
+        "start": "2021-11-08T00:00:00Z",
+        "stype_in": "continuous",
+        "stype_out": "instrument_id",
+        "symbols": [
+          "GC.v.0"
+        ]
+      },
+      "request_id": "Q008:mbp-10",
+      "schema": "mbp-10",
+      "sealed_expected_counts": {
+        "bad_ts_recv_old_snapshot_rule_violations": 74,
+        "incomplete_prediction_windows": 0,
+        "receive_before_event_rows": 0
+      },
+      "sealed_prediction_window_coverage": [
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-08T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2021-11-08"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-08T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2021-11-08"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-09T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2021-11-09"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-09T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2021-11-09"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-10T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2021-11-10"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-10T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2021-11-10"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-11T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2021-11-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-11T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2021-11-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-12T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2021-11-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2021-11-12T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2021-11-12"
+        }
+      ],
+      "selected_date_rows": [
+        {
+          "london_decision_at_utc": "2021-11-08T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2021-11-08T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2021-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2021-11-08",
+          "weekday": "MONDAY"
+        },
+        {
+          "london_decision_at_utc": "2021-11-09T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2021-11-09T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2021-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2021-11-09",
+          "weekday": "TUESDAY"
+        },
+        {
+          "london_decision_at_utc": "2021-11-10T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2021-11-10T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2021-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2021-11-10",
+          "weekday": "WEDNESDAY"
+        },
+        {
+          "london_decision_at_utc": "2021-11-11T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2021-11-11T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2021-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2021-11-11",
+          "weekday": "THURSDAY"
+        },
+        {
+          "london_decision_at_utc": "2021-11-12T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2021-11-12T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2021-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2021-11-12",
+          "weekday": "FRIDAY"
+        }
+      ],
+      "selected_dates": [
+        "2021-11-08",
+        "2021-11-09",
+        "2021-11-10",
+        "2021-11-11",
+        "2021-11-12"
+      ],
+      "source_rows_accessed_during_preparation": false,
+      "source_seal": {
+        "bytes": 2626,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q008_mbp-10/normalized/seal.json",
+        "sha256": "1ed32fea11e67524b6bceb4a08ea0d5c02242965603944e8454a1c54aa27fa9c"
+      },
+      "source_seal_hash": "d6c025b0a0bd85f3988e1b4219a8755adca796a2247848a15751dedcd673d507"
+    },
+    {
+      "expected_instrument_id_by_date": {
+        "2022-04-11": 1064,
+        "2022-04-12": 1064,
+        "2022-04-13": 1064,
+        "2022-04-14": 1064,
+        "2022-04-15": 1064
+      },
+      "failed_checks": [
+        "all_prediction_windows_complete_or_documented_unknown"
+      ],
+      "footer_record_count": 7488759,
+      "job_id": "GLBX-20260803-773AEDED3X",
+      "lineage": {
+        "bytes": 3801,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q017_mbo/normalized/lineage.json",
+        "sha256": "42a416eaea485b39abb22ccad6305dfd29e087b744467682ddd61c3610b9f132"
+      },
+      "market_values_accessed_or_reported": false,
+      "normalized_payload": {
+        "bytes": 103375002,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q017_mbo/normalized/gc_v_0_2022-04_SECOND_COMPLETE_CME_WEEK_RUN_01_mbo.parquet",
+        "sha256": "1fffd531231a0bd65564d9714e9f6701083eacdfb8479eb5b98924a69591ba8a"
+      },
+      "parquet_schema_names": [
+        "source_file_index",
+        "source_row_ordinal",
+        "ts_recv",
+        "ts_event",
+        "rtype",
+        "publisher_id",
+        "instrument_id",
+        "action",
+        "side",
+        "price_fixed_1e9",
+        "size",
+        "channel_id",
+        "order_id",
+        "flags",
+        "ts_in_delta",
+        "sequence"
+      ],
+      "quality": {
+        "bytes": 9507,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q017_mbo/normalized/data_quality.json",
+        "sha256": "28f9f9f9dbb7f5f2c3bf64be5fc4d04c061bc81059f41bd7d8a1c723265f97af"
+      },
+      "request": {
+        "compression": "zstd",
+        "dataset": "GLBX.MDP3",
+        "delivery": "download",
+        "encoding": "dbn",
+        "end": "2022-04-16T00:00:00Z",
+        "map_symbols": false,
+        "pretty_px": false,
+        "pretty_ts": false,
+        "schema": "mbo",
+        "split_duration": "day",
+        "split_symbols": false,
+        "start": "2022-04-11T00:00:00Z",
+        "stype_in": "continuous",
+        "stype_out": "instrument_id",
+        "symbols": [
+          "GC.v.0"
+        ]
+      },
+      "request_id": "Q017:mbo",
+      "schema": "mbo",
+      "sealed_expected_counts": {
+        "bad_ts_recv_old_snapshot_rule_violations": 0,
+        "incomplete_prediction_windows": 2,
+        "receive_before_event_rows": 0
+      },
+      "sealed_prediction_window_coverage": [
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-11T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2022-04-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-11T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2022-04-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-12T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2022-04-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-12T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2022-04-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-13T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2022-04-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-13T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2022-04-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-14T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2022-04-14"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-14T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2022-04-14"
+        },
+        {
+          "coverage_disposition": "INCOMPLETE_SOURCE",
+          "cutoff_at_utc": "2022-04-15T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2022-04-15"
+        },
+        {
+          "coverage_disposition": "INCOMPLETE_SOURCE",
+          "cutoff_at_utc": "2022-04-15T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2022-04-15"
+        }
+      ],
+      "selected_date_rows": [
+        {
+          "london_decision_at_utc": "2022-04-11T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2022-04-11T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2022-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2022-04-11",
+          "weekday": "MONDAY"
+        },
+        {
+          "london_decision_at_utc": "2022-04-12T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2022-04-12T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2022-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2022-04-12",
+          "weekday": "TUESDAY"
+        },
+        {
+          "london_decision_at_utc": "2022-04-13T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2022-04-13T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2022-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2022-04-13",
+          "weekday": "WEDNESDAY"
+        },
+        {
+          "london_decision_at_utc": "2022-04-14T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2022-04-14T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2022-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2022-04-14",
+          "weekday": "THURSDAY"
+        },
+        {
+          "london_decision_at_utc": "2022-04-15T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2022-04-15T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2022-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2022-04-15",
+          "weekday": "FRIDAY"
+        }
+      ],
+      "selected_dates": [
+        "2022-04-11",
+        "2022-04-12",
+        "2022-04-13",
+        "2022-04-14",
+        "2022-04-15"
+      ],
+      "source_rows_accessed_during_preparation": false,
+      "source_seal": {
+        "bytes": 2578,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q017_mbo/normalized/seal.json",
+        "sha256": "c2b2f7411fd4bf388ec8ebffa178f1f094cfeeea07188222de6de69d9354b9e7"
+      },
+      "source_seal_hash": "c086a5b7305c9605dec60a12b650860582b439dfebd8c7a327bf403375b024b1"
+    },
+    {
+      "expected_instrument_id_by_date": {
+        "2022-04-11": 1064,
+        "2022-04-12": 1064,
+        "2022-04-13": 1064,
+        "2022-04-14": 1064,
+        "2022-04-15": 1064
+      },
+      "failed_checks": [
+        "all_prediction_windows_complete_or_documented_unknown"
+      ],
+      "footer_record_count": 5680973,
+      "job_id": "GLBX-20260803-KRTY6YBXVU",
+      "lineage": {
+        "bytes": 3842,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q018_mbp-10/normalized/lineage.json",
+        "sha256": "e774ebe4aaa3e43aeb7bed610d742b0fb775e4c94ce43cb2f96b77b41d3d9b5c"
+      },
+      "market_values_accessed_or_reported": false,
+      "normalized_payload": {
+        "bytes": 245908027,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q018_mbp-10/normalized/gc_v_0_2022-04_SECOND_COMPLETE_CME_WEEK_RUN_01_mbp10.parquet",
+        "sha256": "69ab2c86e1930ccf0d5b22b0534a8aa5e88068c1c782ea06b390c33d338d5a84"
+      },
+      "parquet_schema_names": [
+        "source_file_index",
+        "source_row_ordinal",
+        "ts_recv",
+        "ts_event",
+        "rtype",
+        "publisher_id",
+        "instrument_id",
+        "action",
+        "side",
+        "depth",
+        "price_fixed_1e9",
+        "size",
+        "flags",
+        "ts_in_delta",
+        "sequence",
+        "bid_px_00",
+        "bid_sz_00",
+        "bid_ct_00",
+        "ask_px_00",
+        "ask_sz_00",
+        "ask_ct_00",
+        "bid_px_01",
+        "bid_sz_01",
+        "bid_ct_01",
+        "ask_px_01",
+        "ask_sz_01",
+        "ask_ct_01",
+        "bid_px_02",
+        "bid_sz_02",
+        "bid_ct_02",
+        "ask_px_02",
+        "ask_sz_02",
+        "ask_ct_02",
+        "bid_px_03",
+        "bid_sz_03",
+        "bid_ct_03",
+        "ask_px_03",
+        "ask_sz_03",
+        "ask_ct_03",
+        "bid_px_04",
+        "bid_sz_04",
+        "bid_ct_04",
+        "ask_px_04",
+        "ask_sz_04",
+        "ask_ct_04",
+        "bid_px_05",
+        "bid_sz_05",
+        "bid_ct_05",
+        "ask_px_05",
+        "ask_sz_05",
+        "ask_ct_05",
+        "bid_px_06",
+        "bid_sz_06",
+        "bid_ct_06",
+        "ask_px_06",
+        "ask_sz_06",
+        "ask_ct_06",
+        "bid_px_07",
+        "bid_sz_07",
+        "bid_ct_07",
+        "ask_px_07",
+        "ask_sz_07",
+        "ask_ct_07",
+        "bid_px_08",
+        "bid_sz_08",
+        "bid_ct_08",
+        "ask_px_08",
+        "ask_sz_08",
+        "ask_ct_08",
+        "bid_px_09",
+        "bid_sz_09",
+        "bid_ct_09",
+        "ask_px_09",
+        "ask_sz_09",
+        "ask_ct_09"
+      ],
+      "quality": {
+        "bytes": 10271,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q018_mbp-10/normalized/data_quality.json",
+        "sha256": "b0df8d60350d4c8c118afa743b59bac90acacc7208a9474204c196a77418ef77"
+      },
+      "request": {
+        "compression": "zstd",
+        "dataset": "GLBX.MDP3",
+        "delivery": "download",
+        "encoding": "dbn",
+        "end": "2022-04-16T00:00:00Z",
+        "map_symbols": false,
+        "pretty_px": false,
+        "pretty_ts": false,
+        "schema": "mbp-10",
+        "split_duration": "day",
+        "split_symbols": false,
+        "start": "2022-04-11T00:00:00Z",
+        "stype_in": "continuous",
+        "stype_out": "instrument_id",
+        "symbols": [
+          "GC.v.0"
+        ]
+      },
+      "request_id": "Q018:mbp-10",
+      "schema": "mbp-10",
+      "sealed_expected_counts": {
+        "bad_ts_recv_old_snapshot_rule_violations": 0,
+        "incomplete_prediction_windows": 2,
+        "receive_before_event_rows": 0
+      },
+      "sealed_prediction_window_coverage": [
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-11T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2022-04-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-11T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2022-04-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-12T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2022-04-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-12T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2022-04-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-13T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2022-04-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-13T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2022-04-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-14T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2022-04-14"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2022-04-14T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2022-04-14"
+        },
+        {
+          "coverage_disposition": "INCOMPLETE_SOURCE",
+          "cutoff_at_utc": "2022-04-15T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2022-04-15"
+        },
+        {
+          "coverage_disposition": "INCOMPLETE_SOURCE",
+          "cutoff_at_utc": "2022-04-15T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2022-04-15"
+        }
+      ],
+      "selected_date_rows": [
+        {
+          "london_decision_at_utc": "2022-04-11T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2022-04-11T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2022-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2022-04-11",
+          "weekday": "MONDAY"
+        },
+        {
+          "london_decision_at_utc": "2022-04-12T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2022-04-12T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2022-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2022-04-12",
+          "weekday": "TUESDAY"
+        },
+        {
+          "london_decision_at_utc": "2022-04-13T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2022-04-13T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2022-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2022-04-13",
+          "weekday": "WEDNESDAY"
+        },
+        {
+          "london_decision_at_utc": "2022-04-14T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2022-04-14T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2022-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2022-04-14",
+          "weekday": "THURSDAY"
+        },
+        {
+          "london_decision_at_utc": "2022-04-15T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2022-04-15T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2022-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2022-04-15",
+          "weekday": "FRIDAY"
+        }
+      ],
+      "selected_dates": [
+        "2022-04-11",
+        "2022-04-12",
+        "2022-04-13",
+        "2022-04-14",
+        "2022-04-15"
+      ],
+      "source_rows_accessed_during_preparation": false,
+      "source_seal": {
+        "bytes": 2621,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q018_mbp-10/normalized/seal.json",
+        "sha256": "fda4bbd2f1c74d1e72ae0072b2fa9c0a6d2970cc31e0096b80dfaf86c4b20c0c"
+      },
+      "source_seal_hash": "d317cb2643f5f8d238a157327d3f49b1707d5b0b68ebd1c55a4e8abcc2a13276"
+    },
+    {
+      "expected_instrument_id_by_date": {
+        "2023-01-09": 3324,
+        "2023-01-10": 3324,
+        "2023-01-11": 3324,
+        "2023-01-12": 3324,
+        "2023-01-13": 3324
+      },
+      "failed_checks": [
+        "receive_does_not_precede_event"
+      ],
+      "footer_record_count": 11960530,
+      "job_id": "GLBX-20260803-4PBWBYCKGX",
+      "lineage": {
+        "bytes": 3805,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q035_mbo/normalized/lineage.json",
+        "sha256": "b553b16cc094e5e2442485979de24e7f69148d206922f227ec0245640d7ccee4"
+      },
+      "market_values_accessed_or_reported": false,
+      "normalized_payload": {
+        "bytes": 164218484,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q035_mbo/normalized/gc_v_0_2023-01_SECOND_COMPLETE_CME_WEEK_RUN_01_mbo.parquet",
+        "sha256": "1d87039da474f43423267a7166d55ec2a576be4f8a7e7cfcc116e8083c9244fc"
+      },
+      "parquet_schema_names": [
+        "source_file_index",
+        "source_row_ordinal",
+        "ts_recv",
+        "ts_event",
+        "rtype",
+        "publisher_id",
+        "instrument_id",
+        "action",
+        "side",
+        "price_fixed_1e9",
+        "size",
+        "channel_id",
+        "order_id",
+        "flags",
+        "ts_in_delta",
+        "sequence"
+      ],
+      "quality": {
+        "bytes": 9524,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q035_mbo/normalized/data_quality.json",
+        "sha256": "9811676de6213f04807b87370bdd80423f2e7cd7ca8fc842332bcac00bf80cb7"
+      },
+      "request": {
+        "compression": "zstd",
+        "dataset": "GLBX.MDP3",
+        "delivery": "download",
+        "encoding": "dbn",
+        "end": "2023-01-14T00:00:00Z",
+        "map_symbols": false,
+        "pretty_px": false,
+        "pretty_ts": false,
+        "schema": "mbo",
+        "split_duration": "day",
+        "split_symbols": false,
+        "start": "2023-01-09T00:00:00Z",
+        "stype_in": "continuous",
+        "stype_out": "instrument_id",
+        "symbols": [
+          "GC.v.0"
+        ]
+      },
+      "request_id": "Q035:mbo",
+      "schema": "mbo",
+      "sealed_expected_counts": {
+        "bad_ts_recv_old_snapshot_rule_violations": 0,
+        "incomplete_prediction_windows": 0,
+        "receive_before_event_rows": 79255
+      },
+      "sealed_prediction_window_coverage": [
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-01-09T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-01-09"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-01-09T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-01-09"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-01-10T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-01-10"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-01-10T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-01-10"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-01-11T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-01-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-01-11T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-01-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-01-12T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-01-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-01-12T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-01-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-01-13T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-01-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-01-13T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-01-13"
+        }
+      ],
+      "selected_date_rows": [
+        {
+          "london_decision_at_utc": "2023-01-09T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-01-09T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-01:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-01-09",
+          "weekday": "MONDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-01-10T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-01-10T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-01:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-01-10",
+          "weekday": "TUESDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-01-11T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-01-11T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-01:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-01-11",
+          "weekday": "WEDNESDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-01-12T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-01-12T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-01:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-01-12",
+          "weekday": "THURSDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-01-13T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-01-13T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-01:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-01-13",
+          "weekday": "FRIDAY"
+        }
+      ],
+      "selected_dates": [
+        "2023-01-09",
+        "2023-01-10",
+        "2023-01-11",
+        "2023-01-12",
+        "2023-01-13"
+      ],
+      "source_rows_accessed_during_preparation": false,
+      "source_seal": {
+        "bytes": 2581,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q035_mbo/normalized/seal.json",
+        "sha256": "8bbc529e039f523f652be21eb35e5e2aa86a6e4fc09142f58a1b603018fe92ec"
+      },
+      "source_seal_hash": "f9115298b5bcebb57222879ee23664f22af44688f517ed5374af9c57f7f62095"
+    },
+    {
+      "expected_instrument_id_by_date": {
+        "2023-02-13": 4235,
+        "2023-02-14": 4235,
+        "2023-02-15": 4235,
+        "2023-02-16": 4235,
+        "2023-02-17": 4235
+      },
+      "failed_checks": [
+        "receive_does_not_precede_event"
+      ],
+      "footer_record_count": 11392126,
+      "job_id": "GLBX-20260803-W49DAC3Y6Y",
+      "lineage": {
+        "bytes": 3804,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q037_mbo/normalized/lineage.json",
+        "sha256": "03b257a56c2c6a57394b5acc9d51a8494169ebe65528e26d07a41426d4ebb8b9"
+      },
+      "market_values_accessed_or_reported": false,
+      "normalized_payload": {
+        "bytes": 156882792,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q037_mbo/normalized/gc_v_0_2023-02_SECOND_COMPLETE_CME_WEEK_RUN_01_mbo.parquet",
+        "sha256": "16eb921bda4315c5e44750a7bccddbb87882e53e3bff2d049f6a76af4b2492c8"
+      },
+      "parquet_schema_names": [
+        "source_file_index",
+        "source_row_ordinal",
+        "ts_recv",
+        "ts_event",
+        "rtype",
+        "publisher_id",
+        "instrument_id",
+        "action",
+        "side",
+        "price_fixed_1e9",
+        "size",
+        "channel_id",
+        "order_id",
+        "flags",
+        "ts_in_delta",
+        "sequence"
+      ],
+      "quality": {
+        "bytes": 9524,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q037_mbo/normalized/data_quality.json",
+        "sha256": "8119396fc2c306f3d42eab8a3e96b913c8bbae286ace7fcc1924193963a39f9b"
+      },
+      "request": {
+        "compression": "zstd",
+        "dataset": "GLBX.MDP3",
+        "delivery": "download",
+        "encoding": "dbn",
+        "end": "2023-02-18T00:00:00Z",
+        "map_symbols": false,
+        "pretty_px": false,
+        "pretty_ts": false,
+        "schema": "mbo",
+        "split_duration": "day",
+        "split_symbols": false,
+        "start": "2023-02-13T00:00:00Z",
+        "stype_in": "continuous",
+        "stype_out": "instrument_id",
+        "symbols": [
+          "GC.v.0"
+        ]
+      },
+      "request_id": "Q037:mbo",
+      "schema": "mbo",
+      "sealed_expected_counts": {
+        "bad_ts_recv_old_snapshot_rule_violations": 0,
+        "incomplete_prediction_windows": 0,
+        "receive_before_event_rows": 29816
+      },
+      "sealed_prediction_window_coverage": [
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-02-13T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-02-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-02-13T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-02-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-02-14T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-02-14"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-02-14T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-02-14"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-02-15T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-02-15"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-02-15T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-02-15"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-02-16T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-02-16"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-02-16T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-02-16"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-02-17T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-02-17"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-02-17T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-02-17"
+        }
+      ],
+      "selected_date_rows": [
+        {
+          "london_decision_at_utc": "2023-02-13T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-02-13T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-02:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-02-13",
+          "weekday": "MONDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-02-14T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-02-14T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-02:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-02-14",
+          "weekday": "TUESDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-02-15T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-02-15T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-02:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-02-15",
+          "weekday": "WEDNESDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-02-16T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-02-16T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-02:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-02-16",
+          "weekday": "THURSDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-02-17T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-02-17T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-02:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-02-17",
+          "weekday": "FRIDAY"
+        }
+      ],
+      "selected_dates": [
+        "2023-02-13",
+        "2023-02-14",
+        "2023-02-15",
+        "2023-02-16",
+        "2023-02-17"
+      ],
+      "source_rows_accessed_during_preparation": false,
+      "source_seal": {
+        "bytes": 2581,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q037_mbo/normalized/seal.json",
+        "sha256": "e031eb4cacd02b46421d4628c8a98c8285ffdd59f25179d5983fbb14a2c945a3"
+      },
+      "source_seal_hash": "5bc496773ec4cc3747b573c61d87c71179bdf25330095ac036603546349de5ed"
+    },
+    {
+      "expected_instrument_id_by_date": {
+        "2023-03-13": 4235,
+        "2023-03-14": 4235,
+        "2023-03-15": 4235,
+        "2023-03-16": 4235,
+        "2023-03-17": 4235
+      },
+      "failed_checks": [
+        "receive_does_not_precede_event"
+      ],
+      "footer_record_count": 22382577,
+      "job_id": "GLBX-20260803-3UC4Q97P6B",
+      "lineage": {
+        "bytes": 3806,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q039_mbo/normalized/lineage.json",
+        "sha256": "15ccb0114d85cf93ce1004422649b312efd738881f37dcb4db36d11ea5d75018"
+      },
+      "market_values_accessed_or_reported": false,
+      "normalized_payload": {
+        "bytes": 305113054,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q039_mbo/normalized/gc_v_0_2023-03_SECOND_COMPLETE_CME_WEEK_RUN_01_mbo.parquet",
+        "sha256": "a75a8b593fe7aa5e8a03487586a54d6a104fcf99592c092d4c9357a955d71e6d"
+      },
+      "parquet_schema_names": [
+        "source_file_index",
+        "source_row_ordinal",
+        "ts_recv",
+        "ts_event",
+        "rtype",
+        "publisher_id",
+        "instrument_id",
+        "action",
+        "side",
+        "price_fixed_1e9",
+        "size",
+        "channel_id",
+        "order_id",
+        "flags",
+        "ts_in_delta",
+        "sequence"
+      ],
+      "quality": {
+        "bytes": 9525,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q039_mbo/normalized/data_quality.json",
+        "sha256": "f85851d566aca64d9e14ab7ac087c7fecda436e364db004e50ee48637dca8e19"
+      },
+      "request": {
+        "compression": "zstd",
+        "dataset": "GLBX.MDP3",
+        "delivery": "download",
+        "encoding": "dbn",
+        "end": "2023-03-18T00:00:00Z",
+        "map_symbols": false,
+        "pretty_px": false,
+        "pretty_ts": false,
+        "schema": "mbo",
+        "split_duration": "day",
+        "split_symbols": false,
+        "start": "2023-03-13T00:00:00Z",
+        "stype_in": "continuous",
+        "stype_out": "instrument_id",
+        "symbols": [
+          "GC.v.0"
+        ]
+      },
+      "request_id": "Q039:mbo",
+      "schema": "mbo",
+      "sealed_expected_counts": {
+        "bad_ts_recv_old_snapshot_rule_violations": 0,
+        "incomplete_prediction_windows": 0,
+        "receive_before_event_rows": 142166
+      },
+      "sealed_prediction_window_coverage": [
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-03-13T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-03-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-03-13T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-03-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-03-14T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-03-14"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-03-14T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-03-14"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-03-15T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-03-15"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-03-15T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-03-15"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-03-16T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-03-16"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-03-16T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-03-16"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-03-17T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-03-17"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-03-17T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-03-17"
+        }
+      ],
+      "selected_date_rows": [
+        {
+          "london_decision_at_utc": "2023-03-13T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-03-13T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-03:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-03-13",
+          "weekday": "MONDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-03-14T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-03-14T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-03:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-03-14",
+          "weekday": "TUESDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-03-15T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-03-15T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-03:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-03-15",
+          "weekday": "WEDNESDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-03-16T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-03-16T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-03:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-03-16",
+          "weekday": "THURSDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-03-17T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2023-03-17T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-03:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-03-17",
+          "weekday": "FRIDAY"
+        }
+      ],
+      "selected_dates": [
+        "2023-03-13",
+        "2023-03-14",
+        "2023-03-15",
+        "2023-03-16",
+        "2023-03-17"
+      ],
+      "source_rows_accessed_during_preparation": false,
+      "source_seal": {
+        "bytes": 2581,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q039_mbo/normalized/seal.json",
+        "sha256": "85ac10549322579e589a453f0bd74dab693390fcd9bfc46ee83db563f8148f0f"
+      },
+      "source_seal_hash": "b82572cbb2cb90f9cf1bbc81f32cf02ed4a95b43e7691a360fe3571190303163"
+    },
+    {
+      "expected_instrument_id_by_date": {
+        "2023-04-10": 30052,
+        "2023-04-11": 30052,
+        "2023-04-12": 30052,
+        "2023-04-13": 30052,
+        "2023-04-14": 30052
+      },
+      "failed_checks": [
+        "receive_does_not_precede_event"
+      ],
+      "footer_record_count": 12323363,
+      "job_id": "GLBX-20260803-8D8PMWCDJC",
+      "lineage": {
+        "bytes": 3811,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q041_mbo/normalized/lineage.json",
+        "sha256": "8616118a4e95d9cde9c7dd01f00441a53c2e9720924da8345d63355efa023539"
+      },
+      "market_values_accessed_or_reported": false,
+      "normalized_payload": {
+        "bytes": 168287238,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q041_mbo/normalized/gc_v_0_2023-04_SECOND_COMPLETE_CME_WEEK_RUN_01_mbo.parquet",
+        "sha256": "28fe7d0cf5d9448f5c3306951c5f2b69fc1e0e0e255990b828127bbe787e76f3"
+      },
+      "parquet_schema_names": [
+        "source_file_index",
+        "source_row_ordinal",
+        "ts_recv",
+        "ts_event",
+        "rtype",
+        "publisher_id",
+        "instrument_id",
+        "action",
+        "side",
+        "price_fixed_1e9",
+        "size",
+        "channel_id",
+        "order_id",
+        "flags",
+        "ts_in_delta",
+        "sequence"
+      ],
+      "quality": {
+        "bytes": 9525,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q041_mbo/normalized/data_quality.json",
+        "sha256": "7ac54a584877c3b2b9d022c4ecaf68c4b74e4855d4c824d697b3b74b80820c0f"
+      },
+      "request": {
+        "compression": "zstd",
+        "dataset": "GLBX.MDP3",
+        "delivery": "download",
+        "encoding": "dbn",
+        "end": "2023-04-15T00:00:00Z",
+        "map_symbols": false,
+        "pretty_px": false,
+        "pretty_ts": false,
+        "schema": "mbo",
+        "split_duration": "day",
+        "split_symbols": false,
+        "start": "2023-04-10T00:00:00Z",
+        "stype_in": "continuous",
+        "stype_out": "instrument_id",
+        "symbols": [
+          "GC.v.0"
+        ]
+      },
+      "request_id": "Q041:mbo",
+      "schema": "mbo",
+      "sealed_expected_counts": {
+        "bad_ts_recv_old_snapshot_rule_violations": 0,
+        "incomplete_prediction_windows": 0,
+        "receive_before_event_rows": 92526
+      },
+      "sealed_prediction_window_coverage": [
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-04-10T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-04-10"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-04-10T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-04-10"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-04-11T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-04-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-04-11T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-04-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-04-12T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-04-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-04-12T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-04-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-04-13T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-04-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-04-13T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-04-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-04-14T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-04-14"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-04-14T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-04-14"
+        }
+      ],
+      "selected_date_rows": [
+        {
+          "london_decision_at_utc": "2023-04-10T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-04-10T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-04-10",
+          "weekday": "MONDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-04-11T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-04-11T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-04-11",
+          "weekday": "TUESDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-04-12T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-04-12T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-04-12",
+          "weekday": "WEDNESDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-04-13T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-04-13T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-04-13",
+          "weekday": "THURSDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-04-14T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-04-14T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-04:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-04-14",
+          "weekday": "FRIDAY"
+        }
+      ],
+      "selected_dates": [
+        "2023-04-10",
+        "2023-04-11",
+        "2023-04-12",
+        "2023-04-13",
+        "2023-04-14"
+      ],
+      "source_rows_accessed_during_preparation": false,
+      "source_seal": {
+        "bytes": 2581,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q041_mbo/normalized/seal.json",
+        "sha256": "89d44212832a20e66359c62152a280508b1aefaa04a1d36bfb3c0453e605e9ea"
+      },
+      "source_seal_hash": "48ef31cb97d55b13002b49fe173571df9cc248136829d9c13d8827f11d87c42e"
+    },
+    {
+      "expected_instrument_id_by_date": {
+        "2023-05-08": 30052,
+        "2023-05-09": 30052,
+        "2023-05-10": 30052,
+        "2023-05-11": 30052,
+        "2023-05-12": 30052
+      },
+      "failed_checks": [
+        "receive_does_not_precede_event"
+      ],
+      "footer_record_count": 12667083,
+      "job_id": "GLBX-20260803-HWTTXSJAG5",
+      "lineage": {
+        "bytes": 3811,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q043_mbo/normalized/lineage.json",
+        "sha256": "dec32b4957d35a6554b83f4b114b60b18822de2ab5d2c7503b90aea97c259247"
+      },
+      "market_values_accessed_or_reported": false,
+      "normalized_payload": {
+        "bytes": 172645195,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q043_mbo/normalized/gc_v_0_2023-05_SECOND_COMPLETE_CME_WEEK_RUN_01_mbo.parquet",
+        "sha256": "bc4cb5df600fd6cbe2440006bf6711e4e882c36608af9f2ba0494a7d5c8988b1"
+      },
+      "parquet_schema_names": [
+        "source_file_index",
+        "source_row_ordinal",
+        "ts_recv",
+        "ts_event",
+        "rtype",
+        "publisher_id",
+        "instrument_id",
+        "action",
+        "side",
+        "price_fixed_1e9",
+        "size",
+        "channel_id",
+        "order_id",
+        "flags",
+        "ts_in_delta",
+        "sequence"
+      ],
+      "quality": {
+        "bytes": 9526,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q043_mbo/normalized/data_quality.json",
+        "sha256": "7d541d59cc9aefbf9534af4859766324d46528d61fd93ff547d0611d25baf081"
+      },
+      "request": {
+        "compression": "zstd",
+        "dataset": "GLBX.MDP3",
+        "delivery": "download",
+        "encoding": "dbn",
+        "end": "2023-05-13T00:00:00Z",
+        "map_symbols": false,
+        "pretty_px": false,
+        "pretty_ts": false,
+        "schema": "mbo",
+        "split_duration": "day",
+        "split_symbols": false,
+        "start": "2023-05-08T00:00:00Z",
+        "stype_in": "continuous",
+        "stype_out": "instrument_id",
+        "symbols": [
+          "GC.v.0"
+        ]
+      },
+      "request_id": "Q043:mbo",
+      "schema": "mbo",
+      "sealed_expected_counts": {
+        "bad_ts_recv_old_snapshot_rule_violations": 0,
+        "incomplete_prediction_windows": 0,
+        "receive_before_event_rows": 160997
+      },
+      "sealed_prediction_window_coverage": [
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-05-08T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-05-08"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-05-08T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-05-08"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-05-09T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-05-09"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-05-09T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-05-09"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-05-10T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-05-10"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-05-10T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-05-10"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-05-11T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-05-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-05-11T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-05-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-05-12T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-05-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-05-12T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-05-12"
+        }
+      ],
+      "selected_date_rows": [
+        {
+          "london_decision_at_utc": "2023-05-08T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-05-08T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-05:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-05-08",
+          "weekday": "MONDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-05-09T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-05-09T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-05:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-05-09",
+          "weekday": "TUESDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-05-10T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-05-10T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-05:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-05-10",
+          "weekday": "WEDNESDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-05-11T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-05-11T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-05:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-05-11",
+          "weekday": "THURSDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-05-12T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-05-12T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-05:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-05-12",
+          "weekday": "FRIDAY"
+        }
+      ],
+      "selected_dates": [
+        "2023-05-08",
+        "2023-05-09",
+        "2023-05-10",
+        "2023-05-11",
+        "2023-05-12"
+      ],
+      "source_rows_accessed_during_preparation": false,
+      "source_seal": {
+        "bytes": 2581,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q043_mbo/normalized/seal.json",
+        "sha256": "009e92761055a587e8ada88d61404834178ac8070da5185324c97ba761d4a394"
+      },
+      "source_seal_hash": "09196f132d0b2fcc9278b3ccacf9fd1aaa982d84c0fb44d4b31db5ae6659edd8"
+    },
+    {
+      "expected_instrument_id_by_date": {
+        "2023-06-12": 9466,
+        "2023-06-13": 9466,
+        "2023-06-14": 9466,
+        "2023-06-15": 9466,
+        "2023-06-16": 9466
+      },
+      "failed_checks": [
+        "receive_does_not_precede_event"
+      ],
+      "footer_record_count": 13824105,
+      "job_id": "GLBX-20260803-QJMJ5CS8DY",
+      "lineage": {
+        "bytes": 3805,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q045_mbo/normalized/lineage.json",
+        "sha256": "7675a35189e90ebebc33b12627ec585ad8e31f0b8e936785049477ff756e3de1"
+      },
+      "market_values_accessed_or_reported": false,
+      "normalized_payload": {
+        "bytes": 188350058,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q045_mbo/normalized/gc_v_0_2023-06_SECOND_COMPLETE_CME_WEEK_RUN_01_mbo.parquet",
+        "sha256": "72ba0ce6feb70cc9cdeede310dffa98426261da0c3d215729e161294fe5749b8"
+      },
+      "parquet_schema_names": [
+        "source_file_index",
+        "source_row_ordinal",
+        "ts_recv",
+        "ts_event",
+        "rtype",
+        "publisher_id",
+        "instrument_id",
+        "action",
+        "side",
+        "price_fixed_1e9",
+        "size",
+        "channel_id",
+        "order_id",
+        "flags",
+        "ts_in_delta",
+        "sequence"
+      ],
+      "quality": {
+        "bytes": 9525,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q045_mbo/normalized/data_quality.json",
+        "sha256": "8d03c051aba356f83e6c0ccd3018a106424235ebcb8ef3c2bae3d0cd060ed0ae"
+      },
+      "request": {
+        "compression": "zstd",
+        "dataset": "GLBX.MDP3",
+        "delivery": "download",
+        "encoding": "dbn",
+        "end": "2023-06-17T00:00:00Z",
+        "map_symbols": false,
+        "pretty_px": false,
+        "pretty_ts": false,
+        "schema": "mbo",
+        "split_duration": "day",
+        "split_symbols": false,
+        "start": "2023-06-12T00:00:00Z",
+        "stype_in": "continuous",
+        "stype_out": "instrument_id",
+        "symbols": [
+          "GC.v.0"
+        ]
+      },
+      "request_id": "Q045:mbo",
+      "schema": "mbo",
+      "sealed_expected_counts": {
+        "bad_ts_recv_old_snapshot_rule_violations": 0,
+        "incomplete_prediction_windows": 0,
+        "receive_before_event_rows": 211468
+      },
+      "sealed_prediction_window_coverage": [
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-06-12T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-06-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-06-12T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-06-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-06-13T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-06-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-06-13T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-06-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-06-14T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-06-14"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-06-14T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-06-14"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-06-15T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-06-15"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-06-15T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-06-15"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-06-16T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2023-06-16"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2023-06-16T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2023-06-16"
+        }
+      ],
+      "selected_date_rows": [
+        {
+          "london_decision_at_utc": "2023-06-12T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-06-12T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-06:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-06-12",
+          "weekday": "MONDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-06-13T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-06-13T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-06:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-06-13",
+          "weekday": "TUESDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-06-14T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-06-14T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-06:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-06-14",
+          "weekday": "WEDNESDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-06-15T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-06-15T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-06:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-06-15",
+          "weekday": "THURSDAY"
+        },
+        {
+          "london_decision_at_utc": "2023-06-16T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2023-06-16T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2023-06:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2023-06-16",
+          "weekday": "FRIDAY"
+        }
+      ],
+      "selected_dates": [
+        "2023-06-12",
+        "2023-06-13",
+        "2023-06-14",
+        "2023-06-15",
+        "2023-06-16"
+      ],
+      "source_rows_accessed_during_preparation": false,
+      "source_seal": {
+        "bytes": 2581,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q045_mbo/normalized/seal.json",
+        "sha256": "09a42df17238f31ad936d1a8b2a935e1a2b02e52b29d70d0becff5dcdb357015"
+      },
+      "source_seal_hash": "0189372a25bccd71fec14b6c8a1c393f3cd3cbdc3ef77e597f34ae4d26d02f4e"
+    },
+    {
+      "expected_instrument_id_by_date": {
+        "2024-01-12": 41512
+      },
+      "failed_checks": [
+        "receive_does_not_precede_event"
+      ],
+      "footer_record_count": 3342999,
+      "job_id": "GLBX-20260803-YQ4PRSG5GN",
+      "lineage": {
+        "bytes": 2476,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q063_mbo/normalized/lineage.json",
+        "sha256": "46dc38e0c22da925f31057a68be1ad58c5cf524b5ced4cb3db03f5d77a081e73"
+      },
+      "market_values_accessed_or_reported": false,
+      "normalized_payload": {
+        "bytes": 45018722,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q063_mbo/normalized/gc_v_0_2024-01_SECOND_COMPLETE_CME_WEEK_RUN_03_mbo.parquet",
+        "sha256": "25b654c08810a7f958ae51b335b75c6caaf349a02b5164d03861e99920b6913a"
+      },
+      "parquet_schema_names": [
+        "source_file_index",
+        "source_row_ordinal",
+        "ts_recv",
+        "ts_event",
+        "rtype",
+        "publisher_id",
+        "instrument_id",
+        "action",
+        "side",
+        "price_fixed_1e9",
+        "size",
+        "channel_id",
+        "order_id",
+        "flags",
+        "ts_in_delta",
+        "sequence"
+      ],
+      "quality": {
+        "bytes": 5756,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q063_mbo/normalized/data_quality.json",
+        "sha256": "e92a1e928765c43b776945c47f665a6154a675fae6a22280a3ec8a5904e48ee8"
+      },
+      "request": {
+        "compression": "zstd",
+        "dataset": "GLBX.MDP3",
+        "delivery": "download",
+        "encoding": "dbn",
+        "end": "2024-01-13T00:00:00Z",
+        "map_symbols": false,
+        "pretty_px": false,
+        "pretty_ts": false,
+        "schema": "mbo",
+        "split_duration": "day",
+        "split_symbols": false,
+        "start": "2024-01-12T00:00:00Z",
+        "stype_in": "continuous",
+        "stype_out": "instrument_id",
+        "symbols": [
+          "GC.v.0"
+        ]
+      },
+      "request_id": "Q063:mbo",
+      "schema": "mbo",
+      "sealed_expected_counts": {
+        "bad_ts_recv_old_snapshot_rule_violations": 0,
+        "incomplete_prediction_windows": 0,
+        "receive_before_event_rows": 2209
+      },
+      "sealed_prediction_window_coverage": [
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-01-12T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2024-01-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-01-12T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2024-01-12"
+        }
+      ],
+      "selected_date_rows": [
+        {
+          "london_decision_at_utc": "2024-01-12T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2024-01-12T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2024-01:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2024-01-12",
+          "weekday": "FRIDAY"
+        }
+      ],
+      "selected_dates": [
+        "2024-01-12"
+      ],
+      "source_rows_accessed_during_preparation": false,
+      "source_seal": {
+        "bytes": 1420,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q063_mbo/normalized/seal.json",
+        "sha256": "d48d4abac987f15bef25bebe971a386cf2565298d989f1b292314fe285196211"
+      },
+      "source_seal_hash": "28574abe7824e07df81f8cd73b47363d556ab87acc112e78cf5fe4f1b8f11a15"
+    },
+    {
+      "expected_instrument_id_by_date": {
+        "2024-08-12": 393,
+        "2024-08-13": 393,
+        "2024-08-14": 393,
+        "2024-08-15": 393,
+        "2024-08-16": 393
+      },
+      "failed_checks": [
+        "receive_does_not_precede_event"
+      ],
+      "footer_record_count": 10859741,
+      "job_id": "GLBX-20260803-JEMQMJ79DB",
+      "lineage": {
+        "bytes": 3799,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q077_mbo/normalized/lineage.json",
+        "sha256": "cb39b5236f61ace245413e3521b4f7c35a94299a84bb317a8ab4017437f2193f"
+      },
+      "market_values_accessed_or_reported": false,
+      "normalized_payload": {
+        "bytes": 149664908,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q077_mbo/normalized/gc_v_0_2024-08_SECOND_COMPLETE_CME_WEEK_RUN_01_mbo.parquet",
+        "sha256": "eb64688b779cb6511a6151506b457b9fffda27d887e77184262785dfa0bf44ac"
+      },
+      "parquet_schema_names": [
+        "source_file_index",
+        "source_row_ordinal",
+        "ts_recv",
+        "ts_event",
+        "rtype",
+        "publisher_id",
+        "instrument_id",
+        "action",
+        "side",
+        "price_fixed_1e9",
+        "size",
+        "channel_id",
+        "order_id",
+        "flags",
+        "ts_in_delta",
+        "sequence"
+      ],
+      "quality": {
+        "bytes": 9521,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q077_mbo/normalized/data_quality.json",
+        "sha256": "743392f24aa6d46b359d04ae2b924cb53f9aba8f3812782ef8eea81e5a326d21"
+      },
+      "request": {
+        "compression": "zstd",
+        "dataset": "GLBX.MDP3",
+        "delivery": "download",
+        "encoding": "dbn",
+        "end": "2024-08-17T00:00:00Z",
+        "map_symbols": false,
+        "pretty_px": false,
+        "pretty_ts": false,
+        "schema": "mbo",
+        "split_duration": "day",
+        "split_symbols": false,
+        "start": "2024-08-12T00:00:00Z",
+        "stype_in": "continuous",
+        "stype_out": "instrument_id",
+        "symbols": [
+          "GC.v.0"
+        ]
+      },
+      "request_id": "Q077:mbo",
+      "schema": "mbo",
+      "sealed_expected_counts": {
+        "bad_ts_recv_old_snapshot_rule_violations": 0,
+        "incomplete_prediction_windows": 0,
+        "receive_before_event_rows": 137
+      },
+      "sealed_prediction_window_coverage": [
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-08-12T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2024-08-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-08-12T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2024-08-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-08-13T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2024-08-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-08-13T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2024-08-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-08-14T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2024-08-14"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-08-14T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2024-08-14"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-08-15T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2024-08-15"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-08-15T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2024-08-15"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-08-16T07:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2024-08-16"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-08-16T12:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2024-08-16"
+        }
+      ],
+      "selected_date_rows": [
+        {
+          "london_decision_at_utc": "2024-08-12T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2024-08-12T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2024-08:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2024-08-12",
+          "weekday": "MONDAY"
+        },
+        {
+          "london_decision_at_utc": "2024-08-13T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2024-08-13T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2024-08:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2024-08-13",
+          "weekday": "TUESDAY"
+        },
+        {
+          "london_decision_at_utc": "2024-08-14T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2024-08-14T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2024-08:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2024-08-14",
+          "weekday": "WEDNESDAY"
+        },
+        {
+          "london_decision_at_utc": "2024-08-15T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2024-08-15T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2024-08:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2024-08-15",
+          "weekday": "THURSDAY"
+        },
+        {
+          "london_decision_at_utc": "2024-08-16T07:00:00Z",
+          "london_utc_offset": "UTC+01:00",
+          "new_york_decision_at_utc": "2024-08-16T12:00:00Z",
+          "new_york_utc_offset": "UTC-04:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2024-08:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2024-08-16",
+          "weekday": "FRIDAY"
+        }
+      ],
+      "selected_dates": [
+        "2024-08-12",
+        "2024-08-13",
+        "2024-08-14",
+        "2024-08-15",
+        "2024-08-16"
+      ],
+      "source_rows_accessed_during_preparation": false,
+      "source_seal": {
+        "bytes": 2581,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q077_mbo/normalized/seal.json",
+        "sha256": "6fa8f515353ad39a5368faa728c4fd4af765051d53d17343af655857a7c419cb"
+      },
+      "source_seal_hash": "23495aed17cb2c0d47fa02e382f631cfa5d4271cf5f8f898bff107cc7b98ffec"
+    },
+    {
+      "expected_instrument_id_by_date": {
+        "2024-11-11": 393,
+        "2024-11-12": 393,
+        "2024-11-13": 393,
+        "2024-11-14": 393,
+        "2024-11-15": 393
+      },
+      "failed_checks": [
+        "receive_does_not_precede_event"
+      ],
+      "footer_record_count": 14321302,
+      "job_id": "GLBX-20260803-AYG649AY8W",
+      "lineage": {
+        "bytes": 3799,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q083_mbo/normalized/lineage.json",
+        "sha256": "7da34d146dcd0396a7dcb04d2671982169e91f12d096a8e15a43017e5f93cd01"
+      },
+      "market_values_accessed_or_reported": false,
+      "normalized_payload": {
+        "bytes": 198228895,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q083_mbo/normalized/gc_v_0_2024-11_SECOND_COMPLETE_CME_WEEK_RUN_01_mbo.parquet",
+        "sha256": "7f5a90a3dab59a536346d6ec2548a4369b5dea32123fc925a6cfee6c694ee479"
+      },
+      "parquet_schema_names": [
+        "source_file_index",
+        "source_row_ordinal",
+        "ts_recv",
+        "ts_event",
+        "rtype",
+        "publisher_id",
+        "instrument_id",
+        "action",
+        "side",
+        "price_fixed_1e9",
+        "size",
+        "channel_id",
+        "order_id",
+        "flags",
+        "ts_in_delta",
+        "sequence"
+      ],
+      "quality": {
+        "bytes": 9518,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q083_mbo/normalized/data_quality.json",
+        "sha256": "656b7d8db53cd93162ab3f74bc27a42096f6359f17a617f0f0aa2e3c08cfb659"
+      },
+      "request": {
+        "compression": "zstd",
+        "dataset": "GLBX.MDP3",
+        "delivery": "download",
+        "encoding": "dbn",
+        "end": "2024-11-16T00:00:00Z",
+        "map_symbols": false,
+        "pretty_px": false,
+        "pretty_ts": false,
+        "schema": "mbo",
+        "split_duration": "day",
+        "split_symbols": false,
+        "start": "2024-11-11T00:00:00Z",
+        "stype_in": "continuous",
+        "stype_out": "instrument_id",
+        "symbols": [
+          "GC.v.0"
+        ]
+      },
+      "request_id": "Q083:mbo",
+      "schema": "mbo",
+      "sealed_expected_counts": {
+        "bad_ts_recv_old_snapshot_rule_violations": 0,
+        "incomplete_prediction_windows": 0,
+        "receive_before_event_rows": 1
+      },
+      "sealed_prediction_window_coverage": [
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-11-11T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2024-11-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-11-11T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2024-11-11"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-11-12T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2024-11-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-11-12T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2024-11-12"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-11-13T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2024-11-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-11-13T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2024-11-13"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-11-14T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2024-11-14"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-11-14T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2024-11-14"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-11-15T08:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "LONDON",
+          "trade_date": "2024-11-15"
+        },
+        {
+          "coverage_disposition": "COMPLETE",
+          "cutoff_at_utc": "2024-11-15T13:00:00Z",
+          "market_values_accessed_or_reported": false,
+          "required_lookback_seconds": 900,
+          "session": "NEW_YORK",
+          "trade_date": "2024-11-15"
+        }
+      ],
+      "selected_date_rows": [
+        {
+          "london_decision_at_utc": "2024-11-11T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2024-11-11T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2024-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2024-11-11",
+          "weekday": "MONDAY"
+        },
+        {
+          "london_decision_at_utc": "2024-11-12T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2024-11-12T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2024-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2024-11-12",
+          "weekday": "TUESDAY"
+        },
+        {
+          "london_decision_at_utc": "2024-11-13T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2024-11-13T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2024-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2024-11-13",
+          "weekday": "WEDNESDAY"
+        },
+        {
+          "london_decision_at_utc": "2024-11-14T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2024-11-14T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2024-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2024-11-14",
+          "weekday": "THURSDAY"
+        },
+        {
+          "london_decision_at_utc": "2024-11-15T08:00:00Z",
+          "london_utc_offset": "UTC+00:00",
+          "new_york_decision_at_utc": "2024-11-15T13:00:00Z",
+          "new_york_utc_offset": "UTC-05:00",
+          "permanently_engineering_only": false,
+          "selected_month_week_id": "2024-11:SECOND_COMPLETE_CME_WEEK",
+          "trade_date": "2024-11-15",
+          "weekday": "FRIDAY"
+        }
+      ],
+      "selected_dates": [
+        "2024-11-11",
+        "2024-11-12",
+        "2024-11-13",
+        "2024-11-14",
+        "2024-11-15"
+      ],
+      "source_rows_accessed_during_preparation": false,
+      "source_seal": {
+        "bytes": 2581,
+        "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/requests/Q083_mbo/normalized/seal.json",
+        "sha256": "590a941d86e34eaaf22f99f8a5485f9dbd2012e830becb5a1e2c5aaa2cc14195"
+      },
+      "source_seal_hash": "e5019caf943e97882dadcfe18347fe73d7203754fd21fd6613bf0ac3600d0521"
+    }
+  ],
+  "status": "SEALED_METADATA_ONLY_SOURCE_INVENTORY",
+  "total_source_rows": 144352215,
+  "version": "GC_MICROSTRUCTURE_STEP_5B1_SOURCE_INVENTORY_V0_1"
+}

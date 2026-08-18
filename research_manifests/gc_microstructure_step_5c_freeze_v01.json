@@ -1,0 +1,37 @@
+{
+  "charge_incurred_usd": 0.0,
+  "classification": "DEVELOPMENT_FEATURE_MATERIALIZATION_ONLY",
+  "pre_value_checks": {
+    "all_188_dates_bound": true,
+    "all_376_session_rows_bound": true,
+    "all_7_level_session_contexts_bound": true,
+    "all_80_source_requests_bound": true,
+    "all_85_feature_columns_bound": true,
+    "all_8_fundamental_contexts_bound": true,
+    "all_8_microstructure_states_bound": true,
+    "development_outcomes_accessed": false,
+    "market_values_accessed": false,
+    "outcome_fields_in_output_schema": 0,
+    "step5b2_pass_bound": true,
+    "year_2025_or_2026_values_accessed": false
+  },
+  "preparation_tool": {
+    "bytes": 33669,
+    "path": "tools/prepare_gc_microstructure_step5c.py",
+    "sha256": "d2f37b060feb5cfe79535befac070c90ece0a35c7211bb4e20d8793e768db00d"
+  },
+  "protocol": {
+    "bytes": 19730,
+    "path": "research_manifests/gc_microstructure_step_5c_protocol_v01.json",
+    "sha256": "25e087ae505bd2b304b5d9533c9fb8dd8042b47e8e498ed82242ad48365e272d"
+  },
+  "recertification_started": false,
+  "row_registry": {
+    "bytes": 464322,
+    "path": "research_manifests/gc_microstructure_step_5c_row_registry_v01.json",
+    "sha256": "a0c2b6dff0dd6c57e25b5f194342c69202e02f2e642f6fe8ae75ac2ea1bbe225"
+  },
+  "sealed_at_utc": "2026-08-04T09:14:47.335960Z",
+  "status": "SEALED_BEFORE_RESEARCH_MARKET_VALUE_ACCESS",
+  "version": "GC_MICROSTRUCTURE_STEP_5C_FREEZE_V0_1"
+}

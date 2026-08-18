@@ -1,0 +1,109 @@
+{
+  "authorization_sha256": "f9c8105361f6c6b1801f2e04444822f806e6ae3c8a7abf5b3854094af9bb822a",
+  "development_market_rows_accessed_before_freeze": 0,
+  "freeze_receipt": "b9d2ff2fcbc9a34375eebd89580a5fba83c492cf2a6739d58bfcdbb135debb58",
+  "frozen_at_utc": "2026-08-04T13:21:27.153166Z",
+  "implementation": {
+    "bytes": 90204,
+    "path": "tools/materialize_gc_session_trigger_edge_m2.py",
+    "sha256": "acc7af0c5196cc943ad129560f736b31fda03727979fe43b58a7bcf0188d5479"
+  },
+  "next_milestone_authorized": false,
+  "outcome_values_accessed_before_freeze": false,
+  "predecessors": {
+    "base_feature_engine": {
+      "bytes": 79670,
+      "path": "tools/build_gc_microstructure_features_step4a.py",
+      "sha256": "c5589914a1acae6a3a1e9079c302821477866bba3741317392c567bb590c2369"
+    },
+    "casebook_manifest": {
+      "bytes": 5372,
+      "path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6"
+    },
+    "casebook_price_bars": {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    "m1_contract": {
+      "bytes": 12074,
+      "path": "research_manifests/gc_session_trigger_edge_contract_v01.json",
+      "sha256": "2c56efef8ff4c4d407ac8a136523c75f89c2f41047f866ad41b9fc5fda6a7ae2"
+    },
+    "m1_features": {
+      "bytes": 25968,
+      "path": "research_manifests/gc_session_trigger_edge_feature_traceability_v01.json",
+      "sha256": "16e583fc8914388ea0cbb0555f2960c4032855d5f554c8db80e37e04b50ecee5"
+    },
+    "m1_final_seal": {
+      "bytes": 808,
+      "path": "research_artifacts/gc_session_trigger_edge_m1_v01/final_seal.json",
+      "sha256": "d2df2418ca06ef3e28ecbbe531459df659840853579ef82a9a99e26785862957"
+    },
+    "m1_freeze": {
+      "bytes": 5484,
+      "path": "research_manifests/gc_session_trigger_edge_m1_freeze_v01.json",
+      "sha256": "6de3976a53e187d149dddc4337309b8c35e27338f4111f41072cba57ed7a7d40"
+    },
+    "m1_manifest": {
+      "bytes": 2583,
+      "path": "research_artifacts/gc_session_trigger_edge_m1_v01/manifest.json",
+      "sha256": "76639ea4cf18d7fb68001ac09f632df282eb61c7b6f71e7a05ee1bfacd943448"
+    },
+    "m1_outcomes": {
+      "bytes": 3534,
+      "path": "research_manifests/gc_session_trigger_edge_outcomes_v01.json",
+      "sha256": "5c1ecb0db0b9af80ca163bc1e85a0deccf72ae3db2e9541a6ce9bfa34b5273c8"
+    },
+    "m1_statistics": {
+      "bytes": 6104,
+      "path": "research_manifests/gc_session_trigger_edge_statistics_v01.json",
+      "sha256": "08fa00873058572b2df4a94e49eb6f85708c71cb60657b8d63d2f4a33dd3a7c2"
+    },
+    "m1_taxonomy": {
+      "bytes": 9049,
+      "path": "research_manifests/gc_session_trigger_edge_taxonomy_v01.json",
+      "sha256": "7f26a02a1760b466b44d66ac70fb0d856890e0233c599960267c9bb32a076263"
+    },
+    "m1_verdict": {
+      "bytes": 972,
+      "path": "research_artifacts/gc_session_trigger_edge_m1_v01/verdict.json",
+      "sha256": "ff93d99a31d5a36d7c1198188cf340177af29d6dfe216733e978c7aacbcc151d"
+    },
+    "step5b2_manifest": {
+      "bytes": 2409,
+      "path": "research_artifacts/gc_microstructure_step_5b2_v01/step5b2_final/manifest.json",
+      "sha256": "3fedb586ce4f9621721575b748b82043f47a4f6630488c29e0b2f8e73b4c86f1"
+    },
+    "step5c_context_manifest": {
+      "bytes": 5620,
+      "path": "research_artifacts/gc_microstructure_step5c_v01/manifest.json",
+      "sha256": "f7150f861f4883e3f7c100822af527ba497b8343225c24ebe16ffe11107e31fb"
+    },
+    "step5c_materializer": {
+      "bytes": 149168,
+      "path": "tools/materialize_gc_microstructure_step5c.py",
+      "sha256": "81e2aa4c620aa2bf4e151c727af6827d7743a4e8e452a85d3f78dc1ac7188e92"
+    },
+    "step5c_protocol": {
+      "bytes": 19730,
+      "path": "research_manifests/gc_microstructure_step_5c_protocol_v01.json",
+      "sha256": "25e087ae505bd2b304b5d9533c9fb8dd8042b47e8e498ed82242ad48365e272d"
+    }
+  },
+  "protocol": {
+    "bytes": 37799,
+    "path": "research_manifests/gc_session_trigger_edge_m2_protocol_v01.json",
+    "sha256": "d4490ac0311e0a6a6b40595b6c97ee7e8eba357db14f11ccdbbb0c5b32c8d509"
+  },
+  "row_registry": {
+    "bytes": 468126,
+    "path": "research_manifests/gc_session_trigger_edge_m2_row_registry_v01.json",
+    "sha256": "a7a36ae82d92ce91a25e36fcb7f1c95807de67c996d01198648246daa345dc5d"
+  },
+  "status": "SEALED_BEFORE_M2_DEVELOPMENT_MARKET_VALUE_ACCESS",
+  "verified_predecessor_paths": 18,
+  "version": "GC_SESSION_TRIGGER_EDGE_M2_FREEZE_V1_0",
+  "year_2025_or_2026_values_accessed": false
+}

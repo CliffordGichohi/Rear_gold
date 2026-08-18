@@ -1,0 +1,69 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_5B_RESUME_AMENDMENT_A_FREEZE_V0_1",
+  "status": "FROZEN_BEFORE_RESUMED_PROVIDER_METADATA_CALLS",
+  "frozen_at_utc": "2026-08-03T12:41:19.1958710Z",
+  "classification": "NO_CHARGE_PRE_SUBMISSION_RESUME_FREEZE",
+  "records": {
+    "step5a_manifest": {
+      "path": "research_artifacts/gc_microstructure_step_5a_v01/manifest.json",
+      "bytes": 3421,
+      "sha256": "4fbc2b8365badb5c44f35201524629782873b43eb3b06861e4d289f8449b51c9"
+    },
+    "step5a_freeze": {
+      "path": "research_manifests/gc_microstructure_step_5a_freeze_v01.json",
+      "bytes": 3283,
+      "sha256": "1c6528160551760391dc20909928c5e20d3d4a6a5203959b5c1ed3c9c47f5921"
+    },
+    "request_registry": {
+      "path": "research_manifests/gc_microstructure_step_5a_request_registry_v01.json",
+      "bytes": 239012,
+      "sha256": "f56467c32b5708bc1cb902e51f034243408b7a6f967f2ce2b652777cf2d00477"
+    },
+    "step5b_authorization": {
+      "path": "research_manifests/gc_microstructure_step_5b_authorization_v01.json",
+      "bytes": 2123,
+      "sha256": "653c37f265ab055ff42928d1fb60853593a8556e0d744d6b671630a5e933e76a"
+    },
+    "attempt1_manifest": {
+      "path": "research_artifacts/gc_microstructure_step_5b_v01/manifest.json",
+      "bytes": 2395,
+      "sha256": "ac1418b0e8b5db020fa3c20319c6eec597dfa4898cffb51f6b6b0397520fddec"
+    },
+    "attempt1_verdict": {
+      "path": "research_artifacts/gc_microstructure_step_5b_v01/verdict.json",
+      "bytes": 935,
+      "sha256": "1b10fbf20c779999c98f6febf76bd7786f945e8e07440ef95c412eccf204febf"
+    },
+    "resume_amendment_a": {
+      "path": "research_manifests/gc_microstructure_step_5b_resume_amendment_a_v01.json",
+      "bytes": 3767,
+      "sha256": "cc4c13145a4490c18c0838b67aeecef513527e5822a84bd7b838115f46dea96f"
+    },
+    "step5a_quote_tool": {
+      "path": "tools/quote_gc_microstructure_step5a.py",
+      "bytes": 46280,
+      "sha256": "1d84e69e44ded71e11dfc4648b93c39b86984bab20f4dac7aaef50beca851dbf"
+    },
+    "resume_preflight_tool": {
+      "path": "tools/preflight_gc_microstructure_step5b_resume.py",
+      "bytes": 14238,
+      "sha256": "81a3e0c814cd39e65728fc48b7f7243a8e1f62e787057c8eeb8b2f080b1f1db1"
+    }
+  },
+  "preserved_attempt1_manifest_hash": "27f9826516160ef7e60a42d444158b5a62bf8d666acf7adde454783b9ec54402",
+  "preserved_attempt1_verdict_hash": "e40d073d23192b1a2a3091d97b3c11f90f05905ab5e56aeea3181d28e7ddb53c",
+  "step5a_manifest_hash": "ec869c52c223d460a086a2aeb19265777761a9b9296fbe012f96f62bdf174706",
+  "step5a_freeze_hash": "cb67d1ba793a80e58d5439be2f3c07ac5fcac1b965440f2035bb48b86efde949",
+  "destination": "/home/wapi/rear_gold_step5b_v01",
+  "minimum_free_bytes": 375809638400,
+  "maximum_combined_charge_usd": 120.0,
+  "frozen_request_count": 86,
+  "frozen_selected_date_count": 203,
+  "provider_metadata_called": false,
+  "batch_api_called": false,
+  "jobs_submitted": 0,
+  "data_acquired": false,
+  "charge_incurred": false,
+  "market_values_or_outcomes_accessed": false,
+  "freeze_hash": "231ab64737978ea2dd6aab2945c9eefcb1f28f0dfd08ff49b871fa0c8af04b96"
+}

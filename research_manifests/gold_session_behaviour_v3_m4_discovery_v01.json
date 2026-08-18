@@ -1,0 +1,6049 @@
+{
+  "authorization": {
+    "authorized_on": "2026-07-30",
+    "scope": "Complete only V3 Milestone 4 bounded development discovery and stop.",
+    "verbatim": "Proceed to V3 Milestone 4 under the existing contract. Use only the sealed 2021-08-01 through 2024-12-31 development case matrix. First freeze and seal the complete book-traceable eligible-feature registry, states, transforms, missing-data policy, support floors, permitted two-condition interactions, uncertainty and multiplicity methods, and ranking order before calculating relationships. Then conduct bounded conditional-bias discovery separately for London and New York, examining individual variables before interactions. Record all tested relationships and negative results honestly. Allow no more than two provisional candidates per session to advance, with zero candidates acceptable. Do not optimize execution, retune after seeing results, inspect 2025 or 2026 values, or reopen rejected ZN rules. Complete only Milestone 4 and stop."
+  },
+  "candidate_policy": {
+    "advance_label": "PROVISIONAL_M4_CANDIDATE_NO_VALIDATION_CREDIT",
+    "candidate_gate": {
+      "common": [
+        "support_eligible is true",
+        "Benjamini-Hochberg q-value <= 0.10",
+        "absolute conditional up-rate difference versus the known complement >= 7.5 percentage points for a single condition or >= 10.0 percentage points for an interaction",
+        "Newcombe-Wilson 95% difference interval excludes zero",
+        "median signed close displacement has the same sign as the empirical directional association"
+      ],
+      "interaction_additional": [
+        "absolute effect is at least 3.0 percentage points larger than each constituent state's single-condition absolute effect",
+        "both constituent single states satisfy their own support floor, irrespective of their q-values"
+      ]
+    },
+    "maximum_per_session": 2,
+    "ranking_order": [
+      "candidate_gate_pass descending",
+      "Benjamini-Hochberg q-value ascending",
+      "absolute conditional up-rate difference descending",
+      "condition support descending",
+      "condition_id lexicographically ascending"
+    ],
+    "zero_candidates_acceptable": true
+  },
+  "development_partition": {
+    "access_class": "DEVELOPMENT",
+    "end_exclusive": "2025-01-01T00:00:00+00:00",
+    "session_date_end_inclusive": "2024-12-31",
+    "session_date_start_inclusive": "2021-08-01",
+    "start_inclusive": "2021-08-01T00:00:00+00:00"
+  },
+  "discovery_order": {
+    "stage_1": "Calculate and record every registered single feature-state relationship separately within each eligible session.",
+    "stage_2": "Only after stage 1 is complete, calculate the 40 exact preregistered two-condition interactions. No performance-driven pair generation is allowed."
+  },
+  "factor_dispositions": [
+    {
+      "book_chapters": [
+        0,
+        22,
+        23
+      ],
+      "book_requirement": "Separate facts from assumptions and retain source, availability, revision, and audit lineage.",
+      "development_coverage": "PRESENT",
+      "disposition": "AUDIT_CONTROL",
+      "factor_id": "GOV_POINT_IN_TIME_LINEAGE",
+      "feature_ids": [],
+      "reason": "Enforced for every case and feature, but not a varying condition."
+    },
+    {
+      "book_chapters": [
+        1
+      ],
+      "book_requirement": "Identify the actual instrument and distinguish broker XAUUSD from OTC spot and COMEX futures.",
+      "development_coverage": "PRESENT",
+      "disposition": "CONSTANT_NOT_TESTED",
+      "factor_id": "MECH_INSTRUMENT_IDENTITY",
+      "feature_ids": [],
+      "reason": "All cases are the same IC Markets XAUUSD broker-feed identity."
+    },
+    {
+      "book_chapters": [
+        1,
+        3,
+        4
+      ],
+      "book_requirement": "Record tradable XAUUSD price and bar completeness at the decision clock.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "MECH_XAUUSD_PRICE",
+      "feature_ids": [
+        "CROSS_GOLD_1_DAY_CHANGE",
+        "CROSS_GOLD_1_HOUR_CHANGE",
+        "CROSS_GOLD_4_HOURS_CHANGE",
+        "CROSS_GOLD_5_DAYS_CHANGE"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        3,
+        4
+      ],
+      "book_requirement": "Record bid-ask spread as a direct liquidity and execution-quality observation.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "MECH_SPREAD",
+      "feature_ids": [
+        "LIQUIDITY_DECISION_SPREAD_TO_ASIA",
+        "SESSION_ASIA_SPREAD_EXPANSION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        3,
+        4,
+        7
+      ],
+      "book_requirement": "Record trading activity while distinguishing broker tick volume from centralized futures volume.",
+      "development_coverage": "PARTIAL",
+      "disposition": "AUDIT_ONLY_NOT_NORMALIZED",
+      "factor_id": "MECH_VOLUME",
+      "feature_ids": [],
+      "reason": "Broker tick volume is not COMEX volume and lacks a frozen comparable point-in-time normalization for directional discovery."
+    },
+    {
+      "book_chapters": [
+        3,
+        4
+      ],
+      "book_requirement": "Measure market depth, resilience, slippage, and price impact as distinct liquidity dimensions.",
+      "development_coverage": "UNAVAILABLE",
+      "disposition": "INELIGIBLE_UNAVAILABLE",
+      "factor_id": "MECH_DEPTH_RESILIENCE_IMPACT",
+      "feature_ids": [],
+      "reason": "No historical order-book depth or trade-level impact source is present."
+    },
+    {
+      "book_chapters": [
+        2,
+        5,
+        7
+      ],
+      "book_requirement": "Do not infer participant identity or motive directly from order direction or price movement.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "INFERENCE_ONLY",
+      "factor_id": "MECH_PARTICIPANT_MOTIVE",
+      "feature_ids": [],
+      "reason": "Institutional motive is never tested as observed fact; bounded COT inference states are separately registered."
+    },
+    {
+      "book_chapters": [
+        5,
+        6
+      ],
+      "book_requirement": "Detect swing highs/lows and HH, HL, LH, and LL sequences deterministically.",
+      "development_coverage": "PRESENT",
+      "disposition": "REPRESENTED_BY_DERIVED_STRUCTURE",
+      "factor_id": "STRUCT_SWINGS_AND_SEQUENCE",
+      "feature_ids": [],
+      "reason": "Frozen trend, BOS, MSS, momentum, compression, and range-location features represent the deterministic structure state without mining individual historical pivots."
+    },
+    {
+      "book_chapters": [
+        6
+      ],
+      "book_requirement": "Classify trend and range without vague discretionary pattern names.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "STRUCT_TREND_RANGE",
+      "feature_ids": [
+        "SESSION_ASIA_RANGE_TO_1H_ATR",
+        "SESSION_LONDON_RANGE_TO_1H_ATR",
+        "STRUCT_15M_RANGE_LOCATION",
+        "STRUCT_15M_TREND",
+        "STRUCT_1D_RANGE_LOCATION",
+        "STRUCT_1D_TREND",
+        "STRUCT_1H_RANGE_LOCATION",
+        "STRUCT_1H_TREND",
+        "STRUCT_1M_RANGE_LOCATION",
+        "STRUCT_1M_TREND",
+        "STRUCT_4H_RANGE_LOCATION",
+        "STRUCT_4H_TREND",
+        "STRUCT_5M_RANGE_LOCATION",
+        "STRUCT_5M_TREND"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        5,
+        6
+      ],
+      "book_requirement": "Record support, resistance, prior highs/lows, and the method that produced each level.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "STRUCT_SUPPORT_RESISTANCE_LEVELS",
+      "feature_ids": [
+        "LEVEL_NEAREST_KNOWN_TO_1H_ATR",
+        "SESSION_DECISION_POSITION_VS_ASIA",
+        "STRUCT_15M_RANGE_LOCATION",
+        "STRUCT_1D_RANGE_LOCATION",
+        "STRUCT_1H_RANGE_LOCATION",
+        "STRUCT_1M_RANGE_LOCATION",
+        "STRUCT_4H_RANGE_LOCATION",
+        "STRUCT_5M_RANGE_LOCATION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        6
+      ],
+      "book_requirement": "Detect break of structure and market-structure shift with evidence and invalidation.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "STRUCT_BOS_MSS",
+      "feature_ids": [
+        "STRUCT_15M_LATEST_BOS",
+        "STRUCT_15M_LATEST_MSS",
+        "STRUCT_1D_LATEST_BOS",
+        "STRUCT_1D_LATEST_MSS",
+        "STRUCT_1H_LATEST_BOS",
+        "STRUCT_1H_LATEST_MSS",
+        "STRUCT_1M_LATEST_BOS",
+        "STRUCT_1M_LATEST_MSS",
+        "STRUCT_4H_LATEST_BOS",
+        "STRUCT_4H_LATEST_MSS",
+        "STRUCT_5M_LATEST_BOS",
+        "STRUCT_5M_LATEST_MSS"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        5,
+        6
+      ],
+      "book_requirement": "Measure compression, expansion, displacement, and momentum.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "STRUCT_COMPRESSION_EXPANSION_MOMENTUM",
+      "feature_ids": [
+        "STRUCT_15M_COMPRESSION",
+        "STRUCT_15M_MOMENTUM",
+        "STRUCT_1D_COMPRESSION",
+        "STRUCT_1D_MOMENTUM",
+        "STRUCT_1H_COMPRESSION",
+        "STRUCT_1H_MOMENTUM",
+        "STRUCT_1M_COMPRESSION",
+        "STRUCT_1M_MOMENTUM",
+        "STRUCT_4H_COMPRESSION",
+        "STRUCT_4H_MOMENTUM",
+        "STRUCT_5M_COMPRESSION",
+        "STRUCT_5M_MOMENTUM"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        5,
+        6
+      ],
+      "book_requirement": "Distinguish breakout, acceptance, rejection, failed breakout, trapped breakout, and retest.",
+      "development_coverage": "PRESENT",
+      "disposition": "PRE_DECISION_SUBSET_ONLY",
+      "factor_id": "STRUCT_BREAK_ACCEPT_REJECT_RETEST",
+      "feature_ids": [],
+      "reason": "Pre-decision BOS and MSS are registered. Post-decision acceptance, rejection, failed-break, and retest facts remain outcomes."
+    },
+    {
+      "book_chapters": [
+        5
+      ],
+      "book_requirement": "Record likely liquidity and stop zones while labelling them as interpretations rather than observed orders.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "STRUCT_LIQUIDITY_STOP_ZONES",
+      "feature_ids": [
+        "LEVEL_NEAREST_KNOWN_TO_1H_ATR"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "book_requirement": "Use current level, direction, and rate of change when classifying the macro environment.",
+      "development_coverage": "PRESENT",
+      "disposition": "REPRESENTED_BY_SERIES_AND_REGIME_FEATURES",
+      "factor_id": "REGIME_LEVEL_DIRECTION_RATE",
+      "feature_ids": [],
+      "reason": "Individual series changes, regime label, reaction function, and the transparent score are registered explicitly."
+    },
+    {
+      "book_chapters": [
+        9,
+        12
+      ],
+      "book_requirement": "Track headline and core CPI levels and changes.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "REGIME_CPI",
+      "feature_ids": [
+        "MACRO_CPI_CORE_CHANGE",
+        "MACRO_CPI_HEADLINE_CHANGE",
+        "SYNTH_INFLATION_REGIME_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        9,
+        12
+      ],
+      "book_requirement": "Track headline and core PCE levels and changes.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "REGIME_PCE",
+      "feature_ids": [
+        "MACRO_PCE_CORE_CHANGE",
+        "MACRO_PCE_HEADLINE_CHANGE",
+        "SYNTH_INFLATION_REGIME_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        9,
+        12
+      ],
+      "book_requirement": "Track payrolls, unemployment, wage growth, and jobless claims.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "REGIME_LABOUR",
+      "feature_ids": [
+        "MACRO_CLAIMS_CHANGE",
+        "MACRO_PAYROLLS_CHANGE",
+        "MACRO_UNEMPLOYMENT_CHANGE",
+        "MACRO_WAGES_CHANGE",
+        "SYNTH_LABOUR_REGIME_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        9,
+        12
+      ],
+      "book_requirement": "Track GDP and retail-sales levels and momentum.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "REGIME_GROWTH",
+      "feature_ids": [
+        "MACRO_GDP_CHANGE",
+        "MACRO_RETAIL_SALES_CHANGE",
+        "SYNTH_GROWTH_REGIME_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        8,
+        12
+      ],
+      "book_requirement": "Track the Fed policy rate and its change.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "REGIME_FED_RATE",
+      "feature_ids": [
+        "MACRO_FED_POLICY_RATE_CHANGE"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        8,
+        10,
+        11,
+        12,
+        17
+      ],
+      "book_requirement": "Track 2-year nominal Treasury yield as a policy-expectation channel.",
+      "development_coverage": "PARTIAL",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "RATES_TREASURY_2Y",
+      "feature_ids": [
+        "MACRO_TREASURY_2Y_CHANGE",
+        "SYNTH_TWO_YEAR_YIELD_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        8,
+        10,
+        11,
+        12,
+        17
+      ],
+      "book_requirement": "Track 10-year nominal Treasury yield.",
+      "development_coverage": "PARTIAL",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "RATES_TREASURY_10Y",
+      "feature_ids": [
+        "MACRO_TREASURY_10Y_CHANGE",
+        "SYNTH_NOMINAL_DECOMPOSITION_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        10,
+        11,
+        12,
+        17
+      ],
+      "book_requirement": "Track 10-year real yield as a central gold transmission channel.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "RATES_REAL_YIELD_10Y",
+      "feature_ids": [
+        "MACRO_REAL_YIELD_10Y_CHANGE",
+        "SYNTH_REAL_YIELD_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        10,
+        11,
+        12,
+        17
+      ],
+      "book_requirement": "Track 10-year breakeven inflation.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "RATES_BREAKEVEN_10Y",
+      "feature_ids": [
+        "MACRO_BREAKEVEN_10Y_CHANGE",
+        "SYNTH_NOMINAL_DECOMPOSITION_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        8,
+        10,
+        12
+      ],
+      "book_requirement": "Track the yield-curve slope and its direction.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "RATES_YIELD_CURVE",
+      "feature_ids": [
+        "MACRO_YIELD_CURVE_LEVEL"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        1,
+        11,
+        12,
+        17
+      ],
+      "book_requirement": "Track the dollar and distinguish conventional inverse confirmation from joint gold-dollar moves.",
+      "development_coverage": "PARTIAL",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "USD_CONTEXT",
+      "feature_ids": [
+        "MACRO_USD_BROAD_CHANGE",
+        "SYNTH_USD_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        11,
+        12,
+        17
+      ],
+      "book_requirement": "Track equity risk sentiment and volatility.",
+      "development_coverage": "PARTIAL",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "RISK_EQUITY_VOLATILITY",
+      "feature_ids": [
+        "MACRO_EQUITIES_CHANGE",
+        "MACRO_VOLATILITY_CHANGE",
+        "SYNTH_EQUITY_RISK_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        11,
+        12,
+        17
+      ],
+      "book_requirement": "Track financial and credit stress when safe-haven or liquidity behaviour dominates.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "RISK_CREDIT_FINANCIAL_STRESS",
+      "feature_ids": [
+        "MACRO_FINANCIAL_STRESS_CHANGE",
+        "MACRO_FINANCIAL_STRESS_LEVEL",
+        "MACRO_HIGH_YIELD_SPREAD_CHANGE",
+        "SYNTH_FINANCIAL_STRESS_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        11,
+        12
+      ],
+      "book_requirement": "Classify Goldilocks, soft landing, overheating, slowdown, recession/disinflation, stagflation, deflationary stress, and financial/liquidity stress.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "REGIME_CLASSIFICATION",
+      "feature_ids": [
+        "MACRO_REGIME_LABEL"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        11,
+        12,
+        13
+      ],
+      "book_requirement": "Identify the current market reaction function so weights can vary by what markets are pricing.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "REGIME_REACTION_FUNCTION",
+      "feature_ids": [
+        "MACRO_REACTION_FUNCTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        9,
+        13,
+        15
+      ],
+      "book_requirement": "Compare actual releases with the point-in-time consensus available before release.",
+      "development_coverage": "PARTIAL",
+      "disposition": "INELIGIBLE_UNVERIFIED_FORECAST_CLOCK",
+      "factor_id": "EXPECT_ACTUAL_VS_FORECAST",
+      "feature_ids": [],
+      "reason": "Historical forecast first-publication timing is not verified."
+    },
+    {
+      "book_chapters": [
+        9,
+        13,
+        15
+      ],
+      "book_requirement": "Compare actual with previous and preserve later revisions separately.",
+      "development_coverage": "PRESENT",
+      "disposition": "REPRESENTED_BY_VINTAGE_SERIES_CHANGE",
+      "factor_id": "EXPECT_PREVIOUS_AND_REVISIONS",
+      "feature_ids": [],
+      "reason": "The registered point-in-time series changes preserve the eligible vintage and previous record without using later revisions."
+    },
+    {
+      "book_chapters": [
+        13,
+        15
+      ],
+      "book_requirement": "Calculate raw and standardized economic surprise from actual versus valid point-in-time forecast.",
+      "development_coverage": "PARTIAL",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "EXPECT_ECONOMIC_SURPRISE",
+      "feature_ids": [
+        "CATALYST_IMPACT_DIRECTION",
+        "SYNTH_CATALYST_SURPRISE_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        8,
+        13
+      ],
+      "book_requirement": "Track Fed-cut and hike probabilities by meeting.",
+      "development_coverage": "UNAVAILABLE",
+      "disposition": "INELIGIBLE_UNAVAILABLE",
+      "factor_id": "EXPECT_FED_MEETING_PROBABILITIES",
+      "feature_ids": [],
+      "reason": "Quarterly Atlanta Fed SOFR windows are present but are not exact meeting-level FedWatch distributions."
+    },
+    {
+      "book_chapters": [
+        8,
+        13
+      ],
+      "book_requirement": "Track first expected policy move, total easing/tightening, and expected destination rate.",
+      "development_coverage": "PARTIAL",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "EXPECT_POLICY_PATH_SHAPE",
+      "feature_ids": [
+        "EXPECT_SOFR_WINDOW_CUT_HIKE_BALANCE",
+        "SYNTH_FED_PATH_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        8,
+        13
+      ],
+      "book_requirement": "Measure hawkish or dovish repricing across the complete expected rate path.",
+      "development_coverage": "PARTIAL",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "EXPECT_POLICY_REPRICING",
+      "feature_ids": [
+        "EXPECT_SOFR_WINDOW_CUT_HIKE_BALANCE",
+        "SYNTH_FED_PATH_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        2,
+        7,
+        14
+      ],
+      "book_requirement": "Track managed-money longs, shorts, net position, weekly changes, and historical percentile.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "POSITION_COT_MANAGED_MONEY",
+      "feature_ids": [
+        "POSITION_MANAGED_MONEY_NET",
+        "SYNTH_POSITIONING_FLOW_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        2,
+        7,
+        14
+      ],
+      "book_requirement": "Track producer/merchant, swap-dealer, and other-reportable positioning and changes.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "POSITION_COT_OTHER_CATEGORIES",
+      "feature_ids": [
+        "POSITION_OTHER_REPORTABLE_NET",
+        "POSITION_PRODUCER_MERCHANT_NET",
+        "POSITION_SWAP_DEALER_NET"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        7,
+        14
+      ],
+      "book_requirement": "Track open interest and weekly change.",
+      "development_coverage": "PARTIAL",
+      "disposition": "INFERENCE_ONLY_NOT_RAW_LEVEL",
+      "factor_id": "POSITION_OPEN_INTEREST",
+      "feature_ids": [],
+      "reason": "The nonstationary weekly level is not tested directly; the frozen price/open-interest participation classification is registered."
+    },
+    {
+      "book_chapters": [
+        14
+      ],
+      "book_requirement": "Interpret price up/down with open interest up/down as probable participation, covering, liquidation, or reduction.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "POSITION_PRICE_OI_INFERENCE",
+      "feature_ids": [
+        "POSITION_PARTICIPATION_STATE",
+        "SYNTH_POSITIONING_FLOW_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        14
+      ],
+      "book_requirement": "Detect crowding, liquidation risk, covering risk, position building, and position reduction.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "POSITION_CROWDING_RISK",
+      "feature_ids": [
+        "POSITION_CROWDING_STATE",
+        "POSITION_LONG_LIQUIDATION_RISK",
+        "POSITION_SHORT_COVERING_RISK"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        2,
+        14
+      ],
+      "book_requirement": "Track gold ETF holdings and flows and detect ETF divergence.",
+      "development_coverage": "UNAVAILABLE",
+      "disposition": "INELIGIBLE_UNAVAILABLE",
+      "factor_id": "POSITION_ETF_FLOWS",
+      "feature_ids": [],
+      "reason": "No versioned historical ETF source is present in the immutable development bundle."
+    },
+    {
+      "book_chapters": [
+        2,
+        14
+      ],
+      "book_requirement": "Track central-bank gold demand when available.",
+      "development_coverage": "UNAVAILABLE",
+      "disposition": "INELIGIBLE_UNAVAILABLE",
+      "factor_id": "POSITION_CENTRAL_BANK_DEMAND",
+      "feature_ids": [],
+      "reason": "No point-in-time historical central-bank purchase dataset is present."
+    },
+    {
+      "book_chapters": [
+        7,
+        14
+      ],
+      "book_requirement": "Track options strikes, expiries, calls, puts, implied volatility, and dealer-gamma estimates where data permit.",
+      "development_coverage": "UNAVAILABLE",
+      "disposition": "INELIGIBLE_UNAVAILABLE",
+      "factor_id": "POSITION_OPTIONS_GAMMA",
+      "feature_ids": [],
+      "reason": "No licensed historical COMEX options chain, volatility surface, or dealer-position source is present."
+    },
+    {
+      "book_chapters": [
+        2,
+        14
+      ],
+      "book_requirement": "Compare fast-money and slow-money behaviour without conflating the two.",
+      "development_coverage": "PARTIAL",
+      "disposition": "INELIGIBLE_INCOMPLETE_SLOW_MONEY",
+      "factor_id": "POSITION_FAST_SLOW_DIVERGENCE",
+      "feature_ids": [],
+      "reason": "ETF and central-bank slow-money inputs are unavailable."
+    },
+    {
+      "book_chapters": [
+        15,
+        19,
+        20
+      ],
+      "book_requirement": "Record scheduled event type, clock, importance, and whether schedule was known before the decision.",
+      "development_coverage": "PARTIAL",
+      "disposition": "INELIGIBLE_UNVERIFIED_SCHEDULE_CLOCK",
+      "factor_id": "CATALYST_SCHEDULE",
+      "feature_ids": [],
+      "reason": "Historical schedule first-publication timestamps are unverified."
+    },
+    {
+      "book_chapters": [
+        9,
+        13,
+        15,
+        20
+      ],
+      "book_requirement": "Record forecast, previous, actual, revision, surprise, and release vintage for each event component.",
+      "development_coverage": "PARTIAL",
+      "disposition": "REPRESENTED_BY_CATALYST_COMPONENT",
+      "factor_id": "CATALYST_RELEASE_COMPONENTS",
+      "feature_ids": [],
+      "reason": "The bounded event-impact direction uses only already-released, decision-known information; raw release-component mining is excluded."
+    },
+    {
+      "book_chapters": [
+        15,
+        20
+      ],
+      "book_requirement": "Measure event proximity and reduce confidence before high-impact releases.",
+      "development_coverage": "PARTIAL",
+      "disposition": "INELIGIBLE_UNVERIFIED_SCHEDULE_CLOCK",
+      "factor_id": "CATALYST_PROXIMITY",
+      "feature_ids": [],
+      "reason": "Pre-event proximity cannot be trusted without verified schedule availability."
+    },
+    {
+      "book_chapters": [
+        15,
+        20
+      ],
+      "book_requirement": "Record reactions after 1m, 5m, 15m, 1h, 4h, and daily close.",
+      "development_coverage": "PRESENT",
+      "disposition": "AUDIT_ONLY_TO_AVOID_EVENT_PATH_MINING",
+      "factor_id": "CATALYST_FIXED_REACTIONS",
+      "feature_ids": [],
+      "reason": "Completed prior-event reactions remain auditable decision facts but are not separately state-mined in this bounded screen."
+    },
+    {
+      "book_chapters": [
+        15,
+        20
+      ],
+      "book_requirement": "Measure event MFE, MAE, and whether the first move held or reversed.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "AUDIT_ONLY_TO_AVOID_EVENT_PATH_MINING",
+      "factor_id": "CATALYST_EVENT_PATH",
+      "feature_ids": [],
+      "reason": "Completed prior-event path labels are not separately state-mined."
+    },
+    {
+      "book_chapters": [
+        15,
+        20
+      ],
+      "book_requirement": "Include Fed decisions, press conferences, projections, speeches, and Treasury auctions.",
+      "development_coverage": "PARTIAL",
+      "disposition": "INELIGIBLE_INCOMPLETE_EVENT_TAXONOMY",
+      "factor_id": "CATALYST_FED_AND_AUCTIONS",
+      "feature_ids": [],
+      "reason": "Historical coverage and pre-event publication clocks are incomplete."
+    },
+    {
+      "book_chapters": [
+        15,
+        20
+      ],
+      "book_requirement": "Record unscheduled geopolitical and financial events.",
+      "development_coverage": "UNAVAILABLE",
+      "disposition": "INELIGIBLE_UNAVAILABLE",
+      "factor_id": "CATALYST_UNSCHEDULED_NEWS",
+      "feature_ids": [],
+      "reason": "No licensed point-in-time historical unscheduled-news archive is present."
+    },
+    {
+      "book_chapters": [
+        15
+      ],
+      "book_requirement": "Interpret event impact from importance, surprise, positioning, liquidity, and current reaction function.",
+      "development_coverage": "PARTIAL",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "CATALYST_IMPACT_INFERENCE",
+      "feature_ids": [
+        "CATALYST_IMPACT_DIRECTION",
+        "SYNTH_CATALYST_SURPRISE_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        16,
+        19
+      ],
+      "book_requirement": "Identify Asia, London, New York, overlap, handover, rollover, and close windows with DST correctness.",
+      "development_coverage": "PRESENT",
+      "disposition": "STRATIFICATION_CONTROL",
+      "factor_id": "SESSION_CLOCKS_DST",
+      "feature_ids": [],
+      "reason": "DST-aware clocks define the separate London and New York units; they are not a varying feature within a session."
+    },
+    {
+      "book_chapters": [
+        16,
+        19
+      ],
+      "book_requirement": "Record Asian high, low, range, breakout, and close state before London.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "SESSION_ASIA_STATE",
+      "feature_ids": [
+        "SESSION_ASIA_CLOSE_LOCATION",
+        "SESSION_ASIA_DIRECTION",
+        "SESSION_ASIA_RANGE_TO_1H_ATR",
+        "SESSION_DECISION_POSITION_VS_ASIA",
+        "SESSION_LONDON_INTERACTION_WITH_ASIA"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        16,
+        19
+      ],
+      "book_requirement": "Record London state and range known before the New York decision.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "SESSION_LONDON_STATE",
+      "feature_ids": [
+        "SESSION_LONDON_CLOSE_LOCATION",
+        "SESSION_LONDON_DIRECTION",
+        "SESSION_LONDON_INTERACTION_WITH_ASIA",
+        "SESSION_LONDON_RANGE_TO_1H_ATR"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        16,
+        19
+      ],
+      "book_requirement": "Record New York state and interaction with prior Asia/London levels.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "OUTCOME_ONLY",
+      "factor_id": "SESSION_NEW_YORK_PATH",
+      "feature_ids": [],
+      "reason": "Used only in frozen outcome definitions; never a decision condition."
+    },
+    {
+      "book_chapters": [
+        16,
+        19
+      ],
+      "book_requirement": "Record London-New York overlap, session handovers, and position-squaring windows.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "SESSION_HANDOVER_OVERLAP",
+      "feature_ids": [
+        "SESSION_LONDON_INTERACTION_WITH_ASIA"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        7,
+        16,
+        19
+      ],
+      "book_requirement": "Identify London AM and PM benchmark windows.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "INELIGIBLE_NOT_LICENSED",
+      "factor_id": "SESSION_LBMA_WINDOWS",
+      "feature_ids": [],
+      "reason": "Benchmark-window microstructure is not separately licensed."
+    },
+    {
+      "book_chapters": [
+        4,
+        7,
+        16,
+        19
+      ],
+      "book_requirement": "Identify daily rollover, close, spread widening, and abnormal liquidity conditions.",
+      "development_coverage": "PARTIAL",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "SESSION_ROLLOVER_LIQUIDITY",
+      "feature_ids": [
+        "LIQUIDITY_DECISION_SPREAD_TO_ASIA",
+        "SESSION_ASIA_SPREAD_EXPANSION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        16
+      ],
+      "book_requirement": "Detect session confirmation, reversal, acceptance, rejection, and failed breakout.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "OUTCOME_ONLY",
+      "factor_id": "SESSION_STRUCTURE_OUTCOMES",
+      "feature_ids": [],
+      "reason": "Used only in frozen outcome definitions; never a decision condition."
+    },
+    {
+      "book_chapters": [
+        17
+      ],
+      "book_requirement": "Synchronize gold with 2Y, 10Y, real yield, breakeven, dollar, equities, volatility, silver, and Fed expectations.",
+      "development_coverage": "PARTIAL",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "CROSS_SYNCHRONIZED_PANEL",
+      "feature_ids": [
+        "CROSS_GOLD_1_DAY_CHANGE",
+        "CROSS_GOLD_1_HOUR_CHANGE",
+        "CROSS_GOLD_4_HOURS_CHANGE",
+        "CROSS_GOLD_5_DAYS_CHANGE",
+        "CROSS_SILVER_1_DAY_CHANGE",
+        "CROSS_SILVER_1_HOUR_CHANGE",
+        "CROSS_SILVER_4_HOURS_CHANGE",
+        "CROSS_SILVER_5_DAYS_CHANGE"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        17
+      ],
+      "book_requirement": "Use silver as a useful precious-metals confirmation where appropriate.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "CROSS_SILVER",
+      "feature_ids": [
+        "CROSS_SILVER_1_DAY_CHANGE",
+        "CROSS_SILVER_1_HOUR_CHANGE",
+        "CROSS_SILVER_4_HOURS_CHANGE",
+        "CROSS_SILVER_5_DAYS_CHANGE"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        11,
+        17,
+        21
+      ],
+      "book_requirement": "Detect conventional confirmation, divergence, safe-haven behaviour, dollar-and-gold co-movement, and defensive gold demand.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "INTERACTION_ONLY",
+      "factor_id": "CROSS_CONFIRMATION_DIVERGENCE",
+      "feature_ids": [],
+      "reason": "Exact preregistered rates/USD, gold/silver, and risk-state interactions provide the bounded confirmation tests."
+    },
+    {
+      "book_chapters": [
+        10,
+        11,
+        17,
+        21
+      ],
+      "book_requirement": "Distinguish inflation-driven nominal-yield increases from real-yield-driven pressure.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "CROSS_RATES_DRIVER",
+      "feature_ids": [
+        "SYNTH_NOMINAL_DECOMPOSITION_DIRECTION"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        0,
+        11,
+        17,
+        19,
+        21
+      ],
+      "book_requirement": "Record supporting evidence, contradictions, missing drivers, and causal-chain hypotheses transparently.",
+      "development_coverage": "PRESENT",
+      "disposition": "ELIGIBLE_REGISTERED_FEATURE",
+      "factor_id": "SYNTHESIS_EVIDENCE_CHAIN",
+      "feature_ids": [
+        "MACRO_ENGINE_SCORE"
+      ],
+      "reason": "Mapped to one or more frozen feature transforms. Empirical support still controls whether a state is tested."
+    },
+    {
+      "book_chapters": [
+        16,
+        19
+      ],
+      "book_requirement": "Record neutral fixed-horizon movement without assigning a trade side.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "OUTCOME_ONLY",
+      "factor_id": "OUTCOME_FIXED_HORIZONS",
+      "feature_ids": [],
+      "reason": "Used only in frozen outcome definitions; never a decision condition."
+    },
+    {
+      "book_chapters": [
+        3,
+        5,
+        16
+      ],
+      "book_requirement": "Record the session's upward and downward reach from a neutral reference.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "OUTCOME_ONLY",
+      "factor_id": "OUTCOME_NEUTRAL_EXCURSIONS",
+      "feature_ids": [],
+      "reason": "Used only in frozen outcome definitions; never a decision condition."
+    },
+    {
+      "book_chapters": [
+        5,
+        6,
+        16
+      ],
+      "book_requirement": "Record session high, low, their timestamps, and which extreme occurred first.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "OUTCOME_ONLY",
+      "factor_id": "OUTCOME_EXTREME_ORDER",
+      "feature_ids": [],
+      "reason": "Used only in frozen outcome definitions; never a decision condition."
+    },
+    {
+      "book_chapters": [
+        5,
+        6,
+        16,
+        19
+      ],
+      "book_requirement": "Preserve the full session path and phase changes rather than only open-to-close movement.",
+      "development_coverage": "PRESENT",
+      "disposition": "OUTCOME_ONLY",
+      "factor_id": "OUTCOME_FULL_PATH",
+      "feature_ids": [],
+      "reason": "Used only in frozen outcome definitions; never a decision condition."
+    },
+    {
+      "book_chapters": [
+        5,
+        6,
+        16
+      ],
+      "book_requirement": "Record post-decision interaction with levels known at the decision.",
+      "development_coverage": "PRESENT",
+      "disposition": "OUTCOME_ONLY",
+      "factor_id": "OUTCOME_LEVEL_INTERACTIONS",
+      "feature_ids": [],
+      "reason": "Used only in frozen outcome definitions; never a decision condition."
+    },
+    {
+      "book_chapters": [
+        6,
+        16
+      ],
+      "book_requirement": "Record close location, path efficiency, reversal, and acceptance/rejection classification.",
+      "development_coverage": "DERIVABLE",
+      "disposition": "OUTCOME_ONLY",
+      "factor_id": "OUTCOME_PATH_CLASSIFICATION",
+      "feature_ids": [],
+      "reason": "Used only in frozen outcome definitions; never a decision condition."
+    },
+    {
+      "book_chapters": [
+        18,
+        19,
+        23
+      ],
+      "book_requirement": "Separate macro bias, trigger, invalidation, and risk.",
+      "development_coverage": "OUT_OF_SCOPE",
+      "disposition": "EXECUTION_OUT_OF_SCOPE",
+      "factor_id": "EXEC_BIAS_TRIGGER_INVALIDATION_RISK",
+      "feature_ids": [],
+      "reason": "V3 prohibits execution and trade research."
+    },
+    {
+      "book_chapters": [
+        4,
+        18,
+        23
+      ],
+      "book_requirement": "Model entry, stop distance, target, reward-to-risk, spread, slippage, latency, and position sizing.",
+      "development_coverage": "OUT_OF_SCOPE",
+      "disposition": "EXECUTION_OUT_OF_SCOPE",
+      "factor_id": "EXEC_ENTRY_EXIT_COSTS_RISK",
+      "feature_ids": [],
+      "reason": "V3 prohibits execution and trade research."
+    },
+    {
+      "book_chapters": [
+        18,
+        23
+      ],
+      "book_requirement": "Track portfolio-cluster exposure, event-risk warnings, slippage warnings, and daily-loss status.",
+      "development_coverage": "OUT_OF_SCOPE",
+      "disposition": "EXECUTION_OUT_OF_SCOPE",
+      "factor_id": "EXEC_PORTFOLIO_AND_DAILY_RISK",
+      "feature_ids": [],
+      "reason": "V3 prohibits execution and trade research."
+    }
+  ],
+  "feature_registry": [
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "CALCULATED",
+        "INFERRED"
+      ],
+      "extractor": "COMPONENT_FACT_DIRECTION",
+      "family": "CATALYST",
+      "feature_id": "CATALYST_IMPACT_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "L4_CATALYSTS",
+      "limitation": "The direction is inferred from an already-released event and must not be presented as an observed institutional response.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.catalysts.event_impact_state"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "EXPECT_ECONOMIC_SURPRISE",
+        "CATALYST_IMPACT_INFERENCE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DOWN": -1,
+        "UP": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "CROSS_CHANGE_SIGN",
+      "family": "CROSS_GOLD",
+      "feature_id": "CROSS_GOLD_1_DAY_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": null,
+      "parameters": {
+        "horizon": "1_DAY",
+        "instrument": "gold"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.cross_market.gold.value.changes.1_DAY"
+      ],
+      "states": [
+        "UP",
+        "DOWN",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "UP",
+        "DOWN"
+      ],
+      "traceability_factor_ids": [
+        "MECH_XAUUSD_PRICE",
+        "CROSS_SYNCHRONIZED_PANEL"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DOWN": -1,
+        "UP": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "CROSS_CHANGE_SIGN",
+      "family": "CROSS_GOLD",
+      "feature_id": "CROSS_GOLD_1_HOUR_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": null,
+      "parameters": {
+        "horizon": "1_HOUR",
+        "instrument": "gold"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.cross_market.gold.value.changes.1_HOUR"
+      ],
+      "states": [
+        "UP",
+        "DOWN",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "UP",
+        "DOWN"
+      ],
+      "traceability_factor_ids": [
+        "MECH_XAUUSD_PRICE",
+        "CROSS_SYNCHRONIZED_PANEL"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DOWN": -1,
+        "UP": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "CROSS_CHANGE_SIGN",
+      "family": "CROSS_GOLD",
+      "feature_id": "CROSS_GOLD_4_HOURS_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": null,
+      "parameters": {
+        "horizon": "4_HOURS",
+        "instrument": "gold"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.cross_market.gold.value.changes.4_HOURS"
+      ],
+      "states": [
+        "UP",
+        "DOWN",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "UP",
+        "DOWN"
+      ],
+      "traceability_factor_ids": [
+        "MECH_XAUUSD_PRICE",
+        "CROSS_SYNCHRONIZED_PANEL"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DOWN": -1,
+        "UP": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "CROSS_CHANGE_SIGN",
+      "family": "CROSS_GOLD",
+      "feature_id": "CROSS_GOLD_5_DAYS_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": null,
+      "parameters": {
+        "horizon": "5_DAYS",
+        "instrument": "gold"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.cross_market.gold.value.changes.5_DAYS"
+      ],
+      "states": [
+        "UP",
+        "DOWN",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "UP",
+        "DOWN"
+      ],
+      "traceability_factor_ids": [
+        "MECH_XAUUSD_PRICE",
+        "CROSS_SYNCHRONIZED_PANEL"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DOWN": -1,
+        "UP": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "CROSS_CHANGE_SIGN",
+      "family": "CROSS_SILVER",
+      "feature_id": "CROSS_SILVER_1_DAY_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": null,
+      "parameters": {
+        "horizon": "1_DAY",
+        "instrument": "silver"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.cross_market.silver.value.changes.1_DAY"
+      ],
+      "states": [
+        "UP",
+        "DOWN",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "UP",
+        "DOWN"
+      ],
+      "traceability_factor_ids": [
+        "CROSS_SILVER",
+        "CROSS_SYNCHRONIZED_PANEL"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DOWN": -1,
+        "UP": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "CROSS_CHANGE_SIGN",
+      "family": "CROSS_SILVER",
+      "feature_id": "CROSS_SILVER_1_HOUR_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": null,
+      "parameters": {
+        "horizon": "1_HOUR",
+        "instrument": "silver"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.cross_market.silver.value.changes.1_HOUR"
+      ],
+      "states": [
+        "UP",
+        "DOWN",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "UP",
+        "DOWN"
+      ],
+      "traceability_factor_ids": [
+        "CROSS_SILVER",
+        "CROSS_SYNCHRONIZED_PANEL"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DOWN": -1,
+        "UP": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "CROSS_CHANGE_SIGN",
+      "family": "CROSS_SILVER",
+      "feature_id": "CROSS_SILVER_4_HOURS_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": null,
+      "parameters": {
+        "horizon": "4_HOURS",
+        "instrument": "silver"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.cross_market.silver.value.changes.4_HOURS"
+      ],
+      "states": [
+        "UP",
+        "DOWN",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "UP",
+        "DOWN"
+      ],
+      "traceability_factor_ids": [
+        "CROSS_SILVER",
+        "CROSS_SYNCHRONIZED_PANEL"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DOWN": -1,
+        "UP": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "CROSS_CHANGE_SIGN",
+      "family": "CROSS_SILVER",
+      "feature_id": "CROSS_SILVER_5_DAYS_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": null,
+      "parameters": {
+        "horizon": "5_DAYS",
+        "instrument": "silver"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.cross_market.silver.value.changes.5_DAYS"
+      ],
+      "states": [
+        "UP",
+        "DOWN",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "UP",
+        "DOWN"
+      ],
+      "traceability_factor_ids": [
+        "CROSS_SILVER",
+        "CROSS_SYNCHRONIZED_PANEL"
+      ]
+    },
+    {
+      "direction_hints": {
+        "CUT_DOMINANT": 1,
+        "HIKE_DOMINANT": -1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SOFR_WINDOW_BALANCE",
+      "family": "EXPECTATIONS",
+      "feature_id": "EXPECT_SOFR_WINDOW_CUT_HIKE_BALANCE",
+      "interaction_eligible": true,
+      "layer": "L2_EXPECTATIONS",
+      "limitation": "Atlanta Fed quarterly SOFR reference-window distributions are not exact FOMC meeting probabilities.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.expectations.policy_path.repricing"
+      ],
+      "states": [
+        "CUT_DOMINANT",
+        "HIKE_DOMINANT",
+        "BALANCED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "CUT_DOMINANT",
+        "HIKE_DOMINANT"
+      ],
+      "traceability_factor_ids": [
+        "EXPECT_POLICY_PATH_SHAPE",
+        "EXPECT_POLICY_REPRICING"
+      ]
+    },
+    {
+      "direction_hints": {
+        "NEAR": null
+      },
+      "epistemic_status": [
+        "CALCULATED"
+      ],
+      "extractor": "NEAREST_LEVEL_TO_ATR",
+      "family": "LEVELS",
+      "feature_id": "LEVEL_NEAREST_KNOWN_TO_1H_ATR",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": "A known coordinate is not evidence of observed resting liquidity.",
+      "parameters": {
+        "near_max_atr": 0.25,
+        "timeframe": "1h"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.levels[]",
+        "decision_state.market_mechanics.xauusd_price",
+        "decision_state.market_structure.timeframes[timeframe=1h].range_state"
+      ],
+      "states": [
+        "NEAR",
+        "NOT_NEAR",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "NEAR"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_SUPPORT_RESISTANCE_LEVELS",
+        "STRUCT_LIQUIDITY_STOP_ZONES"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "DECISION_SPREAD_TO_WINDOW",
+      "family": "LIQUIDITY",
+      "feature_id": "LIQUIDITY_DECISION_SPREAD_TO_ASIA",
+      "interaction_eligible": true,
+      "layer": "L5_SESSIONS_LIQUIDITY",
+      "limitation": null,
+      "parameters": {
+        "tight_max_ratio": 0.75,
+        "wide_min_ratio": 1.5,
+        "window": "asia_state"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_mechanics.spread",
+        "decision_state.layers.sessions_and_liquidity.asia_state"
+      ],
+      "states": [
+        "WIDE",
+        "NORMAL",
+        "TIGHT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "WIDE",
+        "TIGHT"
+      ],
+      "traceability_factor_ids": [
+        "MECH_SPREAD",
+        "SESSION_ROLLOVER_LIQUIDITY"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": null,
+        "RISING": null,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "RATES",
+      "feature_id": "MACRO_BREAKEVEN_10Y_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.rates.breakeven_10y"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "RATES_BREAKEVEN_10Y"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": -1,
+        "RISING": 1,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "LABOUR",
+      "feature_id": "MACRO_CLAIMS_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.labour.claims"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_LABOUR"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": null,
+        "RISING": null,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "INFLATION",
+      "feature_id": "MACRO_CPI_CORE_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.inflation.cpi_core"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_CPI"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": null,
+        "RISING": null,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "INFLATION",
+      "feature_id": "MACRO_CPI_HEADLINE_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.inflation.cpi_headline"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_CPI"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1,
+        "NEUTRAL": null
+      },
+      "epistemic_status": [
+        "INFERRED"
+      ],
+      "extractor": "ENGINE_SCORE",
+      "family": "SYNTHESIS",
+      "feature_id": "MACRO_ENGINE_SCORE",
+      "interaction_eligible": true,
+      "layer": "SYNTHESIS",
+      "limitation": "This is the pre-existing transparent engine score. It is a research condition, not validated directional truth.",
+      "parameters": {
+        "bearish_max": -5.0,
+        "bullish_min": 5.0
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.regime_state.value.directional_score"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL"
+      ],
+      "traceability_factor_ids": [
+        "SYNTHESIS_EVIDENCE_CHAIN"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": null,
+        "RISING": null,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "RISK",
+      "feature_id": "MACRO_EQUITIES_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.risk.equities"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "RISK_EQUITY_VOLATILITY"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": 1,
+        "RISING": -1,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "RATES",
+      "feature_id": "MACRO_FED_POLICY_RATE_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L2_EXPECTATIONS",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.rates.fed_policy_rate"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_FED_RATE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": -1,
+        "RISING": 1,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "RISK",
+      "feature_id": "MACRO_FINANCIAL_STRESS_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.risk.financial_stress"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "RISK_CREDIT_FINANCIAL_STRESS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "POSITIVE": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_LEVEL_BINARY",
+      "family": "RISK",
+      "feature_id": "MACRO_FINANCIAL_STRESS_LEVEL",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": null,
+      "parameters": {
+        "non_positive_state": "NON_POSITIVE",
+        "positive_state": "POSITIVE",
+        "threshold": 0.0
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.risk.financial_stress"
+      ],
+      "states": [
+        "POSITIVE",
+        "NON_POSITIVE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "POSITIVE"
+      ],
+      "traceability_factor_ids": [
+        "RISK_CREDIT_FINANCIAL_STRESS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": 1,
+        "RISING": -1,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "GROWTH",
+      "feature_id": "MACRO_GDP_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.growth.gdp"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_GROWTH"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": -1,
+        "RISING": 1,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "RISK",
+      "feature_id": "MACRO_HIGH_YIELD_SPREAD_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.risk.high_yield_spread"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "RISK_CREDIT_FINANCIAL_STRESS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": 1,
+        "RISING": -1,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "LABOUR",
+      "feature_id": "MACRO_PAYROLLS_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.labour.payrolls"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_LABOUR"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": null,
+        "RISING": null,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "INFLATION",
+      "feature_id": "MACRO_PCE_CORE_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.inflation.pce_core"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_PCE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": null,
+        "RISING": null,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "INFLATION",
+      "feature_id": "MACRO_PCE_HEADLINE_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.inflation.pce_headline"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_PCE"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "INFERRED"
+      ],
+      "extractor": "FACT_CATEGORY",
+      "family": "REGIME",
+      "feature_id": "MACRO_REACTION_FUNCTION",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": null,
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.reaction_function"
+      ],
+      "states": [
+        "INFLATION_FOCUS",
+        "GROWTH_LABOUR_FOCUS",
+        "FINANCIAL_STRESS_FOCUS",
+        "EVENT_SURPRISE_WITH_PARTIAL_MACRO",
+        "UNKNOWN_WITHOUT_EVENT_AND_REGIME_CORE",
+        "BALANCED_REACTION_FUNCTION",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "INFLATION_FOCUS",
+        "GROWTH_LABOUR_FOCUS",
+        "FINANCIAL_STRESS_FOCUS",
+        "EVENT_SURPRISE_WITH_PARTIAL_MACRO",
+        "UNKNOWN_WITHOUT_EVENT_AND_REGIME_CORE",
+        "BALANCED_REACTION_FUNCTION"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_REACTION_FUNCTION"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": 1,
+        "RISING": -1,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "RATES",
+      "feature_id": "MACRO_REAL_YIELD_10Y_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.rates.real_yield_10y"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "RATES_REAL_YIELD_10Y"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "INFERRED"
+      ],
+      "extractor": "REGIME_LABEL",
+      "family": "REGIME",
+      "feature_id": "MACRO_REGIME_LABEL",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": null,
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.regime_state.value.regime_label"
+      ],
+      "states": [
+        "GOLDILOCKS",
+        "SOFT_LANDING",
+        "OVERHEATING",
+        "SLOWDOWN",
+        "RECESSION_DISINFLATION",
+        "STAGFLATION",
+        "DEFLATIONARY_STRESS",
+        "FINANCIAL_CRISIS_OR_LIQUIDITY_STRESS",
+        "PARTIAL_RATES_USD_SUPPORTIVE",
+        "PARTIAL_RATES_USD_PRESSURE",
+        "PARTIAL_RATES_USD_MIXED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "GOLDILOCKS",
+        "SOFT_LANDING",
+        "OVERHEATING",
+        "SLOWDOWN",
+        "RECESSION_DISINFLATION",
+        "STAGFLATION",
+        "DEFLATIONARY_STRESS",
+        "FINANCIAL_CRISIS_OR_LIQUIDITY_STRESS",
+        "PARTIAL_RATES_USD_SUPPORTIVE",
+        "PARTIAL_RATES_USD_PRESSURE",
+        "PARTIAL_RATES_USD_MIXED"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_CLASSIFICATION"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": 1,
+        "RISING": -1,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "GROWTH",
+      "feature_id": "MACRO_RETAIL_SALES_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.growth.retail_sales"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_GROWTH"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": null,
+        "RISING": null,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "RATES",
+      "feature_id": "MACRO_TREASURY_10Y_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.rates.treasury_10y"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "RATES_TREASURY_10Y"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": 1,
+        "RISING": -1,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "RATES",
+      "feature_id": "MACRO_TREASURY_2Y_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L2_EXPECTATIONS",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.rates.treasury_2y"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "RATES_TREASURY_2Y"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": -1,
+        "RISING": 1,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "LABOUR",
+      "feature_id": "MACRO_UNEMPLOYMENT_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.labour.unemployment"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_LABOUR"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": 1,
+        "RISING": -1,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "USD",
+      "feature_id": "MACRO_USD_BROAD_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.usd"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "USD_CONTEXT"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": -1,
+        "RISING": 1,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "RISK",
+      "feature_id": "MACRO_VOLATILITY_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L6_CROSS_MARKET",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.risk.volatility"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "RISK_EQUITY_VOLATILITY"
+      ]
+    },
+    {
+      "direction_hints": {
+        "FALLING": 1,
+        "RISING": -1,
+        "UNCHANGED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SERIES_CHANGE_SIGN",
+      "family": "LABOUR",
+      "feature_id": "MACRO_WAGES_CHANGE",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": "The sign is the latest point-in-time observation-to-observation change and can persist across multiple sessions.",
+      "parameters": {},
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.labour.wages"
+      ],
+      "states": [
+        "RISING",
+        "FALLING",
+        "UNCHANGED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "RISING",
+        "FALLING"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_LABOUR"
+      ]
+    },
+    {
+      "direction_hints": {
+        "INVERTED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "SCALAR_BINARY",
+      "family": "RATES",
+      "feature_id": "MACRO_YIELD_CURVE_LEVEL",
+      "interaction_eligible": true,
+      "layer": "L1_MARKET_REGIME",
+      "limitation": null,
+      "parameters": {
+        "negative_state": "INVERTED",
+        "non_negative_state": "NON_INVERTED",
+        "threshold": 0.0
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.market_regime.rates.yield_curve_2s10s"
+      ],
+      "states": [
+        "INVERTED",
+        "NON_INVERTED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "INVERTED"
+      ],
+      "traceability_factor_ids": [
+        "RATES_YIELD_CURVE"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "INFERRED"
+      ],
+      "extractor": "COT_INFERRED_STATE",
+      "family": "POSITIONING",
+      "feature_id": "POSITION_CROWDING_STATE",
+      "interaction_eligible": true,
+      "layer": "L3_POSITIONING",
+      "limitation": "This is explicitly an inference from published CFTC data, not observed institutional intent.",
+      "parameters": {
+        "state_code": "crowding_state"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.positioning.inferred_states[]"
+      ],
+      "states": [
+        "CROWDED_LONGS",
+        "CROWDED_SHORTS",
+        "BALANCED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "CROWDED_LONGS",
+        "CROWDED_SHORTS",
+        "BALANCED"
+      ],
+      "traceability_factor_ids": [
+        "POSITION_CROWDING_RISK"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "INFERRED"
+      ],
+      "extractor": "COT_INFERRED_STATE",
+      "family": "POSITIONING",
+      "feature_id": "POSITION_LONG_LIQUIDATION_RISK",
+      "interaction_eligible": true,
+      "layer": "L3_POSITIONING",
+      "limitation": "This is explicitly an inference from published CFTC data, not observed institutional intent.",
+      "parameters": {
+        "state_code": "long_liquidation_risk"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.positioning.inferred_states[]"
+      ],
+      "states": [
+        "ELEVATED",
+        "NORMAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "ELEVATED"
+      ],
+      "traceability_factor_ids": [
+        "POSITION_CROWDING_RISK"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "COT_CATEGORY_NET_SIGN",
+      "family": "POSITIONING",
+      "feature_id": "POSITION_MANAGED_MONEY_NET",
+      "interaction_eligible": true,
+      "layer": "L3_POSITIONING",
+      "limitation": "CFTC categories are observed weekly positions; they do not prove participant motive.",
+      "parameters": {
+        "category": "managed_money"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.positioning.managed_money"
+      ],
+      "states": [
+        "NET_LONG",
+        "NET_SHORT",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "NET_LONG",
+        "NET_SHORT"
+      ],
+      "traceability_factor_ids": [
+        "POSITION_COT_MANAGED_MONEY"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "COT_CATEGORY_NET_SIGN",
+      "family": "POSITIONING",
+      "feature_id": "POSITION_OTHER_REPORTABLE_NET",
+      "interaction_eligible": true,
+      "layer": "L3_POSITIONING",
+      "limitation": "CFTC categories are observed weekly positions; they do not prove participant motive.",
+      "parameters": {
+        "category": "other_reportable"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.positioning.other_reportable"
+      ],
+      "states": [
+        "NET_LONG",
+        "NET_SHORT",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "NET_LONG",
+        "NET_SHORT"
+      ],
+      "traceability_factor_ids": [
+        "POSITION_COT_OTHER_CATEGORIES"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "INFERRED"
+      ],
+      "extractor": "COT_INFERRED_STATE",
+      "family": "POSITIONING",
+      "feature_id": "POSITION_PARTICIPATION_STATE",
+      "interaction_eligible": true,
+      "layer": "L3_POSITIONING",
+      "limitation": "This is explicitly an inference from published CFTC data, not observed institutional intent.",
+      "parameters": {
+        "state_code": "participation_state"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.positioning.inferred_states[]"
+      ],
+      "states": [
+        "PROBABLE_FRESH_BULLISH_PARTICIPATION",
+        "PROBABLE_SHORT_COVERING",
+        "PROBABLE_FRESH_BEARISH_PARTICIPATION",
+        "PROBABLE_LONG_LIQUIDATION",
+        "INDETERMINATE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "PROBABLE_FRESH_BULLISH_PARTICIPATION",
+        "PROBABLE_SHORT_COVERING",
+        "PROBABLE_FRESH_BEARISH_PARTICIPATION",
+        "PROBABLE_LONG_LIQUIDATION"
+      ],
+      "traceability_factor_ids": [
+        "POSITION_PRICE_OI_INFERENCE"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "COT_CATEGORY_NET_SIGN",
+      "family": "POSITIONING",
+      "feature_id": "POSITION_PRODUCER_MERCHANT_NET",
+      "interaction_eligible": true,
+      "layer": "L3_POSITIONING",
+      "limitation": "CFTC categories are observed weekly positions; they do not prove participant motive.",
+      "parameters": {
+        "category": "producer_merchant"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.positioning.producer_merchant"
+      ],
+      "states": [
+        "NET_LONG",
+        "NET_SHORT",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "NET_LONG",
+        "NET_SHORT"
+      ],
+      "traceability_factor_ids": [
+        "POSITION_COT_OTHER_CATEGORIES"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "INFERRED"
+      ],
+      "extractor": "COT_INFERRED_STATE",
+      "family": "POSITIONING",
+      "feature_id": "POSITION_SHORT_COVERING_RISK",
+      "interaction_eligible": true,
+      "layer": "L3_POSITIONING",
+      "limitation": "This is explicitly an inference from published CFTC data, not observed institutional intent.",
+      "parameters": {
+        "state_code": "short_covering_risk"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.positioning.inferred_states[]"
+      ],
+      "states": [
+        "ELEVATED",
+        "NORMAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "ELEVATED"
+      ],
+      "traceability_factor_ids": [
+        "POSITION_CROWDING_RISK"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "COT_CATEGORY_NET_SIGN",
+      "family": "POSITIONING",
+      "feature_id": "POSITION_SWAP_DEALER_NET",
+      "interaction_eligible": true,
+      "layer": "L3_POSITIONING",
+      "limitation": "CFTC categories are observed weekly positions; they do not prove participant motive.",
+      "parameters": {
+        "category": "swap_dealer"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.positioning.swap_dealer"
+      ],
+      "states": [
+        "NET_LONG",
+        "NET_SHORT",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "NET_LONG",
+        "NET_SHORT"
+      ],
+      "traceability_factor_ids": [
+        "POSITION_COT_OTHER_CATEGORIES"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "WINDOW_CLOSE_LOCATION",
+      "family": "SESSION_ASIA",
+      "feature_id": "SESSION_ASIA_CLOSE_LOCATION",
+      "interaction_eligible": true,
+      "layer": "L5_SESSIONS_LIQUIDITY",
+      "limitation": null,
+      "parameters": {
+        "window": "asia_state"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.sessions_and_liquidity.asia_state"
+      ],
+      "states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD"
+      ],
+      "traceability_factor_ids": [
+        "SESSION_ASIA_STATE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DOWN": -1,
+        "UP": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "WINDOW_DIRECTION",
+      "family": "SESSION_ASIA",
+      "feature_id": "SESSION_ASIA_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "L5_SESSIONS_LIQUIDITY",
+      "limitation": null,
+      "parameters": {
+        "window": "asia_state"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.sessions_and_liquidity.asia_state"
+      ],
+      "states": [
+        "UP",
+        "DOWN",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "UP",
+        "DOWN"
+      ],
+      "traceability_factor_ids": [
+        "SESSION_ASIA_STATE"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "WINDOW_RANGE_TO_ATR",
+      "family": "SESSION_ASIA",
+      "feature_id": "SESSION_ASIA_RANGE_TO_1H_ATR",
+      "interaction_eligible": true,
+      "layer": "L5_SESSIONS_LIQUIDITY",
+      "limitation": null,
+      "parameters": {
+        "compressed_max": 0.75,
+        "expanded_min": 1.5,
+        "timeframe": "1h",
+        "window": "asia_state"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.sessions_and_liquidity.asia_state",
+        "decision_state.market_structure.timeframes[timeframe=1h].range_state"
+      ],
+      "states": [
+        "COMPRESSED",
+        "NORMAL",
+        "EXPANDED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "COMPRESSED",
+        "NORMAL",
+        "EXPANDED"
+      ],
+      "traceability_factor_ids": [
+        "SESSION_ASIA_STATE",
+        "STRUCT_TREND_RANGE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "WIDE": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "WINDOW_SPREAD_RATIO",
+      "family": "LIQUIDITY",
+      "feature_id": "SESSION_ASIA_SPREAD_EXPANSION",
+      "interaction_eligible": true,
+      "layer": "L5_SESSIONS_LIQUIDITY",
+      "limitation": null,
+      "parameters": {
+        "wide_min_ratio": 1.5,
+        "window": "asia_state"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.sessions_and_liquidity.asia_state"
+      ],
+      "states": [
+        "WIDE",
+        "NORMAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "WIDE"
+      ],
+      "traceability_factor_ids": [
+        "SESSION_ROLLOVER_LIQUIDITY",
+        "MECH_SPREAD"
+      ]
+    },
+    {
+      "direction_hints": {
+        "ABOVE": 1,
+        "BELOW": -1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "PRICE_VS_WINDOW_RANGE",
+      "family": "SESSION_ASIA",
+      "feature_id": "SESSION_DECISION_POSITION_VS_ASIA",
+      "interaction_eligible": true,
+      "layer": "L5_SESSIONS_LIQUIDITY",
+      "limitation": null,
+      "parameters": {
+        "window": "asia_state"
+      },
+      "sessions": [
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.sessions_and_liquidity.asia_state",
+        "decision_state.market_mechanics.xauusd_price"
+      ],
+      "states": [
+        "ABOVE",
+        "UPPER_THIRD",
+        "MIDDLE_THIRD",
+        "LOWER_THIRD",
+        "BELOW",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "ABOVE",
+        "UPPER_THIRD",
+        "MIDDLE_THIRD",
+        "LOWER_THIRD",
+        "BELOW"
+      ],
+      "traceability_factor_ids": [
+        "SESSION_ASIA_STATE",
+        "STRUCT_SUPPORT_RESISTANCE_LEVELS"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "WINDOW_CLOSE_LOCATION",
+      "family": "SESSION_LONDON",
+      "feature_id": "SESSION_LONDON_CLOSE_LOCATION",
+      "interaction_eligible": true,
+      "layer": "L5_SESSIONS_LIQUIDITY",
+      "limitation": null,
+      "parameters": {
+        "window": "london_state"
+      },
+      "sessions": [
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.sessions_and_liquidity.london_state"
+      ],
+      "states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD"
+      ],
+      "traceability_factor_ids": [
+        "SESSION_LONDON_STATE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DOWN": -1,
+        "UP": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "WINDOW_DIRECTION",
+      "family": "SESSION_LONDON",
+      "feature_id": "SESSION_LONDON_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "L5_SESSIONS_LIQUIDITY",
+      "limitation": null,
+      "parameters": {
+        "window": "london_state"
+      },
+      "sessions": [
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.sessions_and_liquidity.london_state"
+      ],
+      "states": [
+        "UP",
+        "DOWN",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "UP",
+        "DOWN"
+      ],
+      "traceability_factor_ids": [
+        "SESSION_LONDON_STATE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "HIGH_ONLY": 1,
+        "LOW_ONLY": -1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "WINDOW_INTERACTION",
+      "family": "SESSION_LONDON",
+      "feature_id": "SESSION_LONDON_INTERACTION_WITH_ASIA",
+      "interaction_eligible": true,
+      "layer": "L5_SESSIONS_LIQUIDITY",
+      "limitation": null,
+      "parameters": {
+        "inner_window": "asia_state",
+        "outer_window": "london_state"
+      },
+      "sessions": [
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.sessions_and_liquidity.asia_state",
+        "decision_state.layers.sessions_and_liquidity.london_state"
+      ],
+      "states": [
+        "HIGH_ONLY",
+        "LOW_ONLY",
+        "BOTH_SIDES",
+        "INSIDE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "HIGH_ONLY",
+        "LOW_ONLY",
+        "BOTH_SIDES",
+        "INSIDE"
+      ],
+      "traceability_factor_ids": [
+        "SESSION_ASIA_STATE",
+        "SESSION_LONDON_STATE",
+        "SESSION_HANDOVER_OVERLAP"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "WINDOW_RANGE_TO_ATR",
+      "family": "SESSION_LONDON",
+      "feature_id": "SESSION_LONDON_RANGE_TO_1H_ATR",
+      "interaction_eligible": true,
+      "layer": "L5_SESSIONS_LIQUIDITY",
+      "limitation": null,
+      "parameters": {
+        "compressed_max": 0.75,
+        "expanded_min": 1.5,
+        "timeframe": "1h",
+        "window": "london_state"
+      },
+      "sessions": [
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.layers.sessions_and_liquidity.london_state",
+        "decision_state.market_structure.timeframes[timeframe=1h].range_state"
+      ],
+      "states": [
+        "COMPRESSED",
+        "NORMAL",
+        "EXPANDED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "COMPRESSED",
+        "NORMAL",
+        "EXPANDED"
+      ],
+      "traceability_factor_ids": [
+        "SESSION_LONDON_STATE",
+        "STRUCT_TREND_RANGE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DETECTED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_BOOLEAN_STATE",
+      "family": "STRUCTURE_15m",
+      "feature_id": "STRUCT_15M_COMPRESSION",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "fact_name": "compression",
+        "timeframe": "15m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=15m].compression"
+      ],
+      "states": [
+        "DETECTED",
+        "NOT_DETECTED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "DETECTED"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_LATEST_DIRECTIONAL_DETECTION",
+      "family": "STRUCTURE_15m",
+      "feature_id": "STRUCT_15M_LATEST_BOS",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "bearish_token": "BREAK_OF_STRUCTURE_BEARISH",
+        "bullish_token": "BREAK_OF_STRUCTURE_BULLISH",
+        "fact_name": "break_of_structure",
+        "timeframe": "15m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=15m].break_of_structure"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NONE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_BOS_MSS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_LATEST_DIRECTIONAL_DETECTION",
+      "family": "STRUCTURE_15m",
+      "feature_id": "STRUCT_15M_LATEST_MSS",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "bearish_token": "MARKET_STRUCTURE_SHIFT_BEARISH",
+        "bullish_token": "MARKET_STRUCTURE_SHIFT_BULLISH",
+        "fact_name": "market_structure_shift",
+        "timeframe": "15m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=15m].market_structure_shift"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NONE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_BOS_MSS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "NEGATIVE": -1,
+        "POSITIVE": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_MOMENTUM_SIGN",
+      "family": "STRUCTURE_15m",
+      "feature_id": "STRUCT_15M_MOMENTUM",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "timeframe": "15m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=15m].momentum"
+      ],
+      "states": [
+        "POSITIVE",
+        "NEGATIVE",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "POSITIVE",
+        "NEGATIVE"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_RANGE_LOCATION",
+      "family": "STRUCTURE_15m",
+      "feature_id": "STRUCT_15M_RANGE_LOCATION",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "lower_fraction": 0.3333333333333333,
+        "timeframe": "15m",
+        "upper_fraction": 0.6666666666666666
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=15m].range_state"
+      ],
+      "states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_TREND_RANGE",
+        "STRUCT_SUPPORT_RESISTANCE_LEVELS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1,
+        "MIXED_OR_TRANSITIONING": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_TREND",
+      "family": "STRUCTURE_15m",
+      "feature_id": "STRUCT_15M_TREND",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "timeframe": "15m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=15m].trend_state"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "MIXED_OR_TRANSITIONING",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH",
+        "MIXED_OR_TRANSITIONING"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_TREND_RANGE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DETECTED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_BOOLEAN_STATE",
+      "family": "STRUCTURE_1d",
+      "feature_id": "STRUCT_1D_COMPRESSION",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "fact_name": "compression",
+        "timeframe": "1d"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1d].compression"
+      ],
+      "states": [
+        "DETECTED",
+        "NOT_DETECTED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "DETECTED"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_LATEST_DIRECTIONAL_DETECTION",
+      "family": "STRUCTURE_1d",
+      "feature_id": "STRUCT_1D_LATEST_BOS",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "bearish_token": "BREAK_OF_STRUCTURE_BEARISH",
+        "bullish_token": "BREAK_OF_STRUCTURE_BULLISH",
+        "fact_name": "break_of_structure",
+        "timeframe": "1d"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1d].break_of_structure"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NONE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_BOS_MSS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_LATEST_DIRECTIONAL_DETECTION",
+      "family": "STRUCTURE_1d",
+      "feature_id": "STRUCT_1D_LATEST_MSS",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "bearish_token": "MARKET_STRUCTURE_SHIFT_BEARISH",
+        "bullish_token": "MARKET_STRUCTURE_SHIFT_BULLISH",
+        "fact_name": "market_structure_shift",
+        "timeframe": "1d"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1d].market_structure_shift"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NONE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_BOS_MSS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "NEGATIVE": -1,
+        "POSITIVE": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_MOMENTUM_SIGN",
+      "family": "STRUCTURE_1d",
+      "feature_id": "STRUCT_1D_MOMENTUM",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "timeframe": "1d"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1d].momentum"
+      ],
+      "states": [
+        "POSITIVE",
+        "NEGATIVE",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "POSITIVE",
+        "NEGATIVE"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_RANGE_LOCATION",
+      "family": "STRUCTURE_1d",
+      "feature_id": "STRUCT_1D_RANGE_LOCATION",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "lower_fraction": 0.3333333333333333,
+        "timeframe": "1d",
+        "upper_fraction": 0.6666666666666666
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1d].range_state"
+      ],
+      "states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_TREND_RANGE",
+        "STRUCT_SUPPORT_RESISTANCE_LEVELS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1,
+        "MIXED_OR_TRANSITIONING": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_TREND",
+      "family": "STRUCTURE_1d",
+      "feature_id": "STRUCT_1D_TREND",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "timeframe": "1d"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1d].trend_state"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "MIXED_OR_TRANSITIONING",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH",
+        "MIXED_OR_TRANSITIONING"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_TREND_RANGE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DETECTED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_BOOLEAN_STATE",
+      "family": "STRUCTURE_1h",
+      "feature_id": "STRUCT_1H_COMPRESSION",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "fact_name": "compression",
+        "timeframe": "1h"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1h].compression"
+      ],
+      "states": [
+        "DETECTED",
+        "NOT_DETECTED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "DETECTED"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_LATEST_DIRECTIONAL_DETECTION",
+      "family": "STRUCTURE_1h",
+      "feature_id": "STRUCT_1H_LATEST_BOS",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "bearish_token": "BREAK_OF_STRUCTURE_BEARISH",
+        "bullish_token": "BREAK_OF_STRUCTURE_BULLISH",
+        "fact_name": "break_of_structure",
+        "timeframe": "1h"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1h].break_of_structure"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NONE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_BOS_MSS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_LATEST_DIRECTIONAL_DETECTION",
+      "family": "STRUCTURE_1h",
+      "feature_id": "STRUCT_1H_LATEST_MSS",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "bearish_token": "MARKET_STRUCTURE_SHIFT_BEARISH",
+        "bullish_token": "MARKET_STRUCTURE_SHIFT_BULLISH",
+        "fact_name": "market_structure_shift",
+        "timeframe": "1h"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1h].market_structure_shift"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NONE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_BOS_MSS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "NEGATIVE": -1,
+        "POSITIVE": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_MOMENTUM_SIGN",
+      "family": "STRUCTURE_1h",
+      "feature_id": "STRUCT_1H_MOMENTUM",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "timeframe": "1h"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1h].momentum"
+      ],
+      "states": [
+        "POSITIVE",
+        "NEGATIVE",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "POSITIVE",
+        "NEGATIVE"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_RANGE_LOCATION",
+      "family": "STRUCTURE_1h",
+      "feature_id": "STRUCT_1H_RANGE_LOCATION",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "lower_fraction": 0.3333333333333333,
+        "timeframe": "1h",
+        "upper_fraction": 0.6666666666666666
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1h].range_state"
+      ],
+      "states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_TREND_RANGE",
+        "STRUCT_SUPPORT_RESISTANCE_LEVELS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1,
+        "MIXED_OR_TRANSITIONING": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_TREND",
+      "family": "STRUCTURE_1h",
+      "feature_id": "STRUCT_1H_TREND",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "timeframe": "1h"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1h].trend_state"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "MIXED_OR_TRANSITIONING",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH",
+        "MIXED_OR_TRANSITIONING"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_TREND_RANGE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DETECTED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_BOOLEAN_STATE",
+      "family": "STRUCTURE_1m",
+      "feature_id": "STRUCT_1M_COMPRESSION",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "fact_name": "compression",
+        "timeframe": "1m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1m].compression"
+      ],
+      "states": [
+        "DETECTED",
+        "NOT_DETECTED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "DETECTED"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_LATEST_DIRECTIONAL_DETECTION",
+      "family": "STRUCTURE_1m",
+      "feature_id": "STRUCT_1M_LATEST_BOS",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "bearish_token": "BREAK_OF_STRUCTURE_BEARISH",
+        "bullish_token": "BREAK_OF_STRUCTURE_BULLISH",
+        "fact_name": "break_of_structure",
+        "timeframe": "1m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1m].break_of_structure"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NONE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_BOS_MSS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_LATEST_DIRECTIONAL_DETECTION",
+      "family": "STRUCTURE_1m",
+      "feature_id": "STRUCT_1M_LATEST_MSS",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "bearish_token": "MARKET_STRUCTURE_SHIFT_BEARISH",
+        "bullish_token": "MARKET_STRUCTURE_SHIFT_BULLISH",
+        "fact_name": "market_structure_shift",
+        "timeframe": "1m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1m].market_structure_shift"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NONE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_BOS_MSS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "NEGATIVE": -1,
+        "POSITIVE": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_MOMENTUM_SIGN",
+      "family": "STRUCTURE_1m",
+      "feature_id": "STRUCT_1M_MOMENTUM",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "timeframe": "1m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1m].momentum"
+      ],
+      "states": [
+        "POSITIVE",
+        "NEGATIVE",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "POSITIVE",
+        "NEGATIVE"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_RANGE_LOCATION",
+      "family": "STRUCTURE_1m",
+      "feature_id": "STRUCT_1M_RANGE_LOCATION",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "lower_fraction": 0.3333333333333333,
+        "timeframe": "1m",
+        "upper_fraction": 0.6666666666666666
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1m].range_state"
+      ],
+      "states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_TREND_RANGE",
+        "STRUCT_SUPPORT_RESISTANCE_LEVELS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1,
+        "MIXED_OR_TRANSITIONING": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_TREND",
+      "family": "STRUCTURE_1m",
+      "feature_id": "STRUCT_1M_TREND",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "timeframe": "1m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=1m].trend_state"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "MIXED_OR_TRANSITIONING",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH",
+        "MIXED_OR_TRANSITIONING"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_TREND_RANGE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DETECTED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_BOOLEAN_STATE",
+      "family": "STRUCTURE_4h",
+      "feature_id": "STRUCT_4H_COMPRESSION",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "fact_name": "compression",
+        "timeframe": "4h"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=4h].compression"
+      ],
+      "states": [
+        "DETECTED",
+        "NOT_DETECTED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "DETECTED"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_LATEST_DIRECTIONAL_DETECTION",
+      "family": "STRUCTURE_4h",
+      "feature_id": "STRUCT_4H_LATEST_BOS",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "bearish_token": "BREAK_OF_STRUCTURE_BEARISH",
+        "bullish_token": "BREAK_OF_STRUCTURE_BULLISH",
+        "fact_name": "break_of_structure",
+        "timeframe": "4h"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=4h].break_of_structure"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NONE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_BOS_MSS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_LATEST_DIRECTIONAL_DETECTION",
+      "family": "STRUCTURE_4h",
+      "feature_id": "STRUCT_4H_LATEST_MSS",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "bearish_token": "MARKET_STRUCTURE_SHIFT_BEARISH",
+        "bullish_token": "MARKET_STRUCTURE_SHIFT_BULLISH",
+        "fact_name": "market_structure_shift",
+        "timeframe": "4h"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=4h].market_structure_shift"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NONE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_BOS_MSS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "NEGATIVE": -1,
+        "POSITIVE": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_MOMENTUM_SIGN",
+      "family": "STRUCTURE_4h",
+      "feature_id": "STRUCT_4H_MOMENTUM",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "timeframe": "4h"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=4h].momentum"
+      ],
+      "states": [
+        "POSITIVE",
+        "NEGATIVE",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "POSITIVE",
+        "NEGATIVE"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_RANGE_LOCATION",
+      "family": "STRUCTURE_4h",
+      "feature_id": "STRUCT_4H_RANGE_LOCATION",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "lower_fraction": 0.3333333333333333,
+        "timeframe": "4h",
+        "upper_fraction": 0.6666666666666666
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=4h].range_state"
+      ],
+      "states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_TREND_RANGE",
+        "STRUCT_SUPPORT_RESISTANCE_LEVELS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1,
+        "MIXED_OR_TRANSITIONING": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_TREND",
+      "family": "STRUCTURE_4h",
+      "feature_id": "STRUCT_4H_TREND",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "timeframe": "4h"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=4h].trend_state"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "MIXED_OR_TRANSITIONING",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH",
+        "MIXED_OR_TRANSITIONING"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_TREND_RANGE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "DETECTED": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_BOOLEAN_STATE",
+      "family": "STRUCTURE_5m",
+      "feature_id": "STRUCT_5M_COMPRESSION",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "fact_name": "compression",
+        "timeframe": "5m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=5m].compression"
+      ],
+      "states": [
+        "DETECTED",
+        "NOT_DETECTED",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "DETECTED"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_LATEST_DIRECTIONAL_DETECTION",
+      "family": "STRUCTURE_5m",
+      "feature_id": "STRUCT_5M_LATEST_BOS",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "bearish_token": "BREAK_OF_STRUCTURE_BEARISH",
+        "bullish_token": "BREAK_OF_STRUCTURE_BULLISH",
+        "fact_name": "break_of_structure",
+        "timeframe": "5m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=5m].break_of_structure"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NONE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_BOS_MSS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_LATEST_DIRECTIONAL_DETECTION",
+      "family": "STRUCTURE_5m",
+      "feature_id": "STRUCT_5M_LATEST_MSS",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "bearish_token": "MARKET_STRUCTURE_SHIFT_BEARISH",
+        "bullish_token": "MARKET_STRUCTURE_SHIFT_BULLISH",
+        "fact_name": "market_structure_shift",
+        "timeframe": "5m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=5m].market_structure_shift"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NONE",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_BOS_MSS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "NEGATIVE": -1,
+        "POSITIVE": 1
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_MOMENTUM_SIGN",
+      "family": "STRUCTURE_5m",
+      "feature_id": "STRUCT_5M_MOMENTUM",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "timeframe": "5m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=5m].momentum"
+      ],
+      "states": [
+        "POSITIVE",
+        "NEGATIVE",
+        "FLAT",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "POSITIVE",
+        "NEGATIVE"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_COMPRESSION_EXPANSION_MOMENTUM"
+      ]
+    },
+    {
+      "direction_hints": {},
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_RANGE_LOCATION",
+      "family": "STRUCTURE_5m",
+      "feature_id": "STRUCT_5M_RANGE_LOCATION",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "lower_fraction": 0.3333333333333333,
+        "timeframe": "5m",
+        "upper_fraction": 0.6666666666666666
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=5m].range_state"
+      ],
+      "states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "LOWER_THIRD",
+        "MIDDLE_THIRD",
+        "UPPER_THIRD"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_TREND_RANGE",
+        "STRUCT_SUPPORT_RESISTANCE_LEVELS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1,
+        "MIXED_OR_TRANSITIONING": null
+      },
+      "epistemic_status": [
+        "OBSERVED",
+        "CALCULATED"
+      ],
+      "extractor": "STRUCTURE_TREND",
+      "family": "STRUCTURE_5m",
+      "feature_id": "STRUCT_5M_TREND",
+      "interaction_eligible": true,
+      "layer": "MARKET_STRUCTURE",
+      "limitation": null,
+      "parameters": {
+        "timeframe": "5m"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.market_structure.timeframes[timeframe=5m].trend_state"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "MIXED_OR_TRANSITIONING",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH",
+        "MIXED_OR_TRANSITIONING"
+      ],
+      "traceability_factor_ids": [
+        "STRUCT_TREND_RANGE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "CALCULATED",
+        "INFERRED"
+      ],
+      "extractor": "ENGINE_COMPONENT_DIRECTION",
+      "family": "SYNTHESIS_COMPONENT",
+      "feature_id": "SYNTH_CATALYST_SURPRISE_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "SYNTHESIS",
+      "limitation": "The component is an existing transparent interpretation and is tested separately from its raw inputs.",
+      "parameters": {
+        "component_code": "CATALYST_SURPRISE"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.synthesis.supporting_evidence[]",
+        "decision_state.synthesis.contradicting_evidence[]"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "EXPECT_ECONOMIC_SURPRISE",
+        "CATALYST_IMPACT_INFERENCE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "CALCULATED",
+        "INFERRED"
+      ],
+      "extractor": "ENGINE_COMPONENT_DIRECTION",
+      "family": "SYNTHESIS_COMPONENT",
+      "feature_id": "SYNTH_EQUITY_RISK_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "SYNTHESIS",
+      "limitation": "The component is an existing transparent interpretation and is tested separately from its raw inputs.",
+      "parameters": {
+        "component_code": "EQUITY_RISK"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.synthesis.supporting_evidence[]",
+        "decision_state.synthesis.contradicting_evidence[]"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "RISK_EQUITY_VOLATILITY"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "CALCULATED",
+        "INFERRED"
+      ],
+      "extractor": "ENGINE_COMPONENT_DIRECTION",
+      "family": "SYNTHESIS_COMPONENT",
+      "feature_id": "SYNTH_FED_PATH_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "SYNTHESIS",
+      "limitation": "The component is an existing transparent interpretation and is tested separately from its raw inputs.",
+      "parameters": {
+        "component_code": "FED_PATH"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.synthesis.supporting_evidence[]",
+        "decision_state.synthesis.contradicting_evidence[]"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "EXPECT_POLICY_PATH_SHAPE",
+        "EXPECT_POLICY_REPRICING"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "CALCULATED",
+        "INFERRED"
+      ],
+      "extractor": "ENGINE_COMPONENT_DIRECTION",
+      "family": "SYNTHESIS_COMPONENT",
+      "feature_id": "SYNTH_FINANCIAL_STRESS_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "SYNTHESIS",
+      "limitation": "The component is an existing transparent interpretation and is tested separately from its raw inputs.",
+      "parameters": {
+        "component_code": "FINANCIAL_STRESS"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.synthesis.supporting_evidence[]",
+        "decision_state.synthesis.contradicting_evidence[]"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "RISK_CREDIT_FINANCIAL_STRESS"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "CALCULATED",
+        "INFERRED"
+      ],
+      "extractor": "ENGINE_COMPONENT_DIRECTION",
+      "family": "SYNTHESIS_COMPONENT",
+      "feature_id": "SYNTH_GROWTH_REGIME_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "SYNTHESIS",
+      "limitation": "The component is an existing transparent interpretation and is tested separately from its raw inputs.",
+      "parameters": {
+        "component_code": "GROWTH_REGIME"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.synthesis.supporting_evidence[]",
+        "decision_state.synthesis.contradicting_evidence[]"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_GROWTH"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "CALCULATED",
+        "INFERRED"
+      ],
+      "extractor": "ENGINE_COMPONENT_DIRECTION",
+      "family": "SYNTHESIS_COMPONENT",
+      "feature_id": "SYNTH_INFLATION_REGIME_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "SYNTHESIS",
+      "limitation": "The component is an existing transparent interpretation and is tested separately from its raw inputs.",
+      "parameters": {
+        "component_code": "INFLATION_REGIME"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.synthesis.supporting_evidence[]",
+        "decision_state.synthesis.contradicting_evidence[]"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_CPI",
+        "REGIME_PCE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "CALCULATED",
+        "INFERRED"
+      ],
+      "extractor": "ENGINE_COMPONENT_DIRECTION",
+      "family": "SYNTHESIS_COMPONENT",
+      "feature_id": "SYNTH_LABOUR_REGIME_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "SYNTHESIS",
+      "limitation": "The component is an existing transparent interpretation and is tested separately from its raw inputs.",
+      "parameters": {
+        "component_code": "LABOUR_REGIME"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.synthesis.supporting_evidence[]",
+        "decision_state.synthesis.contradicting_evidence[]"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "REGIME_LABOUR"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "CALCULATED",
+        "INFERRED"
+      ],
+      "extractor": "ENGINE_COMPONENT_DIRECTION",
+      "family": "SYNTHESIS_COMPONENT",
+      "feature_id": "SYNTH_NOMINAL_DECOMPOSITION_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "SYNTHESIS",
+      "limitation": "The component is an existing transparent interpretation and is tested separately from its raw inputs.",
+      "parameters": {
+        "component_code": "NOMINAL_DECOMPOSITION"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.synthesis.supporting_evidence[]",
+        "decision_state.synthesis.contradicting_evidence[]"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "RATES_TREASURY_10Y",
+        "RATES_BREAKEVEN_10Y",
+        "CROSS_RATES_DRIVER"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "CALCULATED",
+        "INFERRED"
+      ],
+      "extractor": "ENGINE_COMPONENT_DIRECTION",
+      "family": "SYNTHESIS_COMPONENT",
+      "feature_id": "SYNTH_POSITIONING_FLOW_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "SYNTHESIS",
+      "limitation": "The component is an existing transparent interpretation and is tested separately from its raw inputs.",
+      "parameters": {
+        "component_code": "POSITIONING_FLOW"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.synthesis.supporting_evidence[]",
+        "decision_state.synthesis.contradicting_evidence[]"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "POSITION_COT_MANAGED_MONEY",
+        "POSITION_PRICE_OI_INFERENCE"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "CALCULATED",
+        "INFERRED"
+      ],
+      "extractor": "ENGINE_COMPONENT_DIRECTION",
+      "family": "SYNTHESIS_COMPONENT",
+      "feature_id": "SYNTH_REAL_YIELD_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "SYNTHESIS",
+      "limitation": "The component is an existing transparent interpretation and is tested separately from its raw inputs.",
+      "parameters": {
+        "component_code": "REAL_YIELD"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.synthesis.supporting_evidence[]",
+        "decision_state.synthesis.contradicting_evidence[]"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "RATES_REAL_YIELD_10Y"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "CALCULATED",
+        "INFERRED"
+      ],
+      "extractor": "ENGINE_COMPONENT_DIRECTION",
+      "family": "SYNTHESIS_COMPONENT",
+      "feature_id": "SYNTH_TWO_YEAR_YIELD_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "SYNTHESIS",
+      "limitation": "The component is an existing transparent interpretation and is tested separately from its raw inputs.",
+      "parameters": {
+        "component_code": "TWO_YEAR_YIELD"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.synthesis.supporting_evidence[]",
+        "decision_state.synthesis.contradicting_evidence[]"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "RATES_TREASURY_2Y"
+      ]
+    },
+    {
+      "direction_hints": {
+        "BEARISH": -1,
+        "BULLISH": 1
+      },
+      "epistemic_status": [
+        "CALCULATED",
+        "INFERRED"
+      ],
+      "extractor": "ENGINE_COMPONENT_DIRECTION",
+      "family": "SYNTHESIS_COMPONENT",
+      "feature_id": "SYNTH_USD_DIRECTION",
+      "interaction_eligible": true,
+      "layer": "SYNTHESIS",
+      "limitation": "The component is an existing transparent interpretation and is tested separately from its raw inputs.",
+      "parameters": {
+        "component_code": "USD"
+      },
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "source_paths": [
+        "decision_state.synthesis.supporting_evidence[]",
+        "decision_state.synthesis.contradicting_evidence[]"
+      ],
+      "states": [
+        "BULLISH",
+        "BEARISH",
+        "NEUTRAL",
+        "UNKNOWN"
+      ],
+      "tested_states": [
+        "BULLISH",
+        "BEARISH"
+      ],
+      "traceability_factor_ids": [
+        "USD_CONTEXT"
+      ]
+    }
+  ],
+  "frozen_inputs": {
+    "case_matrix": {
+      "artifact_bytes": 103763781,
+      "artifact_path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/cases.jsonl.gz",
+      "artifact_sha256": "d0f5120713b5f9ce641c6285941bfc23d3aac3b83b561c8fc1138e33a5ede9b9",
+      "case_counts": {
+        "london": 833,
+        "new_york": 826,
+        "total": 1659
+      },
+      "manifest_hash": "d6aad4b861d98899d6fdcc92ea53a20221434af5038a3bcb86a8b9faa1d8e7b7"
+    },
+    "contract_manifest_hash": "79a74f81bce0b80ca6c5da6b420400479013484a4bb759684402546672fa140b",
+    "m3_state": {
+      "file_sha256": "f56a8732fe466f2f5574c80b9421eb5b3f2f7e1435fd177bcae4c57cb9efc980",
+      "path": "research_artifacts/gold_session_behaviour_v3_state_v03.json",
+      "state_hash": "c569bd67aae862c4e86de49aa99d4d33ee6d820cf970251603a74f73619045a7"
+    },
+    "reference_book_sha256": "3e7ddc561932a859a4c9043a38ff71b7003907963fb52247e41edaeefc8ac42a",
+    "traceability_catalog_hash": "8707c39eb75bf3c74ce33908b0a3f4b0a1f679ee68848f1d10dce25e4bdf6bb4"
+  },
+  "implementation_freeze": {
+    "feature_module_path": "backend/src/gold_intel/analytics/session_behaviour_v3_discovery.py",
+    "feature_module_sha256": "921a6d02c71514438e46a81d22f0ea788b2bdfca88172e564d10b510f14e96dc",
+    "feature_transform_version": "GOLD_SESSION_BEHAVIOUR_V3_M4_FEATURES_V0_1",
+    "preregistry_tests": {
+      "command": "pytest -q backend/tests/unit/test_session_behaviour_v3_discovery.py",
+      "passed": 5,
+      "total": 5
+    },
+    "registry_fingerprint": "f5702111b9e40024bed20d5aa85173147da6cc772279aa9b142a3b63a9a8c929",
+    "test_file_path": "backend/tests/unit/test_session_behaviour_v3_discovery.py",
+    "test_file_sha256": "bc2e40acbdd1cdbcd8e8dfd3be675518c25a991f7e7d49a6966946e5217f74c8"
+  },
+  "interaction_registry": [
+    {
+      "conditions": [
+        {
+          "feature_id": "STRUCT_15M_TREND",
+          "state": "BEARISH"
+        },
+        {
+          "feature_id": "STRUCT_1H_TREND",
+          "state": "BEARISH"
+        }
+      ],
+      "interaction_id": "INT_15M_1H_BEARISH",
+      "rationale": "Multi-timeframe structure alignment.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "STRUCT_15M_TREND",
+          "state": "BULLISH"
+        },
+        {
+          "feature_id": "STRUCT_1H_TREND",
+          "state": "BULLISH"
+        }
+      ],
+      "interaction_id": "INT_15M_1H_BULLISH",
+      "rationale": "Multi-timeframe structure alignment.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "STRUCT_1H_TREND",
+          "state": "BEARISH"
+        },
+        {
+          "feature_id": "STRUCT_4H_TREND",
+          "state": "BEARISH"
+        }
+      ],
+      "interaction_id": "INT_1H_4H_BEARISH",
+      "rationale": "Multi-timeframe structure alignment.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "STRUCT_1H_TREND",
+          "state": "BULLISH"
+        },
+        {
+          "feature_id": "STRUCT_4H_TREND",
+          "state": "BULLISH"
+        }
+      ],
+      "interaction_id": "INT_1H_4H_BULLISH",
+      "rationale": "Multi-timeframe structure alignment.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_TREASURY_2Y_CHANGE",
+          "state": "RISING"
+        },
+        {
+          "feature_id": "MACRO_USD_BROAD_CHANGE",
+          "state": "RISING"
+        }
+      ],
+      "interaction_id": "INT_2Y_USD_PRESSURE",
+      "rationale": "Hawkish two-year-yield movement with a stronger dollar.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_TREASURY_2Y_CHANGE",
+          "state": "FALLING"
+        },
+        {
+          "feature_id": "MACRO_USD_BROAD_CHANGE",
+          "state": "FALLING"
+        }
+      ],
+      "interaction_id": "INT_2Y_USD_SUPPORT",
+      "rationale": "Dovish two-year-yield movement with a weaker dollar.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "CATALYST_IMPACT_DIRECTION",
+          "state": "BEARISH"
+        },
+        {
+          "feature_id": "STRUCT_15M_TREND",
+          "state": "BEARISH"
+        }
+      ],
+      "interaction_id": "INT_CATALYST_15M_BEARISH",
+      "rationale": "Released-event interpretation aligned with structure.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "CATALYST_IMPACT_DIRECTION",
+          "state": "BULLISH"
+        },
+        {
+          "feature_id": "STRUCT_15M_TREND",
+          "state": "BULLISH"
+        }
+      ],
+      "interaction_id": "INT_CATALYST_15M_BULLISH",
+      "rationale": "Released-event interpretation aligned with structure.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "CATALYST_IMPACT_DIRECTION",
+          "state": "BEARISH"
+        },
+        {
+          "feature_id": "POSITION_PARTICIPATION_STATE",
+          "state": "PROBABLE_FRESH_BEARISH_PARTICIPATION"
+        }
+      ],
+      "interaction_id": "INT_CATALYST_FRESH_BEARISH_PARTICIPATION",
+      "rationale": "Released-event interpretation with inferred weekly participation.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "CATALYST_IMPACT_DIRECTION",
+          "state": "BULLISH"
+        },
+        {
+          "feature_id": "POSITION_PARTICIPATION_STATE",
+          "state": "PROBABLE_FRESH_BULLISH_PARTICIPATION"
+        }
+      ],
+      "interaction_id": "INT_CATALYST_FRESH_BULLISH_PARTICIPATION",
+      "rationale": "Released-event interpretation with inferred weekly participation.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "SESSION_ASIA_RANGE_TO_1H_ATR",
+          "state": "COMPRESSED"
+        },
+        {
+          "feature_id": "CROSS_GOLD_4_HOURS_CHANGE",
+          "state": "DOWN"
+        }
+      ],
+      "interaction_id": "INT_COMPRESSED_ASIA_GOLD_4H_DOWN",
+      "rationale": "Compressed completed Asia range with negative prior gold momentum.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "SESSION_ASIA_RANGE_TO_1H_ATR",
+          "state": "COMPRESSED"
+        },
+        {
+          "feature_id": "CROSS_GOLD_4_HOURS_CHANGE",
+          "state": "UP"
+        }
+      ],
+      "interaction_id": "INT_COMPRESSED_ASIA_GOLD_4H_UP",
+      "rationale": "Compressed completed Asia range with positive prior gold momentum.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_EQUITIES_CHANGE",
+          "state": "FALLING"
+        },
+        {
+          "feature_id": "MACRO_VOLATILITY_CHANGE",
+          "state": "RISING"
+        }
+      ],
+      "interaction_id": "INT_DEFENSIVE_RISK_STATE",
+      "rationale": "Defensive equity and volatility state.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BEARISH"
+        },
+        {
+          "feature_id": "SESSION_ASIA_DIRECTION",
+          "state": "DOWN"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_ASIA_DOWN",
+      "rationale": "Transparent macro score aligned with the completed Asia path.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BULLISH"
+        },
+        {
+          "feature_id": "SESSION_ASIA_DIRECTION",
+          "state": "UP"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_ASIA_UP",
+      "rationale": "Transparent macro score aligned with the completed Asia path.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BEARISH"
+        },
+        {
+          "feature_id": "POSITION_CROWDING_STATE",
+          "state": "BALANCED"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_BALANCED_POSITIONING_BEARISH",
+      "rationale": "Bearish macro state without an extreme crowding label.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BULLISH"
+        },
+        {
+          "feature_id": "POSITION_CROWDING_STATE",
+          "state": "BALANCED"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_BALANCED_POSITIONING_BULLISH",
+      "rationale": "Supportive macro state without an extreme crowding label.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BULLISH"
+        },
+        {
+          "feature_id": "POSITION_CROWDING_STATE",
+          "state": "CROWDED_LONGS"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_CROWDED_LONGS",
+      "rationale": "Supportive macro state with long-liquidation crowding risk.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BEARISH"
+        },
+        {
+          "feature_id": "POSITION_CROWDING_STATE",
+          "state": "CROWDED_SHORTS"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_CROWDED_SHORTS",
+      "rationale": "Bearish macro state with short-covering crowding risk.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BULLISH"
+        },
+        {
+          "feature_id": "SESSION_LONDON_INTERACTION_WITH_ASIA",
+          "state": "HIGH_ONLY"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_LONDON_ASIA_HIGH_BREAK",
+      "rationale": "New York macro state with completed London Asia-high interaction.",
+      "sessions": [
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BEARISH"
+        },
+        {
+          "feature_id": "SESSION_LONDON_INTERACTION_WITH_ASIA",
+          "state": "LOW_ONLY"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_LONDON_ASIA_LOW_BREAK",
+      "rationale": "New York macro state with completed London Asia-low interaction.",
+      "sessions": [
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BEARISH"
+        },
+        {
+          "feature_id": "SESSION_LONDON_DIRECTION",
+          "state": "DOWN"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_LONDON_DOWN",
+      "rationale": "New York decision condition using completed London path.",
+      "sessions": [
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BULLISH"
+        },
+        {
+          "feature_id": "SESSION_LONDON_DIRECTION",
+          "state": "UP"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_LONDON_UP",
+      "rationale": "New York decision condition using completed London path.",
+      "sessions": [
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BEARISH"
+        },
+        {
+          "feature_id": "STRUCT_15M_TREND",
+          "state": "BEARISH"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_SCORE_15M_BEARISH",
+      "rationale": "Transparent macro score aligned with structure.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BULLISH"
+        },
+        {
+          "feature_id": "STRUCT_15M_TREND",
+          "state": "BULLISH"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_SCORE_15M_BULLISH",
+      "rationale": "Transparent macro score aligned with structure.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BEARISH"
+        },
+        {
+          "feature_id": "STRUCT_1H_TREND",
+          "state": "BEARISH"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_SCORE_1H_BEARISH",
+      "rationale": "Transparent macro score aligned with structure.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BULLISH"
+        },
+        {
+          "feature_id": "STRUCT_1H_TREND",
+          "state": "BULLISH"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_SCORE_1H_BULLISH",
+      "rationale": "Transparent macro score aligned with structure.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BEARISH"
+        },
+        {
+          "feature_id": "STRUCT_4H_TREND",
+          "state": "BEARISH"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_SCORE_4H_BEARISH",
+      "rationale": "Transparent macro score aligned with structure.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_ENGINE_SCORE",
+          "state": "BULLISH"
+        },
+        {
+          "feature_id": "STRUCT_4H_TREND",
+          "state": "BULLISH"
+        }
+      ],
+      "interaction_id": "INT_ENGINE_SCORE_4H_BULLISH",
+      "rationale": "Transparent macro score aligned with structure.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "CROSS_GOLD_4_HOURS_CHANGE",
+          "state": "DOWN"
+        },
+        {
+          "feature_id": "CROSS_SILVER_4_HOURS_CHANGE",
+          "state": "DOWN"
+        }
+      ],
+      "interaction_id": "INT_GOLD_SILVER_4H_DOWN",
+      "rationale": "Four-hour precious-metals confirmation.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "CROSS_GOLD_4_HOURS_CHANGE",
+          "state": "UP"
+        },
+        {
+          "feature_id": "CROSS_SILVER_4_HOURS_CHANGE",
+          "state": "UP"
+        }
+      ],
+      "interaction_id": "INT_GOLD_SILVER_4H_UP",
+      "rationale": "Four-hour precious-metals confirmation.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_REAL_YIELD_10Y_CHANGE",
+          "state": "RISING"
+        },
+        {
+          "feature_id": "STRUCT_15M_TREND",
+          "state": "BEARISH"
+        }
+      ],
+      "interaction_id": "INT_REAL_YIELD_15M_BEARISH",
+      "rationale": "Real-yield pressure aligned with intraday structure.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_REAL_YIELD_10Y_CHANGE",
+          "state": "FALLING"
+        },
+        {
+          "feature_id": "STRUCT_15M_TREND",
+          "state": "BULLISH"
+        }
+      ],
+      "interaction_id": "INT_REAL_YIELD_15M_BULLISH",
+      "rationale": "Real-yield support aligned with intraday structure.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_REAL_YIELD_10Y_CHANGE",
+          "state": "RISING"
+        },
+        {
+          "feature_id": "MACRO_USD_BROAD_CHANGE",
+          "state": "RISING"
+        }
+      ],
+      "interaction_id": "INT_REAL_YIELD_USD_PRESSURE",
+      "rationale": "Book causal chain: rising real yield plus a stronger dollar.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_REAL_YIELD_10Y_CHANGE",
+          "state": "FALLING"
+        },
+        {
+          "feature_id": "MACRO_USD_BROAD_CHANGE",
+          "state": "FALLING"
+        }
+      ],
+      "interaction_id": "INT_REAL_YIELD_USD_SUPPORT",
+      "rationale": "Book causal chain: falling real yield plus a weaker dollar.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_EQUITIES_CHANGE",
+          "state": "RISING"
+        },
+        {
+          "feature_id": "MACRO_VOLATILITY_CHANGE",
+          "state": "FALLING"
+        }
+      ],
+      "interaction_id": "INT_RISK_ON_STATE",
+      "rationale": "Risk-on equity and volatility state.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "EXPECT_SOFR_WINDOW_CUT_HIKE_BALANCE",
+          "state": "CUT_DOMINANT"
+        },
+        {
+          "feature_id": "MACRO_TREASURY_2Y_CHANGE",
+          "state": "FALLING"
+        }
+      ],
+      "interaction_id": "INT_SOFR_CUT_2Y_FALLING",
+      "rationale": "Quarterly SOFR reference-window and two-year-yield alignment.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "EXPECT_SOFR_WINDOW_CUT_HIKE_BALANCE",
+          "state": "HIKE_DOMINANT"
+        },
+        {
+          "feature_id": "MACRO_TREASURY_2Y_CHANGE",
+          "state": "RISING"
+        }
+      ],
+      "interaction_id": "INT_SOFR_HIKE_2Y_RISING",
+      "rationale": "Quarterly SOFR reference-window and two-year-yield alignment.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_USD_BROAD_CHANGE",
+          "state": "RISING"
+        },
+        {
+          "feature_id": "STRUCT_15M_TREND",
+          "state": "BEARISH"
+        }
+      ],
+      "interaction_id": "INT_USD_15M_BEARISH",
+      "rationale": "Dollar pressure aligned with intraday structure.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "feature_id": "MACRO_USD_BROAD_CHANGE",
+          "state": "FALLING"
+        },
+        {
+          "feature_id": "STRUCT_15M_TREND",
+          "state": "BULLISH"
+        }
+      ],
+      "interaction_id": "INT_USD_15M_BULLISH",
+      "rationale": "Dollar support aligned with intraday structure.",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ]
+    }
+  ],
+  "manifest_hash": "e024ceba35a6d3af1c384f8c66eec299aab8cdcd23b666eb9f33ac672a24fbf4",
+  "manifest_version": "GOLD_SESSION_BEHAVIOUR_V3_M4_REGISTRY_V0_1",
+  "milestone": "V3_M4_BOUNDED_CONDITIONAL_BIAS_DISCOVERY",
+  "missing_and_quality_policy": {
+    "cot_exception": "CFTC facts marked UNVERIFIED_AVAILABILITY remain eligible only because M2 independently enforced Tuesday observation, Friday publication, and available_at <= decision_at. They retain their observed/inferred labels and are never presented as institutional motive.",
+    "eligible_fact_qualities": [
+      "VALID",
+      "PARTIAL"
+    ],
+    "excluded_fact_qualities": [
+      "MISSING",
+      "NOT_APPLICABLE",
+      "NOT_LICENSED",
+      "ROLL_CROSSING",
+      "STALE",
+      "UNVERIFIED_AVAILABILITY except the explicit CFTC exception"
+    ],
+    "missing_state": "UNKNOWN",
+    "policy": "UNKNOWN or excluded-quality inputs are omitted from the feature's known denominator and can never satisfy a condition. No imputation, zero fill, forward fill beyond the source's own valid point-in-time state, or missingness-as-confirmation is allowed."
+  },
+  "outcome_policy": {
+    "flat_threshold_usd_per_ounce": 0.01,
+    "primary": {
+      "binary_analysis": "UP versus DOWN among non-flat SESSION_CLOSE observations",
+      "down": "signed SESSION_CLOSE displacement < -0.01",
+      "flat": "absolute signed SESSION_CLOSE displacement <= 0.01",
+      "flat_handling": "Recorded explicitly and excluded from binary contingency tests.",
+      "source_path": "subsequent_behaviour.fixed_horizons[horizon=SESSION_CLOSE].signed_displacement",
+      "up": "signed SESSION_CLOSE displacement > 0.01"
+    },
+    "secondary_descriptive_not_ranked": [
+      "60-minute direction counts",
+      "median signed close displacement",
+      "median absolute close displacement",
+      "median maximum upward displacement",
+      "median maximum downward displacement magnitude",
+      "median session range",
+      "high-first and low-first counts"
+    ],
+    "trade_interpretation": false
+  },
+  "prohibited": {
+    "calendar_2025_or_2026_value_access": true,
+    "candidate_repair_or_retuning": true,
+    "condition_count_above_two": true,
+    "execution_optimization": true,
+    "feature_or_interaction_addition_after_freeze": true,
+    "mfe_mae_trade_entry_exit_stop_target_pnl_or_r_multiple": true,
+    "opaque_machine_learning": true,
+    "rejected_zn_rule_reopen_inversion_threshold_filter_or_rename": true,
+    "session_pooling_or_transfer": true
+  },
+  "recorded_at": "2026-07-30T10:47:46.2426076Z",
+  "research_boundary_at_freeze": {
+    "case_outcomes_deserialized_by_freeze_tool": false,
+    "conditional_relationships_calculated": 0,
+    "execution_variants": 0,
+    "feature_states_registered": 230,
+    "features_registered": 102,
+    "interactions_registered": 40,
+    "provisional_candidates": 0,
+    "reference_book_factors_disposed": 75,
+    "values_2025_opened": false,
+    "values_2026_opened": false
+  },
+  "session_separation": {
+    "combined_result_permitted": false,
+    "sessions": [
+      "LONDON",
+      "NEW_YORK"
+    ],
+    "superiority_or_transfer_claim_permitted": false
+  },
+  "statistical_policy": {
+    "effect": "Conditional UP percentage minus the UP percentage of all other known non-flat cases for the same feature/session.",
+    "multiplicity": {
+      "families": "Benjamini-Hochberg is applied separately by session and stage (single conditions versus preregistered interactions).",
+      "fdr_q_threshold": 0.1,
+      "include": "Every support-eligible tested condition in its family."
+    },
+    "point_estimates": [
+      "conditional and complement UP/DOWN counts and percentages",
+      "percentage-point UP-rate difference",
+      "Haldane-Anscombe corrected odds ratio when any cell is zero"
+    ],
+    "primary_p_value": "Two-sided Fisher exact test on condition versus known complement by UP versus DOWN.",
+    "uncertainty": "Wilson 95% intervals for each proportion and the Newcombe-Wilson 95% interval for their difference.",
+    "warning": "M4 is development discovery. Daily cases are serially dependent; chronology-aware and cluster-aware stability belongs to M5 and no M4 p/q value receives validation credit."
+  },
+  "support_floors": {
+    "interaction": {
+      "condition_cases_minimum": 60,
+      "condition_prevalence_pct_minimum": 7.5,
+      "distinct_joint_source_signatures_minimum": 8,
+      "known_complement_cases_minimum": 80,
+      "state_episodes_minimum": 8
+    },
+    "single_condition": {
+      "condition_cases_minimum": 80,
+      "condition_prevalence_pct_minimum": 10.0,
+      "distinct_source_signatures_minimum": 8,
+      "feature_known_coverage_pct_minimum": 50.0,
+      "known_complement_cases_minimum": 80,
+      "state_episodes_minimum": 8
+    }
+  },
+  "transform_version": "GOLD_SESSION_BEHAVIOUR_V3_M4_DISCOVERY_V0_1",
+  "validation_gates": [
+    "All predecessor, Reference Book, traceability, case-matrix, and M3 state seals match before the registry is written.",
+    "All 75 Reference-Book factors receive an explicit disposition.",
+    "Exactly 102 features and 230 tested feature states are frozen.",
+    "Exactly 40 two-condition interactions are frozen and each references registered tested states.",
+    "No ZN feature, candidate, rule, source path, or transform is present.",
+    "No case outcome is deserialized by this freeze operation.",
+    "The frozen registry fingerprint and manifest hash recompute exactly."
+  ]
+}

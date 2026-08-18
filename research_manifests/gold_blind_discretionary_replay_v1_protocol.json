@@ -1,0 +1,93 @@
+{
+  "version": "GOLD_BLIND_DISCRETIONARY_REPLAY_V1_PROTOCOL_1_0",
+  "status": "FROZEN_BEFORE_CASE_VALUE_MATERIALIZATION",
+  "frozen_at": "2026-08-13",
+  "contract": "GOLD_BLIND_POINT_IN_TIME_DISCRETIONARY_REPLAY_EDGE_AUDIT_CONTRACT_V1.md",
+  "source": {
+    "casebook": "research_artifacts/gold_casebook_v01",
+    "casebook_version": "GOLD_CASEBOOK_V0_1",
+    "gc_optional_source": "research_artifacts/gc_microstructure_step5c_v01/primary_decision_features.parquet",
+    "gc_reference_source": "research_artifacts/gc_microstructure_step5c_v01/reference_decision_features.parquet",
+    "gc_coverage_dates": 188,
+    "gc_uncovered_policy": "UNKNOWN_WITHOUT_CASE_EXCLUSION",
+    "start": "2021-08-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "calendar_2025": "LOCKED",
+    "calendar_2026": "LOCKED",
+    "acquisition": false,
+    "charge_usd": 0
+  },
+  "population": {
+    "seed": 20260813,
+    "checkpoint_minutes_after_session_open": 60,
+    "unique_date": true,
+    "practice": {"period": "2021-08-01/2021-12-31", "london": 10, "new_york": 10, "credit": "ZERO"},
+    "scored": {
+      "period": "2022-01-01/2024-12-31",
+      "per_year_session": 40,
+      "london": 120,
+      "new_york": 120,
+      "total": 240
+    }
+  },
+  "display": {
+    "price_normalization": "LATEST_COMPLETE_M1_CLOSE_AT_CHECKPOINT_EQUALS_100",
+    "absolute_date_time_price_exposed": false,
+    "bars": {"1w": 52, "1d": 120, "4h": 90, "1h": 120, "15m": 160, "5m": 180, "1m": 180},
+    "released_event_lookback_hours": 6,
+    "liquidity_lookback_minutes": 120,
+    "future_scored_path_materialized": false
+  },
+  "decision": {
+    "actions": ["LONG", "SHORT", "NO_TRADE"],
+    "confidence": [50, 100],
+    "triggers": ["MARKET", "PULLBACK_LIMIT", "BREAKOUT_STOP"],
+    "entry_offset_atr": [-2.0, 2.0],
+    "stop_distance_atr": [0.25, 3.0],
+    "target_r": [0.5, 5.0],
+    "append_only": true,
+    "scored_reveal_before_completion": false
+  },
+  "execution": {
+    "latency_minutes": 1,
+    "pending_expiry_minutes": 120,
+    "maximum_holding_minutes": 240,
+    "same_bar": "STOP_FIRST",
+    "slippage_price_per_side": 0.05,
+    "commission_per_lot_round_turn_usd": 7.0,
+    "cost_stress": [1.0, 1.5],
+    "account_usd": 10000,
+    "risk_usd": 50,
+    "contract_size_oz": 100,
+    "lot_step": 0.01,
+    "minimum_lot": 0.01
+  },
+  "statistics": {
+    "primary_endpoint": "NET_R_AFTER_COSTS",
+    "directional_horizon_minutes": 120,
+    "directional_deadband_atr": 0.1,
+    "cluster": "CALENDAR_WEEK",
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 20260813,
+    "hypotheses": ["COMBINED", "LONDON", "NEW_YORK"],
+    "multiplicity": "HOLM_FWER_0P05"
+  },
+  "support": {
+    "combined": {"intentions": 80, "fills": 60, "per_year": 15, "per_session": 20, "per_half_year": 8},
+    "session": {"fills": 30, "per_year": 8, "per_half_year": 4}
+  },
+  "economic_gates": {
+    "net_expectancy_gt_zero": true,
+    "total_net_r_gt_zero": true,
+    "profit_factor_gte": 1.10,
+    "clustered_ci95_low_gt_zero": true,
+    "holm_adjusted_alpha": 0.05,
+    "stress_1p5_expectancy_gt_zero": true,
+    "maximum_drawdown_r_lte": 15,
+    "positive_years_gte": 2,
+    "positive_half_year_folds_gte": 4,
+    "maximum_positive_year_share_lte": 0.70,
+    "brier_skill_gt_zero": true,
+    "expected_calibration_error_lte": 0.15
+  }
+}

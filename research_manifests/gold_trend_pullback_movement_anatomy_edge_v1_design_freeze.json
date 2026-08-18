@@ -1,0 +1,121 @@
+{
+  "execution_specifications_per_condition": 180,
+  "forward_values_accessed_for_new_branch": false,
+  "freeze_hash": "ad68c949b7092822c882def27f1f4fd5b5b64e78edaf33c5369650e9fdae18ee",
+  "frozen_at_utc": "2026-08-10T06:47:56.608159Z",
+  "paid_acquisition_authorized": false,
+  "predecessor_candidate_ids": [
+    "M15|S1|RESPONSE_DISPLACEMENT_HALF_ATR",
+    "M15|S1|CONFIRMATION_DISPLACEMENT",
+    "M15|S2|REFERENCE_SWEEP_RECLAIM__CONFIRMATION_DISPLACEMENT",
+    "H1|S1|RESPONSE_DISPLACEMENT_HALF_ATR",
+    "H1|S1|CONFIRMATION_DISPLACEMENT",
+    "H1|S1|REFERENCE_SWEEP_RECLAIM",
+    "H4|S1|RESPONSE_DISPLACEMENT_HALF_ATR",
+    "H4|S1|REFERENCE_SWEEP_RECLAIM",
+    "H4|S1|HTF_FULL_ALIGNMENT"
+  ],
+  "retuning_after_outcome_access": false,
+  "source_metadata": {
+    "census_cases_primary": {
+      "row_groups": 1,
+      "rows": 37191,
+      "schema": "pullback_id: string not null\ntimeframe: string not null\nscale: string not null\nspan: int64 not null\ndirection: string not null\nsegment_id: string not null\npivot_swing_id: string not null\npivot_at_utc: string not null\nknown_at_utc: string not null\npivot_price_e8: int64 not null\nreference_event_id: string not null\nreference_level_e8: int64 not null\nresolution: string not null\nresolved_at_utc: string\nresolution_event_id: string\nbars_to_resolution: int64\nactionable_at_known: bool not null\nresearch_eligible: bool not null\ndecision_facts_hash: string not null\nresolution_hash: string not null"
+    },
+    "features_primary": {
+      "row_groups": 3,
+      "rows": 37191,
+      "schema": "pullback_id: string\ntimeframe: string\nscale: string\nspan: int64\ndirection: string\nsegment_id: string\npivot_swing_id: string\nreference_event_id: string\npivot_at_utc: string\nknown_at_utc: string\nactionable_at_known: bool\nresearch_eligible: bool\nprimary_research_scale: bool\nfeature_available: bool\nunavailable_reason: string\natr14_e8: double\ntrend_age_bars: int64\nevent_to_pivot_bars: int64\nimpulse_to_pivot_bars: int64\nprior_continuation_count: int64\nimpulse_extension_atr: double\nimpulse_efficiency: double\npullback_efficiency: double\nretracement_fraction: double\nretracement_depth_atr: double\ncompression_ratio: double\nreference_distance_atr: double\npivot_range_atr: double\npivot_body_fraction: double\npivot_close_location_trend: double\npivot_rejection_wick_fraction: double\npivot_opposite_wick_fraction: double\nconfirmation_range_atr: double\nconfirmation_body_fraction: double\nconfirmation_close_location_trend: double\nconfirmation_rejection_wick_fraction: double\nconfirmation_opposite_wick_fraction: double\nresponse_displacement_atr: double\nresponse_efficiency: double\nresponse_aligned_close_count: int64\nconfirmation_volume_ratio_20: double\nretracement_zone: string\npivot_body_state: string\nconfirmation_body_state: string\npivot_engulfing_aligned: bool\npivot_inside_bar: bool\npivot_outside_bar: bool\npivot_close_through_prior_extreme: bool\nconfirmation_engulfing_aligned: bool\nconfirmation_inside_bar: bool\nconfirmation_outside_bar: bool\nconfirmation_close_through_prior_extreme: bool\npivot_rejection_strong: bool\nconfirmation_displacement: bool\nreference_touch: bool\nreference_sweep_reclaim: bool\nprior_day_level_touch: bool\nprior_day_sweep_reclaim: bool\nasia_level_touch: bool\nasia_sweep_reclaim: bool\nsession_state: string\nh1_structure_state: string\nh1_structure_alignment: bool\nh4_structure_state: string\nh4_structure_alignment: bool\ndaily_3bar_alignment: bool\nweekly_2bar_alignment: bool\nhigher_timeframe_alignment_count: int64\nhigher_timeframe_known_count: int64\nfundamental_available: bool\nfundamental_age_hours: double\nfundamental_score: double\nfundamental_score_aligned: double\nfundamental_confidence: double\nfundamental_coverage: double\nfundamental_alignment_state: string\nfundamental_regime: string\nreaction_function: string\nevent_risk: string\nreal_yield_contribution_aligned: double\nfed_path_contribution_aligned: double\nusd_contribution_aligned: double\ntwo_year_contribution_aligned: double\npositioning_contribution_aligned: double\nfinancial_stress_contribution_aligned: double\ncot_available: bool\ncot_age_days: double\ncot_managed_money_net_percentile: double\ncot_managed_money_net_change_aligned: double\ncot_crowding_state: string\ncot_long_liquidation_risk: string\ncot_short_covering_risk: string\nfeature_lineage_hash: string"
+    },
+    "structure_events_primary": {
+      "row_groups": 1,
+      "rows": 46247,
+      "schema": "event_id: string not null\ntimeframe: string not null\nscale: string not null\nspan: int64 not null\nevent_type: string not null\ndirection: string not null\nprior_state: string not null\nnew_state: string not null\nevent_at_utc: string not null\nsegment_id: string not null\nbroken_swing_ids_json: string not null\nbroken_level_count: int64 not null\nbroken_level_min_e8: int64 not null\nbroken_level_max_e8: int64 not null\nprotected_level_e8: int64\nassociated_pullback_ids_json: string not null\nbar_component_complete: bool not null\nresearch_eligible: bool not null\nevidence_hash: string not null"
+    },
+    "swings_primary": {
+      "row_groups": 2,
+      "rows": 96909,
+      "schema": "swing_id: string not null\ntimeframe: string not null\nscale: string not null\nspan: int64 not null\nside: string not null\npivot_at_utc: string not null\nknown_at_utc: string not null\nprice_e8: int64 not null\npivot_component_complete: bool not null\nresearch_eligible: bool not null\nevidence_hash: string not null"
+    }
+  },
+  "source_records": {
+    "casebook_price_bars": {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    "census_cases_primary": {
+      "bytes": 4976288,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_pullback_cases.parquet",
+      "sha256": "067fc581ffcbaadb589ac0ea428d82bc26b3546b549a4dfd1a6afbc512af35ee"
+    },
+    "census_cases_reference": {
+      "bytes": 4976288,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/reference_pullback_cases.parquet",
+      "sha256": "067fc581ffcbaadb589ac0ea428d82bc26b3546b549a4dfd1a6afbc512af35ee"
+    },
+    "census_final_seal": {
+      "bytes": 3938,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/final_seal.json",
+      "sha256": "e5a4527769cfe1fcfb92975dcbea4f15e5b057c4d6b42709fb53eebff421654d"
+    },
+    "contract": {
+      "bytes": 7887,
+      "path": "GOLD_TREND_PULLBACK_MOVEMENT_ANATOMY_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "4d7598cec227f79a2c64c91685e54048303a6758d27020c78719b2ef65d71369"
+    },
+    "features_primary": {
+      "bytes": 7804461,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/primary_features.parquet",
+      "sha256": "972706fcf161bb8d3c84677bedea45d9a8e2b6fd463a2c7853bb624e0acf2cac"
+    },
+    "features_reference": {
+      "bytes": 7804461,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/reference_features.parquet",
+      "sha256": "972706fcf161bb8d3c84677bedea45d9a8e2b6fd463a2c7853bb624e0acf2cac"
+    },
+    "prior_economic_final_seal": {
+      "bytes": 2055,
+      "path": "research_artifacts/gold_trend_pullback_continuation_economic_v1_v01/final_seal.json",
+      "sha256": "3906002e476b796cab058a3b5ce03d65ee5b80f7016d5cab1d85df9305ce2630"
+    },
+    "protocol": {
+      "bytes": 2265,
+      "path": "research_manifests/gold_trend_pullback_movement_anatomy_edge_v1_protocol.json",
+      "sha256": "85e7ed52c63fb3de9d55cd46a30e947b5e2df0afa572484a746e56e394bcfc65"
+    },
+    "relationship_candidates": {
+      "bytes": 31767,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/frozen_provisional_candidates.json",
+      "sha256": "c7cb4014dd5e1a9cfbcc104561ade60219a75b559c90c291238751d5e7c5e7de"
+    },
+    "relationship_final_seal": {
+      "bytes": 2881,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/final_seal.json",
+      "sha256": "bee62baee614908884a54f4a318c93823707e74dd7ab99f90eb712eba8122472"
+    },
+    "structure_events_primary": {
+      "bytes": 4933833,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_structure_events.parquet",
+      "sha256": "05fcf2e1cfb4d4fde7bec65f14d0fcd26157ac498e620b9fe0210a63bdaf589d"
+    },
+    "structure_events_reference": {
+      "bytes": 4933833,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/reference_structure_events.parquet",
+      "sha256": "05fcf2e1cfb4d4fde7bec65f14d0fcd26157ac498e620b9fe0210a63bdaf589d"
+    },
+    "swings_primary": {
+      "bytes": 5514276,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_swings.parquet",
+      "sha256": "81966751e033cfbcbc7c291c42acca78289ec01a728c9d06d77024a5ec1d35a6"
+    },
+    "swings_reference": {
+      "bytes": 5514276,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/reference_swings.parquet",
+      "sha256": "81966751e033cfbcbc7c291c42acca78289ec01a728c9d06d77024a5ec1d35a6"
+    }
+  },
+  "status": "FROZEN_BEFORE_NEW_MOVEMENT_ANATOMY_ACCESS",
+  "total_registered_condition_specifications": 1620,
+  "version": "GOLD_TPMA_EDGE_V1_DESIGN_FREEZE_1_0"
+}

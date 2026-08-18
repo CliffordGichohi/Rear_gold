@@ -1,0 +1,424 @@
+{
+  "amendment_b": {
+    "changes_m5_candidate_definition": false,
+    "completes_forward_gate_freeze_before_value_access": true,
+    "file_sha256": "8213fcdb3d7f5571c7688a70ebcbddd8d6ce85b7613dae185c4324b551314799",
+    "path": "GOLD_SESSION_BEHAVIOUR_V3_AMENDMENT_B.md"
+  },
+  "authorization": {
+    "authorized_on": "2026-07-30",
+    "scope": "Complete only the pre-result protocol and metadata-only readiness and power audit; stop before holdout opening.",
+    "verbatim": "Proceed to V3 Milestone 6A under the existing contract. Preserve the frozen Milestone 5 shortlist unchanged: LONDON_VOLATILITY_DIRECTION_V0_1 and NEW_YORK_FINANCIAL_STRESS_DIRECTION_V0_1. Perform only a candidate-specific metadata-only readiness and power audit for calendar 2025, locked 2026 YTD through 29 July, and prospective tracking. Create Amendment B and freeze the exact support floors, multiplicity method, effect and uncertainty requirements, PASS/REJECT/INCONCLUSIVE rules, segment reporting order, and missing-data policy before inspecting any values or outcomes. Do not retune candidates, add variables, optimize execution, use COT as a pass gate, reopen rejected candidates or ZN rules, or inspect 2025/2026 market values or outcomes. Complete only the pre-result protocol and readiness audit, seal them, and stop before opening the holdouts."
+  },
+  "candidate_registry": [
+    {
+      "candidate_code": "LONDON_VOLATILITY_DIRECTION_V0_1",
+      "complement_state": "RISING",
+      "condition_state": "FALLING",
+      "decision_clock": {
+        "decision_time": "08:00:00",
+        "observation_end_time": "12:00:00",
+        "reference_bar_open_time": "08:01:00",
+        "timezone": "Europe/London"
+      },
+      "excluded_known_states": [
+        "UNCHANGED"
+      ],
+      "feature_id": "MACRO_VOLATILITY_CHANGE",
+      "m5_definition": {
+        "candidate_code": "LONDON_VOLATILITY_DIRECTION_V0_1",
+        "complement": {
+          "conditions": [
+            {
+              "feature_id": "MACRO_VOLATILITY_CHANGE",
+              "state": "RISING"
+            }
+          ],
+          "excluded_known_states": [
+            "UNCHANGED"
+          ],
+          "type": "EXACT_CONDITION"
+        },
+        "condition": [
+          {
+            "feature_id": "MACRO_VOLATILITY_CHANGE",
+            "state": "FALLING"
+          }
+        ],
+        "expected_effect_direction": "POSITIVE",
+        "interpretation": "Falling volatility is associated with a more bullish London session close than the exact rising-volatility complement.",
+        "joint_known_feature_ids": [
+          "MACRO_VOLATILITY_CHANGE"
+        ],
+        "m4_relationship_ids": [
+          "SINGLE__MACRO_VOLATILITY_CHANGE__FALLING",
+          "SINGLE__MACRO_VOLATILITY_CHANGE__RISING"
+        ],
+        "minimum_full_effect_pp": 7.5,
+        "post_hoc_status": "POST_HOC_NO_DEVELOPMENT_VALIDATION_CREDIT",
+        "require_complement_median_opposite": true,
+        "session_code": "LONDON",
+        "stage": "SINGLE_FEATURE_COMPLEMENTARY_STATES"
+      },
+      "m5_internal_rank": 1,
+      "m5_status": "INTERNALLY_STABLE_POST_HOC_NO_FORWARD_VALIDATION_CREDIT",
+      "material_reverse_effect_pp": -7.5,
+      "minimum_material_effect_pp": 7.5,
+      "session_code": "LONDON",
+      "source_series_code": "US_VOLATILITY_INDEX",
+      "transform": "LATEST_POINT_IN_TIME_OBSERVATION_TO_OBSERVATION_CHANGE_SIGN",
+      "unknown_policy": "INELIGIBLE_NEVER_NEUTRAL_OR_CONFIRMING"
+    },
+    {
+      "candidate_code": "NEW_YORK_FINANCIAL_STRESS_DIRECTION_V0_1",
+      "complement_state": "RISING",
+      "condition_state": "FALLING",
+      "decision_clock": {
+        "decision_time": "08:00:00",
+        "observation_end_time": "12:00:00",
+        "reference_bar_open_time": "08:01:00",
+        "timezone": "America/New_York"
+      },
+      "excluded_known_states": [
+        "UNCHANGED"
+      ],
+      "feature_id": "MACRO_FINANCIAL_STRESS_CHANGE",
+      "m5_definition": {
+        "candidate_code": "NEW_YORK_FINANCIAL_STRESS_DIRECTION_V0_1",
+        "complement": {
+          "conditions": [
+            {
+              "feature_id": "MACRO_FINANCIAL_STRESS_CHANGE",
+              "state": "RISING"
+            }
+          ],
+          "excluded_known_states": [
+            "UNCHANGED"
+          ],
+          "type": "EXACT_CONDITION"
+        },
+        "condition": [
+          {
+            "feature_id": "MACRO_FINANCIAL_STRESS_CHANGE",
+            "state": "FALLING"
+          }
+        ],
+        "expected_effect_direction": "POSITIVE",
+        "interpretation": "Falling financial stress is associated with a more bullish New York session close than the exact rising-stress complement.",
+        "joint_known_feature_ids": [
+          "MACRO_FINANCIAL_STRESS_CHANGE"
+        ],
+        "m4_relationship_ids": [
+          "SINGLE__MACRO_FINANCIAL_STRESS_CHANGE__FALLING",
+          "SINGLE__MACRO_FINANCIAL_STRESS_CHANGE__RISING"
+        ],
+        "minimum_full_effect_pp": 7.5,
+        "post_hoc_status": "POST_HOC_NO_DEVELOPMENT_VALIDATION_CREDIT",
+        "require_complement_median_opposite": true,
+        "session_code": "NEW_YORK",
+        "stage": "SINGLE_FEATURE_COMPLEMENTARY_STATES"
+      },
+      "m5_internal_rank": 1,
+      "m5_status": "INTERNALLY_STABLE_POST_HOC_NO_FORWARD_VALIDATION_CREDIT",
+      "material_reverse_effect_pp": -7.5,
+      "minimum_material_effect_pp": 7.5,
+      "session_code": "NEW_YORK",
+      "source_series_code": "US_FINANCIAL_STRESS",
+      "transform": "LATEST_POINT_IN_TIME_OBSERVATION_TO_OBSERVATION_CHANGE_SIGN",
+      "unknown_policy": "INELIGIBLE_NEVER_NEUTRAL_OR_CONFIRMING"
+    }
+  ],
+  "forward_protocol": {
+    "candidate_overall_verdict": {
+      "calendar_2025_pass_label": "EXPOSED_FORWARD_SUPPORTIVE_NO_INDEPENDENT_CREDIT",
+      "current_directional_bias_edge_candidate": "No segment rejects, LOCKED_2026_YTD passes, and PROSPECTIVE_2026_POST_FREEZE passes.",
+      "inconclusive": "No segment rejects and both clean-forward PASS requirements are not present.",
+      "rejected": "Any segment receives REJECT_MATERIAL_REVERSE_REPLICATION."
+    },
+    "case_eligibility": {
+      "condition_or_exact_complement_required": true,
+      "observed_complete_nonsynthetic_unique_xau_bars_required": true,
+      "point_in_time_feature_requires_two_eligible_observations": true,
+      "prospective_decision_sealed_before_08_01_local": true,
+      "source_record_ids_and_availability_timestamps_required": true,
+      "up_or_down_outcome_required_for_binary_test": true
+    },
+    "effect_and_uncertainty": {
+      "contingency_test": "TWO_SIDED_FISHER_EXACT",
+      "effect_interval": "NEWCOMBE_WILSON_95_PERCENT",
+      "material_reverse_effect_pp": -7.5,
+      "minimum_material_positive_effect_pp": 7.5,
+      "pass_interval_requirement": "LOWER_BOUND_GT_ZERO",
+      "pass_median_requirements": {
+        "complement_signed_close": "LT_ZERO",
+        "condition_signed_close": "GT_ZERO"
+      },
+      "primary_effect": "Condition UP rate minus exact complement UP rate in percentage points among non-flat outcomes.",
+      "reject_interval_requirement": "UPPER_BOUND_LT_ZERO",
+      "reject_median_requirements": {
+        "complement_signed_close": "GT_ZERO",
+        "condition_signed_close": "LT_ZERO"
+      }
+    },
+    "interpretation_boundary": {
+      "directional_bias_only": true,
+      "m5_candidates_are_post_hoc": true,
+      "m6a_opens_forward_values": false,
+      "trade_or_profit_claim_permitted": false
+    },
+    "metadata_readiness": {
+      "exact_series_identifier_present": true,
+      "interval_observation_periods_minimum": 1,
+      "invalid_availability_order_rows_maximum": 0,
+      "low_power_threshold": 0.8,
+      "potential_complete_session_cases_minimum": 80,
+      "pre_segment_observation_periods_minimum": 2,
+      "ready_low_power_label": "READY_WITH_LOW_POWER_EXPECTED",
+      "synthetic_candidate_series_rows_maximum": 0,
+      "xau_source": {
+        "instrument_code": "XAUUSD",
+        "provider_code": "IC_MARKETS_MT5",
+        "timeframe": "1m"
+      }
+    },
+    "missing_data_policy": {
+      "flat_outcome": "KNOWN_EXCLUDED_FROM_BINARY",
+      "later_revision_replaces_original": false,
+      "missing_or_stale": "UNKNOWN",
+      "missing_session_synthesis_permitted": false,
+      "overlapping_mt5_exports": "DEDUPE_BY_CANONICAL_DATABASE_IDENTITY_AND_SOURCE_HASH",
+      "source_substitution_after_open_permitted": false,
+      "synthetic": "UNKNOWN",
+      "unchanged_feature_state": "KNOWN_EXCLUDED",
+      "unknown_counts_as_confirmation": false,
+      "unverified_availability": "UNKNOWN"
+    },
+    "multiplicity": {
+      "candidate_or_segment_removal_permitted": false,
+      "family": "EXACT_TWO_FROZEN_CANDIDATES_PER_SEGMENT",
+      "family_alpha": 0.1,
+      "family_size_fixed": 2,
+      "method": "HOLM_BONFERRONI_STEP_DOWN",
+      "unsupported_candidate_raw_p_value": 1.0
+    },
+    "outcome": {
+      "down": "SIGNED_CLOSE_DISPLACEMENT_LT_NEGATIVE_0_01_USD_PER_OZ",
+      "flat": "ABS_SIGNED_CLOSE_DISPLACEMENT_LE_0_01_USD_PER_OZ",
+      "flat_binary_policy": "RETAIN_DESCRIPTIVELY_EXCLUDE_FROM_UP_DOWN",
+      "is_trade": false,
+      "observation_end": "12:00 in the session IANA timezone",
+      "reference": "Open of first complete observed XAUUSD one-minute bar timestamped 08:01 in the session IANA timezone.",
+      "type": "NEUTRAL_SESSION_CLOSE_DIRECTION",
+      "up": "SIGNED_CLOSE_DISPLACEMENT_GT_POSITIVE_0_01_USD_PER_OZ"
+    },
+    "power_planning": {
+      "balanced_allocation_is_best_case": true,
+      "complement_probability": 0.4625,
+      "condition_probability": 0.5375,
+      "forward_values_or_state_prevalence_used": false,
+      "method": "NORMAL_APPROXIMATION_TWO_INDEPENDENT_PROPORTIONS",
+      "planned_effect_pp": 7.5,
+      "power_changes_verdict_gate": false,
+      "reason_for_alpha": "Conservative first Holm threshold and 95% interval requirement.",
+      "two_sided_alpha": 0.05
+    },
+    "prohibited": {
+      "candidate_add_remove_repair_invert_rename_or_retune": true,
+      "confirming_variable_addition": true,
+      "cot_as_pass_gate": true,
+      "execution_optimization": true,
+      "holdout_values_or_outcomes_in_m6a": true,
+      "interim_prospective_inference": true,
+      "rejected_candidate_or_zn_reopen": true,
+      "source_substitution_after_open": true,
+      "trades_returns_pnl_or_r_multiples": true
+    },
+    "prospective_tracking": {
+      "decision_must_precede_outcome": true,
+      "end_session_date": "2026-12-31",
+      "interim_inferential_tests_permitted": false,
+      "required_ledger_fields": [
+        "candidate_code",
+        "protocol_hash",
+        "session_date",
+        "session_code",
+        "decision_clock",
+        "decision_as_of",
+        "candidate_state_or_unknown",
+        "source_record_ids",
+        "source_available_at_timestamps",
+        "source_hashes",
+        "decision_record_hash",
+        "sealed_at",
+        "eligibility",
+        "missing_reason",
+        "append_only_neutral_outcome"
+      ],
+      "retroactive_decision_records_permitted": false,
+      "start_session_date": "2026-07-31",
+      "year_end_gate": "SAME_EXACT_PER_SEGMENT_GATE"
+    },
+    "protocol_version": "GOLD_SESSION_BEHAVIOUR_V3_M6A_FORWARD_PROTOCOL_V0_1",
+    "segment_verdicts": {
+      "INCONCLUSIVE_INSUFFICIENT_SUPPORT": {
+        "condition": "ANY_SUPPORT_GATE_FAILS"
+      },
+      "INCONCLUSIVE_MIXED_OR_UNDERPOWERED": {
+        "condition": "SUPPORT_PASSES_AND_NEITHER_COMPLETE_PASS_NOR_REJECT"
+      },
+      "PASS_MATERIAL_POSITIVE_REPLICATION": {
+        "all_support_gates_pass": true,
+        "complement_median_signed_close_lt": 0.0,
+        "condition_median_signed_close_gt": 0.0,
+        "conjunctive": true,
+        "effect_pp_minimum": 7.5,
+        "holm_adjusted_p_value_maximum": 0.1,
+        "newcombe_95pct_lower_bound_gt": 0.0
+      },
+      "REJECT_MATERIAL_REVERSE_REPLICATION": {
+        "all_support_gates_pass": true,
+        "complement_median_signed_close_gt": 0.0,
+        "condition_median_signed_close_lt": 0.0,
+        "conjunctive": true,
+        "effect_pp_maximum": -7.5,
+        "holm_adjusted_p_value_maximum": 0.1,
+        "newcombe_95pct_upper_bound_lt": 0.0
+      }
+    },
+    "segments_in_fixed_reporting_order": [
+      {
+        "classification": "EXPOSED_HISTORICAL_FORWARD_NO_INDEPENDENT_CREDIT",
+        "material_reverse_rejection_is_terminal": true,
+        "positive_validation_credit": false,
+        "segment_code": "EXPOSED_CALENDAR_2025",
+        "session_date_end_inclusive": "2025-12-31",
+        "session_date_start_inclusive": "2025-01-01"
+      },
+      {
+        "classification": "LOCKED_INDEPENDENT_HOLDOUT",
+        "material_reverse_rejection_is_terminal": true,
+        "positive_validation_credit": true,
+        "segment_code": "LOCKED_2026_YTD",
+        "session_date_end_inclusive": "2026-07-29",
+        "session_date_start_inclusive": "2026-01-01"
+      },
+      {
+        "classification": "GENUINELY_PROSPECTIVE_FIXED_CALENDAR",
+        "interim_inferential_testing_permitted": false,
+        "material_reverse_rejection_is_terminal": true,
+        "positive_validation_credit": true,
+        "segment_code": "PROSPECTIVE_2026_POST_FREEZE",
+        "session_date_end_inclusive": "2026-12-31",
+        "session_date_start_inclusive": "2026-07-31"
+      }
+    ],
+    "support_floors_per_candidate_segment": {
+      "combined_binary_cases_minimum": 80,
+      "complement_binary_cases_minimum": 25,
+      "complement_distinct_source_signatures_minimum": 4,
+      "complement_state_episodes_minimum": 4,
+      "condition_binary_cases_minimum": 25,
+      "condition_distinct_source_signatures_minimum": 4,
+      "condition_state_episodes_minimum": 4,
+      "duplicate_source_records_or_case_keys_maximum": 0,
+      "joint_known_feature_coverage_pct_minimum": 50.0
+    }
+  },
+  "frozen_inputs": {
+    "contract": {
+      "file_sha256": "993e91610992c62fd97c3c9aeb81b8a46ed422f025fac441b629ce35985ca591",
+      "manifest_hash": "79a74f81bce0b80ca6c5da6b420400479013484a4bb759684402546672fa140b",
+      "path": "research_manifests/gold_session_behaviour_discovery_contract_v03.json"
+    },
+    "m5_independent_validation": {
+      "file_sha256": "44c27747940af171d85e47ae6aa2f83572103872ee30b95ac8029906edc60f82",
+      "path": "research_artifacts/gold_session_behaviour_v3_m5_validation_v01.json",
+      "validation_hash": "9b6f9da28c67cf13f90f13e062f6d1106059777d0baa89d64dd590184f191c11"
+    },
+    "m5_pre_result": {
+      "file_sha256": "eceda7c20e4c43b33ce786f246176c34b43aa9f48806c11fac5bd47f230b8584",
+      "manifest_hash": "adbeed7d029fab23ec72c3866f58bc041d48fe9f8607f65508246f6240917dab",
+      "path": "research_manifests/gold_session_behaviour_v3_m5_amendment_a_v01.json"
+    },
+    "m5_result": {
+      "file_sha256": "f1bcf4c8f84e2aa44e7a6bb77e30bda36e478bd8d89b4f12761cbfe5422a5743",
+      "m5_hash": "e399534950756933905d2cbfb69bc03e69c5fba60910830b879da08db138f508",
+      "path": "research_artifacts/gold_session_behaviour_v3_m5_stability_v01/stability_results.json"
+    },
+    "m5_result_manifest": {
+      "file_sha256": "374dfcc2f5928a60c16a362dbf034da8fa8ac3a99014ad6f1c37ee230eb24b34",
+      "manifest_hash": "3fc550f8c18279742b82c3176246e862f571cbbc759966ac9bf441d7e3c38fdb",
+      "path": "research_artifacts/gold_session_behaviour_v3_m5_stability_v01/manifest.json"
+    },
+    "v05_state": {
+      "file_sha256": "982847ec9824c0f0feb9b86513f90301787179499f69ab7b29384e7a77761c44",
+      "path": "research_artifacts/gold_session_behaviour_v3_state_v05.json",
+      "state_hash": "9ad36a1c24b9c421b70a523c93170cef2e00f2f62804be8368ec7614d5cf621b"
+    }
+  },
+  "implementation_freeze": {
+    "amendment_b_path": "GOLD_SESSION_BEHAVIOUR_V3_AMENDMENT_B.md",
+    "amendment_b_sha256": "8213fcdb3d7f5571c7688a70ebcbddd8d6ce85b7613dae185c4324b551314799",
+    "m6a_audit_tool_path": "backend/tools/audit_gold_session_behaviour_v3_m6a.py",
+    "m6a_audit_tool_sha256": "90a52dbc68357d3bf699f7ed24bdc5f740f54c2a30e6d7f2aeae671698243f7b",
+    "m6a_audit_version": "GOLD_SESSION_BEHAVIOUR_V3_M6A_METADATA_AUDIT_V0_1",
+    "m6a_module_path": "backend/src/gold_intel/analytics/session_behaviour_v3_m6a.py",
+    "m6a_module_sha256": "ec94b95299713584b6a687b62f3e774d355eb06431779ed23d474aa891a88ba7",
+    "m6a_protocol_version": "GOLD_SESSION_BEHAVIOUR_V3_M6A_FORWARD_PROTOCOL_V0_1",
+    "m6a_test_path": "backend/tests/unit/test_session_behaviour_v3_m6a.py",
+    "m6a_test_sha256": "b39f7c6335d760e2f2670a8d49b4fac46bda98e4046019673cc68b11e71b2b97",
+    "preresult_ruff": "PASS",
+    "preresult_tests": {
+      "failed": 0,
+      "passed": 5
+    }
+  },
+  "mandatory_stop_after_m6a": true,
+  "manifest_hash": "218564c0459f711f08c32529b095e06bfd47a092dbd1d5bfa3f6d483afae133d",
+  "manifest_version": "GOLD_SESSION_BEHAVIOUR_V3_M6A_PRERESULT_V0_1",
+  "metadata_audit_boundary": {
+    "candidate_state_calculation_permitted": false,
+    "database_transaction_read_only_required": true,
+    "market_or_macro_value_columns_permitted": false,
+    "metadata_sql_guard_required": true,
+    "permitted_forward_information": [
+      "source identifiers",
+      "timestamps",
+      "counts",
+      "quality flag counts",
+      "file sizes and hashes",
+      "sealed manifest metadata"
+    ],
+    "relationship_or_verdict_calculation_permitted": false,
+    "session_outcome_calculation_permitted": false
+  },
+  "milestone": "V3_M6A_FORWARD_PROTOCOL_AND_METADATA_READINESS",
+  "next_milestone": {
+    "authorized": false,
+    "code": "V3_M6B_ONE_TIME_FORWARD_VALUE_EVALUATION",
+    "started": false
+  },
+  "protocol_fingerprint": "308ff594d85b478b755f85397d19ed7e76faad50fa447af29f7ee8692dcd54de",
+  "recorded_at": "2026-07-30T12:27:56Z",
+  "research_boundary_at_freeze": {
+    "calendar_2025_values_opened_by_v3_m6": false,
+    "calendar_2026_values_opened_by_v3_m6": false,
+    "candidate_states_or_outcomes_calculated": false,
+    "cot_used_as_pass_gate": false,
+    "execution_variants": 0,
+    "new_or_repaired_candidates": 0,
+    "rejected_candidates_or_zn_rules_reopened": false,
+    "trades_or_returns": 0
+  },
+  "validation_gates": [
+    "V05 state and every M5 predecessor seal match.",
+    "Exactly the two M5-shortlisted candidates are present.",
+    "Candidate sessions, fields, source series, transforms, conditions, complements, exclusions, and directions are unchanged.",
+    "Forward segments and their reporting order are fixed.",
+    "Support, effect, interval, median, multiplicity, and symmetric verdict gates are fixed.",
+    "Missing-data and prospective anti-backfill policies are fixed.",
+    "The implementation, audit SQL surface, Amendment B, and tests are hash-sealed before metadata access.",
+    "The freeze operation reads no forward metadata, market values, feature states, or outcomes."
+  ],
+  "verdict": "PASS_V3_MILESTONE_6A_PRE_RESULT_PROTOCOL_FREEZE"
+}

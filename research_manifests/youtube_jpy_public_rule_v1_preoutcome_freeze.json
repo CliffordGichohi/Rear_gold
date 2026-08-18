@@ -1,0 +1,186 @@
+{
+  "acquisition_authorized": false,
+  "calendar_2025": "LOCKED_UNLESS_STAGE_4_PASS",
+  "calendar_2026": "LOCKED_UNLESS_STAGE_4_PASS",
+  "charge_authorized_usd": 0.0,
+  "contract_status": "FROZEN_PRE_OUTCOME",
+  "outcome_opening_limit": 1,
+  "readiness_verdict": "PASS_OUTCOME_BLIND_READINESS",
+  "sealed_at": "2026-08-13T08:29:17.456198+00:00",
+  "sealed_file_count": 34,
+  "sealed_files": [
+    {
+      "bytes": 14055,
+      "path": "YOUTUBE_JPY_PUBLIC_RULE_TRANSLATION_AND_FALSIFICATION_CONTRACT_V1.md",
+      "sha256": "b9989a0d018dd6d9d4af4c7467e87550ab0f55fef84c728d227cd7d3d8a70aa9"
+    },
+    {
+      "bytes": 8482,
+      "path": "YOUTUBE_JPY_STRATEGY_SCREENING_V1.md",
+      "sha256": "1f6e518237c5898f6c569507ab92206ebe984324414925375357e98cb1ecb12c"
+    },
+    {
+      "bytes": 2933,
+      "path": "research_manifests/youtube_jpy_public_rule_translation_v1_protocol.json",
+      "sha256": "0b4284ea3eb3cb439064693e92d00b76e3b04b7c2fe63059e2793a2234d24ff8"
+    },
+    {
+      "bytes": 43251,
+      "path": "tools/youtube_jpy_public_rule_v1_engine.py",
+      "sha256": "a8f773adf64fb861145e85d33aaebf0ba4a0743a8f91a7d22d23d139c30084eb"
+    },
+    {
+      "bytes": 14754,
+      "path": "tools/prepare_youtube_jpy_public_rule_v1.py",
+      "sha256": "0f3ce5e8ddccfe77eeb50a7e868a186016354405c1ea9a005270e103c6fbe7cd"
+    },
+    {
+      "bytes": 15153,
+      "path": "tools/run_youtube_jpy_public_rule_v1.py",
+      "sha256": "0263f95de8a497efd6ab3b3f6de17e74d7f671c7c3fe69a0f6128c7ce80738d0"
+    },
+    {
+      "bytes": 3213,
+      "path": "tests/test_youtube_jpy_public_rule_v1_engine.py",
+      "sha256": "1c1ec269ec4f923e6d5acd3d655e550614a08d6830b77efb455044eb9341784f"
+    },
+    {
+      "bytes": 121686,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m2/certification.json",
+      "sha256": "ff59bae973835c6384c0ec8ef1ae416dec9312e29412d399b81b1ace382e4e87"
+    },
+    {
+      "bytes": 3461,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m1/mt5_symbol_catalog_snapshot.json",
+      "sha256": "f79f9b6ebb7d5b3ef82246b100b2173ef9c20c71ebd23fe44004af2883a36bb8"
+    },
+    {
+      "bytes": 14417,
+      "path": "data/mt5/calendar/mt5_us_calendar_audit.json",
+      "sha256": "330b0d7e24df8dc48fca0427b6e69edae1b731c56b031e912a2fd93373d252eb"
+    },
+    {
+      "bytes": 2955,
+      "path": "data/mt5/calendar/mt5_us_calendar_normalization.json",
+      "sha256": "5acabff6c3b61d5ed23d270b5c4f6a81e74b0abff0c39aaea9a89db116c3b900"
+    },
+    {
+      "bytes": 5517753,
+      "path": "data/mt5/calendar/mt5_us_calendar_raw.csv",
+      "sha256": "e4a1928ee1e1acb94fa9c5951d14e1e56b5736390c60cfc42ee47dc31807be7c"
+    },
+    {
+      "bytes": 10911,
+      "path": "research_artifacts/youtube_jpy_public_rule_v1_preoutcome/readiness.json",
+      "sha256": "a474baa599ce3731e360eebc9f0d76c28129fc87655a2f0e6def1f2adc7a54c5"
+    },
+    {
+      "bytes": 7547589,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20210802T0002_20210929T2358.csv",
+      "sha256": "d8facfe6f087008ffb007c47cfd8285eca50af47cf4f63f2b3bf9d6d2ab7eab3"
+    },
+    {
+      "bytes": 7384372,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20210930T0000_20211126T2353.csv",
+      "sha256": "9ccd488b88a22e20a31c744b354ee8728e3d2d9889d5519077d290d6fff5c10e"
+    },
+    {
+      "bytes": 7631784,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20211129T0000_20220127T2358.csv",
+      "sha256": "18ebfb59b5ea566e517bf7eaf4990cb63060b5c9a8fb5da47c84ea9f469ede42"
+    },
+    {
+      "bytes": 7397543,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20220128T0000_20220328T2358.csv",
+      "sha256": "e90af13ef8e7778bebf3db7ab84fcae0dcd93720abae78ee33b3f0cbac8f0048"
+    },
+    {
+      "bytes": 7739538,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20220329T0018_20220527T2356.csv",
+      "sha256": "5cde3b729e86048b7299bc868309788937b65a1fe064142875aa83a8822342d2"
+    },
+    {
+      "bytes": 7402502,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20220530T0003_20220726T2358.csv",
+      "sha256": "7a93fee1fba91418b9df2a4cd817b938b6cdcf7474a54283d454e5f5dccb8183"
+    },
+    {
+      "bytes": 7578339,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20220727T0000_20220923T2356.csv",
+      "sha256": "e6279ccee1604d4f66ca94f96ba9e618df48a1a38128133c947e4abf16a3d9d7"
+    },
+    {
+      "bytes": 7566976,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20220926T0000_20221123T2358.csv",
+      "sha256": "ef79fbb9f612161a9a1d39dd6bc00fed0d9d22b5c0061a7f85524de6d582d5c5"
+    },
+    {
+      "bytes": 7223858,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20221124T0000_20230120T2356.csv",
+      "sha256": "659ed37b888431a9698eaf0e59c8818402fe0b12416253ca3875784718766741"
+    },
+    {
+      "bytes": 7761857,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20230123T0000_20230323T2358.csv",
+      "sha256": "f98d5cd0e09901021e332d114415de5cfad3da918f3e43acee393eadb064a7f8"
+    },
+    {
+      "bytes": 7384302,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20230324T0000_20230522T2358.csv",
+      "sha256": "b21ddd4889f74178a27fc46ff6240e6f820dbea450046e03839505a256f7eb4c"
+    },
+    {
+      "bytes": 7741702,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20230523T0000_20230721T2356.csv",
+      "sha256": "68b36968637a5daa73f98b95c777ba5341225a2b39f99bbd9b81f8f3d042b01c"
+    },
+    {
+      "bytes": 7380913,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20230724T0000_20230919T2358.csv",
+      "sha256": "ea627a360e237581e3832d5f404991426ca90d87ae75586e33c7af78ec2576e7"
+    },
+    {
+      "bytes": 7571139,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20230920T0000_20231117T2356.csv",
+      "sha256": "4f2b2c3aa9732ec12c4f789274acdb9eaeee75dd33b56f9b339c91be26940f4a"
+    },
+    {
+      "bytes": 7226286,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20231120T0002_20240117T2358.csv",
+      "sha256": "67b4dc2e035503ad9a67f7d7518451e3b0b3249110579658bf610d51478ebcd6"
+    },
+    {
+      "bytes": 7410843,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20240118T0000_20240315T2356.csv",
+      "sha256": "a1da4f194404e217b227a79c563f4746c3398058454f517c49ee067236422fca"
+    },
+    {
+      "bytes": 7762450,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20240318T0000_20240516T2358.csv",
+      "sha256": "573db89c7ee8ec6bb0c86918e9e5c48e66890aaeaf91f383a2f2e1ffa36083f1"
+    },
+    {
+      "bytes": 7406871,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20240517T0000_20240715T2358.csv",
+      "sha256": "7797e1a426ae7d22ccba716315f7a85f27f964070e81ee666b8c1c45d020feb8"
+    },
+    {
+      "bytes": 7779335,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20240716T0000_20240913T2356.csv",
+      "sha256": "c8a6dcd6d5436f2facb6df1e38191af098382fa8d4aef6d824182dd66e326b4a"
+    },
+    {
+      "bytes": 7415712,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20240916T0000_20241112T2358.csv",
+      "sha256": "eae0926db1b905f9654347ab3b3b74905d3a10297532cbde9b0b772726be1738"
+    },
+    {
+      "bytes": 6000397,
+      "path": "data/mt5/usdjpy_1m_ic_markets_mt5_20241113T0000_20241231T2358.csv",
+      "sha256": "96d1b5b0d06502a5c147dc10ebb6d3090f25b4dac85720786968fc1dc5f314b1"
+    }
+  ],
+  "sealed_files_manifest_sha256": "3f0d3f3b181d18ccb7618fef8a5c894454d684d829523359abfe1e8483c72885",
+  "status": "SEALED_AND_AUTHORIZED_FOR_ONE_DEVELOPMENT_OPENING",
+  "version": "YOUTUBE_JPY_PUBLIC_RULE_TRANSLATION_V1_PREOUTCOME_FREEZE_1_0"
+}

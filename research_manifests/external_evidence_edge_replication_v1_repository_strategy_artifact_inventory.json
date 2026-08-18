@@ -1,0 +1,1523 @@
+{
+  "artifact_count": 303,
+  "artifacts": [
+    {
+      "bytes": 11043,
+      "path": "EXTERNAL_EVIDENCE_EDGE_REPLICATION_AND_TRANSFER_CONTRACT_V1.md",
+      "sha256": "477d45341075ded5ce83783c60ef562a614abc030372d8e57be74e82da42252d"
+    },
+    {
+      "bytes": 103,
+      "path": "frontend/node_modules/.vite/vitest/da39a3ee5e6b4b0d3255bfef95601890afd80709/results.json",
+      "sha256": "d7e039a145ffc1e8099f83aecc734bb72810b523d4929cca6b952453ea988ee0"
+    },
+    {
+      "bytes": 8317,
+      "path": "frontend/node_modules/next/dist/docs/01-app/03-api-reference/04-functions/use-report-web-vitals.md",
+      "sha256": "5627da1d7d1c5e32ea93a8604fbc7dff4cfd70e3a32f39b0a24947d5fe02f8c9"
+    },
+    {
+      "bytes": 453,
+      "path": "frontend/node_modules/next/dist/docs/02-pages/04-api-reference/03-functions/use-report-web-vitals.md",
+      "sha256": "47c8cbf9bf030606a77a1809b2c88d85f0d5c0a8c11622ca822bebe5e737b7b6"
+    },
+    {
+      "bytes": 9084,
+      "path": "GC_CONTINUOUS_STATE_RESPONSE_EDGE_DISCOVERY_CONTRACT_V3.md",
+      "sha256": "6cf07ec324c5a6f4ba0f645fd150ab596001dac35e5ab48245b68aff8f7ba573"
+    },
+    {
+      "bytes": 6322,
+      "path": "GC_CONTINUOUS_STATE_RESPONSE_EDGE_DISCOVERY_V3_MILESTONE_2.md",
+      "sha256": "fa252d9f6144aaba1ab121896bc69b38103f464a492101dc1071f134efaf99b6"
+    },
+    {
+      "bytes": 3175,
+      "path": "GC_CONTINUOUS_STATE_RESPONSE_EDGE_DISCOVERY_V3_MILESTONE_2_R1.md",
+      "sha256": "35c85f09e22c3c137a12d343f490ffb7b7d39270e716e33e448455fddff21708"
+    },
+    {
+      "bytes": 5741,
+      "path": "GC_CONTINUOUS_STATE_RESPONSE_EDGE_DISCOVERY_V3_MILESTONE_3.md",
+      "sha256": "0684c65a7048e16f4b55b3fe5ee90c7ee7fe98bf8269cd3046ed80d64cb2b5c7"
+    },
+    {
+      "bytes": 1563,
+      "path": "GC_MICROSTRUCTURE_CONDITIONAL_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "bbe627a1e662261727f9576b645b8ed836335fefca5df4308b7cd4a4e04714b6"
+    },
+    {
+      "bytes": 4125,
+      "path": "GC_MICROSTRUCTURE_STEP_2_REPORT.md",
+      "sha256": "030bfd3fcbaaa1f7dc13b80339928eef209e9544cd329b984ed28ea0540a4ad1"
+    },
+    {
+      "bytes": 4046,
+      "path": "GC_MICROSTRUCTURE_STEP_3A1_REPORT.md",
+      "sha256": "57e7a1533e877e300563c1ea2a0868130484837a01a3b5d526227d2ff2d539df"
+    },
+    {
+      "bytes": 6265,
+      "path": "GC_MICROSTRUCTURE_STEP_3A_REPORT.md",
+      "sha256": "a2f873faaf4ac9b62a38567b47d8aa3931088a6129914fa410c2c0d9e677ed5a"
+    },
+    {
+      "bytes": 4453,
+      "path": "GC_MICROSTRUCTURE_STEP_3B1_REPORT.md",
+      "sha256": "32d948ec03c60aed7219b5abb8cae7b2164eb10cc175dbe95f8f3818d93e9601"
+    },
+    {
+      "bytes": 5822,
+      "path": "GC_MICROSTRUCTURE_STEP_3B2_REPORT.md",
+      "sha256": "3582ce7fdb59bad0dea8723f21781ad54290b0e1438e1c655986446a596c0922"
+    },
+    {
+      "bytes": 3325,
+      "path": "GC_MICROSTRUCTURE_STEP_3C_REPORT.md",
+      "sha256": "0ff434c6f666b28f714b47661eaeb2c589069c2a8dc6aee4a75b79d537d87a0f"
+    },
+    {
+      "bytes": 1571,
+      "path": "GC_MICROSTRUCTURE_STEP_3D_REPORT.md",
+      "sha256": "2fdfb8aab713403cd546af42fd92fc107876c1ba0a7e4e4ce38ad9d78df73308"
+    },
+    {
+      "bytes": 3367,
+      "path": "GC_MICROSTRUCTURE_STEP_3E_REPORT.md",
+      "sha256": "bfeea41611458289126c5172711b74e766a49bb2b66ec99dd15975e56116832b"
+    },
+    {
+      "bytes": 1430,
+      "path": "GC_MICROSTRUCTURE_STEP_3F_REPORT.md",
+      "sha256": "f894095876883faf090c1e0e5ce3c82b773e34668a75932f4e8e3ca84a46ece1"
+    },
+    {
+      "bytes": 1210,
+      "path": "GC_MICROSTRUCTURE_STEP_4A1_REPORT.md",
+      "sha256": "6ea9d5e98fea4b4c553d1cda1e43faeaa74847a39770220fff215ede19d9e586"
+    },
+    {
+      "bytes": 1407,
+      "path": "GC_MICROSTRUCTURE_STEP_4A2_REPORT.md",
+      "sha256": "116adcd20d6034a815a70dafa7a35e5193e90d342f6ad49cf75b7031abc83904"
+    },
+    {
+      "bytes": 1502,
+      "path": "GC_MICROSTRUCTURE_STEP_4A3_REPORT.md",
+      "sha256": "5a4fe5b1bb9ca142c93f8ea70880f1dcceb420eef2367a542d5ccc6a9dfca021"
+    },
+    {
+      "bytes": 1307,
+      "path": "GC_MICROSTRUCTURE_STEP_4A_REPORT.md",
+      "sha256": "2083098e122c5829c0a692061406f704cb3a730fb12a75ffd195ce1afcca0728"
+    },
+    {
+      "bytes": 1905,
+      "path": "GC_MICROSTRUCTURE_STEP_4B1_REPORT.md",
+      "sha256": "22e2db72d7fe775b25e4e5d4b89663459f294a02214709340bb39c6174f1dd91"
+    },
+    {
+      "bytes": 1707,
+      "path": "GC_MICROSTRUCTURE_STEP_4B2_REPORT.md",
+      "sha256": "adb44b1d8774f501f59ef3388b93ee970ded87e888d6bd9fc1f7fc3b2e0bbae1"
+    },
+    {
+      "bytes": 1502,
+      "path": "GC_MICROSTRUCTURE_STEP_4B3_REPORT.md",
+      "sha256": "5eab6feb3994dfc55140a8a602bd57481561f1165d9905ea848e79bd7b5d9e1c"
+    },
+    {
+      "bytes": 1800,
+      "path": "GC_MICROSTRUCTURE_STEP_5A_REPORT.md",
+      "sha256": "27e06558fa5916925b14a10e5bc0e682b97b1ed540917c4e8c57c4366238783f"
+    },
+    {
+      "bytes": 1780,
+      "path": "GC_MICROSTRUCTURE_STEP_5B1_REPORT.md",
+      "sha256": "24808225b9f705860c58d0e11c707d4f871c6ff59bad416cc692cada78ae611c"
+    },
+    {
+      "bytes": 1348,
+      "path": "GC_MICROSTRUCTURE_STEP_5B2_REPORT.md",
+      "sha256": "908cb5fe84852a2dfd9c09fc399e00be00dca22136837a1600e1937b53574e40"
+    },
+    {
+      "bytes": 1406,
+      "path": "GC_MICROSTRUCTURE_STEP_5B_BUDGET_C_REPORT.md",
+      "sha256": "d0e0aebbfd27e2b9569fcdaa9af3d3bfe79cf38d272b263ea5919e4c0450d9f9"
+    },
+    {
+      "bytes": 975,
+      "path": "GC_MICROSTRUCTURE_STEP_5B_REPORT.md",
+      "sha256": "c12dee712bf142833c9367e33d82928ae52a7d5cb468c287b4fa08154f717c14"
+    },
+    {
+      "bytes": 1910,
+      "path": "GC_MICROSTRUCTURE_STEP_5B_RESUME_REPORT.md",
+      "sha256": "8c37f7f8adf8fa112b8b8cf52b69fc200c94660dc09449059370f30853e442c9"
+    },
+    {
+      "bytes": 1078,
+      "path": "GC_MICROSTRUCTURE_STEP_5C_REPORT.md",
+      "sha256": "d405ea27ab463b62d8f1595710a9e976f0b11cb56c795b812c472b547ceb45bd"
+    },
+    {
+      "bytes": 4131,
+      "path": "GC_MICROSTRUCTURE_STEP_5D_R1_CORRECTED_REPORT.md",
+      "sha256": "ca3769edb3930ae549ab9f6503d85c0adc8ce2f9430ddef98ae97c700cfdda40"
+    },
+    {
+      "bytes": 2603,
+      "path": "GC_MICROSTRUCTURE_STEP_5D_R1_REPORT.md",
+      "sha256": "51b1bc3b6fc80676f69d197770fad20c829338df3b4cbf438d783d9240ba1fa7"
+    },
+    {
+      "bytes": 3423,
+      "path": "GC_MICROSTRUCTURE_STEP_5D_R2_REPORT.md",
+      "sha256": "17d8857f8e2f4fd7b2c7f9c4453d325f77fdf594f074ee00f5a93c025832ec45"
+    },
+    {
+      "bytes": 913,
+      "path": "GC_MICROSTRUCTURE_STEP_5D_R3_REPORT.md",
+      "sha256": "83567fd7591631b5705f2808716c74e8c45c2c7c2f0bbdf4f1a5c4a388fa8e18"
+    },
+    {
+      "bytes": 1384,
+      "path": "GC_MICROSTRUCTURE_STEP_5D_REPORT.md",
+      "sha256": "4fa38062c3d64e49e2df2090d6574bc44f019bf06c6f85c8e37f39226ce8766c"
+    },
+    {
+      "bytes": 10912,
+      "path": "GC_SESSION_STATE_TRANSITION_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "b499e3fc7f80ff6fc288f689eb6a6e3823ceeb19f51d482b56c59304725ccf9a"
+    },
+    {
+      "bytes": 6660,
+      "path": "GC_SESSION_STATE_TRANSITION_EDGE_DISCOVERY_V1_REPORT.md",
+      "sha256": "149a7aa3498a94464f0aa8bb06b728af9d70e026c2a98828c727cdf115267576"
+    },
+    {
+      "bytes": 3559,
+      "path": "GC_SESSION_TRIGGER_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "165e5479016aee755ded33eafef2244191fc78ae004a5b723a260d8a1567c301"
+    },
+    {
+      "bytes": 6701,
+      "path": "GC_SESSION_TRIGGER_EDGE_DISCOVERY_CONTRACT_V2.md",
+      "sha256": "bb9733a895f2afb2025ec4f42bc32d241ba50996754d999861f07f821e89711b"
+    },
+    {
+      "bytes": 6472,
+      "path": "GC_SESSION_TRIGGER_EDGE_DISCOVERY_CONTRACT_V2_R1.md",
+      "sha256": "da1d6c8460e875d916351f7c81bb6e50cacb40b4a3cf488913c494c3ba283d74"
+    },
+    {
+      "bytes": 5839,
+      "path": "GC_SESSION_TRIGGER_EDGE_DISCOVERY_V2_MILESTONE_3.md",
+      "sha256": "65998db76ba5652ce8e654fad75438315cca55e6a111261bdd01475e6ae76ea7"
+    },
+    {
+      "bytes": 2801,
+      "path": "GC_SESSION_TRIGGER_EDGE_DISCOVERY_V2_MILESTONE_3_R1.md",
+      "sha256": "2a514e2d0bfad84ea8df48b0c58412bee2b2cb57639ac07ed4ff047475cf2e22"
+    },
+    {
+      "bytes": 3819,
+      "path": "GC_SESSION_TRIGGER_EDGE_DISCOVERY_V2_MILESTONE_4.md",
+      "sha256": "eb4ff1c906f52f7508d6c57e157fa1ebbd92093de515478ad7d5eee1ac0189ed"
+    },
+    {
+      "bytes": 1475,
+      "path": "GC_SESSION_TRIGGER_EDGE_MILESTONE_1.md",
+      "sha256": "004ba42710350fec00f691098cb1764c3bc10f0a93a4505a454a211e3a772bd9"
+    },
+    {
+      "bytes": 12291,
+      "path": "GOLD_BIDIRECTIONAL_AUCTION_RESOLUTION_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "29c9a0d84b8281f51bc07995e65694853c21b485d378163ffa077497d977a611"
+    },
+    {
+      "bytes": 5964,
+      "path": "GOLD_BIDIRECTIONAL_AUCTION_RESOLUTION_EDGE_DISCOVERY_V1_REPORT.md",
+      "sha256": "5502c6d1f31ab57b2248db510d5f23780430a2da6d4f27e00aac089cb7c3464b"
+    },
+    {
+      "bytes": 12599,
+      "path": "GOLD_CASEBOOK_DISCOVERY_CONTRACT_V2.md",
+      "sha256": "a442be37722974d479752b70ec0931f1ddd58b8dd7ee0ec48f3a17c8a82b7555"
+    },
+    {
+      "bytes": 6030,
+      "path": "GOLD_CASEBOOK_DISCOVERY_V2_MILESTONE_2.md",
+      "sha256": "22a0ee0c037b948e0be1aec48906af8eb6685e33bdc30d3de4ab8b1e3a43044b"
+    },
+    {
+      "bytes": 11734,
+      "path": "GOLD_CASEBOOK_DISCOVERY_V2_MILESTONE_3.md",
+      "sha256": "2a8f789fb42484037a28a78bdd6e505f565cfb8546e6ec57e8d5ebe9f61224b4"
+    },
+    {
+      "bytes": 10716,
+      "path": "GOLD_CASEBOOK_DISCOVERY_V2_MILESTONE_4.md",
+      "sha256": "4ad91bca2030b2f9e0e8e459b3649bdbaa4eff0a810d89c8f4698a2a2fe7971d"
+    },
+    {
+      "bytes": 9497,
+      "path": "GOLD_CASEBOOK_DISCOVERY_V2_MILESTONE_5.md",
+      "sha256": "29b92060141c65312b4e1c263b4871dc12e903fbb9b6c3c2c32778aa044d368c"
+    },
+    {
+      "bytes": 9221,
+      "path": "GOLD_CASEBOOK_DISCOVERY_V2_MILESTONE_6.md",
+      "sha256": "f811e5b14ce85d908b42d7a25bbdc6ea3fd9264c149a3499ba9455b697a3e304"
+    },
+    {
+      "bytes": 3431,
+      "path": "GOLD_CASEBOOK_DISCOVERY_V2_MILESTONE_6_COST_QUOTE.md",
+      "sha256": "431a255ad5533e6f1e076ef2a4a3728671260379bb732f4ef28062508382085b"
+    },
+    {
+      "bytes": 5639,
+      "path": "GOLD_CASEBOOK_MILESTONE_2.md",
+      "sha256": "4e3201c995f39d2014c8d3313701f88438fa9a72a3e0a81175c1103c3fe68e25"
+    },
+    {
+      "bytes": 7428,
+      "path": "GOLD_CASEBOOK_MILESTONE_3.md",
+      "sha256": "48f2978bee5dc4d3c7c874713ee23f001309181a2fbec99ce0ac21ce4324581c"
+    },
+    {
+      "bytes": 9903,
+      "path": "GOLD_CASEBOOK_MILESTONE_4.md",
+      "sha256": "e7a47902fdd7267a2c6c0aee2bf7cb2f60db323b2650e4b07fcf1333d9ee64da"
+    },
+    {
+      "bytes": 6617,
+      "path": "GOLD_CASEBOOK_MILESTONE_5.md",
+      "sha256": "c202cea6565b1191dbd63109da02cdf80e7b2eac882fd1f78c349d65fcdbcd75"
+    },
+    {
+      "bytes": 6918,
+      "path": "GOLD_CASEBOOK_MILESTONE_6.md",
+      "sha256": "bcc85634153bee2a60e1394cf8ba29812e6411128771e5d24625b8468f3b6441"
+    },
+    {
+      "bytes": 20146,
+      "path": "GOLD_CASEBOOK_RESEARCH_CONTRACT.md",
+      "sha256": "d196e36bb58d39d8399255987d0dd15a68a0ef67d6c4224815cfcdecacc41368"
+    },
+    {
+      "bytes": 4515,
+      "path": "GOLD_CONDITIONAL_MOVEMENT_POLICY_EDGE_CONTRACT_V1.md",
+      "sha256": "7372f4dea1f5ec3174a245e14d8bf2b3af85770ce71b84780c6e548531337c0c"
+    },
+    {
+      "bytes": 3083,
+      "path": "GOLD_CONDITIONAL_MOVEMENT_POLICY_EDGE_V1_FINAL.md",
+      "sha256": "7e6f946f97f962c4656a8a2cb03d149116ddf7c00d29bcc1422ec05d5585c895"
+    },
+    {
+      "bytes": 12358,
+      "path": "GOLD_FUNDAMENTAL_ALIGNED_MULTITIMEFRAME_AUCTION_EDGE_CONTRACT_V1.md",
+      "sha256": "405253fda1cda53d404436bf57d455d24f623093260677980ff4caa18d0f90f7"
+    },
+    {
+      "bytes": 2610,
+      "path": "GOLD_FUNDAMENTAL_ALIGNED_MULTITIMEFRAME_AUCTION_EDGE_V1_REPORT.md",
+      "sha256": "e1c5a94b43f3494aa0e71f33c914eccd59a537c53a5985775f798098342d1764"
+    },
+    {
+      "bytes": 7615,
+      "path": "GOLD_H4_CONTINUATION_TRADABLE_CEILING_AND_MONETIZATION_AUDIT_CONTRACT_V1.md",
+      "sha256": "72994beb0e851ed1ea491b907034e5b28cccbe3935cafd1bd4e1b60588170011"
+    },
+    {
+      "bytes": 2919,
+      "path": "GOLD_H4_CONTINUATION_TRADABLE_CEILING_AND_MONETIZATION_AUDIT_V1_REPORT.md",
+      "sha256": "5af667b972ac7f9f5796f1da326fb934005bf233f2cbb2be3df57f6263f5ab12"
+    },
+    {
+      "bytes": 3726,
+      "path": "GOLD_H4_HALF_RETRACE_FINAL_FALSIFICATION_V1.md",
+      "sha256": "13988ba9ac2b39b130da8603ebd51221536dbf8c808fd4a9e64b5dc5065b3cb5"
+    },
+    {
+      "bytes": 1279,
+      "path": "GOLD_H4_HALF_RETRACE_FINAL_FALSIFICATION_V1_RESULT.md",
+      "sha256": "df5070bfadcffdaa4bc71df524791a3cf9f0cba825b691fb2f75dd6237339c60"
+    },
+    {
+      "bytes": 9275,
+      "path": "GOLD_H4_LIQUIDITY_TARGET_CAPTURE_FALSIFICATION_CONTRACT_V1.md",
+      "sha256": "305c8e985b5ec814c486a679770221fe70eb61f0593ccd5681822f96b797a127"
+    },
+    {
+      "bytes": 2248,
+      "path": "GOLD_H4_LIQUIDITY_TARGET_CAPTURE_FALSIFICATION_V1_REPORT.md",
+      "sha256": "237a899644119951034bfffeba5dde5b80e167d51cc95c82f6283ae7e958711c"
+    },
+    {
+      "bytes": 9858,
+      "path": "GOLD_MACRO_ACCEPTANCE_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "04f1cff4d4ea05710262f512a750c857d7aa990f06b9073afcc10ae433324075"
+    },
+    {
+      "bytes": 7532,
+      "path": "GOLD_MACRO_ACCEPTANCE_EDGE_DISCOVERY_V1_RESULT.md",
+      "sha256": "a4a23bf333d460e10d773e469ae2f070aa0fd7becf5ede144b3f09b7501927b4"
+    },
+    {
+      "bytes": 5082,
+      "path": "GOLD_MULTITIMEFRAME_TREND_CONTINUATION_CENSUS_CONTRACT_V1.md",
+      "sha256": "671bfe0da7604165b3ce6d700ae80a74f6be299e2e49faba7954cf93f6a1d0d6"
+    },
+    {
+      "bytes": 1204,
+      "path": "GOLD_MULTITIMEFRAME_TREND_CONTINUATION_CENSUS_V1_REPORT.md",
+      "sha256": "436a9aa31e0fb407fa9ee6c9ec46253275176b57c3a62f7c58bb6ea49088f412"
+    },
+    {
+      "bytes": 1204,
+      "path": "GOLD_MULTITIMEFRAME_TREND_CONTINUATION_CENSUS_V1_REPORT_V2.md",
+      "sha256": "436a9aa31e0fb407fa9ee6c9ec46253275176b57c3a62f7c58bb6ea49088f412"
+    },
+    {
+      "bytes": 3294,
+      "path": "GOLD_POINT_IN_TIME_AUCTION_STATE_AND_ADAPTIVE_MANAGEMENT_V1_DEVELOPMENT_RESULTS.md",
+      "sha256": "7407c385e9921d080ffbe000ed9e1243437cdc34e94c022a6725ac46663394a5"
+    },
+    {
+      "bytes": 3254,
+      "path": "GOLD_POINT_IN_TIME_AUCTION_STATE_AND_ADAPTIVE_MANAGEMENT_V1_FINAL_VERDICT.md",
+      "sha256": "62ce379cef294c0a5670855bcadb2a4ec490923e3f1e7a66795b18837750b248"
+    },
+    {
+      "bytes": 2661,
+      "path": "GOLD_POINT_IN_TIME_AUCTION_STATE_AND_ADAPTIVE_MANAGEMENT_V1_GC_INCREMENTAL_R3_RESULTS.md",
+      "sha256": "7e231b6607e6c9142c7ba43d377fda36e67d8a1a6e9ae1f4b1bbfc31e98e3d70"
+    },
+    {
+      "bytes": 12858,
+      "path": "GOLD_POINT_IN_TIME_AUCTION_STATE_AND_ADAPTIVE_TRADE_MANAGEMENT_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "98ee15c6cb11cf717e4aa1990d44759e8a4242b3f9d91463e731809a397ab2ad"
+    },
+    {
+      "bytes": 11025,
+      "path": "GOLD_PULLBACK_ARCHETYPE_SETUP_ROUTING_AND_RISK_ALLOCATION_CONTRACT_V1.md",
+      "sha256": "fd7c80896f128fe285b1b0bb2127ff006c9e661621e294b09a91a5ec4ea4931c"
+    },
+    {
+      "bytes": 2021,
+      "path": "GOLD_PULLBACK_ARCHETYPE_SETUP_ROUTING_AND_RISK_ALLOCATION_V1_FINAL.md",
+      "sha256": "df82963fcc4962fda25d947443f0a37a165fd7a28f25c2a1ac9a66f9d854afea"
+    },
+    {
+      "bytes": 3997,
+      "path": "GOLD_PULLBACK_BEHAVIOURAL_ARCHETYPES_CONTRACT_V1.md",
+      "sha256": "ba108222123e2d87c7092c5ba9bcc0d5b07df81302cff8512699ff210f82fb31"
+    },
+    {
+      "bytes": 6273,
+      "path": "GOLD_PULLBACK_BEHAVIOURAL_ARCHETYPES_V1_REPORT.md",
+      "sha256": "8fc033a36484b744ed9b5566ad9931eae5571df1d2fdb3a96ace083a6aabf195"
+    },
+    {
+      "bytes": 7153,
+      "path": "GOLD_PULLBACK_MONETIZABILITY_GAP_DECOMPOSITION_CONTRACT_V1.md",
+      "sha256": "e40ed4e9471a07f8a6df5136be11b668726589ba29680436c960332b85ece392"
+    },
+    {
+      "bytes": 5039,
+      "path": "GOLD_PULLBACK_MONETIZABILITY_GAP_DECOMPOSITION_V1_REPORT.md",
+      "sha256": "4498917306085b63f7c0ac515cfbbd57df498816bcd6cdf2ab75d1f16b0db103"
+    },
+    {
+      "bytes": 11178,
+      "path": "GOLD_SEQUENTIAL_AUCTION_CONFIRMATION_ENTRY_RESEARCH_CONTRACT_V1.md",
+      "sha256": "83f011d967473728eb8278b46cf24ed869b49c1a81dba7a1dff30540f24ff7be"
+    },
+    {
+      "bytes": 2845,
+      "path": "GOLD_SEQUENTIAL_AUCTION_CONFIRMATION_ENTRY_RESEARCH_V1_FINAL.md",
+      "sha256": "bfb02021cc5522e4b8c1c09531635209cac85d62441eed293e732be5917e5ad5"
+    },
+    {
+      "bytes": 14566,
+      "path": "GOLD_SESSION_BEHAVIOUR_DISCOVERY_CONTRACT_V3.md",
+      "sha256": "21d4028a6454511de3d26e328f3272b0e6acb82d65a02fb9d8bf373ff0fe83fd"
+    },
+    {
+      "bytes": 7719,
+      "path": "GOLD_SESSION_BEHAVIOUR_V3_MILESTONE_1.md",
+      "sha256": "8215c7ef875d82643533524a80fe2884b19ca2fd5264e85de74704e7aec796f1"
+    },
+    {
+      "bytes": 8615,
+      "path": "GOLD_SESSION_BEHAVIOUR_V3_MILESTONE_2.md",
+      "sha256": "88862e1417039ded965a361b3079642ca6f91e26041d3edf82c9da5f759f6d19"
+    },
+    {
+      "bytes": 18020,
+      "path": "GOLD_SESSION_BEHAVIOUR_V3_MILESTONE_3.md",
+      "sha256": "5882733ad910c6a402db82610f949474424c48f8329f0af8c7f8599c61a65987"
+    },
+    {
+      "bytes": 11264,
+      "path": "GOLD_SESSION_BEHAVIOUR_V3_MILESTONE_4.md",
+      "sha256": "2f46e8a115e8ed008536b4eab245a113d09ab3065688a93a7e27cc3d79b440ba"
+    },
+    {
+      "bytes": 10090,
+      "path": "GOLD_SESSION_BEHAVIOUR_V3_MILESTONE_5.md",
+      "sha256": "6ce952f8bae2abc816f8058c6e3fd5aae3aaf71a1e96d5a83d7241595759c831"
+    },
+    {
+      "bytes": 9879,
+      "path": "GOLD_SESSION_BEHAVIOUR_V3_MILESTONE_6A.md",
+      "sha256": "483c4194f7db02b17adc3318b5b407a469e443c3ed843864120fea8ea394bb37"
+    },
+    {
+      "bytes": 5096,
+      "path": "GOLD_SESSION_BEHAVIOUR_V3_MILESTONE_6B.md",
+      "sha256": "328d84a17815ae7e6e4a03b241f3d35ed72312b59d006536e297622931837595"
+    },
+    {
+      "bytes": 6745,
+      "path": "GOLD_STRUCTURAL_STOP_GEOMETRY_ECONOMIC_RESEARCH_CONTRACT_V1.md",
+      "sha256": "f31429f86c0d1cd1d489371dac9b6af1b48372256c05efb896a2f924111c353d"
+    },
+    {
+      "bytes": 4265,
+      "path": "GOLD_STRUCTURAL_STOP_GEOMETRY_ECONOMIC_RESEARCH_V1_FINAL.md",
+      "sha256": "3cdbc021897da73af5e5f15e8edd9e75fce712ae6081700aa396bd361426bec3"
+    },
+    {
+      "bytes": 10024,
+      "path": "GOLD_STRUCTURAL_TREND_RETRACEMENT_CONTINUATION_EDGE_CONTRACT_V1.md",
+      "sha256": "781cbd3536e16309a9b7102732ec7aee21c08f69217b2966c5898dbd9449c01b"
+    },
+    {
+      "bytes": 1900,
+      "path": "GOLD_STRUCTURAL_TREND_RETRACEMENT_CONTINUATION_EDGE_V1_REPORT.md",
+      "sha256": "432621af0d0f017b60c8e9c1f4a62ef129c9c8eb958b30fc7b14640fba2926e4"
+    },
+    {
+      "bytes": 8492,
+      "path": "GOLD_TREND_PULLBACK_CONTINUATION_ECONOMIC_EDGE_VALIDATION_CONTRACT_V1.md",
+      "sha256": "7696311376223181b9d68241bf4541277c2fb4162ef968e641990243df4eee34"
+    },
+    {
+      "bytes": 3522,
+      "path": "GOLD_TREND_PULLBACK_CONTINUATION_ECONOMIC_EDGE_VALIDATION_V1_FINAL.md",
+      "sha256": "703708d9aa5b58c4dab10314ef9c5f003eee52498e6d15539fc213971791c1c6"
+    },
+    {
+      "bytes": 7896,
+      "path": "GOLD_TREND_PULLBACK_CONTINUATION_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "cdcc428d5a7423bfa1ea9c598f8aa17c903206465a524acbcee45e0b91692bb3"
+    },
+    {
+      "bytes": 14174,
+      "path": "GOLD_TREND_PULLBACK_CONTINUATION_EDGE_V1_REPORT.md",
+      "sha256": "f49016f38f3b0905586360e01f7d2b03fc3f553228a327d9292c3a96542aabd8"
+    },
+    {
+      "bytes": 7887,
+      "path": "GOLD_TREND_PULLBACK_MOVEMENT_ANATOMY_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "4d7598cec227f79a2c64c91685e54048303a6758d27020c78719b2ef65d71369"
+    },
+    {
+      "bytes": 5219,
+      "path": "GOLD_TRIPLE_MACRO_ACCEPTANCE_FADE_VALIDATION_CONTRACT_V1.md",
+      "sha256": "68554b9a1169ad50d8f89d63a65db3d9c87a390020ba1d2e1b7868c4c36bddd9"
+    },
+    {
+      "bytes": 17164,
+      "path": "MILESTONES.md",
+      "sha256": "efbd6d00ed5cc10a3116d12d567fdde3ba9188bf2969071df4563999edb460fe"
+    },
+    {
+      "bytes": 16369,
+      "path": "MULTI_ASSET_MACRO_AND_SESSION_PORTFOLIO_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "e7bf723cb8c161bd7ae1bd7e4ffba55ebae9e868437e6929de13f6102c09b6f2"
+    },
+    {
+      "bytes": 2550,
+      "path": "MULTI_ASSET_MACRO_AND_SESSION_PORTFOLIO_EDGE_DISCOVERY_V1_MILESTONE_2_REPORT.md",
+      "sha256": "db85d0de0c931ce5ece3ba8f7514ec1970c0e78c5661c9f6594383b56b4707ec"
+    },
+    {
+      "bytes": 1956,
+      "path": "MULTI_ASSET_MACRO_AND_SESSION_PORTFOLIO_EDGE_DISCOVERY_V1_MILESTONE_3_REPORT.md",
+      "sha256": "4db1d83b5e94f5b9116b1d0613cf00afa7e0c66484b437be55aaa1944804e675"
+    },
+    {
+      "bytes": 5515,
+      "path": "MULTI_ASSET_OBSERVABLE_AUCTION_STATE_CONDITIONAL_ROUTING_EDGE_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "1c3caf137fd9872ed514ad85dcd64dadebd5cd2ed2b536ccdf83bacdd6f8693e"
+    },
+    {
+      "bytes": 1155,
+      "path": "MULTI_ASSET_OBSERVABLE_AUCTION_STATE_CONDITIONAL_ROUTING_EDGE_DISCOVERY_V1_REPORT.md",
+      "sha256": "c519ad2f1b20896d0f2e4d0c6b07a52390c8280a14c7cbdb854809e7f3eef2a0"
+    },
+    {
+      "bytes": 6164,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_DISCOVERY_CONTRACT_V1.md",
+      "sha256": "f1f8d2591e4ca51d433ca9dfd8592d5e12306a694e3478ed09a571dbd9eda457"
+    },
+    {
+      "bytes": 1814,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_V1_MILESTONE_1.md",
+      "sha256": "22ad8a6159cdae2f769c8941851c97098ffb5b624d4d914cf005b38b5ad74e09"
+    },
+    {
+      "bytes": 2092,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_V1_MILESTONE_1_FAILURE_DISPOSITION.md",
+      "sha256": "5c8c6a5ff6ec84d9396e64e5392df787aab3cae55a55852e39ff3fc43ecdb2d2"
+    },
+    {
+      "bytes": 2610,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_V1_MILESTONE_1_R1.md",
+      "sha256": "12a0a95cbf223a75317966e5690ba1155c098de07f403748dc3e7475819a8a95"
+    },
+    {
+      "bytes": 2848,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_V1_MILESTONE_1_R1_PROTOCOL.md",
+      "sha256": "cdd62d331f4d95340305dfccc42b4287628ebd11f22646d2b39ecb7b7e6cd17e"
+    },
+    {
+      "bytes": 1326,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_V1_MILESTONE_1_R2.md",
+      "sha256": "66a4af462323940dc37f67de96e9db2db20e46b1d29db019323d1e7dfb42d07a"
+    },
+    {
+      "bytes": 660,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_V1_MILESTONE_2.md",
+      "sha256": "f7ca33cb37a990fc5accd45268c5021388036bc7ebe4aa01aa265ac9f83210e1"
+    },
+    {
+      "bytes": 829,
+      "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_V1_MILESTONE_3.md",
+      "sha256": "3dc049849cb739be02b34e49755995560e4b317ea36b623854a712d62fb83474"
+    },
+    {
+      "bytes": 890,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m1_v01/final_seal.json",
+      "sha256": "d9e04be1c9dab1f88d971f2d101f6f2079f9d69a92389665b52e79ba5b943cb3"
+    },
+    {
+      "bytes": 1896,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m1_v01/GC_CONTINUOUS_STATE_RESPONSE_V3_MILESTONE_1_REPORT.md",
+      "sha256": "50cc69a7f355f37ef591acdf2b7ded6822affcc7e50b3568a0e3c23131ae7516"
+    },
+    {
+      "bytes": 936,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m1_v01/verdict.json",
+      "sha256": "55555a6a24b36d9073627cf640f4b647ef0a2d5e8ca59e0f53073915c3905926"
+    },
+    {
+      "bytes": 901,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m2_r1_v01/final_seal.json",
+      "sha256": "c0675df50018e8ca12cdad7582fbcdb27fd0e5398d9aafaef801e2a73554bd1e"
+    },
+    {
+      "bytes": 3073,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m2_r1_v01/GC_CONTINUOUS_STATE_RESPONSE_V3_MILESTONE_2_R1_REPORT.md",
+      "sha256": "cd04ce48ac4e8253d86df4109b4394b9d65ae1a6765e3cec968c5a616108eb29"
+    },
+    {
+      "bytes": 1465,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m2_r1_v01/verdict.json",
+      "sha256": "d2b067a0fa6af78503bc37dfdc0979823726be41b8f3c48294962ad8d985f4c4"
+    },
+    {
+      "bytes": 832,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m2_v01/final_seal.json",
+      "sha256": "722fa49726a05dfc37191135f052053b83d1a308db812447295f6f1601264263"
+    },
+    {
+      "bytes": 8030,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m2_v01/GC_CONTINUOUS_STATE_RESPONSE_V3_MILESTONE_2_REPORT.md",
+      "sha256": "b611b1729c3aae2b7d67eecd3927da0e52ba293bbd3c15233422901a8dc148c9"
+    },
+    {
+      "bytes": 1774,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m2_v01/verdict.json",
+      "sha256": "d7d97f6f40c6188e57248401d928a3cec0ede538fbdd9cd6bdac061bf86301ef"
+    },
+    {
+      "bytes": 717547,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m3_v01/complete_results.json",
+      "sha256": "bba192c31d98a8fe1bf0005e6c865f54ae4714bb88d179d9faa9d926e4ad08ff"
+    },
+    {
+      "bytes": 748,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m3_v01/final_seal.json",
+      "sha256": "8dd3b8d97fc14c1374361bdd5a4a0f61c783844ddf76a56096a78739c6ab8286"
+    },
+    {
+      "bytes": 13217,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m3_v01/GC_CONTINUOUS_STATE_RESPONSE_V3_MILESTONE_3_REPORT.md",
+      "sha256": "c7be48b4a85f23c3ae6b03825eb8ebee9cbdf574f8ce087c0f261570dff8ed45"
+    },
+    {
+      "bytes": 480638,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m3_v01/primary_stage1_results.json",
+      "sha256": "f0b65f23a79c77951583db9744bd8d985bf3966d760d3298cf5253d5d876e98f"
+    },
+    {
+      "bytes": 279800,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m3_v01/primary_stage2_results.json",
+      "sha256": "3d5e5dbeba2d67eed1f8b4484f80e00c0f78ec352e69f921146930bcad079c36"
+    },
+    {
+      "bytes": 480648,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m3_v01/reference_stage1_results.json",
+      "sha256": "7aa01a4d91df3eb6ff369ca4a0f1f8c846a10230338344d0380e396f3e86c84d"
+    },
+    {
+      "bytes": 279810,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m3_v01/reference_stage2_results.json",
+      "sha256": "8e975affa668d17e8b4ed85b0a8e9419fcf569be04957113b95d20e29598a52a"
+    },
+    {
+      "bytes": 1344,
+      "path": "research_artifacts/gc_continuous_state_response_v3_m3_v01/verdict.json",
+      "sha256": "6fe552ac686459aafcd7b4c999e05688d04a0916e0bf2db989590ba91c896308"
+    },
+    {
+      "bytes": 1078,
+      "path": "research_artifacts/gc_microstructure_step5c_v01/GC_MICROSTRUCTURE_STEP_5C_REPORT.md",
+      "sha256": "d405ea27ab463b62d8f1595710a9e976f0b11cb56c795b812c472b547ceb45bd"
+    },
+    {
+      "bytes": 3476,
+      "path": "research_artifacts/gc_microstructure_step5c_v01/verdict.json",
+      "sha256": "f98702e5260f60fa258a8f5ed43adc944724075bf442f958677fdf8fe3dee2ad"
+    },
+    {
+      "bytes": 1335,
+      "path": "research_artifacts/gc_microstructure_step5d_v01/final_seal.json",
+      "sha256": "17f2a97487c72cf447eed34b6dabda558af7f88671fc845316139c2a1c71c2db"
+    },
+    {
+      "bytes": 1384,
+      "path": "research_artifacts/gc_microstructure_step5d_v01/GC_MICROSTRUCTURE_STEP_5D_REPORT.md",
+      "sha256": "4fa38062c3d64e49e2df2090d6574bc44f019bf06c6f85c8e37f39226ce8766c"
+    },
+    {
+      "bytes": 789,
+      "path": "research_artifacts/gc_microstructure_step5d_v01/verdict.json",
+      "sha256": "3ec082a95bd48cb412b9771eaae8cffd1641593c7ad60b033da3c9a95a6994ef"
+    },
+    {
+      "bytes": 826,
+      "path": "research_artifacts/gc_microstructure_step5dr1_corrected_v01/final_seal.json",
+      "sha256": "885d292f604669011a76b28bb649baf8389d7a2ecd59ff43d42abce08e9ae578"
+    },
+    {
+      "bytes": 787,
+      "path": "research_artifacts/gc_microstructure_step5dr1_corrected_v01/verdict.json",
+      "sha256": "7737aeac938bb26d33391409d72c25c56f230582a9483c95e614c13e28145686"
+    },
+    {
+      "bytes": 922,
+      "path": "research_artifacts/gc_microstructure_step5dr1_v01/final_seal.json",
+      "sha256": "d163c989e9c1008163c36732db026955c0a325ee57d2096adeaa5053e4848bf9"
+    },
+    {
+      "bytes": 710,
+      "path": "research_artifacts/gc_microstructure_step5dr1_v01/verdict.json",
+      "sha256": "2091cfd75653fae4f799ff77372e437d148eeffecb3d3bc0b5d2a29600aeb460"
+    },
+    {
+      "bytes": 817,
+      "path": "research_artifacts/gc_microstructure_step5dr2_v01/final_seal.json",
+      "sha256": "65a7b19971eae1d434720f79d0dcd39d4c05d4fbb41ab995ac4632f49d80ad24"
+    },
+    {
+      "bytes": 650,
+      "path": "research_artifacts/gc_microstructure_step5dr2_v01/verdict.json",
+      "sha256": "af596de71061eca5f18706bd62dea2f90b81b5799642bc03ba4f5f9b87592533"
+    },
+    {
+      "bytes": 502454,
+      "path": "research_artifacts/gc_microstructure_step5dr3_v01/complete_results.json",
+      "sha256": "40f0350f84984b0a972701506410ffee00e0df28973dce254ad32a5c3979fb9b"
+    },
+    {
+      "bytes": 797,
+      "path": "research_artifacts/gc_microstructure_step5dr3_v01/final_seal.json",
+      "sha256": "5f72949acefe21f2a0d387bd72ec458808ed075a6c89ffbfa5f8780e79263ddc"
+    },
+    {
+      "bytes": 238043,
+      "path": "research_artifacts/gc_microstructure_step5dr3_v01/primary_stage1_results.json",
+      "sha256": "fad60bc33e535e416702b5978945c22d9032fdb3651aacdc64959f64dbf61c48"
+    },
+    {
+      "bytes": 296599,
+      "path": "research_artifacts/gc_microstructure_step5dr3_v01/primary_stage2_results.json",
+      "sha256": "708a49a584d22941bf4a3f6cf02c3701c7ea4bbf035bdea4f21de6cf0f57e503"
+    },
+    {
+      "bytes": 238045,
+      "path": "research_artifacts/gc_microstructure_step5dr3_v01/reference_stage1_results.json",
+      "sha256": "97db1bb3bb66d83746bfbef5419bcff919f0948c5c1290785a7a76f23a8c6556"
+    },
+    {
+      "bytes": 296601,
+      "path": "research_artifacts/gc_microstructure_step5dr3_v01/reference_stage2_results.json",
+      "sha256": "8a8708ef632110bcae4f965cd12d0052db7a37ed840fdcd24b5078d3ef3affc8"
+    },
+    {
+      "bytes": 1545,
+      "path": "research_artifacts/gc_microstructure_step5dr3_v01/verdict.json",
+      "sha256": "6df80389517ff1056250f42d5e4da904460bdd0c9f66c26c7c459f3c48b94257"
+    },
+    {
+      "bytes": 1108,
+      "path": "research_artifacts/gc_microstructure_step_3b2_v01/report_receipt.json",
+      "sha256": "a5dee6984816b3e2e4d9022fa356ad2c51e9ae51cba3d9866e706e029b559910"
+    },
+    {
+      "bytes": 5379,
+      "path": "research_artifacts/gc_microstructure_step_3b2_v01/verdict.json",
+      "sha256": "845b80cb4fab868dcaa24bd6cd4053e3344b99b7c0663c8c403ab13cd7627b5a"
+    },
+    {
+      "bytes": 3262,
+      "path": "research_artifacts/gc_microstructure_step_3d_v01/verdict.json",
+      "sha256": "47e959d3dc98d49f6f989ab88d03f628794c584f84ef456125c49f4dbe563b72"
+    },
+    {
+      "bytes": 3276,
+      "path": "research_artifacts/gc_microstructure_step_3f_v01/verdict.json",
+      "sha256": "86dfe96718ef6b5820a669d6d66ab020635e85684044b78ca71912a165e1bcaa"
+    },
+    {
+      "bytes": 6545,
+      "path": "research_artifacts/gc_microstructure_step_4a1_v01/verdict.json",
+      "sha256": "d349d14df1b0779a85ac1fd8c96f61b372bbb14863b02b72c4f52a22a8b69078"
+    },
+    {
+      "bytes": 3834,
+      "path": "research_artifacts/gc_microstructure_step_4a2_v01/verdict.json",
+      "sha256": "690ef1db3254c56b2b7b9101fda1c5cca42d66a88a40e488493f6754ab500603"
+    },
+    {
+      "bytes": 6167,
+      "path": "research_artifacts/gc_microstructure_step_4a3_v01/verdict.json",
+      "sha256": "d55367d7e128e9eafa12cb1df483bb39deb1ccbf3dc1726eb7f829dd8187cf77"
+    },
+    {
+      "bytes": 3764,
+      "path": "research_artifacts/gc_microstructure_step_4a_v01/verdict.json",
+      "sha256": "638c7be4757e37a653c0937527c7d29fcfc0271c0db4c6240cdfb56941caae26"
+    },
+    {
+      "bytes": 8767,
+      "path": "research_artifacts/gc_microstructure_step_4b1_v01/verdict.json",
+      "sha256": "27ae67470958ef6f759d4ab0dc5e8309c0269aaa983478ad60ddd1dea5507626"
+    },
+    {
+      "bytes": 7409,
+      "path": "research_artifacts/gc_microstructure_step_4b2_v01/verdict.json",
+      "sha256": "c560b07798530e8dfbb79ebbaf34bb886f178fc4ddb2b7f1b4b6641f04c1245e"
+    },
+    {
+      "bytes": 5733,
+      "path": "research_artifacts/gc_microstructure_step_4b3_v01/2024-01-05/verdict.json",
+      "sha256": "6ca659bb1c63db71a678695dedfc82db00c6dff3e7f6101ce7efd0f3e487055a"
+    },
+    {
+      "bytes": 5737,
+      "path": "research_artifacts/gc_microstructure_step_4b3_v01/2024-01-11/verdict.json",
+      "sha256": "913e6583004d75147dbf0bbf84667d9564c756dbfd24fb64283f8ea1f57c6d8e"
+    },
+    {
+      "bytes": 5716,
+      "path": "research_artifacts/gc_microstructure_step_4b3_v01/2024-01-30/verdict.json",
+      "sha256": "83262de6a099c095ba1a349117478f0b67038fca92f55cf6037624330c23cddf"
+    },
+    {
+      "bytes": 5739,
+      "path": "research_artifacts/gc_microstructure_step_4b3_v01/2024-01-31/verdict.json",
+      "sha256": "334d0a6180341494cec87c8894a2dc6abc004cd2ef24b037d91bcb6feddbbcc2"
+    },
+    {
+      "bytes": 5741,
+      "path": "research_artifacts/gc_microstructure_step_4b3_v01/2024-03-20/verdict.json",
+      "sha256": "4b313164da3e2f5ef629c10c66bdd9f9c581c5cb241eea0ba2102223e7e47bb6"
+    },
+    {
+      "bytes": 2578,
+      "path": "research_artifacts/gc_microstructure_step_4b3_v01/verdict.json",
+      "sha256": "fc2d5e4040f15d8edfb72935ec0f491000c58d8116baf763c19fe59588260c48"
+    },
+    {
+      "bytes": 55135,
+      "path": "research_artifacts/gc_microstructure_step_5a_v01/verdict.json",
+      "sha256": "353b6a2aaff7bf7db61915c74746c5929bf22def4b3e3fe25137923c9097bc07"
+    },
+    {
+      "bytes": 7544,
+      "path": "research_artifacts/gc_microstructure_step_5b1_v01/verdict.json",
+      "sha256": "b30a89a604d2f69a0616512e289267a342dcb99fde611520a034dfd89f439c96"
+    },
+    {
+      "bytes": 3172,
+      "path": "research_artifacts/gc_microstructure_step_5b2_v01/step5b2_final/verdict.json",
+      "sha256": "5f3bd13cc2336a50c09ecfcc44c7d63b226a4d212f9d08666d6a50e93e09a6cb"
+    },
+    {
+      "bytes": 58557,
+      "path": "research_artifacts/gc_microstructure_step_5b_budget_c_v01/verdict.json",
+      "sha256": "2ee53fb8169bc1b47f38011cd2600ad74dec37404e806c1dd5a0ba0cbc2ce4bb"
+    },
+    {
+      "bytes": 2046,
+      "path": "research_artifacts/gc_microstructure_step_5b_resume_v01/verdict.json",
+      "sha256": "e1e93ebdda79f0c747260023f39741e50f0d634ed071988e379a34f605bfb9bb"
+    },
+    {
+      "bytes": 935,
+      "path": "research_artifacts/gc_microstructure_step_5b_v01/verdict.json",
+      "sha256": "1b10fbf20c779999c98f6febf76bd7786f945e8e07440ef95c412eccf204febf"
+    },
+    {
+      "bytes": 333384,
+      "path": "research_artifacts/gc_session_state_transition_v1_v01/complete_results.json",
+      "sha256": "b6bc2977bb26ccbec0bc1b2e4c7023c9937f87a239f44d7a6483e95f28466363"
+    },
+    {
+      "bytes": 1487,
+      "path": "research_artifacts/gc_session_state_transition_v1_v01/final_seal.json",
+      "sha256": "433c01e27a5c41604b9bc1f83a0585dff99e99ecfc396862734e2c62f4877cb4"
+    },
+    {
+      "bytes": 333143,
+      "path": "research_artifacts/gc_session_state_transition_v1_v01/primary_complete_results.json",
+      "sha256": "526c766a28d59c043c67ac20b3fe56d57cf25703aaa4f76501ee7944480bb75c"
+    },
+    {
+      "bytes": 333145,
+      "path": "research_artifacts/gc_session_state_transition_v1_v01/reference_complete_results.json",
+      "sha256": "3f605eacfd9f8f213599aecb500d87b0fe4cd86cae5cb2d1e7493899491036d5"
+    },
+    {
+      "bytes": 910,
+      "path": "research_artifacts/gc_session_state_transition_v1_v01/verdict.json",
+      "sha256": "8895997a73554a0fc1ade6d0b34acfbca615b9519b645541189935d63cd1867b"
+    },
+    {
+      "bytes": 808,
+      "path": "research_artifacts/gc_session_trigger_edge_m1_v01/final_seal.json",
+      "sha256": "d2df2418ca06ef3e28ecbbe531459df659840853579ef82a9a99e26785862957"
+    },
+    {
+      "bytes": 972,
+      "path": "research_artifacts/gc_session_trigger_edge_m1_v01/verdict.json",
+      "sha256": "ff93d99a31d5a36d7c1198188cf340177af29d6dfe216733e978c7aacbcc151d"
+    },
+    {
+      "bytes": 699,
+      "path": "research_artifacts/gc_session_trigger_edge_m2_v01/final_seal.json",
+      "sha256": "c6b86602eceb927db71f56e35bce3bd8778f350f7853429cebbbf281d94c7e85"
+    },
+    {
+      "bytes": 2431,
+      "path": "research_artifacts/gc_session_trigger_edge_m2_v01/GC_SESSION_TRIGGER_EDGE_MILESTONE_2.md",
+      "sha256": "e7d2cf4c14f5c659d556efa46f6afc7412ad4e309b7004ba742aa2f2ba7b0c1a"
+    },
+    {
+      "bytes": 2025,
+      "path": "research_artifacts/gc_session_trigger_edge_m2_v01/verdict.json",
+      "sha256": "03b1bbae4f56caa9b1586ec381805040d24f8e0764da40ad3a3ceaeb8dc85267"
+    },
+    {
+      "bytes": 694,
+      "path": "research_artifacts/gc_session_trigger_edge_m2r1_v01/final_seal.json",
+      "sha256": "07a4ee79e8bf75a699bf4fb34a546da7ccde8e1992d8d0d9123f24ed575db80f"
+    },
+    {
+      "bytes": 2637,
+      "path": "research_artifacts/gc_session_trigger_edge_m2r1_v01/GC_SESSION_TRIGGER_EDGE_MILESTONE_2_R1.md",
+      "sha256": "22f7fb107a5528e7223281808e47d4aee607973830aedac941ef069ef5695178"
+    },
+    {
+      "bytes": 1718,
+      "path": "research_artifacts/gc_session_trigger_edge_m2r1_v01/verdict.json",
+      "sha256": "d860f6515562170b9ff6ce832d49c660d356ed45789969b27771ff9def83154e"
+    },
+    {
+      "bytes": 810,
+      "path": "research_artifacts/gc_session_trigger_edge_m2r1a1_v01/final_seal.json",
+      "sha256": "0cf047b3c3d9aa01e5ee44876635192dad90b83be47886f8ce65f96904bd2c01"
+    },
+    {
+      "bytes": 1173,
+      "path": "research_artifacts/gc_session_trigger_edge_m2r1a1_v01/verdict.json",
+      "sha256": "13169cdc20a7bd25ea9c1de7d4f18457ba4d3cb1d3b5ab11fc7dc9923e098af5"
+    },
+    {
+      "bytes": 704,
+      "path": "research_artifacts/gc_session_trigger_edge_m2r2_v01/final_seal.json",
+      "sha256": "ba4eaebe7d0e60eed3e4edbb11f8374c68cf14379716f65b8f482e6213301594"
+    },
+    {
+      "bytes": 1303,
+      "path": "research_artifacts/gc_session_trigger_edge_m2r2_v01/verdict.json",
+      "sha256": "b3640be80add08ce235be377e4ceccfd7bdc16c211d1cde4be5f1774f69562a6"
+    },
+    {
+      "bytes": 805,
+      "path": "research_artifacts/gc_session_trigger_edge_m3_v01/final_seal.json",
+      "sha256": "c8b42b5fa7dd7985323401746c09c4f676de3e0de3aedf83a88c74fa27fe0507"
+    },
+    {
+      "bytes": 741,
+      "path": "research_artifacts/gc_session_trigger_edge_m3_v01/verdict.json",
+      "sha256": "28018feb2fb76377ecca2fa433263528865125dcc1bc33d66337e8fd3b3c7852"
+    },
+    {
+      "bytes": 407163,
+      "path": "research_artifacts/gc_session_trigger_edge_m3r1_v01/complete_results.json",
+      "sha256": "3b9c61551159e54545385cc78f6389994cdee1d1d385fe1b226a88ed07952a64"
+    },
+    {
+      "bytes": 796,
+      "path": "research_artifacts/gc_session_trigger_edge_m3r1_v01/final_seal.json",
+      "sha256": "91ac70a184bcd779d65a3e9867d603e33eebbc91a94bf05be6991f639e7877aa"
+    },
+    {
+      "bytes": 936,
+      "path": "research_artifacts/gc_session_trigger_edge_m3r1_v01/GC_SESSION_TRIGGER_EDGE_MILESTONE_3_REPORT.md",
+      "sha256": "7d9d394a465ae898f6bebbce0a3e1a713bf37d43ac66ba868583224c4fafdb6d"
+    },
+    {
+      "bytes": 112825,
+      "path": "research_artifacts/gc_session_trigger_edge_m3r1_v01/primary_stage1_results.json",
+      "sha256": "70b1f659dda7c8c2227864218ac342344ea7b5e8e990abc128c39c768f13ac79"
+    },
+    {
+      "bytes": 321767,
+      "path": "research_artifacts/gc_session_trigger_edge_m3r1_v01/primary_stage2_results.json",
+      "sha256": "56cb02d821152279df561cc3aecfdb5f3d057723724bbf6e7131b78ca4f70424"
+    },
+    {
+      "bytes": 825,
+      "path": "research_artifacts/gc_session_trigger_edge_m3r1_v01/r1_final_seal.json",
+      "sha256": "5f9829eb3309fdf714fdc2cfdd980738e7a45e3af979ef121b4b789127fb7035"
+    },
+    {
+      "bytes": 1549,
+      "path": "research_artifacts/gc_session_trigger_edge_m3r1_v01/r1_verdict.json",
+      "sha256": "866030964240629943f8aee37d644e68c148b9cb3f456b3358487d4757091244"
+    },
+    {
+      "bytes": 112827,
+      "path": "research_artifacts/gc_session_trigger_edge_m3r1_v01/reference_stage1_results.json",
+      "sha256": "ff20e8d262df069e17d9e518d8f1fa3c16c53b436817ed7be94b053bcaea7193"
+    },
+    {
+      "bytes": 321769,
+      "path": "research_artifacts/gc_session_trigger_edge_m3r1_v01/reference_stage2_results.json",
+      "sha256": "e8138c1d8bcf45fa5dda2f83bcc388f79d840e6a61d3d8807239cd0699d349f4"
+    },
+    {
+      "bytes": 1625,
+      "path": "research_artifacts/gc_session_trigger_edge_m3r1_v01/verdict.json",
+      "sha256": "4525499aa10a3613b4a4d7873441c4c6f4fc0a11fcba831dc5ca99dce1339287"
+    },
+    {
+      "bytes": 796,
+      "path": "research_artifacts/gc_session_trigger_edge_m4_v01/final_seal.json",
+      "sha256": "0ec0695f558dea29dbd3ba331a6173847e1bda3553de76b22dc3bd14646363dd"
+    },
+    {
+      "bytes": 2262,
+      "path": "research_artifacts/gc_session_trigger_edge_m4_v01/GC_SESSION_TRIGGER_EDGE_MILESTONE_4_REPORT.md",
+      "sha256": "6050ba5804ef879a1bbd63b8773bc70732df7408a910ef5a42ffdd25c4a93b0d"
+    },
+    {
+      "bytes": 864,
+      "path": "research_artifacts/gc_session_trigger_edge_m4_v01/verdict.json",
+      "sha256": "cdf91d8386221b1d69256c6e75789e6a7ead4a54fb0ee6539b26b066856dc28e"
+    },
+    {
+      "bytes": 704,
+      "path": "research_artifacts/gc_session_trigger_edge_v2_final_seal_v01.json",
+      "sha256": "4184e39cc0cd2aaae34ee5c84ec64e8c469f45c0204bc3389048e0fa935a3a07"
+    },
+    {
+      "bytes": 1022,
+      "path": "research_artifacts/gc_session_trigger_edge_v2_verdict_v01.json",
+      "sha256": "f38520305ac0c6e81df726effca8e7f83cdfe434c2bd3efc841bef4c0dbcea15"
+    },
+    {
+      "bytes": 1910,
+      "path": "research_artifacts/gc_session_trigger_edge_v2r1_v01/verdict.json",
+      "sha256": "d14ae9674659093e6fe070e084f320978651a551ee758276f9d13182986d0a41"
+    },
+    {
+      "bytes": 69962,
+      "path": "research_artifacts/gold_bidirectional_auction_resolution_v1/development_results.json",
+      "sha256": "1720c4718954c0c3e9ffa5335e96fb9af35e0b41a5962e65f1f558002249c3cc"
+    },
+    {
+      "bytes": 70020,
+      "path": "research_artifacts/gold_bidirectional_auction_resolution_v1/final_results.json",
+      "sha256": "5560db623334c296d818144f3af50486cc9b03490318e248dad35719b6fbc048"
+    },
+    {
+      "bytes": 68631,
+      "path": "research_artifacts/gold_bidirectional_auction_resolution_v1/primary_results.json",
+      "sha256": "3d884b149fad68666fb9f63b3fa531bad8b852b8dd0a11de943f1277e0b19a4a"
+    },
+    {
+      "bytes": 68631,
+      "path": "research_artifacts/gold_bidirectional_auction_resolution_v1/reference_results.json",
+      "sha256": "3d884b149fad68666fb9f63b3fa531bad8b852b8dd0a11de943f1277e0b19a4a"
+    },
+    {
+      "bytes": 19363,
+      "path": "research_artifacts/gold_casebook_baseline_v01/results.json",
+      "sha256": "e1da40041682f1722d58c28a32d2535eff6406c9b80d086a2926b2cac5d50147"
+    },
+    {
+      "bytes": 40212,
+      "path": "research_artifacts/gold_casebook_case_specification_v01/development_results.json",
+      "sha256": "d9ec624053b9a8386b9417f5276843fa3ae0eabc46985afb02caf2f3a16a5d82"
+    },
+    {
+      "bytes": 34913,
+      "path": "research_artifacts/gold_casebook_chronological_validation_v01/validation_results.json",
+      "sha256": "e9a99e43462290eee74e62d84695d0f247a4186b7524a9cd2f86c61e06b0de69"
+    },
+    {
+      "bytes": 13459,
+      "path": "research_artifacts/gold_casebook_discovery_v2_holdout_v01/holdout_results.json",
+      "sha256": "86ce6a6c7cc03884399ca558e8d3e1deb1a84ce428a5711b22c4ce4448a50286"
+    },
+    {
+      "bytes": 43249,
+      "path": "research_artifacts/gold_casebook_discovery_v2_walk_forward_v01/walk_forward_results.json",
+      "sha256": "e6e2c918fd99e767d4644e3367264af383f2304efb1fc35a55bd61b2ebf6e559"
+    },
+    {
+      "bytes": 45949,
+      "path": "research_artifacts/gold_fundamental_aligned_multitimeframe_auction_edge_v1_v02/development_results.json",
+      "sha256": "571c55f6e7104604e73b43d48266af7acfb5f10bf7c2a76ff837ce85c4039c05"
+    },
+    {
+      "bytes": 2898,
+      "path": "research_artifacts/gold_fundamental_aligned_multitimeframe_auction_edge_v1_v02/final_seal.json",
+      "sha256": "a6458ee953ed265b92df3c68e3f51f51c09717e13b101a12e55cbf007a202ecf"
+    },
+    {
+      "bytes": 9274,
+      "path": "research_artifacts/gold_h4_continuation_tradable_ceiling_v1/final_result.json",
+      "sha256": "537318bde44b955579945fdf9033699739e93e25ff0f8b10438945ba1d82cdec"
+    },
+    {
+      "bytes": 8065,
+      "path": "research_artifacts/gold_h4_continuation_tradable_ceiling_v1/primary_result.json",
+      "sha256": "2c663e76aaaf5497a361c274fb0d671a1029470f9227355d927f40b11b423bb9"
+    },
+    {
+      "bytes": 8065,
+      "path": "research_artifacts/gold_h4_continuation_tradable_ceiling_v1/reference_result.json",
+      "sha256": "2c663e76aaaf5497a361c274fb0d671a1029470f9227355d927f40b11b423bb9"
+    },
+    {
+      "bytes": 5449,
+      "path": "research_artifacts/gold_h4_half_retrace_final_falsification_v1/final_seal.json",
+      "sha256": "0d602e5632ecceb262e124fef674f75659f96fec87c62694865ac22e0e1ea497"
+    },
+    {
+      "bytes": 3801,
+      "path": "research_artifacts/gold_h4_half_retrace_final_falsification_v1/primary_forward_results.json",
+      "sha256": "3fe4e35629491ef6a44796ed38049246563eccaf77a7e45bf16754fb4ef71341"
+    },
+    {
+      "bytes": 3801,
+      "path": "research_artifacts/gold_h4_half_retrace_final_falsification_v1/reference_forward_results.json",
+      "sha256": "3fe4e35629491ef6a44796ed38049246563eccaf77a7e45bf16754fb4ef71341"
+    },
+    {
+      "bytes": 425,
+      "path": "research_artifacts/gold_h4_half_retrace_final_falsification_v1/state_final.json",
+      "sha256": "535602f1adb4457fbf3e462f93447388801cfc317445fd6d7c529c1133bc3bd2"
+    },
+    {
+      "bytes": 17098,
+      "path": "research_artifacts/gold_h4_liquidity_target_capture_falsification_v1/final_result.json",
+      "sha256": "64a250affd1d781db10de1231170b415e688309f39e81212eeff2cb26c82a246"
+    },
+    {
+      "bytes": 15149,
+      "path": "research_artifacts/gold_h4_liquidity_target_capture_falsification_v1/primary_results.json",
+      "sha256": "28c8802bf8de584ef5e9c2e56e9c34d9e4008faf9ecc44f0287aef903b1f33f9"
+    },
+    {
+      "bytes": 15149,
+      "path": "research_artifacts/gold_h4_liquidity_target_capture_falsification_v1/reference_results.json",
+      "sha256": "28c8802bf8de584ef5e9c2e56e9c34d9e4008faf9ecc44f0287aef903b1f33f9"
+    },
+    {
+      "bytes": 1592,
+      "path": "research_artifacts/gold_macro_acceptance_edge_discovery_v01/final_seal.json",
+      "sha256": "7f70ac30492cd4170c93f00fc2595bd4d51d7b7e5758b861bf2bcb1669b89199"
+    },
+    {
+      "bytes": 45566,
+      "path": "research_artifacts/gold_macro_acceptance_edge_discovery_v01/results.json",
+      "sha256": "7537562619bf1c7531b41e53f8142b2aeb3c7c4d2a2e73d56188776c33539d48"
+    },
+    {
+      "bytes": 2780,
+      "path": "research_artifacts/gold_macro_acceptance_source_inventory_v01/final_seal.json",
+      "sha256": "ed90573690d1d7b96ea52e5b75e43419ae540e22ee94e310a70749e0be4dd9fa"
+    },
+    {
+      "bytes": 3644,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v01/final_seal.json",
+      "sha256": "58fed3d76cb4ec002faf50703ca261b60ecc14e419d781658226d2dede384990"
+    },
+    {
+      "bytes": 3938,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/final_seal.json",
+      "sha256": "e5a4527769cfe1fcfb92975dcbea4f15e5b057c4d6b42709fb53eebff421654d"
+    },
+    {
+      "bytes": 151108,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental_r3/gc_incremental_r3_results.json",
+      "sha256": "59b89b5bb2d70729fce8b6ff6bdb3f83bc32008ceec6903a6d439d817f43584f"
+    },
+    {
+      "bytes": 192103,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_results/development_results.json",
+      "sha256": "60e8f6402749b031967d4ae21771e6d6f8035b8f970156425b34f6956ef57277"
+    },
+    {
+      "bytes": 191712,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_results/primary_results.json",
+      "sha256": "28c5916e5d6ae36145d9709869dbdb584e64c335c3957c0609c615765d6d1987"
+    },
+    {
+      "bytes": 191714,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_results/reference_results.json",
+      "sha256": "beb3e49a68cedb40a86c85b206c68246f035d95142093e61670bbc983921d7d1"
+    },
+    {
+      "bytes": 72912,
+      "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1/classifier_results.json",
+      "sha256": "8f7e672230b65cce0412b2fc2b4be27ee9c92392ecc3ae41d43fe95069044679"
+    },
+    {
+      "bytes": 33092,
+      "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1/development_results.json",
+      "sha256": "1b55369571850723c07006edf99cdcefcd62dd27c1aad3656783c89d5d29335a"
+    },
+    {
+      "bytes": 35182,
+      "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_forward/final_results.json",
+      "sha256": "5f5bd78a46dc4162fb0f5713b8d152148795f59c49c514d124c23b1e3e2219d5"
+    },
+    {
+      "bytes": 12381,
+      "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_forward/final_seal.json",
+      "sha256": "9ed57e4c04e133d05919384505a3bbd12a0999b54f81041a640c503d9d361b3d"
+    },
+    {
+      "bytes": 488,
+      "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_forward/state_final.json",
+      "sha256": "153a1caba40ef9b0594a2c0601ec12b6553b78f2be33caa762f9ebe0dc68b961"
+    },
+    {
+      "bytes": 72912,
+      "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_r1/classifier_results.json",
+      "sha256": "8f7e672230b65cce0412b2fc2b4be27ee9c92392ecc3ae41d43fe95069044679"
+    },
+    {
+      "bytes": 33339,
+      "path": "research_artifacts/gold_pullback_archetype_setup_routing_v1_r1/development_results.json",
+      "sha256": "aa2d4d3baea5cef322306718be54db573695485f4c77977b26b1dfe940e3af6e"
+    },
+    {
+      "bytes": 1510,
+      "path": "research_artifacts/gold_pullback_behavior_atlas_v1/final_seal.json",
+      "sha256": "7ba9a7277d623b25249231e5de7a4f547bfec44b954b8bd6124dad753bb04819"
+    },
+    {
+      "bytes": 1313,
+      "path": "research_artifacts/gold_pullback_behavioural_archetypes_v1/final_seal.json",
+      "sha256": "189f574a3d68e6cff279d9efd684e643a9942c300d8fe187c8fe9d209d89bcd9"
+    },
+    {
+      "bytes": 1150,
+      "path": "research_artifacts/gold_pullback_constant_execution_baseline_v1/final_seal.json",
+      "sha256": "230662bac71b485f0f3e1b83e574bffa28aae890dd20648bb10ce6bed445546a"
+    },
+    {
+      "bytes": 13940,
+      "path": "research_artifacts/gold_pullback_constant_execution_baseline_v1/results.json",
+      "sha256": "37fe0f67871ab3c6d2cde6e1ebe3401e5fe80b7602081176fd5443273b335d99"
+    },
+    {
+      "bytes": 4790,
+      "path": "research_artifacts/gold_pullback_monetizability_gap_decomposition_v1/final_seal.json",
+      "sha256": "52c387220c33d63312ee0194a5d8f04a3ef669e4654395816009b525dc40f2d2"
+    },
+    {
+      "bytes": 1352707,
+      "path": "research_artifacts/gold_pullback_monetizability_gap_decomposition_v1/primary_results.json",
+      "sha256": "5e19dcb72382fd21d12264a17f9046bbb4258d61fa8b3e700e69ca8a0bae146e"
+    },
+    {
+      "bytes": 1352707,
+      "path": "research_artifacts/gold_pullback_monetizability_gap_decomposition_v1/reference_results.json",
+      "sha256": "5e19dcb72382fd21d12264a17f9046bbb4258d61fa8b3e700e69ca8a0bae146e"
+    },
+    {
+      "bytes": 293074,
+      "path": "research_artifacts/gold_sequential_auction_confirmation_entry_v1_development/development_results.json",
+      "sha256": "b09838b7f219b3555f01809c07cdfd218e2c350ac126523971b732330b1eff71"
+    },
+    {
+      "bytes": 1178,
+      "path": "research_artifacts/gold_sequential_auction_confirmation_entry_v1_development/final_seal.json",
+      "sha256": "1d3bfbb87688eda47166a4eccddf071e0db5a6d926492863eb21fe6fd01f0a16"
+    },
+    {
+      "bytes": 232325,
+      "path": "research_artifacts/gold_session_behaviour_v3_m5_stability_v01/stability_results.json",
+      "sha256": "f1bcf4c8f84e2aa44e7a6bb77e30bda36e478bd8d89b4f12761cbfe5422a5743"
+    },
+    {
+      "bytes": 9507,
+      "path": "research_artifacts/gold_session_behaviour_v3_m6b_results_v01/exposed_calendar_2025/result.json",
+      "sha256": "64f5c006d8b226d8e971829b9cbc39dc3b3bc64a440f8ba0fb72305d5b5a03b7"
+    },
+    {
+      "bytes": 9396,
+      "path": "research_artifacts/gold_session_behaviour_v3_m6b_results_v01/locked_2026_ytd/result.json",
+      "sha256": "e40a3b50c52147ec2dab73a307edb159be239755290cafe3a8d02edf38f91ca9"
+    },
+    {
+      "bytes": 3987,
+      "path": "research_artifacts/gold_session_behaviour_v3_m6b_results_v01/result_bundle.json",
+      "sha256": "d38b9416ed0720f9e7cda8a0e3ef0f6ea7957f23201220895a8e607676a14d06"
+    },
+    {
+      "bytes": 886,
+      "path": "research_artifacts/gold_structural_stop_geometry_v1_economic/final_seal.json",
+      "sha256": "5fbaf223b0881f717fd77a77fb1f323a21034a8296d26fddad1671812ffc5304"
+    },
+    {
+      "bytes": 60862,
+      "path": "research_artifacts/gold_structural_trend_retracement_continuation_v1_v01/development_results.json",
+      "sha256": "03366d3a7140d504ae21c13b089024feb60e2a8bc7fb5dfe26ef40f87aa3d4e9"
+    },
+    {
+      "bytes": 3107,
+      "path": "research_artifacts/gold_structural_trend_retracement_continuation_v1_v01/final_seal.json",
+      "sha256": "a6c38e45f4754fcee0a251f71f3576c3f033d25b488df27d529419fc6dcde661"
+    },
+    {
+      "bytes": 2055,
+      "path": "research_artifacts/gold_trend_pullback_continuation_economic_v1_v01/final_seal.json",
+      "sha256": "3906002e476b796cab058a3b5ce03d65ee5b80f7016d5cab1d85df9305ce2630"
+    },
+    {
+      "bytes": 45300,
+      "path": "research_artifacts/gold_trend_pullback_continuation_economic_v1_v01/primary_development_economic_results.json",
+      "sha256": "af0a3fdf164cb00c7abe21d095c60dca7c85ae5d2846556943ba0a0e58962e92"
+    },
+    {
+      "bytes": 45300,
+      "path": "research_artifacts/gold_trend_pullback_continuation_economic_v1_v01/reference_development_economic_results.json",
+      "sha256": "af0a3fdf164cb00c7abe21d095c60dca7c85ae5d2846556943ba0a0e58962e92"
+    },
+    {
+      "bytes": 537,
+      "path": "research_artifacts/gold_trend_pullback_continuation_economic_v1_v01/state_final.json",
+      "sha256": "128b461b633895836dba4e06cccf58861cd887457784ad9e6004ef49be7e0a2c"
+    },
+    {
+      "bytes": 2881,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/final_seal.json",
+      "sha256": "bee62baee614908884a54f4a318c93823707e74dd7ab99f90eb712eba8122472"
+    },
+    {
+      "bytes": 303830,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/primary_relationship_results.json",
+      "sha256": "86ac8d003b5653b931f00597b2349e6e99a90c1fae0b6e8a0e362c1825560427"
+    },
+    {
+      "bytes": 303830,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/reference_relationship_results.json",
+      "sha256": "86ac8d003b5653b931f00597b2349e6e99a90c1fae0b6e8a0e362c1825560427"
+    },
+    {
+      "bytes": 2625,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/conditional_policy_final_seal.json",
+      "sha256": "e8ae622f618722c56d4868bd0ef6049a8c7ca432f180007439bc9d0537f45924"
+    },
+    {
+      "bytes": 382,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/conditional_policy_state_final.json",
+      "sha256": "27cf80deb45ed455309c6742152f83a3d7ba7e391e3ddefd0cc258fd313d0d8b"
+    },
+    {
+      "bytes": 33339,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/primary_conditional_policy_results.json",
+      "sha256": "745be19dd37b7a0697a8472513059086361f0bb730b9789b34e36c6738fdc433"
+    },
+    {
+      "bytes": 4226,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/primary_oof_candidate_results.json",
+      "sha256": "5f4a9b38d93147638e9afa41e0ae944f4cc6ba6e6fe7fdbd102dbc88dd37280b"
+    },
+    {
+      "bytes": 33339,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/reference_conditional_policy_results.json",
+      "sha256": "745be19dd37b7a0697a8472513059086361f0bb730b9789b34e36c6738fdc433"
+    },
+    {
+      "bytes": 4226,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/reference_oof_candidate_results.json",
+      "sha256": "5f4a9b38d93147638e9afa41e0ae944f4cc6ba6e6fe7fdbd102dbc88dd37280b"
+    },
+    {
+      "bytes": 1388,
+      "path": "research_artifacts/gold_triple_macro_acceptance_fade_validation_v01/validation_report.md",
+      "sha256": "d10f0c459e624ba84cfd708dc23b49be1d7afbcc48eec9ab19369cbcbb06607f"
+    },
+    {
+      "bytes": 5585,
+      "path": "research_artifacts/gold_triple_macro_acceptance_fade_validation_v01/validation_result.json",
+      "sha256": "d9ebad5f15fcf48de5d42cf5526b39daf5743a87f8592c014f2ab627a0c5665e"
+    },
+    {
+      "bytes": 11499,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/final_results.json",
+      "sha256": "426d8dab59bd6f9eba9720a3efce76f9495e13ff673ef196c9742de2cae87929"
+    },
+    {
+      "bytes": 137247,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/stage1_results.json",
+      "sha256": "187d75c6294eb40e99633bd0e0222fb7e10fdd476f19294701415a42e75c55c8"
+    },
+    {
+      "bytes": 919453,
+      "path": "research_artifacts/multi_asset_macro_session_portfolio_v1_m3/stage2_results.json",
+      "sha256": "c3b42280ada2d10c65dc658b05cfe36fef186193e256af3205e5b28affddcd72"
+    },
+    {
+      "bytes": 4536,
+      "path": "research_artifacts/multi_asset_observable_auction_state_conditional_routing_v1/final_result.json",
+      "sha256": "65d0c66cb9fee41af53837a5306ca8517d3d3bbd56ce955e190c30d80a4aa8f0"
+    },
+    {
+      "bytes": 1333,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m2/result.json",
+      "sha256": "b210dbbe8f117805145ae4654f9a59c96d0d98701da9b60725caf7042c6b37cf"
+    },
+    {
+      "bytes": 219303,
+      "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m3/result.json",
+      "sha256": "28d032f0ea8b522a4989f44a165985ed4ee1dd86ccf6442ba2adf52a8b35d21f"
+    },
+    {
+      "bytes": 635,
+      "path": "research_artifacts/v2r1_final_seal.json",
+      "sha256": "b1c8bda8dc2476974c013d04360b394172f93a83c5a98ec2bbd6d537e98a0b53"
+    },
+    {
+      "bytes": 835,
+      "path": "research_artifacts/v2r1_verdict.json",
+      "sha256": "ea76ef6ed5a9b512c1a9efbc9d8949529ef4b6cb780c60c48b86cdf8a3e7210a"
+    },
+    {
+      "bytes": 19990,
+      "path": "research_manifests/gc_microstructure_conditional_edge_discovery_contract_v01.json",
+      "sha256": "da9048f497c853ef3b1f2a4debe6c80f8c650217004bfe6df05e045751554fcb"
+    },
+    {
+      "bytes": 12074,
+      "path": "research_manifests/gc_session_trigger_edge_contract_v01.json",
+      "sha256": "2c56efef8ff4c4d407ac8a136523c75f89c2f41047f866ad41b9fc5fda6a7ae2"
+    },
+    {
+      "bytes": 1886,
+      "path": "research_manifests/gold_bidirectional_auction_resolution_v1_final_freeze.json",
+      "sha256": "5f4f3c3a75d70a8f431ebe8903554f84107d5526d9eacef3e092b8c5a043a7b3"
+    },
+    {
+      "bytes": 5959,
+      "path": "research_manifests/gold_casebook_discovery_contract_v02.json",
+      "sha256": "bf46840cdc9f0274cf454a22ff366f6ec4ee8c52b04d46a5258e7de5602e416e"
+    },
+    {
+      "bytes": 2340,
+      "path": "research_manifests/gold_h4_continuation_tradable_ceiling_v1_final_freeze.json",
+      "sha256": "7739599c718d3bf91e27983d6ee05b39428af09fa5e56acb47fb1f9d94f88365"
+    },
+    {
+      "bytes": 3099,
+      "path": "research_manifests/gold_h4_liquidity_target_capture_falsification_v1_final_freeze.json",
+      "sha256": "ebde55df5faa73369e19aa1b65ca85609d32790eaa319dade742613e05fb351b"
+    },
+    {
+      "bytes": 151378,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental_r3_final_freeze.json",
+      "sha256": "78ea56c3b0e5ede12d805d643b435bf37657104d3126a74dfcfb64533f7ce5a6"
+    },
+    {
+      "bytes": 6446,
+      "path": "research_manifests/gold_pullback_monetizability_gap_decomposition_v1_pre_result_freeze.json",
+      "sha256": "1ded143c9d3b19dd06a4f6a1e718c5742322aca406f5886cc9a0d2d3ba4f772b"
+    },
+    {
+      "bytes": 15552,
+      "path": "research_manifests/gold_session_behaviour_discovery_contract_v03.json",
+      "sha256": "993e91610992c62fd97c3c9aeb81b8a46ed422f025fac441b629ce35985ca591"
+    },
+    {
+      "bytes": 6307,
+      "path": "research_manifests/gold_structural_stop_geometry_v1_pre_result_freeze.json",
+      "sha256": "b2c5cc446eea166c4ee8ffa86c37365639fa8b6b4f2213062b33ad551f7f61ab"
+    },
+    {
+      "bytes": 2705,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_milestone1_seal.json",
+      "sha256": "a8f8c7d257354f03a2782a20965f0524cfae6a9f8402c5c0e4bf70179ece94a0"
+    },
+    {
+      "bytes": 3116,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_milestone2_seal.json",
+      "sha256": "acb07c44b816958f01e86d64334d940c5e1ad988649085b781b190846314fdca"
+    },
+    {
+      "bytes": 4719,
+      "path": "research_manifests/multi_asset_macro_session_portfolio_edge_v1_milestone3_seal.json",
+      "sha256": "2515b0b3c3cd5f339f346f359c9c15f928f66d2a5ba5dcf2a976fab2753273c8"
+    },
+    {
+      "bytes": 5615,
+      "path": "research_manifests/multi_asset_observable_auction_state_conditional_routing_v1_final_seal.json",
+      "sha256": "f482dca810b2883f81a53642e6ee0bf89880e289f79a11455286c547bedbfd3e"
+    },
+    {
+      "bytes": 5139,
+      "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_milestone1_seal.json",
+      "sha256": "b8c73f02677322ab18ac502a9f9367e9e22d2114e5d5b8b158eb2f2152917da7"
+    }
+  ],
+  "inventory_sha256": "b1997abe8cd8a2d17c54c7935f9f6134c85a7d4eb85f00214e65d7bb7ddc464e",
+  "selection": "All Markdown/JSON files whose filename contains CONTRACT, REPORT, RESULT, FINAL, VERDICT, or MILESTONE, excluding this new branch's generated artifacts.",
+  "version": "EXTERNAL_EVIDENCE_EDGE_REPLICATION_V1_REPOSITORY_STRATEGY_ARTIFACT_INVENTORY_1_0"
+}

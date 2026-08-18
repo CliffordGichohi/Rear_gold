@@ -1,0 +1,260 @@
+{
+  "authority": {
+    "authorized_partition": "SEALED_DEVELOPMENT_2021-11-08_THROUGH_2024-12-13_ONLY",
+    "authorized_step": "STEP_5D",
+    "mandatory_stop": "Stop after Step 5D development results and independent reproduction are sealed.",
+    "year_2025": "LOCKED",
+    "year_2026": "LOCKED"
+  },
+  "classification": "DEVELOPMENT_CONDITIONAL_EDGE_DISCOVERY_ONLY",
+  "decision_rules": {
+    "PASS": "All support and advancement gates pass; label PROVISIONAL_DEVELOPMENT_CANDIDATE_NOT_VALIDATED.",
+    "REJECT": "Support passes but one or more advancement gates fail.",
+    "SUPPORT_FAIL": "Any frozen support gate fails.",
+    "advancement": {
+      "all_stability_gates": true,
+      "bh_q_lte": 0.05,
+      "bootstrap_lower_95pct_gt_zero": true,
+      "median_signed_displacement_matches_direction": true,
+      "minimum_effect_pp": {
+        "stage_1": 10.0,
+        "stage_2": 15.0
+      }
+    },
+    "maximum_provisional_candidates_per_session": 2,
+    "overflow": "A passing test outside the top two is recorded PASS_NOT_SHORTLISTED_CAP; it is not a provisional candidate.",
+    "ranking_order": [
+      "lowest BH q",
+      "highest bootstrap lower 95 percent bound",
+      "largest favorable effect",
+      "largest condition distinct-week support",
+      "lexicographically smallest immutable test_id"
+    ],
+    "zero_candidates_acceptable": true
+  },
+  "effect_and_uncertainty": {
+    "bootstrap": {
+      "interval": "2.5th and 97.5th Type-7 linear percentiles of finite replicate effects",
+      "method": "calendar-year-stratified selected-week cluster bootstrap",
+      "minimum_finite_replicates": 19000,
+      "replicates": 20000,
+      "sampling": "Within each year sample its distinct selected_month_week_id clusters with replacement, preserving every selected row in a sampled cluster.",
+      "seed": "Exact uint64 stored per test in frozen test registry"
+    },
+    "effect_percentage_points": "100 * (Pr(favorable direction|condition) - Pr(favorable direction|known complement))",
+    "multiplicity": {
+      "families": [
+        "LONDON_STAGE_1",
+        "NEW_YORK_STAGE_1",
+        "LONDON_STAGE_2",
+        "NEW_YORK_STAGE_2"
+      ],
+      "fdr_q": 0.05,
+      "members": "Every support-eligible preregistered test, including negative and contrary results.",
+      "method": "Benjamini-Hochberg",
+      "tie_break": "immutable test_id ascending"
+    },
+    "permutation": {
+      "block": "Within year, permute whole five-weekday outcome vectors among selected_month_week_id clusters; fixed condition rows receive the permuted outcome from the same weekday slot. Missing slots remain UNKNOWN.",
+      "finite_rule": "A replicate without both condition and complement binary outcomes is non-extreme and separately counted; support eligibility makes this exceptional.",
+      "method": "two-sided calendar-year-stratified selected-week outcome-block permutation",
+      "p_value": "(1 + count(abs(permuted_effect) >= abs(observed_effect))) / (100000 + 1)",
+      "replicates": 100000,
+      "seed": "Exact uint64 stored per test in frozen test registry",
+      "statistic": "Absolute favorable-direction percentage-point effect"
+    }
+  },
+  "frozen_at_utc": "2026-08-04T10:54:55.039606Z",
+  "independent_reproduction": {
+    "primary": "NumPy mask/vectorized block-resampling implementation over the primary Step 5C joined file.",
+    "reference": "Separately coded indexed/group-loop implementation over the reference Step 5C joined file using the same frozen random schedules.",
+    "required_exact": [
+      "joined row identities and values",
+      "test IDs and condition/complement classifications",
+      "support counts",
+      "effect estimates",
+      "bootstrap finite counts and percentile bounds",
+      "permutation extreme counts and p-values",
+      "BH q-values",
+      "annual leave-one-year-out and rolling diagnostics",
+      "verdicts rankings and complete-result checksums"
+    ]
+  },
+  "known_and_missing_policy": {
+    "binary_known": "Every constituent is known and the primary outcome is UP or DOWN.",
+    "constituent_known": "state is not an unknown-state exclusion, epistemic_status is not UNKNOWN, quality is neither MISSING nor INVALID, and source_signature is not UNKNOWN",
+    "pairwise_exclusion": true,
+    "repair_backfill_or_relabel": false,
+    "test_known": "Every constituent is known and the primary outcome is UP, DOWN, or FLAT.",
+    "unknown_is_never": [
+      "zero",
+      "flat",
+      "normal",
+      "no-event",
+      "balanced",
+      "confirmation",
+      "complement support"
+    ],
+    "unknown_state_exclusions": [
+      "UNKNOWN",
+      "NEUTRAL_OR_UNKNOWN",
+      "UNKNOWN_WITHOUT_EVENT_AND_REGIME_CORE"
+    ]
+  },
+  "neutral_outcome": {
+    "binary_inference": "UP and DOWN only",
+    "end": "Final complete one-minute bar closing no later than 12:00 local.",
+    "flat_policy": "Retain and report; exclude from binary effects and support; include in known signed-displacement median gate.",
+    "instrument": "IC_MARKETS_MT5_XAUUSD",
+    "reference": "Open of first complete one-minute bar opening exactly 08:01 local.",
+    "secondary_outcomes": "Not loaded into the joined analysis payload and never used for selection, ranking, rescue, or rejection.",
+    "signed_displacement": "final_close minus reference_open in USD per troy ounce",
+    "states": {
+      "DOWN": "signed_displacement < -0.01",
+      "FLAT": "absolute signed_displacement <= 0.01",
+      "UNKNOWN": "missing, incomplete, timestamp-invalid, lineage-invalid, or documented unavailable",
+      "UP": "signed_displacement > +0.01"
+    }
+  },
+  "outcome_source_and_opening": {
+    "independent_extraction": "For each selected row, primary reads neutral_excursions signed close plus sealed net state; reference reads SESSION_CLOSE horizon displacement and recomputes the state. They must match exactly during the one source stream.",
+    "join_reproduction": "Join the single sealed projection independently to primary and reference Step 5C decision files and require byte-identical joined payloads.",
+    "outcome_projection": "Write only key, signed displacement, UP/DOWN/FLAT/UNKNOWN, observation end, and hashed lineage; no secondary outcome is admitted to testing.",
+    "single_open_rule": "Stream the sealed gzip once. Inspect only metadata on unselected rows; deserialize subsequent_behaviour only for the 374 selected available keys.",
+    "source": "sealed V3 development case payload only",
+    "source_file_sha256": "d0f5120713b5f9ce641c6285941bfc23d3aac3b83b561c8fc1138e33a5ede9b9",
+    "source_manifest_hash": "d6aad4b861d98899d6fdcc92ea53a20221434af5038a3bcb86a8b9faa1d8e7b7",
+    "source_partition_end": "2024-12-31"
+  },
+  "predecessor_bindings": {
+    "case_manifest_file": {
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/manifest.json",
+      "sha256": "dddbe125d11afef2094b7843f5521b7bbfcc95178e3fa376b60af8bdd2efc3b5"
+    },
+    "case_manifest_hash": "d6aad4b861d98899d6fdcc92ea53a20221434af5038a3bcb86a8b9faa1d8e7b7",
+    "case_payload_file": {
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/cases.jsonl.gz",
+      "sha256": "d0f5120713b5f9ce641c6285941bfc23d3aac3b83b561c8fc1138e33a5ede9b9"
+    },
+    "contract_file": {
+      "path": "research_manifests/gc_microstructure_conditional_edge_discovery_contract_v01.json",
+      "sha256": "da9048f497c853ef3b1f2a4debe6c80f8c650217004bfe6df05e045751554fcb"
+    },
+    "feature_registry_file": {
+      "path": "research_manifests/gc_microstructure_step_5a_feature_hypothesis_registry_v01.json",
+      "sha256": "4b207a1dec5aa78a904c86cf8c6a14bf0a517dd918f24c5270c254400c865f01"
+    },
+    "step5c_decision_parquet_sha256": "277993e0cd2d5bff2e8f49c6aaf519ac024a1f7ac1ed8bbd0808f5d3213b5d98",
+    "step5c_manifest_file": {
+      "path": "research_artifacts/gc_microstructure_step5c_v01/manifest.json",
+      "sha256": "f7150f861f4883e3f7c100822af527ba497b8343225c24ebe16ffe11107e31fb"
+    },
+    "step5c_manifest_hash": "37ba904c257499a5247696fbae24461c994b765dfbc44b3bbeaa59cb9d58fb75",
+    "step5c_verdict_file": {
+      "path": "research_artifacts/gc_microstructure_step5c_v01/verdict.json",
+      "sha256": "f98702e5260f60fa258a8f5ed43adc944724075bf442f958677fdf8fe3dee2ad"
+    },
+    "step5c_verdict_hash": "d4c632a9fb9b33bb1e4385e0116d082fffcbe14b15385677c0dc55978fb124f6",
+    "test_registry_file_sha256": "e3b7a132f03cebaff4c05cc646e00f0b1867881d0109c65b71f1076e74ab2d4a",
+    "test_registry_hash": "76af433e1a1f50634c90259684e4cb337172abc92e0f65b59aa9537901c075eb",
+    "test_registry_path": "research_manifests/gc_microstructure_step_5d_test_registry_v01.json"
+  },
+  "prohibited": [
+    "adding retuning repairing inverting or selectively filtering a test",
+    "raw feature search or threshold search",
+    "three-way interaction",
+    "opening any 2025 or 2026 value",
+    "using a secondary outcome as a gate",
+    "execution entry exit stop target sizing slippage trade PnL R or return calculation",
+    "acquisition or charge"
+  ],
+  "protocol_hash": "0f2b9aa73efb0b765bbf938f3f107bb73b2d18521b116b2a1ca21d231755d5da",
+  "row_identity_and_join": {
+    "development_date_max": "2024-12-13",
+    "development_date_min": "2021-11-08",
+    "documented_unavailable_rows": [
+      "2022-04-15|LONDON",
+      "2022-04-15|NEW_YORK"
+    ],
+    "duplicate_or_unexpected_missing_key": "FORMAL_INTEGRITY_FAILURE_AND_NO_TESTING",
+    "engineering_dates_excluded_permanently": [
+      "2024-01-05",
+      "2024-01-09",
+      "2024-01-11",
+      "2024-01-30",
+      "2024-01-31",
+      "2024-03-20"
+    ],
+    "feature_rows": 376,
+    "join_cardinality": "ONE_TO_ONE_FOR_374_AVAILABLE_ROWS_PLUS_EXACTLY_TWO_DOCUMENTED_UNKNOWN_ROWS",
+    "secondary_identity_checks": [
+      "decision_at_utc",
+      "row_id"
+    ],
+    "selected_month_week_id_source": "sealed Step 5C row registry",
+    "session_rows": {
+      "LONDON": 188,
+      "NEW_YORK": 188
+    },
+    "unique_key": [
+      "session_date",
+      "session_code"
+    ]
+  },
+  "stability": {
+    "annual": {
+      "blocks": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "gate": "At least three supported annual blocks have effect >0; no supported annual effect is <= -10 percentage points.",
+      "supported": "At least the stage-specific per-year condition floor (5 standalone; 4 interaction) and at least one complement binary row."
+    },
+    "leave_one_year_out": "For each of four omitted years, require condition and complement binary support >0 and effect >0.",
+    "median_signed_displacement": "Median across every condition row with a known signed displacement, including FLAT; must be >0 for UP and <0 for DOWN.",
+    "rolling": {
+      "evaluable": "At least one condition and one complement binary row",
+      "expected_windows": 27,
+      "minimum_evaluable_windows": 10,
+      "minimum_positive_fraction": 0.7,
+      "window": "12 consecutive selected monthly weeks advanced one selected month at a time"
+    }
+  },
+  "stage_order": {
+    "optional_stopping": false,
+    "stage_1": "Run and independently reproduce the complete Stage-1 family, apply BH, write and seal the complete table.",
+    "stage_2": "Run only the 124 registered two-condition tests and independently reproduce the complete family.",
+    "stage_2_gate": "Stage 2 may begin only after the Stage-1 manifest and verdict verify."
+  },
+  "status": "FROZEN_BEFORE_DEVELOPMENT_OUTCOME_ACCESS",
+  "support_gates": {
+    "coverage_denominator": "All 188 frozen rows in the applicable session, including the documented unavailable row.",
+    "interaction": {
+      "calendar_years_with_at_least_condition_rows": {
+        "minimum_years": 3,
+        "rows_per_year": 4
+      },
+      "complement_binary_rows_min": 100,
+      "complement_distinct_weeks_min": 24,
+      "condition_binary_rows_min": 30,
+      "condition_distinct_weeks_min": 10
+    },
+    "interaction_constituent_coverage": "Each constituent field separately must meet 0.70.",
+    "known_coverage_minimum_fraction": 0.7,
+    "standalone": {
+      "calendar_years_with_at_least_condition_rows": {
+        "minimum_years": 3,
+        "rows_per_year": 5
+      },
+      "complement_binary_rows_min": 80,
+      "complement_distinct_weeks_min": 20,
+      "condition_binary_rows_min": 40,
+      "condition_distinct_weeks_min": 12
+    },
+    "support_failure": "SUPPORT_FAIL; descriptive counts only; no p-value, q-value, candidate, or advancement credit.",
+    "test_known_coverage": "Joint constituent-known plus primary-outcome-known fraction must meet 0.70."
+  },
+  "version": "GC_MICROSTRUCTURE_STEP_5D_PROTOCOL_V0_1"
+}

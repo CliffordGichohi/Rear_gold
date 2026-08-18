@@ -1,0 +1,74 @@
+{
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "implementation": {
+    "bytes": 10104,
+    "path": "tools/run_gold_point_in_time_auction_state_v1_gc_incremental_r3.py",
+    "sha256": "e8c2ea3536dfedd6019d7606f25eb0d7d54c2c750ace620d105582753188f7d1"
+  },
+  "paid_acquisition_usd": 0.0,
+  "preserved": {
+    "amendment_a": {
+      "bytes": 3412,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental_amendment_a.json",
+      "sha256": "2c5dc157c35bb9c49c1a684117b5d3478bd30b01a3364293674c8c7e62e95d2a"
+    },
+    "amendment_b": {
+      "bytes": 2731,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental_amendment_b.json",
+      "sha256": "e40c6dfab952e04aad6308b36f1be06db59e6f59aa09a88fb2a61bde167cf24d"
+    },
+    "attempt_1_failure": {
+      "bytes": 1532,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental/attempt_1_failure.json",
+      "sha256": "b5e67118cdf249158a9dbd998ba82a23b09a4ac0abbfe14c7aea49f8aeaa71d2"
+    },
+    "attempt_2_failure": {
+      "bytes": 1347,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental_r1/attempt_2_failure.json",
+      "sha256": "1ba2e11f0fe653d563a17be959f6f2f7e0b01853998a076b3acf342a2684d56e"
+    },
+    "attempt_3_interruption": {
+      "bytes": 965,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental_r2/attempt_3_interruption.json",
+      "sha256": "5919f9b1a6616b870ab831cc4fc2da1dbb887e215ec792ba532eb30db6722b0b"
+    },
+    "base_development_verdict": "REJECT_NO_DEVELOPMENT_ECONOMIC_EDGE",
+    "primary_gc_features": {
+      "bytes": 8065972,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental/primary_gc_checkpoint_features.parquet",
+      "sha256": "eae9e88b893b319f3446691c455f02a280696b499aee6f2cb8e99834a99417cb"
+    },
+    "reference_gc_features": {
+      "bytes": 8065972,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental/reference_gc_checkpoint_features.parquet",
+      "sha256": "eae9e88b893b319f3446691c455f02a280696b499aee6f2cb8e99834a99417cb"
+    }
+  },
+  "sealed_at_utc": "2026-08-11T11:06:00.791003Z",
+  "single_correction": {
+    "new": "EXECUTE PRIMARY_AND_REFERENCE_IN_SEPARATE BOUNDED COMMANDS;PERSIST COMPLETE EVALUATION INCLUDING TRADE ROWS AFTER EACH;FINALIZE IN_A_THIRD_COMMAND",
+    "old": "PRIMARY_AND_REFERENCE_PASSES_EXECUTED_IN_ONE_LONG_HOST_COMMAND;INTERMEDIATE PRIMARY SERIALIZATION OMITTED TRADE ROWS",
+    "scope": "EXECUTION_CHECKPOINTING_AND_SERIALIZATION_COMPLETENESS_ONLY"
+  },
+  "status": "FROZEN_EXECUTION_CHECKPOINTING_ONLY_CORRECTION",
+  "unchanged": [
+    "FEATURES",
+    "OUTCOMES",
+    "TRANSFORMERS",
+    "BASE_COEFFICIENTS",
+    "MODELS",
+    "FOLDS",
+    "SEEDS",
+    "SUPPORT",
+    "POLICIES",
+    "MULTIPLICITY",
+    "ECONOMIC_GATES",
+    "EXECUTION",
+    "COSTS",
+    "RISK",
+    "REPRODUCTION_EQUALITY_RULE",
+    "NO_STANDALONE_CREDIT"
+  ],
+  "version": "GOLD_PIT_AUCTION_STATE_V1_GC_INCREMENTAL_AMENDMENT_C_1_0"
+}

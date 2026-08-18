@@ -1,0 +1,112 @@
+{
+  "version": "GOLD_PIT_AUCTION_STATE_V1_FEATURE_DEFINITION_FREEZE_1_0",
+  "status": "FROZEN_BEFORE_CHECKPOINT_MARKET_VALUES_OR_OUTCOMES",
+  "identity": {
+    "population_rows": 8653,
+    "checkpoint_rows": 2095849,
+    "checkpoint_identity_hash": "7810c672637655ebfbca5bf9f73a0f3b8e74029087f2f24ed4b33e831eeb5559",
+    "available_cases": 8650,
+    "unavailable_cases_retained": 3
+  },
+  "timestamp_policy": {
+    "checkpoint_bar": "COMPLETE_SIGNAL_BAR_WITH_CLOSE_AT_CHECKPOINT_AND_AVAILABLE_AT_OR_BEFORE_CHECKPOINT",
+    "checkpoint_intervals": "HALF_OPEN",
+    "fill_bar": "EXACT_M1_BAR_WITH_OPEN_AT_CHECKPOINT_TIMESTAMP",
+    "fill_value_is_not_a_PREDICTOR": true,
+    "contiguity": "EVERY_EXPECTED_SIGNAL_BAR_FROM_PRIOR_CHECKPOINT_OR_SETUP_START_THROUGH_CURRENT_CHECKPOINT",
+    "gap_disposition": "CHECKPOINT_UNAVAILABLE_TECHNICAL",
+    "training_checkpoint_selection": "IF_N_LE_32_USE_ALL;ELSE_INDICES_FLOOR(I_TIMES_N_MINUS_1_DIVIDED_BY_31_PLUS_0P5)_FOR_I_0_TO_31",
+    "unavailable_rows_retained": true
+  },
+  "static_setup_mapping": {
+    "setup_retracement_depth_atr": "retracement_depth_atr",
+    "setup_compression_ratio": "compression_ratio",
+    "setup_pullback_efficiency": "pullback_efficiency",
+    "setup_impulse_efficiency": "impulse_efficiency",
+    "setup_impulse_extension_atr": "impulse_extension_atr",
+    "setup_trend_age_log1p": "log1p(max(0,trend_age_bars))",
+    "setup_prior_continuations_log1p": "log1p(max(0,prior_continuation_count))",
+    "setup_pivot_rejection_wick": "pivot_rejection_wick_fraction",
+    "setup_confirmation_range_atr": "confirmation_range_atr",
+    "setup_confirmation_body_fraction": "confirmation_body_fraction",
+    "setup_confirmation_close_location": "confirmation_close_location_trend",
+    "setup_response_displacement_atr": "response_displacement_atr",
+    "setup_response_efficiency": "response_efficiency",
+    "setup_confirmation_volume_ratio": "confirmation_volume_ratio_20"
+  },
+  "dynamic_macro": {
+    "selection": "LATEST_AVAILABLE_AT_LE_CHECKPOINT_THEN_RECORD_ID",
+    "fundamental_max_age_hours": 96,
+    "fundamental_score_aligned": "DIRECTION_SIGN_TIMES_DIRECTIONAL_SCORE",
+    "fundamental_confidence_01": "CONFIDENCE_DIVIDED_BY_100_IF_ABOVE_1_ELSE_AS_IS",
+    "fundamental_coverage_01": "COVERAGE_DIVIDED_BY_100_IF_ABOVE_1_ELSE_AS_IS",
+    "component_contribution_aligned": "DIRECTION_SIGN_TIMES_COMPONENT_CONTRIBUTION",
+    "alignment_state": "ALIGNED_IF_SCORE_GE_20_AND_COVERAGE_GE_50_AND_CONFIDENCE_GE_35;OPPOSED_IF_SCORE_LE_NEG20_WITH_SAME_QUALITY;ELSE_NEUTRAL_OR_WEAK",
+    "cot_max_age_days": 14,
+    "cot_percentile_01": "PERCENTILE_DIVIDED_BY_100_IF_ABOVE_1_ELSE_AS_IS",
+    "cot_net_change_aligned_signed_log": "SIGN(DIRECTION_SIGN_TIMES_NET_CHANGE)_TIMES_LOG1P(ABS(DIRECTION_SIGN_TIMES_NET_CHANGE))"
+  },
+  "dynamic_price_path": {
+    "normalizer": "SETUP_ATR14_E8_FROZEN_AT_KNOWN_AT",
+    "elapsed_fraction": "MINUTES_FROM_KNOWN_AT_TO_CHECKPOINT_DIVIDED_BY_MINUTES_FROM_KNOWN_AT_TO_DEADLINE",
+    "time_remaining_fraction": "ONE_MINUS_ELAPSED_FRACTION",
+    "current_displacement_atr": "DIRECTION_SIGN_TIMES_CURRENT_CLOSE_MINUS_SETUP_KNOWN_CLOSE_DIVIDED_BY_SETUP_ATR",
+    "pivot_distance_atr": "DIRECTION_SIGN_TIMES_CURRENT_CLOSE_MINUS_SETUP_PIVOT_DIVIDED_BY_SETUP_ATR",
+    "reference_distance_atr": "DIRECTION_SIGN_TIMES_CURRENT_CLOSE_MINUS_REFERENCE_LEVEL_DIVIDED_BY_SETUP_ATR",
+    "running_favourable_atr": "MAX_ALIGNED_INTRABAR_EXCURSION_FROM_SETUP_KNOWN_CLOSE_THROUGH_CURRENT_CHECKPOINT_DIVIDED_BY_SETUP_ATR",
+    "running_adverse_atr": "MAX_OPPOSED_INTRABAR_EXCURSION_FROM_SETUP_KNOWN_CLOSE_THROUGH_CURRENT_CHECKPOINT_DIVIDED_BY_SETUP_ATR",
+    "recent_3_displacement_atr": "DIRECTION_SIGN_TIMES_CURRENT_CLOSE_MINUS_CLOSE_THREE_SIGNAL_BARS_BACK_DIVIDED_BY_SETUP_ATR",
+    "recent_5_efficiency": "ABS_NET_CLOSE_CHANGE_OVER_LAST_FIVE_SIGNAL_BAR_TRANSITIONS_DIVIDED_BY_SUM_ABSOLUTE_CLOSE_CHANGES_WITH_DIRECTIONAL_SIGN_APPLIED_TO_NET",
+    "current_range_atr": "CURRENT_HIGH_MINUS_CURRENT_LOW_DIVIDED_BY_SETUP_ATR",
+    "current_body_fraction": "ABS_CURRENT_CLOSE_MINUS_CURRENT_OPEN_DIVIDED_BY_CURRENT_RANGE",
+    "current_close_location": "DIRECTION_ALIGNED_CLOSE_LOCATION_WITHIN_CURRENT_RANGE",
+    "current_rejection_wick": "DIRECTION_ALIGNED_REJECTION_WICK_FRACTION",
+    "volume_ratio_20": "CURRENT_VOLUME_DIVIDED_BY_MEDIAN_OF_PREVIOUS_20_AVAILABLE_SIGNAL_BAR_VOLUMES",
+    "spread_atr": "CURRENT_SIGNAL_BAR_SPREAD_PRICE_DIVIDED_BY_SETUP_ATR_PRICE",
+    "rolling_volatility_ratio": "SAMPLE_STD_OF_LAST_20_CLOSE_LOG_RETURNS_DIVIDED_BY_SAMPLE_STD_OF_LAST_100_CLOSE_LOG_RETURNS;MINIMUM_10_AND_50_RETURNS"
+  },
+  "auction_states": {
+    "prior_local_range": "HIGH_AND_LOW_OF_FIVE_SIGNAL_BARS_ENDING_TWO_BARS_BEFORE_CURRENT;MINIMUM_FIVE_BARS",
+    "acceptance_state": "PLUS1_IF_CURRENT_AND_PREVIOUS_CLOSE_EXCEED_PRIOR_RANGE_TREND_SIDE_BY_0P05_ATR;MINUS1_IF_BOTH_EXCEED_ADVERSE_SIDE_BY_0P05_ATR;ELSE_ZERO",
+    "sweep_reclaim_state": "PLUS1_IF_CURRENT_BAR_SWEEPS_PRIOR_RANGE_ADVERSE_SIDE_BY_0P05_ATR_AND_CLOSES_BACK_INSIDE;MINUS1_FOR_TREND_SIDE_SWEEP_AND_ADVERSE_RECLAIM;ELSE_ZERO",
+    "local_structure_score": "PLUS1_IF_CURRENT_CLOSE_BREAKS_LATEST_KNOWN_TREND_SIDE_2_LEFT_2_RIGHT_FRACTAL;MINUS1_IF_IT_BREAKS_LATEST_KNOWN_ADVERSE_FRACTAL;ELSE_ZERO",
+    "h1_relative_state": "ALIGNED_OPPOSED_OR_UNKNOWN_FROM_LATEST_STANDARD_H1_STRUCTURE_EVENT_AVAILABLE_AT_CHECKPOINT",
+    "h4_relative_state": "ALIGNED_OPPOSED_OR_UNKNOWN_FROM_LATEST_STANDARD_H4_STRUCTURE_EVENT_AVAILABLE_AT_CHECKPOINT",
+    "higher_timeframe_alignment_fraction": "ALIGNED_COUNT_DIVIDED_BY_KNOWN_COUNT_ACROSS_APPLICABLE_H1_H4_DAILY3_AND_WEEKLY2_STATES"
+  },
+  "geometry": {
+    "base_stop": "UP_PIVOT_MINUS_0P15_SETUP_ATR;DOWN_PIVOT_PLUS_0P15_SETUP_ATR",
+    "fractal": "TWO_COMPLETE_SIGNAL_BARS_LEFT_AND_RIGHT;LOW_REQUIRES_STRICTLY_BELOW_BOTH_LEFT_AND_LE_BOTH_RIGHT;HIGH_REQUIRES_STRICTLY_ABOVE_BOTH_LEFT_AND_GE_BOTH_RIGHT;KNOWN_AT_SECOND_RIGHT_BAR_CLOSE",
+    "fractal_stop": "UP_LATEST_KNOWN_FRACTAL_LOW_MINUS_0P10_ATR;DOWN_LATEST_KNOWN_FRACTAL_HIGH_PLUS_0P10_ATR",
+    "tightening": "UP_MAX_BASE_AND_VALID_FRACTAL_STOP;DOWN_MIN_BASE_AND_VALID_FRACTAL_STOP;STOP_MUST_REMAIN_ADVERSE_TO_DECISION_CLOSE",
+    "target": "NEAREST_PRICE_DISTANCE_KNOWN_UNBROKEN_TREND_SIDE_STANDARD_SWING_IN_SETUP_TIMEFRAME;TIES_BY_KNOWN_AT_THEN_SWING_ID",
+    "broken_clock": "EARLIEST_STRUCTURE_EVENT_LISTING_SWING_ID",
+    "liquidity_target_r": "TREND_ALIGNED_TARGET_DISTANCE_FROM_DECISION_CLOSE_DIVIDED_BY_ADVERSE_STOP_DISTANCE_FROM_DECISION_CLOSE",
+    "minimum_target_r": 1.0,
+    "actual_executability": "RECALCULATED_FROM_NEXT_OPEN_ONLY_AFTER_OUTCOME_JOIN"
+  },
+  "session": {
+    "timezone_rules": "IANA_DST",
+    "states": ["ASIA", "LONDON", "LONDON_NEW_YORK_OVERLAP", "NEW_YORK", "ROLLOVER", "OTHER"],
+    "asia": "10:00_TO_16:00_ASIA_TOKYO",
+    "london": "08:00_TO_12:00_EUROPE_LONDON",
+    "new_york": "08:00_TO_12:00_AMERICA_NEW_YORK",
+    "rollover": "16:55_TO_17:10_AMERICA_NEW_YORK",
+    "precedence": ["ROLLOVER", "LONDON_NEW_YORK_OVERLAP", "LONDON", "NEW_YORK", "ASIA", "OTHER"]
+  },
+  "lineage": {
+    "row_identity": "SHA256_PULLBACK_ID_CHECKPOINT_AT",
+    "feature_lineage": "SHA256_SOURCE_HASHES_STATIC_FEATURE_HASH_PRICE_INDEX_RANGE_MACRO_RECORD_COT_RECORD_STRUCTURE_EVENT_SWING_AND_DEFINITION_FREEZE",
+    "forbidden_fields": ["resolution", "archetype", "assignment_reason", "future_mfe", "future_mae", "future_extrema", "future_direction", "outcome_class", "target_result", "stop_result", "terminal_net_r"]
+  },
+  "reproduction": {
+    "primary_lookup": "NUMPY_SEARCHSORTED_AND_INDEXED_RANGES",
+    "reference_lookup": "BISECT_AND_ITERATIVE_RANGES",
+    "processing": "SEQUENTIAL_IMPLEMENTATIONS_BOUNDED_PARQUET_ROW_GROUPS",
+    "required": ["IDENTICAL_ROW_IDENTITIES", "IDENTICAL_SCHEMAS", "IDENTICAL_NULL_CLASSIFICATIONS", "IDENTICAL_PER_COLUMN_CHECKSUMS", "IDENTICAL_COMPLETE_ROW_CHECKSUM", "BYTE_IDENTICAL_PARQUET"]
+  },
+  "outcomes_accessed": false,
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "paid_acquisition_usd": 0.0
+}

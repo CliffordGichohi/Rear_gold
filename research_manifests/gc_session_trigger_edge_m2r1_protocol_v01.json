@@ -1,0 +1,267 @@
+{
+  "allowed_fields": {
+    "feature": [
+      "bucket_index",
+      "bucket_start_ns",
+      "bucket_end_ns",
+      "market_segment",
+      "market_state",
+      "state_source_row_ordinal",
+      "state_ts_recv_ns",
+      "state_available",
+      "book_two_sided",
+      "book_locked",
+      "book_crossed"
+    ],
+    "mbo": [
+      "source_row_ordinal",
+      "ts_recv",
+      "ts_event",
+      "publisher_id",
+      "instrument_id",
+      "sequence",
+      "action",
+      "side",
+      "flags"
+    ],
+    "mbp10": [
+      "source_row_ordinal",
+      "ts_recv",
+      "ts_event",
+      "publisher_id",
+      "instrument_id",
+      "sequence",
+      "action",
+      "side",
+      "flags",
+      "level_00_fields_for_automated_state_classification_only"
+    ],
+    "prohibited_output": [
+      "OHLC",
+      "price or quote values",
+      "depth sizes or counts",
+      "spread",
+      "order-flow values",
+      "directional outcomes",
+      "returns",
+      "signals",
+      "execution",
+      "trades",
+      "PnL",
+      "R multiples",
+      "account returns"
+    ],
+    "xau": [
+      "record_type",
+      "record_id",
+      "record_hash",
+      "provider_code",
+      "instrument_code",
+      "timeframe",
+      "open_time",
+      "close_time",
+      "available_at",
+      "ingested_at",
+      "complete",
+      "epistemic_status"
+    ]
+  },
+  "authorization_sha256": "e27b708b08aefbea6764b82f913b93f6806ac1ca70732ee2778f63bf45cdf7f8",
+  "classification": "METADATA_ONLY_COVERAGE_AND_FEATURE_INTEGRITY_DIAGNOSTIC",
+  "classification_rules": {
+    "classes": [
+      "DOCUMENTED_VALID_SEMANTICS",
+      "RECOVERABLE_EXISTING_SOURCE",
+      "RECOVERABLE_TARGETED_REFRESH",
+      "GENUINE_SOURCE_OR_STATE_FAILURE",
+      "UNRESOLVED"
+    ],
+    "crossed": {
+      "DOCUMENTED_VALID_SEMANTICS": "The selected crossed row is a non-snapshot, non-F_LAST partial native-event emission; the unique later terminal F_LAST is after the bucket close and is two-sided uncrossed.",
+      "GENUINE_SOURCE_OR_STATE_FAILURE": "The selected row is a crossed completed F_LAST, the unique completed boundary remains crossed or one-sided, or a later eligible row other than the unique two-sided-uncrossed terminal boundary makes the selected state non-latest before bucket close.",
+      "RECOVERABLE_EXISTING_SOURCE": "A unique two-sided uncrossed terminal F_LAST was already available strictly before the bucket close but the feature state selected an earlier crossed row.",
+      "RECOVERABLE_TARGETED_REFRESH": "Not applicable to crossed-state findings.",
+      "UNRESOLVED": "The state row cannot be mapped uniquely, the group is noncontiguous or lacks one terminal F_LAST, source metadata conflicts, or independent implementations disagree."
+    },
+    "crossed_precedence": [
+      "UNRESOLVED",
+      "GENUINE_SOURCE_OR_STATE_FAILURE",
+      "RECOVERABLE_EXISTING_SOURCE",
+      "DOCUMENTED_VALID_SEMANTICS"
+    ],
+    "xau": {
+      "DOCUMENTED_VALID_SEMANTICS": "A pre-existing sealed market-calendar disposition marks the timestamp unavailable.",
+      "GENUINE_SOURCE_OR_STATE_FAILURE": "A conflicting duplicate, malformed exact emission, order failure, or lineage failure is present.",
+      "RECOVERABLE_EXISTING_SOURCE": "Exactly one structurally valid qualifying emission exists in the sealed source but the Milestone 2 coverage selector omitted it.",
+      "RECOVERABLE_TARGETED_REFRESH": "No qualifying emission exists, the session is sealed EXPECTED_AVAILABLE, DST agrees, adjacent sealed emissions establish local coverage, and no corruption declaration exists.",
+      "UNRESOLVED": "DST/calendar conflict, absent flanking coverage, parser disagreement, or insufficient metadata prevents another class."
+    },
+    "xau_precedence": [
+      "UNRESOLVED",
+      "GENUINE_SOURCE_OR_STATE_FAILURE",
+      "DOCUMENTED_VALID_SEMANTICS",
+      "RECOVERABLE_EXISTING_SOURCE",
+      "RECOVERABLE_TARGETED_REFRESH"
+    ]
+  },
+  "completion_policy": "Classify all 18 findings, recommend no more than one bounded future correction, independently reproduce, document, seal, and stop without implementation or research.",
+  "constants": {
+    "bucket_width_ns": 1000000000,
+    "expected_available_sessions": 374,
+    "flag_bad_ts_recv": 8,
+    "flag_last": 128,
+    "flag_maybe_bad_book": 4,
+    "flag_snapshot": 32,
+    "undefined_price_fixed_1e9": 9223372036854775807,
+    "xau_minutes_per_available_session": 300
+  },
+  "crossed_state_tests": {
+    "native_event_group": {
+      "completion": "Exactly one F_LAST row and it is the terminal source-order row of the group.",
+      "key": [
+        "publisher_id",
+        "instrument_id",
+        "sequence"
+      ],
+      "order": "ts_recv then source_row_ordinal; group rows must be contiguous in normalized source order.",
+      "tests": [
+        "selected one-based group position and group row count",
+        "snapshot and reset membership",
+        "F_LAST count and terminal-after-selected boolean",
+        "terminal state classified only as TWO_SIDED_UNCROSSED, CROSSED, or ONE_SIDED",
+        "terminal timing before, at, or after the bucket close",
+        "completion in the same one-second bucket",
+        "whether crossing persists at the completed F_LAST boundary",
+        "same-K3 MBO metadata group presence, contiguity, action/side/flags, and F_LAST structure as non-selector corroboration"
+      ]
+    },
+    "no_value_selector": "Book fields may calculate only two-sided/crossed/uncrossed class after the state row is selected by frozen metadata. They may never choose a row, group, boundary, or repair.",
+    "population": "Exactly the 15 primary feature rows with CONTINUOUS_MATCHING and book_crossed true; the reference feature file must identify the same hashed rows.",
+    "state_row": [
+      "map state_source_row_ordinal and state_ts_recv_ns exactly to one MBP-10 source row",
+      "verify the mapped row is two-sided crossed without emitting any book field",
+      "record action, side, snapshot/reset, flags, sequence, F_LAST, and hashed identity",
+      "verify the selected row is the latest source-order MBP-10 row with ts_recv strictly before bucket end"
+    ]
+  },
+  "formal_gates": {
+    "at_most_one_recommendation": true,
+    "every_finding_classified_once": true,
+    "exact_fifteen_crossed_bucket_findings": true,
+    "exact_three_xau_findings": true,
+    "no_2025_or_2026_access": true,
+    "no_market_or_feature_values_reported": true,
+    "no_outcome_relationship_candidate_execution_or_performance_work": true,
+    "no_repair_refresh_filter_relabel_reacquisition_or_recalculation": true,
+    "predecessor_and_source_seals_valid": true,
+    "primary_reference_exact_reproduction": true,
+    "zero_charge": true
+  },
+  "frozen_at_utc": "2026-08-05T06:51:05.525581Z",
+  "independent_reproduction": {
+    "any_difference": "FAIL_DIAGNOSTIC_REPRODUCTION",
+    "primary": "Regex-only XAU scalar projection; sequential Parquet row-group feature scan; Arrow dataset range extraction and sequential native-group classification.",
+    "reference": "Manual top-level JSON scalar scanner that skips nested values; dataset-filtered feature scan; Parquet row-group-statistics range extraction and dictionary native-group classification.",
+    "required_exact": [
+      "three XAU finding identities and all metadata classifications",
+      "fifteen crossed bucket identities and all event-group classifications",
+      "MBO corroboration counts and hashes",
+      "source ordering, duplicate, lineage, DST, and calendar diagnostics",
+      "classification counts, recommendation, and complete-result checksum"
+    ]
+  },
+  "predecessor_bindings": {
+    "base_engine": {
+      "path": "tools/build_gc_microstructure_features_step4a.py",
+      "sha256": "c5589914a1acae6a3a1e9079c302821477866bba3741317392c567bb590c2369"
+    },
+    "m2_engine": {
+      "path": "tools/materialize_gc_session_trigger_edge_m2.py",
+      "sha256": "acc7af0c5196cc943ad129560f736b31fda03727979fe43b58a7bcf0188d5479"
+    },
+    "m2_final_seal": {
+      "path": "research_artifacts/gc_session_trigger_edge_m2_v01/final_seal.json",
+      "sha256": "c6b86602eceb927db71f56e35bce3bd8778f350f7853429cebbbf281d94c7e85"
+    },
+    "m2_freeze": {
+      "path": "research_manifests/gc_session_trigger_edge_m2_freeze_v01.json",
+      "sha256": "0705d12b25fb79ef5a74ea2ce1842d60265cf45deca177be9f904c0db47c0037"
+    },
+    "m2_manifest": {
+      "path": "research_artifacts/gc_session_trigger_edge_m2_v01/manifest.json",
+      "sha256": "adffdc302f103c8eac307d30193ee06f83e5dafd2fa0e597c9601dbf78a67760"
+    },
+    "m2_protocol": {
+      "path": "research_manifests/gc_session_trigger_edge_m2_protocol_v01.json",
+      "sha256": "d4490ac0311e0a6a6b40595b6c97ee7e8eba357db14f11ccdbbb0c5b32c8d509"
+    },
+    "m2_row_registry": {
+      "path": "research_manifests/gc_session_trigger_edge_m2_row_registry_v01.json",
+      "sha256": "a7a36ae82d92ce91a25e36fcb7f1c95807de67c996d01198648246daa345dc5d"
+    },
+    "m2_technical_diagnostics": {
+      "path": "research_artifacts/gc_session_trigger_edge_m2_v01/technical_diagnostics.json",
+      "sha256": "d08bf542afd77e09c44830d0a198300513dfeeb74cb94d8b0605e03fd04c223a"
+    },
+    "m2_verdict": {
+      "path": "research_artifacts/gc_session_trigger_edge_m2_v01/verdict.json",
+      "sha256": "03b1bbae4f56caa9b1586ec381805040d24f8e0764da40ad3a3ceaeb8dc85267"
+    },
+    "step5c_engine": {
+      "path": "tools/materialize_gc_microstructure_step5c.py",
+      "sha256": "81e2aa4c620aa2bf4e151c727af6827d7743a4e8e452a85d3f78dc1ac7188e92"
+    }
+  },
+  "prohibited": [
+    "modifying any Milestone 2 or predecessor artifact",
+    "repairing, refreshing, filtering, relabeling, substituting, or reacquiring data",
+    "rerunning or changing feature materialization",
+    "using book equality or market values as a selector",
+    "reporting OHLC, price, depth, order-flow, feature, or outcome values",
+    "opening development outcomes or any 2025/2026 row or value",
+    "relationships, hit rates, effects, candidates, signals, ranking, execution, trades, PnL, R multiples, or returns"
+  ],
+  "protocol_receipt": "30b87e663700b2036c1ca22db2acec5c452ae00ace4083b60eccf634c25f09b1",
+  "recommendation_rule": {
+    "blocked": "If any finding is GENUINE_SOURCE_OR_STATE_FAILURE or UNRESOLVED, recommend NONE pending a separately authorized source/state resolution.",
+    "bounded": {
+      "condition": "Every XAU finding is documented, recoverable from existing source, or recoverable by targeted refresh; every crossed finding is documented valid semantics or recoverable from existing source.",
+      "recommendation_id": "TARGETED_XAU_REFRESH_AND_COMPLETED_MBP_STATE_RECERTIFICATION_V0_1",
+      "text": "In one future separately authorized amendment only: recover exactly the classified deficient XAU timestamps by the diagnosed source path, and construct authoritative MBP bucket-close state only from a valid snapshot baseline or unique terminal F_LAST native-event boundary. Preserve every other Milestone 2 definition and rerun full independent certification."
+    },
+    "implementation_in_r1": false,
+    "maximum": 1
+  },
+  "scope": {
+    "all_prior_artifacts_immutable": true,
+    "calendar_2025": "LOCKED_NO_ROW_OR_VALUE_ACCESS",
+    "calendar_2026": "LOCKED_NO_ROW_OR_VALUE_ACCESS",
+    "development_end": "2024-12-13",
+    "development_start": "2021-11-08",
+    "expected_crossed_bucket_close_findings": 15,
+    "expected_xau_findings": 3,
+    "source_policy": "Only sources and technical outputs already sealed by Milestone 2."
+  },
+  "status": "FROZEN_BEFORE_ROW_LEVEL_METADATA_ACCESS",
+  "status_precedence": [
+    "FAIL_PREDECESSOR_OR_SOURCE_INTEGRITY",
+    "FAIL_DIAGNOSTIC_INTEGRITY",
+    "FAIL_DIAGNOSTIC_REPRODUCTION",
+    "PASS_DIAGNOSTIC_REPRODUCTION"
+  ],
+  "version": "GC_SESSION_TRIGGER_EDGE_M2_R1_PROTOCOL_V1_0",
+  "xau_timestamp_tests": {
+    "calendar": "Use only the sealed row-registry availability disposition and weekday/IANA metadata; absence of a sealed closure is not proof that an emission existed.",
+    "coverage": [
+      "qualifying XAUUSD one-minute emission count at the exact timestamp",
+      "any nonqualifying source emission at the exact timestamp",
+      "immediate qualifying predecessor and successor presence",
+      "duplicate qualifying timestamp count",
+      "source-order monotonicity",
+      "complete, close-time, available-at, identity, and hash structure for any exact emission",
+      "whole-source hash and sealed lineage binding"
+    ],
+    "dst": "Recompute 08:00 local with IANA Europe/London or America/New_York and require exact equality to the sealed UTC session open.",
+    "population": "Expected 300 one-minute opens from each available session open through session open plus five hours, minus the frozen 57 documented gaps; identify exactly the remaining three absences."
+  }
+}

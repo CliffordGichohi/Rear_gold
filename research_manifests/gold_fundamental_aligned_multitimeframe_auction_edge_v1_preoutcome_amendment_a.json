@@ -1,0 +1,28 @@
+{
+  "version": "GOLD_FAMAE_V1_PREOUTCOME_AMENDMENT_A_1_0",
+  "status": "SEALED_BEFORE_ANY_NEW_BRANCH_OUTCOME_ACCESS",
+  "reason": "The first outcome-blind certification treated the casebook aggregate component-completeness flag as if it meant a still-forming candle. That excluded closed H1/H4/D1 periods containing normal no-tick minutes and contradicted the frozen full-history and M1-aggregation traceability rules.",
+  "preserved_artifacts": {
+    "first_materialization_certification_sha256": "9325b75aa3f3558e84525f3e33ff5369edc4136f06efefb963bd1b4f2f84c049",
+    "first_primary_signals_sha256": "a6e5be37b1bf2cc3be733d4976b848416ff6ba4cb97dcadfa991cfd2092792ea",
+    "first_verdict": "PASS_OUTCOME_BLIND_MATERIALIZATION_BUT_SUPERSEDED_FOR_SOURCE_SEMANTICS",
+    "research_credit": false
+  },
+  "single_change": {
+    "old_rule": "Use only casebook H1/H4/D1 aggregates with complete=true.",
+    "new_rule": "Use every closed casebook H1/H4/D1 aggregate derived from the sealed M1 source when available_at is not later than close_time. The complete flag is retained as a source-quality diagnostic; false means the closed interval contains fewer than every possible wall-clock M1 component, not that the candle was available before its close.",
+    "weekly_rule": "Aggregate the amended closed daily sequence by ISO close week exactly as already frozen; require at least four observed closed daily periods.",
+    "decision_rule_unchanged": "Only bars with close_time at or before the decision timestamp may enter a state or level.",
+    "all_market_rules_unchanged": true
+  },
+  "prohibitions": [
+    "outcome access before amended recertification",
+    "feature or threshold retuning",
+    "selective date removal",
+    "forward-value access",
+    "paid acquisition"
+  ],
+  "new_branch_outcomes_accessed": false,
+  "forward_values_accessed": false,
+  "paid_acquisition_usd": 0.0
+}

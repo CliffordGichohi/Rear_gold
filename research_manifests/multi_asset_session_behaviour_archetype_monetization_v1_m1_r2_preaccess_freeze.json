@@ -1,0 +1,53 @@
+{
+  "controls": {
+    "2025": false,
+    "2026": false,
+    "charge_usd": 0.0,
+    "market_values": false,
+    "outcomes": false
+  },
+  "coverage_amendment_a": {
+    "bytes": 1287,
+    "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_coverage_amendment_a.json",
+    "sha256": "9e73236df30834584009f3780bee7e10488beeb178bed5b4319c41defecb1055"
+  },
+  "freeze_hash": "8d19a927b697d3d8f14145a8b3c1742b0716013d3eb1625ae4fba115b0296701",
+  "identities": {
+    "bytes": 7352763,
+    "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1/session_identity_registry.json",
+    "sha256": "6a87dd55531371038db9d57824285549bf41f4a67d6c14d0db617ed5d595c796"
+  },
+  "implementation": {
+    "bytes": 16880,
+    "path": "tools/run_multi_asset_session_behaviour_archetype_monetization_v1_m1_r2.py",
+    "sha256": "6c73700dee379125c5a3d18ad900261ef7dc0535fd61ec14919b5892164b9af8"
+  },
+  "r1_outer_seal": {
+    "bytes": 1411,
+    "path": "research_manifests/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1_amendment_a_seal.json",
+    "sha256": "a8848dbf9cf4c324f438a4808e79437bcecd4b833f2fb9b2295b28e48bff07ea"
+  },
+  "r1_primary": {
+    "bytes": 19876985,
+    "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1/diagnostic_primary.json",
+    "sha256": "95a341b34a76be2644f89f91fb3b4fcd649a2435f3baf70d655581a3212cddcd"
+  },
+  "r1_recommendation": {
+    "bytes": 2143,
+    "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1/recommendation.json",
+    "sha256": "9c5e2d2d6c55619750b4ea5118edfc4610f69cf54a4296d6d79a43712660e22e"
+  },
+  "r1_reference": {
+    "bytes": 19876987,
+    "path": "research_artifacts/multi_asset_session_behaviour_archetype_monetization_v1_m1_r1/diagnostic_reference.json",
+    "sha256": "b109a78498d4c548b25ee54d60fd869a801822b1e895725da0a71ba63fdb5c13"
+  },
+  "sealed_at_utc": "2026-08-12T12:44:03.954466Z",
+  "status": "SEALED_BEFORE_R1_CLASSIFICATION_ROW_ACCESS",
+  "synthetic_proof": {
+    "allowed": "ELIGIBLE_OBSERVED_QUOTE_PATH",
+    "blocked": "TECHNICALLY_UNAVAILABLE",
+    "complete": "ELIGIBLE_COMPLETE_WALL_CLOCK"
+  },
+  "version": "MSBAM_V1_M1_R2_PREACCESS_FREEZE_1_0"
+}

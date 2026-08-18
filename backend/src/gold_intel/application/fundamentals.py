@@ -50,7 +50,12 @@ class FundamentalInputs:
     policy_path_points: tuple[PolicyPathFundamentalPoint, ...]
     quarterly_policy_expectations: tuple[QuarterlyPolicyExpectationPoint, ...]
 
-    def state_at(self, as_of: datetime) -> FundamentalState:
+    def state_at(
+        self,
+        as_of: datetime,
+        *,
+        compute_data_hash: bool = True,
+    ) -> FundamentalState:
         return calculate_fundamental_state(
             list(self.observations),
             list(self.cot_points),
@@ -59,6 +64,7 @@ class FundamentalInputs:
             events=list(self.events),
             policy_path_points=list(self.policy_path_points),
             quarterly_policy_expectations=list(self.quarterly_policy_expectations),
+            compute_data_hash=compute_data_hash,
         )
 
     def provenance_at(self, as_of: datetime) -> dict[str, Any]:

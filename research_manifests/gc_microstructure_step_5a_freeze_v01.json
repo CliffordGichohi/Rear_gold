@@ -1,0 +1,77 @@
+{
+  "charge_incurred": false,
+  "classification": "RESEARCH_DESIGN_AND_METADATA_ONLY_COST_AUDIT",
+  "daily_coverage_check_count": 406,
+  "data_acquired": false,
+  "engineering_dates_permanently_excluded": [
+    "2024-01-05",
+    "2024-01-09",
+    "2024-01-11",
+    "2024-01-30",
+    "2024-01-31",
+    "2024-03-20"
+  ],
+  "freeze_hash": "cb67d1ba793a80e58d5439be2f3c07ac5fcac1b965440f2035bb48b86efde949",
+  "frozen_at_utc": "2026-08-03T08:19:33.875834Z",
+  "market_values_or_outcomes_accessed": false,
+  "predecessor_checks": {
+    "all_interactions_two_condition": true,
+    "contract_status_frozen": true,
+    "dispositions_disjoint_union_85": true,
+    "eight_fundamental_contexts_frozen": true,
+    "eight_microstructure_states_frozen": true,
+    "no_trade_or_execution_scope": true,
+    "reference_book_bytes": true,
+    "seven_price_session_contexts_frozen": true,
+    "sha256:Gold_USD_Market_Intelligence_Reference_Book.pdf": true,
+    "sha256:research_artifacts/gc_microstructure_step_4b3_v01/manifest.json": true,
+    "sha256:research_artifacts/gold_session_behaviour_v3_case_matrix_v01/manifest.json": true,
+    "sha256:research_manifests/gc_microstructure_step_4a_protocol_v01.json": true,
+    "sha256:research_manifests/gold_session_behaviour_discovery_contract_v03.json": true,
+    "sha256:research_manifests/gold_session_behaviour_v3_m4_discovery_v01.json": true,
+    "sha256:research_manifests/gold_session_behaviour_v3_traceability_v01.json": true,
+    "step4a_feature_count_85": true,
+    "step4b3_manifest_internal_hash": true,
+    "step4b3_status_preserved": true,
+    "step5a_columns_exact_step4a_order_and_names": true,
+    "step5a_registry_count_85": true,
+    "v3_cases_internal_hash": true,
+    "v3_contract_internal_hash": true,
+    "v3_trace_internal_hash": true
+  },
+  "provider_metadata_called": false,
+  "provider_request_count": 86,
+  "records": {
+    "contract": {
+      "bytes": 19990,
+      "path": "research_manifests/gc_microstructure_conditional_edge_discovery_contract_v01.json",
+      "sha256": "da9048f497c853ef3b1f2a4debe6c80f8c650217004bfe6df05e045751554fcb"
+    },
+    "feature_hypothesis_registry": {
+      "bytes": 26872,
+      "path": "research_manifests/gc_microstructure_step_5a_feature_hypothesis_registry_v01.json",
+      "sha256": "4b207a1dec5aa78a904c86cf8c6a14bf0a517dd918f24c5270c254400c865f01"
+    },
+    "quote_tool": {
+      "bytes": 46280,
+      "path": "tools/quote_gc_microstructure_step5a.py",
+      "sha256": "1d84e69e44ded71e11dfc4648b93c39b86984bab20f4dac7aaef50beca851dbf"
+    },
+    "request_registry": {
+      "bytes": 239012,
+      "path": "research_manifests/gc_microstructure_step_5a_request_registry_v01.json",
+      "sha256": "f56467c32b5708bc1cb902e51f034243408b7a6f967f2ce2b652777cf2d00477"
+    }
+  },
+  "research_relationships_calculated": false,
+  "sample_counts": {
+    "intersecting_engineering_exclusions": 2,
+    "post_exclusion_dates": 203,
+    "pre_exclusion_dates": 205,
+    "request_intervals": 43,
+    "selected_monthly_weeks": 41
+  },
+  "status": "FROZEN_BEFORE_PROVIDER_METADATA_CALLS_OR_RESEARCH_VALUE_ACCESS",
+  "trade_or_execution_calculations_performed": false,
+  "version": "GC_MICROSTRUCTURE_STEP_5A_FREEZE_V0_1"
+}

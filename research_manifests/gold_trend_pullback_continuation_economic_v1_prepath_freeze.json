@@ -1,0 +1,44 @@
+{
+  "candidate_signal_counts": {
+    "H1|S1|CONFIRMATION_DISPLACEMENT": 149,
+    "H1|S1|REFERENCE_SWEEP_RECLAIM": 464,
+    "H1|S1|RESPONSE_DISPLACEMENT_HALF_ATR": 548,
+    "H4|S1|HTF_FULL_ALIGNMENT": 187,
+    "H4|S1|REFERENCE_SWEEP_RECLAIM": 123,
+    "H4|S1|RESPONSE_DISPLACEMENT_HALF_ATR": 151,
+    "M15|S1|CONFIRMATION_DISPLACEMENT": 743,
+    "M15|S1|RESPONSE_DISPLACEMENT_HALF_ATR": 2530,
+    "M15|S2|REFERENCE_SWEEP_RECLAIM__CONFIRMATION_DISPLACEMENT": 432
+  },
+  "certification": {
+    "bytes": 1804,
+    "path": "research_artifacts/gold_trend_pullback_continuation_economic_v1_v01/signal_materialization_certification.json",
+    "sha256": "09ca6ff49b8023d0a185bbe694ccb531cbb264f4b1dd98b8317b7c3e7ec3251d"
+  },
+  "design_freeze": {
+    "bytes": 17016,
+    "path": "research_manifests/gold_trend_pullback_continuation_economic_v1_design_freeze.json",
+    "sha256": "7b1ea9fea549fe3b525e386292478c4d7c57cb59f871341a31bb15cbb952b5be"
+  },
+  "forward_values_accessed": false,
+  "implementation": {
+    "bytes": 11495,
+    "path": "tools/materialize_gold_trend_pullback_continuation_economic_v1_signals.py",
+    "sha256": "4cba0e6f748c356e67d3b8d2e0f499e83ef3113d7fdbe85f4aa6c216a85986cd"
+  },
+  "post_decision_price_paths_accessed": false,
+  "primary_signals": {
+    "bytes": 590777,
+    "path": "research_artifacts/gold_trend_pullback_continuation_economic_v1_v01/primary_development_signals.parquet",
+    "sha256": "059ba67cf6eeda39d6c70a0f09a5801efddd228e43c6bbdbd289d8acf1f9e57a"
+  },
+  "reference_signals": {
+    "bytes": 590777,
+    "path": "research_artifacts/gold_trend_pullback_continuation_economic_v1_v01/reference_development_signals.parquet",
+    "sha256": "059ba67cf6eeda39d6c70a0f09a5801efddd228e43c6bbdbd289d8acf1f9e57a"
+  },
+  "sealed_at_utc": "2026-08-10T06:24:55.596133Z",
+  "signals_hash": "c1961f721671486bc03bdf622569e42ff1621d69f5bfc72069d87fc358ec3e9c",
+  "status": "SEALED_EXACT_SIGNAL_POPULATION_BEFORE_PRICE_PATHS",
+  "version": "GOLD_TPCE_ECONOMIC_V1_PREPATH_FREEZE_1_0"
+}

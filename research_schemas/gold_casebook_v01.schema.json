@@ -1,0 +1,442 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gold-intel.local/schemas/gold_casebook_v01.schema.json",
+  "title": "Gold Casebook v0.1 Record",
+  "description": "Immutable pre-2025 descriptive records used by the Gold Casebook directional-discovery contract.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/price_bar"
+    },
+    {
+      "$ref": "#/$defs/structure_snapshot"
+    },
+    {
+      "$ref": "#/$defs/cross_market_snapshot"
+    },
+    {
+      "$ref": "#/$defs/positioning_report"
+    },
+    {
+      "$ref": "#/$defs/event_case"
+    },
+    {
+      "$ref": "#/$defs/fundamental_observation"
+    },
+    {
+      "$ref": "#/$defs/policy_path_point"
+    },
+    {
+      "$ref": "#/$defs/policy_expectation_window"
+    },
+    {
+      "$ref": "#/$defs/fundamental_snapshot"
+    },
+    {
+      "$ref": "#/$defs/session_case"
+    }
+  ],
+  "$defs": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "epistemic_status": {
+      "enum": [
+        "OBSERVED",
+        "CALCULATED",
+        "INFERRED",
+        "UNKNOWN"
+      ]
+    },
+    "common": {
+      "type": "object",
+      "required": [
+        "record_type",
+        "record_id",
+        "casebook_version",
+        "schema_version",
+        "epistemic_status",
+        "holdout_loaded",
+        "record_hash"
+      ],
+      "properties": {
+        "record_type": {
+          "type": "string"
+        },
+        "record_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "casebook_version": {
+          "const": "GOLD_CASEBOOK_V0_1"
+        },
+        "schema_version": {
+          "const": "gold-casebook-schema-0.1.0"
+        },
+        "epistemic_status": {
+          "$ref": "#/$defs/epistemic_status"
+        },
+        "holdout_loaded": {
+          "const": false
+        },
+        "record_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "price_bar": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "instrument_code",
+            "provider_code",
+            "timeframe",
+            "open_time",
+            "close_time",
+            "ohlc",
+            "available_at",
+            "complete",
+            "source"
+          ],
+          "properties": {
+            "record_type": {
+              "const": "PRICE_BAR"
+            },
+            "instrument_code": {
+              "const": "XAUUSD"
+            },
+            "provider_code": {
+              "const": "IC_MARKETS_MT5"
+            },
+            "timeframe": {
+              "enum": [
+                "1m",
+                "5m",
+                "15m",
+                "1h",
+                "4h",
+                "1d"
+              ]
+            },
+            "open_time": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "close_time": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "available_at": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "complete": {
+              "type": "boolean"
+            },
+            "ohlc": {
+              "type": "object",
+              "required": [
+                "open",
+                "high",
+                "low",
+                "close"
+              ]
+            },
+            "source": {
+              "type": "object",
+              "required": [
+                "source_hash"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "structure_snapshot": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "as_of",
+            "available_at",
+            "ruleset_version",
+            "configuration",
+            "timeframes"
+          ],
+          "properties": {
+            "record_type": {
+              "const": "STRUCTURE_SNAPSHOT"
+            },
+            "as_of": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "available_at": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "timeframes": {
+              "type": "array",
+              "minItems": 6,
+              "maxItems": 6
+            }
+          }
+        }
+      ]
+    },
+    "cross_market_snapshot": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "as_of",
+            "available_at",
+            "instruments",
+            "quality"
+          ],
+          "properties": {
+            "record_type": {
+              "const": "CROSS_MARKET_SNAPSHOT"
+            },
+            "as_of": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "available_at": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "instruments": {
+              "type": "object",
+              "required": [
+                "XAUUSD",
+                "EURUSD",
+                "XAGUSD",
+                "US500",
+                "ZT.v.0",
+                "ZN.v.0",
+                "ZQ.v.0",
+                "SR3.v.0"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "positioning_report": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "observation_date",
+            "publication_at",
+            "available_at",
+            "open_interest",
+            "categories",
+            "calculated",
+            "inferred"
+          ],
+          "properties": {
+            "record_type": {
+              "const": "POSITIONING_REPORT"
+            },
+            "observation_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "publication_at": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "available_at": {
+              "$ref": "#/$defs/timestamp"
+            }
+          }
+        }
+      ]
+    },
+    "event_case": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "event_code",
+            "scheduled_at",
+            "event_available_at",
+            "pre_event_state",
+            "releases",
+            "forecasts",
+            "reaction_snapshots",
+            "research_policy"
+          ],
+          "properties": {
+            "record_type": {
+              "const": "EVENT_CASE"
+            },
+            "scheduled_at": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "event_available_at": {
+              "$ref": "#/$defs/timestamp"
+            }
+          }
+        }
+      ]
+    },
+    "fundamental_observation": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "series_code",
+            "observation_time",
+            "value",
+            "unit",
+            "available_at",
+            "vintage"
+          ],
+          "properties": {
+            "record_type": {
+              "const": "FUNDAMENTAL_OBSERVATION"
+            },
+            "observation_time": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "available_at": {
+              "$ref": "#/$defs/timestamp"
+            }
+          }
+        }
+      ]
+    },
+    "policy_path_point": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "snapshot_as_of",
+            "meeting_date",
+            "outcome_basis_points",
+            "probability",
+            "available_at"
+          ],
+          "properties": {
+            "record_type": {
+              "const": "POLICY_PATH_POINT"
+            }
+          }
+        }
+      ]
+    },
+    "policy_expectation_window": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "observation_date",
+            "snapshot_as_of",
+            "reference_start",
+            "reference_end",
+            "rate_mean_basis_points",
+            "available_at",
+            "availability_quality"
+          ],
+          "properties": {
+            "record_type": {
+              "const": "POLICY_EXPECTATION_WINDOW"
+            }
+          }
+        }
+      ]
+    },
+    "fundamental_snapshot": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "as_of",
+            "available_at",
+            "series_state",
+            "engine_state",
+            "provenance",
+            "ruleset_version"
+          ],
+          "properties": {
+            "record_type": {
+              "const": "FUNDAMENTAL_SNAPSHOT"
+            },
+            "as_of": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "available_at": {
+              "$ref": "#/$defs/timestamp"
+            }
+          }
+        }
+      ]
+    },
+    "session_case": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "session_date",
+            "session_code",
+            "session_timezone",
+            "decision_at",
+            "availability_at",
+            "observation_end",
+            "decision_state",
+            "subsequent_observation",
+            "data_quality",
+            "research_policy"
+          ],
+          "properties": {
+            "record_type": {
+              "const": "SESSION_CASE"
+            },
+            "session_code": {
+              "enum": [
+                "LONDON",
+                "NEW_YORK"
+              ]
+            },
+            "decision_at": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "availability_at": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "observation_end": {
+              "$ref": "#/$defs/timestamp"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

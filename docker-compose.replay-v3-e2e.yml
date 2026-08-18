@@ -1,0 +1,61 @@
+name: gold-replay-v3-e2e
+
+services:
+  api-test:
+    profiles: ["test"]
+    build:
+      context: ./backend
+      target: test
+    environment:
+      APP_ENV: test
+      BLIND_REPLAY_V3_ARTIFACT_PATH: /app/research_artifacts/gold_annotated_replay_v3
+      BLIND_REPLAY_V3_LEDGER_PATH: /tmp/gold-replay-v3-test/practice_event_ledger_v3.jsonl
+      RAW_STORE_PATH: /tmp/gold-replay-v3-test/raw
+    command: ["pytest", "tests/unit/test_blind_replay_v3.py", "-q"]
+    volumes:
+      - ./backend/src:/app/src:ro
+      - ./backend/tests:/app/tests:ro
+      - ./research_artifacts/gold_annotated_replay_v3:/research_artifacts/gold_annotated_replay_v3:ro
+
+  api:
+    container_name: gold-replay-v3-e2e-api
+    build:
+      context: ./backend
+      target: runtime
+    environment:
+      APP_ENV: test
+      API_CORS_ORIGINS: '["http://localhost:3011"]'
+      BLIND_REPLAY_V3_ARTIFACT_PATH: /app/research_artifacts/gold_annotated_replay_v3
+      BLIND_REPLAY_V3_LEDGER_PATH: /tmp/gold-replay-v3-e2e/practice_event_ledger_v3.jsonl
+      RAW_STORE_PATH: /tmp/gold-replay-v3-e2e/raw
+    command: ["uvicorn", "gold_intel.main:app", "--host", "0.0.0.0", "--port", "8000", "--no-access-log"]
+    ports:
+      - "8011:8000"
+    volumes:
+      - ./research_artifacts/gold_annotated_replay_v3:/app/research_artifacts/gold_annotated_replay_v3:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/live', timeout=2)"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  web:
+    container_name: gold-replay-v3-e2e-web
+    build:
+      context: ./frontend
+      target: runtime
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8011/api/v1
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8011/api/v1
+      API_INTERNAL_URL: http://api:8000/api/v1
+    ports:
+      - "3011:3000"
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:3000/replay"]
+      interval: 3s
+      timeout: 3s
+      retries: 30

@@ -1,0 +1,286 @@
+{
+  "XAUUSD": "EXCLUDED_HELD_GOLD_POLICY_UNCHANGED",
+  "archetype_taxonomy": {
+    "acceptance": "THREE_CONSECUTIVE_COMPLETED_M5_CLOSES_BEYOND_KNOWN_LEVEL",
+    "close_location": {
+      "down": 0.25,
+      "up": 0.75
+    },
+    "path_efficiency": {
+      "rotational_max": 0.2,
+      "trend_min": 0.35
+    },
+    "precedence": [
+      "DATA_UNAVAILABLE",
+      "SWEEP_REVERSAL",
+      "FAILED_BREAK",
+      "BREAKOUT_HOLD",
+      "ONE_SIDED",
+      "TWO_SIDED_EXPANSION",
+      "TREND",
+      "BALANCED_COMPRESSION",
+      "ROTATIONAL",
+      "MIXED_UNCLASSIFIED"
+    ],
+    "reclaim": "COMPLETED_M5_CLOSE_BACK_INSIDE_WITHIN_THREE_M5_BARS",
+    "taxonomy_is_descriptive_not_signal": true,
+    "thresholds_ATR": {
+      "compression_close_abs_max": 0.25,
+      "compression_range_max": 0.75,
+      "level_break": 0.1,
+      "level_sweep": 0.05,
+      "one_sided_adverse_max": 0.25,
+      "one_sided_favourable": 1.0,
+      "trend_close": 0.5,
+      "two_sided_each": 0.75
+    },
+    "version": "ARCHETYPE_TAXONOMY_V1_0"
+  },
+  "charges_authorized": false,
+  "contract": {
+    "bytes": 6164,
+    "path": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_AND_MONETIZATION_DISCOVERY_CONTRACT_V1.md",
+    "sha256": "f1f8d2591e4ca51d433ca9dfd8592d5e12306a694e3478ed09a571dbd9eda457"
+  },
+  "development": {
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "start_inclusive": "2021-08-01T00:00:00Z"
+  },
+  "eligibility": {
+    "complete": "ELIGIBLE_COMPLETE",
+    "complete_path": "EVERY_EXPECTED_M1_OPEN_TIME_FROM_OBSERVATION_START_INCLUSIVE_TO_OBSERVATION_END_EXCLUSIVE_PRESENT",
+    "fraction_gte_0p90_but_lt_1": "PARTIAL_NOT_ELIGIBLE_COMPLETE_PATH",
+    "fraction_lt_0p90": "INSUFFICIENT_NOT_ELIGIBLE",
+    "unit_readiness": "COMPLETE_IDENTITY_FRACTION_GTE_0P90",
+    "zero": "NO_SOURCE_TIMESTAMPS_NOT_INFERRED_AS_HOLIDAY"
+  },
+  "excursions": {
+    "long_mae": "MAX_0_REFERENCE_MINUS_MIN_LOW",
+    "long_mfe": "MAX_0_MAX_HIGH_MINUS_REFERENCE",
+    "normalizer": "PRE_DECISION_14_BAR_M15_ATR_USING_COMPLETED_BARS_ONLY",
+    "short_mae": "LONG_MFE",
+    "short_mfe": "LONG_MAE",
+    "trade_claim": false
+  },
+  "first_passage": {
+    "ATR_thresholds": [
+      0.25,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "censor_at_observation_end": true,
+    "down": "FIRST_M1_LOW_LTE_REFERENCE_MINUS_THRESHOLD_ATR",
+    "same_bar_two_sided": "AMBIGUOUS_SAME_BAR_NO_STOP_FIRST_ASSUMPTION",
+    "up": "FIRST_M1_HIGH_GTE_REFERENCE_PLUS_THRESHOLD_ATR"
+  },
+  "forward_locks": {
+    "calendar_2025": "LOCKED",
+    "calendar_2026": "LOCKED"
+  },
+  "future_milestone_order": [
+    "M2_MATERIALIZE_COMPLETE_CASE_MATRIX_AND_DESCRIPTIVE_ATLAS",
+    "M3_ARCHETYPE_FREQUENCY_AND_HYPOTHETICAL_CAPTURE_CEILINGS",
+    "M4_RELATIONSHIP_DISCOVERY_AND_BOUNDED_RULE_DERIVATION",
+    "M5_FREEZE_AND_TEST_EXECUTION_ECONOMICS_ON_DEVELOPMENT",
+    "M6_OPEN_LOCKED_FORWARD_SEGMENTS_ONCE_IF_CANDIDATES_PASS"
+  ],
+  "identity": {
+    "absence_not_automatically_holiday": true,
+    "all_expected_identities_retained": true,
+    "decision_at": "SESSION_LOCAL_START_CONVERTED_WITH_IANA_TZ",
+    "grain": "ONE_INSTRUMENT_X_SESSION_CODE_X_LOCAL_SESSION_DATE_WEEKDAY_IDENTITY",
+    "observation_end": "SESSION_LOCAL_END_EXCLUSIVE",
+    "observation_start": "DECISION_AT_PLUS_ONE_MINUTE"
+  },
+  "instruments": {
+    "EURUSD": {
+      "asset_class": "FX",
+      "cluster": "USD_FX",
+      "research_id": "EURUSD"
+    },
+    "US500": {
+      "asset_class": "US_EQUITY_INDEX_CFD",
+      "cluster": "US_EQUITY_INDICES",
+      "research_id": "US500"
+    },
+    "USDJPY": {
+      "asset_class": "FX",
+      "cluster": "USD_FX",
+      "research_id": "USDJPY"
+    },
+    "USTEC": {
+      "asset_class": "US_EQUITY_INDEX_CFD",
+      "cluster": "US_EQUITY_INDICES",
+      "research_id": "NAS100"
+    },
+    "XAGUSD": {
+      "asset_class": "PRECIOUS_METAL_CFD",
+      "cluster": "PRECIOUS_METALS",
+      "research_id": "XAGUSD"
+    },
+    "XTIUSD": {
+      "asset_class": "ENERGY_CFD",
+      "cluster": "ENERGY",
+      "research_id": "WTI"
+    }
+  },
+  "milestone_1_forbidden": [
+    "OHLC_ACCESS",
+    "BEHAVIOUR_CALCULATION",
+    "OUTCOME_JOIN",
+    "RELATIONSHIP",
+    "HYPOTHETICAL_RETURN",
+    "ENTRY",
+    "PNL",
+    "CANDIDATE",
+    "2025_VALUE_ACCESS",
+    "2026_VALUE_ACCESS",
+    "PAID_ACQUISITION"
+  ],
+  "neutral_reference": {
+    "definition": "OPEN_OF_EXACT_M1_BAR_AT_OBSERVATION_START",
+    "fixed_horizons_minutes": [
+      5,
+      15,
+      30,
+      60,
+      120
+    ],
+    "not_entry_or_fill": true,
+    "session_close": true
+  },
+  "point_in_time": {
+    "COT_publication_not_observation": true,
+    "completed_candles_only": true,
+    "continuous_future_roll_crossing": "UNKNOWN",
+    "decision_fact_gate": "available_at_lte_decision_at",
+    "missing": "UNKNOWN_NOT_ZERO_OR_NEUTRAL",
+    "revision_available_only_at_revision_release": true,
+    "swing_known_after_second_right_close": true,
+    "unverified_forecast": "UNKNOWN"
+  },
+  "session_units": [
+    {
+      "instrument": "EURUSD",
+      "session_code": "ASIA_SESSION"
+    },
+    {
+      "instrument": "EURUSD",
+      "session_code": "LONDON_SESSION"
+    },
+    {
+      "instrument": "EURUSD",
+      "session_code": "NEW_YORK_SESSION"
+    },
+    {
+      "instrument": "US500",
+      "session_code": "LONDON_SESSION"
+    },
+    {
+      "instrument": "US500",
+      "session_code": "US_CASH_SESSION"
+    },
+    {
+      "instrument": "USDJPY",
+      "session_code": "ASIA_SESSION"
+    },
+    {
+      "instrument": "USDJPY",
+      "session_code": "LONDON_SESSION"
+    },
+    {
+      "instrument": "USDJPY",
+      "session_code": "NEW_YORK_SESSION"
+    },
+    {
+      "instrument": "USTEC",
+      "session_code": "LONDON_SESSION"
+    },
+    {
+      "instrument": "USTEC",
+      "session_code": "US_CASH_SESSION"
+    },
+    {
+      "instrument": "XAGUSD",
+      "session_code": "ASIA_SESSION"
+    },
+    {
+      "instrument": "XAGUSD",
+      "session_code": "LONDON_SESSION"
+    },
+    {
+      "instrument": "XAGUSD",
+      "session_code": "NEW_YORK_SESSION"
+    },
+    {
+      "instrument": "XTIUSD",
+      "session_code": "LONDON_SESSION"
+    },
+    {
+      "instrument": "XTIUSD",
+      "session_code": "US_ENERGY_SESSION"
+    }
+  ],
+  "sessions": {
+    "ASIA_SESSION": {
+      "end": "07:00",
+      "instruments": [
+        "XAGUSD",
+        "EURUSD",
+        "USDJPY"
+      ],
+      "role": "ASIA_BUILD_AND_DECISION_UNIT",
+      "start": "00:00",
+      "timezone": "Europe/London"
+    },
+    "LONDON_SESSION": {
+      "end": "12:00",
+      "instruments": [
+        "XAGUSD",
+        "EURUSD",
+        "USDJPY",
+        "USTEC",
+        "US500",
+        "XTIUSD"
+      ],
+      "role": "EUROPEAN_MORNING_DECISION_UNIT",
+      "start": "07:00",
+      "timezone": "Europe/London"
+    },
+    "NEW_YORK_SESSION": {
+      "end": "12:00",
+      "instruments": [
+        "XAGUSD",
+        "EURUSD",
+        "USDJPY"
+      ],
+      "role": "NEW_YORK_MORNING_DECISION_UNIT",
+      "start": "08:00",
+      "timezone": "America/New_York"
+    },
+    "US_CASH_SESSION": {
+      "end": "16:00",
+      "instruments": [
+        "USTEC",
+        "US500"
+      ],
+      "role": "FULL_US_CASH_SESSION",
+      "start": "09:30",
+      "timezone": "America/New_York"
+    },
+    "US_ENERGY_SESSION": {
+      "end": "14:30",
+      "instruments": [
+        "XTIUSD"
+      ],
+      "role": "US_ENERGY_DECISION_UNIT",
+      "start": "08:00",
+      "timezone": "America/New_York"
+    }
+  },
+  "status": "FROZEN_BEFORE_BEHAVIOUR_OR_OUTCOME_ACCESS",
+  "version": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_MONETIZATION_V1_PROTOCOL_1_0"
+}

@@ -1,0 +1,69 @@
+{
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "confirmed_failure": {
+    "analytical_result_produced": false,
+    "classification": "DETERMINISTIC_SERIALIZATION_RECONSTRUCTION_FAILURE",
+    "confirmed_cause": "The fold-model JSON rounds training quantile boundaries and transformer parameters to 12 decimals. Values at additive-bin boundaries can therefore be assigned to a different bin when that JSON is used as an executable model. The authoritative sealed OOF prediction file remains unchanged.",
+    "incremental_verdict_produced": false
+  },
+  "implementation": {
+    "bytes": 13837,
+    "path": "tools/run_gold_point_in_time_auction_state_v1_gc_incremental_r1.py",
+    "sha256": "007acc84cfa617e580075435252243a0d49d58bbe0f3b5d540240578d158ddef"
+  },
+  "paid_acquisition_usd": 0.0,
+  "preserved": {
+    "attempt_1_formal_failure": {
+      "bytes": 1532,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental/attempt_1_failure.json",
+      "sha256": "b5e67118cdf249158a9dbd998ba82a23b09a4ac0abbfe14c7aea49f8aeaa71d2"
+    },
+    "attempt_1_protocol": {
+      "bytes": 8722,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental_protocol_freeze.json",
+      "sha256": "92b15d83a8203d34942c5da6b7765af646fd5629f582f38a74b4d52b671e39e0"
+    },
+    "base_development_verdict": "REJECT_NO_DEVELOPMENT_ECONOMIC_EDGE",
+    "gc_features_byte_identical": true,
+    "primary_gc_features": {
+      "bytes": 8065972,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental/primary_gc_checkpoint_features.parquet",
+      "sha256": "eae9e88b893b319f3446691c455f02a280696b499aee6f2cb8e99834a99417cb"
+    },
+    "reference_gc_features": {
+      "bytes": 8065972,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental/reference_gc_checkpoint_features.parquet",
+      "sha256": "eae9e88b893b319f3446691c455f02a280696b499aee6f2cb8e99834a99417cb"
+    }
+  },
+  "sealed_at_utc": "2026-08-11T10:08:12.985933Z",
+  "single_correction": {
+    "base_prediction_reproduction_gate": {
+      "MFE_MAE_TIME": "ABSOLUTE_ERROR_DIVIDED_BY_MAX_1_ABS_SEALED_VALUE_LTE_1E-8",
+      "probabilities_and_expected_net": "ABSOLUTE_ERROR_LTE_1E-8",
+      "scope": "EVERY MATCHED VALIDATION ROW_AND_ALL_EIGHT_OOF_FIELDS"
+    },
+    "new": "DETERMINISTICALLY RECOMPUTE ONLY THE ORIGINAL TRANSFORMER QUANTILES AND MOMENTS FROM THE IDENTICAL SEALED TRAINING-FOLD ROWS;REUSE THE SEALED MODEL COEFFICIENTS, HYPERPARAMETERS AND BASE RATE UNCHANGED",
+    "old": "EXECUTE THE 12-DECIMAL TRANSFORMER QUANTILES AND MOMENTS STORED IN FOLD_MODELS.JSON",
+    "reason": "ADDITIVE VALUES AT A ROUNDED QUANTILE BOUNDARY CAN CHANGE BIN;THE ORIGINAL TRAINING SOURCES AND EXACT TRANSFORMER ALGORITHM ARE SEALED AND AVAILABLE"
+  },
+  "status": "FROZEN_SERIALIZATION_ONLY_CORRECTION_BEFORE_R1_GC_OUTCOME_JOIN",
+  "unchanged": [
+    "GC_FEATURE_PAYLOADS_AND_DEFINITIONS",
+    "BASE_MODEL_COEFFICIENTS",
+    "HYPERPARAMETERS",
+    "FOLDS",
+    "OUTCOMES",
+    "SUPPORT_GATES",
+    "POLICY_GRID",
+    "POLICY_SELECTION",
+    "EXECUTION",
+    "COSTS",
+    "RISK",
+    "OVERLAP",
+    "INCREMENTAL_MULTIPLICITY_AND_PASS_GATES",
+    "NO_STANDALONE_CREDIT"
+  ],
+  "version": "GOLD_PIT_AUCTION_STATE_V1_GC_INCREMENTAL_AMENDMENT_A_1_0"
+}

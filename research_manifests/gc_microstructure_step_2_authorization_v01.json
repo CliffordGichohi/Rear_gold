@@ -1,0 +1,49 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_2_AUTHORIZATION_V0_1",
+  "status": "PAID_ENGINEERING_PILOT_AUTHORIZED",
+  "authorized_on": "2026-07-30",
+  "request": {
+    "dataset": "GLBX.MDP3",
+    "symbols": [
+      "GC.v.0"
+    ],
+    "schema": "mbo",
+    "stype_in": "continuous",
+    "stype_out": "instrument_id",
+    "start": "2024-01-09T00:00:00Z",
+    "end": "2024-01-10T00:00:00Z",
+    "encoding": "dbn",
+    "compression": "zstd",
+    "pretty_px": false,
+    "pretty_ts": false,
+    "map_symbols": false,
+    "split_duration": "day",
+    "split_symbols": false,
+    "delivery": "download"
+  },
+  "cost_policy": {
+    "expected_ceiling_usd": 0.25,
+    "absolute_hard_cap_usd": 1.0,
+    "refresh_quote_immediately_before_submission": true,
+    "stop_if_fresh_quote_exceeds_absolute_hard_cap": true
+  },
+  "data_policy": {
+    "classification": "ENGINEERING_ONLY",
+    "permanently_excluded_from_relationship_discovery": true,
+    "permanently_excluded_from_candidate_selection": true,
+    "permanently_excluded_from_validation": true,
+    "edge_discovery_permitted": false,
+    "signal_testing_permitted": false,
+    "execution_optimization_permitted": false,
+    "market_outcome_analysis_permitted": false
+  },
+  "authorized_work": [
+    "refresh metadata quote",
+    "submit at most one matching paid batch job",
+    "download the authorized source",
+    "hash raw files",
+    "normalize source records without analyzing market behavior",
+    "validate technical data quality",
+    "seal all artifacts"
+  ]
+}

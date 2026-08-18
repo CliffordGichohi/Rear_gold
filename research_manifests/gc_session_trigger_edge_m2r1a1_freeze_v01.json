@@ -1,0 +1,37 @@
+{
+  "freeze_receipt": "965dd161253dae6aa585ddb451826a155226bd4e194a1faeb8c997b7205acf0c",
+  "implementation": {
+    "bytes": 30254,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\tools\\run_gc_session_trigger_edge_m2r1a1.py",
+    "sha256": "6217d0c9e5e137c9163849b9f2ca8d9d539308bb88d6ac5a807e0bc69aa6bd8c"
+  },
+  "pre_freeze_reader_proof": {
+    "bytes": 9731,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_session_trigger_edge_m2r1a1_v01\\pre_freeze_reader_proof.json",
+    "sha256": "3073c4ebca82410e8daf62fc3852716a95e6e985bf13f1a65fdd6b59ed934d39"
+  },
+  "protocol": {
+    "bytes": 1674,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_manifests\\gc_session_trigger_edge_m2r1a1_protocol_v01.json",
+    "sha256": "aa626e4db45ba89245217ed3a8e5ac5478d46221c1ee9b2ae2a1b90c3cb29723"
+  },
+  "reference_attempt_limit": 1,
+  "sealed_at_utc": "2026-08-05T07:30:02.200072Z",
+  "sealed_r1_final": {
+    "bytes": 694,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_session_trigger_edge_m2r1_v01\\final_seal.json",
+    "sha256": "07a4ee79e8bf75a699bf4fb34a546da7ccde8e1992d8d0d9123f24ed575db80f"
+  },
+  "sealed_r1_implementation": {
+    "bytes": 67663,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\tools\\diagnose_gc_session_trigger_edge_m2r1.py",
+    "sha256": "43302e6952fc4bd8924e4ce1b86861def9bbc90b38f78f33475907384713ef8b"
+  },
+  "sealed_r1_primary": {
+    "bytes": 41698,
+    "path": "C:\\Users\\USER\\Desktop\\Rear_Gold\\research_artifacts\\gc_session_trigger_edge_m2r1_v01\\primary_diagnostic.json",
+    "sha256": "82444ce02a05de75d276eb2e773b68b6f8dfd97a659277c557ecd51a672cd91d"
+  },
+  "status": "SEALED_BEFORE_DEVELOPMENT_METADATA_REOPEN",
+  "version": "GC_SESSION_TRIGGER_EDGE_M2_R1_A1_FREEZE_V1_0"
+}

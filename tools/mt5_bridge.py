@@ -11,6 +11,7 @@ import argparse
 import csv
 import json
 import sys
+import time
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -68,6 +69,14 @@ def _parser() -> argparse.ArgumentParser:
     )
     history.add_argument("--symbol", default="XAUUSD")
     history.add_argument("--days", type=_history_days, default=30)
+    history.add_argument(
+        "--start",
+        type=_iso_datetime,
+        help=(
+            "Inclusive UTC history start. When provided, --days is ignored; "
+            "use with --end for an exact resumable interval."
+        ),
+    )
     history.add_argument(
         "--chunk-days",
         type=_chunk_days,
@@ -185,6 +194,21 @@ def _matching_symbols(query: str) -> dict[str, Any]:
                 "name": getattr(symbol, "name", None),
                 "description": getattr(symbol, "description", None),
                 "path": getattr(symbol, "path", None),
+                "digits": getattr(symbol, "digits", None),
+                "point": getattr(symbol, "point", None),
+                "spread_points": getattr(symbol, "spread", None),
+                "spread_is_floating": getattr(symbol, "spread_float", None),
+                "contract_size": getattr(symbol, "trade_contract_size", None),
+                "tick_size": getattr(symbol, "trade_tick_size", None),
+                "tick_value": getattr(symbol, "trade_tick_value", None),
+                "tick_value_profit": getattr(symbol, "trade_tick_value_profit", None),
+                "tick_value_loss": getattr(symbol, "trade_tick_value_loss", None),
+                "currency_base": getattr(symbol, "currency_base", None),
+                "currency_profit": getattr(symbol, "currency_profit", None),
+                "currency_margin": getattr(symbol, "currency_margin", None),
+                "volume_min": getattr(symbol, "volume_min", None),
+                "volume_max": getattr(symbol, "volume_max", None),
+                "volume_step": getattr(symbol, "volume_step", None),
                 "matched_terms": matched_terms,
             }
         )
@@ -204,6 +228,13 @@ def _history(args: argparse.Namespace) -> int:
         return _error(f"MT5 symbol is unavailable: {symbol}")
     api_url = str(args.api_url).rstrip("/")
     now = datetime.now(UTC).replace(second=0, microsecond=0)
+    if args.start is not None and (
+        args.before_existing or args.after_existing
+    ):
+        return _error(
+            "--start cannot be combined with --before-existing or "
+            "--after-existing"
+        )
     if args.before_existing:
         end = _existing_earliest(
             api_url=api_url,
@@ -220,7 +251,11 @@ def _history(args: argparse.Namespace) -> int:
     else:
         end = args.end or now
         end = min(end.astimezone(UTC), now)
-        start = end - timedelta(days=int(args.days))
+        start = (
+            args.start.astimezone(UTC)
+            if args.start is not None
+            else end - timedelta(days=int(args.days))
+        )
     if start >= end:
         return _error(
             f"No append interval exists: start {start.isoformat()} is not before "
@@ -271,6 +306,7 @@ def _history(args: argparse.Namespace) -> int:
                     _upload(
                         destination,
                         api_url=api_url,
+                        dataset_code=f"{symbol}_1M",
                     )
                 )
         cursor = chunk_end
@@ -345,19 +381,37 @@ def _write_csv(destination: Path, rows: list[Any]) -> None:
     temporary.replace(destination)
 
 
-def _upload(path: Path, *, api_url: str) -> dict[str, Any]:
-    with path.open("rb") as stream:
-        response = requests.post(
-            f"{api_url}/ingestions/files",
-            files={"file": (path.name, stream, "text/csv")},
-            data={
-                "provider_code": "IC_MARKETS_MT5",
-                "dataset_code": "XAUUSD_1M",
-                "schema_version": "1",
-                "is_synthetic": "false",
-            },
-            timeout=240,
-        )
+def _upload(
+    path: Path,
+    *,
+    api_url: str,
+    dataset_code: str,
+) -> dict[str, Any]:
+    response: requests.Response | None = None
+    for attempt in range(3):
+        try:
+            with path.open("rb") as stream:
+                response = requests.post(
+                    f"{api_url}/ingestions/files",
+                    files={"file": (path.name, stream, "text/csv")},
+                    data={
+                        "provider_code": "IC_MARKETS_MT5",
+                        "dataset_code": dataset_code,
+                        "schema_version": "1",
+                        "is_synthetic": "false",
+                    },
+                    timeout=240,
+                )
+        except requests.RequestException:
+            if attempt == 2:
+                raise
+            time.sleep(2**attempt)
+            continue
+        if response.status_code < 500 or attempt == 2:
+            break
+        time.sleep(2**attempt)
+    if response is None:
+        raise RuntimeError("Ingestion request produced no response")
     if response.status_code != 201:
         raise RuntimeError(
             f"Ingestion failed with HTTP {response.status_code}: {response.text[:500]}"

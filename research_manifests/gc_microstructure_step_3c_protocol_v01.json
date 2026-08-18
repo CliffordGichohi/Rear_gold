@@ -1,0 +1,258 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_3C_DIAGNOSTIC_PROTOCOL_V0_1",
+  "status": "FROZEN_BEFORE_ROW_LEVEL_DIAGNOSIS",
+  "frozen_at_utc": "2026-07-31T08:29:38.3908658Z",
+  "classification": "POST_FAILURE_ENGINEERING_ONLY_DIAGNOSTIC",
+  "research_or_validation_credit": "NONE",
+  "purpose": "Diagnose, without repairing, why the frozen Step 3B.2 F_LAST comparator failed against the sealed vendor MBP-10 benchmark.",
+  "scope": {
+    "calendar_date": "2024-01-09",
+    "mbo_source": {
+      "path": "data/raw/databento_gc_mbo_engineering_pilot/GLBX-20260730-WB9AXCVFET/normalized/gc_v_0_2024_01_09_mbo.parquet",
+      "records": 2322905,
+      "bytes": 31661220,
+      "sha256": "43a8a3bb2be9a4a36ab324e3fe0ca0e29ccb4529f445013a87156d3bad4c0ba3"
+    },
+    "mbp10_source": {
+      "path": "data/raw/databento_gc_mbp10_engineering_benchmark/GLBX-20260731-UJHWEDQUSX/normalized/gc_v_0_2024_01_09_mbp10.parquet",
+      "records": 1924786,
+      "bytes": 81164829,
+      "sha256": "4ead358f538d7c383a14f39bbde35b8ccfa21e38e58205edbc51bedfb2ed80d4"
+    },
+    "additional_data_acquisition_permitted": false,
+    "human_market_value_inspection_permitted": false,
+    "machine_exact_equality_comparison_permitted": true
+  },
+  "predecessor_preservation": {
+    "step_3a": {
+      "formal_verdict": "FAIL",
+      "verdict_preserved": true,
+      "declared_manifest_hash": "0897e33856c5329ee59040ff5a6c15f48cb65fc17dcf3e63ec1f8c5bf3c6c59c"
+    },
+    "step_3a1": {
+      "formal_verdict": "PASS",
+      "verdict_preserved": true,
+      "research_or_validation_credit": "NONE",
+      "declared_manifest_hash": "334b67560ee5912ed1939305715078b3f9460d389feb8cc17723a062543d657c"
+    },
+    "step_3b1": {
+      "formal_verdict": "FAIL_PRE_ACQUISITION_READINESS",
+      "verdict_preserved": true,
+      "declared_manifest_hash": "e4ddc27c8916df1d22e69a63d9b67f52ce0c81c55ccd172310a51cfe7d0533ac"
+    },
+    "step_3b2": {
+      "formal_verdict": "FAIL",
+      "verdict_preserved": true,
+      "declared_manifest_hash": "9fcdde66ca1f5d605f92fd5aba83de1b042fc01b3020e53d3f3bda904d850e8f",
+      "sealed_comparator": {
+        "path": "tools/compare_gc_mbo_mbp10_step3b2.py",
+        "bytes": 45439,
+        "sha256": "525032c0707f203c8af0f6f9c4f5d9d1204509c889613ea6580aeec6c631486c"
+      }
+    },
+    "immutability_rule": "Every predecessor verdict, source, protocol, comparator, result, manifest, and report remains byte-for-byte unchanged."
+  },
+  "frozen_keys_and_order": {
+    "native_event_group_key_k3": [
+      "publisher_id",
+      "instrument_id",
+      "sequence"
+    ],
+    "strict_step_3b2_key_k5": [
+      "publisher_id",
+      "instrument_id",
+      "sequence",
+      "ts_event",
+      "ts_recv"
+    ],
+    "within_key_occurrence_order": "source_row_ordinal ascending within the sealed normalized source",
+    "group_order": "first source_row_ordinal ascending",
+    "nearest_timestamp_matching_permitted": false,
+    "timestamp_tolerance_ns": 0,
+    "price_tolerance_fixed_1e9_units": 0,
+    "size_tolerance": 0,
+    "order_count_tolerance": 0
+  },
+  "book_state_definitions": {
+    "vendor_state": "All 60 vendor MBP-10 bid/ask price, aggregate-size, and order-count fields.",
+    "pre_each_mbo_record": "The reconstructed top ten immediately before applying that sealed MBO source row.",
+    "post_each_mbo_record": "The reconstructed top ten immediately after applying that sealed MBO source row.",
+    "post_f_last": "The post-record state at each MBO record whose flags contain F_LAST.",
+    "post_group_last": "The post-record state at the final source row in the K3 native-event group.",
+    "exact_equality": "All 60 fields equal with the frozen zero tolerances and undefined-level canonicalization.",
+    "undefined_level_canonicalization": {
+      "price_fixed_1e9": 9223372036854775807,
+      "aggregate_size": 0,
+      "order_count": 0
+    }
+  },
+  "diagnostic_taxonomy": {
+    "finding_confidence": {
+      "CONFIRMED": "An exhaustive direct count establishes the condition, or an exact deterministic equality accounts for the stated records, and the independent implementation reproduces the count and checksum.",
+      "LIKELY": "One frozen explanation accounts for at least 95 percent but less than 100 percent of the affected population, with no competing explanation within one percentage point, and the independent implementation reproduces it.",
+      "UNRESOLVED": "Neither the CONFIRMED nor LIKELY rule is met, explanations materially overlap, or the evidence cannot distinguish vendor emission semantics from reconstruction semantics."
+    },
+    "cause_labels": [
+      "EVENT_EMISSION_BOUNDARY",
+      "NATIVE_EVENT_GROUPING",
+      "ALIGNMENT_KEY_INSUFFICIENCY",
+      "SNAPSHOT_HANDLING",
+      "RECONSTRUCTION_OR_VENDOR_REPRESENTATION_SEMANTICS"
+    ],
+    "exclusive_state_match_precedence": [
+      "POST_SAME_K5_UNIQUE",
+      "PRE_SAME_K5_UNIQUE",
+      "POST_F_LAST_UNIQUE",
+      "POST_GROUP_LAST",
+      "POST_ANY_RECORD_UNIQUE",
+      "PRE_ANY_RECORD_UNIQUE",
+      "MULTIPLE_EXACT_CANDIDATES",
+      "NO_EXACT_CANDIDATE"
+    ],
+    "multiple_exact_candidate_rule": "Use this class whenever more than one distinct frozen candidate boundary or phase matches and no earlier class is uniquely determinative.",
+    "finding_population_rule": "Every reported percentage names its numerator and denominator; no row is silently excluded."
+  },
+  "exact_tests": [
+    {
+      "id": "T01_KEY_MULTIPLICITY",
+      "population": "All sealed MBO records and all sealed MBP-10 records.",
+      "tests": [
+        "Count K3 and K5 group multiplicity distributions in each source.",
+        "Count duplicate K5 groups, duplicate K5 rows beyond the first, and maximum multiplicity.",
+        "Cross-tabulate MBP-10 duplicate-key membership by sequence, exact timestamps, action, side, depth, flags, and within-K5 occurrence order.",
+        "Test whether appending the frozen within-K5 occurrence order makes each MBP-10 identifier unique.",
+        "Count MBO K5 multiplicity for all rows and separately for F_LAST rows."
+      ]
+    },
+    {
+      "id": "T02_NATIVE_EVENT_GROUP_CORRESPONDENCE",
+      "population": "The union of sealed MBO and MBP-10 K3 native-event groups.",
+      "tests": [
+        "Count MBO-only, MBP-10-only, and shared K3 groups and source rows.",
+        "For shared groups, count MBO and MBP-10 group cardinalities, F_LAST cardinality, F_LAST position, action, side, depth, flags, snapshot/live state, and duplicate-K5 membership.",
+        "For each MBP-10 record, count whether its K5 header equals any, first, last, or F_LAST MBO record in the same K3 group.",
+        "Test whether MBP-10 emission is one row per K3 group, one row per F_LAST record, one row per exact K5 occurrence, or a subset of native records."
+      ]
+    },
+    {
+      "id": "T03_HEADER_TIMESTAMP_PHASE",
+      "population": "Every MBP-10 record in a shared K3 group.",
+      "tests": [
+        "Compare the exact ts_event and ts_recv pair to the first, last, every, and every F_LAST MBO row in the same K3 group.",
+        "Separately count exact ts_event-only and ts_recv-only matches to first, last, any, and F_LAST MBO rows.",
+        "No tolerance, nearest match, resampling, forward fill, or interpolation is permitted."
+      ]
+    },
+    {
+      "id": "T04_BOOK_STATE_PHASE",
+      "population": "Every MBP-10 record in a shared K3 group.",
+      "tests": [
+        "Compare all 60 vendor fields to reconstructed states before and after every MBO row in its K3 group.",
+        "Compare all 60 fields after every F_LAST row and after the final row in the group.",
+        "Separately count exact matches at pre/post rows sharing K5 and at pre/post rows without the same K5.",
+        "Record raw overlapping membership counts and one exclusive class using the frozen precedence.",
+        "Count ambiguous rows with more than one exact candidate state."
+      ]
+    },
+    {
+      "id": "T05_MISMATCH_STRATIFICATION",
+      "population": "All Step 3B.2 unmatched vendor rows and all matched vendor rows with at least one unequal field, reproduced unchanged inside this diagnostic.",
+      "tests": [
+        "Cross-tabulate by snapshot/live state, vendor action, vendor side, vendor depth, vendor flags, UTC market state, duplicate-K5 membership, and K3 source cardinalities.",
+        "For matched unequal rows, cross-tabulate each unequal field by bid/ask side, depth level zero through nine, and price/size/order-count family.",
+        "Report all denominators and do not emit price or size values."
+      ]
+    },
+    {
+      "id": "T06_CAUSE_CLASSIFICATION",
+      "population": "The exact affected populations defined by T01 through T05.",
+      "tests": [
+        "ALIGNMENT_KEY_INSUFFICIENCY is CONFIRMED when duplicate K5 MBP-10 rows exist and within-K5 occurrence order restores identifier uniqueness; otherwise apply the frozen LIKELY/UNRESOLVED rules.",
+        "EVENT_EMISSION_BOUNDARY is CONFIRMED for the exact count of strict F_LAST failures that exactly equal one unique non-F_LAST pre/post state in the same K3 group.",
+        "NATIVE_EVENT_GROUPING is CONFIRMED for the exact count of strict K5 failures resolved by a unique state elsewhere in the same K3 group; broader attribution uses the frozen LIKELY/UNRESOLVED thresholds.",
+        "SNAPSHOT_HANDLING is CONFIRMED only if 100 percent of its stated affected population is snapshot-classified and a frozen alternative snapshot phase exactly resolves it; apply LIKELY only at the frozen 95 percent threshold.",
+        "RECONSTRUCTION_OR_VENDOR_REPRESENTATION_SEMANTICS remains UNRESOLVED for no-candidate rows unless a one-MBO-row shared K3 group with exact K5 header fails equality against both its pre and post state; that exact subpopulation is CONFIRMED as a representation discrepancy but cannot distinguish vendor from reconstruction semantics."
+      ]
+    }
+  ],
+  "market_state_policy": {
+    "timezone": "UTC",
+    "classification_timestamp": "ts_recv",
+    "intervals": [
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive": "2024-01-09T00:00:00Z",
+        "end_exclusive": "2024-01-09T22:00:00Z"
+      },
+      {
+        "state": "MAINTENANCE",
+        "start_inclusive": "2024-01-09T22:00:00Z",
+        "end_exclusive": "2024-01-09T22:45:00Z"
+      },
+      {
+        "state": "PRE_OPEN",
+        "start_inclusive": "2024-01-09T22:45:00Z",
+        "end_exclusive": "2024-01-09T23:00:00Z"
+      },
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_inclusive": "2024-01-09T23:00:00Z",
+        "end_exclusive": "2024-01-10T00:00:00Z"
+      }
+    ],
+    "coverage_must_be_complete_and_nonoverlapping": true,
+    "locked_or_crossed_pre_open_states_reported_not_treated_as_reconstruction_failures": true
+  },
+  "independent_reproduction": {
+    "implementations": [
+      "explicit price-level FIFO reconstruction with independently maintained sorted price index",
+      "order-map reconstruction with independently aggregated level index"
+    ],
+    "separate_complete_source_passes_required": true,
+    "identical_aggregate_counts_required": true,
+    "identical_row-decision_checksum_required": true,
+    "identical_final_reconstruction_state_required": true,
+    "any_reproduction_difference": "STEP_3C_DIAGNOSTIC_FAIL"
+  },
+  "recommendation_selection_rule": {
+    "maximum_bounded_engineering_corrections": 1,
+    "if_one_frozen_alignment_or_phase_resolves_100_percent_without_ambiguity": "Recommend that exact deterministic comparator-adapter correction.",
+    "if_one_frozen_alignment_or_phase_resolves_at_least_95_percent_but_less_than_100_percent_without_a_competing_explanation_within_one_percentage_point": "Recommend one engineering-only prototype of that exact adapter on the permanently excluded date, with the residual retained as failure.",
+    "otherwise": "Recommend no comparator correction; retain the Step 3B.2 FAIL and request provider-format clarification before another amendment.",
+    "implementation_during_step_3c_permitted": false
+  },
+  "completion_gates": {
+    "protocol_and_freeze_sealed_before_row_level_access": true,
+    "predecessor_and_source_seals_verified": true,
+    "every_vendor_row_accounted_for": true,
+    "every_shared_native_group_accounted_for": true,
+    "all_six_frozen_test_families_completed": true,
+    "every finding_has_confidence_and_supporting_counts": true,
+    "primary_and_reference_counts_identical": true,
+    "primary_and_reference_row_decision_checksums_identical": true,
+    "at_most_one_bounded_correction_recommended": true,
+    "no_predecessor_artifact_modified": true,
+    "no_additional_data_acquired": true,
+    "no_market_values_reported": true,
+    "no_outcomes_or_directional_analysis": true,
+    "no_signals_or_execution_optimization": true,
+    "no_trades_or_pnl": true
+  },
+  "prohibited": [
+    "modifying or repairing the Step 3B.2 comparator",
+    "modifying any predecessor verdict or sealed artifact",
+    "acquiring or substituting data",
+    "human inspection or reporting of market values",
+    "changing a taxonomy, key, test, threshold, precedence, or recommendation rule after row-level access",
+    "dropping or silently filtering records",
+    "nearest-time or tolerant matching",
+    "creating features or signals",
+    "inspecting market outcomes",
+    "directional analysis",
+    "execution optimization",
+    "trades",
+    "PnL",
+    "R multiples",
+    "account returns"
+  ]
+}

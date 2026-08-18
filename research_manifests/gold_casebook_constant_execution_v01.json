@@ -1,0 +1,136 @@
+{
+  "manifest_version": "GOLD_CASEBOOK_CONSTANT_EXECUTION_V0_1",
+  "status": "FROZEN_BEFORE_FIRST_RESULT",
+  "governing_contract": "GOLD_CASEBOOK_RESEARCH_CONTRACT.md",
+  "milestone": "3_CONSTANT_EXECUTION_BASELINE",
+  "casebook": {
+    "version": "GOLD_CASEBOOK_V0_1",
+    "manifest_path": "research_artifacts/gold_casebook_v01/manifest.json",
+    "manifest_hash": "d1241633b073cd7307f1da00a13a2d76c132f3dccefc52a076be2c641f06b85f",
+    "sessions_artifact_sha256": "2695a2c0b9e8f41fcbf64c9f388e8883ebf7e1f0b3b09b90fb3a60ba7e64966a",
+    "price_artifact_sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+  },
+  "research_interval": {
+    "start_inclusive": "2021-08-01T00:00:00+00:00",
+    "end_exclusive": "2025-01-01T00:00:00+00:00",
+    "locked_holdout": "calendar year 2025",
+    "holdout_loaded": false
+  },
+  "sessions": {
+    "LONDON": {
+      "timezone": "Europe/London",
+      "decision_clock_local": "08:00",
+      "entry_clock_local": "08:01",
+      "fixed_exit_clock_local": "12:00"
+    },
+    "NEW_YORK": {
+      "timezone": "America/New_York",
+      "decision_clock_local": "08:00",
+      "entry_clock_local": "08:01",
+      "fixed_exit_clock_local": "12:00"
+    }
+  },
+  "fill_rule": {
+    "source_instrument": "XAUUSD",
+    "source_provider": "IC_MARKETS_MT5",
+    "source_timeframe": "1m",
+    "entry_bar_rule": "open_time equals decision_at plus one minute",
+    "entry_reference_price": "entry bar open",
+    "exit_bar_rule": "open_time equals observation_end minus one minute",
+    "exit_reference_price": "exit bar close",
+    "entry_latency_minutes": 1,
+    "stop": null,
+    "target": null,
+    "early_exit": null,
+    "financing_cost": 0.0,
+    "financing_reason": "Every position is closed intraday at the fixed session clock."
+  },
+  "notional": {
+    "quantity_ounces": 1.0,
+    "contract_size_ounces_per_lot": 100.0,
+    "quantity_lots": 0.01,
+    "leverage_assumption": null,
+    "account_equity_assumption": null,
+    "interpretation": "P&L is USD per fixed one-ounce position; returns are also reported in basis points of entry notional."
+  },
+  "costs": {
+    "spread": {
+      "source": "observed spread_price on the exact entry and exit one-minute bars",
+      "treatment": "The broker chart quote is treated as a symmetric reference quote. Half the observed entry spread is paid adversely at entry and half the observed exit spread adversely at exit.",
+      "missing_policy": "Exclude the case with SPREAD_UNKNOWN; never impute a default."
+    },
+    "slippage_price_usd_per_ounce_per_side": 0.05,
+    "slippage_sides": 2,
+    "commission_usd_per_lot_round_turn": 7.0,
+    "cost_multiplier": 1.0,
+    "cost_formula": "((entry_spread + exit_spread) / 2 + 2 * slippage_per_side) * quantity_ounces + commission_per_lot_round_turn * quantity_lots"
+  },
+  "incomplete_session_policy": {
+    "eligible_case_source": "Only immutable SESSION_CASE records admitted by milestone 2.",
+    "entry_or_exit_bar_missing": "Exclude with exact reason; do not fill forward or substitute another bar.",
+    "entry_or_exit_spread_missing": "Exclude with exact reason; do not impute.",
+    "partial_session": "Exclude.",
+    "minimum_required_cases": null
+  },
+  "position_policy": {
+    "positions_per_session": 1,
+    "same_instrument_overlap": "If an earlier XAUUSD position remains open at a later candidate entry, skip the later candidate.",
+    "expected_overlap_under_frozen_clocks": 0,
+    "session_reporting": "London and New York are reported separately; no portfolio leverage or account scaling is applied."
+  },
+  "controls": {
+    "ALWAYS_LONG": {
+      "direction": "LONG",
+      "applies_to": "every eligible case"
+    },
+    "ALWAYS_SHORT": {
+      "direction": "SHORT",
+      "applies_to": "every eligible case"
+    },
+    "DETERMINISTIC_RANDOM": {
+      "algorithm": "SHA-256",
+      "namespace": "GOLD_CASEBOOK_BASELINE_RANDOM_V0_1",
+      "input": "namespace + ASCII vertical bar + immutable case_id",
+      "mapping": "first digest byte below 128 is LONG; otherwise SHORT",
+      "order_independent": true
+    }
+  },
+  "metrics": {
+    "primary": [
+      "observations",
+      "net_win_rate_pct",
+      "mean_net_pnl_usd_per_ounce",
+      "median_net_pnl_usd_per_ounce",
+      "mean_net_return_basis_points",
+      "mean_net_return_95pct_normal_ci_basis_points",
+      "total_net_pnl_usd_per_ounce",
+      "profit_factor",
+      "maximum_drawdown_usd_per_ounce"
+    ],
+    "secondary": [
+      "gross_win_rate_pct",
+      "mean_gross_pnl_usd_per_ounce",
+      "total_gross_pnl_usd_per_ounce",
+      "total_spread_cost_usd_per_ounce",
+      "total_slippage_cost_usd_per_ounce",
+      "total_commission_usd_per_ounce",
+      "session_return_sharpe_sqrt_252",
+      "results_by_year",
+      "long_direction_count",
+      "short_direction_count"
+    ],
+    "uncertainty_method": "Normal approximation using sample standard error; no resampling or parameter search.",
+    "return_aggregation": "Arithmetic per-case returns; no compounding or account-level scaling."
+  },
+  "prohibited": {
+    "entry_optimization": true,
+    "exit_optimization": true,
+    "stop_optimization": true,
+    "target_optimization": true,
+    "reward_to_risk_optimization": true,
+    "fundamental_or_structure_filtering": true,
+    "calendar_2025_access": true,
+    "rule_change_after_result": true
+  },
+  "manifest_hash": "724a4fef0fa4b526b4d30b9743c2dfa013c53f87b19262a36b05f3fd07c87d76"
+}

@@ -1,0 +1,38 @@
+{
+  "version": "GOLD_STRUCTURAL_STOP_GEOMETRY_V1_IMPLEMENTATION_FREEZE_1_0",
+  "status": "FROZEN_BEFORE_STAGE_1_VALUES",
+  "timestamp_unit": "UTC_NANOSECONDS",
+  "path_interval": "[ENTRY_M1_OPEN, ORIGINAL_FROZEN_PARENT_BAR_DEADLINE)",
+  "parent_deadline": "FIRST_PARENT_CLOSE_STRICTLY_AFTER_ENTRY_PLUS_TIME_EXIT_PARENT_BARS_MINUS_ONE",
+  "buffer_rounding": "PYTHON_ROUND_TO_INTEGER_E8",
+  "latest_swing_filter": {
+    "scale": "STANDARD",
+    "known_at_lte_entry": true,
+    "long_side": "LOWER_WITH_PRICE_BELOW_ENTRY",
+    "short_side": "UPPER_WITH_PRICE_ABOVE_ENTRY",
+    "selection_order": ["KNOWN_AT_DESC", "PIVOT_AT_DESC", "SWING_ID_ASC"]
+  },
+  "first_passage": {
+    "same_m1_bar": "STOP_FIRST",
+    "stop_fill": "LONG_MIN_STOP_OR_BAR_OPEN_SHORT_MAX_STOP_OR_BAR_OPEN",
+    "target_fill": "ORIGINAL_ABSOLUTE_TARGET_PRICE",
+    "time_fill": "FINAL_M1_CLOSE_BEFORE_DEADLINE"
+  },
+  "mfe_tie": "FIRST_MINUTE_AT_GLOBAL_MAXIMUM",
+  "stop_before_global_mfe": "FIRST_STOP_OFFSET_LTE_FIRST_GLOBAL_MFE_OFFSET",
+  "stage1_primary": "NUMPY_FIRST_PASSAGE",
+  "stage1_reference": "ITERATIVE_FIRST_PASSAGE",
+  "economic_primary": "NUMPY_FIRST_PASSAGE",
+  "economic_reference": "ITERATIVE_FIRST_PASSAGE",
+  "risk_sizing": "FLOOR_50_DIVIDED_BY_STOP_DISTANCE_PLUS_ROUNDTRIP_COST_USD_PER_OUNCE",
+  "minimum_size_ounces": 1,
+  "normalized_pnl": "50_TIMES_NET_R",
+  "cluster_date_source": "FROZEN_MODEL_TRADE",
+  "session_source": "FROZEN_MODEL_TRADE",
+  "annual_source": "FROZEN_KNOWN_AT_YEAR",
+  "candidate_identity": "TIMEFRAME|MODEL_ID|STOP_ID",
+  "neighbour_identity": "CANDIDATE_ID|BUFFER_ATR",
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "paid_acquisition_usd": 0.0
+}

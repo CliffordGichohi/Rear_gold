@@ -1,0 +1,54 @@
+{
+  "amendment_a": {
+    "bytes": 1625,
+    "path": "research_manifests/gold_h4_continuation_tradable_ceiling_v1_amendment_a.json",
+    "sha256": "a1d36be7af7f3965a71db11bdb3ef21a16144caef572c68a684b8327ef893e1d"
+  },
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "certification": {
+    "bytes": 3340,
+    "path": "research_artifacts/gold_h4_continuation_tradable_ceiling_v1/reproduction_certification.json",
+    "sha256": "e15f4ed71de47e66505f897714d0ad13cada00129f60c39963236c3093e41d89"
+  },
+  "contract": {
+    "bytes": 7615,
+    "path": "GOLD_H4_CONTINUATION_TRADABLE_CEILING_AND_MONETIZATION_AUDIT_CONTRACT_V1.md",
+    "sha256": "72994beb0e851ed1ea491b907034e5b28cccbe3935cafd1bd4e1b60588170011"
+  },
+  "final_result": {
+    "bytes": 9274,
+    "path": "research_artifacts/gold_h4_continuation_tradable_ceiling_v1/final_result.json",
+    "sha256": "537318bde44b955579945fdf9033699739e93e25ff0f8b10438945ba1d82cdec"
+  },
+  "original_failure": {
+    "bytes": 1382,
+    "path": "research_artifacts/gold_h4_continuation_tradable_ceiling_v1/attempt_1_failure.json",
+    "sha256": "6cf533998fc919c6123b46c5c0ad7dabf1404528d23124b9c40da7f5a3ec2040"
+  },
+  "original_prepath_freeze": {
+    "bytes": 3151,
+    "path": "research_manifests/gold_h4_continuation_tradable_ceiling_v1_prepath_freeze.json",
+    "sha256": "b9601de6ac4e0b391268002b05167266e4233bfec9d326dcbf6e80fc2f083743"
+  },
+  "paid_acquisition_usd": 0.0,
+  "protocol": {
+    "bytes": 3560,
+    "path": "research_manifests/gold_h4_continuation_tradable_ceiling_v1_protocol.json",
+    "sha256": "a8956d344c43b72776b21caf05cacef9e366369c1e5b827114e30fa69249b766"
+  },
+  "recovery_freeze": {
+    "bytes": 1910,
+    "path": "research_manifests/gold_h4_continuation_tradable_ceiling_v1_recovery_freeze_a.json",
+    "sha256": "c3626dd02a419bf22308076ca4646f1ad3f58b4a687e5abb810805c2971c8c7b"
+  },
+  "report": {
+    "bytes": 2919,
+    "path": "GOLD_H4_CONTINUATION_TRADABLE_CEILING_AND_MONETIZATION_AUDIT_V1_REPORT.md",
+    "sha256": "5af667b972ac7f9f5796f1da326fb934005bf233f2cbb2be3df57f6263f5ab12"
+  },
+  "sealed_at_utc": "2026-08-11T13:26:56.019119Z",
+  "status": "SEALED_FINAL_AUDIT_UNDER_AMENDMENT_A",
+  "verdict": "UPPER_BOUND_CAPACITY_PRESENT_NOT_DEMONSTRATED",
+  "version": "GOLD_H4_CONTINUATION_TRADABLE_CEILING_V1_FINAL_FREEZE_R1_1_0"
+}

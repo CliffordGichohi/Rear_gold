@@ -11,6 +11,7 @@ from typing import Any
 from uuid import uuid4
 
 from sqlalchemy import select
+from sqlalchemy.dialects.postgresql import insert as postgresql_insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from gold_intel.infrastructure.models import (
@@ -21,9 +22,54 @@ from gold_intel.infrastructure.models import (
     RawRecord,
 )
 
+
+@dataclass(frozen=True, slots=True)
+class PriceDatasetContract:
+    dataset_code: str
+    instrument_code: str
+    provider_code: str
+    point_size: Decimal
+
+
 PRICE_DATASET = "XAUUSD_1M"
+EURUSD_PRICE_DATASET = "EURUSD_1M"
+XAGUSD_PRICE_DATASET = "XAGUSD_1M"
+US500_PRICE_DATASET = "US500_1M"
+TLT_PRICE_DATASET = "TLT.NAS_1M"
+PRICE_DATASETS: dict[str, PriceDatasetContract] = {
+    PRICE_DATASET: PriceDatasetContract(
+        dataset_code=PRICE_DATASET,
+        instrument_code="XAUUSD",
+        provider_code="IC_MARKETS_MT5",
+        point_size=Decimal("0.01"),
+    ),
+    EURUSD_PRICE_DATASET: PriceDatasetContract(
+        dataset_code=EURUSD_PRICE_DATASET,
+        instrument_code="EURUSD",
+        provider_code="IC_MARKETS_MT5",
+        point_size=Decimal("0.00001"),
+    ),
+    XAGUSD_PRICE_DATASET: PriceDatasetContract(
+        dataset_code=XAGUSD_PRICE_DATASET,
+        instrument_code="XAGUSD",
+        provider_code="IC_MARKETS_MT5",
+        point_size=Decimal("0.001"),
+    ),
+    US500_PRICE_DATASET: PriceDatasetContract(
+        dataset_code=US500_PRICE_DATASET,
+        instrument_code="US500",
+        provider_code="IC_MARKETS_MT5",
+        point_size=Decimal("0.01"),
+    ),
+    TLT_PRICE_DATASET: PriceDatasetContract(
+        dataset_code=TLT_PRICE_DATASET,
+        instrument_code="TLT.NAS",
+        provider_code="IC_MARKETS_MT5",
+        point_size=Decimal("0.01"),
+    ),
+}
 REAL_YIELD_DATASET = "US_REAL_YIELD_10Y_DAILY"
-SUPPORTED_DATASETS = {PRICE_DATASET, REAL_YIELD_DATASET}
+SUPPORTED_DATASETS = {*PRICE_DATASETS, REAL_YIELD_DATASET}
 
 
 @dataclass(frozen=True, slots=True)
@@ -94,43 +140,47 @@ async def ingest_csv_path(
     invalid = 0
     issue_count = 0
     normalized_open_times: list[datetime] = []
+    price_models: list[PriceBar] = []
+    raw_values: list[dict[str, Any]] = []
     with destination.open("r", encoding="utf-8-sig", newline="") as stream:
         reader = csv.DictReader(stream)
         if reader.fieldnames is None:
             raise ValueError("CSV file has no header row")
         for record_number, row in enumerate(reader, start=1):
             payload = {str(key): value for key, value in row.items()}
-            raw_record = RawRecord(
-                id=uuid4(),
-                batch_id=batch.id,
-                record_number=record_number,
-                source_record_key=None,
-                payload=payload,
-                parsed_ok=False,
-            )
-            session.add(raw_record)
+            raw_value: dict[str, Any] = {
+                "id": uuid4(),
+                "batch_id": batch.id,
+                "record_number": record_number,
+                "source_record_key": None,
+                "payload": payload,
+                "parsed_ok": False,
+                "parse_error": None,
+            }
             try:
                 model: PriceBar | Observation
-                if dataset_code == PRICE_DATASET:
+                if dataset_code in PRICE_DATASETS:
                     model = _parse_price_row(
                         row,
                         batch_id=batch.id,
                         provider_code=provider_code,
+                        dataset_code=dataset_code,
                         is_synthetic=is_synthetic,
                     )
                     normalized_open_times.append(model.open_time)
+                    price_models.append(model)
                 else:
                     model = _parse_real_yield_row(
                         row,
                         batch_id=batch.id,
                         is_synthetic=is_synthetic,
                     )
-                raw_record.source_record_key = model.source_record_key
-                raw_record.parsed_ok = True
-                session.add(model)
+                    session.add(model)
+                raw_value["source_record_key"] = model.source_record_key
+                raw_value["parsed_ok"] = True
                 valid += 1
             except (KeyError, ValueError, InvalidOperation) as exc:
-                raw_record.parse_error = str(exc)
+                raw_value["parse_error"] = str(exc)
                 invalid += 1
                 issue_count += 1
                 session.add(
@@ -144,8 +194,18 @@ async def ingest_csv_path(
                         context={"record_number": record_number},
                     )
                 )
+            raw_values.append(raw_value)
 
-    if dataset_code == PRICE_DATASET and normalized_open_times:
+    if raw_values:
+        await _insert_raw_records(session, raw_values)
+
+    if price_models:
+        await _insert_price_models_idempotently(
+            session,
+            price_models,
+        )
+
+    if dataset_code in PRICE_DATASETS and normalized_open_times:
         missing = _missing_minutes(normalized_open_times)
         if missing:
             issue_count += 1
@@ -177,13 +237,88 @@ async def ingest_csv_path(
     )
 
 
+async def _insert_raw_records(
+    session: AsyncSession,
+    values: list[dict[str, Any]],
+) -> None:
+    """Persist the append-only audit ledger without per-row ORM tracking."""
+
+    # Seven bound columns per row; 4,000 rows stay below the 32,767
+    # asyncpg/PostgreSQL bind-parameter ceiling.
+    chunk_size = 4_000
+    for offset in range(0, len(values), chunk_size):
+        await session.execute(
+            postgresql_insert(RawRecord).values(values[offset : offset + chunk_size])
+        )
+
+
+async def _insert_price_models_idempotently(
+    session: AsyncSession,
+    models: list[PriceBar],
+) -> None:
+    """Insert immutable price facts while tolerating overlapping source files.
+
+    Content-hash idempotency handles exact file retries. The natural-key
+    conflict policy also handles a differently chunked or partially
+    overlapping retry without overwriting an existing fact.
+    """
+
+    # PriceBar currently binds 19 parameters per row. 1,500 rows use 28,500
+    # parameters, below asyncpg/PostgreSQL's 32,767 ceiling.
+    chunk_size = 1_500
+    for offset in range(0, len(models), chunk_size):
+        values = [
+            {
+                "id": model.id,
+                "open_time": model.open_time,
+                "close_time": model.close_time,
+                "provider_code": model.provider_code,
+                "instrument_code": model.instrument_code,
+                "timeframe": model.timeframe,
+                "open": model.open,
+                "high": model.high,
+                "low": model.low,
+                "close": model.close,
+                "volume": model.volume,
+                "volume_type": model.volume_type,
+                "spread_points": model.spread_points,
+                "spread_price": model.spread_price,
+                "available_at": model.available_at,
+                "batch_id": model.batch_id,
+                "source_record_key": model.source_record_key,
+                "is_complete": model.is_complete,
+                "is_synthetic": model.is_synthetic,
+            }
+            for model in models[offset : offset + chunk_size]
+        ]
+        statement = postgresql_insert(PriceBar).values(values)
+        statement = statement.on_conflict_do_nothing(
+            index_elements=(
+                "provider_code",
+                "instrument_code",
+                "timeframe",
+                "open_time",
+                "available_at",
+            )
+        )
+        await session.execute(statement)
+
+
 def _parse_price_row(
     row: dict[str, str | None],
     *,
     batch_id: Any,
     provider_code: str,
+    dataset_code: str = PRICE_DATASET,
     is_synthetic: bool,
 ) -> PriceBar:
+    contract = PRICE_DATASETS.get(dataset_code)
+    if contract is None:
+        raise ValueError(f"Unsupported price dataset_code: {dataset_code}")
+    if provider_code != contract.provider_code:
+        raise ValueError(
+            "spread_points require an explicit provider point-size contract"
+        )
     open_time = _timestamp(_required(row, "open_time"))
     close_time = _timestamp(_required(row, "close_time"))
     available_at = _timestamp(_required(row, "available_at"))
@@ -202,18 +337,15 @@ def _parse_price_row(
     spread_points = _optional_nonnegative_integer(row.get("spread_points"), "spread_points")
     spread_price: Decimal | None = None
     if spread_points is not None:
-        if provider_code != "IC_MARKETS_MT5":
-            raise ValueError("spread_points require an explicit provider point-size contract")
-        # Versioned source contract:
-        # IC Markets KE XAUUSD, terminal build 5833, SYMBOL_POINT=0.01.
-        spread_price = Decimal(spread_points) * Decimal("0.01")
+        # Versioned IC Markets KE source contract, terminal build 5833.
+        spread_price = Decimal(spread_points) * contract.point_size
     key = open_time.isoformat()
     return PriceBar(
         id=uuid4(),
         open_time=open_time,
         close_time=close_time,
         provider_code=provider_code,
-        instrument_code="XAUUSD",
+        instrument_code=contract.instrument_code,
         timeframe="1m",
         open=open_price,
         high=high,

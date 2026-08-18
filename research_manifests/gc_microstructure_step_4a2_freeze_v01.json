@@ -1,0 +1,47 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4A2_FREEZE_V0_1",
+  "status": "DISPOSITION_PROTOCOL_SEALED_BEFORE_IMPLEMENTATION_AND_FEATURE_ROW_ACCESS",
+  "sealed_at_utc": "2026-07-31T12:32:20.8468350Z",
+  "classification": "FINAL_METADATA_CLASSIFICATION_DISPOSITION_ONLY",
+  "research_or_validation_credit": "NONE",
+  "protocol": {
+    "path": "research_manifests/gc_microstructure_step_4a2_protocol_v01.json",
+    "bytes": 10472,
+    "sha256": "e4584f99274e04065d006d2aeef5073743f98c8e2bd6d300f7cce5b2ad51ea29",
+    "json_valid": true
+  },
+  "pre_freeze_verification": {
+    "step_4a_status": "FAIL_FEATURE_INTEGRITY",
+    "step_4a_manifest_hash": "4960f1ee7f03e21cc490ea81b8e15554ed6c879527d8a02c3956b849cab2bf0f",
+    "step_4a_sealed_artifacts_verified": 7,
+    "step_4a1_status": "FAIL_DIAGNOSTIC_INTEGRITY",
+    "step_4a1_manifest_hash": "6bcc2f207fa8554f780aec269bd0ad3f4bff6686a37260bfc60b479b6f07eee5",
+    "step_4a1_sealed_artifacts_verified": 4,
+    "predecessor_verdicts_preserved": true,
+    "primary_payload_sha256": "b559771bc332f400900da43e3c16619a5b75b9457c2a15975d390e977085eda3",
+    "reference_payload_sha256": "b559771bc332f400900da43e3c16619a5b75b9457c2a15975d390e977085eda3",
+    "payloads_byte_identical": true,
+    "feature_rows_accessed": false,
+    "market_values_accessed": false
+  },
+  "frozen_scope": {
+    "allowed_column_count": 7,
+    "allowed_columns_frozen": true,
+    "temporal_grid_and_segment_counts_frozen": true,
+    "crossed_identity_hash_frozen": true,
+    "binary_decision_rule_frozen": true,
+    "exactly_one_recommendation_required": true,
+    "recommendation_implementation_permitted": false
+  },
+  "prohibited_work_not_started": {
+    "source_mbo_or_mbp_access": false,
+    "disallowed_feature_column_access": false,
+    "raw_state_ordinal_emission": false,
+    "feature_pipeline_modification_or_rerun": false,
+    "additional_data_acquisition": false,
+    "another_date_inspection": false,
+    "outcome_or_signal_testing": false,
+    "execution_optimization": false,
+    "pnl_or_return_calculation": false
+  }
+}

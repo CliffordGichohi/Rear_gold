@@ -1,0 +1,305 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4B2_AUTHORIZATION_V0_1",
+  "status": "FROZEN_BEFORE_FRESH_ESTIMATE_AND_BATCH_SUBMISSION",
+  "frozen_at_utc": "2026-07-31T14:13:42.2211144Z",
+  "classification": "ENGINEERING_ONLY_MULTI_DAY_SOURCE_ACQUISITION",
+  "research_or_validation_credit": "NONE",
+  "purpose": "Acquire, normalize, technically validate, hash, and seal only the ten Step 4B.1 MBO and MBP-10 requests without exposing market values or performing research.",
+  "predecessor_preservation": {
+    "required_step_4b1_status": "PASS_METADATA_QUOTE_READINESS",
+    "required_step_4b1_manifest_hash": "d58fb44b18af6173f597b3a99feba69e68ac0a7de265151e40799cb286d69d0d",
+    "required_step_4b1_verdict_hash": "95b31c2921e1aef834d36eeb7768b807ed956a2e13c837670fc68b2b4dcaa082",
+    "step_4b1_manifest_file_sha256": "e53cd5aafbb447cf4d5ab4a2e65f89a1e063e7bfc0c164301a58170c1a891fd9",
+    "step_4b1_protocol_sha256": "a3945d747d0a20aa0143ab03fb65e3bb5bdf8d750c2018a3e2fd6de6090c1be9",
+    "step_4b1_freeze_sha256": "e8031f3a9a6b0e6c4a86df4bae9ba2f4a1c481b1529a0449eabb4f0a387b3656",
+    "all_step_4b1_and_earlier_verdicts_and_artifacts_immutable": true
+  },
+  "authorization": {
+    "maximum_combined_charge_usd": 3.5,
+    "fresh_combined_estimate_required_before_any_submission": true,
+    "stop_before_submission_if_estimate_exceeds_cap": true,
+    "minimum_free_storage_bytes_before_submission": 21474836480,
+    "maximum_batch_jobs": 10,
+    "partial_submission_recovery_permitted": true,
+    "additional_or_substitute_request_permitted": false,
+    "paid_acquisition_authorized_only_after_all_pre_submission_gates_pass": true
+  },
+  "common_batch_request": {
+    "dataset": "GLBX.MDP3",
+    "symbols": [
+      "GC.v.0"
+    ],
+    "stype_in": "continuous",
+    "stype_out": "instrument_id",
+    "encoding": "dbn",
+    "compression": "zstd",
+    "pretty_px": false,
+    "pretty_ts": false,
+    "map_symbols": false,
+    "split_duration": "day",
+    "split_symbols": false,
+    "delivery": "download"
+  },
+  "exact_requests_in_submission_order": [
+    {
+      "request_id": "2024-01-05:mbo",
+      "engineering_date": "2024-01-05",
+      "schema": "mbo",
+      "start": "2024-01-05T00:00:00Z",
+      "end": "2024-01-06T00:00:00Z",
+      "expected_instrument_id": 41512,
+      "dst_window_class": "UTC-06:00_CST"
+    },
+    {
+      "request_id": "2024-01-05:mbp-10",
+      "engineering_date": "2024-01-05",
+      "schema": "mbp-10",
+      "start": "2024-01-05T00:00:00Z",
+      "end": "2024-01-06T00:00:00Z",
+      "expected_instrument_id": 41512,
+      "dst_window_class": "UTC-06:00_CST"
+    },
+    {
+      "request_id": "2024-01-11:mbo",
+      "engineering_date": "2024-01-11",
+      "schema": "mbo",
+      "start": "2024-01-11T00:00:00Z",
+      "end": "2024-01-12T00:00:00Z",
+      "expected_instrument_id": 41512,
+      "dst_window_class": "UTC-06:00_CST"
+    },
+    {
+      "request_id": "2024-01-11:mbp-10",
+      "engineering_date": "2024-01-11",
+      "schema": "mbp-10",
+      "start": "2024-01-11T00:00:00Z",
+      "end": "2024-01-12T00:00:00Z",
+      "expected_instrument_id": 41512,
+      "dst_window_class": "UTC-06:00_CST"
+    },
+    {
+      "request_id": "2024-01-30:mbo",
+      "engineering_date": "2024-01-30",
+      "schema": "mbo",
+      "start": "2024-01-30T00:00:00Z",
+      "end": "2024-01-31T00:00:00Z",
+      "expected_instrument_id": 41512,
+      "dst_window_class": "UTC-06:00_CST"
+    },
+    {
+      "request_id": "2024-01-30:mbp-10",
+      "engineering_date": "2024-01-30",
+      "schema": "mbp-10",
+      "start": "2024-01-30T00:00:00Z",
+      "end": "2024-01-31T00:00:00Z",
+      "expected_instrument_id": 41512,
+      "dst_window_class": "UTC-06:00_CST"
+    },
+    {
+      "request_id": "2024-01-31:mbo",
+      "engineering_date": "2024-01-31",
+      "schema": "mbo",
+      "start": "2024-01-31T00:00:00Z",
+      "end": "2024-02-01T00:00:00Z",
+      "expected_instrument_id": 44740,
+      "dst_window_class": "UTC-06:00_CST"
+    },
+    {
+      "request_id": "2024-01-31:mbp-10",
+      "engineering_date": "2024-01-31",
+      "schema": "mbp-10",
+      "start": "2024-01-31T00:00:00Z",
+      "end": "2024-02-01T00:00:00Z",
+      "expected_instrument_id": 44740,
+      "dst_window_class": "UTC-06:00_CST"
+    },
+    {
+      "request_id": "2024-03-20:mbo",
+      "engineering_date": "2024-03-20",
+      "schema": "mbo",
+      "start": "2024-03-20T00:00:00Z",
+      "end": "2024-03-21T00:00:00Z",
+      "expected_instrument_id": 44740,
+      "dst_window_class": "UTC-05:00_CDT"
+    },
+    {
+      "request_id": "2024-03-20:mbp-10",
+      "engineering_date": "2024-03-20",
+      "schema": "mbp-10",
+      "start": "2024-03-20T00:00:00Z",
+      "end": "2024-03-21T00:00:00Z",
+      "expected_instrument_id": 44740,
+      "dst_window_class": "UTC-05:00_CDT"
+    }
+  ],
+  "metadata_request_fields": [
+    "dataset",
+    "symbols",
+    "schema",
+    "stype_in",
+    "start",
+    "end"
+  ],
+  "pre_submission_gates": {
+    "step_4b1_and_earlier_seals_valid": true,
+    "databento_sdk_version": "0.82.0",
+    "all_ten_request_fingerprints_exact": true,
+    "continuous_symbol_intervals_and_roll_pair_match_step_4b1": true,
+    "free_storage_at_least_21474836480_bytes": true,
+    "each_fresh_cost_finite_and_nonnegative": true,
+    "each_fresh_record_count_positive": true,
+    "each_fresh_billable_size_positive": true,
+    "fresh_combined_cost_at_or_below_3_50_usd": true,
+    "no_existing_incompatible_or_duplicate_intent": true
+  },
+  "restart_and_submission_policy": {
+    "record_complete_submission_intent_before_first_batch_call": true,
+    "write_each_job_id_atomically_immediately_after_return": true,
+    "recover_only_an_exact_matching_job_created_after_the_recorded_intent": true,
+    "never_submit_a_second_job_for_a_request_with_a_recorded_job_id": true,
+    "stop_if_multiple_matching_recovery_jobs_exist": true,
+    "actual_aggregate_cost_may_not_exceed_authorized_cap": true
+  },
+  "raw_source_policy": {
+    "root": "data/raw/databento_gc_multiday_engineering_v01",
+    "one_request_directory_per_job": true,
+    "preserve_provider_files_byte_for_byte": true,
+    "record_remote_file_metadata": true,
+    "record_local_path_bytes_and_sha256": true,
+    "overwrite_permitted": false
+  },
+  "normalization_contract": {
+    "one_parquet_payload_per_request": true,
+    "chunk_rows": {
+      "mbo": 250000,
+      "mbp-10": 50000
+    },
+    "timestamp_authority": "ts_recv for request availability and UTC-day allocation",
+    "price_encoding": "signed fixed-point integer scaled by 1e9; never converted to float",
+    "symbol_mapping_during_decode": false,
+    "mbo_columns_in_order": [
+      "source_file_index",
+      "source_row_ordinal",
+      "ts_recv",
+      "ts_event",
+      "rtype",
+      "publisher_id",
+      "instrument_id",
+      "action",
+      "side",
+      "price_fixed_1e9",
+      "size",
+      "channel_id",
+      "order_id",
+      "flags",
+      "ts_in_delta",
+      "sequence"
+    ],
+    "mbp10_base_columns_in_order": [
+      "source_file_index",
+      "source_row_ordinal",
+      "ts_recv",
+      "ts_event",
+      "rtype",
+      "publisher_id",
+      "instrument_id",
+      "action",
+      "side",
+      "depth",
+      "price_fixed_1e9",
+      "size",
+      "flags",
+      "ts_in_delta",
+      "sequence"
+    ],
+    "mbp10_book_columns": "For levels 00 through 09 in level-major order: bid_px, ask_px, bid_sz, ask_sz, bid_ct, ask_ct, each with the two-digit level suffix.",
+    "compression": "zstd",
+    "dictionary_columns": [
+      "action",
+      "side"
+    ],
+    "feature_or_signal_calculation_permitted": false
+  },
+  "technical_validation_contract": {
+    "provider_record_count_matches_normalized_rows": true,
+    "DBN_schema_matches_request": true,
+    "required_columns_present_and_nonnull": true,
+    "publisher_id_exactly_1": true,
+    "instrument_id_matches_frozen_date_mapping": true,
+    "rtype_matches_schema": true,
+    "ts_recv_inside_frozen_UTC_day": true,
+    "ts_recv_nondecreasing": true,
+    "source_row_ordinal_strictly_increasing_within_source_file": true,
+    "ts_event_before_request_end": true,
+    "pre_start_ts_event_rows_are_snapshot_flagged_received_at_request_start_and_action_A_or_R": true,
+    "negative_sizes_or_book_counts_zero": true,
+    "MBP10_empty_level_coupling_and_level_ordering_valid": true,
+    "every_row_classified_exactly_once_into_the_frozen_DST_aware_market_state_segments": true,
+    "exact_adjacent_full_record_duplicates_counted_and_reported": true,
+    "raw_and_normalized_hashes_recorded": true,
+    "human_or_model_market_value_inspection": false
+  },
+  "dst_market_state_segments": {
+    "UTC-06:00_CST": [
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_utc": "00:00:00",
+        "end_utc": "22:00:00"
+      },
+      {
+        "state": "MAINTENANCE",
+        "start_utc": "22:00:00",
+        "end_utc": "22:45:00"
+      },
+      {
+        "state": "PRE_OPEN",
+        "start_utc": "22:45:00",
+        "end_utc": "23:00:00"
+      },
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_utc": "23:00:00",
+        "end_utc": "24:00:00"
+      }
+    ],
+    "UTC-05:00_CDT": [
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_utc": "00:00:00",
+        "end_utc": "21:00:00"
+      },
+      {
+        "state": "MAINTENANCE",
+        "start_utc": "21:00:00",
+        "end_utc": "21:45:00"
+      },
+      {
+        "state": "PRE_OPEN",
+        "start_utc": "21:45:00",
+        "end_utc": "22:00:00"
+      },
+      {
+        "state": "CONTINUOUS_MATCHING",
+        "start_utc": "22:00:00",
+        "end_utc": "24:00:00"
+      }
+    ]
+  },
+  "verdict_precedence": [
+    "FAIL_PRE_SUBMISSION_READINESS",
+    "FAIL_ACQUISITION_COMPLETENESS_OR_CAP",
+    "FAIL_NORMALIZATION_OR_SOURCE_INTEGRITY",
+    "PASS_ENGINEERING_SOURCE_ACQUISITION"
+  ],
+  "prohibited": [
+    "modifying a predecessor verdict or sealed artifact",
+    "submitting before all ten fresh quotes and every pre-submission gate pass",
+    "submitting more than the ten exact frozen requests",
+    "incurring aggregate cost above 3.50 USD",
+    "overwriting, modifying, deleting, or repairing a downloaded provider file",
+    "filtering, dropping, repairing, substituting, or relabeling a source row",
+    "reporting or human/model inspection of prices, depth, order-flow values, outcomes, or strategy performance",
+    "feature calculation, edge discovery, candidate creation, signal testing, execution optimization, trades, PnL, R multiples, or account returns"
+  ],
+  "completion_policy": "Acquire and seal only the ten authorized sources, record an honest PASS or FAIL, and stop before feature calculation or research."
+}

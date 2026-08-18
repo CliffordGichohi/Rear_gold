@@ -1,0 +1,18 @@
+{
+  "version": "GOLD_BLIND_SYNCHRONIZED_SETUP_REPLAY_V2_CAMERA_INPUT_AMENDMENT_B_SEAL_1_0",
+  "verdict": "PASS_V2_CAMERA_INPUT_AMENDMENT_B",
+  "sealed_at": "2026-08-14T11:31:46.6514315+00:00",
+  "predecessor_manifest_sha256": "24aafd8f73941b84ee221a828819f21c3dc92daba3e4386bf511105f49b68358",
+  "amendment_sha256": "be10fd3bcc09b454a96194fba3086f860867cd0b2b53c5c9edf9b60dfa9710d4",
+  "sealed_outputs": [
+    {
+      "path": "research_artifacts/gold_blind_synchronized_setup_replay_v2/camera_input_amendment_b_certification.json",
+      "bytes": 2130,
+      "sha256": "33520f46ac4b020bb2083ee7a8e19ec926a7f5db577120bf803ff9d785f2adfc"
+    }
+  ],
+  "human_decisions": 0,
+  "scored_labeling": "CLOSED_V2_PRACTICE_ONLY_CERTIFIED",
+  "charge_usd": 0.0,
+  "status": "SEALED_READY_FOR_V2_PRACTICE_HUMAN_LABELING_SCORED_CLOSED"
+}

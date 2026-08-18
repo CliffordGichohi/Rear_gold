@@ -81,6 +81,7 @@ async def create_run(
         fundamental_min_coverage=request.fundamental_min_coverage,
         fundamental_min_confidence=request.fundamental_min_confidence,
         block_high_impact_events=request.block_high_impact_events,
+        allow_unknown_event_risk=request.allow_unknown_event_risk,
         block_elevated_or_abnormal_liquidity=(
             request.block_elevated_or_abnormal_liquidity
         ),
@@ -104,27 +105,45 @@ async def create_run(
 @router.get("/runs", response_model=list[BacktestRunResponse])
 async def list_runs(
     limit: int = Query(default=10, ge=1, le=50),
+    strategy_version: str | None = Query(default=None, min_length=1, max_length=64),
+    detail_limit: int = Query(
+        default=0,
+        ge=0,
+        le=5,
+        description=(
+            "Include equity, provenance, and trades for only this many newest "
+            "runs. Older rows remain comparison summaries."
+        ),
+    ),
     session: AsyncSession = Depends(get_session),
 ) -> list[BacktestRunResponse]:
+    query = select(BacktestRun)
+    if strategy_version is not None:
+        query = query.where(BacktestRun.strategy_version == strategy_version)
     runs = list(
         (
             await session.scalars(
-                select(BacktestRun).order_by(BacktestRun.created_at.desc()).limit(limit)
+                query.order_by(BacktestRun.created_at.desc()).limit(limit)
             )
         ).all()
     )
     output: list[BacktestRunResponse] = []
-    for run in runs:
-        trades = list(
-            (
-                await session.scalars(
-                    select(BacktestTrade)
-                    .where(BacktestTrade.run_id == run.id)
-                    .order_by(BacktestTrade.sequence)
-                )
-            ).all()
+    for index, run in enumerate(runs):
+        include_details = index < min(detail_limit, limit)
+        trades = (
+            list(
+                (
+                    await session.scalars(
+                        select(BacktestTrade)
+                        .where(BacktestTrade.run_id == run.id)
+                        .order_by(BacktestTrade.sequence)
+                    )
+                ).all()
+            )
+            if include_details
+            else []
         )
-        output.append(_response(run, trades))
+        output.append(_response(run, trades, include_details=include_details))
     return output
 
 
@@ -148,7 +167,12 @@ async def get_run(
     return _response(run, trades)
 
 
-def _response(run: BacktestRun, trades: list[BacktestTrade]) -> BacktestRunResponse:
+def _response(
+    run: BacktestRun,
+    trades: list[BacktestTrade],
+    *,
+    include_details: bool = True,
+) -> BacktestRunResponse:
     return BacktestRunResponse(
         id=run.id,
         strategy=run.strategy_name,
@@ -162,8 +186,15 @@ def _response(run: BacktestRun, trades: list[BacktestTrade]) -> BacktestRunRespo
         data_hash=run.data_hash,
         source_bar_count=run.source_bar_count,
         metrics=run.metrics,
-        equity_curve=run.equity_curve,
-        provenance=run.provenance,
+        equity_curve=run.equity_curve if include_details else [],
+        provenance=(
+            run.provenance
+            if include_details
+            else {
+                "summary_only": True,
+                "full_run_endpoint": f"/api/v1/backtests/runs/{run.id}",
+            }
+        ),
         created_at=run.created_at,
         completed_at=run.completed_at,
         trades=[

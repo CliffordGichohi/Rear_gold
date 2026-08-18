@@ -1,0 +1,44 @@
+{
+  "version": "GC_MICROSTRUCTURE_STEP_4A_FREEZE_V0_1",
+  "status": "PROTOCOL_SEALED_BEFORE_IMPLEMENTATION_AND_BOOK_VALUE_ACCESS",
+  "sealed_at_utc": "2026-07-31T11:26:35.9180484Z",
+  "classification": "ENGINEERING_ONLY",
+  "research_or_validation_credit": "NONE",
+  "protocol": {
+    "path": "research_manifests/gc_microstructure_step_4a_protocol_v01.json",
+    "bytes": 17541,
+    "sha256": "8f1ba7230919b7422344253d4f3e55fea1e86495551cbbbf53f3e1bdcb9ec3a2",
+    "json_valid": true
+  },
+  "pre_freeze_verification": {
+    "step_3f_status": "FAIL_BOOK_MISMATCH",
+    "step_3f_manifest_hash": "aed3bbff4aaba27dfa574812a2f311b9aee06371e1da9eec84c8da9319072a81",
+    "step_3f_sealed_artifacts_verified": 10,
+    "predecessor_verdicts_preserved": true,
+    "mbo_source_sha256": "43a8a3bb2be9a4a36ab324e3fe0ca0e29ccb4529f445013a87156d3bad4c0ba3",
+    "mbp10_source_sha256": "4ead358f538d7c383a14f39bbde35b8ccfa21e38e58205edbc51bedfb2ed80d4",
+    "source_values_or_rows_accessed": false,
+    "only_metadata_lineage_quality_and_existing_code_semantics_inspected": true
+  },
+  "frozen_scope": {
+    "bucket_width_ns": 1000000000,
+    "bucket_count": 86400,
+    "availability_timestamp": "ts_recv",
+    "mbp10_authoritative_for_book_state": true,
+    "mbo_only_for_time_bucketed_event_flow": true,
+    "mbo_mbp_row_alignment_permitted": false,
+    "feature_registry_frozen": true,
+    "missing_data_policy_frozen": true,
+    "integrity_gates_frozen": true,
+    "reproduction_requirements_frozen": true,
+    "retuning_or_repair_permitted": false
+  },
+  "prohibited_work_not_started": {
+    "additional_data_acquisition": false,
+    "another_date_inspection": false,
+    "outcome_inspection": false,
+    "signal_or_candidate_testing": false,
+    "execution_optimization": false,
+    "pnl_or_return_calculation": false
+  }
+}

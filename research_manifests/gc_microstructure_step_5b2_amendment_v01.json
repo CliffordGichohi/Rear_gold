@@ -1,0 +1,159 @@
+{
+  "authorized_changes": {
+    "all_prediction_windows_complete_or_documented_unknown": {
+      "basis": "Official CME Good Friday calendar bound in sealed Step 5B.1.",
+      "every_other_prediction_window": "UNCHANGED",
+      "exact_new_dispositions": [
+        "Q017:mbo|2022-04-15|LONDON|UNAVAILABLE_DOCUMENTED",
+        "Q017:mbo|2022-04-15|NEW_YORK|UNAVAILABLE_DOCUMENTED",
+        "Q018:mbp-10|2022-04-15|LONDON|UNAVAILABLE_DOCUMENTED",
+        "Q018:mbp-10|2022-04-15|NEW_YORK|UNAVAILABLE_DOCUMENTED"
+      ]
+    },
+    "bad_ts_recv_rows_follow_snapshot_semantics": {
+      "all_other_rows": "FAIL",
+      "non_snapshot_rows": "Permit only when F_BAD_TS_RECV is set and the same frozen structural-validity tests pass.",
+      "snapshot_rows": "Retain the original historical snapshot requirements: UTC day-start ts_recv, ts_event before day start and not after ts_recv, and action A or R."
+    },
+    "exact_formal_check_keys": [
+      "receive_does_not_precede_event",
+      "bad_ts_recv_rows_follow_snapshot_semantics",
+      "all_prediction_windows_complete_or_documented_unknown"
+    ],
+    "receive_does_not_precede_event": {
+      "all_other_ts_recv_before_ts_event_rows": "FAIL",
+      "permitted_dispositions": [
+        "F_BAD_TS_RECV is set and structural validity passes",
+        "F_BAD_TS_RECV is unset, ts_in_delta is negative and unclamped, derived publisher_send_ns equals ts_recv minus ts_in_delta, publisher_send_ns is at or after ts_event, and structural validity passes"
+      ],
+      "scope": "Only MBO rows satisfying ts_recv < ts_event.",
+      "structural_validity_required": [
+        "publisher_id equals 1",
+        "instrument_id equals the frozen date mapping",
+        "action belongs to the frozen action registry",
+        "ts_recv is inside the frozen request",
+        "ts_event is before the frozen request end"
+      ]
+    }
+  },
+  "charge_incurred_usd": 0.0,
+  "classification": "VALUE_BLIND_SOURCE_INTEGRITY_RECERTIFICATION_ONLY",
+  "completion_policy": "Document, seal, verify, and stop after Step 5B.2.",
+  "frozen_at_utc": "2026-08-04T07:51:19.315668Z",
+  "independent_recertification": {
+    "each_implementation": "Independently rebuilds all 80 amended formal-check maps from the sealed original data-quality records and its own Step 5B.1 diagnostic payload.",
+    "identical_required": [
+      "all 80 request IDs and original quality gates",
+      "all unchanged formal checks",
+      "the exact changed-check set per diagnosed request",
+      "all amended formal-check maps",
+      "67 unchanged passes and 13 recertified requests",
+      "all request verdicts and aggregate checksums"
+    ],
+    "primary_input": "Sealed Step 5B.1 primary diagnostic",
+    "reference_input": "Sealed Step 5B.1 reference diagnostic"
+  },
+  "market_values_or_outcomes_accessed_or_reported": false,
+  "pass_rule": "PASS only when all 936 source records verify, all 80 source requests pass the amended integrity map, the original 67 are unchanged, exactly 13 are recertified using only the three authorized checks, and independent outputs are identical.",
+  "predecessor_preservation": {
+    "all_predecessor_artifacts_and_seals_immutable": true,
+    "implementation_correction_record_preserved": true,
+    "required_step5b1_manifest_hash": "df049551f423a70bd96c4c5acdd4720a6b531b6774f5b35d71d5c1bf7e232419",
+    "required_step5b1_status": "PASS_STEP_5B1_DIAGNOSTIC_REPRODUCTION",
+    "required_step5b_manifest_hash": "6b4074aa95953232db878027aa0dc85666c478f4abd80e864022e61fded46683",
+    "required_step5b_status": "FAIL_STEP_5B_BUDGET_C_SOURCE_INTEGRITY"
+  },
+  "prohibited": [
+    "changing any predecessor verdict, seal, source, or row",
+    "changing any formal gate beyond the three authorized keys",
+    "acquiring data or incurring a charge",
+    "inspecting price, depth, size, order-flow, feature, or outcome values",
+    "calculating relationships, candidates, signals, execution, trades, PnL, R multiples, or returns",
+    "starting Step 5C"
+  ],
+  "purpose": "Recertify the same 80 sealed Step 5B sources by changing only the three dispositions proven in Step 5B.1.",
+  "research_or_validation_credit": "NONE",
+  "sealed_inputs": {
+    "diagnosed_requests_to_recertify": 13,
+    "previously_passing_requests": 67,
+    "provider_requests": 80,
+    "source_and_normalized_file_records": 936,
+    "step5b1_freeze": {
+      "bytes": 2097,
+      "path": "research_manifests/gc_microstructure_step_5b1_freeze_v01.json",
+      "sha256": "a6b9d1ceabb286836f279dc275e4427f8dd4871b1058abfa70e5e869e6a7e29a"
+    },
+    "step5b1_implementation_correction": {
+      "bytes": 1959,
+      "path": "research_manifests/gc_microstructure_step_5b1_implementation_scope_correction_v01.json",
+      "sha256": "8575cc960b6b9c9d3124c224d790a50a8d3750676f59d85768426c54a834865c"
+    },
+    "step5b1_manifest": {
+      "bytes": 6666,
+      "path": "/home/wapi/rear_gold_step5b_v01/artifacts/step5b1_final/manifest.json",
+      "sha256": "993a5a10172ac0c74cc0521ca6437369e5cc185a363c912d98cbccaafb6f02f7"
+    },
+    "step5b1_primary": {
+      "bytes": 116450,
+      "path": "/home/wapi/rear_gold_step5b_v01/artifacts/step5b1_runs_v02/primary_diagnostic.json",
+      "sha256": "6ef3c3bfa2dfa6dd0a49c30d17adb4292b7168ff84fc73b02204457429d3c0bc"
+    },
+    "step5b1_protocol": {
+      "bytes": 16903,
+      "path": "research_manifests/gc_microstructure_step_5b1_protocol_v01.json",
+      "sha256": "62eaf586944d720ccab584e7ebfb1ce40d7eaabfe9e9508f542680873cfd5f87"
+    },
+    "step5b1_reference": {
+      "bytes": 116452,
+      "path": "/home/wapi/rear_gold_step5b_v01/artifacts/step5b1_runs_v02/reference_diagnostic.json",
+      "sha256": "562a2cda371f475885e8ebbc26edddb1603f148940b951b2cdf0c67e5ccd6275"
+    },
+    "step5b1_source_inventory": {
+      "bytes": 104466,
+      "path": "research_manifests/gc_microstructure_step_5b1_source_inventory_v01.json",
+      "sha256": "a4e2bf8acf97b0ddefde017f36142f5356223ec5ca106fc8e7228cdb5c75b0af"
+    },
+    "step5b1_verdict": {
+      "bytes": 7544,
+      "path": "/home/wapi/rear_gold_step5b_v01/artifacts/step5b1_final/verdict.json",
+      "sha256": "b30a89a604d2f69a0616512e289267a342dcb99fde611520a034dfd89f439c96"
+    },
+    "step5b_acquisition_manifest": {
+      "bytes": 1311616,
+      "path": "/home/wapi/rear_gold_step5b_v01/data/databento_gc_microstructure_budget_c_v01/acquisition_manifest.json",
+      "sha256": "b4e64d508790364dbd400da1478b139bb643d2b7afc9c97ff6691958365c5ccc"
+    },
+    "step5b_manifest": {
+      "bytes": 265888,
+      "path": "/home/wapi/rear_gold_step5b_v01/artifacts/step5b_budget_c_final/manifest.json",
+      "sha256": "0a4abebcc8957568d33b734d7511481c0203a73e7cb7cacfc4a89c933a21c6f9"
+    },
+    "step5b_verdict": {
+      "bytes": 58557,
+      "path": "/home/wapi/rear_gold_step5b_v01/artifacts/step5b_budget_c_final/verdict.json",
+      "sha256": "2ee53fb8169bc1b47f38011cd2600ad74dec37404e806c1dd5a0ba0cbc2ce4bb"
+    }
+  },
+  "source_verification": {
+    "source_rows_may_not_be_opened": true,
+    "verify_all_936_manifest_records_by_bytes_and_sha256": true,
+    "verify_exactly_80_lineage_records": true,
+    "verify_exactly_80_normalized_payloads": true,
+    "verify_exactly_80_normalized_source_seals": true,
+    "verify_exactly_80_quality_records": true
+  },
+  "status": "FROZEN_BEFORE_RECERTIFICATION",
+  "status_precedence": [
+    "FAIL_STEP_5B2_PREDECESSOR_OR_SOURCE_SEAL",
+    "FAIL_STEP_5B2_RECERTIFICATION_INTEGRITY",
+    "FAIL_STEP_5B2_RECERTIFICATION_REPRODUCTION",
+    "PASS_STEP_5B2_SOURCE_INTEGRITY_RECERTIFICATION"
+  ],
+  "unchanged_policy": {
+    "67_previously_passing_requests": "RETAIN ORIGINAL FORMAL CHECKS WITHOUT MUTATION",
+    "all_other_formal_check_keys": "BYTE-FOR-BYTE LOGICAL VALUES UNCHANGED",
+    "no_source_row_filter_repair_relabel_replace_or_reacquisition": true,
+    "sources_rows_hashes_definitions_prediction_windows_and_missing_data_rules": "UNCHANGED"
+  },
+  "version": "GC_MICROSTRUCTURE_STEP_5B2_AMENDMENT_V0_1"
+}

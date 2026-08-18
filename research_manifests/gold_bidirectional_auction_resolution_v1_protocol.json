@@ -1,0 +1,155 @@
+{
+  "version": "GOLD_BIDIRECTIONAL_AUCTION_RESOLUTION_V1_PROTOCOL_1_0",
+  "status": "FROZEN_BEFORE_DEVELOPMENT_OUTCOME_ACCESS",
+  "branch": "GOLD_BIDIRECTIONAL_AUCTION_RESOLUTION_V1",
+  "population": {
+    "development_start": "2021-08-01T00:00:00Z",
+    "development_end_exclusive": "2025-01-01T00:00:00Z",
+    "cases": 8653,
+    "available_case_tapes": 8650,
+    "unavailable_cases_retained": 3,
+    "timeframes": ["M15", "H1", "H4"]
+  },
+  "locked_periods": {
+    "2025": true,
+    "2026_through_2026_07_29": true,
+    "open_only_after_development_pass": true,
+    "credit": "EXPOSED_HISTORICAL_ROBUSTNESS_ONLY"
+  },
+  "formation": {
+    "start": "SEALED_KNOWN_AT_UTC",
+    "expiry": "SEALED_DEADLINE_AT_UTC_SIXTEEN_PARENT_BARS",
+    "signal_frame": {"M15": "M1", "H1": "M5", "H4": "M15"},
+    "checkpoint": "COMPLETED_SIGNAL_CANDLE_CLOSE_WITH_EXACT_SAME_TIMESTAMP_M1_OPEN",
+    "acceptance_boundary": "FIVE_COMPLETED_SIGNAL_BARS_ENDING_ONE_BAR_BEFORE_PREVIOUS_CLOSE",
+    "acceptance_buffer_atr": 0.05,
+    "fractal": "TWO_LEFT_TWO_RIGHT_KNOWN_TWO_BARS_LATER"
+  },
+  "context_permissions": {
+    "trend_fundamental_allowed": ["ALIGNED", "NEUTRAL_OR_WEAK", "UNKNOWN"],
+    "reverse_fundamental_allowed": ["OPPOSED", "NEUTRAL_OR_WEAK", "UNKNOWN"],
+    "trend_htf": "MISSING_OR_GTE_0P50",
+    "reverse_htf": "MISSING_OR_LTE_0P50"
+  },
+  "triggers": {
+    "trend": [
+      "ACCEPTANCE_STATE_EQ_POSITIVE_ONE",
+      "LOCAL_STRUCTURE_SCORE_EQ_POSITIVE_ONE",
+      "CURRENT_DISPLACEMENT_ATR_GT_ZERO",
+      "TREND_CONTEXT_PERMITTED",
+      "TREND_GEOMETRY_EXECUTABLE"
+    ],
+    "trend_attempt_recorded_after_checkpoint_if": "ACCEPTANCE_STATE_EQ_POSITIVE_ONE_OR_SWEEP_RECLAIM_STATE_EQ_NEGATIVE_ONE",
+    "reversal": [
+      "TREND_ATTEMPT_RECORDED_AT_STRICTLY_EARLIER_CHECKPOINT",
+      "ACCEPTANCE_STATE_EQ_NEGATIVE_ONE",
+      "LOCAL_STRUCTURE_SCORE_EQ_NEGATIVE_ONE",
+      "CURRENT_DISPLACEMENT_ATR_LT_ZERO",
+      "REVERSE_CONTEXT_PERMITTED",
+      "REVERSE_GEOMETRY_EXECUTABLE"
+    ]
+  },
+  "geometry": {
+    "trend_stop": "CHECKPOINT_STRUCTURAL_STOP_E8",
+    "trend_target": "CHECKPOINT_LIQUIDITY_TARGET_E8",
+    "reverse_stop": "TRIGGER_SIGNAL_CANDLE_EXTREME_PLUS_OR_MINUS_0P10_SETUP_ATR",
+    "reverse_target": "CHECKPOINT_ORIGINAL_DIRECTION_STRUCTURAL_STOP_E8",
+    "actual_fill_gate": "STOP_ADVERSE_AND_TARGET_ROOM_GTE_1P0_STOP_DISTANCE_R",
+    "deadline": "ORIGINAL_CASE_DEADLINE_UNCHANGED_AFTER_SWITCH"
+  },
+  "models": [
+    "CONTINUATION_ONLY_CONTROL",
+    "REVERSAL_ONLY",
+    "BIDIRECTIONAL_ONE_FLIP"
+  ],
+  "bidirectional_risk_splits_usd": [
+    {"id": "SPLIT_15_35", "first": 15.0, "reserve": 35.0},
+    {"id": "SPLIT_25_25", "first": 25.0, "reserve": 25.0},
+    {"id": "SPLIT_35_15", "first": 35.0, "reserve": 15.0}
+  ],
+  "risk_split_selection": {
+    "scope": "OUTER_TRAINING_DATES_ONLY",
+    "minimum_support": {
+      "M15": {"trades": 50, "dates": 34},
+      "H1": {"trades": 20, "dates": 17},
+      "H4": {"trades": 10, "dates": 9}
+    },
+    "preferred": "HIGHEST_NET_EXPECTANCY_AMONG_SUPPORTED_PF_GTE_1P05_AND_COST_1P5X_EXPECTANCY_GT_ZERO",
+    "fallback_1": "HIGHEST_NET_EXPECTANCY_SUPPORTED_SPLIT",
+    "fallback_2": "SPLIT_25_25",
+    "tie_break": "LEXICOGRAPHIC_SPLIT_ID"
+  },
+  "execution": {
+    "account_usd": 10000.0,
+    "maximum_planned_case_loss_usd": 50.0,
+    "whole_ounce_sizing": true,
+    "entry": "EXACT_M1_OPEN_AT_CHECKPOINT_TIMESTAMP",
+    "exit_order": ["STRUCTURAL_STOP", "KNOWN_TARGET", "TIME_EXIT"],
+    "same_bar": "STOP_FIRST",
+    "gap_stop": "WORSE_OF_STOP_AND_M1_OPEN",
+    "spread": "OBSERVED_NONNEGATIVE_M1_SPREAD_ELSE_0P30_USD_OZ",
+    "commission_usd_oz_round_trip": 0.07,
+    "slippage_usd_oz_round_trip": 0.10,
+    "cost_stress": [1.0, 1.5, 2.0],
+    "one_switch_only": true,
+    "switch_only_after_first_leg_stop": true,
+    "mfe_mae": "FULL_ENTRY_TO_ORIGINAL_DEADLINE_PATH_DIAGNOSTIC_ONLY",
+    "successful_flip": "SECOND_LEG_BASE_COST_NET_PNL_GT_ZERO",
+    "overlap": "WITHIN_CANDIDATE_AND_TIMEFRAME_SKIP_WHOLE_NEW_CASE_IF_FIRST_ENTRY_PRECEDES_RETAINED_PRIOR_FINAL_EXIT",
+    "portfolio_priority": ["H4", "H1", "M15", "PULLBACK_ID"]
+  },
+  "folds": [
+    {"fold": 1, "validate": ["2021-10-01", "2021-12-31"]},
+    {"fold": 2, "validate": ["2022-01-01", "2022-06-30"]},
+    {"fold": 3, "validate": ["2022-07-01", "2022-12-31"]},
+    {"fold": 4, "validate": ["2023-01-01", "2023-06-30"]},
+    {"fold": 5, "validate": ["2023-07-01", "2023-12-31"]},
+    {"fold": 6, "validate": ["2024-01-01", "2024-06-30"]},
+    {"fold": 7, "validate": ["2024-07-01", "2024-12-31"]}
+  ],
+  "final_support": {
+    "M15": {"cases": 150, "dates": 100},
+    "H1": {"cases": 60, "dates": 50},
+    "H4": {"cases": 30, "dates": 25}
+  },
+  "uncertainty": {
+    "bootstrap_resamples": 5000,
+    "cluster": "TRADING_DATE",
+    "seed": 621907,
+    "one_sided_null": "EXPECTANCY_LTE_ZERO",
+    "multiplicity": "HOLM_WITHIN_TIMEFRAME_ACROSS_THREE_MODEL_FAMILIES"
+  },
+  "pass_gates": {
+    "net_expectancy_gt": 0.0,
+    "profit_factor_gte": 1.10,
+    "cluster_ci95_low_gt": 0.0,
+    "holm_p_lte": 0.10,
+    "cost_1p5x_expectancy_gt": 0.0,
+    "positive_validation_folds_gte": 3,
+    "positive_calendar_years_gte": 2,
+    "maximum_positive_year_share_lte": 0.70,
+    "maximum_positive_session_share_lte": 0.70,
+    "maximum_normalized_drawdown_pct_lte": 15.0,
+    "bidirectional_positive_fixed_split_fraction_gte": 0.6666666666666666
+  },
+  "candidate_limit_per_timeframe": 2,
+  "ranking": ["NET_EXPECTANCY_DESC", "PROFIT_FACTOR_DESC", "SUPPORT_DESC", "MODEL_ID_ASC"],
+  "reporting": {
+    "development_months": 39,
+    "risk_scaling_diagnostic": "REPORT_1_PERCENT_CASE_RISK_AND_WHETHER_10R_PER_MONTH_IS_REACHED_WITHOUT_OPTIMIZING_FOR_IT",
+    "oracle": "SEALED_ORIGINAL_DIRECTION_VISUAL_PIVOT_TO_MAXIMUM_DIAGNOSTIC_ONLY",
+    "separate_contributions": ["CONTINUATION", "REVERSAL"]
+  },
+  "forbidden": [
+    "REALIZED_ARCHETYPE_AT_DECISION",
+    "FUTURE_DIRECTION_OR_EXTREMA_AT_DECISION",
+    "SELECTIVE_LOSS_OR_CHOP_REMOVAL",
+    "POST_OUTCOME_INVERSION_REPAIR_OR_RETUNING",
+    "PAID_ACQUISITION",
+    "2025_OR_2026_ACCESS_BEFORE_DEVELOPMENT_PASS"
+  ],
+  "development_outcomes_accessed": false,
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "paid_acquisition_usd": 0.0
+}

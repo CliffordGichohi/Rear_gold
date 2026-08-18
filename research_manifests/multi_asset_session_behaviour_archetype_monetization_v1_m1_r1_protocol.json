@@ -1,0 +1,235 @@
+{
+  "branch": "MULTI_ASSET_SESSION_BEHAVIOUR_ARCHETYPE_MONETIZATION_V1",
+  "classification_precedence": [
+    "DOCUMENTED_MARKET_UNAVAILABLE",
+    "RECOVERABLE_EXISTING_SEALED_SOURCE",
+    "GENUINE_SOURCE_GAP",
+    "NORMAL_NO_TICK_BAR_EMISSION",
+    "UNRESOLVED"
+  ],
+  "classification_rules": {
+    "DOCUMENTED_MARKET_UNAVAILABLE": {
+      "all_required": true,
+      "criteria": [
+        "RUN_ENTIRELY_MATCHES_CURRENT_PROVIDER_DOCUMENTED_CLOSED_MINUTES",
+        "EXACT_PROVIDER_SERVER_CLOCK_SIGNATURE_RECURRENCE_GTE_0P80_IN_EACH_DEVELOPMENT_YEAR",
+        "DST_PROXY_CONSISTENCY_PASSES",
+        "NO_EXPLICIT_ACQUISITION_OR_LINEAGE_FAILURE"
+      ]
+    },
+    "GENUINE_SOURCE_GAP": {
+      "all_required": true,
+      "criteria": [
+        "EXPLICIT_PROVIDER_REQUEST_FAILURE_EMPTY_CHUNK_OR_TRUNCATION_OVERLAPS_RUN",
+        "RUN_NOT_DOCUMENTED_CLOSED"
+      ]
+    },
+    "NORMAL_NO_TICK_BAR_EMISSION": {
+      "all_required": true,
+      "criteria": [
+        "RUN_LENGTH_LTE_2_MINUTES",
+        "RUN_IS_INTERIOR_AND_BOTH_ADJACENT_MINUTES_EXIST",
+        "RUN_IS_IN_CURRENT_DOCUMENTED_TRADING_TIME",
+        "EXACT_RUN_SIGNATURE_RECURRENCE_LT_0P10_OVERALL",
+        "CROSS_INSTRUMENT_MISSING_MAXIMUM_LT_4",
+        "NO_EXPLICIT_ACQUISITION_OR_LINEAGE_FAILURE",
+        "METAQUOTES_TICK_DEPENDENT_BAR_SEMANTICS_IS_ADMISSIBLE"
+      ],
+      "semantic_limit": "TECHNICAL_DISPOSITION_CONSISTENT_WITH_NO_TICK_BAR_FORMATION; NOT_PROOF_ABOUT_UNSEEN_TICKS"
+    },
+    "RECOVERABLE_EXISTING_SEALED_SOURCE": {
+      "all_required": true,
+      "criteria": [
+        "TIMESTAMP_ABSENT_FROM_CERTIFIED_CANONICAL_UNION",
+        "SAME_TIMESTAMP_PRESENT_IN_A_PREACCESS_FROZEN_SEALED_SAME_SYMBOL_M1_RECOVERY_SOURCE"
+      ],
+      "recovery_universe": "NO_ADDITIONAL_COMPATIBLE_SOURCE_WAS_BOUND_BEFORE_ACCESS; EXPECTED_COUNT_ZERO"
+    },
+    "UNRESOLVED": {
+      "criteria": [
+        "NO_PRIOR_CLASSIFICATION_RULE_PASSES"
+      ]
+    }
+  },
+  "controls": {
+    "acquire_data": false,
+    "charge_usd": 0.0,
+    "open_2025": false,
+    "open_2026": false,
+    "outcomes": false
+  },
+  "cross_instrument_test": "FOR_EACH_MISSING_MINUTE_COUNT_ABSENCE_ACROSS_ALL_SIX_CERTIFIED_INSTRUMENT_TIMESTAMP_UNIONS",
+  "development_interval": {
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "start_inclusive": "2021-08-01T00:00:00Z"
+  },
+  "diagnostic_tests_in_order": [
+    "T01_VERIFY_ALL_PREDECESSOR_AND_SOURCE_SEALS",
+    "T02_VERIFY_FROZEN_IDENTITY_COUNT_KEYS_AND_SESSION_CLOCKS_UNCHANGED",
+    "T03_READ_ONLY_OPEN_TIME_AND_CERTIFY_DUPLICATES_ORDER_FIRST_LAST_AND_DEVELOPMENT_FILTER",
+    "T04_EXTRACT_EVERY_MAXIMAL_CONSECUTIVE_MISSING_MINUTE_RUN_IN_START_INCLUSIVE_END_EXCLUSIVE",
+    "T05_CLASSIFY_RUN_BOUNDARY_POSITION_AND_LENGTH_BIN",
+    "T06_MAP_RUNS_TO_FROZEN_SESSION_LOCAL_CLOCK_WEEKDAY_AND_DST_STATE",
+    "T07_MAP_RUNS_TO_PROVIDER_SERVER_CLOCK_PROXY_AND_CURRENT_DOCUMENTED_SCHEDULE_SHAPE",
+    "T08_MEASURE_EXACT_RUN_SIGNATURE_RECURRENCE_BY_CALENDAR_YEAR_WITH_ALL_FROZEN_UNIT_DATES_AS_DENOMINATOR",
+    "T09_MEASURE_CROSS_INSTRUMENT_SAME_UTC_MINUTE_ABSENCE",
+    "T10_AUDIT_ACQUISITION_CHUNK_AND_LINEAGE_FAILURE_METADATA",
+    "T11_APPLY_CLASSIFICATION_PRECEDENCE_WITHOUT_VALUE_ACCESS",
+    "T12_COMPARE_ALL_TEN_PASSING_UNITS_AS_CONTROLS",
+    "T13_REQUIRE_PRIMARY_REFERENCE_EXACT_RECORD_SUMMARY_CLASSIFICATION_AND_CHECKSUM_PARITY"
+  ],
+  "forbidden_calculations": [
+    "direction",
+    "return",
+    "path",
+    "MFE",
+    "MAE",
+    "first passage",
+    "archetype",
+    "relationship",
+    "hypothetical return",
+    "strategy",
+    "entry",
+    "trade",
+    "PnL"
+  ],
+  "forbidden_source_fields": [
+    "open",
+    "high",
+    "low",
+    "close",
+    "spread_points",
+    "tick_volume",
+    "real_volume",
+    "volume"
+  ],
+  "identity_policy": "USE_ALL_13380_FROZEN_IDENTITIES_UNCHANGED; DIAGNOSE_ONLY_TARGET_INCOMPLETE_IDENTITIES; CONTROLS_ARE_METADATA_ONLY",
+  "independent_reproduction": {
+    "exact_required": [
+      "timestamp inventories",
+      "run records",
+      "classifications",
+      "unit summaries",
+      "recurrence tables",
+      "complete semantic checksum"
+    ],
+    "primary": "PANDAS_OPEN_TIME_CHUNK_READER_AND_FORWARD_IDENTITY_SCAN",
+    "reference": "PYTHON_CSV_OPEN_TIME_READER_AND_REVERSE_IDENTITY_SCAN"
+  },
+  "length_bins": {
+    "1": [
+      1,
+      1
+    ],
+    "16_60": [
+      16,
+      60
+    ],
+    "2": [
+      2,
+      2
+    ],
+    "3_5": [
+      3,
+      5
+    ],
+    "61_PLUS": [
+      61,
+      null
+    ],
+    "6_15": [
+      6,
+      15
+    ]
+  },
+  "milestone": "1-R1",
+  "pass_rule": "PASS_DIAGNOSTIC_REPRODUCTION_ONLY_IF_ALL_SEALS_PASS_AND_PRIMARY_REFERENCE_OUTPUTS_MATCH_EXACTLY; THIS_DOES_NOT_REVERSE_M1_RESEARCH_READINESS_FAILURE",
+  "passing_control_units": [
+    "EURUSD|LONDON_SESSION",
+    "EURUSD|NEW_YORK_SESSION",
+    "USDJPY|LONDON_SESSION",
+    "USDJPY|NEW_YORK_SESSION",
+    "XAGUSD|LONDON_SESSION",
+    "XAGUSD|NEW_YORK_SESSION",
+    "USTEC|LONDON_SESSION",
+    "USTEC|US_CASH_SESSION",
+    "US500|US_CASH_SESSION",
+    "XTIUSD|US_ENERGY_SESSION"
+  ],
+  "permitted_lineage_fields": [
+    "path",
+    "bytes",
+    "sha256",
+    "request status",
+    "empty chunk status",
+    "source row ordering and duplicate counts"
+  ],
+  "permitted_source_fields": [
+    "open_time"
+  ],
+  "preserved_verdict": "FAIL_MILESTONE_1_COVERAGE_STOP",
+  "protocol_hash": "938f33fe21e9bd73170a97a918aa5b8ae198368cec1316d910fe3907255884ab",
+  "recommendation_limit": {
+    "implementation_authorized": false,
+    "maximum": 1,
+    "must_be_outcome_blind": true,
+    "must_preserve": [
+      "all identities",
+      "session definitions",
+      "90 percent unit readiness floor",
+      "UNKNOWN semantics",
+      "no imputation",
+      "outcome locks"
+    ]
+  },
+  "recurrence": {
+    "signature": [
+      "instrument",
+      "session_code",
+      "provider_server_start_HHMM",
+      "provider_server_end_exclusive_HHMM",
+      "length_minutes",
+      "boundary_position"
+    ],
+    "year_denominator": "ALL_FROZEN_WEEKDAY_IDENTITIES_FOR_THE_SAME_INSTRUMENT_SESSION_AND_CALENDAR_YEAR"
+  },
+  "run_fields": [
+    "run_id",
+    "case_id",
+    "instrument",
+    "session_code",
+    "session_date_local",
+    "weekday",
+    "session_dst_state",
+    "start_utc",
+    "end_exclusive_utc",
+    "length_minutes",
+    "length_bin",
+    "boundary_position",
+    "session_start_offset_minutes",
+    "provider_server_start_local",
+    "provider_server_end_exclusive_local",
+    "provider_server_dst_state",
+    "current_schedule_shape",
+    "preceding_minute_present",
+    "following_minute_present",
+    "cross_instrument_missing_minimum",
+    "cross_instrument_missing_maximum",
+    "exact_signature_total_count",
+    "exact_signature_year_counts",
+    "exact_signature_year_denominators",
+    "classification",
+    "evidence_grade",
+    "evidence_codes"
+  ],
+  "status": "FROZEN_BEFORE_TIMESTAMP_LEVEL_METADATA_ACCESS",
+  "stop_rule": "DOCUMENT_AND_SEAL_R1; DO_NOT_IMPLEMENT_RECOMMENDATION_OR_BEGIN_M2",
+  "target_units": [
+    "EURUSD|ASIA_SESSION",
+    "USDJPY|ASIA_SESSION",
+    "XAGUSD|ASIA_SESSION",
+    "US500|LONDON_SESSION",
+    "XTIUSD|LONDON_SESSION"
+  ],
+  "version": "MSBAM_V1_M1_R1_PROTOCOL_1_0"
+}

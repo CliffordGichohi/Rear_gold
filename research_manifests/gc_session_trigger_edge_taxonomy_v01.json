@@ -1,0 +1,200 @@
+{
+  "book_logic": [
+    "Liquidity is spread, depth, resilience, and capacity to absorb flow; it is not merely a chart line.",
+    "Acceptance means sustained trading beyond a level; rejection means price does not sustain the new area.",
+    "Absorption is aggressive flow with limited price progress against opposite liquidity.",
+    "Structure is evidence, not prophecy; macro, catalysts, session, and cross-market context remain separate.",
+    "A supportive macro regime is bias context and never an automatic entry."
+  ],
+  "canonicalization": {
+    "first_event_sensitivity": "Every candidate must retain the same favorable sign when restricted to the first family event per date.",
+    "microstructure": "Retain only the first event for each session_date, session, event_family, and direction.",
+    "missing_minute": "A missing, duplicate, incomplete, late, or lineage-invalid bar makes any event whose detection window intersects it UNKNOWN; never bridge the gap.",
+    "no_rearming": "A retained key cannot rearm later in the same session date.",
+    "per_level": "Retain only the first event for each session_date, session, event_family, direction, and level_family.",
+    "pooled_family_analysis": "At most three earliest canonical events per family and date may enter the primary analysis; simultaneous level events form one event with a sorted level-family list."
+  },
+  "event_families": [
+    {
+      "applicable_level_families": [
+        "ASIA_RANGE",
+        "PRIOR_DAY_RANGE",
+        "LONDON_PRE_NEW_YORK_RANGE",
+        "SESSION_OPENING_RANGE_15"
+      ],
+      "causal_claim": false,
+      "confirmation_time": "Close time of the earliest reclaim-confirming bar.",
+      "directional_prior": {
+        "LOWER": "UP",
+        "UPPER": "DOWN"
+      },
+      "epistemic_class": "CALCULATED",
+      "event_family": "LEVEL_SWEEP_RECLAIM",
+      "lower_definition": "Exact mirror: a complete bar trades strictly below the lower level and that bar or the immediately following complete bar closes at or above the level before acceptance.",
+      "source_domain": "XAUUSD_PRICE_LEVEL",
+      "upper_definition": "A complete one-minute bar trades strictly above the upper level and either that bar or the immediately following complete bar closes at or below the level, before any two-close acceptance is completed."
+    },
+    {
+      "applicable_level_families": [
+        "ASIA_RANGE",
+        "PRIOR_DAY_RANGE",
+        "LONDON_PRE_NEW_YORK_RANGE",
+        "SESSION_OPENING_RANGE_15"
+      ],
+      "causal_claim": false,
+      "confirmation_time": "Close time of the second qualifying bar.",
+      "directional_prior": {
+        "LOWER": "DOWN",
+        "UPPER": "UP"
+      },
+      "epistemic_class": "CALCULATED",
+      "event_family": "LEVEL_BREAK_ACCEPT",
+      "lower_definition": "Two consecutive complete one-minute closes are strictly below the lower level.",
+      "source_domain": "XAUUSD_PRICE_LEVEL",
+      "upper_definition": "Two consecutive complete one-minute closes are strictly above the upper level."
+    },
+    {
+      "applicable_level_families": [
+        "ASIA_RANGE",
+        "PRIOR_DAY_RANGE",
+        "LONDON_PRE_NEW_YORK_RANGE",
+        "SESSION_OPENING_RANGE_15"
+      ],
+      "causal_claim": false,
+      "confirmation_time": "Close time of the first return bar; a return after five bars is not this event.",
+      "directional_prior": {
+        "LOWER": "UP",
+        "UPPER": "DOWN"
+      },
+      "epistemic_class": "CALCULATED",
+      "event_family": "LEVEL_FAILED_ACCEPTANCE",
+      "lower_definition": "After a confirmed lower LEVEL_BREAK_ACCEPT, the first complete close at or above the level occurs within the next five complete one-minute bars.",
+      "source_domain": "XAUUSD_PRICE_LEVEL",
+      "upper_definition": "After a confirmed upper LEVEL_BREAK_ACCEPT, the first complete close at or below the level occurs within the next five complete one-minute bars."
+    },
+    {
+      "confirmation_time": "Second consecutive aligned minute decision.",
+      "definition": "FLOW_PRESSURE_W60 and DEPTH_PRESSURE_W60 have the same directional state at two consecutive completed minute decisions and did not have that same joint direction at the immediately preceding minute decision.",
+      "directional_prior": {
+        "BEARISH": "DOWN",
+        "BULLISH": "UP"
+      },
+      "epistemic_class": "INFERRED",
+      "event_family": "FLOW_DEPTH_ALIGNMENT_ONSET",
+      "institution_or_motive_claim_permitted": false,
+      "source_domain": "GC_MICROSTRUCTURE"
+    },
+    {
+      "confirmation_time": "Second consecutive absorption minute decision.",
+      "definition": "The unchanged ABSORPTION_STATE_W60 is the same directional absorption state at two consecutive completed minute decisions and was not that state at the immediately preceding minute.",
+      "directional_prior": {
+        "BEARISH_ABSORPTION": "DOWN",
+        "BULLISH_ABSORPTION": "UP"
+      },
+      "epistemic_class": "INFERRED",
+      "event_family": "ABSORPTION_ONSET",
+      "institution_or_motive_claim_permitted": false,
+      "source_domain": "GC_MICROSTRUCTURE"
+    },
+    {
+      "confirmation_time": "Second consecutive qualifying minute decision.",
+      "definition": "LIQUIDITY_FRAGILITY is FRAGILE and FLOW_PRESSURE_W60 has the same directional state at two consecutive completed minute decisions; the exact pair was absent at the immediately preceding minute.",
+      "directional_prior": {
+        "BEARISH_FLOW": "DOWN",
+        "BULLISH_FLOW": "UP"
+      },
+      "epistemic_class": "INFERRED",
+      "event_family": "FRAGILITY_FLOW_ONSET",
+      "institution_or_motive_claim_permitted": false,
+      "source_domain": "GC_MICROSTRUCTURE"
+    }
+  ],
+  "event_record_required_fields": [
+    "event_id",
+    "session_date",
+    "session_code",
+    "event_family",
+    "source_domain",
+    "directional_prior",
+    "decision_at",
+    "confirmation_evidence",
+    "level_families",
+    "feature_available_at_max",
+    "epistemic_class",
+    "quality_state",
+    "lineage_hash"
+  ],
+  "frozen_at_utc": "2026-08-04T12:55:54.699888Z",
+  "level_families": [
+    {
+      "definition": "Frozen high and low of the completed casebook Asia session; both must be available before the event session opens.",
+      "epistemic_class": "CALCULATED",
+      "level_family": "ASIA_RANGE",
+      "lower": "ASIA_LOW",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "upper": "ASIA_HIGH"
+    },
+    {
+      "definition": "High and low of the preceding completed casebook gold day; neither may use a current-session bar.",
+      "epistemic_class": "CALCULATED",
+      "level_family": "PRIOR_DAY_RANGE",
+      "lower": "PRIOR_DAY_LOW",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "upper": "PRIOR_DAY_HIGH"
+    },
+    {
+      "definition": "XAUUSD high and low from London 08:00 local through the final complete one-minute bar ending no later than New York 08:00 local; freeze once at the New York session open.",
+      "epistemic_class": "CALCULATED",
+      "level_family": "LONDON_PRE_NEW_YORK_RANGE",
+      "lower": "LONDON_PRE_NEW_YORK_LOW",
+      "sessions": [
+        "NEW_YORK"
+      ],
+      "upper": "LONDON_PRE_NEW_YORK_HIGH"
+    },
+    {
+      "definition": "XAUUSD high and low of the first fifteen complete session minutes [08:00,08:15) local; usable only from 08:15 local onward.",
+      "epistemic_class": "CALCULATED",
+      "level_family": "SESSION_OPENING_RANGE_15",
+      "lower": "SESSION_OR15_LOW",
+      "sessions": [
+        "LONDON",
+        "NEW_YORK"
+      ],
+      "upper": "SESSION_OR15_HIGH"
+    }
+  ],
+  "outcomes_accessed": false,
+  "prohibited_labels": [
+    "smart_money_observed",
+    "institution_identified",
+    "dealer_intent_proven"
+  ],
+  "research_units": {
+    "decision_at": "The confirming bar close. The bar must be unique, complete, and available no later than its close; all GC inputs must have ts_recv strictly before or equal to their completed bucket boundary no later than decision_at.",
+    "decision_grid": "Completed XAUUSD one-minute bars. Candidate decisions occur at bar close from 08:01 through 12:00 local.",
+    "dst": "Convert each local session independently with the IANA timezone database; never hard-code DST dates.",
+    "gc_market_state": "Only CONTINUOUS_MATCHING, authoritative two-sided, uncrossed MBP-10 bucket-close states are eligible.",
+    "no_venue_price_mixing": "XAUUSD levels are compared only with XAUUSD bars. GC prices are never numerically compared with spot/broker levels.",
+    "sessions": {
+      "LONDON": {
+        "timezone": "Europe/London",
+        "trigger_scan_local": "[08:00:00,12:00:00)"
+      },
+      "NEW_YORK": {
+        "timezone": "America/New_York",
+        "trigger_scan_local": "[08:00:00,12:00:00)"
+      }
+    }
+  },
+  "status": "FROZEN_BEFORE_EVENT_VALUE_MATERIALIZATION",
+  "taxonomy_receipt": "5d21f9d8f7ddc04f46cbb51e5985a8864ec42c98d9e86b5e74b0073e2f5c613f",
+  "version": "GC_SESSION_TRIGGER_EDGE_EVENT_TAXONOMY_V1_0",
+  "year_2025_or_2026_values_accessed": false
+}

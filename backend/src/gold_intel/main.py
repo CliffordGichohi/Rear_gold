@@ -12,6 +12,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from gold_intel import __version__
 from gold_intel.api.routes import (
     backtests,
+    blind_replay,
+    blind_replay_v2,
+    blind_replay_v3,
+    codex_operator_replay,
+    matched_human_replay,
     data_health,
     decisions,
     event_studies,
@@ -25,6 +30,8 @@ from gold_intel.api.routes import (
     market_data,
     market_structure,
     providers,
+    session_edge_strategies,
+    session_edges,
 )
 from gold_intel.config import get_settings
 from gold_intel.logging import configure_logging
@@ -85,8 +92,15 @@ app.include_router(decisions.router, prefix=settings.api_prefix)
 app.include_router(intelligence.router, prefix=settings.api_prefix)
 app.include_router(data_health.router, prefix=settings.api_prefix)
 app.include_router(backtests.router, prefix=settings.api_prefix)
+app.include_router(blind_replay.router, prefix=settings.api_prefix)
+app.include_router(blind_replay_v2.router, prefix=settings.api_prefix)
+app.include_router(blind_replay_v3.router, prefix=settings.api_prefix)
+app.include_router(codex_operator_replay.router, prefix=settings.api_prefix)
+app.include_router(matched_human_replay.router, prefix=settings.api_prefix)
 app.include_router(factors.router, prefix=settings.api_prefix)
 app.include_router(fundamentals.router, prefix=settings.api_prefix)
 app.include_router(events.router, prefix=settings.api_prefix)
 app.include_router(event_studies.router, prefix=settings.api_prefix)
+app.include_router(session_edges.router, prefix=settings.api_prefix)
+app.include_router(session_edge_strategies.router, prefix=settings.api_prefix)
 app.include_router(expectations.router, prefix=settings.api_prefix)

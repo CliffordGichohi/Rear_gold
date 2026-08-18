@@ -1,0 +1,63 @@
+{
+  "calendar_2025_values_accessed": false,
+  "calendar_2026_values_accessed": false,
+  "implementation": {
+    "bytes": 8781,
+    "path": "tools/run_gold_point_in_time_auction_state_v1_gc_incremental_r2.py",
+    "sha256": "5843aedab5079e771366b224da9d10258de07797b0339c0fbc72eddc6e92aedf"
+  },
+  "paid_acquisition_usd": 0.0,
+  "preserved": {
+    "amendment_a": {
+      "bytes": 3412,
+      "path": "research_manifests/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental_amendment_a.json",
+      "sha256": "2c5dc157c35bb9c49c1a684117b5d3478bd30b01a3364293674c8c7e62e95d2a"
+    },
+    "attempt_1_failure": {
+      "bytes": 1532,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental/attempt_1_failure.json",
+      "sha256": "b5e67118cdf249158a9dbd998ba82a23b09a4ac0abbfe14c7aea49f8aeaa71d2"
+    },
+    "attempt_2_failure": {
+      "bytes": 1347,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental_r1/attempt_2_failure.json",
+      "sha256": "1ba2e11f0fe653d563a17be959f6f2f7e0b01853998a076b3acf342a2684d56e"
+    },
+    "base_development_verdict": "REJECT_NO_DEVELOPMENT_ECONOMIC_EDGE",
+    "gc_feature_payloads_byte_identical": true,
+    "primary_gc_features": {
+      "bytes": 8065972,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental/primary_gc_checkpoint_features.parquet",
+      "sha256": "eae9e88b893b319f3446691c455f02a280696b499aee6f2cb8e99834a99417cb"
+    },
+    "reference_gc_features": {
+      "bytes": 8065972,
+      "path": "research_artifacts/gold_point_in_time_auction_state_adaptive_management_v1_gc_incremental/reference_gc_checkpoint_features.parquet",
+      "sha256": "eae9e88b893b319f3446691c455f02a280696b499aee6f2cb8e99834a99417cb"
+    }
+  },
+  "sealed_at_utc": "2026-08-11T10:18:07.676953Z",
+  "single_correction": {
+    "new": "USE THE SAME NEUTRAL REPRODUCTION LABEL_AND_IDENTICAL_BOOTSTRAP_SEED_FOR_BOTH PASSES;EXCLUDE THE NONANALYTICAL IMPLEMENTATION LABEL FROM THE EQUALITY PAYLOAD",
+    "old": "DISTINCT PRIMARY_R1/REFERENCE_R1 LABELS WERE SERIALIZED_AND_INCLUDED_IN_DIAGNOSTIC_BOOTSTRAP_SEEDS",
+    "scope": "REPRODUCTION LABEL AND DIAGNOSTIC SEED ONLY"
+  },
+  "status": "FROZEN_REPRODUCTION_LABEL_ONLY_CORRECTION_BEFORE_R2_EVALUATION",
+  "unchanged": [
+    "EVERY FEATURE VALUE_AND_AVAILABILITY",
+    "EXACT_TRANSFORMER_CORRECTION",
+    "BASE_COEFFICIENTS",
+    "FOLDS",
+    "OUTCOMES",
+    "MODELS",
+    "POLICIES",
+    "SUPPORT",
+    "MULTIPLICITY",
+    "ECONOMIC_GATES",
+    "EXECUTION",
+    "COSTS",
+    "RISK",
+    "NO_STANDALONE_CREDIT"
+  ],
+  "version": "GOLD_PIT_AUCTION_STATE_V1_GC_INCREMENTAL_AMENDMENT_B_1_0"
+}

@@ -1,0 +1,190 @@
+{
+  "authorization": {
+    "authorized_on": "2026-07-29",
+    "scope": "Complete V2 Milestone 2 only: the descriptive 2021-2024 fixed-outcome atlas.",
+    "verbatim": "If everything looks great, lets go to milestone 2"
+  },
+  "breakdowns": {
+    "calendar_month": {
+      "format": "YYYY-MM",
+      "ordering": "ascending chronological",
+      "ranking_permitted": false
+    },
+    "calendar_quarter": {
+      "format": "YYYY-QN",
+      "ordering": "ascending chronological",
+      "ranking_permitted": false
+    },
+    "calendar_year": {
+      "format": "YYYY",
+      "ordering": "ascending chronological",
+      "ranking_permitted": false
+    },
+    "overall": true,
+    "session": [
+      "LONDON",
+      "NEW_YORK"
+    ],
+    "session_pairing_permitted": false
+  },
+  "contract": {
+    "governing_document": "GOLD_CASEBOOK_DISCOVERY_CONTRACT_V2.md",
+    "manifest_hash": "81e39b469111bb92a46c0d2c70f863cba438b647345104d4b8e8bc1a9e4d8188",
+    "manifest_path": "research_manifests/gold_casebook_discovery_contract_v02.json"
+  },
+  "execution": {
+    "changes_permitted": false,
+    "execution_manifest_hash": "724a4fef0fa4b526b4d30b9743c2dfa013c53f87b19262a36b05f3fd07c87d76",
+    "execution_manifest_path": "research_manifests/gold_casebook_constant_execution_v01.json",
+    "fixed_notional_ounces": 1.0,
+    "source_controls": [
+      "ALWAYS_LONG",
+      "ALWAYS_SHORT"
+    ]
+  },
+  "integrity_rules": {
+    "both_direction_records_required_per_case": true,
+    "calendar_2025_line_rejected_before_json_deserialization": true,
+    "case_and_execution_lineage_must_match": true,
+    "cost_identity": "gross_pnl_usd - net_pnl_usd = total_cost_usd for each side",
+    "long_short_costs_must_match": true,
+    "long_short_reference_prices_and_clocks_must_match": true,
+    "record_hashes_verified": true,
+    "source_artifact_hashes_verified_before_read": true
+  },
+  "manifest_hash": "549dc7bbd6a3768bc8a5d779670163debb5d5f1485749695cc374ebc144fab2c",
+  "manifest_version": "GOLD_CASEBOOK_DISCOVERY_V2_OUTCOME_ATLAS_MANIFEST_V0_1",
+  "measurement": {
+    "absolute_move_bins_usd_per_ounce": [
+      {
+        "code": "ABS_LT_2",
+        "lower_inclusive": 0.0,
+        "upper_exclusive": 2.0
+      },
+      {
+        "code": "ABS_2_TO_LT_5",
+        "lower_inclusive": 2.0,
+        "upper_exclusive": 5.0
+      },
+      {
+        "code": "ABS_5_TO_LT_10",
+        "lower_inclusive": 5.0,
+        "upper_exclusive": 10.0
+      },
+      {
+        "code": "ABS_10_TO_LT_20",
+        "lower_inclusive": 10.0,
+        "upper_exclusive": 20.0
+      },
+      {
+        "code": "ABS_GE_20",
+        "lower_inclusive": 20.0,
+        "upper_exclusive": null
+      }
+    ],
+    "cost_hurdle_state": {
+      "LONG_NET_WIN": "ALWAYS_LONG net_pnl_usd > 0 and ALWAYS_SHORT net_pnl_usd <= 0",
+      "NO_SIDE_NET_WIN": "Both ALWAYS_LONG and ALWAYS_SHORT net_pnl_usd <= 0",
+      "SHORT_NET_WIN": "ALWAYS_SHORT net_pnl_usd > 0 and ALWAYS_LONG net_pnl_usd <= 0",
+      "invalid": "Both sides net positive is an integrity failure."
+    },
+    "direction": {
+      "DOWN": "reference_exit_price - reference_entry_price < 0",
+      "FLAT": "reference_exit_price - reference_entry_price = 0",
+      "UP": "reference_exit_price - reference_entry_price > 0"
+    },
+    "formulas": {
+      "absolute_move_basis_points": "abs(gross_move_basis_points)",
+      "absolute_move_usd_per_ounce": "abs(gross_move_usd_per_ounce)",
+      "cost_basis_points": "10000 * total_cost_usd / reference_entry_price",
+      "gross_move_basis_points": "10000 * (reference_exit_price - reference_entry_price) / reference_entry_price",
+      "gross_move_usd_per_ounce": "reference_exit_price - reference_entry_price"
+    },
+    "fixed_control_fields": [
+      "observations",
+      "gross_win_rate_pct",
+      "net_win_rate_pct",
+      "mean_gross_pnl_usd_per_ounce",
+      "median_gross_pnl_usd_per_ounce",
+      "mean_net_pnl_usd_per_ounce",
+      "median_net_pnl_usd_per_ounce",
+      "mean_gross_return_basis_points",
+      "mean_net_return_basis_points",
+      "total_net_pnl_usd_per_ounce",
+      "profit_factor",
+      "maximum_drawdown_usd_per_ounce",
+      "total_cost_usd_per_ounce",
+      "average_holding_minutes"
+    ],
+    "quantile_method": "Hyndman-Fan Type 7",
+    "quantile_probabilities": [
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      0.95
+    ],
+    "reported_fields": [
+      "case and date counts",
+      "UP/DOWN/FLAT counts and percentages",
+      "LONG_NET_WIN/SHORT_NET_WIN/NO_SIDE_NET_WIN counts and percentages",
+      "signed move mean, median, standard deviation, and quantiles",
+      "absolute move mean, median, and quantiles",
+      "predeclared absolute-move-bin counts and percentages",
+      "cost mean, median, and quantiles",
+      "fixed ALWAYS_LONG and ALWAYS_SHORT metrics"
+    ],
+    "rounding": {
+      "numeric_decimals": 8,
+      "percentage_decimals": 4
+    }
+  },
+  "milestone": "V2_M2_DESCRIPTIVE_OUTCOME_ATLAS",
+  "output": {
+    "bundle_path": "research_artifacts/gold_casebook_discovery_v2_outcome_atlas_v01",
+    "outcome_ledger": "outcomes.jsonl.gz",
+    "required_artifacts": [
+      "outcomes.jsonl.gz",
+      "atlas.json",
+      "manifest.json",
+      "semantic_validation.json"
+    ],
+    "summary": "atlas.json"
+  },
+  "prohibited": {
+    "account_scaling_or_return_target_search": true,
+    "calendar_2025_access": true,
+    "calendar_2026_access": true,
+    "candidate_definition_or_evaluation": true,
+    "entry_exit_stop_target_or_reward_to_risk_optimization": true,
+    "explanatory_feature_access": true,
+    "feature_outcome_join": true,
+    "mae_mfe_or_intraperiod_path_access": true,
+    "month_or_quarter_ranking": true,
+    "relationship_discovery": true,
+    "session_pairing_or_continuation_analysis": true
+  },
+  "research_interval": {
+    "end_exclusive": "2025-01-01T00:00:00+00:00",
+    "independent_validation_credit": false,
+    "start_inclusive": "2021-08-01T00:00:00+00:00"
+  },
+  "source": {
+    "baseline_bundle_manifest_hash": "dff92e13105b0b6fd6c9a71a5d9f7668384361d37475fac5fc8b2a33521ea032",
+    "baseline_bundle_manifest_path": "research_artifacts/gold_casebook_baseline_v01/manifest.json",
+    "baseline_trades_sha256": "afbe8f78cadb27ed5b3178573d7d74e1d6ae069a8543cebcf4cab3ef5f99fa85",
+    "casebook_manifest_hash": "d1241633b073cd7307f1da00a13a2d76c132f3dccefc52a076be2c641f06b85f",
+    "casebook_manifest_path": "research_artifacts/gold_casebook_v01/manifest.json",
+    "coverage_data_hash": "d5b84416bc75fa1cf9f3ddb35dc04af630b0fcf41a6b2ba8b731aebd12606eb6",
+    "coverage_path": "research_artifacts/gold_casebook_discovery_v2_coverage.json"
+  },
+  "status": "FROZEN_BEFORE_OUTCOME_LEDGER_ACCESS",
+  "verdict_policy": {
+    "edge_claim_permitted": false,
+    "milestone_result": "DESCRIPTIVE_ATLAS_COMPLETE_OR_BLOCKED",
+    "next_milestone": "V2_M3_BOUNDED_RELATIONSHIP_DISCOVERY",
+    "next_milestone_authorized": false
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "calendar_2025_values_accessed_for_branch": false,
+  "calendar_2026_values_accessed_for_branch": false,
+  "controls": {
+    "contract": {
+      "bytes": 11025,
+      "path": "GOLD_PULLBACK_ARCHETYPE_SETUP_ROUTING_AND_RISK_ALLOCATION_CONTRACT_V1.md",
+      "sha256": "fd7c80896f128fe285b1b0bb2127ff006c9e661621e294b09a91a5ec4ea4931c"
+    },
+    "protocol": {
+      "bytes": 5087,
+      "path": "research_manifests/gold_pullback_archetype_setup_routing_v1_protocol.json",
+      "sha256": "149d756b7e5dc4d40c57e74aa0f4276ca171c0f6b2f180066a866aabdb1b7dbc"
+    }
+  },
+  "entry_model_registry_hash": "84b1054904d8978ce5bc49d6999110eba5e672f34f5f3d78a79bee770a3ecf2c",
+  "frozen_at_utc": "2026-08-10T11:08:40.133288Z",
+  "new_model_by_archetype_performance_measured_before_freeze": false,
+  "paid_acquisition_authorized": false,
+  "prior_development_outcomes_previously_exposed": true,
+  "probability_protocol_hash": "c98094a59c2e4364b725f4e5c3beea6c5f5ef68acf8b8f4d03aa655eff2e92b0",
+  "risk_protocol_hash": "4646e471a48691bcf9a73d57d2db36d52486a52a377ddd303c45ded49aa29e28",
+  "source_set_hash": "1c09463761779bafe0ac80a32ff603ac33c2a1b08900356889cb59221ee184ff",
+  "sources": {
+    "anatomy_primary": {
+      "bytes": 3631617,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/primary_movement_anatomy.parquet",
+      "row_groups": 1,
+      "rows": 8653,
+      "schema": "pullback_id: string\ntimeframe: string\nscale: string\ndirection: string\nknown_at_utc: string\nresolution: string\natr14_e8: double\nfeature_lineage_hash: string\nresolution_hash: string\nanatomy_available: bool\nunavailable_reason: string\nanchor_index: int64\nanchor_at_utc: string\nanchor_delay_minutes: double\nanchor_open_e8: int64\nconfirmation_parent_index: int64\nm1_complete: bool\nm1_displacement_atr: double\nm1_mfe_atr: double\nm1_mae_atr: double\nm5_complete: bool\nm5_displacement_atr: double\nm5_mfe_atr: double\nm5_mae_atr: double\nm15_complete: bool\nm15_displacement_atr: double\nm15_mfe_atr: double\nm15_mae_atr: double\nm30_complete: bool\nm30_displacement_atr: double\nm30_mfe_atr: double\nm30_mae_atr: double\nm60_complete: bool\nm60_displacement_atr: double\nm60_mfe_atr: double\nm60_mae_atr: double\np1_complete: bool\np1_displacement_atr: double\np1_mfe_atr: double\np1_mae_atr: double\np2_complete: bool\np2_displacement_atr: double\np2_mfe_atr: double\np2_mae_atr: double\np4_complete: bool\np4_displacement_atr: double\np4_mfe_atr: double\np4_mae_atr: double\np8_complete: bool\np8_displacement_atr: double\np8_mfe_atr: double\np8_mae_atr: double\np16_complete: bool\np16_displacement_atr: double\np16_mfe_atr: double\np16_mae_atr: double\ncomplete_mfe_atr: double\ncomplete_mae_atr: double\nterminal_displacement_atr: double\nm1_bars_in_complete_path: int64\nbars_to_max_favourable: int64\nbars_to_max_adverse: int64\nminutes_to_max_favourable: int64\nminutes_to_max_adverse: int64\ncomplete_path_available: bool\nbarrier_0p25_favourable_bar: int64\nbarrier_0p25_adverse_bar: int64\nbarrier_0p25_order: string\nbarrier_0p25_favourable_minutes: int64\nbarrier_0p25_adverse_minutes: int64\nbarrier_0p5_favourable_bar: int64\nbarrier_0p5_adverse_bar: int64\nbarrier_0p5_order: string\nbarrier_0p5_favourable_minutes: int64\nbarrier_0p5_adverse_minutes: int64\nbarrier_0p75_favourable_bar: int64\nbarrier_0p75_adverse_bar: int64\nbarrier_0p75_order: string\nbarrier_0p75_favourable_minutes: int64\nbarrier_0p75_adverse_minutes: int64\nbarrier_1p0_favourable_bar: int64\nbarrier_1p0_adverse_bar: int64\nbarrier_1p0_order: string\nbarrier_1p0_favourable_minutes: int64\nbarrier_1p0_adverse_minutes: int64\nbarrier_1p5_favourable_bar: int64\nbarrier_1p5_adverse_bar: int64\nbarrier_1p5_order: string\nbarrier_1p5_favourable_minutes: int64\nbarrier_1p5_adverse_minutes: int64\nbarrier_2p0_favourable_bar: int64\nbarrier_2p0_adverse_bar: int64\nbarrier_2p0_order: string\nbarrier_2p0_favourable_minutes: int64\nbarrier_2p0_adverse_minutes: int64\nbarrier_3p0_favourable_bar: int64\nbarrier_3p0_adverse_bar: int64\nbarrier_3p0_order: string\nbarrier_3p0_favourable_minutes: int64\nbarrier_3p0_adverse_minutes: int64\npath_classification: string\nanatomy_lineage_hash: string",
+      "sha256": "69a4e80c224de859cb80a2ea0c35094eaae25e6bd86abfddd4d29de3ff753281"
+    },
+    "anatomy_reference": {
+      "bytes": 3631617,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/reference_movement_anatomy.parquet",
+      "row_groups": 1,
+      "rows": 8653,
+      "schema": "pullback_id: string\ntimeframe: string\nscale: string\ndirection: string\nknown_at_utc: string\nresolution: string\natr14_e8: double\nfeature_lineage_hash: string\nresolution_hash: string\nanatomy_available: bool\nunavailable_reason: string\nanchor_index: int64\nanchor_at_utc: string\nanchor_delay_minutes: double\nanchor_open_e8: int64\nconfirmation_parent_index: int64\nm1_complete: bool\nm1_displacement_atr: double\nm1_mfe_atr: double\nm1_mae_atr: double\nm5_complete: bool\nm5_displacement_atr: double\nm5_mfe_atr: double\nm5_mae_atr: double\nm15_complete: bool\nm15_displacement_atr: double\nm15_mfe_atr: double\nm15_mae_atr: double\nm30_complete: bool\nm30_displacement_atr: double\nm30_mfe_atr: double\nm30_mae_atr: double\nm60_complete: bool\nm60_displacement_atr: double\nm60_mfe_atr: double\nm60_mae_atr: double\np1_complete: bool\np1_displacement_atr: double\np1_mfe_atr: double\np1_mae_atr: double\np2_complete: bool\np2_displacement_atr: double\np2_mfe_atr: double\np2_mae_atr: double\np4_complete: bool\np4_displacement_atr: double\np4_mfe_atr: double\np4_mae_atr: double\np8_complete: bool\np8_displacement_atr: double\np8_mfe_atr: double\np8_mae_atr: double\np16_complete: bool\np16_displacement_atr: double\np16_mfe_atr: double\np16_mae_atr: double\ncomplete_mfe_atr: double\ncomplete_mae_atr: double\nterminal_displacement_atr: double\nm1_bars_in_complete_path: int64\nbars_to_max_favourable: int64\nbars_to_max_adverse: int64\nminutes_to_max_favourable: int64\nminutes_to_max_adverse: int64\ncomplete_path_available: bool\nbarrier_0p25_favourable_bar: int64\nbarrier_0p25_adverse_bar: int64\nbarrier_0p25_order: string\nbarrier_0p25_favourable_minutes: int64\nbarrier_0p25_adverse_minutes: int64\nbarrier_0p5_favourable_bar: int64\nbarrier_0p5_adverse_bar: int64\nbarrier_0p5_order: string\nbarrier_0p5_favourable_minutes: int64\nbarrier_0p5_adverse_minutes: int64\nbarrier_0p75_favourable_bar: int64\nbarrier_0p75_adverse_bar: int64\nbarrier_0p75_order: string\nbarrier_0p75_favourable_minutes: int64\nbarrier_0p75_adverse_minutes: int64\nbarrier_1p0_favourable_bar: int64\nbarrier_1p0_adverse_bar: int64\nbarrier_1p0_order: string\nbarrier_1p0_favourable_minutes: int64\nbarrier_1p0_adverse_minutes: int64\nbarrier_1p5_favourable_bar: int64\nbarrier_1p5_adverse_bar: int64\nbarrier_1p5_order: string\nbarrier_1p5_favourable_minutes: int64\nbarrier_1p5_adverse_minutes: int64\nbarrier_2p0_favourable_bar: int64\nbarrier_2p0_adverse_bar: int64\nbarrier_2p0_order: string\nbarrier_2p0_favourable_minutes: int64\nbarrier_2p0_adverse_minutes: int64\nbarrier_3p0_favourable_bar: int64\nbarrier_3p0_adverse_bar: int64\nbarrier_3p0_order: string\nbarrier_3p0_favourable_minutes: int64\nbarrier_3p0_adverse_minutes: int64\npath_classification: string\nanatomy_lineage_hash: string",
+      "sha256": "69a4e80c224de859cb80a2ea0c35094eaae25e6bd86abfddd4d29de3ff753281"
+    },
+    "archetype_seal": {
+      "bytes": 1313,
+      "path": "research_artifacts/gold_pullback_behavioural_archetypes_v1/final_seal.json",
+      "sha256": "189f574a3d68e6cff279d9efd684e643a9942c300d8fe187c8fe9d209d89bcd9"
+    },
+    "archetypes_primary": {
+      "bytes": 1906259,
+      "path": "research_artifacts/gold_pullback_behavioural_archetypes_v1/primary_archetypes.parquet",
+      "row_groups": 1,
+      "rows": 8653,
+      "schema": "pullback_id: string\ntimeframe: string\ndirection: string\nsegment_id: string\nknown_at_utc: string\ncalendar_year: int64\ncalendar_month: string\ncalendar_week: string\ndecision_date: string\nresolution: string\narchetype: string\nassignment_reason: string\ntechnical_available: bool\ntechnical_unavailable_reason: string\nsession_state: string\nfundamental_alignment_state: string\nfundamental_score_aligned: double\nfundamental_confidence: double\nhigher_timeframe_alignment_count: double\nhigher_timeframe_known_count: double\nconfirmation_body_state: string\nconfirmation_displacement: bool\nconfirmation_close_location_trend: double\nresponse_displacement_atr: double\nresponse_efficiency: double\npivot_rejection_strong: bool\nreference_sweep_reclaim: bool\nasia_sweep_reclaim: bool\nprior_day_sweep_reclaim: bool\nretracement_zone: string\nretracement_depth_atr: double\ntrend_age_bars: int64\nprior_continuation_count: int64\ncot_available: bool\ncot_managed_money_net_change_aligned: double\nfeature_lineage_hash: string\nresolution_hash: string\nconfirmation_break_formed: bool\nconfirmation_break_at_utc: string\nhalf_retrace_formed: bool\nhalf_retrace_at_utc: string\nbreak_retest_formed: bool\nbreak_retest_at_utc: string\nreference_retest_formed: bool\nbarrier_0p5_order: string\natr14_usd_oz: double\npivot_to_max_atr: double\npivot_to_max_usd_oz: double\npost_confirmation_mfe_atr: double\npost_confirmation_mae_atr: double\nterminal_displacement_atr: double\nminutes_to_max_favourable: int64\nminutes_to_max_adverse: int64\noracle_r: double\ncase_hash: string",
+      "sha256": "1b48075bbaa4c14873a84cd66f570259eca044813a008e768f9d1ecca41ba856"
+    },
+    "archetypes_reference": {
+      "bytes": 1906259,
+      "path": "research_artifacts/gold_pullback_behavioural_archetypes_v1/reference_archetypes.parquet",
+      "row_groups": 1,
+      "rows": 8653,
+      "schema": "pullback_id: string\ntimeframe: string\ndirection: string\nsegment_id: string\nknown_at_utc: string\ncalendar_year: int64\ncalendar_month: string\ncalendar_week: string\ndecision_date: string\nresolution: string\narchetype: string\nassignment_reason: string\ntechnical_available: bool\ntechnical_unavailable_reason: string\nsession_state: string\nfundamental_alignment_state: string\nfundamental_score_aligned: double\nfundamental_confidence: double\nhigher_timeframe_alignment_count: double\nhigher_timeframe_known_count: double\nconfirmation_body_state: string\nconfirmation_displacement: bool\nconfirmation_close_location_trend: double\nresponse_displacement_atr: double\nresponse_efficiency: double\npivot_rejection_strong: bool\nreference_sweep_reclaim: bool\nasia_sweep_reclaim: bool\nprior_day_sweep_reclaim: bool\nretracement_zone: string\nretracement_depth_atr: double\ntrend_age_bars: int64\nprior_continuation_count: int64\ncot_available: bool\ncot_managed_money_net_change_aligned: double\nfeature_lineage_hash: string\nresolution_hash: string\nconfirmation_break_formed: bool\nconfirmation_break_at_utc: string\nhalf_retrace_formed: bool\nhalf_retrace_at_utc: string\nbreak_retest_formed: bool\nbreak_retest_at_utc: string\nreference_retest_formed: bool\nbarrier_0p5_order: string\natr14_usd_oz: double\npivot_to_max_atr: double\npivot_to_max_usd_oz: double\npost_confirmation_mfe_atr: double\npost_confirmation_mae_atr: double\nterminal_displacement_atr: double\nminutes_to_max_favourable: int64\nminutes_to_max_adverse: int64\noracle_r: double\ncase_hash: string",
+      "sha256": "1b48075bbaa4c14873a84cd66f570259eca044813a008e768f9d1ecca41ba856"
+    },
+    "cases_primary": {
+      "bytes": 4976288,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_pullback_cases.parquet",
+      "row_groups": 1,
+      "rows": 37191,
+      "schema": "pullback_id: string not null\ntimeframe: string not null\nscale: string not null\nspan: int64 not null\ndirection: string not null\nsegment_id: string not null\npivot_swing_id: string not null\npivot_at_utc: string not null\nknown_at_utc: string not null\npivot_price_e8: int64 not null\nreference_event_id: string not null\nreference_level_e8: int64 not null\nresolution: string not null\nresolved_at_utc: string\nresolution_event_id: string\nbars_to_resolution: int64\nactionable_at_known: bool not null\nresearch_eligible: bool not null\ndecision_facts_hash: string not null\nresolution_hash: string not null",
+      "sha256": "067fc581ffcbaadb589ac0ea428d82bc26b3546b549a4dfd1a6afbc512af35ee"
+    },
+    "cases_reference": {
+      "bytes": 4976288,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/reference_pullback_cases.parquet",
+      "row_groups": 1,
+      "rows": 37191,
+      "schema": "pullback_id: string not null\ntimeframe: string not null\nscale: string not null\nspan: int64 not null\ndirection: string not null\nsegment_id: string not null\npivot_swing_id: string not null\npivot_at_utc: string not null\nknown_at_utc: string not null\npivot_price_e8: int64 not null\nreference_event_id: string not null\nreference_level_e8: int64 not null\nresolution: string not null\nresolved_at_utc: string\nresolution_event_id: string\nbars_to_resolution: int64\nactionable_at_known: bool not null\nresearch_eligible: bool not null\ndecision_facts_hash: string not null\nresolution_hash: string not null",
+      "sha256": "067fc581ffcbaadb589ac0ea428d82bc26b3546b549a4dfd1a6afbc512af35ee"
+    },
+    "events_primary": {
+      "bytes": 4933833,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_structure_events.parquet",
+      "row_groups": 1,
+      "rows": 46247,
+      "schema": "event_id: string not null\ntimeframe: string not null\nscale: string not null\nspan: int64 not null\nevent_type: string not null\ndirection: string not null\nprior_state: string not null\nnew_state: string not null\nevent_at_utc: string not null\nsegment_id: string not null\nbroken_swing_ids_json: string not null\nbroken_level_count: int64 not null\nbroken_level_min_e8: int64 not null\nbroken_level_max_e8: int64 not null\nprotected_level_e8: int64\nassociated_pullback_ids_json: string not null\nbar_component_complete: bool not null\nresearch_eligible: bool not null\nevidence_hash: string not null",
+      "sha256": "05fcf2e1cfb4d4fde7bec65f14d0fcd26157ac498e620b9fe0210a63bdaf589d"
+    },
+    "events_reference": {
+      "bytes": 4933833,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/reference_structure_events.parquet",
+      "row_groups": 1,
+      "rows": 46247,
+      "schema": "event_id: string not null\ntimeframe: string not null\nscale: string not null\nspan: int64 not null\nevent_type: string not null\ndirection: string not null\nprior_state: string not null\nnew_state: string not null\nevent_at_utc: string not null\nsegment_id: string not null\nbroken_swing_ids_json: string not null\nbroken_level_count: int64 not null\nbroken_level_min_e8: int64 not null\nbroken_level_max_e8: int64 not null\nprotected_level_e8: int64\nassociated_pullback_ids_json: string not null\nbar_component_complete: bool not null\nresearch_eligible: bool not null\nevidence_hash: string not null",
+      "sha256": "05fcf2e1cfb4d4fde7bec65f14d0fcd26157ac498e620b9fe0210a63bdaf589d"
+    },
+    "features_primary": {
+      "bytes": 7804461,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/primary_features.parquet",
+      "row_groups": 3,
+      "rows": 37191,
+      "schema": "pullback_id: string\ntimeframe: string\nscale: string\nspan: int64\ndirection: string\nsegment_id: string\npivot_swing_id: string\nreference_event_id: string\npivot_at_utc: string\nknown_at_utc: string\nactionable_at_known: bool\nresearch_eligible: bool\nprimary_research_scale: bool\nfeature_available: bool\nunavailable_reason: string\natr14_e8: double\ntrend_age_bars: int64\nevent_to_pivot_bars: int64\nimpulse_to_pivot_bars: int64\nprior_continuation_count: int64\nimpulse_extension_atr: double\nimpulse_efficiency: double\npullback_efficiency: double\nretracement_fraction: double\nretracement_depth_atr: double\ncompression_ratio: double\nreference_distance_atr: double\npivot_range_atr: double\npivot_body_fraction: double\npivot_close_location_trend: double\npivot_rejection_wick_fraction: double\npivot_opposite_wick_fraction: double\nconfirmation_range_atr: double\nconfirmation_body_fraction: double\nconfirmation_close_location_trend: double\nconfirmation_rejection_wick_fraction: double\nconfirmation_opposite_wick_fraction: double\nresponse_displacement_atr: double\nresponse_efficiency: double\nresponse_aligned_close_count: int64\nconfirmation_volume_ratio_20: double\nretracement_zone: string\npivot_body_state: string\nconfirmation_body_state: string\npivot_engulfing_aligned: bool\npivot_inside_bar: bool\npivot_outside_bar: bool\npivot_close_through_prior_extreme: bool\nconfirmation_engulfing_aligned: bool\nconfirmation_inside_bar: bool\nconfirmation_outside_bar: bool\nconfirmation_close_through_prior_extreme: bool\npivot_rejection_strong: bool\nconfirmation_displacement: bool\nreference_touch: bool\nreference_sweep_reclaim: bool\nprior_day_level_touch: bool\nprior_day_sweep_reclaim: bool\nasia_level_touch: bool\nasia_sweep_reclaim: bool\nsession_state: string\nh1_structure_state: string\nh1_structure_alignment: bool\nh4_structure_state: string\nh4_structure_alignment: bool\ndaily_3bar_alignment: bool\nweekly_2bar_alignment: bool\nhigher_timeframe_alignment_count: int64\nhigher_timeframe_known_count: int64\nfundamental_available: bool\nfundamental_age_hours: double\nfundamental_score: double\nfundamental_score_aligned: double\nfundamental_confidence: double\nfundamental_coverage: double\nfundamental_alignment_state: string\nfundamental_regime: string\nreaction_function: string\nevent_risk: string\nreal_yield_contribution_aligned: double\nfed_path_contribution_aligned: double\nusd_contribution_aligned: double\ntwo_year_contribution_aligned: double\npositioning_contribution_aligned: double\nfinancial_stress_contribution_aligned: double\ncot_available: bool\ncot_age_days: double\ncot_managed_money_net_percentile: double\ncot_managed_money_net_change_aligned: double\ncot_crowding_state: string\ncot_long_liquidation_risk: string\ncot_short_covering_risk: string\nfeature_lineage_hash: string",
+      "sha256": "972706fcf161bb8d3c84677bedea45d9a8e2b6fd463a2c7853bb624e0acf2cac"
+    },
+    "features_reference": {
+      "bytes": 7804461,
+      "path": "research_artifacts/gold_trend_pullback_continuation_edge_v1_v01/reference_features.parquet",
+      "row_groups": 3,
+      "rows": 37191,
+      "schema": "pullback_id: string\ntimeframe: string\nscale: string\nspan: int64\ndirection: string\nsegment_id: string\npivot_swing_id: string\nreference_event_id: string\npivot_at_utc: string\nknown_at_utc: string\nactionable_at_known: bool\nresearch_eligible: bool\nprimary_research_scale: bool\nfeature_available: bool\nunavailable_reason: string\natr14_e8: double\ntrend_age_bars: int64\nevent_to_pivot_bars: int64\nimpulse_to_pivot_bars: int64\nprior_continuation_count: int64\nimpulse_extension_atr: double\nimpulse_efficiency: double\npullback_efficiency: double\nretracement_fraction: double\nretracement_depth_atr: double\ncompression_ratio: double\nreference_distance_atr: double\npivot_range_atr: double\npivot_body_fraction: double\npivot_close_location_trend: double\npivot_rejection_wick_fraction: double\npivot_opposite_wick_fraction: double\nconfirmation_range_atr: double\nconfirmation_body_fraction: double\nconfirmation_close_location_trend: double\nconfirmation_rejection_wick_fraction: double\nconfirmation_opposite_wick_fraction: double\nresponse_displacement_atr: double\nresponse_efficiency: double\nresponse_aligned_close_count: int64\nconfirmation_volume_ratio_20: double\nretracement_zone: string\npivot_body_state: string\nconfirmation_body_state: string\npivot_engulfing_aligned: bool\npivot_inside_bar: bool\npivot_outside_bar: bool\npivot_close_through_prior_extreme: bool\nconfirmation_engulfing_aligned: bool\nconfirmation_inside_bar: bool\nconfirmation_outside_bar: bool\nconfirmation_close_through_prior_extreme: bool\npivot_rejection_strong: bool\nconfirmation_displacement: bool\nreference_touch: bool\nreference_sweep_reclaim: bool\nprior_day_level_touch: bool\nprior_day_sweep_reclaim: bool\nasia_level_touch: bool\nasia_sweep_reclaim: bool\nsession_state: string\nh1_structure_state: string\nh1_structure_alignment: bool\nh4_structure_state: string\nh4_structure_alignment: bool\ndaily_3bar_alignment: bool\nweekly_2bar_alignment: bool\nhigher_timeframe_alignment_count: int64\nhigher_timeframe_known_count: int64\nfundamental_available: bool\nfundamental_age_hours: double\nfundamental_score: double\nfundamental_score_aligned: double\nfundamental_confidence: double\nfundamental_coverage: double\nfundamental_alignment_state: string\nfundamental_regime: string\nreaction_function: string\nevent_risk: string\nreal_yield_contribution_aligned: double\nfed_path_contribution_aligned: double\nusd_contribution_aligned: double\ntwo_year_contribution_aligned: double\npositioning_contribution_aligned: double\nfinancial_stress_contribution_aligned: double\ncot_available: bool\ncot_age_days: double\ncot_managed_money_net_percentile: double\ncot_managed_money_net_change_aligned: double\ncot_crowding_state: string\ncot_long_liquidation_risk: string\ncot_short_covering_risk: string\nfeature_lineage_hash: string",
+      "sha256": "972706fcf161bb8d3c84677bedea45d9a8e2b6fd463a2c7853bb624e0acf2cac"
+    },
+    "movement_pretest_seal": {
+      "bytes": 1889,
+      "path": "research_manifests/gold_trend_pullback_movement_anatomy_edge_v1_pretest_seal.json",
+      "sha256": "e327dadb3ba7f88d1d9515dbb95526484172dee1106fbfb651112b090c1a8683"
+    },
+    "price_bars": {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    "swings_primary": {
+      "bytes": 5514276,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/primary_swings.parquet",
+      "row_groups": 2,
+      "rows": 96909,
+      "schema": "swing_id: string not null\ntimeframe: string not null\nscale: string not null\nspan: int64 not null\nside: string not null\npivot_at_utc: string not null\nknown_at_utc: string not null\nprice_e8: int64 not null\npivot_component_complete: bool not null\nresearch_eligible: bool not null\nevidence_hash: string not null",
+      "sha256": "81966751e033cfbcbc7c291c42acca78289ec01a728c9d06d77024a5ec1d35a6"
+    },
+    "swings_reference": {
+      "bytes": 5514276,
+      "path": "research_artifacts/gold_multitimeframe_trend_continuation_census_v1_v02/reference_swings.parquet",
+      "row_groups": 2,
+      "rows": 96909,
+      "schema": "swing_id: string not null\ntimeframe: string not null\nscale: string not null\nspan: int64 not null\nside: string not null\npivot_at_utc: string not null\nknown_at_utc: string not null\nprice_e8: int64 not null\npivot_component_complete: bool not null\nresearch_eligible: bool not null\nevidence_hash: string not null",
+      "sha256": "81966751e033cfbcbc7c291c42acca78289ec01a728c9d06d77024a5ec1d35a6"
+    },
+    "triggers_primary": {
+      "bytes": 2198130,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/primary_trigger_facts.parquet",
+      "row_groups": 3,
+      "rows": 42085,
+      "schema": "pullback_id: string\ntimeframe: string\ndirection: string\nknown_at_utc: string\ntrigger: string\nstatus: string\nreason: string\nentry_index: int64\nentry_at_utc: string\nentry_e8: int64\nentry_delay_minutes: double\nentry_spread_usd_oz: double\nconfirmation_high_e8: int64\nconfirmation_low_e8: int64\ndecision_close_e8: int64\npivot_price_e8: int64\nreference_level_e8: int64\natr14_e8: double\ntrigger_lineage_hash: string",
+      "sha256": "d6c2e8e8d5115bf0cf6a0e4b3bae8eded76d143ff573ffe4de7ab4b627775a4a"
+    },
+    "triggers_reference": {
+      "bytes": 2198130,
+      "path": "research_artifacts/gold_trend_pullback_movement_anatomy_edge_v1_v01/reference_trigger_facts.parquet",
+      "row_groups": 3,
+      "rows": 42085,
+      "schema": "pullback_id: string\ntimeframe: string\ndirection: string\nknown_at_utc: string\ntrigger: string\nstatus: string\nreason: string\nentry_index: int64\nentry_at_utc: string\nentry_e8: int64\nentry_delay_minutes: double\nentry_spread_usd_oz: double\nconfirmation_high_e8: int64\nconfirmation_low_e8: int64\ndecision_close_e8: int64\npivot_price_e8: int64\nreference_level_e8: int64\natr14_e8: double\ntrigger_lineage_hash: string",
+      "sha256": "d6c2e8e8d5115bf0cf6a0e4b3bae8eded76d143ff573ffe4de7ab4b627775a4a"
+    }
+  },
+  "status": "FROZEN_BEFORE_NEW_MODEL_BY_ARCHETYPE_PERFORMANCE_MEASUREMENT",
+  "version": "GOLD_PULLBACK_ARCHETYPE_SETUP_ROUTING_V1_PREPERFORMANCE_FREEZE_1_0"
+}

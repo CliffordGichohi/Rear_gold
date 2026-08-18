@@ -52,6 +52,17 @@ services:
       target: runtime
     env_file:
       - .env
+    environment:
+      BLIND_REPLAY_ARTIFACT_PATH: /app/research_artifacts/gold_blind_discretionary_replay_v1
+      BLIND_REPLAY_V2_ARTIFACT_PATH: /app/research_artifacts/gold_blind_synchronized_setup_replay_v2
+      BLIND_REPLAY_V3_ARTIFACT_PATH: /app/research_artifacts/gold_annotated_replay_v3
+      BLIND_REPLAY_V3_LEDGER_PATH: /app/research_artifacts/gold_annotated_replay_v3/ledgers/practice_event_ledger_v3.jsonl
+      CODEX_OPERATOR_REPLAY_ARTIFACT_PATH: /app/research_artifacts/gold_blind_codex_operator_replay_v1
+      CODEX_OPERATOR_REPLAY_VISIBLE_LEDGER_PATH: /app/research_artifacts/gold_blind_codex_operator_replay_v1/ledgers/codex_blind_visible_ledger.jsonl
+      CODEX_OPERATOR_REPLAY_OUTCOME_LEDGER_PATH: /app/research_artifacts/gold_blind_codex_operator_replay_v1/outcome_vault/codex_blind_outcome_ledger.jsonl
+      MATCHED_HUMAN_REPLAY_ARTIFACT_PATH: /app/research_artifacts/gold_matched_human_replay_v1
+      MATCHED_HUMAN_REPLAY_VISIBLE_LEDGER_PATH: /app/research_artifacts/gold_matched_human_replay_v1/ledgers/matched_human_visible_ledger.jsonl
+      MATCHED_HUMAN_REPLAY_OUTCOME_LEDGER_PATH: /app/research_artifacts/gold_matched_human_replay_v1/outcome_vault/matched_human_outcome_ledger.jsonl
     # Uvicorn access logs include query strings. OAuth callbacks carry a
     # one-minute authorization code, so rely on the structured path-only
     # request logger instead.
@@ -65,6 +76,11 @@ services:
         condition: service_healthy
     volumes:
       - raw_data:/app/data/raw
+      - ./research_artifacts/gold_blind_discretionary_replay_v1:/app/research_artifacts/gold_blind_discretionary_replay_v1
+      - ./research_artifacts/gold_blind_synchronized_setup_replay_v2:/app/research_artifacts/gold_blind_synchronized_setup_replay_v2
+      - ./research_artifacts/gold_annotated_replay_v3:/app/research_artifacts/gold_annotated_replay_v3
+      - ./research_artifacts/gold_blind_codex_operator_replay_v1:/app/research_artifacts/gold_blind_codex_operator_replay_v1
+      - ./research_artifacts/gold_matched_human_replay_v1:/app/research_artifacts/gold_matched_human_replay_v1
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/live', timeout=2)"]
       interval: 10s
@@ -127,8 +143,20 @@ services:
     environment:
       DATABASE_URL: postgresql+asyncpg://gold_intel:gold_intel_dev@postgres:5432/gold_intel
       REDIS_URL: redis://redis:6379/0
+      BLIND_REPLAY_ARTIFACT_PATH: /app/research_artifacts/gold_blind_discretionary_replay_v1
+      BLIND_REPLAY_V2_ARTIFACT_PATH: /app/research_artifacts/gold_blind_synchronized_setup_replay_v2
+      BLIND_REPLAY_V3_ARTIFACT_PATH: /app/research_artifacts/gold_annotated_replay_v3
+      BLIND_REPLAY_V3_LEDGER_PATH: /tmp/gold-replay-v3-tests/practice_event_ledger_v3.jsonl
     volumes:
       - ./backend:/app
+      - ./research_artifacts/gold_blind_discretionary_replay_v1:/app/research_artifacts/gold_blind_discretionary_replay_v1
+      - ./research_artifacts/gold_blind_synchronized_setup_replay_v2:/app/research_artifacts/gold_blind_synchronized_setup_replay_v2
+      - ./research_artifacts/gold_annotated_replay_v3:/app/research_artifacts/gold_annotated_replay_v3:ro
+      # Legacy repository-level integrity tests resolve these from the
+      # filesystem root because /app is the mounted backend package.
+      - ./research_artifacts:/research_artifacts:ro
+      - ./research_manifests:/research_manifests:ro
+      - ./research_schemas:/research_schemas:ro
     command: ["pytest", "-q"]
 
 volumes:
