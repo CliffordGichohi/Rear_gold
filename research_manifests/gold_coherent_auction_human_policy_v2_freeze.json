@@ -1,0 +1,34 @@
+{
+  "version": "GOLD_COHERENT_AUCTION_HUMAN_POLICY_V2_FREEZE_1_0",
+  "status": "FROZEN_BEFORE_V2_PATH_REGRESSION",
+  "evidence_status": "POST_HOC_EXPOSED_CALIBRATION_ZERO_VALIDATION_CREDIT",
+  "authorization": "User instructed proceed after rejecting the V1 rule translation",
+  "contract_path": "GOLD_COHERENT_AUCTION_HUMAN_POLICY_RECONSTRUCTION_V2.md",
+  "contract_sha256": "535ab39d45e04aa01bb5adabbf78994ddbca33e5f14d58fd4b78e1b112284a69",
+  "implementation_path": "backend/src/gold_intel/analytics/coherent_auction_human_policy_v2.py",
+  "implementation_sha256": "ecfc4e687608a2a38a60a18f235df6e62ae4f5cedf9a274d90c814138d38d126",
+  "synthetic_test_path": "backend/tests/unit/test_coherent_auction_human_policy_v2.py",
+  "synthetic_test_sha256": "a313541b14ccdb8cdfd6ad460e4dcef0f2b70a9b0088a226235c9680e9625043",
+  "preserved_v1_report_sha256": "f8a59e065067a9b384d96dca5c5dffde46f73c9b99eec876a05d82e85c2df051",
+  "preserved_v1_final_seal_sha256": "634bd5d744858e7d85fa1675af1d1b4b66a3436bdf360b25477fd66d4f200f9a",
+  "population": "same 16 exposed sealed human trades",
+  "policy_constants": {
+    "h4_signed_range_location_limit": 0.8,
+    "h4_signed_displacement_limit_atr": 3.0,
+    "protection_completed_m15_close_r": 1.25,
+    "runner_fraction": 0.2,
+    "target_acceptance_atr": 0.1,
+    "maximum_total_planned_loss_usd": 50.0
+  },
+  "mandatory_sensitivity_thresholds_r": [
+    1.0,
+    1.5,
+    2.0
+  ],
+  "outcome_fields_permitted_in_classifier": [],
+  "case_alias_rules_permitted": false,
+  "fresh_50_case_block": "LOCKED_UNOPENED",
+  "calendar_2025": "LOCKED_UNOPENED",
+  "calendar_2026": "LOCKED_UNOPENED",
+  "paid_acquisition": "PROHIBITED"
+}

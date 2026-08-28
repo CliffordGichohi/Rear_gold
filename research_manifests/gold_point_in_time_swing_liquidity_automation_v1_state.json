@@ -1,0 +1,34 @@
+{
+  "branch": "GOLD_POINT_IN_TIME_SWING_AND_LIQUIDITY_SHIFT_AUTOMATION_V1",
+  "sealed_at_utc": "2026-08-19T15:03:56.4085536Z",
+  "verdict": "PASS_ENGINEERING_PAPER_ONLY",
+  "ruleset_version": "gold-auction-automation-1",
+  "live_order_permitted": false,
+  "outcome_evaluation_performed": false,
+  "locked_period_outcomes_opened": false,
+  "paid_data_acquired": false,
+  "certification": {
+    "dedicated_backend_tests_passed": 6,
+    "backend_unit_tests_passed": 247,
+    "frontend_tests_passed": 29,
+    "python_lint": "PASS",
+    "frontend_lint": "PASS",
+    "typescript": "PASS",
+    "production_build": "PASS",
+    "live_api_schema_exercise": "PASS",
+    "structure_page_http_status": 200
+  },
+  "artifacts_sha256": {
+    "GOLD_POINT_IN_TIME_SWING_AND_LIQUIDITY_SHIFT_AUTOMATION_CONTRACT_V1.md": "4f5d66130a9d3ef5cf3cc08a4775fb33f55e261021f417070d13193bcb9e077f",
+    "GOLD_POINT_IN_TIME_SWING_AND_LIQUIDITY_SHIFT_AUTOMATION_V1_REPORT.md": "a4df9efef5da905b551ba8ea8b296817932496700e7da8c898514b2724e9386b",
+    "backend/src/gold_intel/analytics/auction_automation.py": "70166c63c908317d9ffd552253ac49a5b681dae6e442fb71f4650c3293ee399d",
+    "backend/src/gold_intel/application/market_structure.py": "4cd1720e67e39c884270e18d530704ffb66d40cc29be96c5eb22719c80f63564",
+    "backend/src/gold_intel/api/schemas.py": "3699bd032d56d959a859897eb53b8ed0775d5b4c6336ec81cb1fa818db1be895",
+    "backend/tests/unit/test_auction_automation.py": "67faea59067ee32a71dde30cbdfcb862aed2f8598bfa853f630729b1239520c2",
+    "frontend/src/lib/api.ts": "c8d613014bbf167168249975f3bcb828ef01d7178fd3baea3697ec3cd489abdd",
+    "frontend/src/components/market-structure-chart.tsx": "d529bd16322aa40970407b845556c3a951a46f4839f903dc366067de085177c9",
+    "frontend/src/components/market-structure-chart.test.tsx": "784fe1ab09f107cb5af22f2599ac27768aaade02f749c53885ad549248615f2e",
+    "frontend/src/app/structure/page.tsx": "cd33fb22ecdbc0a66af44a64de7ef89c6e19b5614d9e8c6677648b6df30431d9"
+  },
+  "next_gate": "OUTCOME_HIDDEN_VISUAL_CALIBRATION_BEFORE_PROSPECTIVE_PAPER_EVALUATION"
+}

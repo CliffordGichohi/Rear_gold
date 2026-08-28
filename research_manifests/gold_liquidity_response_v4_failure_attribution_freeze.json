@@ -1,0 +1,40 @@
+{
+  "calendar_2025_opened": false,
+  "calendar_2026_opened": false,
+  "files": {
+    "predecision_seal": {
+      "bytes": 436,
+      "path": "research_artifacts/gold_liquidity_shift_predecision_trigger_diagnostic_v1/seal.json",
+      "sha256": "ccb83f81b4d878c5de3537b6f1b0efbd09ef9b822bccd7f3dc6a61004917c10b"
+    },
+    "protocol": {
+      "bytes": 1215,
+      "path": "GOLD_LIQUIDITY_RESPONSE_V4_FAILURE_ATTRIBUTION_PROTOCOL.md",
+      "sha256": "6ab3619a2057eddec71c85ecc96e1ec383e5d71db63fdab2fefc03f50c625840"
+    },
+    "registry": {
+      "bytes": 668,
+      "path": "research_manifests/gold_liquidity_response_v4_failure_attribution_protocol.json",
+      "sha256": "f1ef71aee186bd8a148d5e82304316ca0096b6d965bbd8bd3d9d9d925f0cd758"
+    },
+    "v4_final_seal": {
+      "bytes": 367,
+      "path": "research_artifacts/gold_liquidity_response_m5_structure_state_edge_v4/final_seal.json",
+      "sha256": "3f199ebadebccf10a72d2702ff6cb40a02a67218fb7bea4477d61b10153223bb"
+    },
+    "v4_rows": {
+      "bytes": 2494,
+      "path": "research_artifacts/gold_liquidity_response_m5_structure_state_edge_v4/semantic_rows.csv",
+      "sha256": "02197a71042586ebe1785b9465b4375ddab64faee454cd09266ab87049d10d93"
+    },
+    "visible_ledger": {
+      "bytes": 1666513,
+      "path": "research_artifacts/gold_matched_human_replay_v1/ledgers/matched_human_visible_ledger.jsonl",
+      "sha256": "534f855c6cb5546bc7c70ab8bb586b840a7a394d552cf07c6c22d44269b0c0ca"
+    }
+  },
+  "outcomes_opened": false,
+  "sealed_at_utc": "2026-08-20T08:39:48.992174Z",
+  "status": "SEALED_BEFORE_VALUE_BLIND_FAILURE_ATTRIBUTION",
+  "version": "GOLD_LIQUIDITY_RESPONSE_V4_FAILURE_ATTRIBUTION_FREEZE_1_0"
+}

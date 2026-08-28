@@ -7,7 +7,7 @@ import math
 import os
 import threading
 from copy import deepcopy
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
@@ -19,7 +19,6 @@ from gold_intel.application.blind_replay import (
 )
 from gold_intel.config import get_settings
 
-
 PROTOCOL = "GOLD_BLIND_CODEX_OPERATOR_REPLAY_AUDIT_V1_PROTOCOL_1_0"
 VISIBLE_EVENT_VERSION = "GOLD_BLIND_CODEX_OPERATOR_REPLAY_V1_VISIBLE_EVENT_1_0"
 OUTCOME_EVENT_VERSION = "GOLD_BLIND_CODEX_OPERATOR_REPLAY_V1_OUTCOME_EVENT_1_0"
@@ -30,11 +29,11 @@ HUMAN_LEDGER_SHA256 = "7639d3609b904a2bd7f92c6df5a596cecf148a91d4853282a6d5a17e6
 
 
 def parse_time(value: str) -> datetime:
-    return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
+    return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(UTC)
 
 
 def iso(value: datetime) -> str:
-    return value.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
+    return value.astimezone(UTC).isoformat().replace("+00:00", "Z")
 
 
 def canonical_bytes(value: Any) -> bytes:
@@ -420,12 +419,39 @@ class CodexOperatorReplayService:
             "positioning": positioning,
             "events": events,
             "sessions": sessions,
+            # Session clock boundaries are frozen calendar metadata, not future
+            # market observations.  Keep them available from the first replay
+            # cursor so the browser can mark London and New York before their
+            # point-in-time session records become available.
+            "session_schedule": self._session_schedule(row),
             "display_policy": {
                 "point_in_time_only": True,
                 "recommendations_present": False,
                 "future_reactions_present": False,
             },
         }
+
+    @staticmethod
+    def _session_schedule(row: dict[str, Any]) -> list[dict[str, Any]]:
+        schedule = [
+            {
+                "session_code": str(session["session_code"]),
+                "decision_at": iso(parse_time(str(session["decision_at"]))),
+                "observation_end": iso(parse_time(str(session["observation_end"]))),
+                "session_timezone": str(session.get("session_timezone", "UTC")),
+            }
+            for session in row["context_timeline"]["sessions"]
+            if str(session["session_code"]) in {"LONDON", "NEW_YORK"}
+        ]
+        counts = {
+            code: sum(item["session_code"] == code for item in schedule)
+            for code in ("LONDON", "NEW_YORK")
+        }
+        if counts != {"LONDON": 1, "NEW_YORK": 1}:
+            raise ReplayIntegrityError(
+                "A Codex case must have exactly one frozen London and New York session schedule"
+            )
+        return sorted(schedule, key=lambda item: (item["decision_at"], item["session_code"]))
 
     def _snapshot(self, row: dict[str, Any], cursor_at: str, state: dict[str, Any]) -> dict[str, Any]:
         cursor = parse_time(cursor_at)
@@ -916,7 +942,7 @@ class CodexOperatorReplayService:
             self._verify_predecision_evidence(request, snapshot)
             event_type = "NO_TRADE_SEALED" if request["action"] == "NO_TRADE" else "DECISION_SEALED"
             decision = deepcopy(request)
-            decision_event = self._append(self.visible_ledger_path, VISIBLE_EVENT_VERSION, {
+            self._append(self.visible_ledger_path, VISIBLE_EVENT_VERSION, {
                 "event_type": event_type,
                 "case_alias": alias,
                 "cursor_at": iso(current),

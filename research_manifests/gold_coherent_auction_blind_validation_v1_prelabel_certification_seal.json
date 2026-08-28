@@ -1,0 +1,21 @@
+{
+  "calendar_2025": "LOCKED",
+  "calendar_2026": "LOCKED",
+  "decision_ledger": "ABSENT_UNTIL_FIRST_HUMAN_ACTION",
+  "decisions_collected": 0,
+  "sealed_at": "2026-08-20T11:33:57.087384+00:00",
+  "sealed_outputs": [
+    {
+      "bytes": 5152,
+      "path": "research_artifacts/gold_coherent_auction_blind_validation_v1/application_prelabel_certification.json",
+      "sha256": "869b1558269f9e69bb73b8a46de9c6d7b56ab108a77dffb9591ae7be8724788a"
+    },
+    {
+      "bytes": 709,
+      "path": "research_artifacts/gold_coherent_auction_blind_validation_v1/state_prelabel_ready.json",
+      "sha256": "3651ac42897cda4fd585edbeaac7a38f10e733104ff959a18e15d3788a84a363"
+    }
+  ],
+  "verdict": "PASS_APPLICATION_PRELABEL_CERTIFICATION",
+  "version": "GOLD_COHERENT_AUCTION_BLIND_VALIDATION_V1_PRELABEL_SEAL_1_0"
+}

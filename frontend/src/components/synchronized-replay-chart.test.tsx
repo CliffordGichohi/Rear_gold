@@ -13,6 +13,10 @@ import {
 afterEach(() => {
   cleanup();
   vi.restoreAllMocks();
+  Object.defineProperty(document, "fullscreenElement", {
+    configurable: true,
+    value: null,
+  });
 });
 
 
@@ -77,9 +81,11 @@ describe("SynchronizedReplayChart", () => {
   it("changes the camera only through GUI controls and can enter full screen", () => {
     render(<Harness />);
     const chart = screen.getByTestId("synchronized-replay-chart");
+    const replayWindow = screen.getByTestId("synchronized-replay-window");
     chartBounds(chart);
     expect(chart).toHaveAttribute("data-viewport-bars", "40");
     expect(chart).toHaveAttribute("data-pan-bars", "0");
+    expect(chart).toHaveAttribute("data-automatic-level-count", "0");
 
     expect(fireEvent.wheel(chart, { deltaY: -120 })).toBe(true);
     fireEvent.pointerDown(chart, { clientX: 700, pointerId: 1 });
@@ -98,8 +104,21 @@ describe("SynchronizedReplayChart", () => {
     expect(chart).toHaveAttribute("data-vertical-pan", "1");
     fireEvent.click(screen.getByRole("button", { name: "Move chart down" }));
     expect(chart).toHaveAttribute("data-vertical-pan", "0");
+    expect(chart).toHaveAttribute("data-chart-height", "585");
+    expect(chart).toHaveStyle({ height: "585px" });
+    fireEvent.click(screen.getByRole("button", { name: "Increase chart height" }));
+    expect(chart).toHaveAttribute("data-chart-height", "665");
+    expect(chart).toHaveStyle({ height: "665px" });
+    fireEvent.click(screen.getByRole("button", { name: "Decrease chart height" }));
+    expect(chart).toHaveAttribute("data-chart-height", "585");
+    expect(replayWindow).toHaveAttribute("data-chart-width-percent", "100");
+    expect(replayWindow).toHaveStyle({ width: "100%" });
+    fireEvent.click(screen.getByRole("button", { name: "Decrease chart width" }));
+    expect(replayWindow).toHaveAttribute("data-chart-width-percent", "90");
+    expect(replayWindow).toHaveStyle({ width: "90%" });
+    fireEvent.click(screen.getByRole("button", { name: "Increase chart width" }));
+    expect(replayWindow).toHaveAttribute("data-chart-width-percent", "100");
 
-    const replayWindow = screen.getByTestId("synchronized-replay-window");
     const requestFullscreen = vi.fn().mockResolvedValue(undefined);
     Object.defineProperty(replayWindow, "requestFullscreen", {
       configurable: true,
@@ -159,6 +178,11 @@ describe("SynchronizedReplayChart", () => {
     expect(screen.getByText(/ENTRY/)).toBeInTheDocument();
     expect(screen.getByText(/SL/)).toBeInTheDocument();
     expect(screen.getByText(/TP/)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: "Crosshair" }));
+    expect(screen.getByLabelText("Resize long position entry")).toBeInTheDocument();
+    expect(screen.getByLabelText("Resize long position stop")).toBeInTheDocument();
+    expect(screen.getByLabelText("Resize long position target")).toBeInTheDocument();
 
     const originalPlan = onPosition.mock.calls.at(-1)?.[0];
     const callsBeforeResize = onPosition.mock.calls.length;
@@ -233,5 +257,59 @@ describe("SynchronizedReplayChart", () => {
     expect(screen.getByRole("button", { name: "Delete selected drawing" })).toBeDisabled();
     expect(screen.getByLabelText("horizontal line drawing")).toBeInTheDocument();
     expect(screen.queryByLabelText("Resize horizontal line")).not.toBeInTheDocument();
+  });
+
+  it("keeps full-screen playback stable and exposes trade placement", () => {
+    const onPlace = vi.fn();
+    const controls = {
+      playing: true,
+      advancing: true,
+      playDisabled: false,
+      advanceDisabled: true,
+      positionReady: true,
+      placeButtonLabel: "Prepare Trade Decision",
+      cursorMinute: 60,
+      maximumCursorMinute: 900,
+      timeframeCounts: { "15m": 12 },
+      onTogglePlay: vi.fn(),
+      onAdvance: vi.fn(),
+      onTimeframeChange: vi.fn(),
+      onRequestPositionDetails: onPlace,
+    };
+    const { rerender } = render(
+      <SynchronizedReplayChart
+        bars={makeBars("15m")}
+        cursorMinute={60}
+        drawings={[]}
+        fullscreenReplayControls={controls}
+        label="15m"
+        onDrawingsChange={() => undefined}
+        onPositionPlan={() => null}
+      />,
+    );
+    const replayWindow = screen.getByTestId("synchronized-replay-window");
+    Object.defineProperty(document, "fullscreenElement", {
+      configurable: true,
+      value: replayWindow,
+    });
+    fireEvent(document, new Event("fullscreenchange"));
+
+    const pause = screen.getByRole("button", { name: "Pause full-screen replay" });
+    expect(pause).toBeEnabled();
+    expect(pause).toHaveAttribute("aria-busy", "true");
+
+    rerender(
+      <SynchronizedReplayChart
+        bars={makeBars("15m")}
+        cursorMinute={60}
+        drawings={[]}
+        fullscreenReplayControls={{ ...controls, playing: false, advancing: false }}
+        label="15m"
+        onDrawingsChange={() => undefined}
+        onPositionPlan={() => null}
+      />,
+    );
+    fireEvent.click(screen.getByRole("button", { name: "Full-screen Prepare Trade Decision" }));
+    expect(onPlace).toHaveBeenCalledTimes(1);
   });
 });

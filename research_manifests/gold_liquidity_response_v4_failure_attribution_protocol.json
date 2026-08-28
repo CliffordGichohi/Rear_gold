@@ -1,0 +1,20 @@
+{
+  "version": "GOLD_LIQUIDITY_RESPONSE_V4_FAILURE_ATTRIBUTION_PROTOCOL_1_0",
+  "diagnostic_state": {
+    "start": "UNCHANGED_V4_M5_ACTIVATION",
+    "terminal": "MINIMUM_OF_FOUR_HOURS_AND_SOURCE_LOCATION_TERMINAL",
+    "opposite_m5_break_ignored_for_ATTRIBUTION_ONLY": true
+  },
+  "higher_timeframe_eligibility": {
+    "timeframes": ["1h", "4h"],
+    "trend": "CONFIRMED_PIVOT_TREND_ALIGNED",
+    "outer_range_fraction": 0.35,
+    "direction": "INWARD_FROM_OUTER_RANGE"
+  },
+  "outcomes_permitted": false,
+  "candidate_credit": false,
+  "economic_credit": false,
+  "recommendations_maximum": 1,
+  "calendar_2025_permitted": false,
+  "calendar_2026_permitted": false
+}

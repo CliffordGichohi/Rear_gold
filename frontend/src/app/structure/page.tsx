@@ -44,6 +44,14 @@ export default async function StructurePage() {
         new Date(right.detected_at).getTime() - new Date(left.detected_at).getTime(),
     )
     .slice(0, 28);
+  const automation = snapshot.auction_automation;
+  const activeZones = automation.zones.filter((zone) =>
+    ["ACTIVE_UNTOUCHED", "TOUCHED", "RETEST_CONFIRMED"].includes(zone.state),
+  );
+  const recentProposals = automation.proposals
+    .filter((proposal) => proposal.triggered_at !== null || proposal.disposition !== "WAITING_RETEST")
+    .slice(-8)
+    .reverse();
 
   return (
     <div className="mx-auto max-w-[1500px]">
@@ -177,6 +185,51 @@ export default async function StructurePage() {
         </p>
       </section>
 
+      <section className="mt-6 rounded-2xl border border-sky-300/25 bg-sky-300/[0.04] p-5">
+        <div className="flex flex-wrap items-start justify-between gap-4">
+          <div className="max-w-3xl">
+            <p className="text-xs uppercase tracking-[0.16em] text-sky-200/70">
+              Automated auction map · paper only
+            </p>
+            <h3 className="mt-2 text-xl font-semibold">
+              Confirmed swings and inferred liquidity-shift zones
+            </h3>
+            <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+              A zone becomes active only after a completed M15 displacement closes through a
+              previously confirmed swing. The historical origin is shown for context, but it is
+              never made available retroactively. No live broker order is enabled.
+            </p>
+          </div>
+          <div className="rounded-xl border border-sky-200/15 bg-black/10 px-4 py-3 text-right">
+            <p className="text-[10px] uppercase tracking-wider text-[var(--muted)]">Macro gate</p>
+            <p className="mt-1 font-semibold">{title(automation.macro_bias_label)}</p>
+            <p className="mt-1 text-[10px] text-[var(--muted)]">
+              {automation.macro_available_at ? `available ${utc(automation.macro_available_at)} UTC` : "No stored point-in-time snapshot"}
+            </p>
+          </div>
+        </div>
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+          {[
+            ["Confirmed swings", automation.swings.length.toLocaleString(), "M5 through H4"],
+            ["Active zones", activeZones.length.toLocaleString(), "uninvalidated M15 zones"],
+            ["Paper proposals", automation.proposals.length.toLocaleString(), "two frozen entry families"],
+            ["PAPER_READY", automation.proposals.filter((item) => item.disposition === "PAPER_READY").length.toLocaleString(), "never a live order"],
+            ["Ruleset", automation.ruleset_version, `${automation.data_hash.slice(0, 12)}…`],
+          ].map(([label, value, note]) => (
+            <article className="rounded-xl border border-white/10 bg-black/10 p-4" key={label}>
+              <p className="text-[10px] uppercase tracking-wider text-[var(--muted)]">{label}</p>
+              <p className="mt-2 font-mono text-lg font-semibold">{value}</p>
+              <p className="mt-1 text-[10px] text-[var(--muted)]">{note}</p>
+            </article>
+          ))}
+        </div>
+        {automation.warnings.length ? (
+          <ul className="mt-4 grid gap-1 rounded-xl border border-amber-300/20 bg-amber-300/[0.04] p-3 text-xs text-amber-100/80">
+            {automation.warnings.map((warning) => <li key={warning}>• {warning}</li>)}
+          </ul>
+        ) : null}
+      </section>
+
       <section className="mt-6 rounded-2xl border border-[var(--border)] bg-[var(--panel)] p-4 md:p-6">
         <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
           <div>
@@ -277,6 +330,55 @@ export default async function StructurePage() {
                   <td className="max-w-sm px-5 py-3 text-[var(--muted)]">{item.invalidation_condition}</td>
                 </tr>
               ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="mt-7 overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--panel)]">
+        <div className="border-b border-[var(--border)] p-5">
+          <p className="text-xs uppercase tracking-[0.16em] text-[var(--muted)]">Automation ledger</p>
+          <h3 className="mt-1 text-xl font-semibold">Recent paper-entry dispositions</h3>
+          <p className="mt-2 text-xs text-[var(--muted)]">
+            These records show why an observable setup is ready, waiting, blocked, counter-macro,
+            invalidated, or expired. They are not live orders and contain no PnL claim.
+          </p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[1080px] text-left text-xs">
+            <thead className="text-[10px] uppercase tracking-wider text-[var(--muted)]">
+              <tr>
+                {[
+                  "Triggered",
+                  "Family",
+                  "Direction",
+                  "Disposition",
+                  "Entry",
+                  "Stop",
+                  "Target",
+                  "R:R",
+                  "Macro",
+                ].map((heading) => <th className="px-5 py-3 font-medium" key={heading}>{heading}</th>)}
+              </tr>
+            </thead>
+            <tbody>
+              {recentProposals.length ? recentProposals.map((proposal) => (
+                <tr className="border-t border-[var(--border)]/70" key={proposal.identity}>
+                  <td className="px-5 py-3 text-[var(--muted)]">{proposal.triggered_at ? utc(proposal.triggered_at) : "Waiting"}</td>
+                  <td className="px-5 py-3">{title(proposal.family)}</td>
+                  <td className={proposal.direction === "BULLISH" ? "px-5 py-3 text-emerald-200" : "px-5 py-3 text-red-200"}>{title(proposal.direction)}</td>
+                  <td className="px-5 py-3 font-semibold">{title(proposal.disposition)}</td>
+                  <td className="px-5 py-3 font-mono">{price(proposal.entry_reference)}</td>
+                  <td className="px-5 py-3 font-mono">{price(proposal.stop)}</td>
+                  <td className="px-5 py-3 font-mono">{price(proposal.target)}</td>
+                  <td className="px-5 py-3">{proposal.reward_to_risk?.toFixed(2) ?? "—"}</td>
+                  <td className="px-5 py-3">{title(proposal.macro_relationship)}</td>
+                </tr>
+              )) : (
+                <tr className="border-t border-[var(--border)]/70">
+                  <td className="px-5 py-6 text-[var(--muted)]" colSpan={9}>No triggered or terminal paper proposal is present in the retained window.</td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

@@ -1,0 +1,208 @@
+{
+  "artifact_id": "GOLD_COHERENT_AUCTION_COMPLETE_CORRECTION_RULEBOOK_V1_DRAFT",
+  "status": "DRAFT_FOR_USER_CONFIRMATION_NOT_AUTHORIZED_FOR_OUTCOME_CALCULATION",
+  "created_at_utc": "2026-08-20T00:00:00Z",
+  "evidence_credit": "ZERO_POST_HOC_RULE_TRANSLATION",
+  "locks": {
+    "fresh_50_case_block": "LOCKED",
+    "calendar_2025": "LOCKED",
+    "calendar_2026": "LOCKED",
+    "paid_acquisition": "PROHIBITED",
+    "outcome_calculation_before_approval": "PROHIBITED"
+  },
+  "matched_regression_scope": {
+    "population": "SAME_16_SEALED_HUMAN_LONG_DECISIONS_CBR_2022_001_THROUGH_030",
+    "entry_direction": "UNCHANGED",
+    "actual_fill": "UNCHANGED_IF_ORIGINAL_ORDER_FILLED",
+    "deadline": "UNCHANGED",
+    "replacement_trade": "PROHIBITED",
+    "case_alias_branching": "PROHIBITED"
+  },
+  "primitives": {
+    "atr_window": 14,
+    "pivot_left_bars": 2,
+    "pivot_right_bars": 2,
+    "pivot_prominence_atr": 0.25,
+    "tick_floor_usd": 0.02,
+    "break_buffer_atr": 0.10,
+    "transition_break_buffer_atr": 0.05,
+    "acceptance_bars": 2,
+    "retest_tolerance_atr": 0.25,
+    "level_merge_atr": 0.10,
+    "balance_window_bars": 20,
+    "balance_max_width_atr": 5.0,
+    "balance_min_high_pivots": 2,
+    "balance_min_low_pivots": 2,
+    "balance_expiry_bars": 40,
+    "balance_outer_fraction": 0.25
+  },
+  "level_lifecycle": [
+    "ACTIVE_UNTOUCHED",
+    "ACTIVE_ENGAGED",
+    "CONSUMED_ACCEPTED",
+    "REACTIVATED_REVERSE"
+  ],
+  "level_acceptance_timeframe": {
+    "H4": "H1",
+    "H1": "M15",
+    "COMPLETED_SESSION": "M15",
+    "M15": "M5"
+  },
+  "balance_control": {
+    "requires_outer_quartile_engagement_or_accepted_breakout_retest": true,
+    "interior_containment_alone_controls": false,
+    "h4_precedes_h1_only_when_h4_boundary_event_qualifies": true
+  },
+  "event_lock": {
+    "tier_1": [
+      "CPI",
+      "CORE_CPI",
+      "PCE",
+      "CORE_PCE",
+      "NFP_PAYROLLS",
+      "UNEMPLOYMENT",
+      "FOMC_RATE_DECISION",
+      "FOMC_PROJECTIONS",
+      "FOMC_PRESS_CONFERENCE"
+    ],
+    "pre_event_minutes": 15,
+    "initial_range_minutes": 15,
+    "acceptance_timeframe": "M5",
+    "acceptance_bars": 2,
+    "acceptance_buffer_atr": 0.10,
+    "held_retest_required": true
+  },
+  "macro": {
+    "aligned_threshold": 20,
+    "opposed_threshold": -20,
+    "minimum_data_quality": 60,
+    "critical_fields": [
+      "REAL_YIELD_CONTEXT",
+      "USD_CONTEXT"
+    ],
+    "continuation_allows": [
+      "ALIGNED",
+      "NEUTRAL_OR_CONFLICTED"
+    ],
+    "counter_macro_allows": [
+      "RANGE_ROTATION",
+      "STRUCTURAL_REPAIR"
+    ]
+  },
+  "classifier_precedence": [
+    "UNIVERSAL_BLOCKERS",
+    "H4_DAMAGE_TO_STRUCTURAL_REPAIR_OR_NO_TRADE",
+    "ACTIVE_BALANCE_TO_ROTATION_BREAKOUT_OR_NO_TRADE",
+    "DIRECTIONAL_PROGRESSION_WITH_ROOM_TO_CONTINUATION",
+    "NO_TRADE_UNCLASSIFIED_AUCTION"
+  ],
+  "thesis_families": [
+    "CONTINUATION_WITH_ROOM",
+    "RANGE_ROTATION",
+    "STRUCTURAL_REPAIR"
+  ],
+  "h4_damage": {
+    "single_displacement_range_atr": 1.25,
+    "single_displacement_body_ratio": 0.60,
+    "single_displacement_break_atr": 0.05,
+    "alternative_consecutive_closes": 2,
+    "alternative_close_break_atr": 0.10,
+    "repair_requires_structure_break": true,
+    "repair_acceptance_bars": 2,
+    "repair_requires_held_retest": true
+  },
+  "trigger_precedence": [
+    "BOUNDARY_SWEEP_RECLAIM",
+    "M15_BREAK_RETEST",
+    "M5_INTERNAL_ROTATION_IN_M15_BALANCE"
+  ],
+  "trigger_lifecycle": {
+    "formation_timestamp": "MAX_AVAILABLE_AT_OF_THESIS_LEVEL_MACRO_EVENT_FACTS",
+    "selection": "EARLIEST_QUALIFYING_TRIGGER_STILL_LIVE_AT_DECISION",
+    "same_timestamp_precedence_uses_trigger_precedence": true,
+    "expiry_m5_bars": 12,
+    "terminal_conditions": [
+      "OPPOSING_STRUCTURAL_BREAK",
+      "CONTROLLING_LEVEL_INVALIDATED",
+      "DESTINATION_CONSUMED"
+    ]
+  },
+  "triggers": {
+    "BOUNDARY_SWEEP_RECLAIM": {
+      "sweep_atr": 0.05,
+      "m5_break_atr": 0.05,
+      "m5_min_range_atr": 0.80,
+      "m5_min_body_ratio": 0.55,
+      "retest_expiry_m5_bars": 12,
+      "stop_buffer_m15_atr": 0.10
+    },
+    "M15_BREAK_RETEST": {
+      "break_atr": 0.05,
+      "min_range_atr": 0.90,
+      "min_body_ratio": 0.55,
+      "retest_expiry_m5_bars": 12,
+      "stop_buffer_m15_atr": 0.10
+    },
+    "M5_INTERNAL_ROTATION_IN_M15_BALANCE": {
+      "m15_balance_required": true,
+      "break_atr": 0.05,
+      "min_range_atr": 0.80,
+      "min_body_ratio": 0.55,
+      "retest_expiry_m5_bars": 12,
+      "stop_reference": "FARTHER_ADVERSE_OF_M15_BALANCE_BOUNDARY_OR_M15_TRANSITION_ORIGIN",
+      "stop_buffer_m15_atr": 0.10
+    }
+  },
+  "targets": {
+    "CONTINUATION_WITH_ROOM": "NEAREST_ACTIVE_OPPOSING_H1_ZONE_ELSE_H4",
+    "RANGE_ROTATION": {
+      "first_realization": "FIXED_BALANCE_MIDPOINT",
+      "final": "OPPOSITE_FIXED_BALANCE_BOUNDARY"
+    },
+    "STRUCTURAL_REPAIR": "NEARER_OF_BROKEN_H4_REFERENCE_OR_NEXT_ACTIVE_OPPOSING_H1_ZONE"
+  },
+  "management": {
+    "continuation": {
+      "protection_arm_r": 1.0,
+      "pretarget_exit": "COMPLETED_OPPOSING_M15_STRUCTURE_SHIFT",
+      "pretarget_exit_break_atr": 0.10,
+      "core_fraction": 0.80,
+      "runner_fraction": 0.20,
+      "runner_acceptance_timeframe": "M15",
+      "runner_acceptance_buffer_atr": 0.10,
+      "runner_trail": "LATEST_CONFIRMED_PROTECTED_M15_SWING_WITH_0P10_ATR_BUFFER"
+    },
+    "range_rotation": {
+      "midpoint_fraction": 0.50,
+      "breakeven_requires_m15_close_beyond_midpoint": true,
+      "breakeven_includes_round_trip_cost": true,
+      "runner": "PROHIBITED"
+    },
+    "structural_repair": {
+      "target_fraction": 1.0,
+      "runner": "PROHIBITED",
+      "pretarget_exit": "COMPLETED_OPPOSING_M15_STRUCTURE_SHIFT"
+    },
+    "universal_m5_protection": "REJECTED_AND_PROHIBITED"
+  },
+  "execution": {
+    "account_usd": 10000,
+    "maximum_planned_loss_usd": 50,
+    "quantity": "WHOLE_OUNCES_FLOOR",
+    "fallback_spread_usd": 0.20,
+    "adverse_slippage_usd": 0.05,
+    "completed_signal_latency_minutes": 1,
+    "same_bar_ambiguity": "STOP_FIRST",
+    "one_position_per_case": true,
+    "pyramiding": false,
+    "direction_switch": false
+  },
+  "forbidden_shortcuts": [
+    "H4_RANGE_PERCENTILE_AS_STANDALONE_GATE",
+    "MACRO_AS_DIRECT_TRIGGER",
+    "M5_SWING_AS_STOP_FOR_M5_ROTATION_INSIDE_M15_BALANCE",
+    "CASE_ID_EXCEPTION",
+    "FUTURE_ARCHETYPE_OR_MFE_MAE",
+    "POST_OUTCOME_RETUNING"
+  ]
+}

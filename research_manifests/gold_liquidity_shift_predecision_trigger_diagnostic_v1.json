@@ -1,0 +1,32 @@
+{
+  "version": "GOLD_LIQUIDITY_SHIFT_PREDECISION_TRIGGER_DIAGNOSTIC_V1_1_0",
+  "population": {
+    "visible_decisions": 30,
+    "trade_decisions": 16,
+    "no_trade_decisions": 14,
+    "research_credit": "SEMANTIC_ONLY_ZERO_ECONOMIC_CREDIT"
+  },
+  "timeframes": ["5m", "15m", "1h", "4h"],
+  "measurements": [
+    "CONFIRMED_PIVOT_TREND",
+    "LATEST_CAUSAL_PIVOT_BREAK",
+    "SWING_RANGE_POSITION",
+    "PIVOT_DISTANCE_ATR",
+    "SIGNED_MULTI_BAR_MOVEMENT",
+    "DIRECTIONAL_EFFICIENCY",
+    "CANDLE_SEQUENCE",
+    "REJECTION_SWEEP_RECLAIM",
+    "V2_ZONE_CONTACT_AND_TRANSITION_AGE",
+    "V3_ACTIVE_STATE_AND_IMPULSE_AGE",
+    "HUMAN_ORDER_GEOMETRY",
+    "DST_AWARE_SESSION"
+  ],
+  "threshold_selection_permitted": false,
+  "candidate_creation_permitted": false,
+  "market_outcomes_permitted": false,
+  "pnl_permitted": false,
+  "calendar_2025_permitted": false,
+  "calendar_2026_permitted": false,
+  "paid_acquisition": false,
+  "reproduction": "PRIMARY_AND_REVERSED_INPUT_EXACT"
+}

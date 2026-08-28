@@ -23,7 +23,6 @@ from gold_intel.application.codex_operator_replay import (
     get_codex_operator_replay_service,
 )
 
-
 router = APIRouter(prefix="/codex-operator-replay-v1", tags=["blind Codex operator replay"])
 ReplayService = Annotated[CodexOperatorReplayService, Depends(get_codex_operator_replay_service)]
 IdempotencyKey = Annotated[str, Header(alias="Idempotency-Key", min_length=1, max_length=128)]

@@ -1,0 +1,20 @@
+{
+  "version": "GOLD_PERSISTENT_LIQUIDITY_SHIFT_V3_SEMANTIC_ENGINEERING_CORRECTION_A_1_0",
+  "classification": "DETERMINISTIC_VALUE_BLIND_COMPARATOR_CORRECTION",
+  "preserved_invalid_result": "PASS_SEMANTIC_REPRESENTATION",
+  "preserved_invalid_result_credit": "ZERO",
+  "single_change": {
+    "field": "TRIGGERED_INTENT_AVAILABILITY",
+    "before": "triggered_at <= decision_at",
+    "after": "triggered_at <= decision_at < expires_at"
+  },
+  "unchanged_pending_rule": "order_at <= decision_at < expires_at",
+  "semantic_minimum_matches": 7,
+  "human_trade_population": 16,
+  "corrected_attempts": 1,
+  "market_outcomes_accessed": false,
+  "development_outcomes_accessed": false,
+  "calendar_2025_accessed": false,
+  "calendar_2026_accessed": false,
+  "paid_acquisition": false
+}

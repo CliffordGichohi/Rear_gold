@@ -1,0 +1,56 @@
+{
+  "version": "GOLD_COHERENT_AUCTION_HUMAN_POLICY_V2_FRESH_BLOCK_AMENDMENT_B_FREEZE_1_0",
+  "status": "APPROVED_AND_FROZEN_BEFORE_FRESH_DECISION_COLLECTION",
+  "recorded_at": "2026-08-20T13:51:10.2580520Z",
+  "authorization": "OPEN_ONE_MONTH_EQUIVALENT_OF_PREVIOUSLY_UNSEEN_DATA",
+  "population": {
+    "case_count": 50,
+    "london_sessions": 25,
+    "new_york_sessions": 25,
+    "semantics": "ONE_MONTH_EQUIVALENT_RANDOMIZED_SESSION_BLOCK_NOT_CONTIGUOUS_CALENDAR_MONTH",
+    "minimum_date": "2022-08-08",
+    "maximum_date": "2022-12-30",
+    "population_sha256": "36a60ccfccedda19a39a48e6c38326b5f0d54f8bd7380cfd1595aa27d8c791f3",
+    "private_registry_file_sha256": "2faef0abde0bd677ec9712bb676c7114dcd39037d4d2da40b417d9ec4ff912ad"
+  },
+  "sealed_inputs": {
+    "amendment_b_contract_file_sha256": "721c97bfc6c760581b35d973ff6d52b627a16a0cca8d66d5c22710944a5f0622",
+    "v2_rulebook_file_sha256": "535ab39d45e04aa01bb5adabbf78994ddbca33e5f14d58fd4b78e1b112284a69",
+    "v2_amendment_a_freeze_file_sha256": "a448424d7c1439ea6b5a132e81263aea581fd0ccfcfb3d08c8e15bf6eef2b30b",
+    "v2_final_seal_file_sha256": "a5f1f7af8a1aaf81d25edcd7010d0958d15cc222dce175b291bb9a030b82fd3b",
+    "blind_population_prevalue_freeze_file_sha256": "05f6464d60bac2d71c545fd609dbc7322257b316b6033fefa0462f24941d86e9",
+    "blind_application_prelabel_seal_file_sha256": "0014dd3d987db08e860cfa129b08b4f133691128ff1bfa0c92ba77d05b34cf2a",
+    "blind_application_certification_file_sha256": "869b1558269f9e69bb73b8a46de9c6d7b56ab108a77dffb9591ae7be8724788a",
+    "primary_stream_file_sha256": "b3f1628e30f1549253478fb45d628bd09eab3abf95fed492c715e030a9b819ef",
+    "reference_stream_file_sha256": "b3f1628e30f1549253478fb45d628bd09eab3abf95fed492c715e030a9b819ef"
+  },
+  "frozen_evaluation": {
+    "formal_track": "COMPLETE_V2_POLICY",
+    "maximum_total_planned_loss_usd": 50.0,
+    "quantity": "WHOLE_OUNCES",
+    "protection_trigger": "COMPLETED_M15_CLOSE_AT_OR_BEYOND_1P25_STRUCTURAL_R",
+    "runner_fraction": 0.2,
+    "diagnostic_protection_thresholds_r": [1.0, 1.5, 2.0],
+    "retuning_permitted": false
+  },
+  "verdict_gates": {
+    "minimum_admitted_executed_trades": 20,
+    "net_expectancy_after_costs_gt": 0.0,
+    "profit_factor_gte": 1.1,
+    "both_chronological_halves_positive": true,
+    "maximum_single_session_share_of_positive_gross_r": 0.8,
+    "positive_at_cost_multiplier": 1.5,
+    "integrity_failure_allowed": false
+  },
+  "collection": {
+    "decisions_collected_at_freeze": 0,
+    "aggregate_feedback_before_case_50": "PROHIBITED",
+    "append_only_ledger": true,
+    "browser_only_future_hidden_collection": true
+  },
+  "locks": {
+    "calendar_2025": "LOCKED_UNOPENED",
+    "calendar_2026": "LOCKED_UNOPENED",
+    "paid_acquisition": "PROHIBITED"
+  }
+}

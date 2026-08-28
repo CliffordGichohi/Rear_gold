@@ -1,0 +1,77 @@
+{
+  "version": "GOLD_HIERARCHICAL_LIQUIDITY_SHIFT_EDGE_V2_AMENDMENT_A_1_0",
+  "sealed_at": "2026-08-20T11:12:22.4631429+03:00",
+  "preserved_verdict": "FAIL_SEMANTIC_REPRESENTATION",
+  "research_credit": "ZERO_ECONOMIC_CREDIT_EXPOSED_SEMANTIC_CALIBRATION",
+  "single_change": {
+    "field": "maximum_stop_m15_atr",
+    "before": 1.5,
+    "after": 6.5,
+    "selection_basis": "NEXT_HALF_ATR_BOUNDARY_ABOVE_MAXIMUM_OBSERVABLE_HUMAN_ENTRY_TO_STOP_GEOMETRY",
+    "outcomes_used": false
+  },
+  "observable_human_geometry": {
+    "trades": 16,
+    "minimum_m15_atr": 0.572266875851336,
+    "median_m15_atr": 2.33957026086413,
+    "maximum_m15_atr": 6.05873110926076,
+    "at_or_below_1_5_atr": 6,
+    "at_or_below_2_5_atr": 9
+  },
+  "failure_diagnostic": {
+    "matching_transition_instances": 24,
+    "intent_instances": 48,
+    "invalid_geometry_instances": 38,
+    "half_retrace_median_stop_atr": 1.707984,
+    "m5_confirmation_median_stop_atr": 2.056332
+  },
+  "files": {
+    "amendment": {
+      "path": "GOLD_HIERARCHICAL_LIQUIDITY_SHIFT_EDGE_V2_AMENDMENT_A.md",
+      "sha256": "67fc118af1d6243f75d2753e50e65011779a09554dd51816b6e77b507da9efc4"
+    },
+    "preoutcome_freeze": {
+      "path": "research_manifests/gold_hierarchical_liquidity_shift_edge_v2_preoutcome_freeze.json",
+      "sha256": "46adf14958320d36ad77a0b3292c4557cce7ba18d29ad7645886978d4e05e2fd"
+    },
+    "original_semantic_result": {
+      "path": "research_artifacts/gold_hierarchical_liquidity_shift_edge_v2/semantic_calibration.json",
+      "sha256": "9a3942517f78745fce2ff51f7ca3ae38b8a3b2992113dbef8afbda06770a99d3"
+    },
+    "original_semantic_rows": {
+      "path": "research_artifacts/gold_hierarchical_liquidity_shift_edge_v2/semantic_rows.csv",
+      "sha256": "5c0544819332d56ec7686bbb0d916229e54afc2155ca336209dcefb940999422"
+    },
+    "original_semantic_seal": {
+      "path": "research_artifacts/gold_hierarchical_liquidity_shift_edge_v2/semantic_seal.json",
+      "sha256": "4e7c04b2e9a1f5e44bb926ac63d8d32eb15ccac2f77b08b102c8753fe9da5b1f"
+    },
+    "diagnostic": {
+      "path": "research_artifacts/gold_hierarchical_liquidity_shift_edge_v2/semantic_failure_diagnostic.json",
+      "sha256": "8b926fd3d731b3e4a171edf8287e9dc0cae3561426ed9001b0514e864df95b8b"
+    },
+    "implementation": {
+      "path": "backend/src/gold_intel/analytics/liquidity_shift_v2.py",
+      "sha256": "cb9b201b3cf32f15dba77a8331eda19711a52a9bb6cc99b2adfce3b82be137d7"
+    }
+  },
+  "unchanged": [
+    "zones",
+    "contacts",
+    "reactions",
+    "transitions",
+    "retracement_band",
+    "entry_trigger_definitions",
+    "order_expiry",
+    "target_hierarchy",
+    "macro_routes",
+    "execution_costs",
+    "support_and_economic_gates",
+    "calendar_2025_and_2026_locks"
+  ],
+  "semantic_rerun_attempts_authorized": 1,
+  "matched_outcomes_opened": false,
+  "development_outcomes_opened": false,
+  "paid_acquisition_permitted": false,
+  "live_order_permitted": false
+}

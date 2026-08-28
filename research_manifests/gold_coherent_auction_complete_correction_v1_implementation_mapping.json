@@ -1,0 +1,26 @@
+{
+  "artifact_id": "GOLD_COHERENT_AUCTION_COMPLETE_CORRECTION_V1_IMPLEMENTATION_MAPPING",
+  "status": "FROZEN_BEFORE_SYNTHETIC_PROOF_AND_MATCHED_PATH_ACCESS",
+  "approved_rulebook_sha256": "5ae8456a42f62618e0b7f08b5a76064e1ea87c68b28ca7b62d51767553dd879e",
+  "decision_cutoff": "COMPLETE_AND_AVAILABLE_AT_LE_SUBMITTED_AT",
+  "actual_fill": "SEALED_ORIGINAL_FILL_UNCHANGED",
+  "replacement_entry": "PROHIBITED",
+  "deadline": "UTC_TRADING_DAY_FINAL_OBSERVED_M1_CLOSE",
+  "transition_origin": "MOST_RECENT_OPPOSITE_COLOUR_OF_PRIOR_4_ELSE_BREAK_ADVERSE_EXTREME",
+  "zone_acceptance_timeframes": {
+    "H4": "H1",
+    "H1": "M15",
+    "SESSION": "M15",
+    "M15": "M5"
+  },
+  "macro_quality": "MIN_REAL_YIELD_AND_USD_COMPONENT_QUALITY",
+  "event_acceptance": "DIRECTIONAL_TWO_M5_CLOSES_AND_FIRST_HELD_RETEST",
+  "planned_loss_per_ounce": "ABS_FILL_MINUS_STOP_PLUS_BASE_ROUND_TRIP_COST_PER_OUNCE",
+  "quantity": "FLOOR_50_DIVIDED_BY_PLANNED_LOSS_PER_OUNCE",
+  "completed_signal_execution": "NEXT_OBSERVED_M1_OPEN",
+  "same_bar_ambiguity": "STOP_FIRST",
+  "primary_blocker": "FIRST_IN_APPROVED_GATE_ORDER",
+  "canonical_serialization": "UTF8_SORTED_KEYS_COMPACT_JSON",
+  "case_alias_branching": "PROHIBITED",
+  "outcome_fields_in_classifier": "PROHIBITED"
+}

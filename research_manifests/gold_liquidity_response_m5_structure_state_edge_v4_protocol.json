@@ -1,0 +1,48 @@
+{
+  "version": "GOLD_LIQUIDITY_RESPONSE_M5_STRUCTURE_STATE_EDGE_V4_PROTOCOL_1_0",
+  "location_episode": {
+    "maximum_hours": 36,
+    "zone_timeframes": ["15m", "1h", "4h"],
+    "v2_definitions_unchanged": true
+  },
+  "activation": {
+    "timeframe": "5m",
+    "break_buffer_ticks": 2,
+    "maximum_hours": 4,
+    "refresh_on_new_same_direction_pivot_break": true,
+    "opposite_pivot_break_terminates": true,
+    "range_atr_minimum": null,
+    "body_ratio_minimum": null
+  },
+  "semantic": {
+    "trade_population": 16,
+    "minimum_trade_matches": 10,
+    "no_trade_population": 14,
+    "maximum_false_positive_days": 7,
+    "minimum_minutes_to_session_close": 30,
+    "attempts": 1,
+    "outcomes_permitted": false
+  },
+  "entries": ["M5_BREAK_NEXT_M1_V4", "M5_BROKEN_PIVOT_RETEST_V4"],
+  "stop_buffer_m5_atr": 0.1,
+  "minimum_reward_to_risk": 1.5,
+  "maximum_holding_hours": 4,
+  "routes": ["ALL_ZONE_RESPONSES", "MACRO_ALIGNED_CONTINUATION", "OUTER_RANGE_ROTATION"],
+  "macro_score_threshold": 20,
+  "macro_coverage_minimum": 50,
+  "macro_confidence_minimum": 35,
+  "outer_range_fraction": 0.35,
+  "development_start": "2021-08-01T00:00:00Z",
+  "development_end_exclusive": "2025-01-01T00:00:00Z",
+  "exclude_matched_dates": true,
+  "exclude_engineering_dates": true,
+  "minimum_trades": 40,
+  "bootstrap_seed": 20260820,
+  "bootstrap_resamples": 20000,
+  "multiplicity": "HOLM_BY_SESSION",
+  "candidate_limit_per_session": 2,
+  "calendar_2025_opened": false,
+  "calendar_2026_opened": false,
+  "paid_acquisition": false,
+  "live_orders": false
+}

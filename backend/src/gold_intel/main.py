@@ -16,7 +16,7 @@ from gold_intel.api.routes import (
     blind_replay_v2,
     blind_replay_v3,
     codex_operator_replay,
-    matched_human_replay,
+    coherent_auction_validation,
     data_health,
     decisions,
     event_studies,
@@ -29,6 +29,7 @@ from gold_intel.api.routes import (
     intelligence,
     market_data,
     market_structure,
+    matched_human_replay,
     providers,
     session_edge_strategies,
     session_edges,
@@ -96,6 +97,7 @@ app.include_router(blind_replay.router, prefix=settings.api_prefix)
 app.include_router(blind_replay_v2.router, prefix=settings.api_prefix)
 app.include_router(blind_replay_v3.router, prefix=settings.api_prefix)
 app.include_router(codex_operator_replay.router, prefix=settings.api_prefix)
+app.include_router(coherent_auction_validation.router, prefix=settings.api_prefix)
 app.include_router(matched_human_replay.router, prefix=settings.api_prefix)
 app.include_router(factors.router, prefix=settings.api_prefix)
 app.include_router(fundamentals.router, prefix=settings.api_prefix)

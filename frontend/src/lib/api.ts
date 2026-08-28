@@ -604,6 +604,87 @@ export const marketLiquiditySchema = z.object({
   data_hash: z.string(),
 });
 
+export const auctionSwingSchema = z.object({
+  identity: z.string().regex(/^[0-9a-f]{64}$/),
+  timeframe: z.string(),
+  base_kind: z.enum(["HIGH", "LOW"]),
+  classification: z.string(),
+  pivot_at: z.string(),
+  detected_at: z.string(),
+  price_level: z.number(),
+  atr14: z.number(),
+  prominence_atr: z.number(),
+  confidence: z.number().min(0).max(100),
+  epistemic_status: z.literal("CALCULATED"),
+  evidence: z.record(z.string(), z.unknown()),
+});
+
+export const auctionShiftZoneSchema = z.object({
+  identity: z.string().regex(/^[0-9a-f]{64}$/),
+  timeframe: z.literal("15m"),
+  direction: z.enum(["BULLISH", "BEARISH"]),
+  origin_at: z.string(),
+  created_at: z.string(),
+  detected_at: z.string(),
+  lower_bound: z.number(),
+  upper_bound: z.number(),
+  midpoint: z.number(),
+  broken_swing_identity: z.string().regex(/^[0-9a-f]{64}$/),
+  broken_swing_level: z.number(),
+  creation_atr14: z.number(),
+  state: z.string(),
+  first_touch_at: z.string().nullable(),
+  retest_confirmed_at: z.string().nullable(),
+  invalidated_at: z.string().nullable(),
+  expires_at: z.string().nullable(),
+  epistemic_status: z.literal("INFERRED"),
+  confidence: z.number().min(0).max(100),
+  detection_method: z.string(),
+  invalidation_condition: z.string(),
+  evidence: z.record(z.string(), z.unknown()),
+});
+
+export const auctionPaperProposalSchema = z.object({
+  identity: z.string().regex(/^[0-9a-f]{64}$/),
+  zone_identity: z.string().regex(/^[0-9a-f]{64}$/),
+  family: z.enum(["RETEST_LIMIT_V0_1", "CONFIRMED_RETEST_V0_1"]),
+  direction: z.enum(["BULLISH", "BEARISH"]),
+  disposition: z.string(),
+  triggered_at: z.string().nullable(),
+  entry_reference: z.number().nullable(),
+  stop: z.number(),
+  target: z.number().nullable(),
+  target_swing_identity: z.string().regex(/^[0-9a-f]{64}$/).nullable(),
+  planned_risk_usd: z.number().min(0).max(50).nullable(),
+  quantity_ounces: z.number().int().positive().nullable(),
+  reward_to_risk: z.number().nonnegative().nullable(),
+  macro_direction: z.enum(["BULLISH", "BEARISH", "NEUTRAL", "UNKNOWN"]),
+  macro_relationship: z.string(),
+  liquidity_status: z.string(),
+  epistemic_status: z.literal("INFERRED"),
+  explanation: z.string(),
+  evidence: z.record(z.string(), z.unknown()),
+});
+
+export const auctionAutomationSchema = z.object({
+  as_of: z.string(),
+  ruleset_version: z.string(),
+  config: z.record(z.string(), z.number()),
+  source_bar_count: z.number().int().nonnegative(),
+  source_first_at: z.string().nullable(),
+  source_last_at: z.string().nullable(),
+  data_hash: z.string().regex(/^[0-9a-f]{64}$/),
+  macro_direction: z.enum(["BULLISH", "BEARISH", "NEUTRAL", "UNKNOWN"]),
+  macro_bias_label: z.string(),
+  macro_available_at: z.string().nullable(),
+  liquidity_status: z.string(),
+  timeframe_trends: z.record(z.string(), z.string()),
+  swings: z.array(auctionSwingSchema),
+  zones: z.array(auctionShiftZoneSchema),
+  proposals: z.array(auctionPaperProposalSchema),
+  warnings: z.array(z.string()),
+});
+
 export const marketStructureSnapshotSchema = z.object({
   instrument: z.string(),
   provider_code: z.string(),
@@ -644,6 +725,7 @@ export const marketStructureSnapshotSchema = z.object({
     ),
   }),
   liquidity: marketLiquiditySchema,
+  auction_automation: auctionAutomationSchema,
   timeframes: z.array(timeframeStructureSchema),
   chart_bars: z.array(
     z.object({
@@ -938,6 +1020,43 @@ export const blindReplayV3MutationSchema = z.object({
   progress: blindReplayV3StatusSchema,
 });
 
+export const coherentAuctionValidationStatusSchema = blindReplayV3StatusSchema.extend({
+  protocol: z.literal("GOLD_COHERENT_AUCTION_BLIND_VALIDATION_V1_PROTOCOL_1_0"),
+  phase: z.enum(["BLIND_COLLECTION", "BLIND_COLLECTION_COMPLETE_RESULTS_LOCKED"]),
+  practice_completed: z.number().int().min(0).max(50),
+  practice_total: z.literal(50),
+  collection_state: z.literal("OPEN_BLIND_AGGREGATES_LOCKED"),
+  research_credit: z.literal("HISTORICAL_BLIND_ROBUSTNESS_ONLY"),
+  practice_cases: z.array(z.object({
+    case_alias: z.string().regex(/^GAV-2022-\d{3}$/),
+    trading_date_utc: z.string(),
+    session_code: z.enum(["LONDON", "NEW_YORK"]),
+    completed: z.boolean(),
+    active: z.boolean(),
+    research_credit: z.literal("HISTORICAL_BLIND_ROBUSTNESS_ONLY"),
+  })),
+});
+
+export const coherentAuctionValidationPayloadSchema = blindReplayV3PayloadSchema.extend({
+  version: z.literal("GOLD_COHERENT_AUCTION_BLIND_VALIDATION_V1_SNAPSHOT_1_0"),
+  case_alias: z.string().regex(/^GAV-2022-\d{3}$/),
+  mode: z.literal("BLIND_HISTORICAL_ROBUSTNESS"),
+  mode_sequence: z.number().int().min(1).max(50),
+  session_code: z.enum(["LONDON", "NEW_YORK"]),
+});
+
+export const coherentAuctionValidationCaseSchema = z.object({
+  case: coherentAuctionValidationPayloadSchema,
+  progress: coherentAuctionValidationStatusSchema,
+});
+
+export const coherentAuctionValidationMutationSchema = z.object({
+  event_sha256: z.string().length(64),
+  idempotent_replay: z.boolean(),
+  case: coherentAuctionValidationPayloadSchema.nullable(),
+  progress: coherentAuctionValidationStatusSchema,
+});
+
 export const codexOperatorReplayStatusSchema = z.object({
   protocol: z.enum([
     "GOLD_BLIND_CODEX_OPERATOR_REPLAY_AUDIT_V1_PROTOCOL_1_0",
@@ -1031,6 +1150,7 @@ export type LicensedProviderHealth = z.infer<
   typeof licensedProviderHealthSchema
 >;
 export type MarketStructureSnapshot = z.infer<typeof marketStructureSnapshotSchema>;
+export type AuctionAutomation = z.infer<typeof auctionAutomationSchema>;
 export type MarketObservation = z.infer<typeof marketObservationSchema>;
 export type BlindReplayStatus = z.infer<typeof blindReplayStatusSchema>;
 export type BlindReplayBar = z.infer<typeof blindReplayBarSchema>;
@@ -1052,6 +1172,8 @@ export type BlindReplayV3Order = z.infer<typeof blindReplayV3OrderSchema>;
 export type BlindReplayV3Payload = z.infer<typeof blindReplayV3PayloadSchema>;
 export type BlindReplayV3Case = z.infer<typeof blindReplayV3CaseSchema>;
 export type BlindReplayV3Mutation = z.infer<typeof blindReplayV3MutationSchema>;
+export type CoherentAuctionValidationStatus = z.infer<typeof coherentAuctionValidationStatusSchema>;
+export type CoherentAuctionValidationPayload = z.infer<typeof coherentAuctionValidationPayloadSchema>;
 export type CodexOperatorReplayStatus = z.infer<typeof codexOperatorReplayStatusSchema>;
 export type CodexOperatorReplayPayload = z.infer<typeof codexOperatorReplayPayloadSchema>;
 export type CodexOperatorReplayCase = z.infer<typeof codexOperatorReplayCaseSchema>;

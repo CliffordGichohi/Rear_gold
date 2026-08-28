@@ -1,0 +1,84 @@
+{
+  "calendar_2025_opened": false,
+  "calendar_2026_opened": false,
+  "controls": {
+    "contract": {
+      "bytes": 9335,
+      "path": "GOLD_HIERARCHICAL_LIQUIDITY_SHIFT_EDGE_DISCOVERY_CONTRACT_V2.md",
+      "sha256": "55ca5e80f034eddc855946b6d950d9de1fd99b4f2dfe9155bd29448ec3da1ce4"
+    },
+    "protocol": {
+      "bytes": 3594,
+      "path": "research_manifests/gold_hierarchical_liquidity_shift_edge_v2_protocol.json",
+      "sha256": "5c818bbc966354ea4e9973902b23ab956d6128c50d7467f844c70df152930f44"
+    },
+    "test_registry": {
+      "bytes": 1052,
+      "path": "research_manifests/gold_hierarchical_liquidity_shift_edge_v2_test_registry.json",
+      "sha256": "4119d3359593977ee6381ec3353077cc9df6c3e422d071d3ec719c2a066c93e9"
+    }
+  },
+  "declared_price_rows": 1570471,
+  "declared_price_sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+  "development_outcomes_opened": false,
+  "live_order_permitted": false,
+  "matched_outcome_ledger_bound_or_opened": false,
+  "paid_acquisition_permitted": false,
+  "prior_v1_preserved": true,
+  "rules_hash": "6e5b95ebd5bcbdf6de4609c45e9a2a36bdab1adf51850d0e9ec38110f2f1a734",
+  "sealed_at_utc": "2026-08-20T08:00:10.992050Z",
+  "sources": {
+    "case_matrix_cases": {
+      "bytes": 103763781,
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/cases.jsonl.gz",
+      "sha256": "d0f5120713b5f9ce641c6285941bfc23d3aac3b83b561c8fc1138e33a5ede9b9"
+    },
+    "case_matrix_manifest": {
+      "bytes": 4086,
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/manifest.json",
+      "sha256": "dddbe125d11afef2094b7843f5521b7bbfcc95178e3fa376b60af8bdd2efc3b5"
+    },
+    "casebook_manifest": {
+      "bytes": 5372,
+      "path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6"
+    },
+    "casebook_price": {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    "matched_human_visible_ledger": {
+      "bytes": 1666513,
+      "path": "research_artifacts/gold_matched_human_replay_v1/ledgers/matched_human_visible_ledger.jsonl",
+      "sha256": "534f855c6cb5546bc7c70ab8bb586b840a7a394d552cf07c6c22d44269b0c0ca"
+    },
+    "matched_population_private": {
+      "bytes": 17148,
+      "path": "research_artifacts/gold_matched_human_replay_v1/population_registry.private.json",
+      "sha256": "a1014e04dcb190a1b7762517384c002a7c5e9b324e99b704626d8a24da652ad3"
+    },
+    "matched_population_public": {
+      "bytes": 3950,
+      "path": "research_artifacts/gold_matched_human_replay_v1/population_registry.public.json",
+      "sha256": "2a4165df4661ac3425355cddc7abc83fb601ec220b4308d0eea0d55140dd64ce"
+    },
+    "matched_stream_certification": {
+      "bytes": 27770,
+      "path": "research_artifacts/gold_matched_human_replay_v1/stream_materialization_certification.json",
+      "sha256": "0124f64bae5a2fceff10e63b43b08381e4fec702d3b2a09c6d97c8772617dcef"
+    },
+    "reference_book": {
+      "bytes": 971812,
+      "path": "Gold_USD_Market_Intelligence_Reference_Book.pdf",
+      "sha256": "3e7ddc561932a859a4c9043a38ff71b7003907963fb52247e41edaeefc8ac42a"
+    },
+    "v1_result_seal": {
+      "bytes": 1263,
+      "path": "research_artifacts/gold_auction_automation_matched_replay_verification_v1/final_seal.json",
+      "sha256": "69df7467018f47e01f4fb9330ca4fa1ea6e490eeed20dbcb950650316b9b87e4"
+    }
+  },
+  "status": "SEALED_BEFORE_SEMANTIC_CALIBRATION_AND_DEVELOPMENT_OUTCOME_ACCESS",
+  "version": "GOLD_HIERARCHICAL_LIQUIDITY_SHIFT_EDGE_V2_PREOUTCOME_FREEZE_1_0"
+}

@@ -9,7 +9,6 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from gold_intel.api.blind_replay_v3_schemas import ReplayV3Drawing
 
-
 ALIAS_PATTERN = r"^CBR-2022-\d{3}$"
 TIMEFRAME_PATTERN = r"^(1w|1d|4h|1h|15m|5m|1m)$"
 UTC_PATTERN = r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$"

@@ -56,12 +56,15 @@ export type ReplayV2FullscreenControls = {
   advancing: boolean;
   playDisabled: boolean;
   advanceDisabled: boolean;
+  positionReady?: boolean;
+  placeButtonLabel?: string;
   cursorMinute: number;
   maximumCursorMinute: number;
   timeframeCounts: Partial<Record<ReplayTimeframe, number>>;
   onTogglePlay: () => void;
   onAdvance: (minutes: 1 | 5 | 15) => void;
   onTimeframeChange: (timeframe: ReplayTimeframe) => void;
+  onRequestPositionDetails?: () => void;
 };
 
 type Props = {
@@ -105,7 +108,12 @@ const tools: Array<{ tool: ReplayV2Tool; icon: string; label: string; instructio
 
 const fibRatios = [0, 0.236, 0.382, 0.5, 0.618, 0.786, 1] as const;
 const width = 1180;
-const height = 585;
+const defaultChartHeight = 585;
+const minimumChartHeight = 420;
+const maximumChartHeight = 900;
+const defaultChartWidthPercent = 100;
+const minimumChartWidthPercent = 60;
+const maximumChartWidthPercent = 100;
 const padding = { top: 22, right: 84, bottom: 54, left: 20 };
 
 function nextId() {
@@ -207,6 +215,8 @@ export function SynchronizedReplayChart({
   const [panByTimeframe, setPanByTimeframe] = useState<Record<string, number>>({});
   const [verticalPanByTimeframe, setVerticalPanByTimeframe] = useState<Record<string, number>>({});
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [normalChartHeight, setNormalChartHeight] = useState(defaultChartHeight);
+  const [normalChartWidthPercent, setNormalChartWidthPercent] = useState(defaultChartWidthPercent);
 
   const deleteDrawing = useCallback((id: string) => {
     if (locked) return;
@@ -244,6 +254,7 @@ export function SynchronizedReplayChart({
     return () => window.removeEventListener("keydown", removeSelectedDrawing);
   }, [deleteDrawing, locked, selectedId]);
 
+  const height = isFullscreen ? defaultChartHeight : normalChartHeight;
   const maximumViewport = Math.max(20, bars.length);
   const viewport = Math.max(16, Math.min(viewportByTimeframe[label] ?? 100, maximumViewport));
   const futureSlots = Math.max(7, Math.round(viewport * 0.15));
@@ -513,8 +524,13 @@ export function SynchronizedReplayChart({
   return (
     <div
       className={`relative overflow-hidden border border-[#D1D4DC] bg-white shadow-sm ${isFullscreen ? "flex h-screen w-screen flex-col rounded-none border-0" : "rounded-xl"}`}
+      data-chart-width-percent={normalChartWidthPercent}
       data-testid="synchronized-replay-window"
       ref={frameRef}
+      style={isFullscreen ? undefined : {
+        maxWidth: "100%",
+        width: `${normalChartWidthPercent}%`,
+      }}
     >
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#E6E8EC] bg-[#F8F9FB] px-3 py-2">
         <div className="flex flex-wrap gap-1">
@@ -556,6 +572,44 @@ export function SynchronizedReplayChart({
             updateCamera(Math.min(100, maximumViewport), 0);
             updateVerticalPan(0);
           }} type="button">Reset</button>
+          {!isFullscreen ? (
+            <>
+              <button
+                aria-label="Decrease chart height"
+                className="chart-command"
+                disabled={normalChartHeight <= minimumChartHeight}
+                onClick={() => setNormalChartHeight((current) => Math.max(minimumChartHeight, current - 80))}
+                title="Make the normal chart shorter"
+                type="button"
+              >Height -</button>
+              <button
+                aria-label="Increase chart height"
+                className="chart-command"
+                disabled={normalChartHeight >= maximumChartHeight}
+                onClick={() => setNormalChartHeight((current) => Math.min(maximumChartHeight, current + 80))}
+                title="Make the normal chart taller"
+                type="button"
+              >Height +</button>
+              <span aria-label="Current chart height" className="px-1 text-[10px] font-semibold text-[#787B86]">{normalChartHeight}px</span>
+              <button
+                aria-label="Decrease chart width"
+                className="chart-command"
+                disabled={normalChartWidthPercent <= minimumChartWidthPercent}
+                onClick={() => setNormalChartWidthPercent((current) => Math.max(minimumChartWidthPercent, current - 10))}
+                title="Make the normal chart narrower"
+                type="button"
+              >Width -</button>
+              <button
+                aria-label="Increase chart width"
+                className="chart-command"
+                disabled={normalChartWidthPercent >= maximumChartWidthPercent}
+                onClick={() => setNormalChartWidthPercent((current) => Math.min(maximumChartWidthPercent, current + 10))}
+                title="Make the normal chart wider"
+                type="button"
+              >Width +</button>
+              <span aria-label="Current chart width" className="px-1 text-[10px] font-semibold text-[#787B86]">{normalChartWidthPercent}%</span>
+            </>
+          ) : null}
           <button
             aria-label={isFullscreen ? "Exit full screen" : "Enter full screen"}
             className="chart-command"
@@ -585,13 +639,26 @@ export function SynchronizedReplayChart({
         >
           <button
             aria-label={fullscreenReplayControls.playing ? "Pause full-screen replay" : "Play full-screen replay"}
-            className="rounded-lg bg-[#2962FF] px-4 py-2 text-xs font-bold text-white disabled:cursor-not-allowed disabled:opacity-35"
+            aria-busy={fullscreenReplayControls.advancing && fullscreenReplayControls.playing}
+            className="min-w-[92px] rounded-lg bg-[#2962FF] px-4 py-2 text-xs font-bold text-white disabled:cursor-not-allowed disabled:opacity-35"
             disabled={fullscreenReplayControls.playDisabled}
             onClick={fullscreenReplayControls.onTogglePlay}
             type="button"
           >
             {fullscreenReplayControls.playing ? "Pause" : "▶ Play"}
           </button>
+          {fullscreenReplayControls.onRequestPositionDetails ? (
+            <button
+              aria-label={`Full-screen ${fullscreenReplayControls.placeButtonLabel ?? "Place trade"}`}
+              className="min-w-[142px] rounded-lg bg-[#087363] px-4 py-2 text-xs font-bold text-white disabled:cursor-not-allowed disabled:opacity-35"
+              disabled={!fullscreenReplayControls.positionReady || fullscreenReplayControls.advancing}
+              onClick={fullscreenReplayControls.onRequestPositionDetails}
+              title={fullscreenReplayControls.positionReady ? "Open the immutable trade-decision form." : "Map ENTRY, SL and TP during an eligible session first."}
+              type="button"
+            >
+              {fullscreenReplayControls.placeButtonLabel ?? "Place trade"}
+            </button>
+          ) : null}
           {([1, 5, 15] as const).map((minutes) => (
             <button
               aria-label={`Advance full-screen replay ${minutes} minute${minutes === 1 ? "" : "s"}`}
@@ -630,9 +697,12 @@ export function SynchronizedReplayChart({
       <svg
         aria-label={`${label.toUpperCase()} synchronized blind replay chart`}
         className={`block w-full select-none bg-white ${isFullscreen ? "min-h-0 flex-1" : "h-auto"}`}
+        data-chart-height={height}
+        data-automatic-level-count={levels.length}
         data-cursor-minute={cursorMinute}
         data-drawing-count={drawings.length}
         data-pan-bars={pan}
+        data-session-window-count={windows.length}
         data-slot-width={slot.toFixed(6)}
         data-testid="synchronized-replay-chart"
         data-vertical-pan={verticalPan}
@@ -654,9 +724,13 @@ export function SynchronizedReplayChart({
         onPointerUp={() => {
           draggingAnchorRef.current = null;
         }}
-        preserveAspectRatio="xMidYMid meet"
+        preserveAspectRatio="none"
         ref={svgRef}
         role="img"
+        style={{
+          height: isFullscreen ? undefined : `${normalChartHeight}px`,
+          touchAction: "none",
+        }}
         viewBox={`0 0 ${width} ${height}`}
       >
         <rect fill="#FFFFFF" height={height} width={width} />
@@ -747,8 +821,8 @@ export function SynchronizedReplayChart({
               setMessage("Drawing selected. Drag its blue-outlined handles to resize it, or Delete to remove it before lock.");
             }
           };
-          const resizeHandle = (anchorIndex: number, x: number, handleY: number, name: string) => (
-            !locked && selected ? (
+          const resizeHandle = (anchorIndex: number, x: number, handleY: number, name: string, persist = false) => (
+            !locked && (selected || persist) ? (
               <circle
                 aria-label={`Resize ${name}`}
                 className="cursor-move"
@@ -758,6 +832,8 @@ export function SynchronizedReplayChart({
                 key={`handle-${anchorIndex}`}
                 onPointerDown={(event) => {
                   event.stopPropagation();
+                  setSelectedId(drawing.id);
+                  setTool("SELECT");
                   draggingAnchorRef.current = {
                     drawingId: drawing.id,
                     anchorIndex,
@@ -811,9 +887,9 @@ export function SynchronizedReplayChart({
                 ) : null}
                 <rect fill={positionLifecycle === "EDITABLE" ? "#174EA6" : positionLifecycle === "PENDING_ENTRY" ? "#8A6200" : "#087363"} height="20" rx="4" width="116" x={right - 120} y={padding.top + 5} />
                 <text fill="white" fontSize="9" fontWeight="700" textAnchor="middle" x={right - 62} y={padding.top + 18}>{lifecycleLabel}</text>
-                {resizeHandle(0, right - 8, y(entry), `${drawing.kind === "LONG_POSITION" ? "long" : "short"} position entry`)}
-                {resizeHandle(1, right - 8, y(stop), `${drawing.kind === "LONG_POSITION" ? "long" : "short"} position stop`)}
-                {resizeHandle(2, right - 8, y(target), `${drawing.kind === "LONG_POSITION" ? "long" : "short"} position target`)}
+                {resizeHandle(0, right - 8, y(entry), `${drawing.kind === "LONG_POSITION" ? "long" : "short"} position entry`, positionLifecycle === "EDITABLE")}
+                {resizeHandle(1, right - 8, y(stop), `${drawing.kind === "LONG_POSITION" ? "long" : "short"} position stop`, positionLifecycle === "EDITABLE")}
+                {resizeHandle(2, right - 8, y(target), `${drawing.kind === "LONG_POSITION" ? "long" : "short"} position target`, positionLifecycle === "EDITABLE")}
               </g>
             );
           }

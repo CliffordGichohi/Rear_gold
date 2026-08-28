@@ -16,11 +16,16 @@ import {
   blindReplayV3CaseSchema,
   blindReplayV3MutationSchema,
   blindReplayV3StatusSchema,
+  coherentAuctionValidationCaseSchema,
+  coherentAuctionValidationMutationSchema,
+  coherentAuctionValidationStatusSchema,
   publicApiUrl,
   type BlindReplayV3Bar,
   type BlindReplayV3Order,
   type BlindReplayV3Payload,
   type BlindReplayV3Status,
+  type CoherentAuctionValidationPayload,
+  type CoherentAuctionValidationStatus,
 } from "@/lib/api";
 
 
@@ -36,6 +41,20 @@ type Annotation = {
   targetLogic: string;
   eventRisk: string;
   confidence: number;
+  auctionFamily: "CONTINUATION_WITH_ROOM" | "RANGE_ROTATION" | "STRUCTURAL_REPAIR" | "OTHER_EXPLICIT";
+  controllingH4State: "PULLBACK_WITH_ROOM" | "BALANCE_LOWER_ROTATION" | "BALANCE_UPPER_ROTATION" | "UPPER_BOUNDARY_EXTENDED" | "LOWER_BOUNDARY_EXTENDED" | "BEARISH_DAMAGE" | "BULLISH_DAMAGE" | "ACCEPTED_REPAIR" | "UNKNOWN";
+  locationAssessment: "DISCOUNT" | "MIDRANGE" | "PREMIUM" | "AT_SUPPORT" | "AT_RESISTANCE" | "UNKNOWN";
+  stopBasis: "ACTIVE_M15_PROTECTED_SWING" | "CONTROLLING_M15_RANGE_BOUNDARY" | "POST_REPAIR_ORIGIN" | "OTHER_EXPLICIT";
+  macroOverrideReason: string;
+};
+
+type ReplayStatus = BlindReplayV3Status | CoherentAuctionValidationStatus;
+type ReplayPayload = BlindReplayV3Payload | CoherentAuctionValidationPayload;
+
+type AnnotatedReplayV3LabProps = {
+  apiBasePath?: "/blind-replay-v3" | "/coherent-auction-validation";
+  draftPrefix?: string;
+  validationMode?: boolean;
 };
 
 const emptyAnnotation: Annotation = {
@@ -49,6 +68,11 @@ const emptyAnnotation: Annotation = {
   targetLogic: "",
   eventRisk: "NONE_KNOWN",
   confidence: 60,
+  auctionFamily: "CONTINUATION_WITH_ROOM",
+  controllingH4State: "PULLBACK_WITH_ROOM",
+  locationAssessment: "MIDRANGE",
+  stopBasis: "ACTIVE_M15_PROTECTED_SWING",
+  macroOverrideReason: "NOT_AGAINST_DISPLAYED_MACRO",
 };
 
 function object(value: unknown): Record<string, unknown> {
@@ -164,7 +188,7 @@ function compactComponent(value: unknown) {
   return "MIXED";
 }
 
-function FundamentalTape({ replay }: { replay: BlindReplayV3Payload }) {
+function FundamentalTape({ replay }: { replay: ReplayPayload }) {
   const context = replay.context;
   const summary = object(context.fundamental_summary);
   const components = Array.isArray(summary.components) ? summary.components.map(object) : [];
@@ -221,8 +245,8 @@ function FundamentalTape({ replay }: { replay: BlindReplayV3Payload }) {
   );
 }
 
-function annotationBlockers(annotation: Annotation) {
-  return [
+function annotationBlockers(annotation: Annotation, validationMode: boolean) {
+  const base = [
     [annotation.thesis, "why this trade exists now"],
     [annotation.dominantDriver, "dominant driver"],
     [annotation.higherTimeframeContext, "higher-timeframe context"],
@@ -231,11 +255,19 @@ function annotationBlockers(annotation: Annotation) {
     [annotation.invalidationLogic, "invalidation logic"],
     [annotation.targetLogic, "target logic"],
   ].flatMap(([value, label]) => value.trim().length >= 3 ? [] : [label]);
+  if (validationMode && annotation.macroOverrideReason.trim().length < 3) {
+    base.push("macro-alignment or override reason");
+  }
+  return base;
 }
 
-export function AnnotatedReplayV3Lab() {
-  const [status, setStatus] = useState<BlindReplayV3Status | null>(null);
-  const [replay, setReplay] = useState<BlindReplayV3Payload | null>(null);
+export function AnnotatedReplayV3Lab({
+  apiBasePath = "/blind-replay-v3",
+  draftPrefix = "gold-replay-v3-draft",
+  validationMode = false,
+}: AnnotatedReplayV3LabProps = {}) {
+  const [status, setStatus] = useState<ReplayStatus | null>(null);
+  const [replay, setReplay] = useState<ReplayPayload | null>(null);
   const [selectedAlias, setSelectedAlias] = useState("");
   const [initialTime, setInitialTime] = useState("00:00");
   const [started, setStarted] = useState(false);
@@ -255,7 +287,7 @@ export function AnnotatedReplayV3Lab() {
   const [error, setError] = useState<string | null>(null);
   const advanceInFlight = useRef(false);
 
-  const installCase = useCallback((next: BlindReplayV3Payload, progress: BlindReplayV3Status, forceServerOrder = false) => {
+  const installCase = useCallback((next: ReplayPayload, progress: ReplayStatus, forceServerOrder = false) => {
     setReplay(next);
     setStatus(progress);
     setSelectedAlias(next.case_alias);
@@ -272,21 +304,24 @@ export function AnnotatedReplayV3Lab() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${publicApiUrl}/blind-replay-v3/next?case_alias=${encodeURIComponent(alias)}`, { cache: "no-store" });
+      const response = await fetch(`${publicApiUrl}${apiBasePath}/next?case_alias=${encodeURIComponent(alias)}`, { cache: "no-store" });
       const body: unknown = await response.json();
       if (!response.ok) throw new Error(apiError(body, response.status));
-      const parsed = blindReplayV3CaseSchema.parse(body);
+      const parsed = validationMode
+        ? coherentAuctionValidationCaseSchema.parse(body)
+        : blindReplayV3CaseSchema.parse(body);
       installCase(parsed.case, parsed.progress, Boolean(parsed.case.live_order));
       setStarted(Boolean(parsed.progress.current_case_alias) || parsed.case.cursor_at !== parsed.case.start_at);
+      setInitialTime(parsed.case.start_at.slice(11, 16));
       if (!parsed.case.live_order && restoreDraft) {
-        const raw = window.localStorage.getItem(`gold-replay-v3-draft:${parsed.case.case_alias}`);
+        const raw = window.localStorage.getItem(`${draftPrefix}:${parsed.case.case_alias}`);
         if (raw) {
           const draft = JSON.parse(raw) as { drawings?: ReplayV2Drawing[]; positionPlan?: ReplayV2PositionPlan | null; timeframe?: ReplayTimeframe; orderType?: OrderType; annotation?: Annotation };
           if (Array.isArray(draft.drawings)) setDrawings(draft.drawings);
           setPositionPlan(draft.positionPlan ?? null);
           if (draft.timeframe && replayTimeframes.includes(draft.timeframe)) setTimeframe(draft.timeframe);
           if (draft.orderType) setOrderType(draft.orderType);
-          if (draft.annotation) setAnnotation(draft.annotation);
+          if (draft.annotation) setAnnotation({ ...emptyAnnotation, ...draft.annotation });
         } else {
           setDrawings([]);
           setPositionPlan(null);
@@ -298,16 +333,18 @@ export function AnnotatedReplayV3Lab() {
     } finally {
       setLoading(false);
     }
-  }, [installCase]);
+  }, [apiBasePath, draftPrefix, installCase, validationMode]);
 
   const refreshStatus = useCallback(async () => {
-    const response = await fetch(`${publicApiUrl}/blind-replay-v3/status`, { cache: "no-store" });
+    const response = await fetch(`${publicApiUrl}${apiBasePath}/status`, { cache: "no-store" });
     const body: unknown = await response.json();
     if (!response.ok) throw new Error(apiError(body, response.status));
-    const parsed = blindReplayV3StatusSchema.parse(body);
+    const parsed = validationMode
+      ? coherentAuctionValidationStatusSchema.parse(body)
+      : blindReplayV3StatusSchema.parse(body);
     setStatus(parsed);
     return parsed;
-  }, []);
+  }, [apiBasePath, validationMode]);
 
   useEffect(() => {
     const task = window.setTimeout(() => {
@@ -329,11 +366,13 @@ export function AnnotatedReplayV3Lab() {
 
   useEffect(() => {
     if (!replay) return;
-    window.localStorage.setItem(`gold-replay-v3-draft:${replay.case_alias}`, JSON.stringify({ drawings, positionPlan, timeframe, orderType, annotation }));
-  }, [annotation, drawings, orderType, positionPlan, replay, timeframe]);
+    window.localStorage.setItem(`${draftPrefix}:${replay.case_alias}`, JSON.stringify({ drawings, positionPlan, timeframe, orderType, annotation }));
+  }, [annotation, draftPrefix, drawings, orderType, positionPlan, replay, timeframe]);
 
   const applyMutation = useCallback((body: unknown, forceServerOrder = false) => {
-    const parsed = blindReplayV3MutationSchema.parse(body);
+    const parsed = validationMode
+      ? coherentAuctionValidationMutationSchema.parse(body)
+      : blindReplayV3MutationSchema.parse(body);
     setStatus(parsed.progress);
     if (parsed.case) {
       installCase(parsed.case, parsed.progress, forceServerOrder || parsed.case.live_order?.state === "ACTIVE_POSITION");
@@ -346,13 +385,13 @@ export function AnnotatedReplayV3Lab() {
       setDialogOpen(false);
     }
     return parsed;
-  }, [installCase]);
+  }, [installCase, validationMode]);
 
   const mutate = useCallback(async (path: string, payload: Record<string, unknown>, forceServerOrder = false) => {
     setBusy(true);
     setError(null);
     try {
-      const response = await fetch(`${publicApiUrl}/blind-replay-v3${path}`, {
+      const response = await fetch(`${publicApiUrl}${apiBasePath}${path}`, {
         method: "POST",
         headers: { "Content-Type": "application/json", "Idempotency-Key": randomKey() },
         body: JSON.stringify(payload),
@@ -367,7 +406,7 @@ export function AnnotatedReplayV3Lab() {
     } finally {
       setBusy(false);
     }
-  }, [applyMutation]);
+  }, [apiBasePath, applyMutation]);
 
   const advance = useCallback(async (minutes: 1 | 5 | 15) => {
     if (!replay || !started || dialogOpen || advanceInFlight.current) return;
@@ -438,7 +477,7 @@ export function AnnotatedReplayV3Lab() {
       return;
     }
     if (!live) {
-      const blockers = annotationBlockers(annotation);
+      const blockers = annotationBlockers(annotation, validationMode);
       if (blockers.length) {
         setError(`Complete: ${blockers.join(", ")}.`);
         return;
@@ -466,6 +505,14 @@ export function AnnotatedReplayV3Lab() {
           target_logic: annotation.targetLogic,
           event_risk: annotation.eventRisk,
           confidence: annotation.confidence,
+          ...(validationMode ? {
+            auction_family: annotation.auctionFamily,
+            controlling_h4_state: annotation.controllingH4State,
+            location_assessment: annotation.locationAssessment,
+            stop_basis: annotation.stopBasis,
+            target_timeframe: "H1_OPPOSING_LIQUIDITY",
+            macro_override_reason: annotation.macroOverrideReason,
+          } : {}),
         },
       }, true);
       if (!result) return;
@@ -487,7 +534,7 @@ export function AnnotatedReplayV3Lab() {
     setDialogOpen(false);
     setAmendReason("");
     setPlaying(true);
-  }, [amendReason, annotation, drawings, mutate, orderType, positionPlan, replay, timeframe]);
+  }, [amendReason, annotation, drawings, mutate, orderType, positionPlan, replay, timeframe, validationMode]);
 
   const cancelPending = useCallback(async () => {
     const live = replay?.live_order;
@@ -577,6 +624,14 @@ export function AnnotatedReplayV3Lab() {
 
   const windows = useMemo(() => {
     if (!replay) return [];
+    if (validationMode && "session_code" in replay) {
+      return [{
+        code: replay.session_code,
+        startMinute: 0,
+        endMinute: maximumMinute,
+        color: replay.session_code === "LONDON" ? "#1976D2" : "#D97706",
+      }];
+    }
     const date = new Date(`${replay.trading_date_utc}T12:00:00Z`);
     const londonSummer = date < new Date("2021-10-31T01:00:00Z");
     const newYorkSummer = date < new Date("2021-11-07T06:00:00Z");
@@ -591,7 +646,7 @@ export function AnnotatedReplayV3Lab() {
       { code: "NEW_YORK", startMinute: newYorkStart, endMinute: newYorkEnd, color: "#D97706" },
       { code: "ROLLOVER", startMinute: newYorkEnd, endMinute: Math.min(1440, newYorkEnd + 60), color: "#B4232F" },
     ];
-  }, [replay]);
+  }, [maximumMinute, replay, validationMode]);
 
   const lastOrder = replay?.order_history.at(-1) ?? null;
   const lifecycle: ReplayV2PositionLifecycle = replay?.live_order?.state === "PENDING_ORDER"
@@ -642,6 +697,33 @@ export function AnnotatedReplayV3Lab() {
               </select>
             </label>
             <label className="text-xs font-semibold">Dominant driver<input aria-label="Dominant driver" className="mt-1 w-full rounded border border-[#D1D4DC] p-2 text-sm font-normal" onChange={(event) => setAnnotation((value) => ({ ...value, dominantDriver: event.target.value }))} value={annotation.dominantDriver} /></label>
+            {validationMode ? <>
+              <label className="text-xs font-semibold">Auction family
+                <select aria-label="Auction family" className="mt-1 w-full rounded border border-[#D1D4DC] p-2 text-sm font-normal" onChange={(event) => setAnnotation((value) => ({ ...value, auctionFamily: event.target.value as Annotation["auctionFamily"] }))} value={annotation.auctionFamily}>
+                  <option value="CONTINUATION_WITH_ROOM">Continuation with room</option>
+                  <option value="RANGE_ROTATION">Range rotation</option>
+                  <option value="STRUCTURAL_REPAIR">Structural repair</option>
+                  <option value="OTHER_EXPLICIT">Other — explain explicitly</option>
+                </select>
+              </label>
+              <label className="text-xs font-semibold">Controlling H4 state
+                <select aria-label="Controlling H4 state" className="mt-1 w-full rounded border border-[#D1D4DC] p-2 text-sm font-normal" onChange={(event) => setAnnotation((value) => ({ ...value, controllingH4State: event.target.value as Annotation["controllingH4State"] }))} value={annotation.controllingH4State}>
+                  <option>PULLBACK_WITH_ROOM</option><option>BALANCE_LOWER_ROTATION</option><option>BALANCE_UPPER_ROTATION</option><option>UPPER_BOUNDARY_EXTENDED</option><option>LOWER_BOUNDARY_EXTENDED</option><option>BEARISH_DAMAGE</option><option>BULLISH_DAMAGE</option><option>ACCEPTED_REPAIR</option><option>UNKNOWN</option>
+                </select>
+              </label>
+              <label className="text-xs font-semibold">Higher-timeframe location
+                <select aria-label="Higher-timeframe location" className="mt-1 w-full rounded border border-[#D1D4DC] p-2 text-sm font-normal" onChange={(event) => setAnnotation((value) => ({ ...value, locationAssessment: event.target.value as Annotation["locationAssessment"] }))} value={annotation.locationAssessment}>
+                  <option>DISCOUNT</option><option>MIDRANGE</option><option>PREMIUM</option><option>AT_SUPPORT</option><option>AT_RESISTANCE</option><option>UNKNOWN</option>
+                </select>
+              </label>
+              <label className="text-xs font-semibold">Structural stop basis
+                <select aria-label="Structural stop basis" className="mt-1 w-full rounded border border-[#D1D4DC] p-2 text-sm font-normal" onChange={(event) => setAnnotation((value) => ({ ...value, stopBasis: event.target.value as Annotation["stopBasis"] }))} value={annotation.stopBasis}>
+                  <option>ACTIVE_M15_PROTECTED_SWING</option><option>CONTROLLING_M15_RANGE_BOUNDARY</option><option>POST_REPAIR_ORIGIN</option><option>OTHER_EXPLICIT</option>
+                </select>
+              </label>
+              <label className="text-xs font-semibold">Target timeframe<input aria-label="Target timeframe" className="mt-1 w-full rounded border border-[#D1D4DC] bg-[#F4F5F7] p-2 text-sm font-normal" readOnly value="H1_OPPOSING_LIQUIDITY" /></label>
+              <label className="text-xs font-semibold">Macro alignment / override reason<input aria-label="Macro override reason" className="mt-1 w-full rounded border border-[#D1D4DC] p-2 text-sm font-normal" onChange={(event) => setAnnotation((value) => ({ ...value, macroOverrideReason: event.target.value }))} value={annotation.macroOverrideReason} /></label>
+            </> : null}
             <label className="text-xs font-semibold">Higher-timeframe structure and location<textarea aria-label="Higher-timeframe context" className="mt-1 min-h-20 w-full rounded border border-[#D1D4DC] p-2 text-sm font-normal" onChange={(event) => setAnnotation((value) => ({ ...value, higherTimeframeContext: event.target.value }))} value={annotation.higherTimeframeContext} /></label>
             <label className="text-xs font-semibold">Session and liquidity context<textarea aria-label="Session and liquidity context" className="mt-1 min-h-20 w-full rounded border border-[#D1D4DC] p-2 text-sm font-normal" onChange={(event) => setAnnotation((value) => ({ ...value, sessionLiquidityContext: event.target.value }))} value={annotation.sessionLiquidityContext} /></label>
             <label className="text-xs font-semibold">Observable entry trigger<textarea aria-label="Observable entry trigger" className="mt-1 min-h-20 w-full rounded border border-[#D1D4DC] p-2 text-sm font-normal" onChange={(event) => setAnnotation((value) => ({ ...value, entryTrigger: event.target.value }))} value={annotation.entryTrigger} /></label>
@@ -666,12 +748,12 @@ export function AnnotatedReplayV3Lab() {
   if (!replay) {
     return (
       <section className="mt-8 rounded-xl border border-[#D1D4DC] bg-white p-6">
-        <h3 className="text-xl font-semibold">{status?.practice_completed === 20 ? "All practice days complete" : "Practice day completed"}</h3>
-        <p className="mt-2 text-sm text-[#5D606B]">{status?.practice_completed ?? 0} / 20 zero-credit days complete. The {status?.collection_year ?? 2022} collection year, 2025, and 2026 remain closed.</p>
-        {status && status.practice_completed < 20 ? <button className="mt-4 rounded-lg bg-[#2962FF] px-4 py-2 text-sm font-bold text-white" onClick={() => {
+        <h3 className="text-xl font-semibold">{status?.practice_completed === status?.practice_total ? "All replay sessions complete" : "Replay session completed"}</h3>
+        <p className="mt-2 text-sm text-[#5D606B]">{status?.practice_completed ?? 0} / {status?.practice_total ?? (validationMode ? 50 : 20)} sessions complete. Aggregate results, 2025, and 2026 remain locked.</p>
+        {status && status.practice_completed < status.practice_total ? <button className="mt-4 rounded-lg bg-[#2962FF] px-4 py-2 text-sm font-bold text-white" onClick={() => {
           const alias = status.practice_cases.find((item) => !item.completed)?.case_alias;
           if (alias) void loadCase(alias, false);
-        }} type="button">Choose another practice day</button> : null}
+          }} type="button">Open next replay session</button> : null}
         {error ? <p className="mt-3 text-sm text-red-700">{error}</p> : null}
       </section>
     );
@@ -681,12 +763,12 @@ export function AnnotatedReplayV3Lab() {
     <div className="mt-6 space-y-3" data-testid="annotated-replay-v3-lab">
       <section className="rounded-xl border border-[#D1D4DC] bg-white p-3 shadow-sm">
         <div className="flex flex-wrap items-end gap-3">
-          <label className="text-[10px] font-bold uppercase text-[#787B86]">Practice date
+          <label className="text-[10px] font-bold uppercase text-[#787B86]">{validationMode ? "Blind session" : "Practice date"}
             <select aria-label="Select practice date" className="mt-1 block rounded border border-[#D1D4DC] px-3 py-2 text-sm font-normal text-[#131722]" disabled={Boolean(status?.current_case_alias)} onChange={(event) => {
               setSelectedAlias(event.target.value);
               void loadCase(event.target.value);
             }} value={selectedAlias}>
-              {status?.practice_cases.filter((item) => !item.completed || item.active).map((item) => <option key={item.case_alias} value={item.case_alias}>{item.trading_date_utc} · {item.case_alias}</option>)}
+              {status?.practice_cases.filter((item) => !item.completed || item.active).map((item) => <option key={item.case_alias} value={item.case_alias}>{item.trading_date_utc} · {"session_code" in item ? `${item.session_code} · ` : ""}{item.case_alias}</option>)}
             </select>
           </label>
           <label className="text-[10px] font-bold uppercase text-[#787B86]">Initial UTC time
@@ -707,9 +789,9 @@ export function AnnotatedReplayV3Lab() {
         <div className="mt-2 flex flex-wrap items-center gap-2">
           {replayTimeframes.map((item) => <button aria-label={`Show ${replayTimeframeLabel(item)} timeframe`} aria-pressed={timeframe === item} className={`rounded border px-2 py-1 text-[10px] font-bold ${timeframe === item ? "border-[#2962FF] bg-[#EEF3FF] text-[#174EA6]" : "border-[#D1D4DC]"}`} key={item} onClick={() => setTimeframe(item)} type="button">{replayTimeframeLabel(item)} · {replay.visible_timeframes[item]?.count ?? 0}</button>)}
           <span className="mx-1 h-6 w-px bg-[#D1D4DC]" />
-          <button className="chart-command" disabled={Boolean(replay.live_order) || cursorMinute >= 480} onClick={() => void skipToMinute(480, "Advance to London session; skipped interval not observed in real time.")} type="button">Go to London</button>
-          <button className="chart-command" disabled={Boolean(replay.live_order) || cursorMinute >= 780} onClick={() => void skipToMinute(780, "Advance to New York session; skipped interval not observed in real time.")} type="button">Go to New York</button>
-          <button className="chart-command" disabled={Boolean(replay.live_order)} onClick={() => void skipToMinute(1440, "Finish practice day while flat; remaining interval not observed in real time.")} type="button">Finish day</button>
+          {!validationMode ? <button className="chart-command" disabled={Boolean(replay.live_order) || cursorMinute >= 480} onClick={() => void skipToMinute(480, "Advance to London session; skipped interval not observed in real time.")} type="button">Go to London</button> : null}
+          {!validationMode ? <button className="chart-command" disabled={Boolean(replay.live_order) || cursorMinute >= 780} onClick={() => void skipToMinute(780, "Advance to New York session; skipped interval not observed in real time.")} type="button">Go to New York</button> : null}
+          <button className="chart-command" disabled={Boolean(replay.live_order)} onClick={() => void skipToMinute(maximumMinute, validationMode ? "No valid setup; finish blind session while flat." : "Finish practice day while flat; remaining interval not observed in real time.")} type="button">{validationMode ? "No trade / finish session" : "Finish day"}</button>
           {playBlocker ? <span className="text-[10px] font-semibold text-amber-700">Control constraint: {playBlocker}</span> : <span className="text-[10px] font-semibold text-emerald-700">Replay controls available.</span>}
         </div>
       </section>
@@ -724,19 +806,25 @@ export function AnnotatedReplayV3Lab() {
           cursorMinute={cursorMinute}
           drawings={drawings}
           events={chartEvents}
-          formatMinuteLabel={(minute) => utcLabel(timestampAt(replay.start_at, minute), minute < 0 || minute >= 1440)}
+          formatMinuteLabel={(minute) => utcLabel(timestampAt(replay.start_at, minute), minute < 0 || minute >= maximumMinute)}
           fullscreenOverlay={annotationDialog}
           fullscreenReplayControls={{
             playing,
             advancing: busy,
             playDisabled: Boolean(playBlocker) && !playing,
             advanceDisabled: Boolean(playBlocker),
+            positionReady: Boolean(positionPlan) && !activeLocked && started,
+            placeButtonLabel: replay.live_order?.state === "PENDING_ORDER" ? "Review Amendment" : "Place Order",
             cursorMinute,
             maximumCursorMinute: maximumMinute,
             timeframeCounts: Object.fromEntries(replayTimeframes.map((item) => [item, replay.visible_timeframes[item]?.count ?? 0])),
             onTogglePlay: () => setPlaying((value) => !value),
             onAdvance: (minutes) => void advance(minutes),
             onTimeframeChange: setTimeframe,
+            onRequestPositionDetails: () => {
+              setPlaying(false);
+              setDialogOpen(true);
+            },
           }}
           label={timeframe}
           levels={levels}
@@ -782,10 +870,10 @@ export function AnnotatedReplayV3Lab() {
             <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#787B86]">Immutable audit</p>
             <p className="mt-2">Orders today: {replay.order_history.length}</p>
             <p>Ledger head: {status?.event_ledger_head_sha256.slice(0, 12)}…</p>
-            <p>Research credit: ZERO · PRACTICE</p>
-            <p>Collection year {status?.collection_year}: CLOSED</p>
+            <p>Research credit: {validationMode ? "HISTORICAL BLIND ROBUSTNESS" : "ZERO · PRACTICE"}</p>
+            <p>Collection year {status?.collection_year}: {validationMode ? "OPEN · AGGREGATES LOCKED" : "CLOSED"}</p>
             <p>2025 / 2026: LOCKED</p>
-            <p className="mt-2 rounded bg-[#FFF8E1] p-2 text-[#6B5200]">No edge, aggregate win rate, or PnL is calculated during usability certification.</p>
+            <p className="mt-2 rounded bg-[#FFF8E1] p-2 text-[#6B5200]">{validationMode ? "No aggregate hit rate, PnL, or failure feedback is released before all 50 sessions are sealed." : "No edge, aggregate win rate, or PnL is calculated during usability certification."}</p>
           </section>
         </aside>
       </div>

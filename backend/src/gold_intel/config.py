@@ -32,6 +32,12 @@ class Settings(BaseSettings):
     blind_replay_v3_ledger_path: Path = Path(
         "../research_artifacts/gold_annotated_replay_v3/ledgers/practice_event_ledger_v3.jsonl"
     )
+    coherent_auction_validation_artifact_path: Path = Path(
+        "../research_artifacts/gold_coherent_auction_blind_validation_v1"
+    )
+    coherent_auction_validation_ledger_path: Path = Path(
+        "../research_artifacts/gold_coherent_auction_blind_validation_v1/ledgers/validation_event_ledger.jsonl"
+    )
     codex_operator_replay_artifact_path: Path = Path(
         "../research_artifacts/gold_blind_codex_operator_replay_v1"
     )

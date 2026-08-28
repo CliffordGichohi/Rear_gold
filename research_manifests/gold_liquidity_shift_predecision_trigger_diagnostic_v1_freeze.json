@@ -1,0 +1,41 @@
+{
+  "calendar_2025_opened": false,
+  "calendar_2026_opened": false,
+  "files": {
+    "human_visible_ledger": {
+      "bytes": 1666513,
+      "path": "research_artifacts/gold_matched_human_replay_v1/ledgers/matched_human_visible_ledger.jsonl",
+      "sha256": "534f855c6cb5546bc7c70ab8bb586b840a7a394d552cf07c6c22d44269b0c0ca"
+    },
+    "protocol": {
+      "bytes": 2122,
+      "path": "GOLD_LIQUIDITY_SHIFT_PREDECISION_TRIGGER_DIAGNOSTIC_V1.md",
+      "sha256": "c8352642dd1b41b4e46b7c80d218781033f58a900e1f5ddd56ed460c887e6087"
+    },
+    "registry": {
+      "bytes": 983,
+      "path": "research_manifests/gold_liquidity_shift_predecision_trigger_diagnostic_v1.json",
+      "sha256": "cdfb8c43332111760db54ea8da8ab5d5d2dffd02de172be43efc0d8cdec69429"
+    },
+    "v2_implementation": {
+      "bytes": 30589,
+      "path": "backend/src/gold_intel/analytics/liquidity_shift_v2.py",
+      "sha256": "cb9b201b3cf32f15dba77a8331eda19711a52a9bb6cc99b2adfce3b82be137d7"
+    },
+    "v3_final_seal": {
+      "bytes": 363,
+      "path": "research_artifacts/gold_persistent_liquidity_shift_auction_state_v3/final_seal.json",
+      "sha256": "0f696b263683580a6292b0d4f7578ccdb61bb9258b5761479260fb80b62e4fe2"
+    },
+    "v3_implementation": {
+      "bytes": 22736,
+      "path": "backend/src/gold_intel/analytics/liquidity_shift_v3.py",
+      "sha256": "c74a954d08ee1c93e074c559cf94f24f6edc94e761235d6de6b28ab8a250cf14"
+    }
+  },
+  "outcomes_opened": false,
+  "postdecision_market_values_opened": false,
+  "sealed_at_utc": "2026-08-20T08:29:27.599437Z",
+  "status": "SEALED_BEFORE_PREDECISION_VALUE_ACCESS",
+  "version": "GOLD_LIQUIDITY_SHIFT_PREDECISION_TRIGGER_DIAGNOSTIC_V1_FREEZE_1_0"
+}

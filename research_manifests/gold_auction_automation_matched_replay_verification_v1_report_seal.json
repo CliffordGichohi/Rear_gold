@@ -1,0 +1,21 @@
+{
+  "version": "GOLD_AUCTION_AUTOMATION_MATCHED_REPLAY_VERIFICATION_V1_REPORT_SEAL_1_0",
+  "sealed_at": "2026-08-20T10:43:41.6143984+03:00",
+  "research_credit": "ZERO_CREDIT_EXPOSED_MATCHED_CALIBRATION",
+  "marking_verdict": "FAIL_MARKING_MISMATCH",
+  "economic_verdict": "REJECT_NEGATIVE_MATCHED_ECONOMICS",
+  "files": {
+    "GOLD_AUCTION_AUTOMATION_MATCHED_REPLAY_VERIFICATION_V1_REPORT.md": "dbefe4390de889570490f73d4c97d7779f55243fb579b47432443c463901cb55",
+    "GOLD_AUCTION_AUTOMATION_MATCHED_REPLAY_VERIFICATION_PROTOCOL_V1.md": "e71e6c74cc141ac8b4b9076d2fb1fda099c21f84d9f78bd464c8f5c17981a49b",
+    "GOLD_AUCTION_AUTOMATION_MATCHED_REPLAY_VERIFICATION_ENGINEERING_AMENDMENT_A.md": "75ab7676d29bddf51d60a5bae20602215410b293bc211900a96b33f503ddcdc1",
+    "GOLD_AUCTION_AUTOMATION_MATCHED_REPLAY_VERIFICATION_SHUTDOWN_CORRECTION.md": "c24bf7438723490eed341374c8fce6c37aa5b40154ba61c570b3768fc6ea973f",
+    "backend/scripts/verify_auction_automation_matched_replay_v1.py": "679336123521dd704efecd5a4e28dccc19f4e27ac9aee1188f3f6f5b1a380a2c",
+    "research_artifacts/gold_auction_automation_matched_replay_verification_v1/result.json": "beef26d52b976cce610fbf2592571d60e27b387d703ace0faf3cbe6569ddfee4",
+    "research_artifacts/gold_auction_automation_matched_replay_verification_v1/final_seal.json": "69df7467018f47e01f4fb9330ca4fa1ea6e490eeed20dbcb950650316b9b87e4"
+  },
+  "execution_note": {
+    "result_producing_script_sha256": "a9d0a8050a07175d905805a39c590e83d27f47dc3bbc475b1d94535964464322",
+    "current_script_change": "SHUTDOWN_ONLY_SAME_EVENT_LOOP_ENGINE_DISPOSAL",
+    "sealed_result_affected": false
+  }
+}

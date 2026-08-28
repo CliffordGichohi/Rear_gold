@@ -1,0 +1,62 @@
+{
+  "calendar_2025_opened": false,
+  "calendar_2026_opened": false,
+  "development_outcomes_opened": false,
+  "files": {
+    "case_matrix": {
+      "bytes": 103763781,
+      "path": "research_artifacts/gold_session_behaviour_v3_case_matrix_v01/cases.jsonl.gz",
+      "sha256": "d0f5120713b5f9ce641c6285941bfc23d3aac3b83b561c8fc1138e33a5ede9b9"
+    },
+    "casebook_price": {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    "contract": {
+      "bytes": 4987,
+      "path": "GOLD_LIQUIDITY_RESPONSE_M5_STRUCTURE_STATE_EDGE_CONTRACT_V4.md",
+      "sha256": "f0b958b808d66a7b93566965e16ad13ef775ec6747a427eff12bc787932a653a"
+    },
+    "diagnostic_result": {
+      "bytes": 3377,
+      "path": "research_artifacts/gold_liquidity_shift_predecision_trigger_diagnostic_v1/diagnostic.json",
+      "sha256": "af68243e8ef03d6e6204d961f51703c5a20bb1352bec6ec2f8b7bfe9a039b276"
+    },
+    "diagnostic_rows": {
+      "bytes": 38413,
+      "path": "research_artifacts/gold_liquidity_shift_predecision_trigger_diagnostic_v1/predecision_rows.csv",
+      "sha256": "865a69a5513c407d780016fa3577405d1d9e220f8e3b701b3abcab3792f69712"
+    },
+    "diagnostic_seal": {
+      "bytes": 436,
+      "path": "research_artifacts/gold_liquidity_shift_predecision_trigger_diagnostic_v1/seal.json",
+      "sha256": "ccb83f81b4d878c5de3537b6f1b0efbd09ef9b822bccd7f3dc6a61004917c10b"
+    },
+    "fundamentals": {
+      "bytes": 8511617,
+      "path": "research_artifacts/gold_casebook_v01/fundamentals.jsonl.gz",
+      "sha256": "d2b776f60c4535978bbfb28706b4700e6d054a10f8d57cfee171c83b212b7235"
+    },
+    "human_visible_ledger": {
+      "bytes": 1666513,
+      "path": "research_artifacts/gold_matched_human_replay_v1/ledgers/matched_human_visible_ledger.jsonl",
+      "sha256": "534f855c6cb5546bc7c70ab8bb586b840a7a394d552cf07c6c22d44269b0c0ca"
+    },
+    "protocol": {
+      "bytes": 1553,
+      "path": "research_manifests/gold_liquidity_response_m5_structure_state_edge_v4_protocol.json",
+      "sha256": "72436f67e6caf6d7d2b06af138e4e45d15036a7a89dd42e095e526d15b90aae5"
+    },
+    "v3_final_seal": {
+      "bytes": 363,
+      "path": "research_artifacts/gold_persistent_liquidity_shift_auction_state_v3/final_seal.json",
+      "sha256": "0f696b263683580a6292b0d4f7578ccdb61bb9258b5761479260fb80b62e4fe2"
+    }
+  },
+  "matched_outcomes_opened": false,
+  "paid_acquisition": false,
+  "sealed_at_utc": "2026-08-20T08:34:39.686130Z",
+  "status": "SEALED_BEFORE_V4_SEMANTIC_AND_DEVELOPMENT_OUTCOME_ACCESS",
+  "version": "GOLD_LIQUIDITY_RESPONSE_M5_STRUCTURE_STATE_EDGE_V4_PREOUTCOME_FREEZE_1_0"
+}

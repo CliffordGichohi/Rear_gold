@@ -1,0 +1,105 @@
+{
+  "version": "GOLD_HIERARCHICAL_LIQUIDITY_SHIFT_EDGE_V2_PROTOCOL_1_0",
+  "ruleset": "gold-hierarchical-liquidity-shift-v2",
+  "partitions": {
+    "semantic_calibration": "CBR-2022-001/CBR-2022-030_ZERO_ECONOMIC_CREDIT",
+    "development_start": "2021-08-01T00:00:00Z",
+    "development_end_exclusive": "2025-01-01T00:00:00Z",
+    "exclude_matched_replay_dates": true,
+    "exclude_engineering_dates": ["2024-01-05", "2024-01-09", "2024-01-11", "2024-01-30", "2024-01-31", "2024-03-20"],
+    "locked": [2025, 2026]
+  },
+  "structure": {
+    "timeframes": ["5m", "15m", "1h", "4h"],
+    "zone_timeframes": ["15m", "1h", "4h"],
+    "pivot_left": 2,
+    "pivot_right": 2,
+    "atr_window": 14,
+    "pivot_prominence_atr": 0.25,
+    "zone_displacement_atr": 1.25,
+    "zone_body_ratio": 0.60,
+    "zone_break_buffer_atr": 0.05,
+    "zone_origin_lookback_bars": 6,
+    "zone_invalidation_buffer_atr": 0.10,
+    "zone_expiry_calendar_days": 45,
+    "minimum_zone_age_minutes": 30,
+    "maximum_contact_episodes": 2,
+    "contact_separation_m5_bars": 12,
+    "reaction_m5_bars": 3,
+    "transition_m15_bars": 16,
+    "transition_range_atr": 0.90,
+    "transition_body_ratio": 0.55,
+    "transition_break_buffer_atr": 0.05
+  },
+  "entries": {
+    "families": ["SHIFT_HALF_RETRACE_LIMIT_V2", "SHIFT_M5_STRUCTURE_CONFIRMATION_V2"],
+    "retracement_min": 0.382,
+    "retracement_max": 0.786,
+    "limit_retracement": 0.50,
+    "entry_expiry_m5_bars": 12,
+    "confirmation_body_ratio": 0.55,
+    "confirmation_break_prior_m5_bars": 2,
+    "stop_buffer_m15_atr": 0.10,
+    "minimum_stop_m15_atr": 0.10,
+    "maximum_stop_m15_atr": 1.50,
+    "minimum_minutes_to_session_close": 30
+  },
+  "routes": {
+    "registered": ["MACRO_ALIGNED_CONTINUATION", "RANGE_EXTREME_ROTATION"],
+    "macro_min_coverage": 50.0,
+    "macro_min_confidence": 35.0,
+    "macro_bullish_score": 20.0,
+    "macro_bearish_score": -20.0,
+    "range_outer_fraction": 0.35
+  },
+  "targets": {
+    "eligible": ["H1_SWING", "H4_SWING", "H1_OPPOSING_SHIFT_MIDPOINT", "H4_OPPOSING_SHIFT_MIDPOINT", "ASIA_HIGH_LOW", "PRIOR_DAY_HIGH_LOW"],
+    "minimum_reward_to_risk": 1.50,
+    "m15_internal_target_prohibited": true
+  },
+  "execution": {
+    "reference_account_usd": 10000.0,
+    "maximum_planned_risk_usd": 50.0,
+    "maximum_effective_risk_usd": 55.0,
+    "whole_ounce_sizing": true,
+    "slippage_price": 0.05,
+    "spread_fallback_price": 0.20,
+    "commission_usd": 0.0,
+    "same_bar": "STOP_FIRST",
+    "maximum_holding_hours": 4,
+    "one_trade_per_cell_session": true,
+    "combined_one_trade_per_session": true
+  },
+  "semantic_gates": {
+    "contact_lookback_hours": 96,
+    "location_contact_rate": 0.60,
+    "post_contact_transition_rate": 0.50,
+    "triggered_or_pending_entry_rate": 0.40
+  },
+  "development_gates": {
+    "minimum_trades": 40,
+    "minimum_trades_in_each_of_two_years": 8,
+    "minimum_trades_in_each_of_three_blocks": 8,
+    "profit_factor": 1.10,
+    "positive_expectancy": true,
+    "positive_cluster_bootstrap_lower_95": true,
+    "positive_1_5x_cost_expectancy": true,
+    "positive_blocks": 3,
+    "positive_years": 2,
+    "maximum_drawdown_account_fraction": 0.15,
+    "maximum_single_year_or_session_positive_pnl_share": 0.70,
+    "bootstrap_seed": 20260820,
+    "bootstrap_resamples": 20000,
+    "multiplicity": "HOLM_BY_SESSION"
+  },
+  "validation_blocks": [
+    ["2021-08-01", "2022-06-30"],
+    ["2022-07-01", "2023-03-31"],
+    ["2023-04-01", "2023-12-31"],
+    ["2024-01-01", "2024-12-31"]
+  ],
+  "candidate_limit": 2,
+  "live_order_permitted": false,
+  "paid_acquisition_permitted": false
+}
+

@@ -1,0 +1,56 @@
+{
+  "artifact_id": "GOLD_COHERENT_AUCTION_COMPLETE_CORRECTION_RULEBOOK_V1_DRAFT_STATE",
+  "status": "DRAFT_HASHED_FOR_REVIEW_NOT_FROZEN_FOR_CALCULATION",
+  "created_at_utc": "2026-08-20T00:00:00Z",
+  "rulebook": {
+    "path": "GOLD_COHERENT_AUCTION_COMPLETE_CORRECTION_RULEBOOK_V1_DRAFT.md",
+    "sha256": "5ae8456a42f62618e0b7f08b5a76064e1ea87c68b28ca7b62d51767553dd879e"
+  },
+  "registry": {
+    "path": "research_manifests/gold_coherent_auction_complete_correction_rulebook_v1_draft.json",
+    "sha256": "b297925ecd5b9cac1fe8f3d74b15c259f04dc5ce9ffef64c3094959a5f9a6f00"
+  },
+  "source_traceability": [
+    {
+      "path": "Gold_USD_Market_Intelligence_Reference_Book.pdf",
+      "sha256": "3e7ddc561932a859a4c9043a38ff71b7003907963fb52247e41edaeefc8ac42a"
+    },
+    {
+      "path": "GOLD_MATCHED_HUMAN_H4_STRUCTURE_REVIEW_V1.md",
+      "sha256": "2acec4c262844400321217c4e89451e60f73a936a1b333b87e36cb357b415767"
+    },
+    {
+      "path": "GOLD_MATCHED_HUMAN_COHERENT_AUCTION_IMPROVEMENT_DECOMPOSITION_V1.md",
+      "sha256": "ef1c1dea9dc9b2fba8493f45d3ade27051a080d729451a8b5330f434d85886cb"
+    },
+    {
+      "path": "GOLD_MATCHED_HUMAN_SAME_TIMEFRAME_JOINT_GEOMETRY_V1_REPORT.md",
+      "sha256": "547b72c8ea785d0eadf10e8d3562a45c91494010ab6d9e3ba4627e90fa1e41d0"
+    },
+    {
+      "path": "GOLD_COHERENT_AUCTION_EXPOSED_POLICY_REGRESSION_V1_REPORT.md",
+      "sha256": "1fefc2501ac7c53918073830076420dc14251fe641f0e554d41768ff51849649"
+    }
+  ],
+  "review_audit": {
+    "json_parse": "PASS",
+    "thesis_families": 3,
+    "trigger_geometries": 3,
+    "every_family_has_target": true,
+    "every_family_has_management": true,
+    "trigger_and_thesis_are_separate": true,
+    "case_alias_exceptions": 0,
+    "h4_percentile_standalone_gate": false,
+    "universal_m5_protection_reused": false,
+    "outcome_sources_opened": 0,
+    "performance_calculations_run": 0,
+    "fresh_cases_opened": 0
+  },
+  "next_permitted_action": "USER_REVIEW_AND_CONFIRM_OR_AMEND_DRAFT",
+  "prohibited_until_confirmation": [
+    "IMPLEMENT_POLICY_AGAINST_OUTCOME_PATHS",
+    "CALCULATE_MATCHED_CASE_PERFORMANCE",
+    "OPEN_FRESH_50_CASE_BLOCK",
+    "OPEN_CALENDAR_2025_OR_2026"
+  ]
+}

@@ -1,0 +1,49 @@
+name: gold-matched-replay-e2e
+
+services:
+  api:
+    container_name: gold-matched-replay-e2e-api
+    build:
+      context: ./backend
+      target: runtime
+    environment:
+      APP_ENV: test
+      API_CORS_ORIGINS: '["http://localhost:3011"]'
+      BLIND_REPLAY_V3_LEDGER_PATH: /app/research_artifacts/gold_annotated_replay_v3/ledgers/practice_event_ledger_v3.jsonl
+      MATCHED_HUMAN_REPLAY_ARTIFACT_PATH: /app/research_artifacts/gold_matched_human_replay_v1
+      MATCHED_HUMAN_REPLAY_VISIBLE_LEDGER_PATH: /tmp/gold-matched-replay-ui/visible_ledger.jsonl
+      MATCHED_HUMAN_REPLAY_OUTCOME_LEDGER_PATH: /tmp/gold-matched-replay-ui/outcome_ledger.jsonl
+      RAW_STORE_PATH: /tmp/gold-matched-replay-ui/raw
+    command: ["uvicorn", "gold_intel.main:app", "--host", "0.0.0.0", "--port", "8000", "--no-access-log"]
+    ports:
+      - "8011:8000"
+    volumes:
+      - ./research_artifacts/gold_annotated_replay_v3:/app/research_artifacts/gold_annotated_replay_v3:ro
+      - ./research_artifacts/gold_matched_human_replay_v1:/app/research_artifacts/gold_matched_human_replay_v1:ro
+      - ./research_artifacts/gold_blind_codex_operator_replay_v1:/app/research_artifacts/gold_blind_codex_operator_replay_v1:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/live', timeout=2)"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  web:
+    container_name: gold-matched-replay-e2e-web
+    build:
+      context: ./frontend
+      target: runtime
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8011/api/v1
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8011/api/v1
+      API_INTERNAL_URL: http://api:8000/api/v1
+    ports:
+      - "3011:3000"
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:3000/replay/matched"]
+      interval: 3s
+      timeout: 3s
+      retries: 30

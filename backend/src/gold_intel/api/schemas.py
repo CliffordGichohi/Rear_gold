@@ -461,6 +461,87 @@ class MarketLiquidityResponse(BaseModel):
     data_hash: str
 
 
+class AuctionSwingResponse(BaseModel):
+    identity: str = Field(pattern=r"^[0-9a-f]{64}$")
+    timeframe: str
+    base_kind: Literal["HIGH", "LOW"]
+    classification: str
+    pivot_at: datetime
+    detected_at: datetime
+    price_level: float
+    atr14: float
+    prominence_atr: float
+    confidence: float = Field(ge=0, le=100)
+    epistemic_status: Literal["CALCULATED"]
+    evidence: dict[str, Any]
+
+
+class AuctionShiftZoneResponse(BaseModel):
+    identity: str = Field(pattern=r"^[0-9a-f]{64}$")
+    timeframe: Literal["15m"]
+    direction: Literal["BULLISH", "BEARISH"]
+    origin_at: datetime
+    created_at: datetime
+    detected_at: datetime
+    lower_bound: float
+    upper_bound: float
+    midpoint: float
+    broken_swing_identity: str = Field(pattern=r"^[0-9a-f]{64}$")
+    broken_swing_level: float
+    creation_atr14: float
+    state: str
+    first_touch_at: datetime | None
+    retest_confirmed_at: datetime | None
+    invalidated_at: datetime | None
+    expires_at: datetime | None
+    epistemic_status: Literal["INFERRED"]
+    confidence: float = Field(ge=0, le=100)
+    detection_method: str
+    invalidation_condition: str
+    evidence: dict[str, Any]
+
+
+class AuctionPaperProposalResponse(BaseModel):
+    identity: str = Field(pattern=r"^[0-9a-f]{64}$")
+    zone_identity: str = Field(pattern=r"^[0-9a-f]{64}$")
+    family: Literal["RETEST_LIMIT_V0_1", "CONFIRMED_RETEST_V0_1"]
+    direction: Literal["BULLISH", "BEARISH"]
+    disposition: str
+    triggered_at: datetime | None
+    entry_reference: float | None
+    stop: float
+    target: float | None
+    target_swing_identity: str | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
+    planned_risk_usd: float | None = Field(default=None, ge=0, le=50)
+    quantity_ounces: int | None = Field(default=None, ge=1)
+    reward_to_risk: float | None = Field(default=None, ge=0)
+    macro_direction: Literal["BULLISH", "BEARISH", "NEUTRAL", "UNKNOWN"]
+    macro_relationship: str
+    liquidity_status: str
+    epistemic_status: Literal["INFERRED"]
+    explanation: str
+    evidence: dict[str, Any]
+
+
+class AuctionAutomationResponse(BaseModel):
+    as_of: datetime
+    ruleset_version: str
+    config: dict[str, float | int]
+    source_bar_count: int = Field(ge=0)
+    source_first_at: datetime | None
+    source_last_at: datetime | None
+    data_hash: str = Field(pattern=r"^[0-9a-f]{64}$")
+    macro_direction: Literal["BULLISH", "BEARISH", "NEUTRAL", "UNKNOWN"]
+    macro_bias_label: str
+    macro_available_at: datetime | None
+    liquidity_status: str
+    timeframe_trends: dict[str, str]
+    swings: list[AuctionSwingResponse]
+    zones: list[AuctionShiftZoneResponse]
+    proposals: list[AuctionPaperProposalResponse]
+    warnings: list[str]
+
+
 class MarketStructureSnapshotResponse(BaseModel):
     instrument: str
     provider_code: str
@@ -477,6 +558,7 @@ class MarketStructureSnapshotResponse(BaseModel):
     data_hash: str
     session: StructureSessionResponse
     liquidity: MarketLiquidityResponse
+    auction_automation: AuctionAutomationResponse
     timeframes: list[TimeframeStructureResponse]
     chart_bars: list[StructureChartBarResponse]
 

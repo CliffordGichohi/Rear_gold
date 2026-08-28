@@ -1,0 +1,17 @@
+{
+  "version": "GOLD_COHERENT_AUCTION_HUMAN_POLICY_V2_AMENDMENT_A_FREEZE_1_0",
+  "status": "FROZEN_BEFORE_ANY_V2_POST_FILL_PATH_SIMULATION",
+  "scope": "CONTROLLING_RANGE_TEXT_PARSER_ONLY",
+  "amendment_path": "GOLD_COHERENT_AUCTION_HUMAN_POLICY_V2_ENGINEERING_AMENDMENT_A.md",
+  "amendment_sha256": "b04db6d707f7eb87c9d87984a7c83cc8c264338e405ee58483286cc892a11da0",
+  "amended_implementation_sha256": "694b441ddf8174921a4e2e689d892018473f075fa638225a805e76d25b43412f",
+  "amended_synthetic_test_sha256": "29ddb898667a7b3f313d91c90f523d0f15ec5ec1737e0b1314277561f4d9233c",
+  "preserved_original_freeze_sha256": "4599500377b1fa7a4e014928e55972ecec6dfe66e63e0d3aa728b49503eecd70",
+  "preserved_first_prepath_result_sha256": "31cbf0fff54625aea18ff24a51576b82560716367a63c52d3bd3a1e5795f3c52",
+  "preserved_first_prepath_seal_sha256": "59c9691a11718efd453d69c4429e6e8d24b7b5149a9e6b146af2d64ca14eeda0",
+  "post_fill_paths_simulated_before_freeze": 0,
+  "all_policy_constants_unchanged": true,
+  "fresh_50_case_block": "LOCKED_UNOPENED",
+  "calendar_2025": "LOCKED_UNOPENED",
+  "calendar_2026": "LOCKED_UNOPENED"
+}

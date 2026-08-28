@@ -58,11 +58,42 @@ export function MarketStructureChart({ snapshot }: Props) {
     PAD.left +
     ((new Date(value).getTime() - firstTime) / Math.max(1, lastTime - firstTime)) *
       plotWidth;
+  const visibleZones = snapshot.auction_automation.zones
+    .filter((zone) => {
+      const start = new Date(zone.created_at).getTime();
+      const terminal = new Date(zone.invalidated_at ?? zone.expires_at ?? snapshot.as_of).getTime();
+      return (
+        start <= lastTime
+        && terminal >= firstTime
+        && zone.upper_bound >= priceLow
+        && zone.lower_bound <= priceHigh
+      );
+    })
+    .slice(-6);
+  const visibleSwings = snapshot.auction_automation.swings
+    .filter((swing) => {
+      const timestamp = new Date(swing.pivot_at).getTime();
+      return (
+        ["15m", "1h", "4h"].includes(swing.timeframe)
+        && timestamp >= firstTime
+        && timestamp <= lastTime
+        && swing.price_level >= priceLow
+        && swing.price_level <= priceHigh
+      );
+    })
+    .slice(-18);
+  const visibleProposals = snapshot.auction_automation.proposals
+    .filter((proposal) => {
+      if (!proposal.triggered_at || proposal.entry_reference === null) return false;
+      const timestamp = new Date(proposal.triggered_at).getTime();
+      return timestamp >= firstTime && timestamp <= lastTime;
+    })
+    .slice(-8);
 
   return (
     <div>
       <svg
-        aria-label="Five-minute XAUUSD candlestick chart with session ranges and structure levels"
+        aria-label="Five-minute XAUUSD candlestick chart with sessions, confirmed swings, and inferred auction-shift zones"
         className="h-auto w-full overflow-visible"
         role="img"
         viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
@@ -91,6 +122,40 @@ export function MarketStructureChart({ snapshot }: Props) {
               <rect fill={fill} height={plotHeight} width={end - start} x={start} y={PAD.top} />
               <text fill="rgb(145 165 157 / 70%)" fontSize="10" x={start + 5} y={PAD.top + 14}>
                 {range.name}
+              </text>
+            </g>
+          );
+        })}
+
+        {visibleZones.map((zone) => {
+          const start = Math.max(PAD.left, timeX(zone.created_at));
+          const endTime = zone.invalidated_at ?? zone.expires_at ?? snapshot.as_of;
+          const end = Math.min(PAD.left + plotWidth, timeX(endTime));
+          const bullish = zone.direction === "BULLISH";
+          const upper = Math.min(zone.upper_bound, priceHigh);
+          const lower = Math.max(zone.lower_bound, priceLow);
+          if (end <= start || upper <= lower) return null;
+          return (
+            <g data-zone-state={zone.state} key={zone.identity}>
+              <rect
+                fill={bullish ? "#089981" : "#F23645"}
+                fillOpacity={zone.state === "INVALIDATED" || zone.state === "EXPIRED" ? "0.035" : "0.11"}
+                height={Math.max(2, y(lower) - y(upper))}
+                stroke={bullish ? "#4FD1B5" : "#FF7A86"}
+                strokeDasharray={zone.state === "ACTIVE_UNTOUCHED" ? "5 3" : undefined}
+                strokeOpacity="0.75"
+                width={Math.max(1, end - start)}
+                x={start}
+                y={y(upper)}
+              />
+              <text
+                fill={bullish ? "#7BE0C7" : "#FF9AA4"}
+                fontSize="9"
+                fontWeight="700"
+                x={start + 4}
+                y={Math.max(PAD.top + 10, y(upper) - 3)}
+              >
+                {bullish ? "BULL" : "BEAR"} SHIFT · {zone.state.replaceAll("_", " ")}
               </text>
             </g>
           );
@@ -173,6 +238,44 @@ export function MarketStructureChart({ snapshot }: Props) {
           );
         })}
 
+        {visibleSwings.map((swing) => {
+          const markerX = timeX(swing.pivot_at);
+          const markerY = y(swing.price_level);
+          const high = swing.base_kind === "HIGH";
+          return (
+            <g data-swing-classification={swing.classification} key={swing.identity}>
+              <path
+                d={high
+                  ? `M ${markerX - 4} ${markerY - 7} L ${markerX + 4} ${markerY - 7} L ${markerX} ${markerY - 1} Z`
+                  : `M ${markerX - 4} ${markerY + 7} L ${markerX + 4} ${markerY + 7} L ${markerX} ${markerY + 1} Z`}
+                fill={high ? "#F6AD55" : "#63B3ED"}
+                stroke="#0B1220"
+                strokeWidth="0.6"
+              >
+                <title>{`${swing.timeframe} ${swing.classification} · confirmed ${compactTime(swing.detected_at)} UTC`}</title>
+              </path>
+            </g>
+          );
+        })}
+
+        {visibleProposals.map((proposal) => {
+          const markerX = timeX(proposal.triggered_at as string);
+          const markerY = y(proposal.entry_reference as number);
+          const color = proposal.disposition === "PAPER_READY" ? "#F7C948" : "#A0AEC0";
+          return (
+            <g data-proposal-disposition={proposal.disposition} key={proposal.identity}>
+              <path
+                d={`M ${markerX} ${markerY - 6} L ${markerX + 6} ${markerY} L ${markerX} ${markerY + 6} L ${markerX - 6} ${markerY} Z`}
+                fill={color}
+                stroke="#0B1220"
+                strokeWidth="0.8"
+              >
+                <title>{`${proposal.family} · ${proposal.disposition} · ${proposal.direction}`}</title>
+              </path>
+            </g>
+          );
+        })}
+
         {[0, Math.floor((bars.length - 1) / 2), bars.length - 1].map((index) => (
           <text
             fill="#91a59d"
@@ -190,7 +293,9 @@ export function MarketStructureChart({ snapshot }: Props) {
         <span><i className="mr-1 inline-block h-2 w-2 rounded-full bg-blue-300/70" />Asia</span>
         <span><i className="mr-1 inline-block h-2 w-2 rounded-full bg-[var(--gold)]/70" />London</span>
         <span><i className="mr-1 inline-block h-2 w-2 rounded-full bg-emerald-300/70" />New York</span>
-        <span>Dashed levels are deterministic 5-minute structure evidence.</span>
+        <span><i className="mr-1 inline-block h-2 w-4 border border-emerald-300/70 bg-emerald-300/10" />Bullish inferred shift zone</span>
+        <span><i className="mr-1 inline-block h-2 w-4 border border-red-300/70 bg-red-300/10" />Bearish inferred shift zone</span>
+        <span>Orange/blue triangles are confirmed swing highs/lows; diamonds are paper proposals.</span>
       </div>
     </div>
   );

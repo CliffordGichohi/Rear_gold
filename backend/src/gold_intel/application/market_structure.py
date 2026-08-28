@@ -8,6 +8,10 @@ from zoneinfo import ZoneInfo
 from sqlalchemy import Select, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from gold_intel.analytics.auction_automation import (
+    auction_automation_to_dict,
+    build_auction_automation_snapshot,
+)
 from gold_intel.analytics.liquidity import LiquidityBar, calculate_liquidity_snapshot
 from gold_intel.analytics.sessions import (
     SessionPause,
@@ -21,7 +25,7 @@ from gold_intel.analytics.structure import (
     build_market_structure_snapshot,
     market_structure_to_dict,
 )
-from gold_intel.infrastructure.models import PriceBar
+from gold_intel.infrastructure.models import FundamentalSnapshot, PriceBar
 
 StructureDataMode = Literal["AUTO", "REAL_ONLY", "SYNTHETIC_ONLY"]
 IC_MARKETS_MT5_CONFIG = StructureConfig(
@@ -156,6 +160,25 @@ async def calculate_market_structure(
         calculation_cutoff,
         provider_code=selected_provider,
     )
+    fundamental = await session.scalar(
+        select(FundamentalSnapshot)
+        .where(
+            FundamentalSnapshot.instrument_code == instrument,
+            FundamentalSnapshot.as_of <= calculation_cutoff,
+        )
+        .order_by(
+            FundamentalSnapshot.as_of.desc(),
+            FundamentalSnapshot.created_at.desc(),
+        )
+        .limit(1)
+    )
+    automation = build_auction_automation_snapshot(
+        minute_bars,
+        as_of=calculation_cutoff,
+        macro_bias_label=fundamental.bias_label if fundamental is not None else "UNKNOWN",
+        macro_available_at=fundamental.as_of if fundamental is not None else None,
+        liquidity_status=liquidity.status,
+    )
     response = market_structure_to_dict(snapshot)
     response.update(
         {
@@ -179,6 +202,7 @@ async def calculate_market_structure(
                 "ranges": [asdict(item) for item in ranges],
             },
             "liquidity": asdict(liquidity),
+            "auction_automation": auction_automation_to_dict(automation),
         }
     )
     return response

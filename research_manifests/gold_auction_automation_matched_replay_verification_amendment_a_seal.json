@@ -1,0 +1,30 @@
+{
+  "version": "GOLD_AUCTION_AUTOMATION_MATCHED_REPLAY_VERIFICATION_AMENDMENT_A_SEAL_1_0",
+  "first_attempt": {
+    "disposition": "FAIL_ENGINEERING_TIMEOUT_NO_RESULT",
+    "elapsed_minutes_before_manual_termination": 22,
+    "result_artifacts_written": 0,
+    "market_result_observed": false
+  },
+  "correction_scope": "CALCULATE_TWO_PROPOSALS_ONLY_FOR_THE_SAME_FINAL_24_PUBLIC_ZONES",
+  "public_output_algebra": {
+    "before": "paper_proposals(all_zones)[-48:]",
+    "after": "paper_proposals(all_zones[-24:])",
+    "proposals_per_zone": 2,
+    "expected_public_equivalence": true
+  },
+  "pre_correction_automation_sha256": "70166c63c908317d9ffd552253ac49a5b681dae6e442fb71f4650c3293ee399d",
+  "corrected_automation_sha256": "67e64430e28c95a0862ae96ea0164ed41b80b8770da4150bca72385904bfbde9",
+  "verification_script_sha256": "a9d0a8050a07175d905805a39c590e83d27f47dc3bbc475b1d94535964464322",
+  "protocol_sha256": "e71e6c74cc141ac8b4b9076d2fb1fda099c21f84d9f78bd464c8f5c17981a49b",
+  "amendment_sha256": "75ab7676d29bddf51d60a5bae20602215410b293bc211900a96b33f503ddcdc1",
+  "certification": {
+    "dedicated_auction_tests": "6_PASSED",
+    "complete_backend_unit_suite": "247_PASSED",
+    "ruff": "PASSED",
+    "public_record_definitions_changed": false,
+    "research_definitions_changed": false
+  },
+  "rerun_authorized": true,
+  "research_credit": "ZERO"
+}

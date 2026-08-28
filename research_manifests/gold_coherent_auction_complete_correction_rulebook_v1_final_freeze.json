@@ -1,0 +1,32 @@
+{
+  "artifact_id": "GOLD_COHERENT_AUCTION_COMPLETE_CORRECTION_RULEBOOK_V1_FINAL_FREEZE",
+  "status": "APPROVED_AND_FROZEN_BEFORE_IMPLEMENTATION_OR_OUTCOME_ACCESS",
+  "approved_at_utc": "2026-08-20T12:49:44.1260923Z",
+  "authorization": "USER_APPROVED_RULEBOOK_V1_UNCHANGED",
+  "approved_document": {
+    "path": "GOLD_COHERENT_AUCTION_COMPLETE_CORRECTION_RULEBOOK_V1_DRAFT.md",
+    "sha256": "5ae8456a42f62618e0b7f08b5a76064e1ea87c68b28ca7b62d51767553dd879e"
+  },
+  "approved_registry": {
+    "path": "research_manifests/gold_coherent_auction_complete_correction_rulebook_v1_draft.json",
+    "sha256": "b297925ecd5b9cac1fe8f3d74b15c259f04dc5ce9ffef64c3094959a5f9a6f00"
+  },
+  "approved_draft_state": {
+    "path": "research_manifests/gold_coherent_auction_complete_correction_rulebook_v1_draft_state.json"
+  },
+  "permitted_sequence": [
+    "IMPLEMENT_FROZEN_POLICY",
+    "SYNTHETIC_POINT_IN_TIME_PROOF",
+    "ONE_EXPOSED_MATCHED_CASE_REGRESSION",
+    "INDEPENDENT_REPRODUCTION",
+    "FINAL_REPORT_AND_SEAL"
+  ],
+  "locks": {
+    "fresh_50_case_block": "LOCKED",
+    "calendar_2025": "LOCKED",
+    "calendar_2026": "LOCKED",
+    "paid_acquisition": "PROHIBITED",
+    "case_specific_exceptions": "PROHIBITED",
+    "retuning_after_outcomes": "PROHIBITED"
+  }
+}

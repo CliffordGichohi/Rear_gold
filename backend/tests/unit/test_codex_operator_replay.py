@@ -19,7 +19,6 @@ from gold_intel.application.codex_operator_replay import (
 )
 from gold_intel.application.matched_human_replay import MatchedHumanReplayService
 
-
 TIMEFRAMES = ("1w", "1d", "4h", "1h", "15m", "5m", "1m")
 
 
@@ -145,9 +144,10 @@ def service(tmp_path: Path) -> CodexOperatorReplayService:
         items = []
         for directory in (primary, reference):
             path = directory / f"{alias}.json.gz"
-            with path.open("wb") as raw:
-                with gzip.GzipFile(filename="", mode="wb", fileobj=raw, mtime=0) as zipped:
-                    zipped.write(payload)
+            with path.open("wb") as raw, gzip.GzipFile(
+                filename="", mode="wb", fileobj=raw, mtime=0
+            ) as zipped:
+                zipped.write(payload)
             items.append({
                 "path": path.relative_to(root).as_posix(),
                 "bytes": path.stat().st_size,
@@ -366,6 +366,16 @@ def test_browser_snapshot_excludes_future_outcomes_and_private_lineage(service: 
     for forbidden in ("source_lineage", "POSITION_RESOLVED", "net_pnl_usd", "r50", "mfe_r50", "mae_r50"):
         assert forbidden not in serialized
     assert snapshot["display_policy"]["operator_input"] == "RENDERED_PIXELS_ONLY"
+    assert [item["session_code"] for item in snapshot["context"]["session_schedule"]] == [
+        "LONDON",
+        "NEW_YORK",
+    ]
+    assert snapshot["context"]["session_schedule"][1] == {
+        "session_code": "NEW_YORK",
+        "decision_at": "2022-01-03T00:02:00Z",
+        "observation_end": "2022-01-03T00:04:00Z",
+        "session_timezone": "UTC",
+    }
 
 
 def test_decision_is_evidence_bound_idempotent_and_outcome_hidden(service: CodexOperatorReplayService) -> None:

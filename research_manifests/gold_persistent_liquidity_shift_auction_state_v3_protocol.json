@@ -1,0 +1,62 @@
+{
+  "version": "GOLD_PERSISTENT_LIQUIDITY_SHIFT_AUCTION_STATE_V3_PROTOCOL_1_0",
+  "ruleset": "gold-persistent-liquidity-shift-auction-state-v3",
+  "inherits": {
+    "v2_rules_hash": "6e5b95ebd5bcbdf6de4609c45e9a2a36bdab1adf51850d0e9ec38110f2f1a734",
+    "maximum_stop_m15_atr_amendment_a": 6.5,
+    "zones_contacts_reactions_transitions": "UNCHANGED"
+  },
+  "state": {
+    "maximum_hours": 36,
+    "opposite_transition_range_atr": 0.9,
+    "opposite_transition_body_ratio": 0.55,
+    "opposite_transition_break_buffer_atr": 0.05,
+    "identical_timestamp_location_priority": ["4h", "1h", "15m"]
+  },
+  "m5_impulse": {
+    "range_atr": 0.8,
+    "body_ratio": 0.55,
+    "break_buffer_atr": 0.05,
+    "origin_lookback_bars": 4,
+    "one_break_per_pivot_per_state": true
+  },
+  "entries": {
+    "families": ["STATE_M5_HALF_RETRACE_LIMIT_V3", "STATE_M5_RETEST_CONFIRMATION_V3"],
+    "retracement_min": 0.382,
+    "retracement_max": 0.786,
+    "limit_retracement": 0.5,
+    "expiry_m5_bars": 12,
+    "confirmation_body_ratio": 0.55,
+    "confirmation_break_prior_m5_bars": 2,
+    "stop_buffer_m5_atr": 0.1,
+    "minimum_stop_m15_atr": 0.1,
+    "maximum_stop_m15_atr": 6.5,
+    "minimum_minutes_to_session_close": 30
+  },
+  "semantic": {
+    "human_trades": 16,
+    "minimum_matches": 7,
+    "minimum_rate": 0.4,
+    "attempts": 1,
+    "outcomes_prohibited": true
+  },
+  "development": {
+    "start": "2021-08-01T00:00:00Z",
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "exclude_matched_replay_dates": true,
+    "exclude_engineering_dates": true,
+    "sessions": ["LONDON", "NEW_YORK"],
+    "routes": ["MACRO_ALIGNED_CONTINUATION", "RANGE_EXTREME_ROTATION"],
+    "minimum_trades": 40,
+    "multiplicity": "HOLM_BY_SESSION",
+    "bootstrap_seed": 20260820,
+    "bootstrap_resamples": 20000,
+    "economic_gates": "INHERIT_V2_UNCHANGED"
+  },
+  "candidate_limit": 2,
+  "calendar_2025_opened": false,
+  "calendar_2026_opened": false,
+  "paid_acquisition_permitted": false,
+  "live_order_permitted": false
+}
+

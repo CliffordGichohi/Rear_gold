@@ -8,7 +8,6 @@ from gold_intel.application.blind_replay import ReplayIntegrityError
 from gold_intel.application.codex_operator_replay import CodexOperatorReplayService
 from gold_intel.config import get_settings
 
-
 MATCHED_PROTOCOL = "GOLD_MATCHED_HUMAN_CODEX_REPLAY_COMPARISON_V1_PROTOCOL_1_0"
 
 

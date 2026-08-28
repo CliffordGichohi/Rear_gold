@@ -37,6 +37,10 @@ research_artifacts/
 frontend/playwright-report*/
 frontend/test-results*/
 
+# Local inspection and extracted-reference scratch files
+.tmp_*
+tmp/
+
 # Editors and operating systems
 .idea/
 .vscode/

@@ -23,7 +23,6 @@ from gold_intel.application.matched_human_replay import (
     get_matched_human_replay_service,
 )
 
-
 router = APIRouter(
     prefix="/matched-human-replay-v1",
     tags=["matched human Codex replay comparison"],

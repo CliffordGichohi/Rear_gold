@@ -1,0 +1,15 @@
+{
+  "version": "GOLD_COHERENT_AUCTION_HUMAN_POLICY_V2_FRESH_BLOCK_SCOPE_CORRECTION_C_1_0",
+  "status": "AMENDMENT_B_SUPERSEDED_BEFORE_ANY_DECISION_OR_OUTCOME_EVALUATION",
+  "preserved_exposed_result_r": 10.681846581267534,
+  "fresh_decisions_submitted": 0,
+  "fresh_results_calculated": false,
+  "validation_decision_ledger_present": false,
+  "initial_predecision_view_potentially_rendered": "GAV-2022-001",
+  "future_path_released": false,
+  "aggregate_result_released": false,
+  "autonomous_setup_generator_frozen": false,
+  "reason": "FROZEN_V2_REQUIRES_OPERATOR_SEALED_DIRECTION_FILL_STOP_TARGET_AND_CONTEXT",
+  "calendar_2025": "LOCKED_UNOPENED",
+  "calendar_2026": "LOCKED_UNOPENED"
+}

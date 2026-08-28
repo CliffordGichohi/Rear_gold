@@ -1,0 +1,47 @@
+{
+  "calendar_2025_opened": false,
+  "calendar_2026_opened": false,
+  "development_outcomes_opened": false,
+  "files": {
+    "amendment": {
+      "bytes": 1666,
+      "path": "GOLD_PERSISTENT_LIQUIDITY_SHIFT_V3_SEMANTIC_ENGINEERING_CORRECTION_A.md",
+      "sha256": "67c54fa11ec7861c976f9654546f333150f531a496a99885c47628675e5f04a2"
+    },
+    "invalid_result": {
+      "bytes": 2201,
+      "path": "research_artifacts/gold_persistent_liquidity_shift_auction_state_v3/semantic_calibration.json",
+      "sha256": "c8ca5cf34f53688003d86c0fa4e600dcac4033b576a9fc042df5b18169db1f55"
+    },
+    "invalid_rows": {
+      "bytes": 5390,
+      "path": "research_artifacts/gold_persistent_liquidity_shift_auction_state_v3/semantic_rows.csv",
+      "sha256": "16e515a9b683b42906852c3db55cb819d879f1f6b5f1603d28719bbdf9e12306"
+    },
+    "invalid_seal": {
+      "bytes": 432,
+      "path": "research_artifacts/gold_persistent_liquidity_shift_auction_state_v3/semantic_seal.json",
+      "sha256": "d53253cee6f03777615a5e64f5edeb0702a8efbeafa7d68717cbb386ba7b75c8"
+    },
+    "manifest": {
+      "bytes": 781,
+      "path": "research_manifests/gold_persistent_liquidity_shift_v3_semantic_engineering_correction_a.json",
+      "sha256": "8c6b726742e9a15ccbc188347bb6b13219305dfe816c8575320d31e2453fbae5"
+    },
+    "v3_implementation": {
+      "bytes": 22736,
+      "path": "backend/src/gold_intel/analytics/liquidity_shift_v3.py",
+      "sha256": "c74a954d08ee1c93e074c559cf94f24f6edc94e761235d6de6b28ab8a250cf14"
+    },
+    "v3_preoutcome_freeze": {
+      "bytes": 3401,
+      "path": "research_manifests/gold_persistent_liquidity_shift_auction_state_v3_preoutcome_freeze.json",
+      "sha256": "7e3a52906c82750eb3b9847ed3439a71d0c4eb2f6e7fa522a57b7aba22a5dac5"
+    }
+  },
+  "market_outcomes_opened": false,
+  "sealed_at_utc": "2026-08-20T08:25:20.159021Z",
+  "single_change_only": true,
+  "status": "SEALED_BEFORE_CORRECTED_SEMANTIC_REPRODUCTION",
+  "version": "GOLD_PERSISTENT_LIQUIDITY_SHIFT_V3_SEMANTIC_ENGINEERING_CORRECTION_A_FREEZE_1_0"
+}

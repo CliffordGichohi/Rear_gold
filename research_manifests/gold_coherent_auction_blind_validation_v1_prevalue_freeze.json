@@ -1,0 +1,96 @@
+{
+  "calendar_2025_opened": false,
+  "calendar_2026_opened": false,
+  "case_count": 50,
+  "charge_usd": 0.0,
+  "outcomes_accessed": false,
+  "population_sha256": "36a60ccfccedda19a39a48e6c38326b5f0d54f8bd7380cfd1595aa27d8c791f3",
+  "sealed_at": "2026-08-20T11:12:25.942753+00:00",
+  "sealed_outputs": [
+    {
+      "bytes": 40542,
+      "path": "research_artifacts/gold_coherent_auction_blind_validation_v1/population_registry.private.json",
+      "sha256": "2faef0abde0bd677ec9712bb676c7114dcd39037d4d2da40b417d9ec4ff912ad"
+    },
+    {
+      "bytes": 10772,
+      "path": "research_artifacts/gold_coherent_auction_blind_validation_v1/population_registry.public.json",
+      "sha256": "5fc3630b26521877c24a9315c59e01bda979cf4f99a8347149d3a8095d161aa4"
+    },
+    {
+      "bytes": 44694,
+      "path": "research_artifacts/gold_coherent_auction_blind_validation_v1/metadata_coverage_audit.json",
+      "sha256": "78498217afc334c009c3fbd9ab58b4376717d77867de5194bfdb80a517951d88"
+    },
+    {
+      "bytes": 1596,
+      "path": "research_artifacts/gold_coherent_auction_blind_validation_v1/protocol.json",
+      "sha256": "42958e2147b7e37cc29352d68fa03a02501b3b7105e3681567d6d670ca429b94"
+    },
+    {
+      "bytes": 1278,
+      "path": "research_artifacts/gold_coherent_auction_blind_validation_v1/execution_policy.json",
+      "sha256": "989d1a9a40caf7cdabf712d092ff443929ea623a0d01450d568667c091497770"
+    },
+    {
+      "bytes": 680,
+      "path": "research_artifacts/gold_coherent_auction_blind_validation_v1/ledger_policy.json",
+      "sha256": "552c0573aad7fdb78f77c36f8d2f4bf6376ca8c2cfc2d91316e0b63951c15db8"
+    }
+  ],
+  "source_records": [
+    {
+      "bytes": 258834096,
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    {
+      "bytes": 41815377,
+      "path": "research_artifacts/gold_casebook_v01/structure_snapshots.jsonl.gz",
+      "sha256": "31eea2decc8ed3f8d3e498a9339e7f59ee101e7c787da47a831e63bfb97c1064"
+    },
+    {
+      "bytes": 6229504,
+      "path": "research_artifacts/gold_casebook_v01/cross_market_snapshots.jsonl.gz",
+      "sha256": "470a2e1c020cd2f97f2ad5b0d7f9c5220aff4f644689c4d680c24373964eb285"
+    },
+    {
+      "bytes": 92793,
+      "path": "research_artifacts/gold_casebook_v01/positioning.jsonl.gz",
+      "sha256": "e6d1aabf0d4401f3af4e54dc8ef4c0e4074772ec3f2199cfe9009b5a0b267228"
+    },
+    {
+      "bytes": 890158,
+      "path": "research_artifacts/gold_casebook_v01/events.jsonl.gz",
+      "sha256": "c7875e09d9ed831ece0f223b8be5efb75550af5bf1996a2dfea9d6119b24e35f"
+    },
+    {
+      "bytes": 8511617,
+      "path": "research_artifacts/gold_casebook_v01/fundamentals.jsonl.gz",
+      "sha256": "d2b776f60c4535978bbfb28706b4700e6d054a10f8d57cfee171c83b212b7235"
+    },
+    {
+      "bytes": 8571382,
+      "path": "research_artifacts/gold_casebook_v01/sessions.jsonl.gz",
+      "sha256": "2695a2c0b9e8f41fcbf64c9f388e8883ebf7e1f0b3b09b90fb3a60ba7e64966a"
+    },
+    {
+      "bytes": 8755,
+      "path": "GOLD_COHERENT_AUCTION_BLIND_VALIDATION_CONTRACT_V1.md",
+      "sha256": "11fe644574cc3d755205bc803899db3282fb1ea5ef42102aa90e57cf8bf60935"
+    },
+    {
+      "bytes": 200216,
+      "path": "research_artifacts/gold_blind_discretionary_replay_v1/population_registry_v1_1.private.json",
+      "sha256": "5e089cf9eaccf7703a182e0d715f7c8912dfb8b01865999f7a7a394e85621b1f"
+    },
+    {
+      "bytes": 17148,
+      "path": "research_artifacts/gold_matched_human_replay_v1/population_registry.private.json",
+      "sha256": "a1014e04dcb190a1b7762517384c002a7c5e9b324e99b704626d8a24da652ad3"
+    }
+  ],
+  "status": "SEALED_BEFORE_VALIDATION_VALUE_MATERIALIZATION",
+  "values_materialized": false,
+  "version": "GOLD_COHERENT_AUCTION_BLIND_VALIDATION_V1_PREVALUE_FREEZE_1_0"
+}
