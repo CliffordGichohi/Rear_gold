@@ -1,0 +1,89 @@
+{
+  "version": "GOLD_JANUARY_H1_CONTINUOUS_SWING_ATLAS_V1_BROWSER_CERT",
+  "verdict": "PASS_CONTINUOUS_H1_LIGHT_BROWSER_REGRESSION",
+  "html": "research_artifacts/gold_january_h1_continuous_swing_atlas_v1/gold-january-h1-continuous-swing-atlas-standalone.html",
+  "html_sha256": "bf1b8378a92fb73f9f622b0105f0d616b836bd4e75430ff772afbd17dfe72120",
+  "candles": 436,
+  "swings": 115,
+  "highs": 55,
+  "lows": 60,
+  "maximum_confirmation_segment_pixels_at_default_scale": 30.013761467890617,
+  "fixed_theme": {
+    "background": "rgb(255, 255, 255)",
+    "color": "rgb(23, 32, 51)",
+    "frameFill": "rgb(255, 255, 255)"
+  },
+  "controls_verified": [
+    "swing-select",
+    "previous",
+    "next",
+    "pan-right",
+    "zoom-in",
+    "relations-toggle",
+    "confirmation-toggle"
+  ],
+  "responsive": [
+    {
+      "viewport": {
+        "width": 1180,
+        "height": 920
+      },
+      "documentState": {
+        "width": 1180,
+        "scrollWidth": 1180
+      },
+      "state": {
+        "width": 1180,
+        "background": "rgb(255, 255, 255)",
+        "charts": 1,
+        "candles": 436,
+        "swings": 115
+      },
+      "screenshot": "research_artifacts/gold_january_h1_continuous_swing_atlas_v1/screenshots/h1-continuous-atlas-1180.png",
+      "screenshot_sha256": "9ce961f11f6fb661466030a68a62327b6f646ff5b65ec7d7a244a1d927a8f0f3"
+    },
+    {
+      "viewport": {
+        "width": 736,
+        "height": 900
+      },
+      "documentState": {
+        "width": 736,
+        "scrollWidth": 736
+      },
+      "state": {
+        "width": 736,
+        "background": "rgb(255, 255, 255)",
+        "charts": 1,
+        "candles": 436,
+        "swings": 115
+      },
+      "screenshot": "research_artifacts/gold_january_h1_continuous_swing_atlas_v1/screenshots/h1-continuous-atlas-736.png",
+      "screenshot_sha256": "60b0b5b6925dbdf80af11d6c44a6b8de584f43f862801b4ebb597df25614de6a"
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 860
+      },
+      "documentState": {
+        "width": 360,
+        "scrollWidth": 360
+      },
+      "state": {
+        "width": 360,
+        "background": "rgb(255, 255, 255)",
+        "charts": 1,
+        "candles": 436,
+        "swings": 115
+      },
+      "screenshot": "research_artifacts/gold_january_h1_continuous_swing_atlas_v1/screenshots/h1-continuous-atlas-360.png",
+      "screenshot_sha256": "b7c0a20bdbf120b3eac1b0dfce5f0fac2b914cae297698842f73b46fc5639041"
+    }
+  ],
+  "browser_errors": [],
+  "continuous_not_cases": true,
+  "outcomes_included": false,
+  "pnl_calculated": false,
+  "certification_sha256": "751e4f8e2910506e418756cb2bf789fd82dfd4fec96876b03e212200c5a7438c"
+}

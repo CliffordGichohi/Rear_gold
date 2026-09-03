@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "bytes": 4688,
+      "path": "GOLD_JANUARY_H1_PROBE_CONFIRM_RECLAIM_MILESTONE_V1.md",
+      "sha256": "ed4131ee4ddcf83c097ec2035ae076394bdec177e5c6680f859dac9196e8e167"
+    },
+    {
+      "bytes": 28729,
+      "path": "tools/run_gold_january_h1_probe_confirm_reclaim_v1.py",
+      "sha256": "c279957e33b82a92200fc255c328a0172ae2d8af8c722787fab85be524b10f14"
+    },
+    {
+      "bytes": 83524,
+      "path": "research_artifacts/gold_january_h1_swing_loss_attribution_v1/attribution_result.json",
+      "sha256": "1794c152a905bdec4b61776f56b35485bc4be3ba72731a31bac009e7aa34805c"
+    },
+    {
+      "bytes": 896,
+      "path": "research_artifacts/gold_january_h1_probe_confirm_reclaim_v1/synthetic_state_machine_proof.json",
+      "sha256": "e187d39b60d8dbe4907daa2a45f8e5e56fcd6ac3fdd2766d6d254c944b72ff21"
+    },
+    {
+      "bytes": 73477,
+      "path": "research_artifacts/gold_january_h1_probe_confirm_reclaim_v1/result.json",
+      "sha256": "744f26376f0a11a9188315ccab8ea38166005bee962241afda9cd4b2c53f195b"
+    },
+    {
+      "bytes": 26249,
+      "path": "research_artifacts/gold_january_h1_probe_confirm_reclaim_v1/case_ledger.csv",
+      "sha256": "6d93ca621beafe41671d3944fdbf96ca2df7a9ca07643bffb9cff6c7035872e7"
+    },
+    {
+      "bytes": 1074,
+      "path": "research_artifacts/gold_january_h1_probe_confirm_reclaim_v1/report.md",
+      "sha256": "480880397121cfb0cf3e1b0cc9b8dd995b5fb991295fcedff65286820e2e3f0b"
+    }
+  ],
+  "manifest_sha256": "870db86e78ac1b0772d437b87d8de444297cfa0aa0fc31d74453212d15ca77a8",
+  "primary_reference_exact": true,
+  "result_sha256": "999c9e58d4a09eb7f4ac8d59dccb8c816b7e6ff47fa6e91aacdc204af27ae016",
+  "verdict": "REJECT_EXPOSED_MATCHED_GROSS_IMPROVEMENT",
+  "version": "GOLD_JANUARY_H1_PROBE_CONFIRM_RECLAIM_MILESTONE_V1_MANIFEST"
+}

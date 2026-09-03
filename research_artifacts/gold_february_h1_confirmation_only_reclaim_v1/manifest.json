@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "bytes": 3193,
+      "path": "GOLD_FEBRUARY_2022_H1_CONFIRMATION_ONLY_RECLAIM_APPLICATION_V1.md",
+      "sha256": "410ff72770ad336ef80939c1e0da8e74568418a22d1aa820943ae1cbb0256346"
+    },
+    {
+      "bytes": 33545,
+      "path": "tools/run_gold_february_h1_confirmation_only_reclaim_v1.py",
+      "sha256": "a3060dd00348d07d06bb89ed161e3b7746ddd7676a42b82e43f6dd6b1ed9f651"
+    },
+    {
+      "bytes": 5372,
+      "path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6"
+    },
+    {
+      "bytes": 56682,
+      "path": "research_artifacts/gold_january_h1_confirmation_only_reclaim_v2/result.json",
+      "sha256": "8db61256f02aab4245815bb040907f5658686da2332714e2bf7e79f59eb4290d"
+    },
+    {
+      "bytes": 2191,
+      "path": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/source_coverage_and_january_equivalence.json",
+      "sha256": "8e76533d28adf872c59d3b0ffee251b1f49212840fab2a9ef842e94abdb57916"
+    },
+    {
+      "bytes": 57782,
+      "path": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/result.json",
+      "sha256": "cfdd144f9252f4fd0a6200ba8dd27620926dc123bdf4ef964cd48e8c9e875ed6"
+    },
+    {
+      "bytes": 22512,
+      "path": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/february_case_ledger.csv",
+      "sha256": "92b89fb1423b2390cc2fa5385cde0e7b5b31b4b696330739d203e1dbdb70a68d"
+    },
+    {
+      "bytes": 363638,
+      "path": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/february_chart_data.json",
+      "sha256": "3c638fb90d9c9e52384d0d71810862e3d40b0c3bf804872e7e611ae650db1212"
+    },
+    {
+      "bytes": 725,
+      "path": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/report.md",
+      "sha256": "e625171a66edb84f15962936958d9a6fd3021f1f34bf8c34f7096458e67c6754"
+    }
+  ],
+  "january_semantic_equivalence_exact": true,
+  "manifest_sha256": "95ca05253d042ba9b8c552132ec260b8e51f21e3e6442490164cd05fae2a0ccd",
+  "primary_reference_exact": true,
+  "result_sha256": "1dba12cfd7fac766c1f3c94f043146e2ea7239e02cc926a250b74075829915a8",
+  "verdict": "COMPLETED_UNCHANGED_FEBRUARY_APPLICATION",
+  "version": "GOLD_FEBRUARY_H1_CONFIRMATION_ONLY_RECLAIM_APPLICATION_V1_MANIFEST"
+}

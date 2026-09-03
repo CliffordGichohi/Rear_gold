@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "ambiguous_bar_is_stop_first": true,
+    "buffer_frozen": true,
+    "close_breach_long": true,
+    "close_breach_short": true,
+    "confirmation_available_at_boundary": true,
+    "confirmed_stop_accounting": true,
+    "earlier_confirmation_precedes_h1_breach": true,
+    "entry_uses_first_m1_at_boundary": true,
+    "long_control_strict": true,
+    "long_geometry": true,
+    "recovery_stop_accounting": true,
+    "risk_budget": true,
+    "short_control_strict": true,
+    "short_geometry": true,
+    "simultaneous_h1_breach_cancels_recovery": true,
+    "target_first_passage": true,
+    "target_multiple_long": true,
+    "target_multiple_short": true,
+    "wick_not_close_breach_long": true,
+    "wick_not_close_breach_short": true
+  },
+  "proof_sha256": "b274eb9f5eb6c3efe5b767feb4dd6b21568313668b5c0829b79d21cec3a7596b",
+  "verdict": "PASS_SYNTHETIC_STATE_MACHINE_PROOF"
+}

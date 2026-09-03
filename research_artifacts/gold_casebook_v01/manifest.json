@@ -1,0 +1,163 @@
+{
+  "artifacts": [
+    {
+      "bytes": 258834096,
+      "name": "price_bars.jsonl.gz",
+      "path": "price_bars.jsonl.gz",
+      "record_count": 1570471,
+      "record_type_counts": {
+        "PRICE_BAR": 1570471
+      },
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    {
+      "bytes": 41815377,
+      "name": "structure_snapshots.jsonl.gz",
+      "path": "structure_snapshots.jsonl.gz",
+      "record_count": 3270,
+      "record_type_counts": {
+        "STRUCTURE_SNAPSHOT": 3270
+      },
+      "sha256": "31eea2decc8ed3f8d3e498a9339e7f59ee101e7c787da47a831e63bfb97c1064"
+    },
+    {
+      "bytes": 6229504,
+      "name": "cross_market_snapshots.jsonl.gz",
+      "path": "cross_market_snapshots.jsonl.gz",
+      "record_count": 4353,
+      "record_type_counts": {
+        "CROSS_MARKET_SNAPSHOT": 4353
+      },
+      "sha256": "470a2e1c020cd2f97f2ad5b0d7f9c5220aff4f644689c4d680c24373964eb285"
+    },
+    {
+      "bytes": 92793,
+      "name": "positioning.jsonl.gz",
+      "path": "positioning.jsonl.gz",
+      "record_count": 260,
+      "record_type_counts": {
+        "POSITIONING_REPORT": 260
+      },
+      "sha256": "e6d1aabf0d4401f3af4e54dc8ef4c0e4074772ec3f2199cfe9009b5a0b267228"
+    },
+    {
+      "bytes": 890158,
+      "name": "events.jsonl.gz",
+      "path": "events.jsonl.gz",
+      "record_count": 412,
+      "record_type_counts": {
+        "EVENT_CASE": 412
+      },
+      "sha256": "c7875e09d9ed831ece0f223b8be5efb75550af5bf1996a2dfea9d6119b24e35f"
+    },
+    {
+      "bytes": 8511617,
+      "name": "fundamentals.jsonl.gz",
+      "path": "fundamentals.jsonl.gz",
+      "record_count": 26394,
+      "record_type_counts": {
+        "FUNDAMENTAL_OBSERVATION": 19707,
+        "FUNDAMENTAL_SNAPSHOT": 1659,
+        "POLICY_EXPECTATION_WINDOW": 5028
+      },
+      "sha256": "d2b776f60c4535978bbfb28706b4700e6d054a10f8d57cfee171c83b212b7235"
+    },
+    {
+      "bytes": 8571382,
+      "name": "sessions.jsonl.gz",
+      "path": "sessions.jsonl.gz",
+      "record_count": 1659,
+      "record_type_counts": {
+        "SESSION_CASE": 1659
+      },
+      "sha256": "2695a2c0b9e8f41fcbf64c9f388e8883ebf7e1f0b3b09b90fb3a60ba7e64966a"
+    }
+  ],
+  "casebook_version": "GOLD_CASEBOOK_V0_1",
+  "contract": {
+    "case_end_exclusive": "2025-01-01T00:00:00+00:00",
+    "case_start": "2021-08-01T00:00:00+00:00",
+    "directional_outcome_calculated": false,
+    "execution_optimized": false,
+    "governing_document": "GOLD_CASEBOOK_RESEARCH_CONTRACT.md",
+    "holdout_loaded": false,
+    "locked_holdout": "calendar year 2025",
+    "milestone": "2_IMMUTABLE_CASEBOOK",
+    "price_support_start": "2021-07-23T14:05:00+00:00",
+    "profitability_calculated": false
+  },
+  "integrity": {
+    "artifact_hashes_verified": 7,
+    "holdout_boundary_verified": true,
+    "record_hashes_verified": 1606819,
+    "schema_version_verified": true,
+    "unique_record_ids": 1606819
+  },
+  "known_limits": [
+    {
+      "code": "NO_VERIFIED_HISTORICAL_PRE_EVENT_CALENDAR",
+      "effect": "Historical event schedule and consensus are not used before the release boundary."
+    },
+    {
+      "code": "US500_INTRADAY_ENDS_2022_01_14",
+      "effect": "Later US500 snapshots are marked STALE, never neutral."
+    },
+    {
+      "code": "CME_CONTINUOUS_FUTURES_ROLLS",
+      "effect": "ZT/ZN/ZQ/SR3 changes crossing instrument_id rolls are UNKNOWN."
+    },
+    {
+      "code": "NO_INTRADAY_COMEX_GOLD_OPEN_INTEREST",
+      "effect": "Weekly CFTC open interest is retained; intraday OI is UNKNOWN."
+    },
+    {
+      "code": "NO_LICENSED_UNSCHEDULED_EVENT_HISTORY",
+      "effect": "Unscheduled-event context remains UNKNOWN."
+    }
+  ],
+  "manifest_hash": "d1241633b073cd7307f1da00a13a2d76c132f3dccefc52a076be2c641f06b85f",
+  "next_milestone": {
+    "code": "3_CONSTANT_EXECUTION_BASELINE",
+    "started": false
+  },
+  "record_counts": {
+    "cross_market_snapshots": 4353,
+    "event_cases": 412,
+    "fundamental_snapshots": 1659,
+    "london_cases": 833,
+    "new_york_cases": 826,
+    "positioning_reports": 260,
+    "session_cases": 1659,
+    "structure_snapshots": 3270
+  },
+  "rulesets": {
+    "fundamentals": "gold-reference-book-7-layer-v1-fundamentals",
+    "market_structure": "market-structure-1"
+  },
+  "schema": {
+    "path": "/workspace/research_schemas/gold_casebook_v01.schema.json",
+    "sha256": "47c139c2de8dedcdaf171d87316e45a76d2111b3073ff1db168f8667df2172e7"
+  },
+  "schema_version": "gold-casebook-schema-0.1.0",
+  "session_definition": {
+    "asia": "10:05-16:00 Asia/Tokyo",
+    "decision_clock": "session open",
+    "dst_policy": "IANA timezone database",
+    "london": "08:00-12:00 Europe/London",
+    "new_york": "08:00-12:00 America/New_York",
+    "observation_clock": "session close"
+  },
+  "source_manifests": {
+    "cme_normalization": {
+      "declared_rows": 3083147,
+      "locked_holdout": "2025 not loaded",
+      "path": "/workspace/data/raw/databento_cme_pre2025/GLBX-20260728-3SHU3737P8/normalized/normalization.json",
+      "sha256": "1e957829b3e96018c5499232da8c5d13a64df6db3dc4727accb867e6eb86dfcc"
+    },
+    "coverage": {
+      "declared_data_hash": "079f426fe6128a153e8714c814269617b96fa94c38cccacf85a06204c45dfbb6",
+      "path": "/workspace/research_artifacts/gold_casebook_coverage_v01.json",
+      "sha256": "267d8437aaa8c5e1aba316a6fa23307ce998eb78e1f3f7deb18bcebe0a4be7e1"
+    }
+  }
+}

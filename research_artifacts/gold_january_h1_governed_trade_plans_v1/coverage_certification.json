@@ -1,0 +1,84 @@
+{
+  "coverage_sha256": "f40cac47d17e874ea322d524bf83e7200dd6bcdcea8e977a2a073acada1e820b",
+  "merged_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+  "period": {
+    "endExclusive": "2022-02-01T00:00:00Z",
+    "start": "2022-01-01T00:00:00Z"
+  },
+  "plan_compiler_sha256": "afc15702d6c1dc9a23dc15124b02d46140a7a2434a166c6cdeaa9209a4aa967d",
+  "plans_sha256": "0bdb7fd08062f3356e924fd58c122c2f7c0a4d24376edfbdc8a9f9525862afa6",
+  "primary": {
+    "15m": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 11333,
+      "first_open_at": "2021-12-27T10:15:00Z",
+      "january_rows": 1877,
+      "last_open_at": "2022-02-16T23:30:00Z",
+      "merged_rows": 3356,
+      "rows_sha256": "e67ba94e7d7926c9fa305c94135ca4cb8f49df24e6f3c720c12d452cd1ec566f"
+    },
+    "1h": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 8640,
+      "first_open_at": "2021-12-10T08:00:00Z",
+      "january_rows": 436,
+      "last_open_at": "2022-02-16T22:00:00Z",
+      "merged_rows": 988,
+      "rows_sha256": "0a19db0e4f94a72598b4c3ad835e33b5d65182d750a7f9fb2cccc6997656e2e9"
+    },
+    "5m": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 16581,
+      "first_open_at": "2021-12-29T16:40:00Z",
+      "january_rows": 5721,
+      "last_open_at": "2022-02-16T23:50:00Z",
+      "merged_rows": 9608,
+      "rows_sha256": "e7fae468ab468a25488798249bd2d320d7bb1e6d2497d0df5abb77af1259871e"
+    }
+  },
+  "primary_lineage_sha256": "3454d9af47058797318e24208bfbedf8852c1f6b31dfeb7c88ebe73e22fd9ea2",
+  "reference": {
+    "15m": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 11333,
+      "first_open_at": "2021-12-27T10:15:00Z",
+      "january_rows": 1877,
+      "last_open_at": "2022-02-16T23:30:00Z",
+      "merged_rows": 3356,
+      "rows_sha256": "e67ba94e7d7926c9fa305c94135ca4cb8f49df24e6f3c720c12d452cd1ec566f"
+    },
+    "1h": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 8640,
+      "first_open_at": "2021-12-10T08:00:00Z",
+      "january_rows": 436,
+      "last_open_at": "2022-02-16T22:00:00Z",
+      "merged_rows": 988,
+      "rows_sha256": "0a19db0e4f94a72598b4c3ad835e33b5d65182d750a7f9fb2cccc6997656e2e9"
+    },
+    "5m": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 16581,
+      "first_open_at": "2021-12-29T16:40:00Z",
+      "january_rows": 5721,
+      "last_open_at": "2022-02-16T23:50:00Z",
+      "merged_rows": 9608,
+      "rows_sha256": "e7fae468ab468a25488798249bd2d320d7bb1e6d2497d0df5abb77af1259871e"
+    }
+  },
+  "reference_lineage_sha256": "49281360c60f452370b262d755ff2ee39ec6850a8b4da8b0580d89a31ce2b20b",
+  "renderer_sha256": "6011a8a1b283c16c686dee58a3dc5df1adc19fb96de0e3d45f7e76595b7eccec",
+  "scanner_sha256": "d5939189a06e8d238c19d3c87714ade5cf96aa9b33727bb816cb6f93d0721917",
+  "summary": {
+    "first_decision_at": "2022-01-03T10:50:00Z",
+    "last_decision_at": "2022-01-31T22:40:00Z",
+    "long": 3,
+    "plans": 12,
+    "range": 1,
+    "short": 9,
+    "trend": 11
+  },
+  "template_sha256": "766faac5074f492145da8677fc67ff8d39ecde7d69b46e5e13c0b2ab55611d13",
+  "verdict": "PASS_PRIMARY_REFERENCE_SOURCE_AND_PLAN_REPRODUCTION",
+  "version": "GOLD_JANUARY_H1_GOVERNED_TRADE_PLAN_COVERAGE_V1"
+}

@@ -1,0 +1,101 @@
+<div id="gold-january-h1-continuous-swing-atlas-v1">
+  <header class="h1-header">
+    <div>
+      <h2>January 2022 XAUUSD — continuous H1 swing atlas</h2>
+      <p><span id="h1-candle-count"></span> consecutive trading candles · <span id="h1-swing-count"></span> objective swings · one continuous tape</p>
+    </div>
+    <span class="h1-light-label">FIXED LIGHT CHART</span>
+  </header>
+
+  <div class="h1-controls" aria-label="Continuous H1 chart controls">
+    <button type="button" id="h1-pan-left">Pan left</button>
+    <button type="button" id="h1-pan-right">Pan right</button>
+    <button type="button" id="h1-zoom-out">Zoom −</button>
+    <button type="button" id="h1-zoom-in">Zoom +</button>
+    <button type="button" id="h1-fit">Fit month</button>
+    <button type="button" id="h1-prev">Previous swing</button>
+    <button type="button" id="h1-next">Next swing</button>
+    <label for="h1-swing-select">Swing
+      <select id="h1-swing-select" aria-label="Select objective H1 swing"></select>
+    </label>
+    <label class="h1-check"><input id="h1-show-relations" type="checkbox" checked> HH/HL/LH/LL labels</label>
+    <label class="h1-check"><input id="h1-show-confirmation" type="checkbox" checked> confirmation lag</label>
+  </div>
+
+  <section class="h1-selection" aria-live="polite">
+    <strong id="h1-selected-title"></strong>
+    <span id="h1-selected-detail"></span>
+  </section>
+
+  <div class="h1-legend" aria-label="Swing atlas legend">
+    <span><i class="h1-mark h1-high"></i>HIGH swing / resistance pivot</span>
+    <span><i class="h1-mark h1-low"></i>LOW swing / support pivot</span>
+    <span><i class="h1-mark h1-confirm"></i>short pivot-to-confirmation segment</span>
+  </div>
+
+  <div class="h1-scroll" id="h1-scroll"><div id="h1-chart"></div></div>
+  <div class="h1-caption" id="h1-caption"></div>
+  <script type="application/json" id="h1-data">__H1_CONTINUOUS_SWING_DATA__</script>
+</div>
+
+<style>
+  #gold-january-h1-continuous-swing-atlas-v1{--h1-bg:#ffffff;--h1-text:#172033;--h1-muted:#5f6b7a;--h1-grid:#e5e9ef;--h1-border:#cfd6df;--h1-up:#089981;--h1-down:#f23645;--h1-confirm:#2962ff;box-sizing:border-box;width:100%;overflow:hidden;padding:.8rem;color:var(--h1-text);background:var(--h1-bg);font-family:Inter,"Segoe UI",system-ui,sans-serif}
+  #gold-january-h1-continuous-swing-atlas-v1 *{box-sizing:border-box}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:.7rem}
+  #gold-january-h1-continuous-swing-atlas-v1 h2{margin:0 0 .2rem;font-size:1.35rem;font-weight:500}
+  #gold-january-h1-continuous-swing-atlas-v1 p{margin:0;color:var(--h1-muted)}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-light-label{padding:.3rem .55rem;border:1px solid var(--h1-border);border-radius:999px;color:var(--h1-text);background:var(--h1-bg);white-space:nowrap}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-controls{display:flex;align-items:end;flex-wrap:wrap;gap:.4rem;padding:.55rem 0;border-top:1px solid var(--h1-border);border-bottom:1px solid var(--h1-border)}
+  #gold-january-h1-continuous-swing-atlas-v1 button,#gold-january-h1-continuous-swing-atlas-v1 select{min-height:2.15rem;border:1px solid var(--h1-border);border-radius:.42rem;color:var(--h1-text);background:var(--h1-bg);font:inherit}
+  #gold-january-h1-continuous-swing-atlas-v1 button{padding:.35rem .6rem;cursor:pointer}
+  #gold-january-h1-continuous-swing-atlas-v1 button:disabled{opacity:.4;cursor:default}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-controls>label{display:flex;align-items:center;gap:.3rem;color:var(--h1-text)}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-controls>label:not(.h1-check){flex:1 1 24rem}
+  #gold-january-h1-continuous-swing-atlas-v1 select{width:100%;padding:.3rem .45rem}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-selection{display:flex;justify-content:space-between;gap:.7rem;align-items:baseline;flex-wrap:wrap;padding:.55rem 0}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-selection span{color:var(--h1-muted);font-variant-numeric:tabular-nums}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-legend{display:flex;flex-wrap:wrap;gap:.4rem .85rem;margin-bottom:.45rem;color:var(--h1-muted)}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-legend span{display:inline-flex;align-items:center;gap:.28rem}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-mark{display:inline-block;width:1rem;height:.24rem}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-high{background:var(--h1-down)}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-low{background:var(--h1-up)}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-confirm{background:repeating-linear-gradient(90deg,var(--h1-confirm) 0 3px,transparent 3px 5px)}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-scroll{max-width:100%;overflow-x:auto;overflow-y:hidden;border:1px solid var(--h1-border);background:var(--h1-bg);touch-action:none}
+  #gold-january-h1-continuous-swing-atlas-v1 svg{display:block;max-width:none;height:auto;background:var(--h1-bg)}
+  #gold-january-h1-continuous-swing-atlas-v1 .h1-caption{padding-top:.4rem;color:var(--h1-muted);font-variant-numeric:tabular-nums}
+  @media(max-width:680px){#gold-january-h1-continuous-swing-atlas-v1{padding:.45rem}#gold-january-h1-continuous-swing-atlas-v1 .h1-header{flex-direction:column}#gold-january-h1-continuous-swing-atlas-v1 .h1-controls>label:not(.h1-check){flex-basis:100%}#gold-january-h1-continuous-swing-atlas-v1 .h1-selection{flex-direction:column;gap:.15rem}}
+</style>
+
+<script>
+(()=>{
+  const root=document.getElementById('gold-january-h1-continuous-swing-atlas-v1');
+  const data=JSON.parse(root.querySelector('#h1-data').textContent),bars=data.bars,swings=data.swings,ns='http://www.w3.org/2000/svg';
+  const scroll=root.querySelector('#h1-scroll'),host=root.querySelector('#h1-chart'),select=root.querySelector('#h1-swing-select');
+  let selected=0,zoom=1,showRelations=true,showConfirmation=true,layout=null,resizeTimer=null;
+  const price=value=>Number(value).toFixed(2);
+  const utc=value=>new Intl.DateTimeFormat('en-GB',{timeZone:'UTC',month:'short',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date(value*1000)).replace(',','');
+  const node=(name,attrs={},text=null)=>{const element=document.createElementNS(ns,name);Object.entries(attrs).forEach(([key,value])=>element.setAttribute(key,String(value)));if(text!==null)element.textContent=text;return element};
+  const add=(parent,name,attrs={},text=null)=>{const element=node(name,attrs,text);parent.appendChild(element);return element};
+  const nearest=(time)=>{let low=0,high=bars.length-1;while(low<high){const middle=Math.floor((low+high)/2);if(bars[middle][0]<time)low=middle+1;else high=middle}return low>0&&Math.abs(bars[low-1][0]-time)<=Math.abs(bars[low][0]-time)?low-1:low};
+  const color=kind=>kind==='HIGH'?'var(--h1-down)':'var(--h1-up)';
+  function triangle(parent,x,y,kind,size,active=false){const points=kind==='HIGH'?`${x},${y+size} ${x-size},${y-size} ${x+size},${y-size}`:`${x},${y-size} ${x-size},${y+size} ${x+size},${y+size}`;return add(parent,'polygon',{points,fill:color(kind),stroke:active?'var(--h1-text)':'var(--h1-bg)','stroke-width':active?2:1})}
+  function centerSelected(){if(!layout)return;const point=layout.x(nearest(swings[selected].pivotTime));scroll.scrollLeft=Math.max(0,point-scroll.clientWidth*.42)}
+  function updateSelection(){const swing=swings[selected];select.value=String(selected);root.querySelector('#h1-prev').disabled=selected===0;root.querySelector('#h1-next').disabled=selected===swings.length-1;root.querySelector('#h1-selected-title').textContent=`#${swing.number} ${swing.kind} ${swing.relation} at ${price(swing.level)}`;root.querySelector('#h1-selected-detail').textContent=`pivot ${utc(swing.pivotTime)} UTC · confirmed ${utc(swing.knownTime)} UTC · ${swing.delayMinutes.toFixed(0)} min later · prominence ${swing.prominenceAtr.toFixed(2)} ATR`;}
+  function choose(index,focus=true){selected=Math.max(0,Math.min(swings.length-1,index));updateSelection();render(false);if(focus)requestAnimationFrame(centerSelected)}
+  function render(preserve=true){
+    const oldCenter=scroll.scrollLeft+scroll.clientWidth/2,oldWidth=scroll.scrollWidth||1,viewport=Math.max(320,scroll.clientWidth||960),width=Math.max(viewport,bars.length*10*zoom+112),height=viewport<500?510:650,margin={left:66,right:44,top:38,bottom:48},plotWidth=width-margin.left-margin.right,plotHeight=height-margin.top-margin.bottom,values=bars.flatMap(row=>[row[3],row[4]]),rawLow=Math.min(...values),rawHigh=Math.max(...values),padding=Math.max((rawHigh-rawLow)*.045,.2),low=rawLow-padding,high=rawHigh+padding,step=plotWidth/bars.length,x=index=>margin.left+(index+.5)*step,y=value=>margin.top+((high-value)/(high-low))*plotHeight,body=Math.max(1.6,Math.min(8,step*.62));
+    layout={x,width};host.replaceChildren();const svg=node('svg',{id:'h1-continuous-svg',width,height,role:'img','aria-label':'Continuous January 2022 XAUUSD H1 candlestick chart with all objective H1 swing highs and lows'});host.appendChild(svg);add(svg,'rect',{'data-chart-frame':'true',x:margin.left,y:margin.top,width:plotWidth,height:plotHeight,fill:'var(--h1-bg)',stroke:'var(--h1-border)'});
+    add(svg,'text',{'data-axis':'y',class:'axis-title',x:14,y:margin.top-12,fill:'var(--h1-text)','font-size':12},'XAUUSD price (USD/oz)');add(svg,'text',{'data-axis':'x',class:'axis-title',x:margin.left+plotWidth/2,y:height-8,fill:'var(--h1-text)','font-size':12,'text-anchor':'middle'},'January 2022 H1 trading bars (UTC)');
+    for(let tick=0;tick<=6;tick+=1){const value=high-(high-low)*tick/6,py=y(value);add(svg,'line',{x1:margin.left,x2:width-margin.right,y1:py,y2:py,stroke:'var(--h1-grid)','stroke-width':1});add(svg,'text',{x:margin.left-8,y:py+4,fill:'var(--h1-muted)','font-size':12,'text-anchor':'end'},price(value))}
+    bars.forEach((row,index)=>{const center=x(index),candleColor=row[5]>=row[2]?'var(--h1-up)':'var(--h1-down)';add(svg,'line',{x1:center,x2:center,y1:y(row[3]),y2:y(row[4]),stroke:candleColor,'stroke-width':Math.max(1,Math.min(1.4,step*.16))});add(svg,'rect',{'data-h1-candle':index,x:center-body/2,y:Math.min(y(row[2]),y(row[5])),width:body,height:Math.max(1,Math.abs(y(row[2])-y(row[5]))),fill:candleColor})});
+    bars.forEach((row,index)=>{if(index===0)return;const date=new Date(row[0]*1000).toISOString().slice(0,10),prior=new Date(bars[index-1][0]*1000).toISOString().slice(0,10);if(date!==prior){const px=x(index);add(svg,'line',{x1:px,x2:px,y1:margin.top,y2:height-margin.bottom,stroke:'var(--h1-border)','stroke-dasharray':'3 5'});add(svg,'text',{x:px+4,y:height-27,fill:'var(--h1-muted)','font-size':12},date.slice(5))}});
+    swings.forEach((swing,index)=>{const pivotIndex=nearest(swing.pivotTime),knownIndex=nearest(swing.knownTime),px=x(pivotIndex),kx=Math.max(px,Math.min(x(knownIndex),width-margin.right)),py=y(swing.level),active=index===selected;if(showConfirmation){add(svg,'line',{'data-confirmation-segment':index,x1:px,x2:kx,y1:py,y2:py,stroke:'var(--h1-confirm)','stroke-width':active?2:1.2,'stroke-dasharray':'3 3',opacity:.72});add(svg,'rect',{'data-confirmation-marker':index,x:kx-2.5,y:py-2.5,width:5,height:5,fill:'var(--h1-bg)',stroke:'var(--h1-confirm)','stroke-width':1})}const marker=triangle(svg,px,py,swing.kind,active?8:5,active);marker.setAttribute('data-swing-marker',String(index));marker.setAttribute('data-kind',swing.kind);if(showRelations)add(svg,'text',{'data-relation-label':index,x:px,y:swing.kind==='HIGH'?py-10:py+17,fill:color(swing.kind),'font-size':12,'text-anchor':'middle','font-weight':500},swing.relation);const hit=add(svg,'circle',{'data-swing-hit':index,cx:px,cy:py,r:16,fill:'transparent','aria-label':`Swing ${swing.number} ${swing.kind} ${swing.relation} ${price(swing.level)}`});hit.style.cursor='pointer';hit.addEventListener('click',()=>choose(index,true));if(active){add(svg,'line',{'data-selected-guide':'true',x1:px,x2:px,y1:margin.top,y2:height-margin.bottom,stroke:'var(--h1-text)','stroke-width':1,'stroke-dasharray':'2 5',opacity:.55})}});
+    root.querySelector('#h1-caption').textContent=`${bars.length} continuous H1 candles · ${swings.length} objective swings (${data.summary.highs} highs / ${data.summary.lows} lows) · triangle = pivot · blue bounded segment ends at point-in-time confirmation · zoom ${zoom.toFixed(2)}x`;
+    if(preserve){const ratio=oldCenter/oldWidth;requestAnimationFrame(()=>{scroll.scrollLeft=Math.max(0,ratio*scroll.scrollWidth-scroll.clientWidth/2)})}
+  }
+  root.querySelector('#h1-candle-count').textContent=data.summary.candles;root.querySelector('#h1-swing-count').textContent=data.summary.swings;
+  swings.forEach((swing,index)=>{const option=document.createElement('option');option.value=String(index);option.textContent=`${String(swing.number).padStart(3,'0')} | ${utc(swing.pivotTime)} | ${swing.kind} ${swing.relation} | ${price(swing.level)}`;select.appendChild(option)});
+  select.addEventListener('change',()=>choose(Number(select.value),true));root.querySelector('#h1-prev').addEventListener('click',()=>choose(selected-1,true));root.querySelector('#h1-next').addEventListener('click',()=>choose(selected+1,true));root.querySelector('#h1-pan-left').addEventListener('click',()=>scroll.scrollBy({left:-Math.max(320,scroll.clientWidth*.75),behavior:'smooth'}));root.querySelector('#h1-pan-right').addEventListener('click',()=>scroll.scrollBy({left:Math.max(320,scroll.clientWidth*.75),behavior:'smooth'}));root.querySelector('#h1-zoom-out').addEventListener('click',()=>{zoom=Math.max(.3,zoom/1.35);render(true)});root.querySelector('#h1-zoom-in').addEventListener('click',()=>{zoom=Math.min(4,zoom*1.35);render(true)});root.querySelector('#h1-fit').addEventListener('click',()=>{zoom=Math.max(.3,(scroll.clientWidth-112)/(bars.length*10));render(false);scroll.scrollLeft=0});root.querySelector('#h1-show-relations').addEventListener('change',event=>{showRelations=event.target.checked;render(false);requestAnimationFrame(centerSelected)});root.querySelector('#h1-show-confirmation').addEventListener('change',event=>{showConfirmation=event.target.checked;render(false);requestAnimationFrame(centerSelected)});scroll.addEventListener('wheel',event=>event.preventDefault(),{passive:false});window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>render(true),120)});
+  updateSelection();render(false);requestAnimationFrame(centerSelected);
+})();
+</script>

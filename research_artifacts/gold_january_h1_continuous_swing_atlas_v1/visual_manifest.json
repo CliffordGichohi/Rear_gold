@@ -1,0 +1,52 @@
+{
+  "data_sha256": "8d8dc2ac60e3e3928169706837988442403d32d575d35b2339a78e496fd156a5",
+  "definition": {
+    "atrWindow": 14,
+    "pivotLeft": 2,
+    "pivotRight": 2,
+    "prominenceAtr": 0.25,
+    "tickFloor": 0.02,
+    "timeframe": "H1"
+  },
+  "files": [
+    {
+      "bytes": 2146,
+      "path": "GOLD_JANUARY_H1_CONTINUOUS_SWING_ATLAS_V1.md",
+      "sha256": "bedcee27193bab2ce331a7c886f061828e7904f32c4e34ddc185082fbce08e7c"
+    },
+    {
+      "bytes": 27770,
+      "path": "research_artifacts/gold_matched_human_replay_v1/stream_materialization_certification.json",
+      "sha256": "0124f64bae5a2fceff10e63b43b08381e4fec702d3b2a09c6d97c8772617dcef"
+    },
+    {
+      "bytes": 14495,
+      "path": "research_artifacts/gold_january_h1_continuous_swing_atlas_v1/h1-continuous-swing-atlas.template.html",
+      "sha256": "64161ab1367265b94f550fabc7342a88a49a450bcce697ac8858b9ace688d2de"
+    },
+    {
+      "bytes": 66813,
+      "path": "research_artifacts/gold_january_h1_continuous_swing_atlas_v1/gold-january-h1-continuous-swing-atlas.html",
+      "sha256": "f569ed5f362bf980222667b9bd30622d903049ca2ffc0909598c9d21d38d9155"
+    }
+  ],
+  "fragment_bytes": 66813,
+  "guards": {
+    "continuousNotCases": true,
+    "fixedLightTheme": true,
+    "laterYearsOpened": false,
+    "outcomesIncluded": false,
+    "pivotAndConfirmationSeparated": true,
+    "pnlCalculated": false
+  },
+  "manifest_sha256": "002166cafbdf3918a0534f0b3101251fce1603390f6e41e756e055a7ca06f41c",
+  "primary_reference_exact": true,
+  "summary": {
+    "candles": 436,
+    "highs": 55,
+    "lows": 60,
+    "swings": 115
+  },
+  "verdict": "PASS_CONTINUOUS_H1_SWING_PAYLOAD_REPRODUCTION",
+  "version": "GOLD_JANUARY_H1_CONTINUOUS_SWING_ATLAS_V1_MANIFEST"
+}

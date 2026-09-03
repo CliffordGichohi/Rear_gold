@@ -1,0 +1,61 @@
+{
+  "bindings": {
+    "casebook_manifest_sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6",
+    "casebook_sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+    "january_v2_result_sha256": "8db61256f02aab4245815bb040907f5658686da2332714e2bf7e79f59eb4290d",
+    "january_v2_spec_sha256": "9dda05be2886a08d8a120ce8c3872104d27ecdac29ba950a30f64cd6b97f129d"
+  },
+  "coverage_sha256": "c1704b73a870acc6255e41096e108447e5b624af49cda6537c59d5dd1cdbb0df",
+  "january_v2_equivalence": {
+    "exact": true,
+    "fields": [
+      "route",
+      "executed",
+      "entry_at",
+      "filled_stop",
+      "outcome",
+      "resolution_at",
+      "net_r"
+    ],
+    "mismatches": 0,
+    "population": 88
+  },
+  "primary_reference_exact": true,
+  "source_diagnostics": {
+    "15m": {
+      "first_open_at": "2022-02-01T01:15:00Z",
+      "last_available_at": "2022-02-28T23:45:00Z",
+      "rows": 1790,
+      "rows_sha256": "430a218a4577e8331a11cb43dce69f2e2f328bdaf2768b6ca85eb746c1fabd5f"
+    },
+    "1h": {
+      "first_open_at": "2021-07-23T15:00:00Z",
+      "last_available_at": "2022-03-02T23:00:00Z",
+      "rows": 3259,
+      "rows_sha256": "4125b80c12e21d4a1f3893a4aadab9d88500c1420a7c238cf3b6b5ca4c1c05c5"
+    },
+    "1m": {
+      "first_open_at": "2022-01-03T01:02:00Z",
+      "last_available_at": "2022-02-28T23:59:00Z",
+      "rows": 56139,
+      "rows_sha256": "83433d8776bc2d472795f053835fd90bc15cb286809773923bebe7fff6572a37"
+    },
+    "5m": {
+      "first_open_at": "2021-07-23T14:05:00Z",
+      "last_available_at": "2022-03-02T23:55:00Z",
+      "rows": 42788,
+      "rows_sha256": "9854e5e4cdbd30da3d01849ec99e025cd1875d4c82f9cbb123a59b5e7e45dfbc"
+    },
+    "february_m1": {
+      "closed_intervals_imputed": false,
+      "daily_reopen_utc": "01:02",
+      "first_open_at": "2022-02-01T01:02:00Z",
+      "last_available_at": "2022-02-28T23:59:00Z",
+      "rows": 27383,
+      "rows_sha256": "d7927b1104d117282327bd2574e5565a74a2d85562791f441cf26a8cfe97cec4",
+      "trading_dates": 20
+    }
+  },
+  "verdict": "PASS_CASEBOOK_READER_AND_JANUARY_V2_EQUIVALENCE",
+  "version": "GOLD_FEBRUARY_H1_CONFIRMATION_ONLY_SOURCE_CERTIFICATION_V1"
+}

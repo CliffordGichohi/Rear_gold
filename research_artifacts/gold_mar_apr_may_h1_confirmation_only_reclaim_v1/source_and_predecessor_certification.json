@@ -1,0 +1,90 @@
+{
+  "bindings": {
+    "casebook_manifest_sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6",
+    "casebook_sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+    "february_manifest_sha256": "5cc35acbd1a46b5696694fd2284b410888181f7efb65108655523c2379d9f4b5",
+    "february_result_sha256": "cfdd144f9252f4fd0a6200ba8dd27620926dc123bdf4ef964cd48e8c9e875ed6",
+    "january_manifest_sha256": "f2fa947b2380ed9aeeebd3529f686a2ae5ade2f305b5e04223da70fe9e898330",
+    "january_result_sha256": "8db61256f02aab4245815bb040907f5658686da2332714e2bf7e79f59eb4290d"
+  },
+  "certification_sha256": "ff189706c2aff75937f4eb68a052a0ba85053e0f46b814ddcb2cd2d5839d39f3",
+  "predecessor_equivalence": {
+    "february": {
+      "exact": true,
+      "label": "FEBRUARY_APPLICATION",
+      "ledger_rows": 88,
+      "mismatches": 0,
+      "population": 88
+    },
+    "january": {
+      "exact": true,
+      "label": "JANUARY_V2",
+      "ledger_rows": 88,
+      "mismatches": 0,
+      "population": 88
+    }
+  },
+  "primary_reference_exact": true,
+  "source_diagnostics": {
+    "months": {
+      "april_2022": {
+        "closed_intervals_imputed": false,
+        "expected_dates": 20,
+        "first_open_at": "2022-04-01T01:02:00Z",
+        "last_open_at": "2022-04-29T23:56:00Z",
+        "m1_rows": 27532,
+        "minimum_daily_rows": 1375,
+        "rows_sha256": "fe044fa16147e1b5d343cdddd05c32a91ee086de2b19b0f12deac48fa7c18a06",
+        "trading_dates": 20
+      },
+      "march_2022": {
+        "closed_intervals_imputed": false,
+        "expected_dates": 23,
+        "first_open_at": "2022-03-01T01:02:00Z",
+        "last_open_at": "2022-03-31T23:58:00Z",
+        "m1_rows": 31662,
+        "minimum_daily_rows": 1375,
+        "rows_sha256": "fbc66385477df52eff373dc2437438be861647ce0cb81e66e43de914c1e4dcdd",
+        "trading_dates": 23
+      },
+      "may_2022": {
+        "closed_intervals_imputed": false,
+        "expected_dates": 22,
+        "first_open_at": "2022-05-02T01:02:00Z",
+        "last_open_at": "2022-05-31T23:58:00Z",
+        "m1_rows": 30057,
+        "minimum_daily_rows": 1228,
+        "rows_sha256": "a998955f8b84db35be8fc88b743dcd68d3211d3f91451c920c63c6c703b74d82",
+        "trading_dates": 22
+      }
+    },
+    "timeframes": {
+      "15m": {
+        "first_open_at": "2022-03-01T01:15:00Z",
+        "last_available_at": "2022-05-31T23:45:00Z",
+        "rows": 5828,
+        "rows_sha256": "edd01e1d0bf12216a05869c1ba88d73baefe3417772430890275eadbd4d32775"
+      },
+      "1h": {
+        "first_open_at": "2021-07-23T15:00:00Z",
+        "last_available_at": "2022-06-02T23:00:00Z",
+        "rows": 4612,
+        "rows_sha256": "73bc175b2896b054ec365884dd369055171b6162235be1acb5c5f3150214ab28"
+      },
+      "1m": {
+        "first_open_at": "2022-01-03T01:02:00Z",
+        "last_available_at": "2022-05-31T23:59:00Z",
+        "rows": 145390,
+        "rows_sha256": "b460c7c48e9e5f7b0b6bbe5671bdc6ae32b9042e37c9c85f05b0d4d1e65b64bc"
+      },
+      "5m": {
+        "first_open_at": "2021-07-23T14:05:00Z",
+        "last_available_at": "2022-06-02T23:55:00Z",
+        "rows": 60546,
+        "rows_sha256": "bed04b6e6cf70a3b3a4ce519d08847ce305b5390cd395cc7e5005729dbb5d2a2"
+      }
+    }
+  },
+  "verdict": "PASS_PRIMARY_REFERENCE_AND_PREDECESSOR_EQUIVALENCE",
+  "version": "GOLD_MARCH_APRIL_MAY_H1_CONFIRMATION_ONLY_SOURCE_CERTIFICATION_V1"
+}

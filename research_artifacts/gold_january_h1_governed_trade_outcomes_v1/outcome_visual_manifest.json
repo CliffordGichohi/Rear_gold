@@ -1,0 +1,71 @@
+{
+  "data_sha256": "96ec22b404719332ecfe1566803be52fcedc2bfcfceaad1cd12e34a4a4666d0f",
+  "files": [
+    {
+      "bytes": 2526,
+      "path": "GOLD_JANUARY_H1_GOVERNED_TRADE_OUTCOMES_V1.md",
+      "sha256": "31e6019b44762853013fb38a084e40619ebef61002d89e6524f1ff5322986a75"
+    },
+    {
+      "bytes": 5491,
+      "path": "backend/src/gold_intel/analytics/h1_governed_trade_outcome_v1.py",
+      "sha256": "b5adf10b968bf60c143cf133242b1315e74510b87f9716b585a545d48d544ded"
+    },
+    {
+      "bytes": 13083,
+      "path": "tools/render_gold_january_h1_governed_trade_outcomes_v1.py",
+      "sha256": "feccd48adf5ebd838ac1964e8445d30f782d484d98aaf4f5694307700e015466"
+    },
+    {
+      "bytes": 27770,
+      "path": "research_artifacts/gold_matched_human_replay_v1/stream_materialization_certification.json",
+      "sha256": "0124f64bae5a2fceff10e63b43b08381e4fec702d3b2a09c6d97c8772617dcef"
+    },
+    {
+      "bytes": 68843,
+      "path": "research_artifacts/gold_january_h1_governed_trade_plans_v1/outcome_blind_plans.json",
+      "sha256": "6a5cf65a2bbd6c3a41b7c53540a2f96017da6b366d3f491350a9c05fd54947e6"
+    },
+    {
+      "bytes": 3050,
+      "path": "research_artifacts/gold_january_h1_governed_trade_plans_v1/visual_manifest.json",
+      "sha256": "b733a8801bddd77a2d119d89317183d3eaa3239fecb406b9d390b93c5c8b0490"
+    },
+    {
+      "bytes": 13487,
+      "path": "research_artifacts/gold_january_h1_governed_trade_outcomes_v1/january_outcomes.json",
+      "sha256": "1047ad8aaab4e3c8a479d779208a1e7f6992b4a6395f1092662469e3dbc8ab84"
+    },
+    {
+      "bytes": 3857,
+      "path": "research_artifacts/gold_january_h1_governed_trade_outcomes_v1/outcome_coverage_certification.json",
+      "sha256": "6028be40f9fba2c888d3c7644ecb127d219457a8dd960a9e4956088be0384a93"
+    },
+    {
+      "bytes": 21255,
+      "path": "research_artifacts/gold_january_h1_governed_trade_outcomes_v1/january-h1-governed-trade-outcomes.template.html",
+      "sha256": "c82dcd52b0beb7cde7876cc52c4518ad43584f252c45c376cf2848cf5b561997"
+    },
+    {
+      "bytes": 388126,
+      "path": "research_artifacts/gold_january_h1_governed_trade_outcomes_v1/gold-january-h1-governed-trade-outcomes.html",
+      "sha256": "5ff2789feb72cf3e6ba9635f136ceb4475cbd3cbb6bc95717045f7c9abc54199"
+    }
+  ],
+  "fragment_bytes": 388126,
+  "manifest_sha256": "4d8944b2de461f5645e74a4d23bdeac8dfed3e43c5ae3ab56310d9c491c6fef0",
+  "outcomes_sha256": "67a1d747efcd74b8ff6419a383619f755ceb34c56d12af051b9a1d28393be3f0",
+  "primary_reference_exact": true,
+  "summary": {
+    "gross_r_average": -0.031978643713214454,
+    "gross_r_sum": -0.3837437245585734,
+    "month_end_marks": 1,
+    "plans": 12,
+    "resolved_hit_rate": 0.2727272727272727,
+    "stop_first_ambiguous": 0,
+    "stops": 8,
+    "target_hits": 3
+  },
+  "verdict": "PASS_CONTINUOUS_JANUARY_OUTCOME_CHART_REPRODUCTION",
+  "version": "GOLD_JANUARY_H1_GOVERNED_CONTINUOUS_OUTCOME_CHART_V1_MANIFEST"
+}

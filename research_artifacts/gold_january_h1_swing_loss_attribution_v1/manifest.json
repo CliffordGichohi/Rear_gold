@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "bytes": 2200,
+      "path": "GOLD_JANUARY_H1_SWING_LOSS_ATTRIBUTION_V1.md",
+      "sha256": "a71e6349616f8ff335ff9dda521d1953801900cbe7626509a3d33dfba301232d"
+    },
+    {
+      "bytes": 83524,
+      "path": "research_artifacts/gold_january_h1_swing_loss_attribution_v1/attribution_result.json",
+      "sha256": "1794c152a905bdec4b61776f56b35485bc4be3ba72731a31bac009e7aa34805c"
+    },
+    {
+      "bytes": 898,
+      "path": "research_artifacts/gold_january_h1_swing_loss_attribution_v1/attribution_report.md",
+      "sha256": "ddbe9f6c1668dc7f6ced8c2f76bf2d91d1c829cdf3858fc4ca6ed7a3b6852920"
+    }
+  ],
+  "manifest_sha256": "836eaad369c82031469cff82adcac3ea4510063fc58abfda981248e5f2d0381a",
+  "primary_reference_exact": true,
+  "result_sha256": "9409a7acbc1986fb917f90ff954ae85d33db55ad5e9d7ca9a8d533d4b3a450b1",
+  "verdict": "PASS_EXPOSED_ATTRIBUTION_REPRODUCTION",
+  "version": "GOLD_JANUARY_H1_SWING_LOSS_ATTRIBUTION_V1_MANIFEST"
+}

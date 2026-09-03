@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "bytes": 3937,
+      "path": "GOLD_JANUARY_H1_CONFIRMATION_ONLY_RECLAIM_MILESTONE_V2.md",
+      "sha256": "9dda05be2886a08d8a120ce8c3872104d27ecdac29ba950a30f64cd6b97f129d"
+    },
+    {
+      "bytes": 22251,
+      "path": "tools/run_gold_january_h1_confirmation_only_reclaim_v2.py",
+      "sha256": "cdc86d2ca320b043bf2cfc5a4af1cb8433640ce80a14e3c043b34e48d4e1b1a4"
+    },
+    {
+      "bytes": 83524,
+      "path": "research_artifacts/gold_january_h1_swing_loss_attribution_v1/attribution_result.json",
+      "sha256": "1794c152a905bdec4b61776f56b35485bc4be3ba72731a31bac009e7aa34805c"
+    },
+    {
+      "bytes": 73477,
+      "path": "research_artifacts/gold_january_h1_probe_confirm_reclaim_v1/result.json",
+      "sha256": "744f26376f0a11a9188315ccab8ea38166005bee962241afda9cd4b2c53f195b"
+    },
+    {
+      "bytes": 546,
+      "path": "research_artifacts/gold_january_h1_confirmation_only_reclaim_v2/synthetic_state_machine_proof.json",
+      "sha256": "db46e77d4efebe4255ffa730a982cdc2b4f83d9a7f851e61f7ee450aad6deb91"
+    },
+    {
+      "bytes": 56682,
+      "path": "research_artifacts/gold_january_h1_confirmation_only_reclaim_v2/result.json",
+      "sha256": "8db61256f02aab4245815bb040907f5658686da2332714e2bf7e79f59eb4290d"
+    },
+    {
+      "bytes": 21376,
+      "path": "research_artifacts/gold_january_h1_confirmation_only_reclaim_v2/case_ledger.csv",
+      "sha256": "97aaba09b7f0e0babc464835d8941b46c11ea824b60aa0409f26f56a2ff833e8"
+    },
+    {
+      "bytes": 1186,
+      "path": "research_artifacts/gold_january_h1_confirmation_only_reclaim_v2/report.md",
+      "sha256": "24ef57d98a31d815eedd2f24d0d949842ccfa0abd5be5cf1a27448ebf1308482"
+    }
+  ],
+  "manifest_sha256": "0bdfc0314eed47d02e353bfbf5b13ab239221f371e23ad094848cf62f1aa258d",
+  "primary_reference_exact": true,
+  "result_sha256": "91fc7c28c8781477dd03152a6324137e8a8f7d869f711d9e9e1575661af0d99a",
+  "verdict": "REJECT_EXPOSED_CONFIRMATION_ONLY_INCREMENT",
+  "version": "GOLD_JANUARY_H1_CONFIRMATION_ONLY_RECLAIM_MILESTONE_V2_MANIFEST"
+}

@@ -1,0 +1,71 @@
+{
+  "code": {
+    "browser_test_sha256": "74b1438a3f8255b6e00586211f455f924ae7f074fe35bb7e1986271f00ff0f2b",
+    "renderer_sha256": "e5346fc18d32d6cec522bd69a47b3bcf5175b4d8d15fbdd2a186ac15af7f9161",
+    "runner_sha256": "728be909cedb3a5d694f8661011f3a4d514fae5c86b906fadf2cf905bffd8ebc",
+    "sealer_sha256": "be7784518188acdce15283fea1b60cb806c620b334124038119878b0d7713318",
+    "spec_sha256": "80342d2dfa9eed2427c05698f6ad0f2d1d41fcd11ef41aa774c86d9a1736dadd"
+  },
+  "delivery_sha256": "adf63e57ab366b6342841f85ce35c61ada5a549e16cc6f4a96e9cfe36d865d40",
+  "months": [
+    {
+      "application_manifest": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/march_2022/manifest.json",
+      "application_manifest_sha256": "715c209698954237a261a5eadd3700f9fcc36a65c417cbb5de746994d42ca113",
+      "browser_certification": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/march_2022/browser_certification.json",
+      "browser_certification_sha256": "02bc4fb7a4e4706199969e9978c8ddd9f6c0f941a4edc0cc81cc36b3fe771a1b",
+      "chart_manifest": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/march_2022/chart_manifest.json",
+      "chart_manifest_sha256": "41a49281f5d990aaec25d3b09906364d24012f8844854933a4cb462efc566f83",
+      "executed_trades": 79,
+      "html": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/march_2022/gold-march-2022-h1-confirmation-only-continuous-chart.html",
+      "html_sha256": "5a185685b653ec764dcc4a2acd39da16c5dd08321c188f878864d6c7931ecada",
+      "month": "March 2022",
+      "net_r": 1.3831201862135742,
+      "profit_factor": 1.0383993497000434,
+      "report": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/march_2022/report.md",
+      "report_sha256": "8537d7e37005f629e60903aac5f76bf8cccd3eda8bb0776b367f111550f1888d",
+      "setups": 110,
+      "win_rate": 0.5316455696202531
+    },
+    {
+      "application_manifest": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/manifest.json",
+      "application_manifest_sha256": "263628806fef60c73eaaf001e097d2e71a1292adcd860f941c3c4e254aa0f1a0",
+      "browser_certification": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/browser_certification.json",
+      "browser_certification_sha256": "426c9af09be9cdd6680edb89b1ca59893c179067d0c8e8771d0556a7e474c327",
+      "chart_manifest": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/chart_manifest.json",
+      "chart_manifest_sha256": "7ea54609fecf379a0097e2d0a4b3dd4db56a0e7a1a102b3ed32f8b052ed7d3a2",
+      "executed_trades": 60,
+      "html": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/gold-april-2022-h1-confirmation-only-continuous-chart.html",
+      "html_sha256": "7f72419e4062e035a3416efe91fc55012e8bbc257826bc4ea512ee68d8d6b448",
+      "month": "April 2022",
+      "net_r": -9.078260738280585,
+      "profit_factor": 0.6973913087239806,
+      "report": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/report.md",
+      "report_sha256": "39730e07ddca2d20a72805a5407fdadef1f022c1f6de42e83dec6c0f0ea1693c",
+      "setups": 97,
+      "win_rate": 0.5
+    },
+    {
+      "application_manifest": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/may_2022/manifest.json",
+      "application_manifest_sha256": "01c5520cf45f49c25667f2df98c88b528e4ddbabd22b62118ef9e15dec75cff5",
+      "browser_certification": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/may_2022/browser_certification.json",
+      "browser_certification_sha256": "012679d768be6e52e961552030fb6a3d77fe6b51ab7668b475c638d9bf8efec6",
+      "chart_manifest": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/may_2022/chart_manifest.json",
+      "chart_manifest_sha256": "b13c55ce38c9b7c17a7031f9dfe8e9d73488b64490c2b67c24228ec080105603",
+      "executed_trades": 61,
+      "html": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/may_2022/gold-may-2022-h1-confirmation-only-continuous-chart.html",
+      "html_sha256": "1f848dbf51ad7a555af247c38fc07b29dfa82c68aa6b9bf771c60f5a1ef2f1f0",
+      "month": "May 2022",
+      "net_r": 7.38666944995132,
+      "profit_factor": 1.2841026711519736,
+      "report": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/may_2022/report.md",
+      "report_sha256": "4688591f17066f4cc6f9c2f7b589334976fdc9d7f898299efdba0e06980148ea",
+      "setups": 90,
+      "win_rate": 0.5737704918032787
+    }
+  ],
+  "policy_retuned": false,
+  "pooled_performance_reported": false,
+  "root_application_manifest_sha256": "0fdef69a9bb914cf38cd210041b403c8b988a53f24e58b7eb6c4258edcaec70f",
+  "verdict": "PASS_SEPARATE_RESULT_AND_VISUAL_DELIVERY_CERTIFICATION",
+  "version": "GOLD_MARCH_APRIL_MAY_H1_CONFIRMATION_ONLY_RECLAIM_V1_DELIVERY_MANIFEST"
+}

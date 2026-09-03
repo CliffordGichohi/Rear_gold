@@ -1,0 +1,71 @@
+{
+  "audit_payload_sha256": "120be598f6f27470a976dd423ec84a5e65f8566b05c38b3c89229473a1becce3",
+  "files": [
+    {
+      "bytes": 1699,
+      "path": "GOLD_JANUARY_STOPPED_THEN_DIRECTION_AUDIT_V1.md",
+      "sha256": "655202ad7f25aa62c5369dd0ee8d834dca0c6b94fcac8f79a4b6792e41160918"
+    },
+    {
+      "bytes": 6602,
+      "path": "backend/src/gold_intel/analytics/stopped_then_direction_audit_v1.py",
+      "sha256": "701f9368da121938bb42d6b9ee99dd29618eb3c02ff223f88c4a81aeded82a55"
+    },
+    {
+      "bytes": 9385,
+      "path": "tools/run_gold_january_stopped_then_direction_audit_v1.py",
+      "sha256": "00a5866444dd9989bcdfb64eef2c6ec2641aff52965a4f697f32e9a72f52c478"
+    },
+    {
+      "bytes": 27770,
+      "path": "research_artifacts/gold_matched_human_replay_v1/stream_materialization_certification.json",
+      "sha256": "0124f64bae5a2fceff10e63b43b08381e4fec702d3b2a09c6d97c8772617dcef"
+    },
+    {
+      "bytes": 68843,
+      "path": "research_artifacts/gold_january_h1_governed_trade_plans_v1/outcome_blind_plans.json",
+      "sha256": "6a5cf65a2bbd6c3a41b7c53540a2f96017da6b366d3f491350a9c05fd54947e6"
+    },
+    {
+      "bytes": 13487,
+      "path": "research_artifacts/gold_january_h1_governed_trade_outcomes_v1/january_outcomes.json",
+      "sha256": "1047ad8aaab4e3c8a479d779208a1e7f6992b4a6395f1092662469e3dbc8ab84"
+    },
+    {
+      "bytes": 2924,
+      "path": "research_artifacts/gold_january_h1_governed_trade_outcomes_v1/outcome_visual_manifest.json",
+      "sha256": "71e08e50a0549b791940dd92b9860ef95d689f6417ace09a0d2b431712553a92"
+    },
+    {
+      "bytes": 13219,
+      "path": "research_artifacts/gold_january_h1_governed_trade_outcomes_v1/stopped_then_direction_audit.json",
+      "sha256": "a91ba80cb5e0aa0c4258e4efb7154a728dd96dda6744f9bac8efa55d7076016b"
+    },
+    {
+      "bytes": 1475,
+      "path": "research_artifacts/gold_january_h1_governed_trade_outcomes_v1/stopped_then_direction_audit.md",
+      "sha256": "35266e21c57fa107640d3c840e4d2da56ec6b41863338af60484ed05d9722536"
+    }
+  ],
+  "manifest_sha256": "d588cadb859acde40454c4a6a364bd4daf7ba27d5893807e50d7fd2b6f5813c6",
+  "primary_reference_exact": true,
+  "summary": {
+    "all_plans": 12,
+    "classification_counts": {
+      "EVENTUAL_ORIGINAL_TARGET": 7,
+      "EVENTUAL_PLUS_2R_NOT_TARGET": 1
+    },
+    "eventual_original_target_all": 10,
+    "eventual_original_target_rate": 0.8333333333333334,
+    "later_original_target": 7,
+    "later_plus_1r": 8,
+    "later_plus_2r": 8,
+    "later_reclaimed_entry": 8,
+    "never_reclaimed_entry": 0,
+    "stopped_plans": 8,
+    "strict_target_first": 3,
+    "strict_target_first_rate": 0.25
+  },
+  "verdict": "PASS_STOPPED_THEN_DIRECTION_AUDIT_REPRODUCTION",
+  "version": "GOLD_JANUARY_STOPPED_THEN_DIRECTION_AUDIT_V1_MANIFEST"
+}

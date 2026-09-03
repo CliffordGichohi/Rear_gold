@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "bytes": 3614,
+      "path": "GOLD_MARCH_APRIL_MAY_2022_H1_CONFIRMATION_ONLY_RECLAIM_APPLICATION_V1.md",
+      "sha256": "80342d2dfa9eed2427c05698f6ad0f2d1d41fcd11ef41aa774c86d9a1736dadd"
+    },
+    {
+      "bytes": 28338,
+      "path": "tools/run_gold_mar_apr_may_h1_confirmation_only_reclaim_v1.py",
+      "sha256": "728be909cedb3a5d694f8661011f3a4d514fae5c86b906fadf2cf905bffd8ebc"
+    },
+    {
+      "bytes": 5372,
+      "path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6"
+    },
+    {
+      "bytes": 2048,
+      "path": "research_artifacts/gold_january_h1_confirmation_only_reclaim_v2/manifest.json",
+      "sha256": "f2fa947b2380ed9aeeebd3529f686a2ae5ade2f305b5e04223da70fe9e898330"
+    },
+    {
+      "bytes": 2322,
+      "path": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/manifest.json",
+      "sha256": "5cc35acbd1a46b5696694fd2284b410888181f7efb65108655523c2379d9f4b5"
+    },
+    {
+      "bytes": 3396,
+      "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/source_and_predecessor_certification.json",
+      "sha256": "b476155b82bd6448cb81d46c1f316a10d8a11d0b31138c38ce81c548aab883fc"
+    },
+    {
+      "bytes": 1962,
+      "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/march_2022/manifest.json",
+      "sha256": "715c209698954237a261a5eadd3700f9fcc36a65c417cbb5de746994d42ca113"
+    },
+    {
+      "bytes": 1962,
+      "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/manifest.json",
+      "sha256": "263628806fef60c73eaaf001e097d2e71a1292adcd860f941c3c4e254aa0f1a0"
+    },
+    {
+      "bytes": 1951,
+      "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/may_2022/manifest.json",
+      "sha256": "01c5520cf45f49c25667f2df98c88b528e4ddbabd22b62118ef9e15dec75cff5"
+    }
+  ],
+  "manifest_sha256": "fa31ed6a2de1cc0eec5ab052c6fa5ac7e6894138e5ae47bf1469bea6d7b3f5fc",
+  "policy_retuned": false,
+  "pooled_performance_reported": false,
+  "primary_reference_exact": true,
+  "verdict": "PASS_THREE_SEPARATE_UNCHANGED_MONTHLY_APPLICATIONS",
+  "version": "GOLD_MARCH_APRIL_MAY_H1_CONFIRMATION_ONLY_RECLAIM_APPLICATION_V1_MANIFEST"
+}

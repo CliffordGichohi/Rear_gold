@@ -1,0 +1,39 @@
+{
+  "data_sha256": "94425e5790d0bc7f259b75dd661d42f7e08a44ae1113342a52a0ee3d87055a97",
+  "executed_trades": 61,
+  "files": [
+    {
+      "bytes": 57782,
+      "path": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/result.json",
+      "sha256": "cfdd144f9252f4fd0a6200ba8dd27620926dc123bdf4ef964cd48e8c9e875ed6"
+    },
+    {
+      "bytes": 363638,
+      "path": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/february_chart_data.json",
+      "sha256": "3c638fb90d9c9e52384d0d71810862e3d40b0c3bf804872e7e611ae650db1212"
+    },
+    {
+      "bytes": 21255,
+      "path": "research_artifacts/gold_january_h1_governed_trade_outcomes_v1/january-h1-governed-trade-outcomes.template.html",
+      "sha256": "c82dcd52b0beb7cde7876cc52c4518ad43584f252c45c376cf2848cf5b561997"
+    },
+    {
+      "bytes": 9129,
+      "path": "tools/render_gold_february_h1_confirmation_only_reclaim_v1.py",
+      "sha256": "dd855dd6da028a523c4d5be1944177b1778ef301b2372e3d0a561fd18e7af72d"
+    },
+    {
+      "bytes": 21421,
+      "path": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/february-h1-confirmation-only-continuous.template.html",
+      "sha256": "40f42c4d5fddb4a96028c6f58f2b3e898d8a3179da8b4c9372fe74eebd5c150b"
+    },
+    {
+      "bytes": 402577,
+      "path": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/gold-february-h1-confirmation-only-continuous-chart.html",
+      "sha256": "a6d6640c68aa1d1d96adb34ab45ff36dbd91854a79ca88e4d21be8a71b7535b1"
+    }
+  ],
+  "manifest_sha256": "fe0036c41ead936a24baa9edb02aead17757ff707f9fb081932a58dbf9799d99",
+  "verdict": "PASS_DETERMINISTIC_CHART_RENDER",
+  "version": "GOLD_FEBRUARY_H1_CONFIRMATION_ONLY_CONTINUOUS_CHART_V1_MANIFEST"
+}

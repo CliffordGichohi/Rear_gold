@@ -1,0 +1,79 @@
+{
+  "data_sha256": "4712d22f44f069e4b3b9787b2a6eeffd65361eddd7ddd22ba02888cea5d63527",
+  "files": [
+    {
+      "bytes": 2126,
+      "path": "GOLD_JANUARY_H1_GOVERNED_TRADE_PLAN_ATLAS_V1.md",
+      "sha256": "0c77575c724f629bc9d1071a1a2e762204bf6a62c3427b655ec756643accdab3"
+    },
+    {
+      "bytes": 21024,
+      "path": "backend/src/gold_intel/analytics/h1_governed_trade_plan_v1.py",
+      "sha256": "afc15702d6c1dc9a23dc15124b02d46140a7a2434a166c6cdeaa9209a4aa967d"
+    },
+    {
+      "bytes": 36738,
+      "path": "backend/src/gold_intel/analytics/h1_governed_trade_scanner_v1.py",
+      "sha256": "d5939189a06e8d238c19d3c87714ade5cf96aa9b33727bb816cb6f93d0721917"
+    },
+    {
+      "bytes": 13071,
+      "path": "tools/render_gold_january_h1_governed_trade_plans_v1.py",
+      "sha256": "6011a8a1b283c16c686dee58a3dc5df1adc19fb96de0e3d45f7e76595b7eccec"
+    },
+    {
+      "bytes": 27770,
+      "path": "research_artifacts/gold_matched_human_replay_v1/stream_materialization_certification.json",
+      "sha256": "0124f64bae5a2fceff10e63b43b08381e4fec702d3b2a09c6d97c8772617dcef"
+    },
+    {
+      "bytes": 3318,
+      "path": "research_artifacts/gold_january_h1_governed_trade_plans_v1/coverage_certification.json",
+      "sha256": "9390ba8b6ee427f6e4cf2f5bee2c02e1d410b16c17886b785ea5a69bb89103f7"
+    },
+    {
+      "bytes": 68843,
+      "path": "research_artifacts/gold_january_h1_governed_trade_plans_v1/outcome_blind_plans.json",
+      "sha256": "6a5cf65a2bbd6c3a41b7c53540a2f96017da6b366d3f491350a9c05fd54947e6"
+    },
+    {
+      "bytes": 19297,
+      "path": "research_artifacts/gold_january_h1_governed_trade_plans_v1/january-h1-governed-trade-plans.template.html",
+      "sha256": "766faac5074f492145da8677fc67ff8d39ecde7d69b46e5e13c0b2ab55611d13"
+    },
+    {
+      "bytes": 225430,
+      "path": "research_artifacts/gold_january_h1_governed_trade_plans_v1/gold-january-h1-governed-trade-plans.html",
+      "sha256": "627cbec1c2c606956209de042b973cf23d51c1bcea8bfbbf45d0763134e869e1"
+    }
+  ],
+  "fragment_bytes": 225430,
+  "guards": {
+    "allCandlesPredecision": true,
+    "fixedLightTheme": true,
+    "h1Governs": true,
+    "m15SetsUp": true,
+    "m5Executes": true,
+    "observedSealedPrices": true,
+    "outcomesIncluded": false,
+    "pnlCalculated": false,
+    "rangeTargetsInternalM15Liquidity": true,
+    "rangeTargetsOppositeBoundary": false,
+    "trendTargetsH1Swing": true
+  },
+  "manifest_sha256": "7d28ecbff4c5702f479e536993f139a8403ca47eb4145796d4114073718a66e2",
+  "merged_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+  "plans_sha256": "0bdb7fd08062f3356e924fd58c122c2f7c0a4d24376edfbdc8a9f9525862afa6",
+  "primary_reference_exact": true,
+  "summary": {
+    "first_decision_at": "2022-01-03T10:50:00Z",
+    "last_decision_at": "2022-01-31T22:40:00Z",
+    "long": 3,
+    "plans": 12,
+    "range": 1,
+    "short": 9,
+    "trend": 11
+  },
+  "verdict": "PASS_OUTCOME_BLIND_JANUARY_PLAN_ATLAS_REPRODUCTION",
+  "version": "GOLD_JANUARY_H1_GOVERNED_TRADE_PLAN_ATLAS_V1_MANIFEST"
+}

@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "bytes": 61819,
+      "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/result.json",
+      "sha256": "5bceb20a208461b7e72149bbf676aba9a51a07c699e227814f544ac88acc6072"
+    },
+    {
+      "bytes": 24581,
+      "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/case_ledger.csv",
+      "sha256": "82dccc40719ae71fc58d205dad07c9948d6ffb3d0df7634fd603eb85e9522e19"
+    },
+    {
+      "bytes": 365517,
+      "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/chart_data.json",
+      "sha256": "0258a0c74ec7b80aebe7532a12c2706769fbbb8dd7c1e3e611ba94b0847a98b3"
+    },
+    {
+      "bytes": 1015,
+      "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/report.md",
+      "sha256": "39730e07ddca2d20a72805a5407fdadef1f022c1f6de42e83dec6c0f0ea1693c"
+    }
+  ],
+  "manifest_sha256": "836ae395019841c7c7fd40bef804096422dd3bbb519049cd9bcd8002f7f7d1ad",
+  "policy_retuned": false,
+  "predecessor_equivalence_exact": true,
+  "primary_reference_exact": true,
+  "result_sha256": "8b60401570e063b641f34830e6578ea04138cb719974c91fa0202334029526dd",
+  "source_bindings": {
+    "casebook_manifest_sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6",
+    "casebook_sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+    "february_manifest_sha256": "5cc35acbd1a46b5696694fd2284b410888181f7efb65108655523c2379d9f4b5",
+    "february_result_sha256": "cfdd144f9252f4fd0a6200ba8dd27620926dc123bdf4ef964cd48e8c9e875ed6",
+    "january_manifest_sha256": "f2fa947b2380ed9aeeebd3529f686a2ae5ade2f305b5e04223da70fe9e898330",
+    "january_result_sha256": "8db61256f02aab4245815bb040907f5658686da2332714e2bf7e79f59eb4290d"
+  },
+  "verdict": "COMPLETED_UNCHANGED_MONTHLY_APPLICATION",
+  "version": "GOLD_APRIL_2022_H1_CONFIRMATION_ONLY_RECLAIM_APPLICATION_V1_MANIFEST"
+}

@@ -1,0 +1,263 @@
+<div id="gold-january-h1-governed-trade-plans-v1">
+  <style>
+    #gold-january-h1-governed-trade-plans-v1 {
+      box-sizing: border-box; width: 100%; padding: 14px; background: #ffffff;
+      color: #111827; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    #gold-january-h1-governed-trade-plans-v1 * { box-sizing: border-box; }
+    #gold-january-h1-governed-trade-plans-v1 h2 { margin: 0 0 4px; font-size: 19px; font-weight: 500; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-subtitle { margin: 0 0 10px; color: #4b5563; font-size: 12px; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-controls { display: flex; flex-wrap: wrap; gap: 7px; align-items: end; margin-bottom: 9px; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-field { display: grid; gap: 3px; flex: 1 1 330px; }
+    #gold-january-h1-governed-trade-plans-v1 label { color: #4b5563; font-size: 12px; }
+    #gold-january-h1-governed-trade-plans-v1 select,
+    #gold-january-h1-governed-trade-plans-v1 button {
+      min-height: 38px; border: 1px solid #d1d5db; border-radius: 6px;
+      background: #ffffff; color: #111827; padding: 7px 9px; font: inherit;
+    }
+    #gold-january-h1-governed-trade-plans-v1 button { cursor: pointer; min-width: 72px; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-summary {
+      padding: 8px 10px; border-left: 3px solid #2962ff; background: #f8fafc;
+      font-size: 13px; line-height: 1.45; margin-bottom: 7px;
+    }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-figures { display: flex; flex-wrap: wrap; gap: 5px 14px; color: #374151; font-size: 12px; margin-bottom: 8px; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-legend { display: flex; flex-wrap: wrap; gap: 5px 13px; color: #4b5563; font-size: 12px; margin-bottom: 8px; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-legend span { display: inline-flex; align-items: center; gap: 5px; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-swatch { width: 18px; height: 3px; display: inline-block; }
+    #gold-january-h1-governed-trade-plans-v1 .entry { background: #2962ff; }
+    #gold-january-h1-governed-trade-plans-v1 .stop { background: #dc2626; }
+    #gold-january-h1-governed-trade-plans-v1 .target { background: #059669; }
+    #gold-january-h1-governed-trade-plans-v1 .location { background: #7c3aed; }
+    #gold-january-h1-governed-trade-plans-v1 .turn { background: #7c3aed; }
+    #gold-january-h1-governed-trade-plans-v1 .retest { background: #d97706; }
+    #gold-january-h1-governed-trade-plans-v1 section { margin-top: 9px; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; margin-bottom: 2px; font-size: 13px; font-weight: 500; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-role { color: #6b7280; font-size: 12px; font-weight: 400; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-chart { width: 100%; min-width: 0; }
+    #gold-january-h1-governed-trade-plans-v1 svg { display: block; width: 100%; height: auto; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-axis { fill: #4b5563; font-size: 11.5px; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-label { fill: #111827; font-size: 11.5px; font-weight: 500; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-marker-letter { fill: #ffffff; font-size: 11.5px; font-weight: 500; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-note { fill: #4b5563; font-size: 11.5px; }
+    #gold-january-h1-governed-trade-plans-v1 .jhp-footer { margin-top: 9px; padding-top: 7px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 12px; }
+    @media (max-width: 520px) {
+      #gold-january-h1-governed-trade-plans-v1 { padding: 10px; }
+      #gold-january-h1-governed-trade-plans-v1 .jhp-controls button { flex: 1 1 80px; }
+    }
+  </style>
+  <h2>January H1-governed plans</h2>
+  <p class="jhp-subtitle">Observed sealed XAUUSD prices; each chart stops at its decision candle; no result or PnL is shown.</p>
+  <div class="jhp-controls">
+    <div class="jhp-field">
+      <label for="jhp-plan-select">Plan</label>
+      <select id="jhp-plan-select"></select>
+    </div>
+    <button type="button" id="jhp-prev">Previous</button>
+    <button type="button" id="jhp-next">Next</button>
+  </div>
+  <div class="jhp-summary" id="jhp-summary" aria-live="polite"></div>
+  <div class="jhp-figures" id="jhp-figures"></div>
+  <div class="jhp-legend" aria-label="Chart legend">
+    <span><i class="jhp-swatch entry"></i>Entry</span>
+    <span><i class="jhp-swatch stop"></i>Local stop</span>
+    <span><i class="jhp-swatch target"></i>Known liquidity destination</span>
+    <span><i class="jhp-swatch location"></i>M15 location/control</span>
+    <span><i class="jhp-swatch turn"></i>M5 turn (T)</span>
+    <span><i class="jhp-swatch retest"></i>M5 retest (R)</span>
+  </div>
+  <section aria-labelledby="jhp-h1-title">
+    <div class="jhp-heading" id="jhp-h1-title"><span>H1 governing auction</span><span class="jhp-role">direction, controlling structure and destination</span></div>
+    <div class="jhp-chart" id="jhp-h1"></div>
+  </section>
+  <section aria-labelledby="jhp-m15-title">
+    <div class="jhp-heading" id="jhp-m15-title"><span>M15 setup and location</span><span class="jhp-role">pullback curvature or range rotation</span></div>
+    <div class="jhp-chart" id="jhp-m15"></div>
+  </section>
+  <section aria-labelledby="jhp-m5-title">
+    <div class="jhp-heading" id="jhp-m5-title"><span>M5 execution</span><span class="jhp-role">completed turn, first valid retest, entry and invalidation</span></div>
+    <div class="jhp-chart" id="jhp-m5"></div>
+  </section>
+  <div class="jhp-footer" id="jhp-footer"></div>
+  <script id="jhp-data" type="application/json">__JANUARY_H1_GOVERNED_PLAN_DATA__</script>
+  <script>
+    (() => {
+      const root = document.getElementById("gold-january-h1-governed-trade-plans-v1");
+      const data = JSON.parse(root.querySelector("#jhp-data").textContent);
+      const select = root.querySelector("#jhp-plan-select");
+      const summary = root.querySelector("#jhp-summary");
+      const figures = root.querySelector("#jhp-figures");
+      const footer = root.querySelector("#jhp-footer");
+      let selected = 0;
+      let resizeTimer = 0;
+      const NS = "http://www.w3.org/2000/svg";
+      const svgEl = name => document.createElementNS(NS, name);
+      const attrs = (node, values) => { Object.entries(values).forEach(([key, value]) => node.setAttribute(key, String(value))); return node; };
+      const text = (svg, x, y, value, className, anchor = "start", extra = {}) => {
+        const node = attrs(svgEl("text"), { x, y, class: className, "text-anchor": anchor, ...extra });
+        node.textContent = value; svg.appendChild(node); return node;
+      };
+      const line = (svg, x1, y1, x2, y2, stroke, width = 1, extra = {}) => {
+        const node = attrs(svgEl("line"), { x1, y1, x2, y2, stroke, "stroke-width": width, "vector-effect": "non-scaling-stroke", ...extra });
+        svg.appendChild(node); return node;
+      };
+      const formatPrice = value => Number(value).toFixed(2);
+      const formatTime = seconds => new Intl.DateTimeFormat("en-GB", { timeZone: "UTC", month: "short", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date(seconds * 1000));
+      const indexAt = (bars, seconds) => bars.findIndex(row => row[0] === Number(seconds));
+      const localRay = (svg, x, y, plotRight, color, label, kind) => {
+        const start = Math.max(x - 5, plotRight - 165);
+        line(svg, start, y, plotRight, y, color, 2, { "data-plan-ray": kind });
+        text(svg, plotRight - 3, y - 5, label, "jhp-label", "end", { "data-plan-label": kind });
+      };
+      const pivotMarker = (svg, x, y, kind, color, label) => {
+        const path = kind === "LOW"
+          ? `M ${x} ${y + 5} L ${x - 5} ${y + 13} L ${x + 5} ${y + 13} Z`
+          : `M ${x} ${y - 5} L ${x - 5} ${y - 13} L ${x + 5} ${y - 13} Z`;
+        svg.appendChild(attrs(svgEl("path"), { d: path, fill: color, "data-pivot-marker": kind }));
+        if (label) text(svg, x + 7, y + (kind === "LOW" ? 16 : -8), label, "jhp-note");
+      };
+
+      function draw(container, timeframe, sample) {
+        container.replaceChildren();
+        const plan = sample.plan;
+        const evidence = plan.source_evidence;
+        const bars = sample.charts[timeframe].bars;
+        const measured = Math.max(300, Math.floor(container.getBoundingClientRect().width || 736));
+        const height = timeframe === "H1" ? (measured < 430 ? 222 : 242) : (measured < 430 ? 205 : 224);
+        const margin = { left: 58, right: 14, top: 21, bottom: 30 };
+        const plotLeft = margin.left, plotRight = measured - margin.right, plotTop = margin.top, plotBottom = height - margin.bottom;
+        const annotationWidth = measured < 430 ? 88 : 150;
+        const barRight = plotRight - annotationWidth;
+        const plotWidth = plotRight - plotLeft, barWidth = barRight - plotLeft, plotHeight = plotBottom - plotTop;
+        const values = bars.flatMap(row => [row[3], row[4]]);
+        if (timeframe === "H1") {
+          values.push(plan.destination.level, plan.governing_h1_auction.governing_invalidation_level);
+          if (plan.family === "RANGE") values.push(plan.governing_h1_auction.range.lower_boundary, plan.governing_h1_auction.range.upper_boundary);
+        }
+        if (timeframe === "M15") {
+          values.push(plan.m15_setup.zone_lower, plan.m15_setup.zone_upper);
+          if (plan.destination.timeframe === "M15") values.push(plan.destination.level);
+        }
+        if (timeframe === "M5") values.push(plan.entry.level, plan.invalidation.level);
+        let min = Math.min(...values), max = Math.max(...values);
+        const pad = Math.max((max - min) * 0.08, 0.35); min -= pad; max += pad;
+        const x = index => plotLeft + ((index + 0.5) / bars.length) * barWidth;
+        const y = value => plotTop + ((max - value) / (max - min)) * plotHeight;
+        const width = Math.max(1.6, Math.min(6.2, (barWidth / bars.length) * 0.56));
+        const svg = attrs(svgEl("svg"), { viewBox: `0 0 ${measured} ${height}`, role: "img", "aria-label": `${timeframe} predecision chart for ${plan.title}`, "data-timeframe": timeframe });
+        const titleNode = svgEl("title"); titleNode.textContent = `${timeframe} ${plan.family.toLowerCase()} ${plan.direction.toLowerCase()} plan at ${plan.decision_at}`; svg.appendChild(titleNode);
+        svg.appendChild(attrs(svgEl("rect"), { x: plotLeft, y: plotTop, width: plotWidth, height: plotHeight, fill: "#ffffff", stroke: "#d1d5db", "stroke-width": 1, "data-chart-frame": timeframe }));
+        for (let tick = 0; tick < 4; tick += 1) {
+          const price = min + ((max - min) * tick / 3), py = y(price);
+          line(svg, plotLeft, py, plotRight, py, "#e5e7eb", 1);
+          text(svg, plotLeft - 7, py + 4, formatPrice(price), "jhp-axis", "end");
+        }
+        const timeTicks = measured < 430 ? [0, bars.length - 1] : [0, Math.floor((bars.length - 1) / 3), Math.floor(2 * (bars.length - 1) / 3), bars.length - 1];
+        [...new Set(timeTicks)].forEach((index, tick) => text(svg, x(index), height - 7, formatTime(bars[index][0]), "jhp-axis", tick === 0 ? "start" : tick === timeTicks.length - 1 ? "end" : "middle"));
+
+        if (timeframe === "M15") {
+          const controlIndex = indexAt(bars, evidence.m15_control.pivot_at ? Date.parse(evidence.m15_control.pivot_at) / 1000 : -1);
+          const terminalIndex = evidence.m15_terminal ? indexAt(bars, Date.parse(evidence.m15_terminal.pivot_at) / 1000) : -1;
+          const zoneStart = Math.max(0, controlIndex, terminalIndex);
+          const zx = x(zoneStart) - width;
+          const upper = y(plan.m15_setup.zone_upper), lower = y(plan.m15_setup.zone_lower);
+          svg.appendChild(attrs(svgEl("rect"), { x: zx, y: upper, width: Math.max(4, plotRight - zx), height: Math.max(2, lower - upper), fill: "#7c3aed", opacity: 0.10, "data-m15-location": "true" }));
+          line(svg, zx, upper, barRight, upper, "#7c3aed", 1);
+          line(svg, zx, lower, barRight, lower, "#7c3aed", 1);
+        }
+
+        bars.forEach((row, index) => {
+          const open = row[2], high = row[3], low = row[4], close = row[5];
+          const color = close >= open ? "#089981" : "#f23645";
+          line(svg, x(index), y(high), x(index), y(low), color, 1.1);
+          svg.appendChild(attrs(svgEl("rect"), { x: x(index) - width / 2, y: Math.min(y(open), y(close)), width, height: Math.max(1.4, Math.abs(y(open) - y(close))), fill: color, "data-candle": timeframe, "data-open-time": row[0] }));
+        });
+
+        if (timeframe === "H1") {
+          text(svg, plotLeft + 7, plotTop + 15, plan.governing_h1_auction.state.replaceAll("_", " "), "jhp-label");
+          const control = evidence.h1_governing_control;
+          const ci = indexAt(bars, Date.parse(control.pivot_at) / 1000);
+          if (ci >= 0) pivotMarker(svg, x(ci), y(control.level), control.kind, "#dc2626", "");
+          const destination = evidence.selected_destination;
+          const di = indexAt(bars, Date.parse(destination.pivot_at) / 1000);
+          if (destination.timeframe === "H1" && di >= 0) pivotMarker(svg, x(di), y(destination.level), destination.kind, "#059669", "");
+          localRay(svg, di >= 0 ? x(di) : plotRight - 120, y(plan.destination.level), plotRight, "#059669", `${plan.destination.timeframe} target ${formatPrice(plan.destination.level)}`, "TARGET");
+          localRay(svg, ci >= 0 ? x(ci) : plotRight - 120, y(plan.governing_h1_auction.governing_invalidation_level), plotRight, "#dc2626", `H1 control ${formatPrice(plan.governing_h1_auction.governing_invalidation_level)}`, "H1_CONTROL");
+          if (plan.family === "RANGE") {
+            const range = evidence.h1_range;
+            [range.lower_boundary, range.upper_boundary].forEach(boundary => {
+              const bi = indexAt(bars, Date.parse(boundary.pivot_at) / 1000);
+              const start = bi >= 0 ? x(bi) : plotRight - 115;
+              line(svg, start, y(boundary.level), Math.min(plotRight, start + 115), y(boundary.level), "#7c3aed", 1.5, { "data-range-boundary": boundary.kind });
+            });
+          }
+        }
+        if (timeframe === "M15") {
+          const control = evidence.m15_control;
+          const ci = indexAt(bars, Date.parse(control.pivot_at) / 1000);
+          if (ci >= 0) pivotMarker(svg, x(ci), y(control.level), control.kind, "#7c3aed", "");
+          if (evidence.m15_terminal) {
+            const terminal = evidence.m15_terminal, ti = indexAt(bars, Date.parse(terminal.pivot_at) / 1000);
+            if (ti >= 0) pivotMarker(svg, x(ti), y(terminal.level), terminal.kind, "#2962ff", "");
+          }
+          text(svg, plotLeft + 4, 14, `M15 control ${formatPrice(control.level)} | zone ${formatPrice(plan.m15_setup.zone_lower)}-${formatPrice(plan.m15_setup.zone_upper)}`, "jhp-note");
+          if (plan.destination.timeframe === "M15") {
+            const destination = evidence.selected_destination, di = indexAt(bars, Date.parse(destination.pivot_at) / 1000);
+            if (di >= 0) pivotMarker(svg, x(di), y(destination.level), destination.kind, "#059669", "");
+            localRay(svg, di >= 0 ? x(di) : plotRight - 120, y(destination.level), plotRight, "#059669", `internal M15 target ${formatPrice(destination.level)}`, "TARGET");
+          }
+        }
+        if (timeframe === "M5") {
+          const turnIndex = indexAt(bars, Date.parse(evidence.m5_turn.open_at) / 1000);
+          const retestIndex = indexAt(bars, Date.parse(evidence.m5_retest.open_at) / 1000);
+          if (turnIndex >= 0) {
+            svg.appendChild(attrs(svgEl("circle"), { cx: x(turnIndex), cy: y(plan.m5_execution.turn_extreme), r: 6.2, fill: "#7c3aed", "data-m5-turn": "true" }));
+            text(svg, x(turnIndex), y(plan.m5_execution.turn_extreme) + 4, "T", "jhp-marker-letter", "middle");
+          }
+          if (retestIndex >= 0) {
+            svg.appendChild(attrs(svgEl("circle"), { cx: x(retestIndex), cy: y(plan.m5_execution.retest_extreme), r: 6.2, fill: "#d97706", "data-m5-retest": "true" }));
+            text(svg, x(retestIndex), y(plan.m5_execution.retest_extreme) + 4, "R", "jhp-marker-letter", "middle");
+          }
+          const anchor = retestIndex >= 0 ? x(retestIndex) : plotRight - 130;
+          localRay(svg, anchor, y(plan.entry.level), plotRight, "#2962ff", `Entry ${formatPrice(plan.entry.level)}`, "ENTRY");
+          localRay(svg, anchor, y(plan.invalidation.level), plotRight, "#dc2626", `SL ${formatPrice(plan.invalidation.level)}`, "STOP");
+          text(svg, plotRight - 3, plotBottom - 7, `TP: ${plan.destination.timeframe} ${plan.destination.kind.toLowerCase()} ${formatPrice(plan.destination.level)}`, "jhp-label", "end", { "data-target-note": plan.destination.role });
+        }
+        container.appendChild(svg);
+      }
+
+      function render() {
+        const sample = data.samples[selected], plan = sample.plan;
+        select.value = String(selected);
+        summary.textContent = `${selected + 1}/${data.samples.length} | ${plan.decision_at.replace("T", " ").replace("Z", " UTC")} | ${plan.family} ${plan.direction} | H1 ${plan.governing_h1_auction.state.replaceAll("_", " ")} | ${plan.destination.timeframe} ${plan.destination.kind.toLowerCase()} destination ${formatPrice(plan.destination.level)}`;
+        figures.replaceChildren();
+        [
+          `Entry ${formatPrice(plan.entry.level)}`,
+          `SL ${formatPrice(plan.invalidation.level)}`,
+          `TP ${formatPrice(plan.destination.level)}`,
+          `M15 ${plan.m15_setup.setup_family.replaceAll("_", " ")}`,
+        ].forEach(value => { const span = document.createElement("span"); span.textContent = value; figures.appendChild(span); });
+        draw(root.querySelector("#jhp-h1"), "H1", sample);
+        draw(root.querySelector("#jhp-m15"), "M15", sample);
+        draw(root.querySelector("#jhp-m5"), "M5", sample);
+        footer.textContent = plan.family === "TREND"
+          ? "Trend: H1 governs direction and the target is a known unconsumed H1 swing."
+          : "Range: entry is in the directional half and the target is internal M15 liquidity, never the opposite H1 boundary.";
+        root.dataset.selectedPlan = plan.plan_identity;
+        root.dataset.selectedFamily = plan.family;
+        root.dataset.selectedDirection = plan.direction;
+      }
+
+      data.samples.forEach((sample, index) => {
+        const option = document.createElement("option"); option.value = String(index);
+        option.textContent = `${String(index + 1).padStart(2, "0")} | ${sample.plan.title}`;
+        select.appendChild(option);
+      });
+      select.addEventListener("change", () => { selected = Number(select.value); render(); });
+      root.querySelector("#jhp-prev").addEventListener("click", () => { selected = (selected - 1 + data.samples.length) % data.samples.length; render(); });
+      root.querySelector("#jhp-next").addEventListener("click", () => { selected = (selected + 1) % data.samples.length; render(); });
+      render();
+      const observer = new ResizeObserver(() => { clearTimeout(resizeTimer); resizeTimer = setTimeout(render, 70); });
+      observer.observe(root);
+    })();
+  </script>
+</div>

@@ -1,0 +1,57 @@
+{
+  "version": "GOLD_MAY_2022_H1_CONFIRMATION_ONLY_CONTINUOUS_CHART_V1_BROWSER_CERT",
+  "verdict": "PASS_WHITE_CONTINUOUS_MONTH_BROWSER_REGRESSION",
+  "month": "May 2022",
+  "html": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/may_2022/gold-may-2022-h1-confirmation-only-continuous-chart.html",
+  "html_sha256": "1f848dbf51ad7a555af247c38fc07b29dfa82c68aa6b9bf771c60f5a1ef2f1f0",
+  "executed_trades": 61,
+  "net_r": 7.38666944995132,
+  "bars": {
+    "H1": 451,
+    "M15": 1959,
+    "M5": 5977
+  },
+  "theme": {
+    "background": "rgb(255, 255, 255)",
+    "color": "rgb(17, 24, 39)",
+    "frameFill": "rgb(255, 255, 255)"
+  },
+  "controls_verified": [
+    "H1",
+    "M15",
+    "M5",
+    "pan-right",
+    "zoom-in",
+    "full-month",
+    "ledger-selection"
+  ],
+  "local_trade_line_gate": true,
+  "responsive": [
+    {
+      "viewport": {
+        "width": 1180,
+        "height": 920
+      },
+      "screenshot": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/may_2022/screenshots/may-2022-chart-1180.png",
+      "screenshot_sha256": "782f6f3a49c0696288759acb4329dddef973bbeab05f08e13c29e0ebca107901"
+    },
+    {
+      "viewport": {
+        "width": 736,
+        "height": 900
+      },
+      "screenshot": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/may_2022/screenshots/may-2022-chart-736.png",
+      "screenshot_sha256": "9d238a65e5dedc6acd87ed48619e6a1f105572aea34e644b69e4971556164b17"
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 860
+      },
+      "screenshot": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/may_2022/screenshots/may-2022-chart-360.png",
+      "screenshot_sha256": "838ebdab6c27d7917fb5c686d618d725985c837d2d858e2c6a6c1c81d1d8e5ed"
+    }
+  ],
+  "browser_errors": [],
+  "certification_sha256": "abeaf078eaf9c6e4a81000502e5d92e214580925d92a7173513098fde2ceb7db"
+}

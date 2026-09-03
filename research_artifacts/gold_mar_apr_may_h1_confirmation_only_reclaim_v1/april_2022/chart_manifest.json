@@ -1,0 +1,45 @@
+{
+  "data_sha256": "6ba0aeafaa00c6ac121d3ef9cb4f2f3489b77fa9954fce63a62361b31b527e0a",
+  "executed_trades": 60,
+  "files": [
+    {
+      "bytes": 61819,
+      "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/result.json",
+      "sha256": "5bceb20a208461b7e72149bbf676aba9a51a07c699e227814f544ac88acc6072"
+    },
+    {
+      "bytes": 365517,
+      "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/chart_data.json",
+      "sha256": "0258a0c74ec7b80aebe7532a12c2706769fbbb8dd7c1e3e611ba94b0847a98b3"
+    },
+    {
+      "bytes": 1015,
+      "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/report.md",
+      "sha256": "39730e07ddca2d20a72805a5407fdadef1f022c1f6de42e83dec6c0f0ea1693c"
+    },
+    {
+      "bytes": 21421,
+      "path": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/february-h1-confirmation-only-continuous.template.html",
+      "sha256": "40f42c4d5fddb4a96028c6f58f2b3e898d8a3179da8b4c9372fe74eebd5c150b"
+    },
+    {
+      "bytes": 7522,
+      "path": "tools/render_gold_mar_apr_may_h1_confirmation_only_reclaim_v1.py",
+      "sha256": "e5346fc18d32d6cec522bd69a47b3bcf5175b4d8d15fbdd2a186ac15af7f9161"
+    },
+    {
+      "bytes": 21481,
+      "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/april-2022-confirmation-only.template.html",
+      "sha256": "27e5b208cf02ea26b3dc0834147bbd113fa5f02038b206b610f5361686b99944"
+    },
+    {
+      "bytes": 404156,
+      "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/gold-april-2022-h1-confirmation-only-continuous-chart.html",
+      "sha256": "7f72419e4062e035a3416efe91fc55012e8bbc257826bc4ea512ee68d8d6b448"
+    }
+  ],
+  "manifest_sha256": "72a103e8747b8469d186a8cd3089896b16b7b0a9851f4a749897ad2e7c268f47",
+  "month": "April 2022",
+  "verdict": "PASS_DETERMINISTIC_CHART_RENDER",
+  "version": "GOLD_APRIL_2022_H1_CONFIRMATION_ONLY_CONTINUOUS_CHART_V1_MANIFEST"
+}

@@ -1,0 +1,100 @@
+{
+  "coverage_sha256": "adfa276341d1b4e663bef6db967bc409b839e41bdb51374111e6c8c50e38fe7e",
+  "frozen_plan_count": 12,
+  "frozen_plan_manifest_sha256": "7d28ecbff4c5702f479e536993f139a8403ca47eb4145796d4114073718a66e2",
+  "outcomes_sha256": "67a1d747efcd74b8ff6419a383619f755ceb34c56d12af051b9a1d28393be3f0",
+  "period": {
+    "endExclusive": "2022-02-01T00:00:00Z",
+    "start": "2022-01-01T00:00:00Z"
+  },
+  "primary": {
+    "15m": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 11333,
+      "first_january_open_at": "2022-01-03T01:15:00Z",
+      "january_rows": 1877,
+      "january_rows_sha256": "e86130568d98c4ba716c4240cd9c87f7b67f2e7d1707d1f675296767128930cf",
+      "last_january_available_at": "2022-01-31T23:45:00Z",
+      "merged_rows": 3356
+    },
+    "1h": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 8640,
+      "first_january_open_at": "2022-01-03T02:00:00Z",
+      "january_rows": 436,
+      "january_rows_sha256": "13ed8fbf7b3efbb8a2c75bcbe6b0a95f3bd7f166b376a9d26fb96a054db06ff0",
+      "last_january_available_at": "2022-01-31T23:00:00Z",
+      "merged_rows": 988
+    },
+    "1m": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 39374,
+      "first_january_open_at": "2022-01-03T01:02:00Z",
+      "january_rows": 28756,
+      "january_rows_sha256": "40c92a12aeae289a7de1207372a1fa7e56e4655ec0fcdab3156dae21ae8d391f",
+      "last_january_available_at": "2022-01-31T23:59:00Z",
+      "merged_rows": 46775
+    },
+    "5m": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 16581,
+      "first_january_open_at": "2022-01-03T01:05:00Z",
+      "january_rows": 5721,
+      "january_rows_sha256": "2540274396f4dcdf40f00dc88f3938d2e24beba8bacd2272cfda6f8bdc6f82b3",
+      "last_january_available_at": "2022-01-31T23:55:00Z",
+      "merged_rows": 9608
+    }
+  },
+  "primary_reference_outcomes_exact": true,
+  "primary_reference_rows_exact": true,
+  "reference": {
+    "15m": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 11333,
+      "first_january_open_at": "2022-01-03T01:15:00Z",
+      "january_rows": 1877,
+      "january_rows_sha256": "e86130568d98c4ba716c4240cd9c87f7b67f2e7d1707d1f675296767128930cf",
+      "last_january_available_at": "2022-01-31T23:45:00Z",
+      "merged_rows": 3356
+    },
+    "1h": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 8640,
+      "first_january_open_at": "2022-01-03T02:00:00Z",
+      "january_rows": 436,
+      "january_rows_sha256": "13ed8fbf7b3efbb8a2c75bcbe6b0a95f3bd7f166b376a9d26fb96a054db06ff0",
+      "last_january_available_at": "2022-01-31T23:00:00Z",
+      "merged_rows": 988
+    },
+    "1m": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 39374,
+      "first_january_open_at": "2022-01-03T01:02:00Z",
+      "january_rows": 28756,
+      "january_rows_sha256": "40c92a12aeae289a7de1207372a1fa7e56e4655ec0fcdab3156dae21ae8d391f",
+      "last_january_available_at": "2022-01-31T23:59:00Z",
+      "merged_rows": 46775
+    },
+    "5m": {
+      "conflicting_overlaps": 0,
+      "duplicate_equal_overlap_emissions": 16581,
+      "first_january_open_at": "2022-01-03T01:05:00Z",
+      "january_rows": 5721,
+      "january_rows_sha256": "2540274396f4dcdf40f00dc88f3938d2e24beba8bacd2272cfda6f8bdc6f82b3",
+      "last_january_available_at": "2022-01-31T23:55:00Z",
+      "merged_rows": 9608
+    }
+  },
+  "summary": {
+    "gross_r_average": -0.031978643713214454,
+    "gross_r_sum": -0.3837437245585734,
+    "month_end_marks": 1,
+    "plans": 12,
+    "resolved_hit_rate": 0.2727272727272727,
+    "stop_first_ambiguous": 0,
+    "stops": 8,
+    "target_hits": 3
+  },
+  "verdict": "PASS_PRIMARY_REFERENCE_OUTCOME_REPRODUCTION",
+  "version": "GOLD_JANUARY_H1_GOVERNED_TRADE_OUTCOME_COVERAGE_V1"
+}

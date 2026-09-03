@@ -1,0 +1,1788 @@
+[
+  {
+    "decision_at": "2022-01-03T10:50:00Z",
+    "destination": {
+      "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+      "identity": "4e276cf6cfbeedb2326485a49ad881a13a460590a2cbd0e8939703ee3c86cbe0",
+      "kind": "HIGH",
+      "known_at": "2022-01-03T06:00:00Z",
+      "level": 1831.56,
+      "liquidity_state": "UNCONSUMED_UNTOUCHED",
+      "role": "H1_LIQUIDITY_SWING",
+      "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+      "timeframe": "H1"
+    },
+    "direction": "LONG",
+    "entry": {
+      "activated_at": "2022-01-03T10:50:00Z",
+      "level": 1822.74,
+      "source": "M5_CONFIRMED_RETEST_CLOSE"
+    },
+    "epistemic_status": {
+      "auction_interpretation": "INFERRED",
+      "ohlc": "OBSERVED_SEALED_XAUUSD",
+      "resting_orders_or_institutional_intent": "UNKNOWN",
+      "structure_and_liquidity_roles": "CALCULATED"
+    },
+    "family": "TREND",
+    "governing_h1_auction": {
+      "governing_invalidation_level": 1815.15,
+      "known_at": "2022-01-03T06:00:00Z",
+      "range": null,
+      "role": "GOVERNS_DIRECTION_AND_DESTINATION_NOT_ENTRY",
+      "state": "UPTREND"
+    },
+    "guards": {
+      "h1_governs": true,
+      "m15_sets_up": true,
+      "m5_executes": true,
+      "outcome_data_present": false,
+      "performance_calculated": false,
+      "range_target_is_internal_not_extreme": false,
+      "trend_target_is_h1_swing": true
+    },
+    "h1_context_identity": "cbff11b5679b3879db1b5fb93b84befa4875a0f43096b1c64b3b35e0f545241f",
+    "invalidation": {
+      "governing_h1_level": 1815.15,
+      "level": 1821.57,
+      "source": "BEYOND_M5_TURN_RETEST_CURVATURE"
+    },
+    "m15_setup": {
+      "controlling_swing": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "1264aa4078502e57bb1d5c7d487d1f0de7828d9190f9d61cf315d0fee4d375f0",
+        "kind": "LOW",
+        "known_at": "2022-01-03T09:45:00Z",
+        "level": 1821.05,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "timeframe": "M15"
+      },
+      "identity": "2499fb321ceda43d8400b0569ecfdac1ef8ef90a2875626f01f192d749ee0853",
+      "known_at": "2022-01-03T10:45:00Z",
+      "role": "LOCAL_LOCATION_AND_TURNING_STRUCTURE",
+      "setup_family": "PULLBACK_TO_CURVATURE",
+      "zone_lower": 1821.43304,
+      "zone_upper": 1822.0412
+    },
+    "m5_execution": {
+      "identity": "cef41c3a3a6be306d83334447f087d6286343877f97bee393b2aa7fffbb69ebc",
+      "retest_extreme": 1822.03,
+      "retest_known_at": "2022-01-03T10:50:00Z",
+      "role": "ENTRY_TIMING_AND_LOCAL_INVALIDATION",
+      "sequence": "TURN_THEN_FIRST_VALID_RETEST",
+      "turn_extreme": 1821.59,
+      "turn_known_at": "2022-01-03T10:45:00Z"
+    },
+    "plan_identity": "15e17e3dff922f0559d2f42d1b16af14fe3257b66c8d5d62a6f8bd3d4f12d3a7",
+    "plan_sha256": "d3e7c3cc0453efbbe9c4c1520f2765c54fd80aff466ba69245dd8b74e7631d7a",
+    "ruleset": "GOLD_H1_GOVERNED_TRADE_PLAN_SEMANTICS_V1",
+    "sample_id": "e51c6f4b9807066f577f",
+    "scanner_plan_sha256": "a94d8c34cd4d3a2b79577b08302530a5b8c160d3a295184713f1e16d281ce2c0",
+    "scanner_ruleset": "GOLD_H1_GOVERNED_TRADE_SCANNER_V1",
+    "source_evidence": {
+      "h1_destination": {
+        "identity": "4e276cf6cfbeedb2326485a49ad881a13a460590a2cbd0e8939703ee3c86cbe0",
+        "kind": "HIGH",
+        "known_at": "2022-01-03T06:00:00Z",
+        "level": 1831.56,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-03T03:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_governing_control": {
+        "identity": "39642b761d6f995e6804e89bc40a3731e76f57be84871946b192c2d18cec85df",
+        "kind": "LOW",
+        "known_at": "2021-12-31T13:00:00Z",
+        "level": 1815.15,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2021-12-31T10:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_structure_relations": {
+        "high": "HH",
+        "low": "HL"
+      },
+      "m15_control": {
+        "identity": "1264aa4078502e57bb1d5c7d487d1f0de7828d9190f9d61cf315d0fee4d375f0",
+        "kind": "LOW",
+        "known_at": "2022-01-03T09:45:00Z",
+        "level": 1821.05,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-03T09:00:00Z",
+        "timeframe": "M15"
+      },
+      "m15_terminal": {
+        "identity": "193cf9c8c790fc56f4f12d432b69114c88a6ec44b5b7b90079f7cf422ac7e406",
+        "kind": "HIGH",
+        "known_at": "2022-01-03T10:45:00Z",
+        "level": 1824.41,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-03T10:00:00Z",
+        "timeframe": "M15"
+      },
+      "m5_retest": {
+        "available_at": "2022-01-03T10:50:00Z",
+        "bar_id": "a15d039c0000c07e5534108564097186cd551f331efa59310774c896644405fb",
+        "open_at": "2022-01-03T10:45:00Z"
+      },
+      "m5_turn": {
+        "available_at": "2022-01-03T10:45:00Z",
+        "bar_id": "0a8cd3b8b35ad9a75299b5f051c0d97310f3e51baa99783cce254c14b381d737",
+        "open_at": "2022-01-03T10:40:00Z"
+      },
+      "selected_destination": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "4e276cf6cfbeedb2326485a49ad881a13a460590a2cbd0e8939703ee3c86cbe0",
+        "kind": "HIGH",
+        "known_at": "2022-01-03T06:00:00Z",
+        "level": 1831.56,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-03T03:00:00Z",
+        "role": "H1_LIQUIDITY_SWING",
+        "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+        "timeframe": "H1"
+      }
+    },
+    "source_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+    "synthetic": false,
+    "title": "01-03 10:50 \u00b7 TREND \u00b7 LONG"
+  },
+  {
+    "decision_at": "2022-01-04T08:25:00Z",
+    "destination": {
+      "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+      "identity": "cb16de5cd0afcb4e2ea47cb187f929a4cf9bdc77e866156ca5f7f074bbe66bea",
+      "kind": "LOW",
+      "known_at": "2022-01-03T21:00:00Z",
+      "level": 1798.37,
+      "liquidity_state": "UNCONSUMED_UNTOUCHED",
+      "role": "H1_LIQUIDITY_SWING",
+      "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+      "timeframe": "H1"
+    },
+    "direction": "SHORT",
+    "entry": {
+      "activated_at": "2022-01-04T08:25:00Z",
+      "level": 1804.25,
+      "source": "M5_CONFIRMED_RETEST_CLOSE"
+    },
+    "epistemic_status": {
+      "auction_interpretation": "INFERRED",
+      "ohlc": "OBSERVED_SEALED_XAUUSD",
+      "resting_orders_or_institutional_intent": "UNKNOWN",
+      "structure_and_liquidity_roles": "CALCULATED"
+    },
+    "family": "TREND",
+    "governing_h1_auction": {
+      "governing_invalidation_level": 1807.12,
+      "known_at": "2022-01-04T07:00:00Z",
+      "range": null,
+      "role": "GOVERNS_DIRECTION_AND_DESTINATION_NOT_ENTRY",
+      "state": "DOWNTREND"
+    },
+    "guards": {
+      "h1_governs": true,
+      "m15_sets_up": true,
+      "m5_executes": true,
+      "outcome_data_present": false,
+      "performance_calculated": false,
+      "range_target_is_internal_not_extreme": false,
+      "trend_target_is_h1_swing": true
+    },
+    "h1_context_identity": "aba7c4f9470989a3beda3e6287a6958372de43ca73350c0cd2b18a58de92e8dd",
+    "invalidation": {
+      "governing_h1_level": 1807.12,
+      "level": 1806.06,
+      "source": "BEYOND_M5_TURN_RETEST_CURVATURE"
+    },
+    "m15_setup": {
+      "controlling_swing": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "f0a5c9151c56dee9cd08daf0745c09c108501888246554372c07afde358c8dc0",
+        "kind": "HIGH",
+        "known_at": "2022-01-04T05:00:00Z",
+        "level": 1807.12,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "timeframe": "M15"
+      },
+      "identity": "c19058007e754180844d7609a43d868efb5d3abf880b600242316ba82e15e2ab",
+      "known_at": "2022-01-04T07:45:00Z",
+      "role": "LOCAL_LOCATION_AND_TURNING_STRUCTURE",
+      "setup_family": "PULLBACK_TO_CURVATURE",
+      "zone_lower": 1805.9783499999999,
+      "zone_upper": 1806.6788199999999
+    },
+    "m5_execution": {
+      "identity": "9fbd3d767defaa953a92d8b92f90ddd8c623c194f4956951237642d189d0b001",
+      "retest_extreme": 1805.0,
+      "retest_known_at": "2022-01-04T08:25:00Z",
+      "role": "ENTRY_TIMING_AND_LOCAL_INVALIDATION",
+      "sequence": "TURN_THEN_FIRST_VALID_RETEST",
+      "turn_extreme": 1806.04,
+      "turn_known_at": "2022-01-04T08:20:00Z"
+    },
+    "plan_identity": "331b7d0e13a3a701bf52f4d8a70990ee5a505a0078f0ed25d50efd5d9f2484ea",
+    "plan_sha256": "a88daf95023128f3dca017ca6d4c54e5b604e3efa569b125490c5c19e6f2be60",
+    "ruleset": "GOLD_H1_GOVERNED_TRADE_PLAN_SEMANTICS_V1",
+    "sample_id": "93dba56f091816a2ab64",
+    "scanner_plan_sha256": "c1ff126765efd02a9877088f1b3f57f9bd07d96d1cac4bd055326934b24bd4b1",
+    "scanner_ruleset": "GOLD_H1_GOVERNED_TRADE_SCANNER_V1",
+    "source_evidence": {
+      "h1_destination": {
+        "identity": "cb16de5cd0afcb4e2ea47cb187f929a4cf9bdc77e866156ca5f7f074bbe66bea",
+        "kind": "LOW",
+        "known_at": "2022-01-03T21:00:00Z",
+        "level": 1798.37,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-03T18:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_governing_control": {
+        "identity": "6287aee92722c482893d3b9fd92a617e96e754176b43a35667b6f6d15c4c7a69",
+        "kind": "HIGH",
+        "known_at": "2022-01-04T07:00:00Z",
+        "level": 1807.12,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-04T04:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_structure_relations": {
+        "high": "LH",
+        "low": "LL"
+      },
+      "m15_control": {
+        "identity": "f0a5c9151c56dee9cd08daf0745c09c108501888246554372c07afde358c8dc0",
+        "kind": "HIGH",
+        "known_at": "2022-01-04T05:00:00Z",
+        "level": 1807.12,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-04T04:15:00Z",
+        "timeframe": "M15"
+      },
+      "m15_terminal": {
+        "identity": "04c5d511c05f4db6ca701c074de82ec2636327dfe31514486f5cd5ec032c536e",
+        "kind": "LOW",
+        "known_at": "2022-01-04T07:45:00Z",
+        "level": 1803.25,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-04T07:00:00Z",
+        "timeframe": "M15"
+      },
+      "m5_retest": {
+        "available_at": "2022-01-04T08:25:00Z",
+        "bar_id": "58e697842621697ac7807fe5d8155869c741fdccd05977e9f53ee0bc8cfbb6ef",
+        "open_at": "2022-01-04T08:20:00Z"
+      },
+      "m5_turn": {
+        "available_at": "2022-01-04T08:20:00Z",
+        "bar_id": "41265a1c90b49873df7e3cec0a94c51959f5d73b58b60e36c0cdd1a184341d11",
+        "open_at": "2022-01-04T08:15:00Z"
+      },
+      "selected_destination": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "cb16de5cd0afcb4e2ea47cb187f929a4cf9bdc77e866156ca5f7f074bbe66bea",
+        "kind": "LOW",
+        "known_at": "2022-01-03T21:00:00Z",
+        "level": 1798.37,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-03T18:00:00Z",
+        "role": "H1_LIQUIDITY_SWING",
+        "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+        "timeframe": "H1"
+      }
+    },
+    "source_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+    "synthetic": false,
+    "title": "01-04 08:25 \u00b7 TREND \u00b7 SHORT"
+  },
+  {
+    "decision_at": "2022-01-05T04:10:00Z",
+    "destination": {
+      "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+      "identity": "87579bf17803c161c79c786ebc71d834458d88e7200e5cb423820dac0d26cc65",
+      "kind": "LOW",
+      "known_at": "2022-01-04T17:00:00Z",
+      "level": 1798.61,
+      "liquidity_state": "UNCONSUMED_UNTOUCHED",
+      "role": "H1_LIQUIDITY_SWING",
+      "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+      "timeframe": "H1"
+    },
+    "direction": "SHORT",
+    "entry": {
+      "activated_at": "2022-01-05T04:10:00Z",
+      "level": 1814.32,
+      "source": "M5_CONFIRMED_RETEST_CLOSE"
+    },
+    "epistemic_status": {
+      "auction_interpretation": "INFERRED",
+      "ohlc": "OBSERVED_SEALED_XAUUSD",
+      "resting_orders_or_institutional_intent": "UNKNOWN",
+      "structure_and_liquidity_roles": "CALCULATED"
+    },
+    "family": "TREND",
+    "governing_h1_auction": {
+      "governing_invalidation_level": 1815.4,
+      "known_at": "2022-01-05T04:00:00Z",
+      "range": null,
+      "role": "GOVERNS_DIRECTION_AND_DESTINATION_NOT_ENTRY",
+      "state": "DOWNTREND"
+    },
+    "guards": {
+      "h1_governs": true,
+      "m15_sets_up": true,
+      "m5_executes": true,
+      "outcome_data_present": false,
+      "performance_calculated": false,
+      "range_target_is_internal_not_extreme": false,
+      "trend_target_is_h1_swing": true
+    },
+    "h1_context_identity": "ba7a98b8729f1d12640ce949cf8e29b54337f759b650a8d6dd41aa5e9af4f3e4",
+    "invalidation": {
+      "governing_h1_level": 1815.4,
+      "level": 1815.3899999999999,
+      "source": "BEYOND_M5_TURN_RETEST_CURVATURE"
+    },
+    "m15_setup": {
+      "controlling_swing": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "54441a07b424d611f7ca095ab4242f0c0fd6c08cbede0658d459507b0d276f4a",
+        "kind": "HIGH",
+        "known_at": "2022-01-04T18:30:00Z",
+        "level": 1816.75,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "timeframe": "M15"
+      },
+      "identity": "1fd5e661eff774d4f9775db771796f1002200f0d61bff3bb46c80c8163c50612",
+      "known_at": "2022-01-04T19:30:00Z",
+      "role": "LOCAL_LOCATION_AND_TURNING_STRUCTURE",
+      "setup_family": "PULLBACK_TO_CURVATURE",
+      "zone_lower": 1815.24845,
+      "zone_upper": 1816.16974
+    },
+    "m5_execution": {
+      "identity": "bb2a3c8b8f0986f96698228421bdd000c19b0a599baed4f15870903dc1a6a07e",
+      "retest_extreme": 1814.91,
+      "retest_known_at": "2022-01-05T04:10:00Z",
+      "role": "ENTRY_TIMING_AND_LOCAL_INVALIDATION",
+      "sequence": "TURN_THEN_FIRST_VALID_RETEST",
+      "turn_extreme": 1815.37,
+      "turn_known_at": "2022-01-05T04:05:00Z"
+    },
+    "plan_identity": "b504e33c1199d55c3ea8d11659defc889b5d48a1b60f4461bad4545865a7beeb",
+    "plan_sha256": "33e6080e64521a553b9200fb5027cd77161d860ffd9741c5b928da28d0ff6eb0",
+    "ruleset": "GOLD_H1_GOVERNED_TRADE_PLAN_SEMANTICS_V1",
+    "sample_id": "e1e3f61e7dc804e112a1",
+    "scanner_plan_sha256": "410a1e06b2663c11d5686f1e2cf924dd20fb5182d81d4b4f5c71d3cdf5954263",
+    "scanner_ruleset": "GOLD_H1_GOVERNED_TRADE_SCANNER_V1",
+    "source_evidence": {
+      "h1_destination": {
+        "identity": "87579bf17803c161c79c786ebc71d834458d88e7200e5cb423820dac0d26cc65",
+        "kind": "LOW",
+        "known_at": "2022-01-04T17:00:00Z",
+        "level": 1798.61,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-04T14:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_governing_control": {
+        "identity": "83124f32b67078b75c686adbe3bcec72fafb658ed77408d0cecb3e6733fcb85f",
+        "kind": "HIGH",
+        "known_at": "2022-01-05T04:00:00Z",
+        "level": 1815.4,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-04T22:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_structure_relations": {
+        "high": "LH",
+        "low": "LL"
+      },
+      "m15_control": {
+        "identity": "54441a07b424d611f7ca095ab4242f0c0fd6c08cbede0658d459507b0d276f4a",
+        "kind": "HIGH",
+        "known_at": "2022-01-04T18:30:00Z",
+        "level": 1816.75,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-04T17:45:00Z",
+        "timeframe": "M15"
+      },
+      "m15_terminal": {
+        "identity": "6e2557d7779d60e90addd9ada52fb733ddb076c8f36f0e393c58e8db68b6d712",
+        "kind": "LOW",
+        "known_at": "2022-01-04T19:30:00Z",
+        "level": 1811.66,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-04T18:45:00Z",
+        "timeframe": "M15"
+      },
+      "m5_retest": {
+        "available_at": "2022-01-05T04:10:00Z",
+        "bar_id": "6247b1765ac34c0f25bd336faff65fcb0024ff207138dabb9fb06cf1e6e99ddd",
+        "open_at": "2022-01-05T04:05:00Z"
+      },
+      "m5_turn": {
+        "available_at": "2022-01-05T04:05:00Z",
+        "bar_id": "ba85cd3d4eccc71874ff3c09996a32ce6090c2cf3838286551f27ef623c5286a",
+        "open_at": "2022-01-05T04:00:00Z"
+      },
+      "selected_destination": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "87579bf17803c161c79c786ebc71d834458d88e7200e5cb423820dac0d26cc65",
+        "kind": "LOW",
+        "known_at": "2022-01-04T17:00:00Z",
+        "level": 1798.61,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-04T14:00:00Z",
+        "role": "H1_LIQUIDITY_SWING",
+        "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+        "timeframe": "H1"
+      }
+    },
+    "source_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+    "synthetic": false,
+    "title": "01-05 04:10 \u00b7 TREND \u00b7 SHORT"
+  },
+  {
+    "decision_at": "2022-01-07T02:20:00Z",
+    "destination": {
+      "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+      "identity": "8b749de1e57c4e4a384a3e40f36fac18fee156329cc09bf964b2de64360e80b8",
+      "kind": "LOW",
+      "known_at": "2021-12-22T13:00:00Z",
+      "level": 1785.88,
+      "liquidity_state": "UNCONSUMED_UNTOUCHED",
+      "role": "H1_LIQUIDITY_SWING",
+      "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+      "timeframe": "H1"
+    },
+    "direction": "SHORT",
+    "entry": {
+      "activated_at": "2022-01-07T02:20:00Z",
+      "level": 1791.51,
+      "source": "M5_CONFIRMED_RETEST_CLOSE"
+    },
+    "epistemic_status": {
+      "auction_interpretation": "INFERRED",
+      "ohlc": "OBSERVED_SEALED_XAUUSD",
+      "resting_orders_or_institutional_intent": "UNKNOWN",
+      "structure_and_liquidity_roles": "CALCULATED"
+    },
+    "family": "TREND",
+    "governing_h1_auction": {
+      "governing_invalidation_level": 1807.15,
+      "known_at": "2022-01-06T18:00:00Z",
+      "range": null,
+      "role": "GOVERNS_DIRECTION_AND_DESTINATION_NOT_ENTRY",
+      "state": "DOWNTREND"
+    },
+    "guards": {
+      "h1_governs": true,
+      "m15_sets_up": true,
+      "m5_executes": true,
+      "outcome_data_present": false,
+      "performance_calculated": false,
+      "range_target_is_internal_not_extreme": false,
+      "trend_target_is_h1_swing": true
+    },
+    "h1_context_identity": "245d44b1f63b7e455be38eb445b0dedb7c2fceadcb4eeab88fc71c9d47389621",
+    "invalidation": {
+      "governing_h1_level": 1807.15,
+      "level": 1791.97,
+      "source": "BEYOND_M5_TURN_RETEST_CURVATURE"
+    },
+    "m15_setup": {
+      "controlling_swing": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "25a6c664515c2386271aedf053f5ae6130e90e60f9465300437b6c1991346c53",
+        "kind": "HIGH",
+        "known_at": "2022-01-06T20:15:00Z",
+        "level": 1793.53,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "timeframe": "M15"
+      },
+      "identity": "b6fa157501ff4b9d5467375d32667eb81995983f34b623b198a2073213bc7501",
+      "known_at": "2022-01-06T21:45:00Z",
+      "role": "LOCAL_LOCATION_AND_TURNING_STRUCTURE",
+      "setup_family": "PULLBACK_TO_CURVATURE",
+      "zone_lower": 1791.4414,
+      "zone_upper": 1792.72288
+    },
+    "m5_execution": {
+      "identity": "d9735824ec932add6b733aef7e5d05e4ab97eb30f917987791b22f51f145348a",
+      "retest_extreme": 1791.74,
+      "retest_known_at": "2022-01-07T02:20:00Z",
+      "role": "ENTRY_TIMING_AND_LOCAL_INVALIDATION",
+      "sequence": "TURN_THEN_FIRST_VALID_RETEST",
+      "turn_extreme": 1791.95,
+      "turn_known_at": "2022-01-07T02:15:00Z"
+    },
+    "plan_identity": "b546782224a394364cf04d7426fe90aed15d65fc49c21b79949e87eb1518405e",
+    "plan_sha256": "ac4d36792bd5eee8531eaa4d89b9afca9f5cb80d4fccacef311c63dc232829b6",
+    "ruleset": "GOLD_H1_GOVERNED_TRADE_PLAN_SEMANTICS_V1",
+    "sample_id": "1fe8f68ae4acd0b4506e",
+    "scanner_plan_sha256": "693d76881ec046056f9bee790be174ca878a2b422ecab410d92f28fc5c2afbb1",
+    "scanner_ruleset": "GOLD_H1_GOVERNED_TRADE_SCANNER_V1",
+    "source_evidence": {
+      "h1_destination": {
+        "identity": "8b749de1e57c4e4a384a3e40f36fac18fee156329cc09bf964b2de64360e80b8",
+        "kind": "LOW",
+        "known_at": "2021-12-22T13:00:00Z",
+        "level": 1785.88,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2021-12-22T10:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_governing_control": {
+        "identity": "edacd267d4603dcf3fb5c6a65317fb44c5bb8de10c8339b377d8ebd6b0ac5075",
+        "kind": "HIGH",
+        "known_at": "2022-01-06T15:00:00Z",
+        "level": 1807.15,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-06T12:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_structure_relations": {
+        "high": "LH",
+        "low": "LL"
+      },
+      "m15_control": {
+        "identity": "25a6c664515c2386271aedf053f5ae6130e90e60f9465300437b6c1991346c53",
+        "kind": "HIGH",
+        "known_at": "2022-01-06T20:15:00Z",
+        "level": 1793.53,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-06T19:30:00Z",
+        "timeframe": "M15"
+      },
+      "m15_terminal": {
+        "identity": "767f5adc5b3004d9d67ddee050a12f83a8ac3e4d55b535388d9289580031649f",
+        "kind": "LOW",
+        "known_at": "2022-01-06T21:45:00Z",
+        "level": 1786.45,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-06T21:00:00Z",
+        "timeframe": "M15"
+      },
+      "m5_retest": {
+        "available_at": "2022-01-07T02:20:00Z",
+        "bar_id": "069f52863f4776f0e630450090005dd210c487cbf7a4d382373ab6750d52c180",
+        "open_at": "2022-01-07T02:15:00Z"
+      },
+      "m5_turn": {
+        "available_at": "2022-01-07T02:15:00Z",
+        "bar_id": "7b020478087175bc561aab674d02ccb9bf9c12209692186c488deef8d0a26cc8",
+        "open_at": "2022-01-07T02:10:00Z"
+      },
+      "selected_destination": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "8b749de1e57c4e4a384a3e40f36fac18fee156329cc09bf964b2de64360e80b8",
+        "kind": "LOW",
+        "known_at": "2021-12-22T13:00:00Z",
+        "level": 1785.88,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2021-12-22T10:00:00Z",
+        "role": "H1_LIQUIDITY_SWING",
+        "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+        "timeframe": "H1"
+      }
+    },
+    "source_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+    "synthetic": false,
+    "title": "01-07 02:20 \u00b7 TREND \u00b7 SHORT"
+  },
+  {
+    "decision_at": "2022-01-13T14:50:00Z",
+    "destination": {
+      "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+      "identity": "d3ab57cdda6153a54a0a9c303f3061b4d42bc73754746364adddb56c4e53785c",
+      "kind": "LOW",
+      "known_at": "2022-01-13T14:00:00Z",
+      "level": 1819.05,
+      "liquidity_state": "UNCONSUMED_UNTOUCHED",
+      "role": "H1_LIQUIDITY_SWING",
+      "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+      "timeframe": "H1"
+    },
+    "direction": "SHORT",
+    "entry": {
+      "activated_at": "2022-01-13T14:50:00Z",
+      "level": 1824.34,
+      "source": "M5_CONFIRMED_RETEST_CLOSE"
+    },
+    "epistemic_status": {
+      "auction_interpretation": "INFERRED",
+      "ohlc": "OBSERVED_SEALED_XAUUSD",
+      "resting_orders_or_institutional_intent": "UNKNOWN",
+      "structure_and_liquidity_roles": "CALCULATED"
+    },
+    "family": "TREND",
+    "governing_h1_auction": {
+      "governing_invalidation_level": 1827.64,
+      "known_at": "2022-01-13T14:00:00Z",
+      "range": null,
+      "role": "GOVERNS_DIRECTION_AND_DESTINATION_NOT_ENTRY",
+      "state": "DOWNTREND"
+    },
+    "guards": {
+      "h1_governs": true,
+      "m15_sets_up": true,
+      "m5_executes": true,
+      "outcome_data_present": false,
+      "performance_calculated": false,
+      "range_target_is_internal_not_extreme": false,
+      "trend_target_is_h1_swing": true
+    },
+    "h1_context_identity": "360537da057dd5fb0d444f9e83f2f71825e0dc71b7fa79f759ffba6685c0d383",
+    "invalidation": {
+      "governing_h1_level": 1827.64,
+      "level": 1825.69,
+      "source": "BEYOND_M5_TURN_RETEST_CURVATURE"
+    },
+    "m15_setup": {
+      "controlling_swing": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "a6c373796a537316b576cb9ed37ce74dda5d66cbd520c1d337c35ee892a745c2",
+        "kind": "HIGH",
+        "known_at": "2022-01-13T10:45:00Z",
+        "level": 1827.64,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "timeframe": "M15"
+      },
+      "identity": "a75b68f2657f040924929e5f81bcd48a11334b4df537b5e529d2a27cfb3017d7",
+      "known_at": "2022-01-13T11:45:00Z",
+      "role": "LOCAL_LOCATION_AND_TURNING_STRUCTURE",
+      "setup_family": "PULLBACK_TO_CURVATURE",
+      "zone_lower": 1825.1059500000001,
+      "zone_upper": 1826.66074
+    },
+    "m5_execution": {
+      "identity": "75cc0fa349c77875853a9345e7cb3c0c91c7e52710becb95020c18bf0d2dcbf7",
+      "retest_extreme": 1825.39,
+      "retest_known_at": "2022-01-13T14:50:00Z",
+      "role": "ENTRY_TIMING_AND_LOCAL_INVALIDATION",
+      "sequence": "TURN_THEN_FIRST_VALID_RETEST",
+      "turn_extreme": 1825.67,
+      "turn_known_at": "2022-01-13T14:45:00Z"
+    },
+    "plan_identity": "1cd6a05fba4b2c31290050f9c4ec15ed672a4dca0d42633a7fd2d678b9b706b4",
+    "plan_sha256": "17ac5f3b349071c82a5e60d04de97e3708c67864f67e2a1988e1215b56bacfec",
+    "ruleset": "GOLD_H1_GOVERNED_TRADE_PLAN_SEMANTICS_V1",
+    "sample_id": "2455f2a1e7f2a81f2952",
+    "scanner_plan_sha256": "e026407c92d223bfd98554e80489fe937202295fc577a074e932a69f3b5ce4ac",
+    "scanner_ruleset": "GOLD_H1_GOVERNED_TRADE_SCANNER_V1",
+    "source_evidence": {
+      "h1_destination": {
+        "identity": "d3ab57cdda6153a54a0a9c303f3061b4d42bc73754746364adddb56c4e53785c",
+        "kind": "LOW",
+        "known_at": "2022-01-13T14:00:00Z",
+        "level": 1819.05,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-13T11:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_governing_control": {
+        "identity": "5611883b5169d95590679fb71bae0b6591d38ada3c507da146c4a74e3f36c0db",
+        "kind": "HIGH",
+        "known_at": "2022-01-13T13:00:00Z",
+        "level": 1827.64,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-13T10:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_structure_relations": {
+        "high": "LH",
+        "low": "LL"
+      },
+      "m15_control": {
+        "identity": "a6c373796a537316b576cb9ed37ce74dda5d66cbd520c1d337c35ee892a745c2",
+        "kind": "HIGH",
+        "known_at": "2022-01-13T10:45:00Z",
+        "level": 1827.64,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-13T10:00:00Z",
+        "timeframe": "M15"
+      },
+      "m15_terminal": {
+        "identity": "ff8752ae3431cef46c1e552d26103dd2064fe88b9acc7b5cc528958a2b042f1e",
+        "kind": "LOW",
+        "known_at": "2022-01-13T11:45:00Z",
+        "level": 1819.05,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-13T11:00:00Z",
+        "timeframe": "M15"
+      },
+      "m5_retest": {
+        "available_at": "2022-01-13T14:50:00Z",
+        "bar_id": "bf42c6f1fe72ae5bfbda8c85b15c98cc4a20580edb1647375e95be88c74bbfed",
+        "open_at": "2022-01-13T14:45:00Z"
+      },
+      "m5_turn": {
+        "available_at": "2022-01-13T14:45:00Z",
+        "bar_id": "d104d52cde0d3118dbcec0d87a21f022a00c9a28f70871b0df8fc0cfef4cc8ce",
+        "open_at": "2022-01-13T14:40:00Z"
+      },
+      "selected_destination": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "d3ab57cdda6153a54a0a9c303f3061b4d42bc73754746364adddb56c4e53785c",
+        "kind": "LOW",
+        "known_at": "2022-01-13T14:00:00Z",
+        "level": 1819.05,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-13T11:00:00Z",
+        "role": "H1_LIQUIDITY_SWING",
+        "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+        "timeframe": "H1"
+      }
+    },
+    "source_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+    "synthetic": false,
+    "title": "01-13 14:50 \u00b7 TREND \u00b7 SHORT"
+  },
+  {
+    "decision_at": "2022-01-13T22:55:00Z",
+    "destination": {
+      "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+      "identity": "a8be86ec515cabc3604af0793f02b3c250b7c00b95bee7bafa5a493e17e78a20",
+      "kind": "LOW",
+      "known_at": "2022-01-13T21:00:00Z",
+      "level": 1812.31,
+      "liquidity_state": "UNCONSUMED_UNTOUCHED",
+      "role": "H1_LIQUIDITY_SWING",
+      "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+      "timeframe": "H1"
+    },
+    "direction": "SHORT",
+    "entry": {
+      "activated_at": "2022-01-13T22:55:00Z",
+      "level": 1821.06,
+      "source": "M5_CONFIRMED_RETEST_CLOSE"
+    },
+    "epistemic_status": {
+      "auction_interpretation": "INFERRED",
+      "ohlc": "OBSERVED_SEALED_XAUUSD",
+      "resting_orders_or_institutional_intent": "UNKNOWN",
+      "structure_and_liquidity_roles": "CALCULATED"
+    },
+    "family": "TREND",
+    "governing_h1_auction": {
+      "governing_invalidation_level": 1825.98,
+      "known_at": "2022-01-13T21:00:00Z",
+      "range": null,
+      "role": "GOVERNS_DIRECTION_AND_DESTINATION_NOT_ENTRY",
+      "state": "DOWNTREND"
+    },
+    "guards": {
+      "h1_governs": true,
+      "m15_sets_up": true,
+      "m5_executes": true,
+      "outcome_data_present": false,
+      "performance_calculated": false,
+      "range_target_is_internal_not_extreme": false,
+      "trend_target_is_h1_swing": true
+    },
+    "h1_context_identity": "046b8ffacf800f3e7a5963f7a6e40605f6421d42076079fddee1b7e645c5e9e9",
+    "invalidation": {
+      "governing_h1_level": 1825.98,
+      "level": 1822.43,
+      "source": "BEYOND_M5_TURN_RETEST_CURVATURE"
+    },
+    "m15_setup": {
+      "controlling_swing": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "868acd0c403cac59e72afa4a72f8396b0486d056d8f0577bf9715cb68f90a1a3",
+        "kind": "HIGH",
+        "known_at": "2022-01-13T15:15:00Z",
+        "level": 1825.98,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "timeframe": "M15"
+      },
+      "identity": "c8a910c0ae4d3d9a429f67b54cbbd6efda7733af6b0d0543995856bb3b0d6f51",
+      "known_at": "2022-01-13T18:45:00Z",
+      "role": "LOCAL_LOCATION_AND_TURNING_STRUCTURE",
+      "setup_family": "PULLBACK_TO_CURVATURE",
+      "zone_lower": 1821.94735,
+      "zone_upper": 1824.42162
+    },
+    "m5_execution": {
+      "identity": "1c8b70d2810dd92e2c2287438de00801194ceddf37bd9923dc0ecc6662407f42",
+      "retest_extreme": 1821.66,
+      "retest_known_at": "2022-01-13T22:55:00Z",
+      "role": "ENTRY_TIMING_AND_LOCAL_INVALIDATION",
+      "sequence": "TURN_THEN_FIRST_VALID_RETEST",
+      "turn_extreme": 1822.41,
+      "turn_known_at": "2022-01-13T22:50:00Z"
+    },
+    "plan_identity": "0a0700cafcd9b7dbe7e5e14c65d92acab1955bed20a6c9326b1395d38b4bedd2",
+    "plan_sha256": "bc71ec0cf78b353996485b8fbd29be3daea41c6ba61fd78ee6449c4a5d05110a",
+    "ruleset": "GOLD_H1_GOVERNED_TRADE_PLAN_SEMANTICS_V1",
+    "sample_id": "563233cc66c94d4f3296",
+    "scanner_plan_sha256": "7f2b339adca753b075ade6dcb2a8f7cbf32c8d425e439afdd8fe974f05b115bf",
+    "scanner_ruleset": "GOLD_H1_GOVERNED_TRADE_SCANNER_V1",
+    "source_evidence": {
+      "h1_destination": {
+        "identity": "a8be86ec515cabc3604af0793f02b3c250b7c00b95bee7bafa5a493e17e78a20",
+        "kind": "LOW",
+        "known_at": "2022-01-13T21:00:00Z",
+        "level": 1812.31,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-13T18:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_governing_control": {
+        "identity": "5b0ffe669a23036140ed0245feb6f885ea8576768ca85796d301fd567c9176fc",
+        "kind": "HIGH",
+        "known_at": "2022-01-13T17:00:00Z",
+        "level": 1825.98,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-13T14:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_structure_relations": {
+        "high": "LH",
+        "low": "LL"
+      },
+      "m15_control": {
+        "identity": "868acd0c403cac59e72afa4a72f8396b0486d056d8f0577bf9715cb68f90a1a3",
+        "kind": "HIGH",
+        "known_at": "2022-01-13T15:15:00Z",
+        "level": 1825.98,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-13T14:30:00Z",
+        "timeframe": "M15"
+      },
+      "m15_terminal": {
+        "identity": "fca238e4366a0d24eb06d3f64f22f4645afaa10b489f3a66cb627acd8d62a68b",
+        "kind": "LOW",
+        "known_at": "2022-01-13T18:45:00Z",
+        "level": 1812.31,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-13T18:00:00Z",
+        "timeframe": "M15"
+      },
+      "m5_retest": {
+        "available_at": "2022-01-13T22:55:00Z",
+        "bar_id": "f6918ef919d67f557def32077a6af51b186c04839872b4def3147865053195bc",
+        "open_at": "2022-01-13T22:50:00Z"
+      },
+      "m5_turn": {
+        "available_at": "2022-01-13T22:50:00Z",
+        "bar_id": "271ab4e22002dea61d4e08f9b323361f5d0c6f67426a75b97ce64e69ff188695",
+        "open_at": "2022-01-13T22:45:00Z"
+      },
+      "selected_destination": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "a8be86ec515cabc3604af0793f02b3c250b7c00b95bee7bafa5a493e17e78a20",
+        "kind": "LOW",
+        "known_at": "2022-01-13T21:00:00Z",
+        "level": 1812.31,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-13T18:00:00Z",
+        "role": "H1_LIQUIDITY_SWING",
+        "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+        "timeframe": "H1"
+      }
+    },
+    "source_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+    "synthetic": false,
+    "title": "01-13 22:55 \u00b7 TREND \u00b7 SHORT"
+  },
+  {
+    "decision_at": "2022-01-20T06:55:00Z",
+    "destination": {
+      "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+      "identity": "baed5acacceffef7f60315ca48c7cec1b9fe0c1412501d31f396a821205b21ad",
+      "kind": "HIGH",
+      "known_at": "2022-01-20T06:00:00Z",
+      "level": 1844.06,
+      "liquidity_state": "UNCONSUMED_UNTOUCHED",
+      "role": "H1_LIQUIDITY_SWING",
+      "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+      "timeframe": "H1"
+    },
+    "direction": "LONG",
+    "entry": {
+      "activated_at": "2022-01-20T06:55:00Z",
+      "level": 1839.92,
+      "source": "M5_CONFIRMED_RETEST_CLOSE"
+    },
+    "epistemic_status": {
+      "auction_interpretation": "INFERRED",
+      "ohlc": "OBSERVED_SEALED_XAUUSD",
+      "resting_orders_or_institutional_intent": "UNKNOWN",
+      "structure_and_liquidity_roles": "CALCULATED"
+    },
+    "family": "TREND",
+    "governing_h1_auction": {
+      "governing_invalidation_level": 1837.98,
+      "known_at": "2022-01-20T06:00:00Z",
+      "range": null,
+      "role": "GOVERNS_DIRECTION_AND_DESTINATION_NOT_ENTRY",
+      "state": "UPTREND"
+    },
+    "guards": {
+      "h1_governs": true,
+      "m15_sets_up": true,
+      "m5_executes": true,
+      "outcome_data_present": false,
+      "performance_calculated": false,
+      "range_target_is_internal_not_extreme": false,
+      "trend_target_is_h1_swing": true
+    },
+    "h1_context_identity": "24a7c2b258721e526169d9e68b5741e6c5aae3a4cd3e68fc39216ccba8aa5937",
+    "invalidation": {
+      "governing_h1_level": 1837.98,
+      "level": 1839.43,
+      "source": "BEYOND_M5_TURN_RETEST_CURVATURE"
+    },
+    "m15_setup": {
+      "controlling_swing": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "81501fa2fa330b8f430d3961c364700d378478e515c01a2f653e34f88ba95d4b",
+        "kind": "LOW",
+        "known_at": "2022-01-20T02:45:00Z",
+        "level": 1837.98,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "timeframe": "M15"
+      },
+      "identity": "e8940756732cc3942e370ba7cf9ea4bda38aed0376cffd27daf1c394b27565d3",
+      "known_at": "2022-01-20T04:15:00Z",
+      "role": "LOCAL_LOCATION_AND_TURNING_STRUCTURE",
+      "setup_family": "PULLBACK_TO_CURVATURE",
+      "zone_lower": 1838.67312,
+      "zone_upper": 1839.7736
+    },
+    "m5_execution": {
+      "identity": "a0d6c24393c377e6756ba9b04eac458f62c53f9b0b123c3a860dee8a240181c3",
+      "retest_extreme": 1839.74,
+      "retest_known_at": "2022-01-20T06:55:00Z",
+      "role": "ENTRY_TIMING_AND_LOCAL_INVALIDATION",
+      "sequence": "TURN_THEN_FIRST_VALID_RETEST",
+      "turn_extreme": 1839.45,
+      "turn_known_at": "2022-01-20T06:50:00Z"
+    },
+    "plan_identity": "59f5e5290ebc21d3fdbfef42f705a47547a3978dfbb1304670d3827921bb5f43",
+    "plan_sha256": "bfb5120c9e86d3d08b47f3c0d5426185ac9879c1360fc4e49e95a3c7f7b0cec7",
+    "ruleset": "GOLD_H1_GOVERNED_TRADE_PLAN_SEMANTICS_V1",
+    "sample_id": "f65d530f381ebcc60035",
+    "scanner_plan_sha256": "fec5d2655996194a53e3f23eadd7c218d528ccf401d4baaf314716f462dfd9df",
+    "scanner_ruleset": "GOLD_H1_GOVERNED_TRADE_SCANNER_V1",
+    "source_evidence": {
+      "h1_destination": {
+        "identity": "baed5acacceffef7f60315ca48c7cec1b9fe0c1412501d31f396a821205b21ad",
+        "kind": "HIGH",
+        "known_at": "2022-01-20T06:00:00Z",
+        "level": 1844.06,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-20T03:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_governing_control": {
+        "identity": "181e203b9d1d611c0a234fe40743f1063c7c7bbfe58a3c0868159fdb6659c166",
+        "kind": "LOW",
+        "known_at": "2022-01-20T05:00:00Z",
+        "level": 1837.98,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-20T02:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_structure_relations": {
+        "high": "HH",
+        "low": "HL"
+      },
+      "m15_control": {
+        "identity": "81501fa2fa330b8f430d3961c364700d378478e515c01a2f653e34f88ba95d4b",
+        "kind": "LOW",
+        "known_at": "2022-01-20T02:45:00Z",
+        "level": 1837.98,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-20T02:00:00Z",
+        "timeframe": "M15"
+      },
+      "m15_terminal": {
+        "identity": "de234e6cf118acd39e38288dbfb3626ba564651634e39b18c48d584f9b2d34c6",
+        "kind": "HIGH",
+        "known_at": "2022-01-20T04:15:00Z",
+        "level": 1844.06,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-20T03:30:00Z",
+        "timeframe": "M15"
+      },
+      "m5_retest": {
+        "available_at": "2022-01-20T06:55:00Z",
+        "bar_id": "d058354e2797cebfaa0c00ffdffb41893d1916230851dc1e7e458b74bc55fbbf",
+        "open_at": "2022-01-20T06:50:00Z"
+      },
+      "m5_turn": {
+        "available_at": "2022-01-20T06:50:00Z",
+        "bar_id": "e9e008c2b5548fe9a855944a9d892f5cdcefaab4ab3cbcefec181a762c6c161d",
+        "open_at": "2022-01-20T06:45:00Z"
+      },
+      "selected_destination": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "baed5acacceffef7f60315ca48c7cec1b9fe0c1412501d31f396a821205b21ad",
+        "kind": "HIGH",
+        "known_at": "2022-01-20T06:00:00Z",
+        "level": 1844.06,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-20T03:00:00Z",
+        "role": "H1_LIQUIDITY_SWING",
+        "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+        "timeframe": "H1"
+      }
+    },
+    "source_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+    "synthetic": false,
+    "title": "01-20 06:55 \u00b7 TREND \u00b7 LONG"
+  },
+  {
+    "decision_at": "2022-01-24T08:50:00Z",
+    "destination": {
+      "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+      "identity": "c7e95142665d82cb34edbea4dee41d08eed5cc4d61feefdbbe5edaf432902e57",
+      "kind": "LOW",
+      "known_at": "2022-01-24T08:00:00Z",
+      "level": 1836.79,
+      "liquidity_state": "UNCONSUMED_UNTOUCHED",
+      "role": "RANGE_INTERNAL_LIQUIDITY",
+      "target_policy": "PREEXISTING_INTERNAL_M15_LIQUIDITY_NOT_RANGE_EXTREME",
+      "timeframe": "M15"
+    },
+    "direction": "SHORT",
+    "entry": {
+      "activated_at": "2022-01-24T08:50:00Z",
+      "level": 1837.98,
+      "source": "M5_CONFIRMED_RETEST_CLOSE"
+    },
+    "epistemic_status": {
+      "auction_interpretation": "INFERRED",
+      "ohlc": "OBSERVED_SEALED_XAUUSD",
+      "resting_orders_or_institutional_intent": "UNKNOWN",
+      "structure_and_liquidity_roles": "CALCULATED"
+    },
+    "family": "RANGE",
+    "governing_h1_auction": {
+      "governing_invalidation_level": 1843.24,
+      "known_at": "2022-01-24T04:00:00Z",
+      "range": {
+        "entry_half": "UPPER",
+        "lower_boundary": 1828.49,
+        "midpoint": 1835.865,
+        "target_is_strictly_internal": true,
+        "upper_boundary": 1843.24
+      },
+      "role": "GOVERNS_DIRECTION_AND_DESTINATION_NOT_ENTRY",
+      "state": "ACTIVE_RANGE"
+    },
+    "guards": {
+      "h1_governs": true,
+      "m15_sets_up": true,
+      "m5_executes": true,
+      "outcome_data_present": false,
+      "performance_calculated": false,
+      "range_target_is_internal_not_extreme": true,
+      "trend_target_is_h1_swing": false
+    },
+    "h1_context_identity": "e8c6dbbda105343a60921e4d3200fa39abec5258ee8ade88d156f6c6ae2cabbe",
+    "invalidation": {
+      "governing_h1_level": 1843.24,
+      "level": 1839.36,
+      "source": "BEYOND_M5_TURN_RETEST_CURVATURE"
+    },
+    "m15_setup": {
+      "controlling_swing": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "2516401b0c6fd22e256eb9675003deab5ce16582958e89234854d872b7358ce4",
+        "kind": "HIGH",
+        "known_at": "2022-01-24T08:30:00Z",
+        "level": 1839.62,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "timeframe": "M15"
+      },
+      "identity": "ee06a9c8dd0b066bec77f6e44e1ec8738214cdc17af28f9295b826728788ca5a",
+      "known_at": "2022-01-24T08:30:00Z",
+      "role": "LOCAL_LOCATION_AND_TURNING_STRUCTURE",
+      "setup_family": "ROTATION_FROM_BOUNDARY",
+      "zone_lower": 1838.5949999999998,
+      "zone_upper": 1839.62
+    },
+    "m5_execution": {
+      "identity": "38f3f20be785cf13fa2b4271fe4b3cf8a4b0f76f4fa195efb4ad71fb2f701796",
+      "retest_extreme": 1838.94,
+      "retest_known_at": "2022-01-24T08:50:00Z",
+      "role": "ENTRY_TIMING_AND_LOCAL_INVALIDATION",
+      "sequence": "TURN_THEN_FIRST_VALID_RETEST",
+      "turn_extreme": 1839.34,
+      "turn_known_at": "2022-01-24T08:45:00Z"
+    },
+    "plan_identity": "cfbca059798501c14c42eb99e2928335328d9e72439fd6e51b88477ee271db3d",
+    "plan_sha256": "9f9e420e95b05384164323bbe177ff4e71e834900133f31befd8341656f2ad36",
+    "ruleset": "GOLD_H1_GOVERNED_TRADE_PLAN_SEMANTICS_V1",
+    "sample_id": "e2afe728c250fa0fd1ca",
+    "scanner_plan_sha256": "49cd99062b31b2e6126a87ede8f9ee7c5d93039e9ca37dfbe786e38924d10ba8",
+    "scanner_ruleset": "GOLD_H1_GOVERNED_TRADE_SCANNER_V1",
+    "source_evidence": {
+      "h1_destination": null,
+      "h1_governing_control": {
+        "identity": "8c7fa14f47a65ee2318cbfcab20daa79ad77fb810caef6ba814339601026f292",
+        "kind": "HIGH",
+        "known_at": "2022-01-21T19:00:00Z",
+        "level": 1843.24,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-21T16:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_range": {
+        "lower_boundary": {
+          "identity": "7781c83fa821f063742a5b793624e98237fa3e60400718c1a0a2ece0a78360be",
+          "kind": "LOW",
+          "known_at": "2022-01-21T13:00:00Z",
+          "level": 1828.49,
+          "liquidity_state": "UNCONSUMED_UNTOUCHED",
+          "pivot_at": "2022-01-21T10:00:00Z",
+          "timeframe": "H1"
+        },
+        "upper_boundary": {
+          "identity": "8c7fa14f47a65ee2318cbfcab20daa79ad77fb810caef6ba814339601026f292",
+          "kind": "HIGH",
+          "known_at": "2022-01-21T19:00:00Z",
+          "level": 1843.24,
+          "liquidity_state": "UNCONSUMED_UNTOUCHED",
+          "pivot_at": "2022-01-21T16:00:00Z",
+          "timeframe": "H1"
+        }
+      },
+      "h1_structure_relations": {
+        "high": "HH",
+        "low": "LL"
+      },
+      "m15_control": {
+        "identity": "2516401b0c6fd22e256eb9675003deab5ce16582958e89234854d872b7358ce4",
+        "kind": "HIGH",
+        "known_at": "2022-01-24T08:30:00Z",
+        "level": 1839.62,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-24T07:45:00Z",
+        "timeframe": "M15"
+      },
+      "m15_terminal": null,
+      "m5_retest": {
+        "available_at": "2022-01-24T08:50:00Z",
+        "bar_id": "56fb40ee4f20170f17ef54d368953126cf96cf630e7816e3106aa7831ff22e9c",
+        "open_at": "2022-01-24T08:45:00Z"
+      },
+      "m5_turn": {
+        "available_at": "2022-01-24T08:45:00Z",
+        "bar_id": "7e7831f5d03621f06caa8d1051a82842739e326cbcfe8558d40aea66a8e92fbe",
+        "open_at": "2022-01-24T08:40:00Z"
+      },
+      "selected_destination": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "c7e95142665d82cb34edbea4dee41d08eed5cc4d61feefdbbe5edaf432902e57",
+        "kind": "LOW",
+        "known_at": "2022-01-24T08:00:00Z",
+        "level": 1836.79,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-24T07:15:00Z",
+        "role": "RANGE_INTERNAL_LIQUIDITY",
+        "target_policy": "PREEXISTING_INTERNAL_M15_LIQUIDITY_NOT_RANGE_EXTREME",
+        "timeframe": "M15"
+      }
+    },
+    "source_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+    "synthetic": false,
+    "title": "01-24 08:50 \u00b7 RANGE \u00b7 SHORT"
+  },
+  {
+    "decision_at": "2022-01-26T12:25:00Z",
+    "destination": {
+      "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+      "identity": "75a067d90991723385ce739d0d0c47ba530545d468e2987a4097f4cb93e81202",
+      "kind": "LOW",
+      "known_at": "2022-01-26T12:00:00Z",
+      "level": 1843.79,
+      "liquidity_state": "UNCONSUMED_UNTOUCHED",
+      "role": "H1_LIQUIDITY_SWING",
+      "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+      "timeframe": "H1"
+    },
+    "direction": "SHORT",
+    "entry": {
+      "activated_at": "2022-01-26T12:25:00Z",
+      "level": 1846.77,
+      "source": "M5_CONFIRMED_RETEST_CLOSE"
+    },
+    "epistemic_status": {
+      "auction_interpretation": "INFERRED",
+      "ohlc": "OBSERVED_SEALED_XAUUSD",
+      "resting_orders_or_institutional_intent": "UNKNOWN",
+      "structure_and_liquidity_roles": "CALCULATED"
+    },
+    "family": "TREND",
+    "governing_h1_auction": {
+      "governing_invalidation_level": 1848.71,
+      "known_at": "2022-01-26T12:00:00Z",
+      "range": null,
+      "role": "GOVERNS_DIRECTION_AND_DESTINATION_NOT_ENTRY",
+      "state": "DOWNTREND"
+    },
+    "guards": {
+      "h1_governs": true,
+      "m15_sets_up": true,
+      "m5_executes": true,
+      "outcome_data_present": false,
+      "performance_calculated": false,
+      "range_target_is_internal_not_extreme": false,
+      "trend_target_is_h1_swing": true
+    },
+    "h1_context_identity": "3e3f15485fde325b4e2956d5aba4f69256296d24d1c86e2de88d1a4a1a76c3c7",
+    "invalidation": {
+      "governing_h1_level": 1848.71,
+      "level": 1847.68,
+      "source": "BEYOND_M5_TURN_RETEST_CURVATURE"
+    },
+    "m15_setup": {
+      "controlling_swing": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "2fc3548d0fb4d4093f40c1ffa3d96d421ec79f6e269d4c82d8898dd390a8a474",
+        "kind": "HIGH",
+        "known_at": "2022-01-26T09:00:00Z",
+        "level": 1848.71,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "timeframe": "M15"
+      },
+      "identity": "25d0bc270bef5473b39822f21f459870ddd3985d3ce18b99f490595c3d0afb8c",
+      "known_at": "2022-01-26T10:30:00Z",
+      "role": "LOCAL_LOCATION_AND_TURNING_STRUCTURE",
+      "setup_family": "PULLBACK_TO_CURVATURE",
+      "zone_lower": 1847.2586000000001,
+      "zone_upper": 1848.14912
+    },
+    "m5_execution": {
+      "identity": "f286ed61e58da4e838aa4a8798bab7bfbf5b7de2146ca58614e5bf6bdb5c5104",
+      "retest_extreme": 1847.33,
+      "retest_known_at": "2022-01-26T12:25:00Z",
+      "role": "ENTRY_TIMING_AND_LOCAL_INVALIDATION",
+      "sequence": "TURN_THEN_FIRST_VALID_RETEST",
+      "turn_extreme": 1847.66,
+      "turn_known_at": "2022-01-26T12:20:00Z"
+    },
+    "plan_identity": "ab027c9dc63a4dc44889f0729164a14c9add05bc3c8a29a3039a37389d5e854b",
+    "plan_sha256": "22bcdf2e2dc566710689a9f4151976a4e12e4bc6a609ba2ffb0bd8edd125a0af",
+    "ruleset": "GOLD_H1_GOVERNED_TRADE_PLAN_SEMANTICS_V1",
+    "sample_id": "f7d3c4f87f756502bf5c",
+    "scanner_plan_sha256": "a59901a0a4f280ef8baa596bc2f0c974698f2d6dc600170a527825b545edc63f",
+    "scanner_ruleset": "GOLD_H1_GOVERNED_TRADE_SCANNER_V1",
+    "source_evidence": {
+      "h1_destination": {
+        "identity": "75a067d90991723385ce739d0d0c47ba530545d468e2987a4097f4cb93e81202",
+        "kind": "LOW",
+        "known_at": "2022-01-26T12:00:00Z",
+        "level": 1843.79,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-26T09:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_governing_control": {
+        "identity": "56d49903b8c3bcc03acdbf2c54fe5efb058fc70d22f42ddb9bfa9b090d8566d0",
+        "kind": "HIGH",
+        "known_at": "2022-01-26T11:00:00Z",
+        "level": 1848.71,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-26T08:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_structure_relations": {
+        "high": "LH",
+        "low": "LL"
+      },
+      "m15_control": {
+        "identity": "2fc3548d0fb4d4093f40c1ffa3d96d421ec79f6e269d4c82d8898dd390a8a474",
+        "kind": "HIGH",
+        "known_at": "2022-01-26T09:00:00Z",
+        "level": 1848.71,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-26T08:15:00Z",
+        "timeframe": "M15"
+      },
+      "m15_terminal": {
+        "identity": "c17d6f3a1eb7117c0fec52d9fe2fb1a61d1ee91fb299eab4eb092432ffdc149a",
+        "kind": "LOW",
+        "known_at": "2022-01-26T10:30:00Z",
+        "level": 1843.79,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-26T09:45:00Z",
+        "timeframe": "M15"
+      },
+      "m5_retest": {
+        "available_at": "2022-01-26T12:25:00Z",
+        "bar_id": "f63d5aa69100a5dd260d8e9835eb11903c06772fb80231c42d69218ef274f92a",
+        "open_at": "2022-01-26T12:20:00Z"
+      },
+      "m5_turn": {
+        "available_at": "2022-01-26T12:20:00Z",
+        "bar_id": "e228f525808357e4d4e9138cbadfdf1cbe6284d8671708695a5a0dfbd3dda3ba",
+        "open_at": "2022-01-26T12:15:00Z"
+      },
+      "selected_destination": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "75a067d90991723385ce739d0d0c47ba530545d468e2987a4097f4cb93e81202",
+        "kind": "LOW",
+        "known_at": "2022-01-26T12:00:00Z",
+        "level": 1843.79,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-26T09:00:00Z",
+        "role": "H1_LIQUIDITY_SWING",
+        "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+        "timeframe": "H1"
+      }
+    },
+    "source_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+    "synthetic": false,
+    "title": "01-26 12:25 \u00b7 TREND \u00b7 SHORT"
+  },
+  {
+    "decision_at": "2022-01-27T11:20:00Z",
+    "destination": {
+      "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+      "identity": "7e0b4b4c6448702d545cef120b897eb0e6d6926be4d5f9de29e6ed27832ec94b",
+      "kind": "LOW",
+      "known_at": "2022-01-18T18:00:00Z",
+      "level": 1805.79,
+      "liquidity_state": "UNCONSUMED_UNTOUCHED",
+      "role": "H1_LIQUIDITY_SWING",
+      "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+      "timeframe": "H1"
+    },
+    "direction": "SHORT",
+    "entry": {
+      "activated_at": "2022-01-27T11:20:00Z",
+      "level": 1814.06,
+      "source": "M5_CONFIRMED_RETEST_CLOSE"
+    },
+    "epistemic_status": {
+      "auction_interpretation": "INFERRED",
+      "ohlc": "OBSERVED_SEALED_XAUUSD",
+      "resting_orders_or_institutional_intent": "UNKNOWN",
+      "structure_and_liquidity_roles": "CALCULATED"
+    },
+    "family": "TREND",
+    "governing_h1_auction": {
+      "governing_invalidation_level": 1833.21,
+      "known_at": "2022-01-27T07:00:00Z",
+      "range": null,
+      "role": "GOVERNS_DIRECTION_AND_DESTINATION_NOT_ENTRY",
+      "state": "DOWNTREND"
+    },
+    "guards": {
+      "h1_governs": true,
+      "m15_sets_up": true,
+      "m5_executes": true,
+      "outcome_data_present": false,
+      "performance_calculated": false,
+      "range_target_is_internal_not_extreme": false,
+      "trend_target_is_h1_swing": true
+    },
+    "h1_context_identity": "b5f206b2b9a4e10e98494ee8f51923167604fd3cac1f1f9ca758a21d82d79dc4",
+    "invalidation": {
+      "governing_h1_level": 1833.21,
+      "level": 1814.8799999999999,
+      "source": "BEYOND_M5_TURN_RETEST_CURVATURE"
+    },
+    "m15_setup": {
+      "controlling_swing": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "60b87eb39d69c77ae7e5fd55f63357fb024a57d7c613c0935051fea338026341",
+        "kind": "HIGH",
+        "known_at": "2022-01-27T09:45:00Z",
+        "level": 1815.98,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "timeframe": "M15"
+      },
+      "identity": "12807c2e842af41540c886725ca1133ed2d2262eb0bd769a581ec35936d07c86",
+      "known_at": "2022-01-27T11:00:00Z",
+      "role": "LOCAL_LOCATION_AND_TURNING_STRUCTURE",
+      "setup_family": "PULLBACK_TO_CURVATURE",
+      "zone_lower": 1814.09495,
+      "zone_upper": 1815.25154
+    },
+    "m5_execution": {
+      "identity": "9828ac76b02685a022829d29117daad291032710e8829522326e2dc125546379",
+      "retest_extreme": 1814.36,
+      "retest_known_at": "2022-01-27T11:20:00Z",
+      "role": "ENTRY_TIMING_AND_LOCAL_INVALIDATION",
+      "sequence": "TURN_THEN_FIRST_VALID_RETEST",
+      "turn_extreme": 1814.86,
+      "turn_known_at": "2022-01-27T11:15:00Z"
+    },
+    "plan_identity": "2828e124ed069aa30d32421538f94152ee0caee2833171ca774470f18821f3ed",
+    "plan_sha256": "d3406714ebf83b88cc7a0d31c2abc7eea353b358c1b0417fe259b1283e7e9a1c",
+    "ruleset": "GOLD_H1_GOVERNED_TRADE_PLAN_SEMANTICS_V1",
+    "sample_id": "10d56257d1b08ebb98c6",
+    "scanner_plan_sha256": "9cbbb8c1612330014860301ee54f0071b3e96c6e492f83fb1d91527569a4a497",
+    "scanner_ruleset": "GOLD_H1_GOVERNED_TRADE_SCANNER_V1",
+    "source_evidence": {
+      "h1_destination": {
+        "identity": "7e0b4b4c6448702d545cef120b897eb0e6d6926be4d5f9de29e6ed27832ec94b",
+        "kind": "LOW",
+        "known_at": "2022-01-18T18:00:00Z",
+        "level": 1805.79,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-18T15:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_governing_control": {
+        "identity": "10dc94c619d8f1890755e6c4c5578e9d98515be825908c638df94a1f8b42bb6d",
+        "kind": "HIGH",
+        "known_at": "2022-01-27T03:00:00Z",
+        "level": 1833.21,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-26T21:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_structure_relations": {
+        "high": "LH",
+        "low": "LL"
+      },
+      "m15_control": {
+        "identity": "60b87eb39d69c77ae7e5fd55f63357fb024a57d7c613c0935051fea338026341",
+        "kind": "HIGH",
+        "known_at": "2022-01-27T09:45:00Z",
+        "level": 1815.98,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-27T09:00:00Z",
+        "timeframe": "M15"
+      },
+      "m15_terminal": {
+        "identity": "b0e91c3e94b84d5eb2a1b93706232c4e1f31b210588919d461fdf3639a93ea75",
+        "kind": "LOW",
+        "known_at": "2022-01-27T11:00:00Z",
+        "level": 1809.59,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-27T10:15:00Z",
+        "timeframe": "M15"
+      },
+      "m5_retest": {
+        "available_at": "2022-01-27T11:20:00Z",
+        "bar_id": "c50602fa3f7cb8e455551c35fb3e51fee5af33c0117140aa9fc516147837e348",
+        "open_at": "2022-01-27T11:15:00Z"
+      },
+      "m5_turn": {
+        "available_at": "2022-01-27T11:15:00Z",
+        "bar_id": "a5e4f47b38bb9cf7dc9bf59714f4f10063c7d45214f9d8a48362952331e04701",
+        "open_at": "2022-01-27T11:10:00Z"
+      },
+      "selected_destination": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "7e0b4b4c6448702d545cef120b897eb0e6d6926be4d5f9de29e6ed27832ec94b",
+        "kind": "LOW",
+        "known_at": "2022-01-18T18:00:00Z",
+        "level": 1805.79,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-18T15:00:00Z",
+        "role": "H1_LIQUIDITY_SWING",
+        "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+        "timeframe": "H1"
+      }
+    },
+    "source_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+    "synthetic": false,
+    "title": "01-27 11:20 \u00b7 TREND \u00b7 SHORT"
+  },
+  {
+    "decision_at": "2022-01-28T14:45:00Z",
+    "destination": {
+      "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+      "identity": "0fe910f1d36cce1aea3f78c1d0629737651395d136cfcde817f383e1c1855374",
+      "kind": "LOW",
+      "known_at": "2021-12-16T03:00:00Z",
+      "level": 1751.04,
+      "liquidity_state": "UNCONSUMED_UNTOUCHED",
+      "role": "H1_LIQUIDITY_SWING",
+      "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+      "timeframe": "H1"
+    },
+    "direction": "SHORT",
+    "entry": {
+      "activated_at": "2022-01-28T14:45:00Z",
+      "level": 1788.57,
+      "source": "M5_CONFIRMED_RETEST_CLOSE"
+    },
+    "epistemic_status": {
+      "auction_interpretation": "INFERRED",
+      "ohlc": "OBSERVED_SEALED_XAUUSD",
+      "resting_orders_or_institutional_intent": "UNKNOWN",
+      "structure_and_liquidity_roles": "CALCULATED"
+    },
+    "family": "TREND",
+    "governing_h1_auction": {
+      "governing_invalidation_level": 1799.44,
+      "known_at": "2022-01-28T08:00:00Z",
+      "range": null,
+      "role": "GOVERNS_DIRECTION_AND_DESTINATION_NOT_ENTRY",
+      "state": "DOWNTREND"
+    },
+    "guards": {
+      "h1_governs": true,
+      "m15_sets_up": true,
+      "m5_executes": true,
+      "outcome_data_present": false,
+      "performance_calculated": false,
+      "range_target_is_internal_not_extreme": false,
+      "trend_target_is_h1_swing": true
+    },
+    "h1_context_identity": "c55b36e49b37ac8c278e2d3fe87b164960b6cf30be888b6873a01bf1a84c9261",
+    "invalidation": {
+      "governing_h1_level": 1799.44,
+      "level": 1790.4,
+      "source": "BEYOND_M5_TURN_RETEST_CURVATURE"
+    },
+    "m15_setup": {
+      "controlling_swing": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "5db481c397f78ae8588450e9d559efb410661f5a6b6ed637f74e36913338f682",
+        "kind": "HIGH",
+        "known_at": "2022-01-28T12:15:00Z",
+        "level": 1792.99,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "timeframe": "M15"
+      },
+      "identity": "c326254e7dd0bf3b7f0ae0426d747346b366e91246f3baba142685a3a9e738e0",
+      "known_at": "2022-01-28T14:00:00Z",
+      "role": "LOCAL_LOCATION_AND_TURNING_STRUCTURE",
+      "setup_family": "PULLBACK_TO_CURVATURE",
+      "zone_lower": 1789.2494,
+      "zone_upper": 1791.54448
+    },
+    "m5_execution": {
+      "identity": "08018d16b8825fc27fb9e69353a70f5f3cd2143ff8b361b3716f21382d3912b3",
+      "retest_extreme": 1790.01,
+      "retest_known_at": "2022-01-28T14:45:00Z",
+      "role": "ENTRY_TIMING_AND_LOCAL_INVALIDATION",
+      "sequence": "TURN_THEN_FIRST_VALID_RETEST",
+      "turn_extreme": 1790.38,
+      "turn_known_at": "2022-01-28T14:40:00Z"
+    },
+    "plan_identity": "2070bcbf31e063c728bfb3c33a1573e273da390c094ab343797bac5e4c9508f5",
+    "plan_sha256": "7579ba1c263639665d35b0f56c0b6ba5ca237b483c6a6bf96ae4cdef9883f67e",
+    "ruleset": "GOLD_H1_GOVERNED_TRADE_PLAN_SEMANTICS_V1",
+    "sample_id": "887cb10f66a33a1758ed",
+    "scanner_plan_sha256": "701b175927b5452aa44708980ca4a6fdcbb3ca5912e61679af7df2e5d08d2946",
+    "scanner_ruleset": "GOLD_H1_GOVERNED_TRADE_SCANNER_V1",
+    "source_evidence": {
+      "h1_destination": {
+        "identity": "0fe910f1d36cce1aea3f78c1d0629737651395d136cfcde817f383e1c1855374",
+        "kind": "LOW",
+        "known_at": "2021-12-16T03:00:00Z",
+        "level": 1751.04,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2021-12-15T21:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_governing_control": {
+        "identity": "0e76b8bafe12666737dd3c66dad655f782426c07d96d4792948967aa993fdc8a",
+        "kind": "HIGH",
+        "known_at": "2022-01-28T08:00:00Z",
+        "level": 1799.44,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-28T05:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_structure_relations": {
+        "high": "LH",
+        "low": "LL"
+      },
+      "m15_control": {
+        "identity": "5db481c397f78ae8588450e9d559efb410661f5a6b6ed637f74e36913338f682",
+        "kind": "HIGH",
+        "known_at": "2022-01-28T12:15:00Z",
+        "level": 1792.99,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-28T11:30:00Z",
+        "timeframe": "M15"
+      },
+      "m15_terminal": {
+        "identity": "41e0900324336cf0074d56cc873829ff599ae478e0ea730617c4dfa6c3c3202e",
+        "kind": "LOW",
+        "known_at": "2022-01-28T14:00:00Z",
+        "level": 1780.31,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-28T13:15:00Z",
+        "timeframe": "M15"
+      },
+      "m5_retest": {
+        "available_at": "2022-01-28T14:45:00Z",
+        "bar_id": "d1f7e39ac368ab75b2b6b3eaf8da8bd123cdf8abd1c6bdf14a2e496393cf463c",
+        "open_at": "2022-01-28T14:40:00Z"
+      },
+      "m5_turn": {
+        "available_at": "2022-01-28T14:40:00Z",
+        "bar_id": "928303ef53310eb1551a9595861fea1ded9802858c36085d0a3717f98ab767c1",
+        "open_at": "2022-01-28T14:35:00Z"
+      },
+      "selected_destination": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "0fe910f1d36cce1aea3f78c1d0629737651395d136cfcde817f383e1c1855374",
+        "kind": "LOW",
+        "known_at": "2021-12-16T03:00:00Z",
+        "level": 1751.04,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2021-12-15T21:00:00Z",
+        "role": "H1_LIQUIDITY_SWING",
+        "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+        "timeframe": "H1"
+      }
+    },
+    "source_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+    "synthetic": false,
+    "title": "01-28 14:45 \u00b7 TREND \u00b7 SHORT"
+  },
+  {
+    "decision_at": "2022-01-31T22:40:00Z",
+    "destination": {
+      "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+      "identity": "d7539235743928a54fa59d76ff17a31e0f8b12a5260500d3efe8384c6fba304e",
+      "kind": "HIGH",
+      "known_at": "2022-01-27T15:00:00Z",
+      "level": 1816.91,
+      "liquidity_state": "UNCONSUMED_UNTOUCHED",
+      "role": "H1_LIQUIDITY_SWING",
+      "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+      "timeframe": "H1"
+    },
+    "direction": "LONG",
+    "entry": {
+      "activated_at": "2022-01-31T22:40:00Z",
+      "level": 1798.06,
+      "source": "M5_CONFIRMED_RETEST_CLOSE"
+    },
+    "epistemic_status": {
+      "auction_interpretation": "INFERRED",
+      "ohlc": "OBSERVED_SEALED_XAUUSD",
+      "resting_orders_or_institutional_intent": "UNKNOWN",
+      "structure_and_liquidity_roles": "CALCULATED"
+    },
+    "family": "TREND",
+    "governing_h1_auction": {
+      "governing_invalidation_level": 1786.04,
+      "known_at": "2022-01-31T19:00:00Z",
+      "range": null,
+      "role": "GOVERNS_DIRECTION_AND_DESTINATION_NOT_ENTRY",
+      "state": "UPTREND"
+    },
+    "guards": {
+      "h1_governs": true,
+      "m15_sets_up": true,
+      "m5_executes": true,
+      "outcome_data_present": false,
+      "performance_calculated": false,
+      "range_target_is_internal_not_extreme": false,
+      "trend_target_is_h1_swing": true
+    },
+    "h1_context_identity": "325e30b96f7d66e3322d397d6c91b72f5b7cd5c540f4a878bf210a78be2dea23",
+    "invalidation": {
+      "governing_h1_level": 1786.04,
+      "level": 1796.33,
+      "source": "BEYOND_M5_TURN_RETEST_CURVATURE"
+    },
+    "m15_setup": {
+      "controlling_swing": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "89a9d22564295d563a22d9d24243453f1d49e4732dec092e01a64346499b05eb",
+        "kind": "LOW",
+        "known_at": "2022-01-31T21:00:00Z",
+        "level": 1794.97,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "timeframe": "M15"
+      },
+      "identity": "f739dd8bfd73176bf8dbdbf5ef9c8c2e1998147d2ec91eb39c41e08b6c31a29b",
+      "known_at": "2022-01-31T21:45:00Z",
+      "role": "LOCAL_LOCATION_AND_TURNING_STRUCTURE",
+      "setup_family": "PULLBACK_TO_CURVATURE",
+      "zone_lower": 1795.5343,
+      "zone_upper": 1796.4302500000001
+    },
+    "m5_execution": {
+      "identity": "1a9cc20b96673ceb889e204ad32dd57f57cdc5716b7b44526f7009dddfcb9d79",
+      "retest_extreme": 1797.24,
+      "retest_known_at": "2022-01-31T22:40:00Z",
+      "role": "ENTRY_TIMING_AND_LOCAL_INVALIDATION",
+      "sequence": "TURN_THEN_FIRST_VALID_RETEST",
+      "turn_extreme": 1796.35,
+      "turn_known_at": "2022-01-31T22:35:00Z"
+    },
+    "plan_identity": "641b91563473603829e2742f5cb3a2ff8db637f843c04c17641b35eb4af7b1f4",
+    "plan_sha256": "56be32803fafbe971f0e36a3046c8a7874bd21c4840fe1f14c13def2e70c7096",
+    "ruleset": "GOLD_H1_GOVERNED_TRADE_PLAN_SEMANTICS_V1",
+    "sample_id": "f92b4e5066da8203a9ca",
+    "scanner_plan_sha256": "ff105a8caafb18ef3ab4b0409f18d6632d09aa06cd83be945fc9d24abbaa21e5",
+    "scanner_ruleset": "GOLD_H1_GOVERNED_TRADE_SCANNER_V1",
+    "source_evidence": {
+      "h1_destination": {
+        "identity": "d7539235743928a54fa59d76ff17a31e0f8b12a5260500d3efe8384c6fba304e",
+        "kind": "HIGH",
+        "known_at": "2022-01-27T15:00:00Z",
+        "level": 1816.91,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-27T12:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_governing_control": {
+        "identity": "761b48fb110790dc54385e6c880c481578acd4217a65d2c0b4566a138528f331",
+        "kind": "LOW",
+        "known_at": "2022-01-31T12:00:00Z",
+        "level": 1786.04,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-31T09:00:00Z",
+        "timeframe": "H1"
+      },
+      "h1_structure_relations": {
+        "high": "HH",
+        "low": "HL"
+      },
+      "m15_control": {
+        "identity": "89a9d22564295d563a22d9d24243453f1d49e4732dec092e01a64346499b05eb",
+        "kind": "LOW",
+        "known_at": "2022-01-31T21:00:00Z",
+        "level": 1794.97,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-31T20:15:00Z",
+        "timeframe": "M15"
+      },
+      "m15_terminal": {
+        "identity": "568f82f0b6bf0e8bc3cb90dddfdb5c3f500de1963da9ce17c815219fd5e09d7c",
+        "kind": "HIGH",
+        "known_at": "2022-01-31T21:45:00Z",
+        "level": 1799.92,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-31T21:00:00Z",
+        "timeframe": "M15"
+      },
+      "m5_retest": {
+        "available_at": "2022-01-31T22:40:00Z",
+        "bar_id": "8794637ed42a92bed3e3e026995456ccf81b1c0011c2f8cba8af87ed32f15d2f",
+        "open_at": "2022-01-31T22:35:00Z"
+      },
+      "m5_turn": {
+        "available_at": "2022-01-31T22:35:00Z",
+        "bar_id": "aec4e08de56106ee7253d9da0ebf93a0cb6cf4ded5fd45f9305c016e348259a6",
+        "open_at": "2022-01-31T22:30:00Z"
+      },
+      "selected_destination": {
+        "epistemic_status": "CALCULATED_FROM_COMPLETED_CANDLES",
+        "identity": "d7539235743928a54fa59d76ff17a31e0f8b12a5260500d3efe8384c6fba304e",
+        "kind": "HIGH",
+        "known_at": "2022-01-27T15:00:00Z",
+        "level": 1816.91,
+        "liquidity_state": "UNCONSUMED_UNTOUCHED",
+        "pivot_at": "2022-01-27T12:00:00Z",
+        "role": "H1_LIQUIDITY_SWING",
+        "target_policy": "PREEXISTING_UNCONSUMED_H1_LIQUIDITY_SWING",
+        "timeframe": "H1"
+      }
+    },
+    "source_stream_sha256": "bdd700c98d649807d0865b2f8684f84733ddbcb830b54b49983dbcd6b2735624",
+    "synthetic": false,
+    "title": "01-31 22:40 \u00b7 TREND \u00b7 LONG"
+  }
+]

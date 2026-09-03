@@ -1,0 +1,53 @@
+{
+  "version": "GOLD_FEBRUARY_H1_CONFIRMATION_ONLY_CONTINUOUS_CHART_V1_BROWSER_CERT",
+  "verdict": "PASS_WHITE_CONTINUOUS_FEBRUARY_BROWSER_REGRESSION",
+  "html": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/gold-february-h1-confirmation-only-continuous-chart.html",
+  "html_sha256": "a6d6640c68aa1d1d96adb34ab45ff36dbd91854a79ca88e4d21be8a71b7535b1",
+  "executed_trades": 61,
+  "h1_bars": 418,
+  "m15_bars": 1790,
+  "m5_bars": 5450,
+  "theme": {
+    "background": "rgb(255, 255, 255)",
+    "color": "rgb(17, 24, 39)",
+    "frameFill": "rgb(255, 255, 255)"
+  },
+  "controls_verified": [
+    "H1",
+    "M15",
+    "M5",
+    "pan-right",
+    "zoom-in",
+    "full-february",
+    "ledger-selection"
+  ],
+  "local_trade_line_gate": true,
+  "responsive": [
+    {
+      "viewport": {
+        "width": 1180,
+        "height": 920
+      },
+      "screenshot": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/screenshots/february-chart-1180.png",
+      "screenshot_sha256": "e69422ef0c436c505b0bcbd2889fb5726f59ff67c7ea1623ded3af640a8788b1"
+    },
+    {
+      "viewport": {
+        "width": 736,
+        "height": 900
+      },
+      "screenshot": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/screenshots/february-chart-736.png",
+      "screenshot_sha256": "0fe9ce85f0a03495a8dcc616259a92a209fa0772ca46055fa6b82d5ed258eea8"
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 860
+      },
+      "screenshot": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/screenshots/february-chart-360.png",
+      "screenshot_sha256": "9cfc008d1e2b47977570bef2edda24566ffbcfbae14ac7c78154a87c239faf68"
+    }
+  ],
+  "browser_errors": [],
+  "certification_sha256": "ee6a0ddab507b39022f83351b080d0c576f54a5d7a1cd1d7c7a435606d69ed75"
+}

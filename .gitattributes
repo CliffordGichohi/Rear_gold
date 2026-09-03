@@ -1,0 +1,45 @@
+# Preserve cryptographically sealed H1 confirmation-only V2 research bytes.
+research_artifacts/** -text
+
+GOLD_H1_CONFIRMATION_ONLY_V2_BACKUP_MANIFEST.md -text
+GOLD_H1_EXTERNAL_STRUCTURE_PULLBACK_CORRECTION_V2.md -text
+GOLD_H1_GOVERNED_TRADE_PLAN_SEMANTICS_V1.md -text
+GOLD_SWING_CURVATURE_ENTRY_SEMANTIC_RECOVERY_V1.md -text
+GOLD_SWING_CURVATURE_ENTRY_SEMANTIC_RECOVERY_V1_TRACEABILITY.md -text
+GOLD_JANUARY_H1_CONTINUOUS_SWING_ATLAS_V1.md -text
+GOLD_JANUARY_H1_GOVERNED_TRADE_OUTCOMES_V1.md -text
+GOLD_JANUARY_H1_GOVERNED_TRADE_PLAN_ATLAS_V1.md -text
+GOLD_JANUARY_H1_SWING_LOSS_ATTRIBUTION_V1.md -text
+GOLD_JANUARY_H1_PROBE_CONFIRM_RECLAIM_MILESTONE_V1.md -text
+GOLD_JANUARY_H1_CONFIRMATION_ONLY_RECLAIM_MILESTONE_V2.md -text
+GOLD_FEBRUARY_2022_H1_CONFIRMATION_ONLY_RECLAIM_APPLICATION_V1.md -text
+GOLD_MARCH_APRIL_MAY_2022_H1_CONFIRMATION_ONLY_RECLAIM_APPLICATION_V1.md -text
+
+tools/run_gold_january_h1_confirmation_only_reclaim_v2.py -text
+tools/run_gold_january_h1_probe_confirm_reclaim_v1.py -text
+tools/run_gold_january_h1_swing_loss_attribution_v1.py -text
+tools/run_gold_h1_external_structure_pullback_correction_v2.py -text
+tools/render_gold_january_h1_continuous_swing_atlas_v1.py -text
+tools/render_gold_january_h1_governed_trade_outcomes_v1.py -text
+tools/render_gold_january_h1_governed_trade_plans_v1.py -text
+tools/run_gold_february_h1_confirmation_only_reclaim_v1.py -text
+tools/render_gold_february_h1_confirmation_only_reclaim_v1.py -text
+tools/run_gold_mar_apr_may_h1_confirmation_only_reclaim_v1.py -text
+tools/render_gold_mar_apr_may_h1_confirmation_only_reclaim_v1.py -text
+tools/seal_gold_mar_apr_may_h1_confirmation_only_reclaim_v1.py -text
+backend/src/gold_intel/analytics/early_m5_curvature_entry_v1.py -text
+backend/src/gold_intel/analytics/h1_external_structure_pullback_v2.py -text
+backend/src/gold_intel/analytics/h1_governed_trade_outcome_v1.py -text
+backend/src/gold_intel/analytics/h1_governed_trade_plan_v1.py -text
+backend/src/gold_intel/analytics/h1_governed_trade_scanner_v1.py -text
+backend/src/gold_intel/analytics/swing_curvature_entry_v1.py -text
+backend/tests/unit/test_early_m5_curvature_entry_v1.py -text
+backend/tests/unit/test_h1_external_structure_pullback_v2.py -text
+backend/tests/unit/test_h1_governed_trade_outcome_v1.py -text
+backend/tests/unit/test_h1_governed_trade_plan_v1.py -text
+backend/tests/unit/test_h1_governed_trade_scanner_v1.py -text
+backend/tests/unit/test_swing_curvature_entry_v1.py -text
+frontend/tools/certify-gold-h1-governed-trade-plan-synthetic-v1.mjs -text
+frontend/tools/certify-gold-january-h1-continuous-swing-atlas-v1.mjs -text
+frontend/tools/certify-gold-february-h1-confirmation-only-v1.mjs -text
+frontend/tools/certify-gold-mar-apr-may-h1-confirmation-only-v1.mjs -text

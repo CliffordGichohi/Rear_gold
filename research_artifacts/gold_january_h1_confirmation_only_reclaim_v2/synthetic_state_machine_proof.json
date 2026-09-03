@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "confirmation_before_breach_survives": true,
+    "full_risk_stop_is_minus_one": true,
+    "no_probe_means_no_position": true,
+    "one_full_risk_entry_only": true,
+    "predecessor_proof_passes": true,
+    "recovery_buffer_unchanged": true,
+    "simultaneous_breach_cancels": true
+  },
+  "predecessor_proof_sha256": "b274eb9f5eb6c3efe5b767feb4dd6b21568313668b5c0829b79d21cec3a7596b",
+  "proof_sha256": "bfa19ca4ca327fb66bcc452dd72853f5ca78c4bdd650da4b051e3ce5761dc33b",
+  "verdict": "PASS_CONFIRMATION_ONLY_SYNTHETIC_PROOF"
+}
