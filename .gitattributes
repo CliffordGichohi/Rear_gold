@@ -43,3 +43,13 @@ frontend/tools/certify-gold-h1-governed-trade-plan-synthetic-v1.mjs -text
 frontend/tools/certify-gold-january-h1-continuous-swing-atlas-v1.mjs -text
 frontend/tools/certify-gold-february-h1-confirmation-only-v1.mjs -text
 frontend/tools/certify-gold-mar-apr-may-h1-confirmation-only-v1.mjs -text
+
+# Preserve the sealed H1 geometry audit and unattended monthly extension bytes.
+GOLD_H1_CONFIRMATION_ENTRY_STOP_GEOMETRY_AUDIT_V1.md -text
+GOLD_H1_CONFIRMATION_GEOMETRY_MONTHLY_BATCH_V1.md -text
+tools/run_gold_h1_confirmation_entry_stop_geometry_audit_v1.py -text
+tools/run_gold_h1_confirmation_geometry_monthly_batch_v1.py -text
+tools/supervise_gold_h1_confirmation_geometry_monthly_batch_v1.ps1 -text
+backend/src/gold_intel/analytics/h1_confirmation_geometry_audit_v1.py -text
+backend/tests/unit/test_h1_confirmation_geometry_audit_v1.py -text
+frontend/tools/certify-gold-h1-confirmation-geometry-monthly-batch-v1.mjs -text

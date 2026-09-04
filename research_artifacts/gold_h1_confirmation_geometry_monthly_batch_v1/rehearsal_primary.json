@@ -1,0 +1,10 @@
+{
+  "contexts": 326,
+  "contexts_sha256": "0ad34d7e7658c2f9149c322815dc3eb451322238edf51267383e6917a5893821",
+  "matrix_rows": 3912,
+  "matrix_rows_sha256": "bd4ec26c950dc9baefae9ea6dd71913989909680f9c13f286f3572bb26778218",
+  "protocol_sha256": "d1db8a79e2cf8926a6c18f788491054fa2727afc9481a8a84754e0459546f38e",
+  "rehearsal_sha256": "3e04f3f75a1a986b362fc76fad4ed37403aa684d7dbcf415395b1689af184dac",
+  "verdict": "PASS_EXACT_JANUARY_MAY_REPRODUCTION",
+  "version": "GOLD_H1_CONFIRMATION_GEOMETRY_MONTHLY_BATCH_V1_PRIMARY_REHEARSAL"
+}

@@ -1,0 +1,30 @@
+{
+  "version": "GOLD_H1_CONFIRMATION_GEOMETRY_MONTHLY_BATCH_V1_BROWSER_CERT",
+  "verdict": "PASS_WHITE_CONTINUOUS_MONTH_BROWSER_REGRESSION",
+  "month": "2023_02",
+  "label": "February 2023",
+  "html": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_02/continuous_chart.html",
+  "html_sha256": "ca672dc3b3296e2dd6fc978bddb5223368f0175f78a07ae18e8349a93b4eebab",
+  "screenshot": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_02/chart_1440.png",
+  "screenshot_sha256": "2460db8d815bcb5168463040b5a87264e5a46d1cb91f1fbcbe4ec7c59a2488fd",
+  "executed_trades": 62,
+  "bars": {
+    "H1": 417,
+    "M15": 1789,
+    "M5": 5447
+  },
+  "controls_verified": [
+    "H1",
+    "M15",
+    "M5",
+    "pan-right",
+    "zoom-in",
+    "full-month"
+  ],
+  "theme": {
+    "background": "rgb(255, 255, 255)",
+    "frameFill": "rgb(255, 255, 255)"
+  },
+  "browser_errors": [],
+  "certification_sha256": "1fed9456199de8d7ac40dcd7616bd025f9e3c9bcd6e365a5534cee79da9d8354"
+}

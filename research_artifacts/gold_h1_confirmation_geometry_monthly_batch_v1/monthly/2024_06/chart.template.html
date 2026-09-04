@@ -1,0 +1,293 @@
+<div id="gold-2024-06-h1-confirmation-only-v1">
+  <style>
+    #gold-2024-06-h1-confirmation-only-v1 {
+      box-sizing: border-box; width: 100%; padding: 14px; background: #ffffff;
+      color: #111827; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    #gold-2024-06-h1-confirmation-only-v1 * { box-sizing: border-box; }
+    #gold-2024-06-h1-confirmation-only-v1 h2 { margin: 0 0 3px; font-size: 19px; font-weight: 500; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-subtitle { margin: 0 0 9px; color: #4b5563; font-size: 12px; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-metrics { display: flex; flex-wrap: wrap; gap: 5px 15px; margin: 0 0 9px; font-size: 13px; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-metrics strong { font-weight: 500; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 8px; }
+    #gold-2024-06-h1-confirmation-only-v1 button {
+      min-height: 36px; padding: 6px 10px; border: 1px solid #d1d5db; border-radius: 5px;
+      background: #ffffff; color: #111827; font: inherit; cursor: pointer;
+    }
+    #gold-2024-06-h1-confirmation-only-v1 button[aria-pressed="true"] { border-color: #2962ff; color: #1746c7; background: #eef4ff; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-separator { width: 1px; align-self: stretch; background: #e5e7eb; margin: 0 2px; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-chart { width: 100%; min-width: 0; }
+    #gold-2024-06-h1-confirmation-only-v1 svg { display: block; width: 100%; height: auto; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-axis { fill: #4b5563; font-size: 11.5px; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-label { fill: #111827; font-size: 11.5px; font-weight: 500; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-marker { fill: #ffffff; font-size: 11px; font-weight: 500; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-detail { min-height: 22px; margin: 5px 0 7px; color: #374151; font-size: 12px; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-legend { display: flex; flex-wrap: wrap; gap: 5px 13px; color: #4b5563; font-size: 12px; margin: 7px 0; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-legend span { display: inline-flex; align-items: center; gap: 5px; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-swatch { width: 18px; height: 3px; display: inline-block; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-entry { background: #2962ff; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-stop { background: #dc2626; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-target { background: #059669; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-mark { background: #d97706; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-table-wrap { overflow-x: auto; border-top: 1px solid #e5e7eb; margin-top: 7px; }
+    #gold-2024-06-h1-confirmation-only-v1 table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    #gold-2024-06-h1-confirmation-only-v1 th,
+    #gold-2024-06-h1-confirmation-only-v1 td { padding: 7px 8px; border-bottom: 1px solid #e5e7eb; text-align: left; white-space: nowrap; }
+    #gold-2024-06-h1-confirmation-only-v1 th { color: #4b5563; font-weight: 500; }
+    #gold-2024-06-h1-confirmation-only-v1 tr[data-selected="true"] { background: #eef4ff; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-row-button { min-width: 34px; min-height: 30px; padding: 3px 7px; }
+    #gold-2024-06-h1-confirmation-only-v1 .positive { color: #047857; }
+    #gold-2024-06-h1-confirmation-only-v1 .negative { color: #b91c1c; }
+    #gold-2024-06-h1-confirmation-only-v1 .jgo-foot { color: #6b7280; font-size: 12px; margin-top: 8px; }
+    @media (max-width: 520px) {
+      #gold-2024-06-h1-confirmation-only-v1 { padding: 10px; }
+      #gold-2024-06-h1-confirmation-only-v1 .jgo-controls button { flex: 1 1 72px; }
+      #gold-2024-06-h1-confirmation-only-v1 .jgo-separator { display: none; }
+    }
+  </style>
+  <h2>June 2024 — confirmation-only V2 trades</h2>
+  <p class="jgo-subtitle">All executed trades from the unchanged January V2 policy on one continuous June timeline. Gross first-passage results; no costs or overlap constraint.</p>
+  <div class="jgo-metrics" id="jgo-metrics" aria-live="polite"></div>
+  <div class="jgo-controls" aria-label="Chart controls">
+    <button type="button" data-timeframe="H1" aria-pressed="false">H1</button>
+    <button type="button" data-timeframe="M15" aria-pressed="true">M15</button>
+    <button type="button" data-timeframe="M5" aria-pressed="false">M5</button>
+    <span class="jgo-separator" aria-hidden="true"></span>
+    <button type="button" id="jgo-left" aria-label="Move chart left">←</button>
+    <button type="button" id="jgo-right" aria-label="Move chart right">→</button>
+    <button type="button" id="jgo-zoom-out">Zoom out</button>
+    <button type="button" id="jgo-zoom-in">Zoom in</button>
+    <button type="button" id="jgo-full">Full June</button>
+  </div>
+  <div class="jgo-chart" id="jgo-chart"></div>
+  <div class="jgo-detail" id="jgo-detail" aria-live="polite">Select a numbered setup on the chart or in the ledger to inspect it without leaving the full timeline.</div>
+  <div class="jgo-legend" aria-label="Chart legend">
+    <span><i class="jgo-swatch jgo-entry"></i>Entry</span>
+    <span><i class="jgo-swatch jgo-stop"></i>Stop</span>
+    <span><i class="jgo-swatch jgo-target"></i>Target / target hit</span>
+    <span><i class="jgo-swatch jgo-mark"></i>Month-end mark</span>
+    <span>▲ long</span><span>▼ short</span><span>× stopped</span>
+  </div>
+  <div class="jgo-table-wrap">
+    <table aria-label="June 2024 trade ledger">
+      <thead><tr><th>Trade</th><th>Decision UTC</th><th>Side</th><th>Auction</th><th>Outcome</th><th>Gross R</th><th>Target R</th><th>Duration</th></tr></thead>
+      <tbody id="jgo-ledger"></tbody>
+    </table>
+  </div>
+  <p class="jgo-foot">Each trade is measured independently. Selecting a row only highlights it; the chart remains the continuous June timeline.</p>
+  <script id="jgo-data" type="application/json">__FEBRUARY_CONFIRMATION_ONLY_DATA__</script>
+  <script>
+    (() => {
+      const root = document.getElementById("gold-2024-06-h1-confirmation-only-v1");
+      const data = JSON.parse(root.querySelector("#jgo-data").textContent);
+      const chart = root.querySelector("#jgo-chart");
+      const detail = root.querySelector("#jgo-detail");
+      const ledger = root.querySelector("#jgo-ledger");
+      const NS = "http://www.w3.org/2000/svg";
+      let timeframe = "H1";
+      let selected = -1;
+      let start = 0;
+      let end = Math.min(data.bars[timeframe].length - 1, 143);
+      let resizeTimer = 0;
+      const svgEl = name => document.createElementNS(NS, name);
+      const attrs = (node, values) => { Object.entries(values).forEach(([key, value]) => node.setAttribute(key, String(value))); return node; };
+      const addText = (svg, x, y, value, className, anchor = "start", extra = {}) => {
+        const node = attrs(svgEl("text"), { x, y, class: className, "text-anchor": anchor, ...extra });
+        node.textContent = value; svg.appendChild(node); return node;
+      };
+      const addLine = (svg, x1, y1, x2, y2, color, width = 1, extra = {}) => {
+        const node = attrs(svgEl("line"), { x1, y1, x2, y2, stroke: color, "stroke-width": width, "vector-effect": "non-scaling-stroke", ...extra });
+        svg.appendChild(node); return node;
+      };
+      const price = value => Number(value).toFixed(2);
+      const signedR = value => `${Number(value) >= 0 ? "+" : ""}${Number(value).toFixed(2)}R`;
+      const dateTime = seconds => new Intl.DateTimeFormat("en-GB", { timeZone: "UTC", month: "short", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date(seconds * 1000));
+      const duration = minutes => minutes < 60 ? `${minutes}m` : minutes < 1440 ? `${(minutes / 60).toFixed(1)}h` : `${(minutes / 1440).toFixed(1)}d`;
+      const dispositionLabel = value => ({ TARGET: "Target", STOP: "Stop", STOP_FIRST_AMBIGUOUS: "Stop (same M1 bar)", MONTH_END_MARK: "Month-end mark" }[value] || value);
+      const dispositionColor = value => value === "TARGET" ? "#059669" : value === "MONTH_END_MARK" ? "#d97706" : "#dc2626";
+
+      function lowerBound(bars, seconds) {
+        let lo = 0, hi = bars.length;
+        while (lo < hi) { const mid = (lo + hi) >> 1; if (bars[mid][0] < seconds) lo = mid + 1; else hi = mid; }
+        return lo;
+      }
+
+      function fractionalIndex(bars, seconds) {
+        const next = lowerBound(bars, seconds);
+        if (next <= 0) return 0;
+        if (next >= bars.length) return bars.length - 1;
+        if (bars[next][0] === seconds) return next;
+        const previous = next - 1;
+        const span = bars[next][0] - bars[previous][0];
+        const fraction = span > 0 ? Math.max(0, Math.min(1, (seconds - bars[previous][0]) / span)) : 0;
+        return previous + fraction;
+      }
+
+      function resetView() {
+        const bars = data.bars[timeframe]; start = 0; end = bars.length - 1; render();
+      }
+
+      function setView(center, count) {
+        const bars = data.bars[timeframe];
+        const size = Math.max(2, Math.min(bars.length, Math.round(count)));
+        let left = Math.round(center - size / 2);
+        left = Math.max(0, Math.min(left, bars.length - size));
+        start = left; end = left + size - 1; render();
+      }
+
+      function zoom(factor) {
+        const bars = data.bars[timeframe];
+        const current = end - start + 1;
+        const minimum = timeframe === "H1" ? 40 : timeframe === "M15" ? 120 : 360;
+        const next = Math.max(minimum, Math.min(bars.length, current * factor));
+        const center = selected >= 0 ? fractionalIndex(bars, data.plans[selected].decision) : (start + end) / 2;
+        setView(center, next);
+      }
+
+      function pan(direction) {
+        const count = end - start + 1;
+        setView((start + end) / 2 + direction * count * 0.38, count);
+      }
+
+      function selectPlan(index) {
+        selected = selected === index ? -1 : index;
+        render();
+      }
+
+      function renderMetrics() {
+        const s = data.summary;
+        const hitRate = s.resolved_hit_rate == null ? "n/a" : `${(100 * s.resolved_hit_rate).toFixed(1)}%`;
+        const values = [
+          `<strong>${s.plans}</strong> trades`,
+          `<strong>${s.target_hits}</strong> targets`,
+          `<strong>${s.stops + s.stop_first_ambiguous}</strong> stopped`,
+          `<strong>${s.month_end_marks}</strong> marked`,
+          `<strong>${hitRate}</strong> resolved hit rate`,
+          `<strong>${signedR(s.gross_r_sum)}</strong> gross total`,
+        ];
+        root.querySelector("#jgo-metrics").innerHTML = values.map(value => `<span>${value}</span>`).join("");
+      }
+
+      function renderLedger() {
+        ledger.replaceChildren();
+        data.plans.forEach((plan, index) => {
+          const row = document.createElement("tr"); row.dataset.selected = String(index === selected); row.dataset.planRow = String(plan.number);
+          const number = document.createElement("td");
+          const button = document.createElement("button"); button.type = "button"; button.className = "jgo-row-button"; button.textContent = String(plan.number); button.setAttribute("aria-label", `Highlight setup ${plan.number}`); button.addEventListener("click", () => selectPlan(index));
+          number.appendChild(button); row.appendChild(number);
+          [dateTime(plan.decision), plan.direction, `${plan.family} · ${plan.h1State.replaceAll("_", " ")}`, dispositionLabel(plan.disposition)].forEach(value => { const cell = document.createElement("td"); cell.textContent = value; row.appendChild(cell); });
+          const result = document.createElement("td"); result.textContent = signedR(plan.grossR); result.className = plan.grossR >= 0 ? "positive" : "negative"; row.appendChild(result);
+          const target = document.createElement("td"); target.textContent = signedR(plan.targetR); row.appendChild(target);
+          const elapsed = document.createElement("td"); elapsed.textContent = duration(plan.durationMinutes); row.appendChild(elapsed);
+          ledger.appendChild(row);
+        });
+      }
+
+      function renderChart() {
+        chart.replaceChildren();
+        const bars = data.bars[timeframe];
+        const measured = Math.max(300, Math.floor(chart.getBoundingClientRect().width || 736));
+        const height = measured < 440 ? 340 : measured < 760 ? 410 : 500;
+        const margin = { left: 58, right: 12, top: 30, bottom: 34 };
+        const plotLeft = margin.left, plotRight = measured - margin.right, plotTop = margin.top, plotBottom = height - margin.bottom;
+        const plotWidth = plotRight - plotLeft, plotHeight = plotBottom - plotTop;
+        const visible = bars.slice(start, end + 1);
+        const activePlans = data.plans.filter(plan => {
+          const from = fractionalIndex(bars, plan.decision), to = fractionalIndex(bars, plan.resolution);
+          return Math.max(from, start) <= Math.min(to, end);
+        });
+        const values = visible.flatMap(row => [row[2], row[3]]);
+        activePlans.forEach(plan => values.push(plan.entry, plan.stop, plan.target));
+        let min = Math.min(...values), max = Math.max(...values);
+        const padding = Math.max((max - min) * 0.055, 0.35); min -= padding; max += padding;
+        const x = index => plotLeft + ((index - start + 0.5) / Math.max(1, end - start + 1)) * plotWidth;
+        const y = value => plotTop + ((max - value) / Math.max(0.000001, max - min)) * plotHeight;
+        const candleWidth = Math.max(0.45, Math.min(7, (plotWidth / Math.max(1, visible.length)) * 0.58));
+        const svg = attrs(svgEl("svg"), { viewBox: `0 0 ${measured} ${height}`, role: "img", "aria-label": `${timeframe} continuous June chart with all confirmation-only trades`, "data-timeframe": timeframe, "data-visible-bars": visible.length });
+        const title = svgEl("title"); title.textContent = `${timeframe} June 2024 continuous confirmation-only outcomes`; svg.appendChild(title);
+        const defs = svgEl("defs"); const clip = attrs(svgEl("clipPath"), { id: "jgo-plot-clip" }); clip.appendChild(attrs(svgEl("rect"), { x: plotLeft, y: plotTop, width: plotWidth, height: plotHeight })); defs.appendChild(clip); svg.appendChild(defs);
+        svg.appendChild(attrs(svgEl("rect"), { x: plotLeft, y: plotTop, width: plotWidth, height: plotHeight, fill: "#ffffff", stroke: "#d1d5db", "stroke-width": 1, "data-chart-frame": "true" }));
+        for (let tick = 0; tick < 5; tick += 1) {
+          const value = min + (max - min) * tick / 4, py = y(value);
+          addLine(svg, plotLeft, py, plotRight, py, "#e5e7eb");
+          addText(svg, plotLeft - 7, py + 4, price(value), "jgo-axis", "end");
+        }
+        const timeTickCount = measured < 440 ? 3 : measured < 760 ? 5 : 7;
+        for (let tick = 0; tick < timeTickCount; tick += 1) {
+          const index = Math.round(start + (end - start) * tick / Math.max(1, timeTickCount - 1));
+          const anchor = tick === 0 ? "start" : tick === timeTickCount - 1 ? "end" : "middle";
+          addText(svg, x(index), height - 8, dateTime(bars[index][0]), "jgo-axis", anchor);
+        }
+        addText(svg, plotLeft + 5, 18, `${timeframe} · ${visible.length.toLocaleString()} bars visible · ${dateTime(bars[start][0])} → ${dateTime(bars[end][0])}`, "jgo-label");
+
+        const candleGroup = attrs(svgEl("g"), { "clip-path": "url(#jgo-plot-clip)" });
+        visible.forEach((row, offset) => {
+          const index = start + offset, open = row[1], high = row[2], low = row[3], close = row[4];
+          const color = close >= open ? "#089981" : "#f23645";
+          candleGroup.appendChild(attrs(svgEl("line"), { x1: x(index), y1: y(high), x2: x(index), y2: y(low), stroke: color, "stroke-width": 1, "vector-effect": "non-scaling-stroke" }));
+          candleGroup.appendChild(attrs(svgEl("rect"), { x: x(index) - candleWidth / 2, y: Math.min(y(open), y(close)), width: candleWidth, height: Math.max(1, Math.abs(y(open) - y(close))), fill: color, "data-candle": timeframe, "data-open-time": row[0] }));
+        });
+        svg.appendChild(candleGroup);
+
+        activePlans.forEach(plan => {
+          const index = plan.number - 1, isSelected = index === selected;
+          const rawFrom = fractionalIndex(bars, plan.decision), rawTo = fractionalIndex(bars, plan.resolution);
+          const from = Math.max(start, rawFrom), to = Math.min(end, Math.max(rawFrom + 0.15, rawTo));
+          const x1 = x(from), x2 = x(to), opacity = isSelected ? 1 : 0.52, width = isSelected ? 2.4 : 1.25;
+          addLine(svg, x1, y(plan.entry), x2, y(plan.entry), "#2962ff", width, { opacity, "data-plan-line": "ENTRY", "data-plan": plan.number });
+          addLine(svg, x1, y(plan.stop), x2, y(plan.stop), "#dc2626", width, { opacity, "data-plan-line": "STOP", "data-plan": plan.number });
+          addLine(svg, x1, y(plan.target), x2, y(plan.target), "#059669", width, { opacity, "stroke-dasharray": isSelected ? "none" : "4 3", "data-plan-line": "TARGET", "data-plan": plan.number });
+          if (rawFrom >= start && rawFrom <= end) {
+            const markerY = y(plan.entry), marker = attrs(svgEl("circle"), { cx: x(rawFrom), cy: markerY, r: isSelected ? 8 : 7, fill: plan.direction === "LONG" ? "#2962ff" : "#7c3aed", stroke: "#ffffff", "stroke-width": 1.5, role: "button", "aria-label": `Select setup ${plan.number}`, "data-plan-marker": plan.number });
+            marker.style.cursor = "pointer"; marker.addEventListener("click", () => selectPlan(index)); svg.appendChild(marker);
+            addText(svg, x(rawFrom), markerY + 4, String(plan.number), "jgo-marker", "middle", { "pointer-events": "none" });
+            const arrow = plan.direction === "LONG" ? "▲" : "▼";
+            addText(svg, x(rawFrom), markerY + (plan.direction === "LONG" ? 21 : -13), arrow, "jgo-label", "middle");
+          }
+          if (rawTo >= start && rawTo <= end) {
+            const outcomeY = y(plan.disposition === "TARGET" ? plan.target : plan.disposition === "MONTH_END_MARK" ? plan.entry + plan.grossR * Math.abs(plan.entry - plan.stop) * (plan.direction === "LONG" ? 1 : -1) : plan.stop);
+            const color = dispositionColor(plan.disposition);
+            if (plan.disposition === "STOP" || plan.disposition === "STOP_FIRST_AMBIGUOUS") {
+              addLine(svg, x(rawTo) - 5, outcomeY - 5, x(rawTo) + 5, outcomeY + 5, color, 2.2, { "data-outcome-marker": plan.disposition });
+              addLine(svg, x(rawTo) - 5, outcomeY + 5, x(rawTo) + 5, outcomeY - 5, color, 2.2);
+            } else {
+              svg.appendChild(attrs(svgEl("circle"), { cx: x(rawTo), cy: outcomeY, r: 5, fill: color, stroke: "#ffffff", "stroke-width": 1.3, "data-outcome-marker": plan.disposition }));
+            }
+          }
+          if (isSelected) {
+            const labelX = Math.min(plotRight - 4, x2 + 5);
+            addText(svg, labelX, y(plan.entry) - 5, `#${plan.number} entry ${price(plan.entry)}`, "jgo-label", "end");
+            addText(svg, labelX, y(plan.stop) + 14, `SL ${price(plan.stop)}`, "jgo-label", "end");
+            addText(svg, labelX, y(plan.target) - 5, `TP ${price(plan.target)}`, "jgo-label", "end");
+          }
+        });
+        chart.appendChild(svg);
+      }
+
+      function renderDetail() {
+        if (selected < 0) {
+          detail.textContent = "Select a numbered setup on the chart or in the ledger to inspect it without leaving the full timeline.";
+          return;
+        }
+        const plan = data.plans[selected];
+        detail.textContent = `#${plan.number} · ${dateTime(plan.decision)} UTC · ${plan.family} ${plan.direction} · H1 ${plan.h1State.replaceAll("_", " ")} · entry ${price(plan.entry)} · SL ${price(plan.stop)} · ${plan.targetTimeframe} target ${price(plan.target)} · ${dispositionLabel(plan.disposition)} ${signedR(plan.grossR)} after ${duration(plan.durationMinutes)}.`;
+      }
+
+      function render() {
+        root.querySelectorAll("[data-timeframe]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.timeframe === timeframe)));
+        renderChart(); renderDetail(); renderLedger();
+        root.dataset.timeframe = timeframe; root.dataset.selectedPlan = selected < 0 ? "NONE" : data.plans[selected].planIdentity;
+        root.dataset.viewStart = String(start); root.dataset.viewEnd = String(end);
+      }
+
+      root.querySelectorAll("[data-timeframe]").forEach(button => button.addEventListener("click", () => { timeframe = button.dataset.timeframe; start = 0; end = Math.min(data.bars[timeframe].length - 1, timeframe === 'H1' ? 143 : timeframe === 'M15' ? 287 : 431); render(); }));
+      root.querySelector("#jgo-left").addEventListener("click", () => pan(-1));
+      root.querySelector("#jgo-right").addEventListener("click", () => pan(1));
+      root.querySelector("#jgo-zoom-out").addEventListener("click", () => zoom(2));
+      root.querySelector("#jgo-zoom-in").addEventListener("click", () => zoom(0.5));
+      root.querySelector("#jgo-full").addEventListener("click", resetView);
+      renderMetrics(); render();
+      const observer = new ResizeObserver(() => { clearTimeout(resizeTimer); resizeTimer = setTimeout(render, 70); }); observer.observe(root);
+    })();
+  </script>
+</div>

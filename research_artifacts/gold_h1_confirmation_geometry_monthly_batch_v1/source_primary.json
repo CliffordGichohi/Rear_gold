@@ -1,0 +1,33 @@
+{
+  "casebook_sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+  "diagnostics": {
+    "15m": {
+      "first_open_at": "2021-07-23T14:15:00Z",
+      "last_available_at": "2024-12-31T23:45:00Z",
+      "rows": 79873,
+      "stream_sha256": "50a5fb8807a5e672b45850756d29d2d875f79e78c6361732ec94a3ed391b1fa5"
+    },
+    "1h": {
+      "first_open_at": "2021-07-23T15:00:00Z",
+      "last_available_at": "2024-12-31T23:00:00Z",
+      "rows": 18863,
+      "stream_sha256": "c4a76b221434ea3de18f50cb488ce9f32956127c1f3276fa251bb69c12e7fc5e"
+    },
+    "1m": {
+      "first_open_at": "2021-07-23T14:05:00Z",
+      "last_available_at": "2024-12-31T23:59:00Z",
+      "rows": 1218292,
+      "stream_sha256": "718848bed35514d094be2870ccfa5d082d11606b1dbb235d6c7a6b7a8c9f50ec"
+    },
+    "5m": {
+      "first_open_at": "2021-07-23T14:05:00Z",
+      "last_available_at": "2024-12-31T23:55:00Z",
+      "rows": 242611,
+      "stream_sha256": "5f5ddac98ad177a1f3026b08b6804c1fb44ada96280062677a816fd031348b95"
+    },
+    "diagnostics_sha256": "e9e579d036b63bce21caef933b5d0a2586727b2872def6e51a29c5857f013c68"
+  },
+  "protocol_sha256": "d1db8a79e2cf8926a6c18f788491054fa2727afc9481a8a84754e0459546f38e",
+  "source_payload_sha256": "65012a94f34a58436bd027771e03f6cf20c086afae0a5dafcf3aed0dbf82dcd6",
+  "version": "GOLD_H1_CONFIRMATION_GEOMETRY_MONTHLY_BATCH_V1_PRIMARY_SOURCE"
+}

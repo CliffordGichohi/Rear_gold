@@ -1,0 +1,30 @@
+{
+  "version": "GOLD_H1_CONFIRMATION_GEOMETRY_MONTHLY_BATCH_V1_BROWSER_CERT",
+  "verdict": "PASS_WHITE_CONTINUOUS_MONTH_BROWSER_REGRESSION",
+  "month": "2022_07",
+  "label": "July 2022",
+  "html": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_07/continuous_chart.html",
+  "html_sha256": "0bc52044e3e947b8da641f8558ae1e0cef73f380a1df288452f985b62b96879c",
+  "screenshot": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_07/chart_1440.png",
+  "screenshot_sha256": "951c1a133060489107f474ac25432a67e10eda2f0bc7aadab1d472039e77f847",
+  "executed_trades": 69,
+  "bars": {
+    "H1": 437,
+    "M15": 1877,
+    "M5": 5721
+  },
+  "controls_verified": [
+    "H1",
+    "M15",
+    "M5",
+    "pan-right",
+    "zoom-in",
+    "full-month"
+  ],
+  "theme": {
+    "background": "rgb(255, 255, 255)",
+    "frameFill": "rgb(255, 255, 255)"
+  },
+  "browser_errors": [],
+  "certification_sha256": "fdb5d90d2ed5f55c981152113f15a030b48a8f94b638a7c3a2ad7341d1dbdc49"
+}

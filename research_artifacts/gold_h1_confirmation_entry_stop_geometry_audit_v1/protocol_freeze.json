@@ -1,0 +1,103 @@
+{
+  "entry_policies": [
+    "CONTROL_NEXT_M1_OPEN",
+    "M5_BROKEN_CONTROL_FIRST_RETEST",
+    "CONFIRMED_25_75_RETEST_SPLIT"
+  ],
+  "evidence_status": "EXPOSED_MATCHED_CASE_DIAGNOSTIC_ZERO_VALIDATION_CREDIT",
+  "fixed_population": {
+    "complete_rows_sha256": "8515320a9e59483fffe7a7e89d479335d36ba2c8841cef7a30d0576a3f8950a1",
+    "count": 326,
+    "identities_sha256": "3a44e46707b709e8439b1ee1156b1093e920f0c7ae21666413e104a76adca900",
+    "monthly_counts": {
+      "april_2022": 60,
+      "february_2022": 61,
+      "january_2022": 65,
+      "march_2022": 79,
+      "may_2022": 61
+    }
+  },
+  "implementation_bindings": {
+    "module_sha256": "b39d99b8c79214bc024220e978734be9a86b3d327ced77dca88373da0c65a870",
+    "runner_sha256": "4c25f0443034a232a820c7b770a94a6f186e615692077152e554d8a6332d438e",
+    "spec_sha256": "56030da8e4ad36edddb2f27ed1688afa6fb952715971793b7557ecadea4214f0"
+  },
+  "matrix_rows_expected": 3912,
+  "period": {
+    "end_exclusive": "2022-06-01T00:00:00Z",
+    "start": "2022-01-01T00:00:00Z"
+  },
+  "prohibitions": [
+    "no fresh dates",
+    "no outcome-derived stop distance",
+    "no dropped losers or winners",
+    "no economic edge or validation claim",
+    "no visualization unless a later fidelity dispute requires it"
+  ],
+  "protocol_sha256": "982538c0999a5ad8b889ea599807d73c82a8675ccf8651b4db29f2cfacf42f7e",
+  "rules": {
+    "accounting": "gross before costs; $50 maximum case risk illustration",
+    "ambiguity": "stop first; limit plus target without stop cancels as unresolved",
+    "deadline": "original calendar-month end",
+    "population_policy": "all original executed trades retained, including alternative no-fills",
+    "retest_expiry_minutes": 15,
+    "split_control_fraction": 0.25,
+    "split_retest_fraction": 0.75,
+    "stop_buffer": "max(0.05 * point-in-time source-timeframe ATR14, 0.02)",
+    "target": "unchanged original absolute target"
+  },
+  "source_bindings": {
+    "casebook": {
+      "bytes": 258834096,
+      "manifest_path": "research_artifacts/gold_casebook_v01/manifest.json",
+      "manifest_sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6",
+      "path": "research_artifacts/gold_casebook_v01/price_bars.jsonl.gz",
+      "sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e"
+    },
+    "predecessor_manifests": [
+      {
+        "bound_files": 8,
+        "path": "research_artifacts/gold_january_h1_confirmation_only_reclaim_v2/manifest.json",
+        "sha256": "f2fa947b2380ed9aeeebd3529f686a2ae5ade2f305b5e04223da70fe9e898330",
+        "verdict": "REJECT_EXPOSED_CONFIRMATION_ONLY_INCREMENT"
+      },
+      {
+        "bound_files": 9,
+        "path": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/manifest.json",
+        "sha256": "5cc35acbd1a46b5696694fd2284b410888181f7efb65108655523c2379d9f4b5",
+        "verdict": "COMPLETED_UNCHANGED_FEBRUARY_APPLICATION"
+      },
+      {
+        "bound_files": 9,
+        "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/manifest.json",
+        "sha256": "0fdef69a9bb914cf38cd210041b403c8b988a53f24e58b7eb6c4258edcaec70f",
+        "verdict": "PASS_THREE_SEPARATE_UNCHANGED_MONTHLY_APPLICATIONS"
+      },
+      {
+        "bound_files": 4,
+        "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/march_2022/manifest.json",
+        "sha256": "715c209698954237a261a5eadd3700f9fcc36a65c417cbb5de746994d42ca113",
+        "verdict": "COMPLETED_UNCHANGED_MONTHLY_APPLICATION"
+      },
+      {
+        "bound_files": 4,
+        "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/april_2022/manifest.json",
+        "sha256": "263628806fef60c73eaaf001e097d2e71a1292adcd860f941c3c4e254aa0f1a0",
+        "verdict": "COMPLETED_UNCHANGED_MONTHLY_APPLICATION"
+      },
+      {
+        "bound_files": 4,
+        "path": "research_artifacts/gold_mar_apr_may_h1_confirmation_only_reclaim_v1/may_2022/manifest.json",
+        "sha256": "01c5520cf45f49c25667f2df98c88b528e4ddbabd22b62118ef9e15dec75cff5",
+        "verdict": "COMPLETED_UNCHANGED_MONTHLY_APPLICATION"
+      }
+    ]
+  },
+  "stop_policies": [
+    "CONTROL_V2_FILLED_STOP",
+    "M5_LATEST_CONFIRMED_OPPOSING_SWING_ELSE_CONTROL",
+    "M15_LATEST_CONFIRMED_OPPOSING_SWING_ELSE_CONTROL",
+    "H1_SOURCE_SWING_BUFFERED_ELSE_CONTROL"
+  ],
+  "version": "GOLD_H1_CONFIRMATION_ENTRY_STOP_GEOMETRY_AUDIT_V1_PROTOCOL_FREEZE"
+}

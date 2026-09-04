@@ -1,0 +1,12 @@
+{
+  "context_count": 81,
+  "label": "December 2024",
+  "matrix_rows": 972,
+  "month": "2024_12",
+  "month_payload_sha256": "4e37e9fe693478dce06d7bde4c69c3387149c272452751f073fb91225868b472",
+  "primary_month_payload_sha256": "2fb7361136aaa19cbce70cc3a1213227008a60f7d39b90f481915d0c8ec1f69d",
+  "protocol_sha256": "d1db8a79e2cf8926a6c18f788491054fa2727afc9481a8a84754e0459546f38e",
+  "reference_month_payload_sha256": "2fb7361136aaa19cbce70cc3a1213227008a60f7d39b90f481915d0c8ec1f69d",
+  "verdict": "PASS_PRIMARY_REFERENCE_EXACT",
+  "version": "GOLD_H1_CONFIRMATION_GEOMETRY_MONTHLY_BATCH_V1_REFERENCE_CERTIFICATE"
+}

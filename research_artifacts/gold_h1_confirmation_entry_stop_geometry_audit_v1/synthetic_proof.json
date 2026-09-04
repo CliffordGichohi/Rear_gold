@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "expiry_is_fifteen_minutes": true,
+    "first_retest_filled": true,
+    "future_swing_is_not_visible": true,
+    "invalid_structural_stop_falls_back": true,
+    "known_structural_stop_is_closer": true,
+    "long_short_geometry_symmetric": true,
+    "outward_buffer_symmetric": true,
+    "split_fractions_sum_to_one": true,
+    "stop_first_on_ambiguous_path": true
+  },
+  "proof_sha256": "9ee39dff8a4da1ebaaefd373ed87f2c485fb7e9ce4fa92a1556de57365456a3f",
+  "verdict": "PASS",
+  "version": "GOLD_H1_CONFIRMATION_ENTRY_STOP_GEOMETRY_AUDIT_V1_SYNTHETIC_PROOF"
+}

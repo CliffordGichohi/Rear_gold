@@ -1,0 +1,278 @@
+{
+  "accounting": {
+    "ambiguity": "stop first",
+    "costs": "excluded unchanged from predecessor",
+    "deadline": "calendar month end",
+    "overlap": "unconstrained unchanged from predecessor",
+    "risk_per_case_usd": 50.0
+  },
+  "bindings": {
+    "casebook_manifest_sha256": "38e4aadc43917a5b91d04d47ab18542d7514fe257cc030f959d34080865314d6",
+    "casebook_sha256": "0758f9a759bf63064d0ed4478383c10f9afd860bf993528b7909965c1639090e",
+    "predecessor_manifest_internal_sha256": "9a07627300ebe3842fc24df4ecb4c46c6a9253e9dca05fd2545c896841771ae2",
+    "predecessor_manifest_sha256": "85acc8e6fa9d8ecb2504920f01a11acd5f1e22b6df12261e253c51fbcf559587",
+    "source_template_sha256": "40f42c4d5fddb4a96028c6f58f2b3e898d8a3179da8b4c9372fe74eebd5c150b"
+  },
+  "default_chart_policy": {
+    "entry": "CONTROL_NEXT_M1_OPEN",
+    "stop": "CONTROL_V2_FILLED_STOP"
+  },
+  "entry_policies": [
+    "CONTROL_NEXT_M1_OPEN",
+    "M5_BROKEN_CONTROL_FIRST_RETEST",
+    "CONFIRMED_25_75_RETEST_SPLIT"
+  ],
+  "evidence_status": "EXPOSED_HISTORICAL_EXTENSION_ZERO_VALIDATION_CREDIT",
+  "guards": {
+    "no_2025_or_2026": true,
+    "no_month_specific_policy_selection": true,
+    "no_paid_or_free_acquisition": true,
+    "one_month_atomic_checkpoints": true,
+    "primary_reference_required": true
+  },
+  "implementation": {
+    "analytics_module_sha256": "b39d99b8c79214bc024220e978734be9a86b3d327ced77dca88373da0c65a870",
+    "browser_tool_sha256": "b6452e2b344aab2a21c2f39412db208639e6d21978455ee79b8ecbab138e300d",
+    "predecessor_runner_sha256": "4c25f0443034a232a820c7b770a94a6f186e615692077152e554d8a6332d438e",
+    "runner_sha256": "8caa6565946f74fa4e38195fa346c97cc22c6d3edb4ec465de83dda1424dbdd5",
+    "spec_sha256": "74076a1ab3d0f74b9ee6d7ff9928867cd97b943865a859270cdf4aeb3b51643d",
+    "supervisor_sha256": "ddf1f21c346cf95140755bd4c3c23d39e5251cd6512efe26f60517b45dfb724c"
+  },
+  "months": [
+    {
+      "end_exclusive": "2022-07-01T00:00:00Z",
+      "key": "2022_06",
+      "label": "June 2022",
+      "source_cutoff": "2022-07-03T00:00:00Z",
+      "start": "2022-06-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2022-08-01T00:00:00Z",
+      "key": "2022_07",
+      "label": "July 2022",
+      "source_cutoff": "2022-08-03T00:00:00Z",
+      "start": "2022-07-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2022-09-01T00:00:00Z",
+      "key": "2022_08",
+      "label": "August 2022",
+      "source_cutoff": "2022-09-03T00:00:00Z",
+      "start": "2022-08-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2022-10-01T00:00:00Z",
+      "key": "2022_09",
+      "label": "September 2022",
+      "source_cutoff": "2022-10-03T00:00:00Z",
+      "start": "2022-09-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2022-11-01T00:00:00Z",
+      "key": "2022_10",
+      "label": "October 2022",
+      "source_cutoff": "2022-11-03T00:00:00Z",
+      "start": "2022-10-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2022-12-01T00:00:00Z",
+      "key": "2022_11",
+      "label": "November 2022",
+      "source_cutoff": "2022-12-03T00:00:00Z",
+      "start": "2022-11-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2023-01-01T00:00:00Z",
+      "key": "2022_12",
+      "label": "December 2022",
+      "source_cutoff": "2023-01-03T00:00:00Z",
+      "start": "2022-12-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2023-02-01T00:00:00Z",
+      "key": "2023_01",
+      "label": "January 2023",
+      "source_cutoff": "2023-02-03T00:00:00Z",
+      "start": "2023-01-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2023-03-01T00:00:00Z",
+      "key": "2023_02",
+      "label": "February 2023",
+      "source_cutoff": "2023-03-03T00:00:00Z",
+      "start": "2023-02-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2023-04-01T00:00:00Z",
+      "key": "2023_03",
+      "label": "March 2023",
+      "source_cutoff": "2023-04-03T00:00:00Z",
+      "start": "2023-03-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2023-05-01T00:00:00Z",
+      "key": "2023_04",
+      "label": "April 2023",
+      "source_cutoff": "2023-05-03T00:00:00Z",
+      "start": "2023-04-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2023-06-01T00:00:00Z",
+      "key": "2023_05",
+      "label": "May 2023",
+      "source_cutoff": "2023-06-03T00:00:00Z",
+      "start": "2023-05-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2023-07-01T00:00:00Z",
+      "key": "2023_06",
+      "label": "June 2023",
+      "source_cutoff": "2023-07-03T00:00:00Z",
+      "start": "2023-06-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2023-08-01T00:00:00Z",
+      "key": "2023_07",
+      "label": "July 2023",
+      "source_cutoff": "2023-08-03T00:00:00Z",
+      "start": "2023-07-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2023-09-01T00:00:00Z",
+      "key": "2023_08",
+      "label": "August 2023",
+      "source_cutoff": "2023-09-03T00:00:00Z",
+      "start": "2023-08-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2023-10-01T00:00:00Z",
+      "key": "2023_09",
+      "label": "September 2023",
+      "source_cutoff": "2023-10-03T00:00:00Z",
+      "start": "2023-09-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2023-11-01T00:00:00Z",
+      "key": "2023_10",
+      "label": "October 2023",
+      "source_cutoff": "2023-11-03T00:00:00Z",
+      "start": "2023-10-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2023-12-01T00:00:00Z",
+      "key": "2023_11",
+      "label": "November 2023",
+      "source_cutoff": "2023-12-03T00:00:00Z",
+      "start": "2023-11-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2024-01-01T00:00:00Z",
+      "key": "2023_12",
+      "label": "December 2023",
+      "source_cutoff": "2024-01-03T00:00:00Z",
+      "start": "2023-12-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2024-02-01T00:00:00Z",
+      "key": "2024_01",
+      "label": "January 2024",
+      "source_cutoff": "2024-02-03T00:00:00Z",
+      "start": "2024-01-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2024-03-01T00:00:00Z",
+      "key": "2024_02",
+      "label": "February 2024",
+      "source_cutoff": "2024-03-03T00:00:00Z",
+      "start": "2024-02-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2024-04-01T00:00:00Z",
+      "key": "2024_03",
+      "label": "March 2024",
+      "source_cutoff": "2024-04-03T00:00:00Z",
+      "start": "2024-03-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2024-05-01T00:00:00Z",
+      "key": "2024_04",
+      "label": "April 2024",
+      "source_cutoff": "2024-05-03T00:00:00Z",
+      "start": "2024-04-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2024-06-01T00:00:00Z",
+      "key": "2024_05",
+      "label": "May 2024",
+      "source_cutoff": "2024-06-03T00:00:00Z",
+      "start": "2024-05-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2024-07-01T00:00:00Z",
+      "key": "2024_06",
+      "label": "June 2024",
+      "source_cutoff": "2024-07-03T00:00:00Z",
+      "start": "2024-06-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2024-08-01T00:00:00Z",
+      "key": "2024_07",
+      "label": "July 2024",
+      "source_cutoff": "2024-08-03T00:00:00Z",
+      "start": "2024-07-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2024-09-01T00:00:00Z",
+      "key": "2024_08",
+      "label": "August 2024",
+      "source_cutoff": "2024-09-03T00:00:00Z",
+      "start": "2024-08-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2024-10-01T00:00:00Z",
+      "key": "2024_09",
+      "label": "September 2024",
+      "source_cutoff": "2024-10-03T00:00:00Z",
+      "start": "2024-09-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2024-11-01T00:00:00Z",
+      "key": "2024_10",
+      "label": "October 2024",
+      "source_cutoff": "2024-11-03T00:00:00Z",
+      "start": "2024-10-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2024-12-01T00:00:00Z",
+      "key": "2024_11",
+      "label": "November 2024",
+      "source_cutoff": "2024-12-03T00:00:00Z",
+      "start": "2024-11-01T00:00:00Z"
+    },
+    {
+      "end_exclusive": "2025-01-01T00:00:00Z",
+      "key": "2024_12",
+      "label": "December 2024",
+      "source_cutoff": "2025-01-01T00:00:00Z",
+      "start": "2024-12-01T00:00:00Z"
+    }
+  ],
+  "period": {
+    "end_exclusive": "2025-01-01T00:00:00Z",
+    "start": "2022-06-01T00:00:00Z"
+  },
+  "protocol_sha256": "d1db8a79e2cf8926a6c18f788491054fa2727afc9481a8a84754e0459546f38e",
+  "rehearsal": {
+    "exact_hash_equality_required": true,
+    "period": "2022-01-01 through 2022-05-31",
+    "required_contexts": 326,
+    "required_matrix_rows": 3912
+  },
+  "stop_policies": [
+    "CONTROL_V2_FILLED_STOP",
+    "M5_LATEST_CONFIRMED_OPPOSING_SWING_ELSE_CONTROL",
+    "M15_LATEST_CONFIRMED_OPPOSING_SWING_ELSE_CONTROL",
+    "H1_SOURCE_SWING_BUFFERED_ELSE_CONTROL"
+  ],
+  "version": "GOLD_H1_CONFIRMATION_GEOMETRY_MONTHLY_BATCH_V1_PROTOCOL_FREEZE"
+}

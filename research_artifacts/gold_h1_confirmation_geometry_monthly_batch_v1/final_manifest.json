@@ -1,0 +1,1495 @@
+{
+  "batch_result_sha256": "1a43a6b0646061738486bcecdea02421e48a2058f8c55f6542be3d211b83c37f",
+  "browser_summary_sha256": "745c616eefc123fc00cc300a6e93ce968eecb22285996b11b392d205adc04f61",
+  "files": [
+    {
+      "bytes": 3114,
+      "path": "GOLD_H1_CONFIRMATION_GEOMETRY_MONTHLY_BATCH_V1.md",
+      "sha256": "74076a1ab3d0f74b9ee6d7ff9928867cd97b943865a859270cdf4aeb3b51643d"
+    },
+    {
+      "bytes": 25394,
+      "path": "backend/src/gold_intel/analytics/h1_confirmation_geometry_audit_v1.py",
+      "sha256": "b39d99b8c79214bc024220e978734be9a86b3d327ced77dca88373da0c65a870"
+    },
+    {
+      "bytes": 6680,
+      "path": "frontend/tools/certify-gold-h1-confirmation-geometry-monthly-batch-v1.mjs",
+      "sha256": "b6452e2b344aab2a21c2f39412db208639e6d21978455ee79b8ecbab138e300d"
+    },
+    {
+      "bytes": 21421,
+      "path": "research_artifacts/gold_february_h1_confirmation_only_reclaim_v1/february-h1-confirmation-only-continuous.template.html",
+      "sha256": "40f42c4d5fddb4a96028c6f58f2b3e898d8a3179da8b4c9372fe74eebd5c150b"
+    },
+    {
+      "bytes": 3834,
+      "path": "research_artifacts/gold_h1_confirmation_entry_stop_geometry_audit_v1/manifest.json",
+      "sha256": "85acc8e6fa9d8ecb2504920f01a11acd5f1e22b6df12261e253c51fbcf559587"
+    },
+    {
+      "bytes": 37045,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/batch_result.json",
+      "sha256": "f671519be91e832bb1a9bedcca9f4899b2a64be89c25341e21cbacd33498f2f1"
+    },
+    {
+      "bytes": 10187,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/browser_certification_summary.json",
+      "sha256": "80ceaa94390d4d1c90cc03136f98fe0ace039bc1f5269c3c6651c896a640b51e"
+    },
+    {
+      "bytes": 6352,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/index.html",
+      "sha256": "3166e5524ea4b9f6e3949e41677301d3b4df10f2b5a9afa197ee3cbd077b6ccc"
+    },
+    {
+      "bytes": 1010,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_06/browser_certification.json",
+      "sha256": "d9dafce295a631eadede024e22dd8fea9bb870b72553609a43e71bd8109c94fe"
+    },
+    {
+      "bytes": 828696,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_06/case_geometry_ledger.csv",
+      "sha256": "0c0cbe35a8afcb781df2547c8b5f2461a84d0fbb91df41d4dfecc53385087820"
+    },
+    {
+      "bytes": 21360,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_06/chart.template.html",
+      "sha256": "939b7acff5a4b2339465f44f8f486cf5aeacd5f7396ef41d2170e944beb7f01c"
+    },
+    {
+      "bytes": 299189,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_06/chart_1440.png",
+      "sha256": "5b3a6ddd7a279501586db568cd85306d5deed1279490274148903413efde3cdd"
+    },
+    {
+      "bytes": 436733,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_06/continuous_chart.html",
+      "sha256": "056737cdbdf0e3e11221afeaa753c7e452dfea399cbf278e54436ded086ec8ce"
+    },
+    {
+      "bytes": 24865,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_06/control_case_ledger.csv",
+      "sha256": "5d5156459bf9515a657ba7254d2cc35343552b6d1b176efd725c2b4cd468cb7d"
+    },
+    {
+      "bytes": 1583,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_06/report.md",
+      "sha256": "b41a8692af14d10edafb434a9442b1a47ec01c2eeb91a4b50ba2b2516b20c7ea"
+    },
+    {
+      "bytes": 1010,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_07/browser_certification.json",
+      "sha256": "5e23c8cea8c21ec8725c4b1666b4a7fddb814883d0ca8453caaebeca97a32b42"
+    },
+    {
+      "bytes": 909787,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_07/case_geometry_ledger.csv",
+      "sha256": "c518b07226330f942a13b0d5b749082120bcb1165fce88da0cf3f3a73913fdf2"
+    },
+    {
+      "bytes": 21360,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_07/chart.template.html",
+      "sha256": "09795b762ddcc31f8319a69343ca77ab3cdc76bad996115be4319a1f1dddb057"
+    },
+    {
+      "bytes": 325263,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_07/chart_1440.png",
+      "sha256": "951c1a133060489107f474ac25432a67e10eda2f0bc7aadab1d472039e77f847"
+    },
+    {
+      "bytes": 423176,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_07/continuous_chart.html",
+      "sha256": "0bc52044e3e947b8da641f8558ae1e0cef73f380a1df288452f985b62b96879c"
+    },
+    {
+      "bytes": 24321,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_07/control_case_ledger.csv",
+      "sha256": "0077c4ee511e19d80f06ec8cc68d783e97dbb2fc8914aef42dc110bfdcc5f278"
+    },
+    {
+      "bytes": 1581,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_07/report.md",
+      "sha256": "2b86786637592b4b2bb90c0b66da52d6924e92a8756bc7b4f9a5fc84f3885994"
+    },
+    {
+      "bytes": 1012,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_08/browser_certification.json",
+      "sha256": "7e340b2df7963039fd9cdf9f53d107ab32daead86323bfd172be851220f619db"
+    },
+    {
+      "bytes": 909122,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_08/case_geometry_ledger.csv",
+      "sha256": "274c8a32edf84a8c86f23bfa5d8e86c70aa70be8acda28b1d63c17a81d1119bd"
+    },
+    {
+      "bytes": 21374,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_08/chart.template.html",
+      "sha256": "0f308da5b5ad49434ce014b64db1404317a5b3b554a15703612dc7055d865fe5"
+    },
+    {
+      "bytes": 329862,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_08/chart_1440.png",
+      "sha256": "e72ae4f0c46d19876d3b8474fa8d7ad6b0e286c302f1ff2242585f879751910f"
+    },
+    {
+      "bytes": 459434,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_08/continuous_chart.html",
+      "sha256": "d855c50fef9ad8d3f686d4b621209355ded33f6b920c5f1dda6f9c502bdeb7b8"
+    },
+    {
+      "bytes": 27672,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_08/control_case_ledger.csv",
+      "sha256": "ddbaf7e91f2c9eb27c7f18217596a3231d6b73bb15eeef839d253c944d2c0e73"
+    },
+    {
+      "bytes": 1599,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_08/report.md",
+      "sha256": "15cab0a744e1597200e6f4105d23940dac1d37a994f846e459510fb7a8c7d692"
+    },
+    {
+      "bytes": 1015,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_09/browser_certification.json",
+      "sha256": "62af7f954400f467f3728d57ba5d7a07566909e5cce1dc120cb1036df1af8880"
+    },
+    {
+      "bytes": 958827,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_09/case_geometry_ledger.csv",
+      "sha256": "812b3596c33b3ed2ee9150c7894f3d7a6f466df2fe6695d2158703d372e8cc59"
+    },
+    {
+      "bytes": 21395,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_09/chart.template.html",
+      "sha256": "e388e65ce3ab42c9292c127e6bcf23badc4413851e3a4e77dce2d96edd6ae8a2"
+    },
+    {
+      "bytes": 347400,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_09/chart_1440.png",
+      "sha256": "c11500e24820553d22b9203708b35ceefc685e839199771362247943cba72eb1"
+    },
+    {
+      "bytes": 442731,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_09/continuous_chart.html",
+      "sha256": "8dfd0b5363f52733b18615d67061ab3b19b932d6a494d302a14c19c80fd20fde"
+    },
+    {
+      "bytes": 25775,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_09/control_case_ledger.csv",
+      "sha256": "af056c279988f6890d51d677e17d658cc24884d3fcf56b5695d8964f785b5941"
+    },
+    {
+      "bytes": 1586,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_09/report.md",
+      "sha256": "0c22426f09099767191970d1a75e1e4a926c0b9c8a5731137d01514c48a828da"
+    },
+    {
+      "bytes": 1013,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_10/browser_certification.json",
+      "sha256": "bcae32b313a45011c24434b8b511848fcb0a9bcac6f1453f358428ae84a7f97f"
+    },
+    {
+      "bytes": 855910,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_10/case_geometry_ledger.csv",
+      "sha256": "b5328e551cd3190208b2427481dfdeddbd45b9cdd93da6b62db74f30cd641932"
+    },
+    {
+      "bytes": 21381,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_10/chart.template.html",
+      "sha256": "b6af52a0cca0e12a00794fd56eff71cf50598736b0c062541ca97df79a17eed9"
+    },
+    {
+      "bytes": 312492,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_10/chart_1440.png",
+      "sha256": "ff2e3511a5da27f50f1fd6f326a0eba6a53b3b5b8f002a9018ce147291bb6a70"
+    },
+    {
+      "bytes": 422411,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_10/continuous_chart.html",
+      "sha256": "fd4f001784dc7c5d19abeb55ad73ca70f2942028bbbccf7da5bb583ea2385554"
+    },
+    {
+      "bytes": 25393,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_10/control_case_ledger.csv",
+      "sha256": "18473245ef11113c3497a97a0c583d00c77b179ecd8f2b87692a84cdd67c601b"
+    },
+    {
+      "bytes": 1582,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_10/report.md",
+      "sha256": "3d83a62c696dd8d5be17089b51de44fbac65177a0f204bf05389196e0aa20c68"
+    },
+    {
+      "bytes": 1014,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_11/browser_certification.json",
+      "sha256": "ae15bfe0ddc3869d258a3609111a0878ea79b9589b50ba5e7bf6d77563fc15d3"
+    },
+    {
+      "bytes": 896602,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_11/case_geometry_ledger.csv",
+      "sha256": "ff9fb35bb22995500ce6236379d709c09a22df7adc125a01ccdaee23b5a4476a"
+    },
+    {
+      "bytes": 21388,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_11/chart.template.html",
+      "sha256": "946ca342f7f6d341f1d497869083ebc7f2e68fdc680543a2897793455d24a655"
+    },
+    {
+      "bytes": 320242,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_11/chart_1440.png",
+      "sha256": "e4d7893f08929d6ff4f606e9ed4ca945daeb9c45e64b2cd7f4682bc85ce3cb88"
+    },
+    {
+      "bytes": 437827,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_11/continuous_chart.html",
+      "sha256": "2319896b87ce3081d13cf617e8bc080d379e3044f337aea887e9f8b753aafd4d"
+    },
+    {
+      "bytes": 26521,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_11/control_case_ledger.csv",
+      "sha256": "6a183ebfed8b152086a5251fc81906bdafe886a286cf870a7fa2e54c0076e857"
+    },
+    {
+      "bytes": 1571,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_11/report.md",
+      "sha256": "c7ad257e60faf196899075627029929e62411fa1d7df6efc5c9c965effe42514"
+    },
+    {
+      "bytes": 1014,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_12/browser_certification.json",
+      "sha256": "4c11c23fc301c9e53e9f2e606ecba6802fcd7e3ead2c83dc3e904a66cc998d45"
+    },
+    {
+      "bytes": 905402,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_12/case_geometry_ledger.csv",
+      "sha256": "4a1169c155e0eb91a3d1499ca6e956afbd68dcc2fb6bcbc9337da5557e4cad0d"
+    },
+    {
+      "bytes": 21388,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_12/chart.template.html",
+      "sha256": "cd0d3e91ec75fb28d35fd4c1daada558483ada43b8452227a316d205372bc17d"
+    },
+    {
+      "bytes": 330645,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_12/chart_1440.png",
+      "sha256": "42e73e6d5db232adcc4593b0dd0d3102bc7b3b67270187482873679c81c38eae"
+    },
+    {
+      "bytes": 425458,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_12/continuous_chart.html",
+      "sha256": "68b540f26fd7f995735890dd496270b51f4d32b522a6ea4ce84afb8b7f0b259b"
+    },
+    {
+      "bytes": 25383,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_12/control_case_ledger.csv",
+      "sha256": "24a483a1942e2b5b5522f35d6ec9d14dfdb94b60d7a4811cc37a7e0228bcacfb"
+    },
+    {
+      "bytes": 1586,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2022_12/report.md",
+      "sha256": "5cb73ac6ca8e6ecdbb6031fd12994d659a7a226a91f39472b74104c2d7b893d9"
+    },
+    {
+      "bytes": 1013,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_01/browser_certification.json",
+      "sha256": "40243107276a72b59556dae6d50e8b0ac6baf626a8b4ee28afcb7d5afd611228"
+    },
+    {
+      "bytes": 801406,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_01/case_geometry_ledger.csv",
+      "sha256": "7dec485958ae57b2fd2a0e5e993249f6901685b774880e23616519a582a873bb"
+    },
+    {
+      "bytes": 21381,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_01/chart.template.html",
+      "sha256": "ce2141156d0d97536f2967bff1b78208e819e92fbb86f271d7c6b77a66bf4de9"
+    },
+    {
+      "bytes": 298823,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_01/chart_1440.png",
+      "sha256": "2dd3cd424ef7d3e35f599adac7bffe6d348f7da4243a8699e9d8c301f48b658d"
+    },
+    {
+      "bytes": 419034,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_01/continuous_chart.html",
+      "sha256": "6de224f096cf6a14173e840461eafb4ba4c57f815fa158b77cc074c35bfc4215"
+    },
+    {
+      "bytes": 25176,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_01/control_case_ledger.csv",
+      "sha256": "4eb9ce9821c388ea773617b0041ed1f3c3aac7e012f76575e2e9dba7af22f588"
+    },
+    {
+      "bytes": 1579,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_01/report.md",
+      "sha256": "fc16bce3a50ca518902678af98e6a35091a41ae35e27839f6a3759fb2034b524"
+    },
+    {
+      "bytes": 1014,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_02/browser_certification.json",
+      "sha256": "8269392545d0fded8c97d0bcd533d85dccecf65b126bbf5ba9e88de5c43fca4e"
+    },
+    {
+      "bytes": 816636,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_02/case_geometry_ledger.csv",
+      "sha256": "347dc2fb57a84c89e96f1706cd1bb059b895662aa115690add426bbdbdd98e04"
+    },
+    {
+      "bytes": 21388,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_02/chart.template.html",
+      "sha256": "6fe63aadaa08124c3f477ce68d7072b52368dd1c2b25d1532731b0162c6fdcd3"
+    },
+    {
+      "bytes": 302067,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_02/chart_1440.png",
+      "sha256": "2460db8d815bcb5168463040b5a87264e5a46d1cb91f1fbcbe4ec7c59a2488fd"
+    },
+    {
+      "bytes": 402369,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_02/continuous_chart.html",
+      "sha256": "ca672dc3b3296e2dd6fc978bddb5223368f0175f78a07ae18e8349a93b4eebab"
+    },
+    {
+      "bytes": 23336,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_02/control_case_ledger.csv",
+      "sha256": "39f238f05a1f20e257af834ab20db99689824f33ddac0526bcc9d23189f436ff"
+    },
+    {
+      "bytes": 1581,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_02/report.md",
+      "sha256": "4370a465ecac4ada8304ef6b7df6382a7b6158722872d107b622aca760b8053d"
+    },
+    {
+      "bytes": 1011,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_03/browser_certification.json",
+      "sha256": "f0ff802e0951d17e7a9a292660a782f558eb47ad613a7599908d883b428c3bc9"
+    },
+    {
+      "bytes": 979036,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_03/case_geometry_ledger.csv",
+      "sha256": "bbe5ef49ca22b1d0481877db990a20535b1b250f0bcf0e47dd69f7d17eff1016"
+    },
+    {
+      "bytes": 21367,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_03/chart.template.html",
+      "sha256": "e27ac998b9a87025d4ea2631b6cd6305a15d94d9463479870cc9494bc767c3a5"
+    },
+    {
+      "bytes": 346951,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_03/chart_1440.png",
+      "sha256": "32cc8258fe1f73204d6c1190f0b90c3edde4cad809356fdc627e64342993f0d5"
+    },
+    {
+      "bytes": 462734,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_03/continuous_chart.html",
+      "sha256": "112c9aaa1b731244ec3d772f68610af42849cb6d707631cb7e8521682921ee63"
+    },
+    {
+      "bytes": 27663,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_03/control_case_ledger.csv",
+      "sha256": "fc86c403131c76edbc509dcc97d03def27fbbabe566ba07c85243fc6954a046a"
+    },
+    {
+      "bytes": 1585,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_03/report.md",
+      "sha256": "69928a4fdd153c093ad5b3eac601486ea91550ee1ba4218259c6447d7a9b8982"
+    },
+    {
+      "bytes": 1011,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_04/browser_certification.json",
+      "sha256": "6a9b9a7b4278abdd405dc2adf5f0e9fb70c93f20a63ea15ab810fb2e6881efee"
+    },
+    {
+      "bytes": 736054,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_04/case_geometry_ledger.csv",
+      "sha256": "bc49352a05bc4145a5a830ab492b9e8551368087065afe26a2c8a69faae99d3b"
+    },
+    {
+      "bytes": 21367,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_04/chart.template.html",
+      "sha256": "d651482add3f4b31cef292b46e70bd4d23df094f24e26b6a15b4bd65fd62bf5d"
+    },
+    {
+      "bytes": 278626,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_04/chart_1440.png",
+      "sha256": "9378d3ef9fb55f873ff4257a2c09dbe1cc96753d4918f496e6b570a5b827955a"
+    },
+    {
+      "bytes": 382603,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_04/continuous_chart.html",
+      "sha256": "d3eff8d1ae70752da1aa90d669a5911f8b8b345b00831d9071607800d8f43ec6"
+    },
+    {
+      "bytes": 20400,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_04/control_case_ledger.csv",
+      "sha256": "8e2795ef52a15f08e9cdce986f2db1e1ce49e34821996d660159b82b01f7201e"
+    },
+    {
+      "bytes": 1569,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_04/report.md",
+      "sha256": "8b4e6e5ac385f454c9deef3088f14a24b74446ec701347905595b8cbf8e9493a"
+    },
+    {
+      "bytes": 1009,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_05/browser_certification.json",
+      "sha256": "dc8cfafb66804f8ab8354b3e0423752164294655a4be4c2c603103d7c6cf12a9"
+    },
+    {
+      "bytes": 972528,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_05/case_geometry_ledger.csv",
+      "sha256": "557dbb6bd72e2739278c76d37f49d36637c17a61aaf959b12a5a840a880eb07f"
+    },
+    {
+      "bytes": 21353,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_05/chart.template.html",
+      "sha256": "2cdc3d68ec46cea561592f775d7285be0ec75295d649855dcbc340712a801bda"
+    },
+    {
+      "bytes": 347861,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_05/chart_1440.png",
+      "sha256": "0f2845f4ea0534b37703281ce8c684b211b2dd6c8b3504706872992dc804ca88"
+    },
+    {
+      "bytes": 460262,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_05/continuous_chart.html",
+      "sha256": "552c0f60d2e0fadfee7c337d736598b3f33efb19c6805657114eb3182fbf7bee"
+    },
+    {
+      "bytes": 27125,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_05/control_case_ledger.csv",
+      "sha256": "18e36489159a1dd4acb8f91c0da8ffa1d7dc9fa7cb1b252f78a297703633cd66"
+    },
+    {
+      "bytes": 1583,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_05/report.md",
+      "sha256": "6a6a62818aa729d452b2e6077133391bf8de7b2393b5ad42ee3214240feaee44"
+    },
+    {
+      "bytes": 1010,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_06/browser_certification.json",
+      "sha256": "4f9e77efe10ec99ab48a65c869a5fbdb701d07d0463f45738332ee29112430aa"
+    },
+    {
+      "bytes": 821950,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_06/case_geometry_ledger.csv",
+      "sha256": "b7e4c254242d7385880a5144dc6e44e9b244e0c32ac6a48f196dbde1c24e81d0"
+    },
+    {
+      "bytes": 21360,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_06/chart.template.html",
+      "sha256": "35cd3cad58b68c6fcc89a383ce1e267073cb1f8b3466206ab313360a62a6d8c6"
+    },
+    {
+      "bytes": 301564,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_06/chart_1440.png",
+      "sha256": "ec2326d0be21eb69f181a106c06a05837ce9e92b6ad29508a5a99d7b444cbebf"
+    },
+    {
+      "bytes": 436914,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_06/continuous_chart.html",
+      "sha256": "c898cf5318f44a703e35ade71b0589773d08c05ac296e7144e87c726190fed78"
+    },
+    {
+      "bytes": 26378,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_06/control_case_ledger.csv",
+      "sha256": "7e2cac9fd690878cef21df3908644780865bad2ae2db19db037ddeab748f44b9"
+    },
+    {
+      "bytes": 1593,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_06/report.md",
+      "sha256": "ba93a727a134e4572514d96d066555eab4035e78c5a84f595e28ead2762623a2"
+    },
+    {
+      "bytes": 1010,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_07/browser_certification.json",
+      "sha256": "b27be36b65705fe1f7af00f93a6410b0427a251ab289ae555937b374eb645032"
+    },
+    {
+      "bytes": 933439,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_07/case_geometry_ledger.csv",
+      "sha256": "74a18638e6816f9bd7d512357c57142a15861655cacfdae64de4197c72c858ff"
+    },
+    {
+      "bytes": 21360,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_07/chart.template.html",
+      "sha256": "963895a17d0902b8180d0a9eae49fa8abeb7acc06e31f6e7df6fe57f1ffe0502"
+    },
+    {
+      "bytes": 332055,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_07/chart_1440.png",
+      "sha256": "5476b50722208b2b311535769b0e406ba2fc9ae853964a2473175f6527c0bf69"
+    },
+    {
+      "bytes": 424926,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_07/continuous_chart.html",
+      "sha256": "ca7bef6b57f821c82cc81e9edd6672bcfe8add74c88a8361dc9ef410b98d9969"
+    },
+    {
+      "bytes": 27691,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_07/control_case_ledger.csv",
+      "sha256": "8bf85a8c92beb39f0aaab6b475243ffd6f8a2e1e992741c01bd117c3f042f150"
+    },
+    {
+      "bytes": 1577,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_07/report.md",
+      "sha256": "7c887016cc9212ae9e4ff39e6f42083dc61348b3c64efe48610822b4b9b8202f"
+    },
+    {
+      "bytes": 1012,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_08/browser_certification.json",
+      "sha256": "c1e907388e60e36ed09a9810a1c713414b71adcee3c89c867b2fd9f32df8af81"
+    },
+    {
+      "bytes": 1028106,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_08/case_geometry_ledger.csv",
+      "sha256": "7974e9d99563662ee56ee7ac7a8f7bb035edf8a5e64de3da0609cb021acf84f2"
+    },
+    {
+      "bytes": 21374,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_08/chart.template.html",
+      "sha256": "2bc2ccb9b6ee16f03d0370086cfea8a368fb3b7f9adbd54958b1b3d84a19255d"
+    },
+    {
+      "bytes": 363619,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_08/chart_1440.png",
+      "sha256": "558e870d723ea5f5517a1f92465d8c19cb049d18355cad8cf723db58fe906bf0"
+    },
+    {
+      "bytes": 466831,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_08/continuous_chart.html",
+      "sha256": "9847a84935c6d70222742123ff1d4a7b6e6bf07219726b40e41e83fbd6a02ee1"
+    },
+    {
+      "bytes": 27403,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_08/control_case_ledger.csv",
+      "sha256": "11e8c8ff9f9557fea1d1a2d04c6098c50c3ce353b988d3bc18ea9a9eef99b4ec"
+    },
+    {
+      "bytes": 1587,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_08/report.md",
+      "sha256": "01efb979af59040eca71bbf2ee4a7b4c38014adf1b4b0f7f314844c14eb239b1"
+    },
+    {
+      "bytes": 1015,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_09/browser_certification.json",
+      "sha256": "28d0fa2475ab319651997dd6bac540cbc3a622a821a5f97ba0740f88c554d4ab"
+    },
+    {
+      "bytes": 783906,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_09/case_geometry_ledger.csv",
+      "sha256": "e1e4324055c4b034005c414b3c44b06676b542d967d50e18863cf682d7cc4db7"
+    },
+    {
+      "bytes": 21395,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_09/chart.template.html",
+      "sha256": "c4c3b56b465c694e5df744ee263cb64e6388d6a8dc26e7833d48934894f13d88"
+    },
+    {
+      "bytes": 296058,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_09/chart_1440.png",
+      "sha256": "f4d4d4981f9b8ab1b6e1ccda867a8efca9ed72183db379d98a82ca7897dfe377"
+    },
+    {
+      "bytes": 419431,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_09/continuous_chart.html",
+      "sha256": "c7465f59cdfabc4b6edce739aaed16768dcd25b4bfb344bc608964230808abed"
+    },
+    {
+      "bytes": 24662,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_09/control_case_ledger.csv",
+      "sha256": "91cdad9265de4581082274832122d779582812c5b531bdbd1e400971ca865ee7"
+    },
+    {
+      "bytes": 1582,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_09/report.md",
+      "sha256": "e56fa7c918fb2afd39325e5986f83efd238c28f6a3359718f6c08d4248845ae0"
+    },
+    {
+      "bytes": 1013,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_10/browser_certification.json",
+      "sha256": "dacbeb5236f2b254ff666356fd29581094e93c06d6187bb80ce835f56bae0311"
+    },
+    {
+      "bytes": 866951,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_10/case_geometry_ledger.csv",
+      "sha256": "6cadaa9d43786c9792fdd69f8ea02e761b854004f766f6a66e4024429c50c0f7"
+    },
+    {
+      "bytes": 21381,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_10/chart.template.html",
+      "sha256": "07a2724f8d63dedaa412bc348e4be589dfe818b6fe0dfcf510198c4b9061b3a8"
+    },
+    {
+      "bytes": 318588,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_10/chart_1440.png",
+      "sha256": "067e84e88f21a5ee425095ff657bb2bce877d38ffd475ca3d459d285a1f4818c"
+    },
+    {
+      "bytes": 443414,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_10/continuous_chart.html",
+      "sha256": "6e2c356b9ecd60e9cd9eaa799b6babfe1768638d422c8aad83ab4e78c1b0e681"
+    },
+    {
+      "bytes": 25436,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_10/control_case_ledger.csv",
+      "sha256": "d00d3e1fabb5836be3e60236a1713ca9482edf1b4d26d48f97c925174213cd25"
+    },
+    {
+      "bytes": 1574,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_10/report.md",
+      "sha256": "6e0deff158837b36157397c8f841a129e1ba5b87dcb999f905ebf113e338f643"
+    },
+    {
+      "bytes": 1014,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_11/browser_certification.json",
+      "sha256": "a651c1392cf8fd725a593fdb8c7083db7b4d32b6cc1156558fee4e7447318ea4"
+    },
+    {
+      "bytes": 1017292,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_11/case_geometry_ledger.csv",
+      "sha256": "248975558034a4a2d3876a2df98d1fc06ae68b3055070fbb37b02bbba78f2481"
+    },
+    {
+      "bytes": 21388,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_11/chart.template.html",
+      "sha256": "ad7a0a324a921286298769db3ea54ad931d022f2154671bd54fb79960730d4b3"
+    },
+    {
+      "bytes": 357917,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_11/chart_1440.png",
+      "sha256": "0f73dcb03ef55be184522b8de5a45a4aac38ca1b95cb9fb97fe4fef1a91c17a5"
+    },
+    {
+      "bytes": 446822,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_11/continuous_chart.html",
+      "sha256": "87bd32e9bb25b34db267f97260f8777a26b491dea4a1dfaacd0d27637a3d5371"
+    },
+    {
+      "bytes": 27706,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_11/control_case_ledger.csv",
+      "sha256": "6a346a183bac66c4d3cdad17366de7863782fcffb92ea77e48e088d716109d16"
+    },
+    {
+      "bytes": 1589,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_11/report.md",
+      "sha256": "7e6111e893813f439d474b80a91818b42ffd76f81c06af8f3f34b7ac69b206f9"
+    },
+    {
+      "bytes": 1014,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_12/browser_certification.json",
+      "sha256": "0995b0eecb00a7eaea1ec88fd58a97d950ebdbb5b79ba71e94cbf7865e0b31c4"
+    },
+    {
+      "bytes": 963714,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_12/case_geometry_ledger.csv",
+      "sha256": "844b5963e0fff5b78607f500891bd984c6b55836c75ecda4cef6b4ed09b74d7c"
+    },
+    {
+      "bytes": 21388,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_12/chart.template.html",
+      "sha256": "adf8f95abe0afbaaac7a2caa3c579d9ddeb1e522861224e7953462082b594f9d"
+    },
+    {
+      "bytes": 345243,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_12/chart_1440.png",
+      "sha256": "9ef30137f789a15e468d0b9952670e128df8c2d8d63444d3debd1900dda308c3"
+    },
+    {
+      "bytes": 413884,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_12/continuous_chart.html",
+      "sha256": "ab41058a9511020b32dfe3793fbf7d83caff18fc5ddbf559bc6799a48bf0fbd6"
+    },
+    {
+      "bytes": 26817,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_12/control_case_ledger.csv",
+      "sha256": "0fb30f0cad3fcc61141b5f6758c6978d609c0ff8abf144f26461a4b0d0136a9c"
+    },
+    {
+      "bytes": 1581,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2023_12/report.md",
+      "sha256": "5d46d0ba8026e6bf449e0e68215ef1672a630075155509aa22b5c0b86bf9dcd8"
+    },
+    {
+      "bytes": 1013,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_01/browser_certification.json",
+      "sha256": "6f855e0f7c406ed926805476c7c889b7f44330371306edbd7bfb886e12424519"
+    },
+    {
+      "bytes": 881380,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_01/case_geometry_ledger.csv",
+      "sha256": "619d6897b8917735d190428e0d4355af430509e8c3cfe052e3df8e632bf1f067"
+    },
+    {
+      "bytes": 21381,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_01/chart.template.html",
+      "sha256": "371b8846f3ac8205ddef296dc6721480ca297b15a20c2019c301a13728b5cfa8"
+    },
+    {
+      "bytes": 315866,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_01/chart_1440.png",
+      "sha256": "8f5e45a18ce642a8798040c6c9411e37f69340d5ebef1d5e711409d0267b97f4"
+    },
+    {
+      "bytes": 442959,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_01/continuous_chart.html",
+      "sha256": "f004b4bed65d50e3fddf848242cee3da72c1259d888c59499afcbd6375e9e1db"
+    },
+    {
+      "bytes": 24533,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_01/control_case_ledger.csv",
+      "sha256": "332078e7d48bbf48bf02004d37e9aeaba7bb1628856a92b2d52da0d7db49b3d6"
+    },
+    {
+      "bytes": 1580,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_01/report.md",
+      "sha256": "c6656883d9d35a9afe38af194a4497e2c19a0901a4a32cf3b2d5c62b3cd3c8fd"
+    },
+    {
+      "bytes": 1014,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_02/browser_certification.json",
+      "sha256": "07858518147680975d1a35c2fdf9af77d70b218025e89f72c659a43cc6ba5c34"
+    },
+    {
+      "bytes": 970316,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_02/case_geometry_ledger.csv",
+      "sha256": "08f4fe816b85a2db79e8264c2d6ef79468e356a501262ddbd86af4dd6abea91f"
+    },
+    {
+      "bytes": 21388,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_02/chart.template.html",
+      "sha256": "b7ef383e1fb275c7de407d2f47db0e3296e9d8632b432105bfab787ee41671a2"
+    },
+    {
+      "bytes": 347808,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_02/chart_1440.png",
+      "sha256": "c3c39d9a9512e91d0fd6b619b57bb33e1f974e5b23815318e3579e70b291bdf4"
+    },
+    {
+      "bytes": 429705,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_02/continuous_chart.html",
+      "sha256": "7148010d115d20061e2579f211768a05bcaf95a76df4db1a25092f0339e9caee"
+    },
+    {
+      "bytes": 25944,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_02/control_case_ledger.csv",
+      "sha256": "ca5e07458a7e49227aaf8d9ed40add8674af6d45c8112c94b3086bbc3f9562dd"
+    },
+    {
+      "bytes": 1581,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_02/report.md",
+      "sha256": "d2fad691384ab9e609de108b3f1b0c9737f342244461b14b66ed2a5a0b1df650"
+    },
+    {
+      "bytes": 1011,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_03/browser_certification.json",
+      "sha256": "e90a0f1ee1c0a001c57c4e77f48078f9e96ca12bf0ceb3cfafe66cb582188e1a"
+    },
+    {
+      "bytes": 1024475,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_03/case_geometry_ledger.csv",
+      "sha256": "38da8ca706c68255b5d04d46d19a5aad851bd98ea7bea114eb1b89b16961c4af"
+    },
+    {
+      "bytes": 21367,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_03/chart.template.html",
+      "sha256": "27ae522c2665f7032909d077172e2da3c7a505a95679b7e5a480041c49cc012f"
+    },
+    {
+      "bytes": 362903,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_03/chart_1440.png",
+      "sha256": "1d074542247595d19f15d78df98acef9ccf74da79800063ca80c9d7d69fbc031"
+    },
+    {
+      "bytes": 417076,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_03/continuous_chart.html",
+      "sha256": "c9372ef1d1607b734ccfff4b39626726ee3c9d33b77da485c253abc7a9eeb779"
+    },
+    {
+      "bytes": 28266,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_03/control_case_ledger.csv",
+      "sha256": "d7fc695ce7c1c49962ab41bc1f0cc851e135b789a98280de1a1a11c65fccaee6"
+    },
+    {
+      "bytes": 1601,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_03/report.md",
+      "sha256": "522037248166110c3e11d4f11d87613e200dc03d3040abfdcddd4ec1dd091fc5"
+    },
+    {
+      "bytes": 1011,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_04/browser_certification.json",
+      "sha256": "c9c955d4e428fb2618aacdce040c83b8b7b339b6e11e3fa8835f64e4a94c86c8"
+    },
+    {
+      "bytes": 1040137,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_04/case_geometry_ledger.csv",
+      "sha256": "e15f68cc034adb829bc8bd78d121d7365a7b1507def15d57991a886a39bdba96"
+    },
+    {
+      "bytes": 21367,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_04/chart.template.html",
+      "sha256": "50b3bc7b502b15ea99cf61af5ce8553602c039a6b3d4a605cb23ee2738a21b41"
+    },
+    {
+      "bytes": 368622,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_04/chart_1440.png",
+      "sha256": "ab1df05726950530831771a53af55293ecc5fe3e9307b9c2201cd7ef7f43991c"
+    },
+    {
+      "bytes": 452812,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_04/continuous_chart.html",
+      "sha256": "bdbe7b66de40c785c8a949d39f4139579940d9d49e9a23c271f60c5dcb660440"
+    },
+    {
+      "bytes": 27993,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_04/control_case_ledger.csv",
+      "sha256": "f9c46a1a1b10f81d50edf40d063f6c42d9c82bdfd9d0a582b4973822cddc7960"
+    },
+    {
+      "bytes": 1574,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_04/report.md",
+      "sha256": "a7c5547980029ca9cd939e7b54e9b6da9bfb905b9d3f53e1ea220f6d9803ec43"
+    },
+    {
+      "bytes": 1009,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_05/browser_certification.json",
+      "sha256": "8c036b4d853e39516b082f5883820c49a4685b9e8f4d95625645d7edf9cc0601"
+    },
+    {
+      "bytes": 932453,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_05/case_geometry_ledger.csv",
+      "sha256": "e3fcd641866202c23a18fbc15810435ec6c01f7156b59365d96cd34dea9e432a"
+    },
+    {
+      "bytes": 21353,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_05/chart.template.html",
+      "sha256": "a0c0a4aecfadc51c9a319a88b5f263e22f693651a5e3527a5b9732e600d14407"
+    },
+    {
+      "bytes": 343019,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_05/chart_1440.png",
+      "sha256": "3fd724f5e6ecab06d50370387ee5876908ae5a378ffc87da84c05013eb24d995"
+    },
+    {
+      "bytes": 463124,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_05/continuous_chart.html",
+      "sha256": "7e7d48c7a695d12463c5fa70125692f97acb631f42edc5b56076b97b852b075d"
+    },
+    {
+      "bytes": 29314,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_05/control_case_ledger.csv",
+      "sha256": "83c55838dadd6349e8381e22c1313cd98f33336bb77a0106e4262e6f41d1f90c"
+    },
+    {
+      "bytes": 1574,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_05/report.md",
+      "sha256": "f47e970b212237fc184ed922d41aca3ccad8334f46e5abd338e1ce42b99f43ca"
+    },
+    {
+      "bytes": 1010,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_06/browser_certification.json",
+      "sha256": "407a2931895d3893638b413ac590457b23bfcf5ae50870b4474204802817a44d"
+    },
+    {
+      "bytes": 885188,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_06/case_geometry_ledger.csv",
+      "sha256": "2ed663a24740a6e97995dcaec8b6ddc2245fd35cd1bd7cf8b3835ffc46fc27cc"
+    },
+    {
+      "bytes": 21360,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_06/chart.template.html",
+      "sha256": "02ec378615412e2c64d715c31e499abfc874be86edb13341741f1ca84f41a562"
+    },
+    {
+      "bytes": 314296,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_06/chart_1440.png",
+      "sha256": "6bcd7e6a6eb5934f06c2d83efcd2515e8192ade2a673734036dcb97489327cb9"
+    },
+    {
+      "bytes": 408573,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_06/continuous_chart.html",
+      "sha256": "6049d0ba76c45faad14ceb7a255ea6831887aec52b3af7f1444b740cf3e4c5c7"
+    },
+    {
+      "bytes": 26668,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_06/control_case_ledger.csv",
+      "sha256": "a8b0afdfbcff02547ceae20c105a98e7524266341c9929f843a2372af9eefc66"
+    },
+    {
+      "bytes": 1583,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_06/report.md",
+      "sha256": "c2cc8c2e679fcbc985cafd216b72126e4707fdb62d31beaa1e31179e205f5d53"
+    },
+    {
+      "bytes": 1010,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_07/browser_certification.json",
+      "sha256": "b9755a6fcb2a4b43cc9e6ce46026bb9b39be47ed4e1752ef65b769f7ef6ecab9"
+    },
+    {
+      "bytes": 998308,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_07/case_geometry_ledger.csv",
+      "sha256": "8736ce8b8f2138b0f64b7492e48e833b6672e2b7d0fb53a65d61b9d1688400b9"
+    },
+    {
+      "bytes": 21360,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_07/chart.template.html",
+      "sha256": "c706fec25485b95b63e4678fdfed5b1edab159be2a30860f6ad108748d42de4b"
+    },
+    {
+      "bytes": 345282,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_07/chart_1440.png",
+      "sha256": "c607cb1134393495cbf0fcee9f44ddc7b1fb9b90bb808741c72412c8798c2754"
+    },
+    {
+      "bytes": 466182,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_07/continuous_chart.html",
+      "sha256": "bc0cdfda7511625631ea33f0afd5350a61485e9a01519a14aa57107fe47aedbb"
+    },
+    {
+      "bytes": 28096,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_07/control_case_ledger.csv",
+      "sha256": "e833f9012ff7db8a5d7a299a65fc8927d0b31c1cad1479176597b82b88fff7d0"
+    },
+    {
+      "bytes": 1580,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_07/report.md",
+      "sha256": "85cc07bb4676d198f9629d934510524418bd2ddb82417f043f65373c93588476"
+    },
+    {
+      "bytes": 1012,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_08/browser_certification.json",
+      "sha256": "ab9e793ca644f872cc2adc55320230045d85d9e1cd5ffd5b53e999eba66dcacd"
+    },
+    {
+      "bytes": 943437,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_08/case_geometry_ledger.csv",
+      "sha256": "1ab88cf01ae10da2dd28e24aec593eea4b339e3407cfc92fe93b655986812427"
+    },
+    {
+      "bytes": 21374,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_08/chart.template.html",
+      "sha256": "2046cafd07a796d6ce429560a58e5c4a2b3426cdbf4e0a5f47b37068566e28d1"
+    },
+    {
+      "bytes": 343850,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_08/chart_1440.png",
+      "sha256": "132f1714385f5fa239ca63b0511ed3a147ce559f99b560a8826c1aabf49c6843"
+    },
+    {
+      "bytes": 448550,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_08/continuous_chart.html",
+      "sha256": "9fd51e4d779afee96b6b80d23297438212dcb91c8e293e1753c145247aa832e5"
+    },
+    {
+      "bytes": 26036,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_08/control_case_ledger.csv",
+      "sha256": "ffb186b561bc38bb59b146b79857283d2694bda46982307ff6ddbe9d2137fc00"
+    },
+    {
+      "bytes": 1595,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_08/report.md",
+      "sha256": "4b15b0b3b9a28811392e991f9e49a9eff84020866c632f033171368605569fe4"
+    },
+    {
+      "bytes": 1015,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_09/browser_certification.json",
+      "sha256": "a095d95177da466b6049b937fb27e303d9829ae3813b4ddf64e7cdce206a7663"
+    },
+    {
+      "bytes": 922839,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_09/case_geometry_ledger.csv",
+      "sha256": "29f24a0329cb0c4692de2570491dcf48041d18f36fdb04a71286d09fd53df7f4"
+    },
+    {
+      "bytes": 21395,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_09/chart.template.html",
+      "sha256": "a6ed0435410c541e6feccac90374f41a5724b9fa758c51bed81e6eed8ec24cbf"
+    },
+    {
+      "bytes": 338501,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_09/chart_1440.png",
+      "sha256": "0d4c349fe379861f847d4dcfefc35b213516f39947e41e48f7417071e570c482"
+    },
+    {
+      "bytes": 428319,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_09/continuous_chart.html",
+      "sha256": "16755a94d513345ee297190aa53295ee9b260a7157bfaf7961952dcf7b409bb5"
+    },
+    {
+      "bytes": 25741,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_09/control_case_ledger.csv",
+      "sha256": "2ad1d88485ef655e47d0b5dc9453fe39d3d2eb9b59975064127528811c4800b5"
+    },
+    {
+      "bytes": 1590,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_09/report.md",
+      "sha256": "659a4c7a300d6da39b6ebd739b9ec32bd2a2035b9b9f325e19b3b05aeca1513e"
+    },
+    {
+      "bytes": 1013,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_10/browser_certification.json",
+      "sha256": "3259940e14cf13778115d64e42842a76d80b20453d34c719c312563c4f600a2d"
+    },
+    {
+      "bytes": 1130349,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_10/case_geometry_ledger.csv",
+      "sha256": "38db323cd856257a488d86b9cd864b9231b3d1f5fc5a0a61b7b0142d16864a36"
+    },
+    {
+      "bytes": 21381,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_10/chart.template.html",
+      "sha256": "3f79b207174be4aacc4009a1cfbae4cfb4c1869f5383a3b02bb1accded2a69b9"
+    },
+    {
+      "bytes": 394415,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_10/chart_1440.png",
+      "sha256": "bcd8f6d94f3c9eb68afdbb6df492f3e35ad6dc01f0fe682290cdf31d6ae320dd"
+    },
+    {
+      "bytes": 474562,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_10/continuous_chart.html",
+      "sha256": "09dc3d812eeea762cb1735b088b93d22d7789c1d074df817f8f518ad580f4607"
+    },
+    {
+      "bytes": 29508,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_10/control_case_ledger.csv",
+      "sha256": "02fa650ec3db606a119fdf754ac1cc6185398648c7d9d07d3d218339b04b7160"
+    },
+    {
+      "bytes": 1589,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_10/report.md",
+      "sha256": "a4030f16ff4de04d3882d5df38729533c80c0c13ee195ef9a6cac4aebccc3089"
+    },
+    {
+      "bytes": 1014,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_11/browser_certification.json",
+      "sha256": "57bb6bf0e19455bc20f9e100b43f04e698ce9dd6faddc986adcd84c5fb68a402"
+    },
+    {
+      "bytes": 923323,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_11/case_geometry_ledger.csv",
+      "sha256": "b16d1e7dfcc4142cb1afb159881629be8168d1745cbb4cdb3b6be7ca871d0e71"
+    },
+    {
+      "bytes": 21388,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_11/chart.template.html",
+      "sha256": "5d99e919a4378164b67a12da2f2aeac6c239faca8011391bd23e5c68da2e8bec"
+    },
+    {
+      "bytes": 333276,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_11/chart_1440.png",
+      "sha256": "627ffd377c8dc26b80ad84441417f2974373bcfecbff9fa196bdde3f72686958"
+    },
+    {
+      "bytes": 426329,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_11/continuous_chart.html",
+      "sha256": "aa7068f53997315b490a32cecf1e91d9e0e5d555c2898cdd8987dab88e064c9a"
+    },
+    {
+      "bytes": 25858,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_11/control_case_ledger.csv",
+      "sha256": "351c197734eba406b2e413f429da1f7096241d6b7989bcecc9edfbc445dab6b2"
+    },
+    {
+      "bytes": 1598,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_11/report.md",
+      "sha256": "30cda7e481583ad317066eda9d2f6498d374493f2fe4f6e15ec552aad6340e32"
+    },
+    {
+      "bytes": 1014,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_12/browser_certification.json",
+      "sha256": "aec1718e84e78d9f6e3b62b9c408c653f22b10582be4c82dfb1e0154bec25f70"
+    },
+    {
+      "bytes": 1062435,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_12/case_geometry_ledger.csv",
+      "sha256": "940cfef6ec4fda92aa0256f3be9061f30b28bb5fdb42be0ba17174ea07633fee"
+    },
+    {
+      "bytes": 21388,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_12/chart.template.html",
+      "sha256": "d4d4a4f7ec13e4d08b5f151206dddbd327114bc9884dcd8513bd4a20f4ff1e18"
+    },
+    {
+      "bytes": 383152,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_12/chart_1440.png",
+      "sha256": "bd2828d95b13ace472816dcfb45771d94b0cf737a400a54d01e38b9be6b8b8c6"
+    },
+    {
+      "bytes": 434096,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_12/continuous_chart.html",
+      "sha256": "0d31dce9887dd74f612fe1b0ebf61cf8db5e537cfc634d0f23d96172a8b7d337"
+    },
+    {
+      "bytes": 26352,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_12/control_case_ledger.csv",
+      "sha256": "4c69aabaec94dff0bfd13742184547e9e65b2676dc96db1456fd96c829ee8550"
+    },
+    {
+      "bytes": 1618,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly/2024_12/report.md",
+      "sha256": "7e0c3ba90ca6133b5938818b54ac88ae0bb9ccb7b44ad6bb7e49b78df6c9af4f"
+    },
+    {
+      "bytes": 150402,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/monthly_policy_summary.csv",
+      "sha256": "9011b1ccee5173ccf9a55686af1b60e259c9dca4b0778cff781929df2e02262c"
+    },
+    {
+      "bytes": 2860326,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2022_06.json",
+      "sha256": "8085edef86f9027afab840bc8b0bbf84a911606c593e11f7b329ded8f3f06cea"
+    },
+    {
+      "bytes": 3002947,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2022_07.json",
+      "sha256": "df38b1d24c7808cb2f965ca7937e3cab69f9be57837bdb30b15ed91e8270c2a9"
+    },
+    {
+      "bytes": 3095834,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2022_08.json",
+      "sha256": "c63bcea50782ea70c5f92e929be853e6b911a5aaa6cf88588e28cd4d70b50175"
+    },
+    {
+      "bytes": 3164872,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2022_09.json",
+      "sha256": "587d4ca21ff595990065d02445142258bb1fdaf1f877115670889f09dcbf9ef7"
+    },
+    {
+      "bytes": 2887803,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2022_10.json",
+      "sha256": "b59f2d5fdda817dc0a61ee4b535e9cc6c95bdbee192caa964fa149953da60037"
+    },
+    {
+      "bytes": 3014492,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2022_11.json",
+      "sha256": "f2364693d98bd03865821db53ff3ef56403fff827fcec789ad37bfc9a08ba4ae"
+    },
+    {
+      "bytes": 3006403,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2022_12.json",
+      "sha256": "2e3432ade60230369a99f6323dbc8b941e7a8b8cf56e62e51bcd23c5627e9323"
+    },
+    {
+      "bytes": 2761508,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2023_01.json",
+      "sha256": "afa3eaa3389e3774dd2c48abf4bdaa450f4cfabf248d7566ec2dc6a2b422213f"
+    },
+    {
+      "bytes": 2748692,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2023_02.json",
+      "sha256": "9386310889d90f10e485b5673b9b04ebad768fba473f1a64e1c5c4591e47d7e5"
+    },
+    {
+      "bytes": 3249977,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2023_03.json",
+      "sha256": "b607ead3c8951f49aeaf592505ede468c76ab9a6d3c3d18442f5e26c0aa0270e"
+    },
+    {
+      "bytes": 2521018,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2023_04.json",
+      "sha256": "7e3cfc0b0e24d8014a9a70610168bab04849d15594edae94a61fe6bea6dd67d0"
+    },
+    {
+      "bytes": 3237435,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2023_05.json",
+      "sha256": "b7bf7bdbfe05f71173d25bf0a8c422bd49384bd30ea43b1cfc39a707d51e11a1"
+    },
+    {
+      "bytes": 2859069,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2023_06.json",
+      "sha256": "0e42b2a913e8c47dc0a82c9688eebc1f66ee1c1e2c9b02bd7eef46ef602246f8"
+    },
+    {
+      "bytes": 3071033,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2023_07.json",
+      "sha256": "fb9e4627c25aa4df3cef27cd330fa6ff9f0dffb9a4816c972c8d1bc0beec19fa"
+    },
+    {
+      "bytes": 3370566,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2023_08.json",
+      "sha256": "88ee38d516771af2b5a2e0162e2c7aec32ffeb15388deb95a14b16ef03e65e3e"
+    },
+    {
+      "bytes": 2728570,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2023_09.json",
+      "sha256": "273c17a2a459cbba77171c6a841d0b6438c1c9daab7608271f9127630c126057"
+    },
+    {
+      "bytes": 2963716,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2023_10.json",
+      "sha256": "19eddb3ae4b3f8ae70d16ddf024e5085a3093a821add978de9bb40b7f5063a87"
+    },
+    {
+      "bytes": 3298832,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2023_11.json",
+      "sha256": "ed02f27c12adfcc9898117e269bd78bf996e5a8916452e3f8d5e51a81abf6c22"
+    },
+    {
+      "bytes": 3103515,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2023_12.json",
+      "sha256": "88487c2520826cf89cc4db19268d8bf81d83c4a11037ef9c8233b98252f5d990"
+    },
+    {
+      "bytes": 2989295,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2024_01.json",
+      "sha256": "d1d12eb1eb09032de7ad5f1e4ab7ab6b3fd1aabc7dda5857bfa19550d5f4afb1"
+    },
+    {
+      "bytes": 3161452,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2024_02.json",
+      "sha256": "8d2e8b708b057f8052ccc79269fdf02f6e3c4ed6465d9d08662967304452fc32"
+    },
+    {
+      "bytes": 3253301,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2024_03.json",
+      "sha256": "45d084344b8650043a5b2e391ced57dc88ed725d8a81ced44c6bbfcb61786140"
+    },
+    {
+      "bytes": 3366701,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2024_04.json",
+      "sha256": "6d18aafeede64723c15824177864001c93edbd71b7eff48e3c836d6edd57ed50"
+    },
+    {
+      "bytes": 3161575,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2024_05.json",
+      "sha256": "86d4ee4c21f3338ae44f9ef09a7d17bf91617c2d93ec470f5438e655875d3769"
+    },
+    {
+      "bytes": 2917756,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2024_06.json",
+      "sha256": "76edf47a5954d6a39c4f5af059c761e4017733195a10c75f858735a1b0efbd54"
+    },
+    {
+      "bytes": 3310469,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2024_07.json",
+      "sha256": "d462f63708d6d8268ea83653b3dd2a0fc21ea9cb7040b1ec373a653d5aa8963c"
+    },
+    {
+      "bytes": 3146253,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2024_08.json",
+      "sha256": "ee4071ffcb12232273b16c83fd8d3462266e25bf59ea78fe5a9d8182b319ba64"
+    },
+    {
+      "bytes": 3045592,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2024_09.json",
+      "sha256": "260a7c1628736e8c43f579e42149d20738d69314a0efa8ee06a2a89afe68355e"
+    },
+    {
+      "bytes": 3621494,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2024_10.json",
+      "sha256": "3d4e6c56ada195046bfdc0d9d34173623f64ca5fa918ec692ba98db235ff00a6"
+    },
+    {
+      "bytes": 3042676,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2024_11.json",
+      "sha256": "4a13dad008c265ecd787379cbd4f48368608c3b3b32b13feed7a605ffc81e851"
+    },
+    {
+      "bytes": 3373316,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/primary/2024_12.json",
+      "sha256": "57a0a9c9b962910953d5d399a5c7753e8911c999a0b2991e1bdce68c36600854"
+    },
+    {
+      "bytes": 8727,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/protocol_freeze.json",
+      "sha256": "62231b294b1c4100a4050c7acc1f7458fbd4653ec43594e6a67a8756648302b9"
+    },
+    {
+      "bytes": 613,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2022_06.json",
+      "sha256": "fb785a518b1fddd713fe3fd19a9d7c2f1cf4b3379081da373a6cab8ee80b6916"
+    },
+    {
+      "bytes": 613,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2022_07.json",
+      "sha256": "6f66a7079c64b04177e8555475e52568032889e27943ec0521efab83f985cf99"
+    },
+    {
+      "bytes": 615,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2022_08.json",
+      "sha256": "cc0fcf61b714c9c494308409aa9f0bc9e6f3fdb61b203a8aa90b118a9f52580c"
+    },
+    {
+      "bytes": 618,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2022_09.json",
+      "sha256": "f53b9a1abf612e7b62e23b3cff4aea90813fc2358142c913c1bb4e9f04d39dc1"
+    },
+    {
+      "bytes": 616,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2022_10.json",
+      "sha256": "b35efc2ef99f3c1f784ef1f2d9fe12c4f93757af0760bdd8e89b8fdd0bc3e94a"
+    },
+    {
+      "bytes": 617,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2022_11.json",
+      "sha256": "12da3d6228319d40050ef4f7a58b8dbd1357b25f6a4babe6fafeff4421983991"
+    },
+    {
+      "bytes": 617,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2022_12.json",
+      "sha256": "bdb736e4244b8b7ce0eaf32256da35c24fd43265382f44cdea72dcd656b41b8a"
+    },
+    {
+      "bytes": 616,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2023_01.json",
+      "sha256": "ed0e5aa05f6629b8e58eb383371ba46f7a39914ba3309ac98e74ce5304954072"
+    },
+    {
+      "bytes": 617,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2023_02.json",
+      "sha256": "ec2903bf8bb6458595a3a0f18276eb994d20303272f00a94c3b9723c3f0f8b7e"
+    },
+    {
+      "bytes": 614,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2023_03.json",
+      "sha256": "e685be6a72d3ae9276c90a107a7aab12c89fe67c83dce3aefc8a83d3f9b61ec9"
+    },
+    {
+      "bytes": 614,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2023_04.json",
+      "sha256": "005405e07b790233921edbfc76fd4ae2d6c54a2606f63b0bf8f1115427134bb6"
+    },
+    {
+      "bytes": 612,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2023_05.json",
+      "sha256": "2e4b7fce70330c7ef589c8e3c4340d90e3ca55c5759db71b24de6ae43aa5fa9f"
+    },
+    {
+      "bytes": 613,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2023_06.json",
+      "sha256": "9f516f03f4bb2f9a6de971908114dce34059376f4d3eb1467b0f8b8dedac3785"
+    },
+    {
+      "bytes": 613,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2023_07.json",
+      "sha256": "b10426a8a433e040254daa8ee88f6ce3184a2451fee3673b4c179c079b16c48e"
+    },
+    {
+      "bytes": 615,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2023_08.json",
+      "sha256": "fe25a81b90291443fa53ea4f19801cf0564f7206608eff62121765f891ebd8bd"
+    },
+    {
+      "bytes": 618,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2023_09.json",
+      "sha256": "0a0cb398233923be282e6486d6a9009995b8bddbcb84393421529ccb03a222f6"
+    },
+    {
+      "bytes": 616,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2023_10.json",
+      "sha256": "80646a3f46c96be85a5d0f8eac590cc8a82600feefe80137505f199d99dbe29e"
+    },
+    {
+      "bytes": 617,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2023_11.json",
+      "sha256": "3d075b2fed2ec49a18ffc0e0bda0fc7896bc4d67f96e2dec3ce9270a7a55f311"
+    },
+    {
+      "bytes": 617,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2023_12.json",
+      "sha256": "d0ac399eb7b0d8a4ee73b3972f5d787818446f831711420d4cfac5c1cc2a895b"
+    },
+    {
+      "bytes": 616,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2024_01.json",
+      "sha256": "dee3e9472fcf365be2b0d8f8b6e9c0cf38f0aba657fea21af7c202e1bae03336"
+    },
+    {
+      "bytes": 617,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2024_02.json",
+      "sha256": "261c43b63ca6796442fceb869e7218caacdc165e5754b53b15c6de38ae85ba6e"
+    },
+    {
+      "bytes": 614,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2024_03.json",
+      "sha256": "0990ac9f586475c9bfcf2e344c3101da35d32280b4ccf606e592e1ab053bab9c"
+    },
+    {
+      "bytes": 614,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2024_04.json",
+      "sha256": "056ce82fdef5f23569cb4d4906da26328d11a2fef58949964de851d8d34fbf4f"
+    },
+    {
+      "bytes": 612,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2024_05.json",
+      "sha256": "421baa191272715cb3838acb36730beed49a3990de078470d5b4212611b51732"
+    },
+    {
+      "bytes": 613,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2024_06.json",
+      "sha256": "75ef6df0ecac67af075bee21acdca47b3591078dbd10ab11d27fb8ddd1783885"
+    },
+    {
+      "bytes": 613,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2024_07.json",
+      "sha256": "fd8ea691874c2656f03e0b069a4b5ee66276233065c2fed0152e1a56bd8ead3c"
+    },
+    {
+      "bytes": 615,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2024_08.json",
+      "sha256": "9f455baffc8fd306ba0ece9410b36f55e2336f58e4b5ba2f078b2147846a3c59"
+    },
+    {
+      "bytes": 618,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2024_09.json",
+      "sha256": "0c29e52779c16f6c719181dd9c0a8cda4169e3170a2358a0c1ba6682c8db0087"
+    },
+    {
+      "bytes": 617,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2024_10.json",
+      "sha256": "e6b65d7422dc98a8dd0552f9bcb360d391d573e2f98891e51e655dfe611d54a4"
+    },
+    {
+      "bytes": 617,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2024_11.json",
+      "sha256": "0c2fce26470ba21e99d208bdb6a869cf48c57bcf1b18cd5e97fc870e4e51ba79"
+    },
+    {
+      "bytes": 617,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/reference/2024_12.json",
+      "sha256": "d1fbba503e8f587e41614960e4096908ed3fe6abb24ee9d4fe7439e25fd089b8"
+    },
+    {
+      "bytes": 538,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/rehearsal_primary.json",
+      "sha256": "38632a2a715416b25acf53afa6da00cba3b26ef151b679a269f6a32896c91f35"
+    },
+    {
+      "bytes": 540,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/rehearsal_reference.json",
+      "sha256": "f976aba906f68573f4424ec6700c215e3fd09ccc3469c864316b539fe41a6949"
+    },
+    {
+      "bytes": 2262,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/report.md",
+      "sha256": "f838f5ae41ad0e67c4191ab73842faa106f3820a9953b425ae61169da46939c2"
+    },
+    {
+      "bytes": 1387,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/source_primary.json",
+      "sha256": "6a2e71e5e17fd3df52b25e7987d0de28771b9f2ede591bb8b134e50b676266ea"
+    },
+    {
+      "bytes": 1389,
+      "path": "research_artifacts/gold_h1_confirmation_geometry_monthly_batch_v1/source_reference.json",
+      "sha256": "e1eb84e5824756a7165fed282a8cdc3823b34a8775b1e385c06c5db24e12b74b"
+    },
+    {
+      "bytes": 38675,
+      "path": "tools/run_gold_h1_confirmation_entry_stop_geometry_audit_v1.py",
+      "sha256": "4c25f0443034a232a820c7b770a94a6f186e615692077152e554d8a6332d438e"
+    },
+    {
+      "bytes": 39408,
+      "path": "tools/run_gold_h1_confirmation_geometry_monthly_batch_v1.py",
+      "sha256": "8caa6565946f74fa4e38195fa346c97cc22c6d3edb4ec465de83dda1424dbdd5"
+    },
+    {
+      "bytes": 2727,
+      "path": "tools/supervise_gold_h1_confirmation_geometry_monthly_batch_v1.ps1",
+      "sha256": "ddf1f21c346cf95140755bd4c3c23d39e5251cd6512efe26f60517b45dfb724c"
+    }
+  ],
+  "manifest_sha256": "a8927d807d017ea62c2605e43e1227d4bd2e884bf7f3cbe1b75d15f7c2ae8b57",
+  "protocol_sha256": "d1db8a79e2cf8926a6c18f788491054fa2727afc9481a8a84754e0459546f38e",
+  "verdict": "PASS_UNATTENDED_BATCH_AND_BROWSER_CERTIFICATION",
+  "version": "GOLD_H1_CONFIRMATION_GEOMETRY_MONTHLY_BATCH_V1_FINAL_MANIFEST"
+}

@@ -1,0 +1,12 @@
+{
+  "context_count": 69,
+  "label": "July 2022",
+  "matrix_rows": 828,
+  "month": "2022_07",
+  "month_payload_sha256": "5d9f6523b899c2db45d9a3722877e1b7264e61935f2a68f79a330983777d3c30",
+  "primary_month_payload_sha256": "90e1dfa3de1e81686dfe3887fc27c1d0340debbe2808681ed0de1f5eb32860bf",
+  "protocol_sha256": "d1db8a79e2cf8926a6c18f788491054fa2727afc9481a8a84754e0459546f38e",
+  "reference_month_payload_sha256": "90e1dfa3de1e81686dfe3887fc27c1d0340debbe2808681ed0de1f5eb32860bf",
+  "verdict": "PASS_PRIMARY_REFERENCE_EXACT",
+  "version": "GOLD_H1_CONFIRMATION_GEOMETRY_MONTHLY_BATCH_V1_REFERENCE_CERTIFICATE"
+}
