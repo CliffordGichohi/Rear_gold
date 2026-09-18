@@ -1,0 +1,1182 @@
+{
+  "baseline": "All1512 original long-only closed trades Jan2023-Aug2026, same selectors, directions, entries, stops, targets, execution, risk, costs and management. No refitting or filtering.",
+  "chronology": "All feature inputs whitelist event/parent timestamps, geometry and completed bars known<=fill. Future invalidated/closed/end_reason/status fields removed before extraction.",
+  "comparisons": "14 preregistered univariate comparisons separately per route. Reuse2000 entry-month cluster bootstrap seed20260918, descriptive95 interval and approximate two-sided sign-tail, Holm across14. Support20eachstate total/5eachyear; all4year directional consistency. No new candidate/filter from this exposed audit.",
+  "contacts": "Exact completed M5 bars from known timestamp to floor(entry/300)*300. Initial close above arms contact; intersection of high-low with zone starts episode; entirely-above bar ends/rearms. Below-floor excursion does not manufacture another episode. Missing expected bar => UNKNOWN, never fresh by default.",
+  "controls": "All123 sealed SL runs, profitable and recovery controls, five previous DD/recovery intervals, each year/month. Preserve all unknowns and losses.",
+  "created_utc": "2026-09-18T14:37:57.237656+00:00",
+  "current_attempt": "GJ W third-leg start through latest completed M5 before fill. GJ range recorded last bearish pullback M15 candle open through latest completed M5. These are different known trigger-defined windows, no outcome selection.",
+  "event_sources": [
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2023-01/primary.json",
+      "sha256": "afd2b50be4395fc0457d488e8ea0bd614c4389d8e000db7b7c0c4d060965994e"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2023-02/primary.json",
+      "sha256": "a6c219f437727caee0a4dfc9913f8b5bf87388ad3dbce92ad85a70211f177268"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2023-03/primary.json",
+      "sha256": "3cc9dfecf9c445a514e22f8f33dd270e048e8843534a47d90f76d8db787e2d2f"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2023-04/primary.json",
+      "sha256": "421ef1d6848cfe477a2583136ee525a125a5292beb91152e3e632b3cf4a6126d"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2023-05/primary.json",
+      "sha256": "d1209d5f2c2bd87373e0fb4cad0092865a8c2d39746942d8447bc96bf6a7efa7"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2023-06/primary.json",
+      "sha256": "10d89758a1da25bcb1b333b1d1089bbe1cce379a87cd28442bfea0cd19268889"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2023-07/primary.json",
+      "sha256": "f802abf898dbd03df5aa0dc049a949b1a4b69b8f5e96ff881eb828d4aad9b62a"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2023-08/primary.json",
+      "sha256": "09d335e212e685d634d8d7f507c774ef8f54a7adc4b1065e67d641a56f1493a0"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2023-09/primary.json",
+      "sha256": "249f8849a73da41097c4f724365221b0573dc02a79d9f4e61b73044a37559373"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2023-10/primary.json",
+      "sha256": "08a0aa6cb36b62dfc6a9234213bfaa8c3ccd96ad963624c4c2a13c2786084a68"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2023-11/primary.json",
+      "sha256": "293c58c61cd36b0e611088b004c4c64ca048432483edb48085efd58b40d2aab7"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2023-12/primary.json",
+      "sha256": "8467a720d3772b7ea9466e7f1b5bc8d517762d27b1d1cf904497ed9ec568c147"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2024-01/primary.json",
+      "sha256": "b2e70514b8fe37f275df8b7c1bad1a624a53162a411fba655b26ab7b67631e93"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2024-02/primary.json",
+      "sha256": "6f48fe2eda3b0848b922545d0c24a950a59f2d995e787e9e59fc76b3759f5802"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2024-03/primary.json",
+      "sha256": "1edaf22c27bc1430614d88b8d89a244115ff43b969661f2ccb28e09f31792f4f"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2024-04/primary.json",
+      "sha256": "1a3cdeb99592e37cf8d15340e271506555959e14d38c7c880a47c04519d5bc1b"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2024-05/primary.json",
+      "sha256": "ecb5ae95bdfa9890811272e37b569c408b8d3269bedc082bb02de9e7f340079c"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2024-06/primary.json",
+      "sha256": "5e45503ebaf1d55bfdc13692273c1faf68a564dbe9551f60eb7a22ade39a8076"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2024-07/primary.json",
+      "sha256": "0e2027c9ad8dbe6ceb22a6050b8559ad412d42f8cfc0e83c41fb2ccea3cb77e4"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2024-08/primary.json",
+      "sha256": "f81b4ce8b682f7845a981003b41140dd2f4012808235f9cae8929368ed84258b"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2024-09/primary.json",
+      "sha256": "e3ea9692bdf40b6bc5b6a074b2bb407ac2d6b7bea8e3db3c2422ac61cd22a09e"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2024-10/primary.json",
+      "sha256": "5bacb2d06ad28338391dacf6f32cff58edcaa447d3df07a6cb9351defdf2b218"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2024-11/primary.json",
+      "sha256": "95d2b092c2c619ffa0d7012f3503d5932d550b871c6ae13e400991526b885faf"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2024-12/primary.json",
+      "sha256": "137df0e3383f651eb54cca3c989d1ff6b93b7ba29aa0606dbd577e0f2c8b56f6"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2025-01/primary.json",
+      "sha256": "651342f5fec9801acef7a169353bc578f3e069477fa8a9e9b60b1d69d680ec09"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2025-02/primary.json",
+      "sha256": "1b67fe03d35cac830b25f9b59d6f8e66f9bf5522b7f11554eae1141fa0ce0456"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2025-03/primary.json",
+      "sha256": "3f01785f641ec4673fb8e89c82c89ce9672722b89e92e8cdfaebcfb632ac7466"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2025-04/primary.json",
+      "sha256": "ed322d640f44119ca80839bcd523bba4e57b7163635a4e3143f697fd3119e42a"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2025-05/primary.json",
+      "sha256": "c1fd24dd5989022842eef98d72f5bea5a913363fa02556e4fc15dfa1b0f2cde3"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2025-06/primary.json",
+      "sha256": "17e92d45e5f9948413c456963441ae4be6d1bc30751dfd59bb1e032a458155d9"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2025-07/primary.json",
+      "sha256": "e5d3c001bf17ee5ca6574512b30d827d7c42c6797102f8e2229fd9eb9f696c52"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2025-08/primary.json",
+      "sha256": "a13d1fff62134b2ff0478b06216e17e95b69b4ad05982d25433745ecce869e93"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2025-09/primary.json",
+      "sha256": "d6e141fc0515e3d2d566b94a5b69f3fad77cf79c4c7715bb1ea9199cb2646ef7"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2025-10/primary.json",
+      "sha256": "3b65d145fd68041dddc95ef3dc7b0b71db7cbfa934b11840f982143e9cd11e30"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2025-11/primary.json",
+      "sha256": "200e4098df265efe3e46b654380884fcc05e633b64708e8e93857b2a11092bb2"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2025-12/primary.json",
+      "sha256": "22364dbe733fd9222c9a3f733760bda7449c8f6430e534bf87a4f9ddec9e601c"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2026-01/primary.json",
+      "sha256": "05bcac0a05b4af67c500cb2e6904ba8f3994bc1bbac1dc066e24f36a8214fe46"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2026-02/primary.json",
+      "sha256": "687eabcae346124e99ace465bbdb985dce15557a0f7ae7eae62ed3481b07bac3"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2026-03/primary.json",
+      "sha256": "2f679708901d5102c30523c6c14cc9c57ea4c347667037f07d1190c88c433918"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2026-04/primary.json",
+      "sha256": "19126713fbd02be2dc4ae1379dad13779dd3ac923bf03da01170904e3d57b855"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2026-05/primary.json",
+      "sha256": "4d1ad656b121c90295990cf62be4c020010ece66e10397b171f64e0cefaa9c41"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2026-06/primary.json",
+      "sha256": "9dd00a7a6db6efdc651894f61bd70a8453a031eb900b301da0abde61b243986f"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2026-07/primary.json",
+      "sha256": "3d7ee2964e9cf7f5e0a58aaf5b402358f19831f2b24d54cc016f92759e2589da"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/USDJPY_2026-08/primary.json",
+      "sha256": "2aa94d400da2b519a052c85905040b9419156b6cb11bed8fb3826284eead08c7"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2023-01/primary.json",
+      "sha256": "bbf8e87befbac199a9b2bb83910c9f97f2189ef778802a68d4392c574d1907b7"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2023-02/primary.json",
+      "sha256": "c3e5c1e6568177c888693cc5792c240c8f7fe423cb5a37cdf93f4ffe9e44baba"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2023-03/primary.json",
+      "sha256": "60dc611fba0f99b59f3b9d8eedaf8ec5154e0f74e1969aaf58a90546451a9552"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2023-04/primary.json",
+      "sha256": "eaaed013cb0319fe545bc403810be07ef7b6672ea51af233ebd27ddb7d259688"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2023-05/primary.json",
+      "sha256": "a1090f2d4b4ab82bdccf55a72f0e07a9458d9e12a5f5ba50999a2c76b0cf4b29"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2023-06/primary.json",
+      "sha256": "0a1df5eff658c0611bf97651cf5b5fbbf120bfab28e7ad530db601d0f4148c07"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2023-07/primary.json",
+      "sha256": "0bdcc0fc69a94f62b27735545db4c8aaa28cebf7d2aa532f689570998e0fcf81"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2023-08/primary.json",
+      "sha256": "61229acf9474a4b581704e0b48cdd29a663b6c56772a53a356f5513bb1c76fd5"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2023-09/primary.json",
+      "sha256": "3471bab2ecdc7c3944f13531ea78b614fcadfea96b2870bea4e15f055a463ace"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2023-10/primary.json",
+      "sha256": "17d606b35f782b227996a99fb6ba9cd043499077c89caf7db878ce89217747d9"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2023-11/primary.json",
+      "sha256": "12d9f45d41b2255df5b989f19cb26502a5a853323c108fb33c62e894e8f20c58"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2023-12/primary.json",
+      "sha256": "a2971a419dc650a824485ce4124170daffbf42f4200edf8358c0474ced9c09f7"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2024-01/primary.json",
+      "sha256": "8f51a4f58b0e6e49c5ecd2a338acf4603e42c176ccb73ef31d05efd91b96503b"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2024-02/primary.json",
+      "sha256": "cf2858e8eca844f5958ad53b271fab6ecb8be29a26217d79b2eb4c8808df5fcb"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2024-03/primary.json",
+      "sha256": "6dd9d3391d4ec312d2464a41fd27dfc568bd6a3c922e38f0721f20d2516cf9c8"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2024-04/primary.json",
+      "sha256": "2e53d8b4941a708ecba6e2b8b2c5ad03da5a337b9e1fd86a7f88accfa0116a1a"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2024-05/primary.json",
+      "sha256": "8bbc041a3cf0b3627b4971f09b1b027115f5099a3bfd1eed4e9889208bfa92c3"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2024-06/primary.json",
+      "sha256": "c27fd73dc8d6726d46bf3f47e38ee3272df2b2a3f214202b81ba6f875745957c"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2024-07/primary.json",
+      "sha256": "84c5011fa66c8aa1faedfb42c8ea8a2508ac346d4e54392b07375a8094767548"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2024-08/primary.json",
+      "sha256": "073264dc367867ca8046e2840dc98ba502f28ab7cdb1fe16a137eea30533ab73"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2024-09/primary.json",
+      "sha256": "a36c8be728fda9c3b8182476039ebe1e381a2865d73d637184dc3e6853d63f98"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2024-10/primary.json",
+      "sha256": "ec31d7e236f79ea2604ae7b00e975865792e8823e6ce6e40edfeb72337ed1140"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2024-11/primary.json",
+      "sha256": "4e42f7ecdea8ceda59b8641c58802298a684968213360c804880601462a0be55"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2024-12/primary.json",
+      "sha256": "4dd1f74f4e93fe6be3e4ea79c978cf6da10fa780c44f7085e60b8092bc43d9b3"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2025-01/primary.json",
+      "sha256": "aae02bf07ac19e4548f87c5b4ea44d7314c29bcb7a611d228c8fe9eb0d392dc5"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2025-02/primary.json",
+      "sha256": "16fefa5efdde89996e83f8c1c68b766e662c60d67e1bb64f370366f957d4aab1"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2025-03/primary.json",
+      "sha256": "b8c8eb588a644bfcf63428aa6b927d8cd824cf85d094641766e5fa6d61915192"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2025-04/primary.json",
+      "sha256": "e41865a9397adec1427b5557200bf04fe54236b768a6d1a402fdc06ce7ada09b"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2025-05/primary.json",
+      "sha256": "e760dadd88a390a562c697d4dbeaf55ea020d2f3ca2a446856e1a1e97e0ea3c4"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2025-06/primary.json",
+      "sha256": "87f16113921b784fb195b6ca48642ab1d6434ae02f7c6a48c21389132dcf9033"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2025-07/primary.json",
+      "sha256": "a15a9eb1bd6a42616cc788ecbff92108ed1d4ccfeed8c2292145e313dbe96d33"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2025-08/primary.json",
+      "sha256": "bf1e1c1ae7f0f533a4363173a247b36ce14f6a085f9c45ee60e99ca9a079999b"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2025-09/primary.json",
+      "sha256": "9a3491946f7e849d4603a11461a612e8523fe0f44e1f6d59e17b413619b6f9f4"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2025-10/primary.json",
+      "sha256": "b0e36f93de35686b2d8b3bcfe8324d555c66df6a78b4469aeba214fe0bc8a0e3"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2025-11/primary.json",
+      "sha256": "b7c95589912d00930f87ec803d0bd9b97a7845ab31159673c227311313d5e7fd"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2025-12/primary.json",
+      "sha256": "83415472bdcfe06f481857cfd67be2d5b974589e98e5c5fbcfc5e58661382e31"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2026-01/primary.json",
+      "sha256": "a44b0c52c38ad83a8e2047ab07d3b65ec354f14cb2a818b061012fb6072361af"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2026-02/primary.json",
+      "sha256": "de826f5e2514bf7ee6eaa16ba0f67f585365e70efb07e8308464b2e94f22069a"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2026-03/primary.json",
+      "sha256": "1cd170d8018c52fbd7304dae3dca24fea72806e5ceaffacc78a1c207fbaa6fa7"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2026-04/primary.json",
+      "sha256": "7ff2191a57c944cff75cc784f770211189bcc7cb02f379f840b42cbfdefbeb5e"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2026-05/primary.json",
+      "sha256": "0c2dcf4705b5cd1269451795528a242b279f46ae32130e19a91598ff4faad83f"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2026-06/primary.json",
+      "sha256": "e84f1da4c19af10fcf58e36acbdb937cff6c141de77395b5487b40bee78d413a"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2026-07/primary.json",
+      "sha256": "cc895d0457deceaa9e4998d231ba0b18d80f4aa5349024bca8017e507383415e"
+    },
+    {
+      "path": "research_artifacts/rick_pair_native_2023_to_date_v1/GBPJPY_2026-08/primary.json",
+      "sha256": "e30922ea30587f29182600a5ec521da03ed9c04c271a6a8564338d590adb4f1d"
+    }
+  ],
+  "exposure": "Previously exposed history, not independent validation.",
+  "fields": {
+    "deep_current_pullback": "Lowest completed M5 low in current attempt is below parent midpoint. GJ W starts at third-leg start; RESPONSE starts at recorded last bearish M15 pullback candle open.",
+    "fill_over_1r_above_zone": "Actual original fill more than one original planned stop distance above parent high.",
+    "inefficient_formation": "GJ absolute net close-path movement / total close-path movement <0.5. SUPPORT origin through break; BOX origin through known-at birth. These are different formation types, never pooled.",
+    "repeated_completed_revisits": "At least two completed M5 contact episodes after known-at, separated by an entirely-above-zone M5 bar. Initial departure must be observed. Incomplete observation window -> UNKNOWN.",
+    "weak_zone_departure": "GJ recorded M15 break candle fails bullish body>=50% range, close in upper25%, AND true range>=preceding ATR20.",
+    "weaker_second_w_rebound": "W second upward leg has lower net body-close advance per observed candle than the first upward leg; GJ M5 and UJ M15 respectively.",
+    "zone_age_ge_24h": "At least24 clock hours since parent became known, including closed-market elapsed time."
+  },
+  "formation": "Exact completed M15 window origin to break close for SUPPORT, origin to known birth for BOX. Absolute net open-to-last-close divided by absolute first body plus absolute successive close changes. Zero path UNKNOWN.",
+  "geometry": "Parent fill BELOW_ZONE/INSIDE_ZONE inclusive bounds/ABOVE_LE_1R/ABOVE_GT_1R; stop BELOW_OR_AT_FLOOR/INSIDE_ZONE/AT_OR_ABOVE_TOP. UJ NO_PARENT_ZONE. Native prices in .001 JPY points.",
+  "implementation": [
+    {
+      "path": "tools/audit_rick_entry_zone_quality_v1.py",
+      "sha256": "fd20aad908996d0224d1f3004c4f0c9736586bda08d2910e1475aaf063949f43"
+    },
+    {
+      "path": "tests/test_rick_entry_zone_quality_v1.py",
+      "sha256": "39608cc406ca15829bee03bed4b71ebede8ed2af68f5d38abda84bfa79025b2e"
+    },
+    {
+      "path": "tools/audit_rick_preentry_streak_state_v1.py",
+      "sha256": "820af448594db5647a9d8496191d0e77baef8823d59cfec1ef58bf67c91b2eb1"
+    },
+    {
+      "path": "tools/audit_rick_preentry_response_quality_v1.py",
+      "sha256": "71e98c8382593219e183be82b21e77ba49f6060fa03f6049ec322175f74b2144"
+    },
+    {
+      "path": "tools/audit_rick_reentry_management_v1.py",
+      "sha256": "a074f110f797ee88a1f350b31802a7380b85d34a16a78f8c2a5be028e87436aa"
+    }
+  ],
+  "matrix": "81 exhaustive descriptive cells:9UJ and36perGJ route, formation state x existing trigger quality x fill-location. Every zero/sparse cell retained. No ranking, cell selection, new joint hypothesis or candidate validation.",
+  "outcomes": "Original TP/SL/BE/TIME and netR. SL with prior completed+.5R M5 close = HALF_R_CLOSE_THEN_STOP; otherwise STOP_WITHOUT_OBSERVED_HALF_R_CLOSE, not proof of immediate loss. Gaps flagged, no new outcome path opened.",
+  "predecessor_artifacts": [
+    {
+      "path": "research_artifacts/rick_zone_response_audit_v1/primary.json",
+      "sha256": "f9e76134fc97cd38a8be8d082ea7ace03e62a59b8159c60e07afb03dcbae5433"
+    },
+    {
+      "path": "research_artifacts/rick_zone_response_audit_v1/reference.json",
+      "sha256": "f9e76134fc97cd38a8be8d082ea7ace03e62a59b8159c60e07afb03dcbae5433"
+    },
+    {
+      "path": "research_artifacts/rick_preentry_response_quality_v1/primary.json",
+      "sha256": "da8ede417edad1320a2a29852ccb433aa18010559cc7965b58a903c73f9233a8"
+    },
+    {
+      "path": "research_artifacts/rick_preentry_streak_state_v1/sequences.json",
+      "sha256": "518d6889f047993aa9bee202b8f3cdf821494e439cab80eae7f56a3ecae8fa92"
+    },
+    {
+      "path": "research_artifacts/rick_drawdown_episode_audit_v1/episode_details.json",
+      "sha256": "553b4d0d161fe8c7844a9a60a31fea2c17b4dc7713b7b5cd2d6e1b139d4e19aa"
+    }
+  ],
+  "purpose": "EXPOSED_ENTRY_MODEL_ZONE_FORMATION_ATTRIBUTION",
+  "registry": [
+    {
+      "fields": [
+        "weaker_second_w_rebound"
+      ],
+      "route": "W",
+      "symbol": "USDJPY"
+    },
+    {
+      "fields": [
+        "weak_zone_departure",
+        "inefficient_formation",
+        "zone_age_ge_24h",
+        "repeated_completed_revisits",
+        "deep_current_pullback",
+        "fill_over_1r_above_zone",
+        "weaker_second_w_rebound"
+      ],
+      "route": "DEMAND_W",
+      "symbol": "GBPJPY"
+    },
+    {
+      "fields": [
+        "weak_zone_departure",
+        "inefficient_formation",
+        "zone_age_ge_24h",
+        "repeated_completed_revisits",
+        "deep_current_pullback",
+        "fill_over_1r_above_zone"
+      ],
+      "route": "RESPONSE_MARKET",
+      "symbol": "GBPJPY"
+    }
+  ],
+  "reproduction": "Scalar/vector formation, break, contact, W and geometry extraction; independent scalar/vector statistics; exact JSON hash agreement. Synthetic source-boundary and leakage checks first.",
+  "reuse": "Original weak-confirmation classification and post-entry M5 response/floor-failure evidence reused from sealed audit, not recalculated or retuned. No generic bullish/bearish regime tests repeated.",
+  "source_semantics": "GJ SUPPORT parent: original M15 base origin and later structural break; BOX: original governing range birth and later break. UJ has no GJ-style parent; only its original M15 W rebound comparison is applicable. GJ W confirmation M5, not parent-envelope900seconds.",
+  "sources": [
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2022-12.parquet",
+      "sha256": "c9971e8859d7e117077390f0cc89cc5c48c987a8f3dc3c303097d8748837d194"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2023-01.parquet",
+      "sha256": "519934736090088bcba2603fed6883a17dddf997e1ab8437c235af4e4ac73d9a"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2023-02.parquet",
+      "sha256": "c81d8ab3f8115bf5ac105f2b711f8ef31a50f233409336d36014b4dcfae41514"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2023-03.parquet",
+      "sha256": "57f450cec29a3381be37f1b88299cabba6ce3a7424de077079b24fa5f9ad4d5e"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2023-04.parquet",
+      "sha256": "6270ed578e665baabbd074074c715f601c40d77f68eb89bdd67e32fa4019079b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2023-05.parquet",
+      "sha256": "adf776ef7be123466427d2bbb5d45589846b354f9f81d1c4ddc1c5a7116c5373"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2023-06.parquet",
+      "sha256": "785981115c9b0015592acd53ab55e6a45a64a515c8a9b21cdefd6e5cef1fb463"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2023-07.parquet",
+      "sha256": "d595ee6e097094c1c36f338de04c6449016a8771eb4af91990d04aadd918b9e9"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2023-08.parquet",
+      "sha256": "fb4bb7ed431d21105ba530e446636ed058d4b0f04f923f5ef192a71a1063d016"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2023-09.parquet",
+      "sha256": "5292daab7e887dd53e0241486f669a306d7384523933b43fda3886d61aba091b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2023-10.parquet",
+      "sha256": "70c58d43684dab12b47a8c2f4f2cfccebe13182768c749baacb83241e1728313"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2023-11.parquet",
+      "sha256": "6e869e95459fea5563f86eca09903ab2e459eac577433706e026d812b58f0031"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2023-12.parquet",
+      "sha256": "dc91f753d541b19031901d4237aa13a3c2aa4d671641d6dd7967c4dc2c518fb2"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2024-01.parquet",
+      "sha256": "857f3a72b4421fd6cb20e7815074ec20ffe1583145b4d832053d5518c91ae53a"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2024-02.parquet",
+      "sha256": "9efeae24535eea4db723e0737fa029eceae1a0500b847498c9ce5c89f6b69c20"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2024-03.parquet",
+      "sha256": "eb6e08abfed96ce130053cf8182f420ec2a2def20ddd84aa957cd3c9a7075fe5"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2024-04.parquet",
+      "sha256": "25eea55df8a83bb4303219f4dabd20056f46a626ccb4c20fd7822a3b5c2c671b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2024-05.parquet",
+      "sha256": "35369eec8750083724f53b1d9ffc4ee3513a4ca317c5c8f24d1c49b3b22ae606"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2024-06.parquet",
+      "sha256": "3ee1bb91b48cfab72726185654590a3aa7cdb4adf40f9eb4e18c374e5a128e07"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2024-07.parquet",
+      "sha256": "1c9f13dc224ece1c8170490a0e078f24eb55c3f583fcddd8c2620447257dfbb4"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2024-08.parquet",
+      "sha256": "431c1485df02bd25ee50e895197b756fb0ef03fa345f7582378fd6ded2c84309"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2024-09.parquet",
+      "sha256": "4b8ba0a911ee0cbed746d0e4d859ff181e39569120cf0fd39bb324547feac42e"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2024-10.parquet",
+      "sha256": "9914650e606c6608ff2296099980e386b7fa5476ca9f3df67d344b4382b2ba06"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2024-11.parquet",
+      "sha256": "ecbaf21a8d3a9046c181b26d9d027109d53f6018d39a8065d3b016745b2a8491"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2024-12.parquet",
+      "sha256": "62983826c982fe7adb0fa20273e882192ff4d14ccb86f916ef82757f0d75a294"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2025-01.parquet",
+      "sha256": "d677b38a8ad7e8ec3265e8d49b270cfa7139a644349637a83d8b83d252c67540"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2025-02.parquet",
+      "sha256": "acc4dd20721ddabc205e0006e88a4f80de1b19a85b37bd82e30ba4a2245847a2"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2025-03.parquet",
+      "sha256": "32228833c713499ea334ba80b2bb181cae5e5c7cc3ba2387f73390d2a756f161"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2025-04.parquet",
+      "sha256": "3cc30db3cfd43f9a1356a2953afcaf3b960082bae747830d2d42e2ee908dbf0a"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2025-05.parquet",
+      "sha256": "2c597e51a1ff6a0da2e79ca5e22e6158b5ac7b8ff5840b27d182ffd3b1f3ae90"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2025-06.parquet",
+      "sha256": "309fd80508f35b14ff90452519939488c8c3f954f248c5c678c880f4940582ad"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2025-07.parquet",
+      "sha256": "d41e766a02509e945ccabac580730981918e1918e122558028609aff8ba1898f"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2025-08.parquet",
+      "sha256": "518a0197af6b980871970a72aa9a002650d7bc3f4b5533909405d190939d1a91"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2025-09.parquet",
+      "sha256": "943a047f1909edc677e3879ab18bd893add2386e602be4c59cf6063af5dde0ae"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2025-10.parquet",
+      "sha256": "ff3b4ab4f84a5642044d43d815a2e33927b494b4bcf8e1792d532343c339e41e"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2025-11.parquet",
+      "sha256": "36b08acf2c1498fbde073d134279688df4852beb16cc0496834393f97da9040b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2025-12.parquet",
+      "sha256": "42b78e2eb61fd600611bf417cf9ae99d1a8c2f43094366f38693d59a13ffaa7b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2026-01.parquet",
+      "sha256": "49fdc163ad7bc83494029b7d93abaad536c2938ea6c48699f6bab40db591c322"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2026-02.parquet",
+      "sha256": "5e48d538fff1cf19171e7500aeffce64a78ae3f8b4314184d92e406135acf557"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2026-03.parquet",
+      "sha256": "12fde5aa0a07f41c35be095ff3b9593a5da6176e0d14f6ebf51f614c031ddecd"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2026-04.parquet",
+      "sha256": "69133d2963ead3884dc5f14f8086d46a7a9cbeb41c6202e896c76fb5806c59c2"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2026-05.parquet",
+      "sha256": "47f4bea3c1c2c4741ae4ef2ee6c91835b7661d826787fbea360145aad766cd54"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2026-06.parquet",
+      "sha256": "403d36bbf5493a1dd8ea11bcd3e06691f88076a523b0750df9d5726ed8b06ba8"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2026-07.parquet",
+      "sha256": "59a7e28abc9e072a79b3a8104b4b7d40fb85be526cc8687b24272bdb5a6ac4d8"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M1_2026-08.parquet",
+      "sha256": "a43fb2929738b27fa13f755dcf2435bf6109e0d3f556638d7f90c522231ac120"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2022-12.parquet",
+      "sha256": "803d9fa4cdf6eb3c77b166ea2dcddbd8c11be8fe6ad4e2a790f05bbe364af1d5"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2023-01.parquet",
+      "sha256": "85d2075215e131585e96057a9cf5decb62e78db91e61951937670f573043553b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2023-02.parquet",
+      "sha256": "d3124b09bf5042ca018bc53807a9f916d5ad7ebb09793eb50ccce282c71dc74e"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2023-03.parquet",
+      "sha256": "cd033a1a91d69bb6ea2647b25f913fcefdf40908f495c14409701966b125cd22"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2023-04.parquet",
+      "sha256": "117fe94b441f4175686bb0d0fe48dd2ef9df24e296d5f58b9259658df787b30a"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2023-05.parquet",
+      "sha256": "23c5584749e2633adc52c1e3eb2e3d6f429c01ba5e119d4bb982ce7386bf5dd8"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2023-06.parquet",
+      "sha256": "ccee803aa7bf8b98a860dbc320a282abec3e14d69409d6263816c1b946f79df1"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2023-07.parquet",
+      "sha256": "5efa0f13ddd05ea87fd6d3c6093e963ac8bc96464d8b7ec08859672b60dcdaf3"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2023-08.parquet",
+      "sha256": "814f85939a438ef61c169af1ac3f57390a71882106f6523f20923055584561b8"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2023-09.parquet",
+      "sha256": "bd3016d14a7c1946bcb0eb8d409f96481b2742ffed4e52e4c8b75402237fe15a"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2023-10.parquet",
+      "sha256": "0b07ecbe27872bb9f2b6c14b8698191030d7563fbf687c4ebd5155bd509aa787"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2023-11.parquet",
+      "sha256": "6a09fb4b3647c368d70887ff14530d1d9757a7c17b6e981e08abce05237a9ae2"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2023-12.parquet",
+      "sha256": "32fe49a7b9b07101618a94741b361f4275da2bb7a55f1b216377c259b12390d1"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2024-01.parquet",
+      "sha256": "4f01a7fda9ce52c8533dd50ed81d13554fef4949dc72500683eac430e2fc2951"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2024-02.parquet",
+      "sha256": "8da930f27d6dfda844a34463ab05b3b5a6e0a942f8ed179d066033261695ad91"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2024-03.parquet",
+      "sha256": "90c0153ac0eb7fbbd7363d2f10f28abcc61d27eff8c2a24ef10f9b9d8acbf452"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2024-04.parquet",
+      "sha256": "38bcba01c648590d3d92ffa9fc492eb09fc5f54417b5b19c87685679d21cf626"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2024-05.parquet",
+      "sha256": "6d165e93c0951420e1a14dda86dc2824ac4f634ab4b75f3661a96693edde8c54"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2024-06.parquet",
+      "sha256": "259a63d5fa256ebc85fc6f98a7f886a4526a2448fd00c13a5290ee72b1c60638"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2024-07.parquet",
+      "sha256": "acdeb9cfb3db17ed78f3c6796bb977ef864bc3ca9fa2d20448efffeebdca29c2"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2024-08.parquet",
+      "sha256": "012980eb8ce44a5a70818eecaea8bcfb1091fe8f13c5f03b65f68f53f3921daf"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2024-09.parquet",
+      "sha256": "0379a3d4b19776996de8b97f62196666031a587647c8b72b1cec648f8a037a42"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2024-10.parquet",
+      "sha256": "3a27b9808a108e611079f4fa3d6cd8992ee1f5df15af2bfc8e5ec39d8827aa31"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2024-11.parquet",
+      "sha256": "c101a18cc821d85bbba37c2ec3a2f8e7bcb1406c84c390e8ac1c9faf29072e65"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2024-12.parquet",
+      "sha256": "2c0d8fc3bfe835c142074e17559468f33e443a6f3d2b2bf8ec31e2896832c526"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2025-01.parquet",
+      "sha256": "bed4fa9f8151a5544ce9f74e04ee08388af776ce746832bc7168144d2a977a52"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2025-02.parquet",
+      "sha256": "db3a5167286b1bd1a0aec14e77fab86ce11df76cdc4fdaf4460df3ba0294f816"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2025-03.parquet",
+      "sha256": "9f5b6ed6ff3d7010a6aa2d9b9bc926f244a7a19123ec03ff3eb3de0c8251bf22"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2025-04.parquet",
+      "sha256": "fab6e4ce4eb7de70a3141b4851d85302d7d98b5d495ba31444c198bcd5504033"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2025-05.parquet",
+      "sha256": "73b4882e74ecf0b28855009bde017dbf7f933dcabe1a71cd530effe20db04873"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2025-06.parquet",
+      "sha256": "4b30f6d5daecfcd40da6fa1f61fedcfab4b7541952be818ac671993f274f37d5"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2025-07.parquet",
+      "sha256": "faf0a915342b0254efe168388d6e2c8a1295fed0c28c5c4174d1f5f0d2cf2482"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2025-08.parquet",
+      "sha256": "efd20c534a631838f41c31531a49b540859e8798200377e41dd492d39299f9a6"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2025-09.parquet",
+      "sha256": "8f4b7c7703fc14aa40542fb8c65a3b7e5323b907937826b7b33eeb1f51f1af66"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2025-10.parquet",
+      "sha256": "8e93f4666d205303c344c19dfc982ef2246039827225c345cba77efa021ce816"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2025-11.parquet",
+      "sha256": "351d65e14a909f481c2e13ffbe58287b530a5b1e3adacf21d0cc2a06e0907362"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2025-12.parquet",
+      "sha256": "6f49a074edf004cccf960ae0427d58aa40f83d09550d3812aed2b63622b06512"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2026-01.parquet",
+      "sha256": "6042004e3d3a9419cf6d9cc15bcf0b8bb1db53821b13eea76508fd29d31ee604"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2026-02.parquet",
+      "sha256": "5a1509c9e4fda9d22b77896cef74a21bd30a53f44df1850373ad836f4f13a863"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2026-03.parquet",
+      "sha256": "965567c9528bf3d3419186d41adbb593dba6799a8e212b6b53f7586b429a7d97"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2026-04.parquet",
+      "sha256": "ed3ada4f529468392cfe6f965e101eb9aea35b7fe095f96889ef38e8bf053d39"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2026-05.parquet",
+      "sha256": "99b71b812ff0bee68d6e7044a5494efda7f43aa2f88ce281f399a8dc590e40c9"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2026-06.parquet",
+      "sha256": "9831db1e642293ad431c7ee1c194b47c8f472df6ae313e886aa682240b3c6074"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2026-07.parquet",
+      "sha256": "b3689905bba2d6c6e50d685a2d9cb7beca26dd492d2809e8a1c342dfe6fe9cd7"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/USDJPY_M15_2026-08.parquet",
+      "sha256": "5da38112b01f4732c9b6aa6c965ec39cf92d585f3dc9d135d25d27179681998d"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2022-12.parquet",
+      "sha256": "3e3a84c1c119456e5706c42794ee1c1beb9432ff95119aba624ef9b1d206f911"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2023-01.parquet",
+      "sha256": "637787c49806079dd97ae1d233502d8b5adbbd33d79a0b2feb79b57805690bbd"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2023-02.parquet",
+      "sha256": "be844f1adcfce4107d253cccf4b15eb90410a733b44c9ac7d70c55e968a0597d"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2023-03.parquet",
+      "sha256": "e267e1d2e32572b3dbf8ff69429edcb1a1271d3b868bd2eb361a62ead76fda83"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2023-04.parquet",
+      "sha256": "31ba91bb77c906bc163c60f540aa27f486ba0b1846584aff0f889cc6539726d6"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2023-05.parquet",
+      "sha256": "445472b5cae872d0ca25ea274ca473a6b1cb9f52a44b40560f73b8e83c747183"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2023-06.parquet",
+      "sha256": "31f2c32d55431e965b68a3ebbed5cf8e979de29aff7e8cd6e14c1f279dc5d4b9"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2023-07.parquet",
+      "sha256": "be7c9fbdf9f9b0cec92d12752d28d9ec4850d92c4f1dca5a3d2debf4f87fa3c7"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2023-08.parquet",
+      "sha256": "144ac8574ae2c815b6812681aecc96aba50dfd3c858bab3ca4d57c27995e3a03"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2023-09.parquet",
+      "sha256": "0d32814769202ec2573c586d1bdf95f2ff55ceed6c47eb738769a7b1706172cc"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2023-10.parquet",
+      "sha256": "17a8a49a8f85beac88ba9c44171130fca827d1adb0533e58b4749fae5ae98a6f"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2023-11.parquet",
+      "sha256": "e44ad8a6f3568ee7daa634701a9aedad9b69eaa2d1d6facd32433f04330a6a15"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2023-12.parquet",
+      "sha256": "086fd970ed3af34b0c7592029e4c3f77a87f199ce39ff9c08534ff9453e943e4"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2024-01.parquet",
+      "sha256": "0d5bcf5b910f5eb9acb7146a0c298721095bc59de06e051e52621a9d5352cf72"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2024-02.parquet",
+      "sha256": "b672b3fe2a60b6c0e996ee16ff23266ca65dd01d788d8ccc234c1d7fb15910cd"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2024-03.parquet",
+      "sha256": "77f422ea2ad5669e676c946cd8b5556e49d47423d0c609364af891a5daf98ac4"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2024-04.parquet",
+      "sha256": "812b72742ca5356f9bbc08677da311dea8ec85d8faa5007ae44e6aa5dec7e689"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2024-05.parquet",
+      "sha256": "951736f0441b396e496b37959a2c2742a52258fec99ff3bf8ab4c6eaa6a08ca8"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2024-06.parquet",
+      "sha256": "13871fb2fcc6f8b63db0ef9fc7521a051c00d4db85f8c643a60b8e84ba170c7f"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2024-07.parquet",
+      "sha256": "ed2cffe5fb7bc748e7ebdf1cb94ef8efea1287500d72ad8872f5d6e2ad98b97b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2024-08.parquet",
+      "sha256": "77233a13fc0b6751b91601ee3bc4bd4f3b2ad66337eb59580e3f32549d53da9f"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2024-09.parquet",
+      "sha256": "72f2e380fbc250b86dadc40906063a9036fae4389b82bafa861d3eb31fc54427"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2024-10.parquet",
+      "sha256": "67769c9c9b4f4be8e11bb371fbc776226e33e7a3d9ba3123ed2a798ee50b340b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2024-11.parquet",
+      "sha256": "4100481c0e34a56e4522f2c10d277e7d7ad7d084a6571640b7f0f07fa94ff3e9"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2024-12.parquet",
+      "sha256": "d15dd1f6fd6b8ea429563ac814cec8cf97931920f1a7dfedf56ab2e2f0fbcb0d"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2025-01.parquet",
+      "sha256": "9fd1d6fedd28f72169c93873f9f3b4e225d4a23e723bf5953a4693ae755dda1b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2025-02.parquet",
+      "sha256": "b2a4c54e4cfa1689937863fa143384fe5a9e569589a8570adecf09d02fe724da"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2025-03.parquet",
+      "sha256": "c0ca1e8443ff4a8b8da7932ef4c1a2dfa14cde4efd6d905a5d18f7b27a96595c"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2025-04.parquet",
+      "sha256": "7e5bbb596bc0b7da920ec08dc830fa340a62b602a06ff66b78afd4aba10ff9ac"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2025-05.parquet",
+      "sha256": "9a10434e0e5ab7e747fb35b7ff9b66d05be7599f509775ffdbc102572c849b1c"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2025-06.parquet",
+      "sha256": "2db23d20fe1abde408e2eae82f405464750a40501ebad89539be7b702a993b6b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2025-07.parquet",
+      "sha256": "98e6ed4860ef6d8b0ee7590c07e0e3b46292ea0563e126088f7f6ba93d588cd2"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2025-08.parquet",
+      "sha256": "a1b5ddbc7f2c4554c887c91c1ed8c581080c0937cb8a43bd378fad6fa3689ca4"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2025-09.parquet",
+      "sha256": "04bbcd06dd83d4d2997b1511b55a46fce93a53ce76195a48f66bdd1d79c3fd27"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2025-10.parquet",
+      "sha256": "4c394a1f5d8972cf15e7a8be9913827412498401f4d8a5f34d788f88a8dec8aa"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2025-11.parquet",
+      "sha256": "094b421ad6c23f3d02d0dcf0be4d2b21564a20200bb1dc87af7673042fe1ecdd"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2025-12.parquet",
+      "sha256": "e127e22861736aaeb2c0c62f46e0241d62f71f08f8aaeaf07967ffd9cdd9b52b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2026-01.parquet",
+      "sha256": "7538c3797b9ea7cba17e5ef33f2c5ad3cfa87e545281db701b5174aade9864eb"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2026-02.parquet",
+      "sha256": "2ebeac38e26b67d5f89dcd4813377180ccb541f39db4eb9b540c4ee1c6c0825b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2026-03.parquet",
+      "sha256": "e785d000f015d969aeee76d9965f4f9b2238e7e640de03907125db08268f59ad"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2026-04.parquet",
+      "sha256": "4eec067f1c00f8dffcfb4e1f3d300810db1075b6c637d39a0ed29dfd2042fedc"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2026-05.parquet",
+      "sha256": "5d11a21a578f5c6c989a4d6073c31a1587f0d791e030c2f4239ac3e989a836d1"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2026-06.parquet",
+      "sha256": "b66e8679d755c5cad1e7177f46929938f5f8d60aef6cec94b2b225d400cab938"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2026-07.parquet",
+      "sha256": "552d79eca6340436bfc0b37678543a29f21d9a81db90bcbb6bfc338a0c9c63a5"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M1_2026-08.parquet",
+      "sha256": "aff89a8ed2c3ce67718b31ceb949eb1fb2454cea4542aafb6c0d53531a78399b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2022-12.parquet",
+      "sha256": "adf4e77f8a35bf3f56bed6c3bb50f66b81ee9cf27770526acd1c32e74c4aaed5"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2023-01.parquet",
+      "sha256": "9a848526b86ab02d29ce0797051f76c6160c24bb387de4ef96e7f2407336d45b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2023-02.parquet",
+      "sha256": "eaae009a624a24b3c33b3f7d5f96ba30b9596978cf529d70618f7e4bcfa1795f"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2023-03.parquet",
+      "sha256": "0770697d3f9fc9399b5230a8a5a5d1546962f66896178131f9e055e488e6af5b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2023-04.parquet",
+      "sha256": "70f6eb4275654b00c62888cf78afee6fe98004626f16de5e316c2ad6af41c079"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2023-05.parquet",
+      "sha256": "76c22873de82f26ec2682ad9807af6c05b1813630a4affa9e996490c0821b5af"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2023-06.parquet",
+      "sha256": "f5de63fe9ff28c7687db44d76e7ad84750b8a5ace3d68a49c5da842eb02d9da2"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2023-07.parquet",
+      "sha256": "93b2ca8d51aa7be3a2066c78043900eb96495a4e0bc35717ee9f6e048f6916a3"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2023-08.parquet",
+      "sha256": "aaaad67597f207a6b6da2e6dc6341d7051c362ed78bd544ee3df73d84ce65e26"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2023-09.parquet",
+      "sha256": "65e9f55f81b402d2b30b0bcecec63c704973b7ee10e30a21a8097c4470eaaa0e"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2023-10.parquet",
+      "sha256": "bd482035d9dda2f190a586ce4f798406a8966974f9490fdd967a559f90f91269"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2023-11.parquet",
+      "sha256": "6d89c77a0e81dbfe9ab3f20f063c7a067daf502991bf14c09d7b5c95b1f6502a"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2023-12.parquet",
+      "sha256": "ea3412d1bd192fa9bbbb731f4ef08b1c20ddf839a2f1ef965a4c5baefc5d91bc"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2024-01.parquet",
+      "sha256": "297825a31bca89527cc541db59460e005c825d9bf1771a54efd8f632e56530f7"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2024-02.parquet",
+      "sha256": "38a790d5f81c6c518131fe2e51bf8afc8e7a19323e1ea5014ee1e651876354ee"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2024-03.parquet",
+      "sha256": "71cb4e157268a3c209fd2741b978d55ba1c6d4e2c63f6adbbb6cf2315732fe31"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2024-04.parquet",
+      "sha256": "edbcecfebe8b4574aa5c51b965f4350ebdba552d57ec034306f434038aaecc17"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2024-05.parquet",
+      "sha256": "6ec45b84cb15d8ab9dac5e4ec82bd51614b879dac54aece236de881a956d73b0"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2024-06.parquet",
+      "sha256": "a0fe5e2fd4e14e227efb6139eb6f614a2ee6d558af3d52a822e34af8b5e53aac"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2024-07.parquet",
+      "sha256": "c7d7455e7aee7c99ff60aca4c8bb5e66f5c27496f5c63a421daef3b7295d7e4f"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2024-08.parquet",
+      "sha256": "0702cc0156aaa99eb4b6d3527e29c9c7eb79ad792aea3ad2e581f1cfe8cc9606"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2024-09.parquet",
+      "sha256": "4be0f240b95a7735fc06ddff9a6a3204f55396497f99105677cc2c9c9bc92302"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2024-10.parquet",
+      "sha256": "413083c935f2b0fdf340efc7659202fc2bd9031676f61bc6fa71e9abc78640c0"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2024-11.parquet",
+      "sha256": "dea63ebc39d72fc24a13104c20c6732c8aea294e1cb59307fc4725ae5145f3d7"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2024-12.parquet",
+      "sha256": "857429927e2a3e13ff0f1447af65a3df88c07fe759dbf1aa2b8fa9c9bf4bc1a9"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2025-01.parquet",
+      "sha256": "ab8bad4803f7f2e0a08fde418ea5c56f19450f42e324703b22207411a634aad5"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2025-02.parquet",
+      "sha256": "023fc32719893853fed4f55760f37a685285d5e66b7506ae225010f1d14df6f4"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2025-03.parquet",
+      "sha256": "5d79726ae106564faae7c72604c41c16c9337aa7ba2ed299284e74ed3af5c109"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2025-04.parquet",
+      "sha256": "8091837aff0d4f6ce4d795100433ac368f02478032b29ab622f7b63191649b07"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2025-05.parquet",
+      "sha256": "96e10ff7ea1a70839eb383a8d152c25590509aa7b70a4d92f6927626edb5a18b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2025-06.parquet",
+      "sha256": "9f3f38a045d8133b5dc8d1861b0aab212a6ec6a9f61cb98089404c7a641fbbf8"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2025-07.parquet",
+      "sha256": "7c94495d0413c47aa42aabf86fbb4fc69dfd749d6e21966c9c1020c91e9f3b03"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2025-08.parquet",
+      "sha256": "0f92ff6724df64eb9b464b37784a3fc9423fec3987d8b25cabde9507364a6bfe"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2025-09.parquet",
+      "sha256": "f3d344bf2fc43aa7ed08b5a8ecd38669562d23013aef31a7847c64028129b266"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2025-10.parquet",
+      "sha256": "cf11231181995a63d928dd67fd8bb951cd87288972c5d9aba3c3bbd3a0304150"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2025-11.parquet",
+      "sha256": "b91599a64abe151d548012f0eb80a12d7ebcb62afaae35e0d3076e747ab1a96b"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2025-12.parquet",
+      "sha256": "ca5b30d7e9e6e401bb87d921afcaf0afdea21d429645c2beb6f9d1b77be77a70"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2026-01.parquet",
+      "sha256": "fe0c345958fbd2f1a1c75926de734260cebef7d95962e97f7ed48535ddc3e07a"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2026-02.parquet",
+      "sha256": "a5bdee9d513c59d3090dd969bbdb57d34b29a899aada744d071e488592e9e34d"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2026-03.parquet",
+      "sha256": "18b43c4294e102fb48dff8d2c65c7902c7fed4cb6d331cb5a1a6b5099a910f0f"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2026-04.parquet",
+      "sha256": "d49fc2129f1d522785b31ba6dd5ae0915422fcccd0fae3e976e7997049453203"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2026-05.parquet",
+      "sha256": "d106ffbdf10684816bb56ac9b6fa788f7b9ffdbfd0dfbd9d1ca1ed58d75b8db5"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2026-06.parquet",
+      "sha256": "692a9ee180e8c9884022b9ea5f25c66d6f3bb71eb2cd92fac5a9beba6a73f8c5"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2026-07.parquet",
+      "sha256": "3ffd7036990aa39b3a9725f3e5f0d26be007185c1bd4a59d4af9c90fb1f2f731"
+    },
+    {
+      "path": "research_artifacts/rick_jpy_history_2023_to_date_v1/normalized/GBPJPY_M15_2026-08.parquet",
+      "sha256": "48a7ffa995e6ffdbc85be5b2d010af372eb81a742480ba83c481a55079971f8e"
+    }
+  ],
+  "strength": "Break signed bullish body>=50% range, close in top25%, true range>=arithmetic ATR20 of PRIOR completed M15 bars. Current break excluded from ATR. No parameter sweep."
+}

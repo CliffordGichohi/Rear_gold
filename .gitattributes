@@ -53,3 +53,16 @@ tools/supervise_gold_h1_confirmation_geometry_monthly_batch_v1.ps1 -text
 backend/src/gold_intel/analytics/h1_confirmation_geometry_audit_v1.py -text
 backend/tests/unit/test_h1_confirmation_geometry_audit_v1.py -text
 frontend/tools/certify-gold-h1-confirmation-geometry-monthly-batch-v1.mjs -text
+
+# Preserve the exact sealed Rick entry/zone audit implementation bytes.
+tools/audit_rick_entry_zone_quality_v1.py -text
+tools/seal_rick_entry_zone_findings_v1.py -text
+tools/acquire_rick_jpy_history_v1.py -text
+tools/audit_rick_preentry_streak_state_v1.py -text
+tools/audit_rick_preentry_response_quality_v1.py -text
+tools/audit_rick_reentry_management_v1.py -text
+tools/audit_rick_heavy_loss_months_v1.py -text
+tests/test_rick_entry_zone_quality_v1.py -text
+tests/test_rick_preentry_response_quality_v1.py -text
+tests/test_rick_preentry_streak_state_v1.py -text
+research_manifests/rick_entry_zone_quality_v1/** -text

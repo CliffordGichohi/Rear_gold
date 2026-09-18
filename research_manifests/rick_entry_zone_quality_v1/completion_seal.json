@@ -1,0 +1,54 @@
+{
+  "comparisons": 14,
+  "files": [
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/cohorts.json",
+      "sha256": "869956a1a928a28dea3c53dcd1555bdb82e296d89ddf32505efbaf095d3be1e0"
+    },
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/comparisons.json",
+      "sha256": "e81b45f82b53efb2ee4fbffa0a088cb8e90f472069d34471c3c10ab9bd8ebabf"
+    },
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/features.json",
+      "sha256": "fc7020fb2731f3aec2b4ecabbe86a2e550ce28612ecd4d5e8ec445e8e5753c1c"
+    },
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/matrix.json",
+      "sha256": "fa2153224ad489664971a113d4a6643d58b7325a98b129148a1682c7357ce639"
+    },
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/protocol.json",
+      "sha256": "c7641e899828502ec240cc26a48d901af0aa4284b3720896cab00da063337455"
+    },
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/protocol_seal.json",
+      "sha256": "5f1951d9e2503b3c7c80b2628cc8bf538cfffbee05b0a1419521c0a6fb62cfa9"
+    },
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/reference_cohorts.json",
+      "sha256": "869956a1a928a28dea3c53dcd1555bdb82e296d89ddf32505efbaf095d3be1e0"
+    },
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/reference_comparisons.json",
+      "sha256": "e81b45f82b53efb2ee4fbffa0a088cb8e90f472069d34471c3c10ab9bd8ebabf"
+    },
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/reference_features.json",
+      "sha256": "fc7020fb2731f3aec2b4ecabbe86a2e550ce28612ecd4d5e8ec445e8e5753c1c"
+    },
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/reference_matrix.json",
+      "sha256": "fa2153224ad489664971a113d4a6643d58b7325a98b129148a1682c7357ce639"
+    },
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/REPORT.md",
+      "sha256": "09cbf9ea892beb38196ea0f3fee8438d7c13e934124206504ed4a0a08636480e"
+    }
+  ],
+  "matrix_cells": 81,
+  "status": "PASS_ENTRY_ZONE_ATTRIBUTION_REPRODUCTION",
+  "strategy_changed": false,
+  "tests": 11,
+  "trades": 1512
+}

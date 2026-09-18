@@ -1,0 +1,18 @@
+{
+  "files": [
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/FINDINGS.md",
+      "sha256": "a56b18bf4ef531a3755399010eea73edeed3f0fb97bddcc4d0a32c76010b0bb5"
+    },
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/completion_seal.json",
+      "sha256": "dc82c30f28d56505c4188f12c1ec0c7507d7c69a3215ffa7e66eb0b1d55ed400"
+    },
+    {
+      "path": "tools/seal_rick_entry_zone_findings_v1.py",
+      "sha256": "55a00eb10c50b8cfa5b8385f742f17f6d260467a3360b11adce58fc9d1e2ef17"
+    }
+  ],
+  "status": "PASS_NARRATIVE_AND_TIMESTAMP_VERIFICATION",
+  "timestamp_checked": 1512
+}

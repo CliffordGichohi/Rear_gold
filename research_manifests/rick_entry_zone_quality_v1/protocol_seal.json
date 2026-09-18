@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "path": "research_artifacts/rick_entry_zone_quality_v1/protocol.json",
+      "sha256": "c7641e899828502ec240cc26a48d901af0aa4284b3720896cab00da063337455"
+    },
+    {
+      "path": "tools/audit_rick_entry_zone_quality_v1.py",
+      "sha256": "fd20aad908996d0224d1f3004c4f0c9736586bda08d2910e1475aaf063949f43"
+    },
+    {
+      "path": "tests/test_rick_entry_zone_quality_v1.py",
+      "sha256": "39608cc406ca15829bee03bed4b71ebede8ed2af68f5d38abda84bfa79025b2e"
+    },
+    {
+      "path": "tools/audit_rick_preentry_streak_state_v1.py",
+      "sha256": "820af448594db5647a9d8496191d0e77baef8823d59cfec1ef58bf67c91b2eb1"
+    },
+    {
+      "path": "tools/audit_rick_preentry_response_quality_v1.py",
+      "sha256": "71e98c8382593219e183be82b21e77ba49f6060fa03f6049ec322175f74b2144"
+    },
+    {
+      "path": "tools/audit_rick_reentry_management_v1.py",
+      "sha256": "a074f110f797ee88a1f350b31802a7380b85d34a16a78f8c2a5be028e87436aa"
+    }
+  ]
+}
